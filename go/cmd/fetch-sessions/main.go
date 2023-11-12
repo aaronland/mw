@@ -124,7 +124,6 @@ func main() {
 		u.Path = filepath.Join(root, href)
 		url := u.String()
 
-		log.Println("FETCH", url)
 		sr, err := fetchContent(url, fetch_opts)
 
 		if err != nil {
@@ -153,8 +152,6 @@ func main() {
 			continue
 		}
 
-		log.Println("FETCH PAPER", paper_uri)
-
 		pr, err := fetchPaper(paper_uri, fetch_opts)
 
 		path_p := filepath.Join(abs_root, "papers")
@@ -167,8 +164,6 @@ func main() {
 		}
 
 		path_pdf := strings.Replace(path_p, ".html", ".pdf", 1)
-
-		log.Printf("FETCH '%s' SAVE '%s\n", paper_uri, path_pdf)
 
 		err = fetchPaperPDF(path_webster, paper_uri, path_pdf)
 
