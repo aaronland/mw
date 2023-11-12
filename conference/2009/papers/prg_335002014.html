@@ -1,0 +1,256 @@
+<div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+
+		<div class="Section1">
+          <h2 class="Author"><a href="../../bios/au_440016878.html">Megan Heckert</a>, Avencia Incorporated, USA</h2>
+          <p class="URL">            <a href="../http://phillyhistory.org/">http://phillyhistory.org</a>, <a href="../http://www.muralfarm.org/">http://www.muralfarm.org</a>           </p>
+		  <h3 class="AbstractTitle">Abstract</h3>
+		  <p class="AbstractText">On-line mapping tools are quickly becoming ubiquitous,
+		    and have much to offer museums for both collection management and outreach.
+		    This paper explores potential applications of Geographic Information Systems
+		    (GIS), focusing on how two organizations, the Philadelphia City Archive and Philadelphia’s
+		      Mural Arts Program, have used GIS to expand their on-line presence and
+		    reach wider audiences with collections of historic photos and information on
+	      public art.</p>
+		  <p class="AbstractText">This paper focuses on how the geographic approach has spurred the growth of
+		    these sites into valuable assets for collections management and beloved sites
+		    for users. It explores how geographic technologies can be applied to both
+		    collections management and outreach for archives and museums to expand their
+		    reach and provide patrons with a new lens through which to view exhibits and
+		    collections.</p>
+		  <p class="AbstractText">Keywords: mapping, GIS</p>
+	    </div>
+	<!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" --><div class="Section1">
+		  <h2>Introduction</h2>
+  <p>Place matters. When poet-farmer Wendell Berry said, “If
+    you don’t know where you are, you don’t know who you are,” he spoke to the deep
+    importance of place in making meanings. Where an event happened, an object was
+    created, or a photo was taken can have significant impact on how that item,
+    object, or photo is understood. </p>
+  <h3>Philadelphia City Archives</h3>
+  <p>Philadelphia’s City Archives, managed by the Department of
+    Records (DOR), contains an estimated 2 million photographs, some dating to the
+    1860s. Photographers assigned to City departments such as the Departments of
+    Streets, City Transit, and Public Works originally took these photographs in
+    order to document public works projects.  </p>
+  <p>Facing several challenges, including a rapidly aging
+    collection, limited public access, and an ever-tightening budget, DOR partnered
+    with Avencia Incorporated, a local software company, to develop <i>Philly</i>History.org. <i>Philly</i>History.org was established in 2005 as a means of preserving
+    and organizing the Philadelphia City Archives’ collection of historic
+    photographs. The project encompasses a mass digitization and preservation
+    effort as well as the development of the <i>Philly</i>History.org
+    Web site (<a href="../http://www.phillyhistory.org/">www.phillyhistory.org</a>). <i>Philly</i>History.org
+    serves as a Web-based digital asset management system, enabling both management
+    of metadata about the images and public search of the collections based on
+    location, address, time period, and keyword. An interactive map shows the
+    locations of all available photos near an address, intersection, or
+    neighborhood, helping users to identify photos and understand historic settings
+    in their current contexts. </p>
+  <h3>Mural Arts
+    Program</h3>
+  <p>The walls of Philadelphia are covered in murals – more
+    than 2,800 of them. Established in 1984, Philadelphia’s Mural Arts Program’s
+    (MAP) mission is to engage in art education and community public arts
+    collaborations, and to increase public access to art. The reach of these
+    services, however, is limited to local residents, and the opportunities are
+    restricted by organizational capacity. To overcome these limitations, MAP
+    developed an on-line catalogue of its murals, organized by location. Muralfarm.org
+    enables users to find murals based on their location in the city and to access photographs
+    and information about them. MAP’s murals are designed using a collaborative,
+    community-driven process, such that each mural is the product not just of the
+    artist or artists who drew the final design, but also of the community whose
+    wall (or walls) it graces. GIS offered MAP a way to display and share their
+    murals in their community context, painting a richer picture than might
+    otherwise have been possible.</p>
+  <h2>Evolution of the Technology</h2>
+  <p><i>Philly</i>History.org
+    and MuralFarm.org both rely on the Sajara software framework developed by Avencia
+    Incorporated, which has evolved over time to meet the needs and expand the
+    functionality available to the projects. <i>Philly</i>History.org
+    was the first to be developed and originally consisted of collection management
+    features, simple public search options, and an e-commerce system. Public users
+    of the system could search the collection based on an address, a neighborhood,
+    keywords, and dates. A small portion of the images was unable to be
+    georeferenced, and an additional search option included images that did not
+    have a location.</p>
+  <p>    Very early in the project, several challenges presented themselves. One of the
+    most significant was developing the system to geocode the images (i.e.,
+    assigning a geographic location on a map to each photo). Most images are not
+    indexed to a specific address, but rather have a description along the lines of
+    “east of X Street looking towards Y”. This was addressed through the
+    development of a parser that would read through the descriptions, picking out
+    addresses based on common configurations. Geocoding was further complicated
+    through changes in street names over time. Street name changes are accommodated
+    through the use of street aliasing based on information maintained by the
+    Philadelphia Department of Streets. However, we knew that the resulting system
+    would not be perfect, so the project team implemented a feature that enables
+    site users to provide corrections when they have knowledge of an image that has
+    been geocoded to the wrong location.  <i>Philly</i>History.org
+    has developed a small but dedicated subset of users who regularly provide location
+    corrections for photos. These corrections are often connected to rivers,
+    bridges, and railroad lines, locations that can be notoriously difficult to
+    geocode but that many users often have personal knowledge of and  can assist with accurate geocoding.</p>
+  <p>As digitization of the Archives photograph collections
+    continued, questions began to arise about the potentially controversial nature
+    of some images. With the Web site available to the public, images from the
+    medical collection, for example, were deemed inappropriate for display. As the
+    project was also about preservation of the negatives, though, it was important
+    that these photos be included on the management side, and the ability was added
+    to turn the public view of an image on or off to accommodate this. Other
+    images, though potentially troubling, such as a 1928 theater marquee depicting Al
+    Jolson in blackface were seen as being important historic records. To address
+    potential concerns over these images, a blog was created to provide additional
+    context for these images (though blog entries are not limited to controversial
+    topics).</p>
+  <p>From its conception, <i>Philly</i>History.org
+    was also seen as a potential source of revenue for the Department of Records,
+    and an e-commerce component was built to enable members of the public to
+    purchase prints from the collection. This has proven quite successful, and even
+    at the relatively low cost of $10 and $20 per 5x7 or 8x10 print, the project
+    has generated $36,870 in revenue, with additional income from the sale of
+    high-resolution digital images and large framed prints from an art exhibit. Purchase
+    options are limited due to orders being fulfilled in-house, and we feel there
+    is potential to increase revenue considerably beyond this by offering
+    additional services. A project is currently underway to enable third-party
+    order fulfillment by a vendor that would provide many additional product
+    offerings.</p>
+  <h3>Adaptations and updates</h3>
+  <p>Over time, the system has continued to change. The search
+    user interface has been updated several times to incorporate feedback from users
+    and new interaction technologies such as AJAX. One example is the location of
+    the address search dialogue. In the earliest versions of <i>Philly</i>History.org, the address and neighborhood searches were both
+    coupled with the map interface and only visible when the appropriate menu was
+    clicked on. It seemed an appropriate choice to keep the location parameters
+    together. But watching public users navigate the search page quickly revealed
+    that this had not been the right decision. Many people were typing addresses to
+    begin their searches, but they were typing them into the keyword dialogue,
+    which was at the top of the page. Based on this observation, the search page
+    was reconfigured with the address dialogue always visible at the top of the
+    page.</p>
+  <p>Additional updates have revolved around users’ ability to
+    interact with the collections. Users can save images to a ‘favorites’
+    collection and assign custom tags, e-mail an image to a friend, save searches,
+    and subscribe to search RSS feeds for updates as new images are added to the
+    system. As Web-based geographic technologies have continued to improve and
+    become more familiar to the public, additional features have been added to the
+    site, including the ability to view search results (or the entire collection)
+    in Google Earth and to view RSS feeds in GoogleMaps using GeoRSS. </p>
+  <p>The Mural Arts Program began work on Muralfarm.org in 2007,
+    introducing a new set of challenges. Chief among these was that the nature of
+    the assets was quite different. With <i>Philly</i>History.org,
+    each photo represented an individual asset. For the Mural Arts Program, the
+    assets are murals, each of which might have several associated images. Because
+    the system was expected to work for MAP for database management as well as public
+    outreach, it was important that each photo have its own metadata separate from
+    the metadata of the mural itself. The database and asset management interface
+    had to be redesigned to accommodate this difference.</p>
+  <p>Not all attempts to incorporate new features have been
+    equally successful. Mural Arts also experimented with Google Streetview as a
+    means of enabling users to view existing murals in their larger context. While
+    it was an interesting idea and compelling feature in theory, the reality left
+    quite a bit to be desired. The difficulty was that Streetview would be
+    configured based on the address to which the mural had been geocoded. Unfortunately,
+    we were not able to configure the system to ensure that the Streetview popup
+    would actually point directly to the murals, which we found were often around
+    the corner from the view provided, and in some instances no amount of
+    navigation would bring them into view. Mural Arts toyed with the idea of
+    turning off the feature altogether, but in the end settled on adding a
+    disclaimer indicating that users may have to move around a bit to see the
+    mural. (Note: Another take on using Google Streetview to add context to photos
+    was described by Paul Hagon (2008) who built a mashup using geotagged images
+    from the Powerhouse Museum available via Flickr Commons.)</p>
+  <h2>The Impact of Geography</h2>
+  <p>For both the Department of Records and the Mural Arts
+    Program, the ability to manage assets based on geography has been a valuable
+    aspect of the projects, due in part to the nature of the assets. The DOR’s
+    photos are valuable in providing a historic record of a specific place. For the
+    Mural Arts Program, location is just as much a part of the mural as the actual
+    image. For site users, the ability to search assets by location is central to
+    their experience of the Web sites.</p>
+  <p>Since all searches have a geographic component based on
+    map extent, it can be difficult to quantify the instances where geography was
+    intentionally incorporated versus when the default city-wide map was used. However,
+    nearly 40% of searches in <i>Philly</i>History
+    are performed based either on an address or on a neighborhood, clearly
+    demonstrating that users are relying on location as a significant component of
+    their use of the site. Muralfarm.org is scheduled for public release at the end
+    of January 2009, as this article is being written, so similar statistics are
+    not available at this time.</p>
+  <p>While we see GIS as having a very important role to play
+    for these two applications, it may not be the most appropriate approach for
+    every collection. Location might not be as vital a component for collections
+    such as portraits or media that reference fictional lands. By contrast, the
+    incorporation of location may be particularly valuable for cultural heritage
+    collections. Research by the Dutch government indicated that the public’s main
+    interest in on-line cultural heritage is family and local history (Liberge
+    &amp; Gerlings 2008), and our experience with <i>Philly</i>History.org has certainly supported this. </p>
+  <h2>Conclusion</h2>
+  <p>When <i>Philly</i>History
+    rolled out, we were surprised by the comments we started getting from site
+    visitors. As public use of the system has increased, we have been amazed
+    by both the range of users and the depth of personal reactions users are
+    expressing through the site. In addition to historians, genealogists,
+    librarians and researchers, the site has been used by apartment rental
+    companies looking for historic images of their properties to decorate their new
+    buildings, authors researching settings for their historical novels and
+    screenplays, as well as curious members of the general public. Visitors can submit
+    comments through the site, and many describe how they started their visit by
+    searching the neighborhoods where they or their parents or grandparents grew
+    up. They are sharing very personal reactions to the images, illustrating the
+    stories of places that are very dear to them and that anchor them to their city
+    and community’s history.  “You
+    helped me remember my past,” wrote one site visitor. “I see parts of the city as
+    I was growing up and think of how things have changed. Thank you.” “It feels
+    like I found jewels,” wrote another. A visitor wrote, “It was so great to see
+    how things were and looked so many years ago in a city that many people who
+    grew up here cannot let go of after so many years” – illustrating the deep
+    connection people feel to the City of Philadelphia and the places depicted in
+    the photos. And while we haven’t actually put him to the test, we were quite
+    thrilled when the former editor of the Philadelphia City Paper actually wrote,
+    “This is the best use of taxpayer money I’ve heard of in a long time. I’d even
+    be willing to pay <i>more</i> taxes, if it
+    would speed up the image uploads.” </p>
+  <h2>References</h2>
+  <p class="ReferencesText">Hagon, Paul. 2008. Powerhouse Street View Mashup. <a href="../http://www.paulhagon.com/blog/2008/08/19/powerhouse-street-view-mashup/">http://www.paulhagon.com/blog/2008/08/19/powerhouse-street-view-mashup/</a>.
+    Accessed 11/20/2008.</p>
+  <p class="ReferencesText">Liberge, Leila and Job Gerlings (2008). Cultural
+    heritage on the (geographical) map. In J. Trant and D. Bearman (eds.) <i>Museums and the Web 2008: Proceedings</i> (CD-ROM). Toronto: Archives &amp; Museums Informatics. Published March 31,
+    2008. <a href="../http://www.archimuse.come/mw2008/papers/liberge/liberge.html">http://www.archimuse.come/mw2008/papers/liberge/liberge.html</a>.</p>
+</div>
+<!-- InstanceEndEditable --> </div>
+  			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Heckert, M., Putting Museum Collections on the Map: Application of Geographic Information Systems<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2009: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2009/papers/<!-- #BeginEditable "URL" -->heckert/heckert.html
+				 <!-- #EndEditable --></p>
+	</div>
+</div>

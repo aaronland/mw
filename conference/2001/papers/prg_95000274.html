@@ -1,0 +1,2855 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/bogen/bogen.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:51 GMT --><head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>Requirements and Architecture for Administration and Maintenance of Digital Object Libraries</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="/>
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css"/>
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onload="MM_preloadImages(&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tbody><tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"/></a></p>
+      <p> <a href="../../register/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.register&#39;,&#39;document.register&#39;,&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;)"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"/></a> 
+        <br/>
+        <a href="../../workshops/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.workshops&#39;,&#39;document.workshops&#39;,&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;)"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"/></a> 
+        <br/>
+        <a href="../../sessions/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sessions&#39;,&#39;document.sessions&#39;,&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;)"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"/></a> 
+        <br/>
+        <a href="../../speakers/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.speakers&#39;,&#39;document.speakers&#39;,&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;)"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"/></a> 
+        <br/>
+        <a href="../../interact/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.interact&#39;,&#39;document.interact&#39;,&#39;../../nav/mw2001_nav_interacton.gif&#39;,&#39;#943398534416&#39;)"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"/></a> 
+        <br/>
+        <a href="../../demos/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.demos&#39;,&#39;document.demos&#39;,&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;)"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"/></a> 
+        <br/>
+        <a href="../../exhibit/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.exhibits&#39;,&#39;document.exhibits&#39;,&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;)"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"/></a> 
+        <br/>
+        <a href="../../events/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.events&#39;,&#39;document.events&#39;,&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;)"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"/></a> 
+        <br/>
+        <a href="../../best/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.best&#39;,&#39;document.best&#39;,&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;)"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"/></a> 
+        <br/>
+        <a href="../../dates/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.dates&#39;,&#39;document.dates&#39;,&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;)"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"/></a> 
+        <br/>
+        <a href="../../seattle/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.seattle&#39;,&#39;document.seattle&#39;,&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;)"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"/></a> 
+        <br/>
+        <a href="../../sponsor/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sponsor&#39;,&#39;document.sponsor&#39;,&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"/></a> 
+        <br/>
+        <br/>
+        <br/>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"/></a> 
+        <br/>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br/>
+        158 Lee Avenue<br/>
+        Toronto, Ontario<br/>
+        M4E 2P3 Canada<br/>
+        info@ archimuse.com<br/>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tbody><tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"/></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br/>
+            A&amp;MI</font></a> </span></td>
+        </tr>
+      </tbody></table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br/>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class="verysmall">Published: March 15, 2001.<br/>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated: "+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"/><br/>
+      <!-- #BeginEditable "Body" -->
+
+      <h1 class="PaperTitle">Requirements and Architecture for Administration 
+
+        and Maintenance of Digital Object Libraries</h1>
+
+     
+
+      <h2 class="Author">Manfred Bogen, Marion Borowski, Stephan Heisterkamp, 
+
+        Dieter Strecker, GMD - German National Research Center for Information 
+
+        Technology, Germany</h2>
+
+      <h1 class="abstractTitle">Abstract</h1>
+
+      <span class="AbstractText">With the digitization of original documents cultural 
+
+      heritage institutions such as museums and archives are enabled to make their 
+
+      valuable collections accessible and thus better enjoyable by the public. 
+
+      Digitizing, however, is only a first step. </span><span class="AbstractText">Many 
+
+      libraries, archives, or other cultural heritage institutions already have 
+
+      a well functioning Library Information System (LIS) for the metadata management 
+
+      of their conventional objects. These systems work satisfactory as far as 
+
+      standard museum functions are concerned, such as cataloging, indexing, acquisition, 
+
+      or the OPAC (Online Public Access Catalog). What is however needed now are 
+
+      the administration and maintenance of the digital objects themselves. In 
+
+      this aspect, traditional Library Information Systems have limitations and 
+
+      shortcomings.</span><span class="AbstractText">In our paper we present a 
+
+      global requirement list for a Digital Library System and we develop a generic 
+
+      architecture. We put special emphasis on an integrated solution, which addresses 
+
+      all aspects of a publication chain, from digitization, over indexing, administration, 
+
+      Web presentation, printing, to electronic commerce. We describe state-of-the-art 
+
+      Digital Library Systems with their benefits, disadvantages, limitations, 
+
+      and possible fields of application. On this information basis we describe 
+
+      our approach to find an integrated Digital Library Solution.</span> 
+
+      <h1>Introduction: Needs of Libraries, Archives, and Museums </h1>
+
+      <p class="normal">At different places in the world, museums, archives, and 
+
+        libraries have started to digitize their valuable stock for preservation 
+
+        and value-adding application purposes (Bogen &amp; Bonkowski &amp; Borowski 
+
+        &amp; Löffler, 2000). The result of a digitization process is a collection 
+
+        of digital objects and metadata. There are the bibliographical metadata 
+
+        first. In addition, new metadata concerning the digital material itself 
+
+        must be captured and made accessible. There are new technical metadata, 
+
+        which are relevant such as format, size, resolution, access, and copyrights. 
+
+        Additionally, there are metadata representing the structure of a document, 
+
+        which must be taken into account such as the assignment of images to the 
+
+        structure of a music piece (title page, first movement, second movement, 
+
+        etc.). </p>
+
+      <p class="normal">In order to enable well-structured and economic handling 
+
+        of digital objects and related metadata, a Digital Library System is needed, 
+
+        as a prerequisite for enhanced functionality in a museum and new applications 
+
+        in general. These Digital Library Systems have to meet the special requirements 
+
+        of digitized material.</p>
+
+      <p class="normal">This paper structures as follows: In the first section, 
+
+        a few definitions and a generic digital library architecture are introduced 
+
+        to understand our notion of Library Information Systems, Museum Management 
+
+        Systems, and Digital Library Systems, and related differences. In the 
+
+        next section we present our selection from the market of Digital Library 
+
+        Products and Systems, together with our evaluation criteria. The last 
+
+        section provides the results of our evaluation and a list of candidates 
+
+        that we will inspect thoroughly in the near future to build a Digital 
+
+        Library Solution upon.</p>
+
+      <h1>Definitions and Model </h1>
+
+      <p class="normal">In order to share a common understanding of the application 
+
+        domain, a few definitions have to be introduced first as different interpretations 
+
+        are found in the related literature.</p>
+
+      <h1>Library Information System (LIS)</h1>
+
+      <p class="normal"><i>Library Information Systems</i> are computer-based systems 
+
+        that automate internal library procedures, public services, and those 
+
+        that connect users to electronic resources. Technical services offer support 
+
+        for professional librarian areas such as acquisition of materials, cataloging, 
+
+        authority control, and circulation control. Public services include online 
+
+        public access catalogs (OPACs) and access to licensed electronic. </p>
+
+      <p class="normal">Synonyms for Library Information Systems include any permutation 
+
+        of the words <i>integrated</i>, <i>online</i>, <i>library</i>, <i>management</i>, 
+
+        <i>automation</i>, and <i>systems </i>(<a href="http://www.coe.missouri.edu/~is334/projects/Project_LIS/faq1.html" target="new">http://www.coe.missouri.edu/~is334/projects/Project_LIS/faq1.html</a>).</p>
+
+      <p class="normal">A Library Information System is not necessarily a digital 
+
+        library, since a library consisting entirely of conventional physical 
+
+        material (such as only printed books) may be very highly automated. This 
+
+        automation does not make it `digital&#39; in the sense we are considering 
+
+        here.</p>
+
+      <h1>Museum Management System</h1>
+
+      <p class="normal"><i>Museum Management Systems</i> are Library Information 
+
+        Systems that offer even more functionality. Their services include collection 
+
+        administration, exhibition management, events and public relations, administration 
+
+        and shipping, and finally documentation. Exemplary features herein are 
+
+        inventory of objects, library, and photo stocks, various search capabilities, 
+
+        easy operability and handling, creation of reports and statistics, and 
+
+        finally Internet access. </p>
+
+      <h1>Digital Library Systems </h1>
+
+      <p class="normal">There are many definitions of a <i>digital library</i>. 
+
+        Terms such as <i>electronic library</i> and <i>virtual library</i> are 
+
+        often used synonymously. The elements that have been identified as common 
+
+        to these definitions are (<a href="http://sunsite.berkeley.edu/ARL/definition.html">http://sunsite.berkeley.edu/ARL/definition.html</a>):</p>
+
+      <ul>
+
+        <li class="normal"><span class="normal">
+
+        A digital library is not a single entity; 
+
+        </span></li><li class="normal"><span class="normal">
+
+        A digital library requires technology to link the resources of many; 
+
+        </span></li><li class="normal"><span class="normal">
+
+        The linkages between the many digital libraries and information services 
+
+        are transparent to end users; 
+
+        </span></li><li class="normal"><span class="normal">
+
+        Universal access to digital libraries and information services is a goal; 
+
+        </span></li><li class="normal"><span class="normal">Digital library collections are 
+
+          not limited to document surrogates: they extend to digital artifacts 
+
+          that cannot be represented or distributed in printed formats. 
+
+      </span></li></ul>
+
+      <p class="normal">The important point is that a digital library has material 
+
+        stored in a computer system in digital form. It allows manipulation (e.g., 
+
+        for improved retrieval) and delivery (for instance, as a sound file for 
+
+        playing on a computer) in ways that the conventional version of the material 
+
+        can not (Noerr, 2000). </p>
+
+      <p class="normal">Because the material is in digital (or computer readable) 
+
+        form, some new possibilities are opened to the digital library which are 
+
+        not there for a conventional library, even one with the same material.</p>
+
+      <p class="MsoCaption"><img src="bogen.fig1.gif" width="353" height="279" alt="Functionality Overlap"/></p>
+
+      <p class="MsoCaption">Figure 1: Functionality Overlap</p>
+
+      <p class="normal">Figure 1 shows that the functionality offered by the different 
+
+        system categories mentioned are not distinct. In the following, however, 
+
+        we will concentrate on Digital Library Systems and solutions as they are, 
+
+        being digital, the systems of the near future for any museum, library, 
+
+        or collection. </p>
+
+      <h1>A Generic Architecture for a Digital Library System</h1>
+
+      <p class="normal">A Digital Library System may consist of four layers (see 
+
+        figure 2). Digital objects themselves and the related metadata information 
+
+        are stored in a database (DB) or more precisely a <i>Database Management 
+
+        System</i> (DBMS). </p>
+
+      <p class="normal">A so-called <i>Digital Objects Server</i> handles all requests 
+
+        for this DBMS concerning digital objects. Depending on the media type, 
+
+        a request is handled by an <i>Image Server</i>, a <i>Text Server</i>, 
+
+        an <i>Audio Server</i>, a <i>Video Server</i>, a <i>3D Server,</i> or 
+
+        a server for other digitized objects respectively.</p>
+
+      <p class="normal">Between a <i>Digital Objects Server</i> and the <i>Digital 
+
+        Library Clients</i> there is a layer called <i>Digital Library Middleware</i>. 
+
+        Middleware was once defined as the glue that keeps networks and applications 
+
+        together. In our case, it includes toolkits for the development of interfaces 
+
+        and clients, directory and security services, and management facilities.</p>
+
+      <p class="normal">The <i>Digital Library Clients</i> represent the top layer 
+
+        of this architecture. They are the interface to an instance (e.g., a user) 
+
+        requesting or storing information about digital objects. A special interface 
+
+        is the <i>Z39.50</i> interface (Z39.50, 1998) as it provides access to 
+
+        conventional <i>Library Information Systems </i>as found in many museums 
+
+        today<i>.</i></p>
+
+      <p class="MsoCaption"><a href="bogenfig2.html" name="FIG2"><img src="thumbnail.bogen.fig2.gif" width="400" height="226" border="0" alt="Digital Library Architecture"/></a></p>
+
+      <p class="MsoCaption">Figure 2: Digital Library Architecture</p>
+
+      <h1>Digital Library Systems -- a Market Overview</h1>
+
+      <p class="normal">The goal of our market overview is to find a suitable system 
+
+        for the administration and maintenance of digital objects. Figure 3 represents 
+
+        our approach. In a first step we searched the market for possible candidates 
+
+        and compiled a list of 70 products. We based our list upon publications 
+
+        dealing with the application scenarios of museums, archives, and libraries 
+
+        (Noerr, 2000; Thomson, 1998; Knirim &amp; Graf, 1998; Chin, 2000). </p>
+
+      <p class="normal">In a second step we classified the systems into three categories 
+
+        that we defined in chapter 3: Library Information Systems (30 systems), 
+
+        Museums Management Systems (35 systems), and Digital Library Systems (9 
+
+        systems). Some of these products covered several areas. </p>
+
+      <p class="MsoCaption"><a href="bogenfig3.html" name="FIG3"><img src="thumbnail.bogen.fig3.gif" width="400" height="160" border="0" alt="Steps 1-3 of our market overview"/></a></p>
+
+      <p class="MsoCaption">Figure 3: Steps 1-3 of our market overview</p>
+
+      <p class="normal">In a third step we had a closer look at those systems with 
+
+        potential as Digital Library Systems. They were inspected with a detailed 
+
+        criteria checklist. It covers different requirement areas. <i>Product</i> 
+
+        comprises general information about the system. <i>Collection Management</i> 
+
+        addresses the administration of digital objects including metadata. To 
+
+        ensure public access <i>Web presentation </i>is the issue of the next 
+
+        category of quality criteria. A Web-based digital library enables an appropriate 
+
+        distribution of digital material independently from location, time, and 
+
+        available copies of objects. <i>Supported steps towards a digital library</i> 
+
+        determine the next section of desirable features. An ideal Digital Library 
+
+        System supports the whole object path from digitizing to sales on the 
+
+        Internet. If those steps are not offered, the integration of other software 
+
+        packages and extensions becomes necessary. The <i>technical requirements</i> 
+
+        talk about the hard- and software environment. <i>Comments</i> close with 
+
+        additional important aspects. Chapter 5 presents a detailed enumeration 
+
+        of all criteria. </p>
+
+      <p class="normal">The Digital Library Systems are described with its main 
+
+        features in the following paragraphs. For the most promising candidates 
+
+        the complete results are summarized in table 1 (see chapter 5). </p>
+
+      <h1>allegro-C </h1>
+
+      <p class="normal"><i>allegro-C</i> was released by the Technical University 
+
+        of Braunschweig in Germany (<a href="http://www.biblio.tu-bs.de/allegro" target="new">http://www.biblio.tu-bs.de/allegro</a>; 
+
+        allegro-C, 1997; Eversberg, 1997; Tews, 1997). It essentially is a programmable 
+
+        database system for DOS or Unix. It has been designed to meet the requirements 
+
+        of museums and libraries in building a catalog. More than 70 installations 
+
+        exist mainly in Germany and Austria.</p>
+
+      <p class="normal"><i>allegro-C</i> provides some important features for libraries: 
+
+        OPAC, a loaning module, support of the Z39.50 standard, a MAB data structure, 
+
+        and data access rights on file level.</p>
+
+      <p class="normal">A set of data structures for administration of print media 
+
+        is part of the system but digital multimedia objects have to be handled 
+
+        by external modules which can be called from within <i>allegro-C</i> depending 
+
+        on the media type. Dublin Core and RDF standards are not supported.</p>
+
+      <p class="normal"><i>allegro-C</i> lacks XML- and SGML-interfaces or those 
+
+        to other database systems and there is no ready-to-use Web interface, 
+
+        just a set of modules to assist in implementing an interface for data 
+
+        manipulation and retrieval.</p>
+
+      <p class="normal">The software architecture of <i>allegro-C</i> is still based 
+
+        on the first version, which was released in 1980. It is a collection of 
+
+        separate programs storing data in and being controlled by a lot of files 
+
+        of different types, all integrated in a common user interface. An API 
+
+        for direct access to the database contents is not provided. </p>
+
+      <p class="normal"><i>allegro-C</i> is a Library Information System and has 
+
+        no additional functionality for managing a museum. It also has no potential 
+
+        as a Digital Library System.</p>
+
+      <h1>KE EMu</h1>
+
+      <p class="normal"><i>KE EMu</i> (<a href="http://www.ke.com.au/emu/index.html" target="new">http://www.ke.com.au/emu/index.html</a>; 
+
+        KE EMu, 1999; KE Software, 2000) is a multi-lingual Museum Management 
+
+        System based on the <i>KE Texpress</i> object oriented database system 
+
+        (<a href="http://kestrel.mel.kesoftware.com/texpress/">http://kestrel.mel.kesoftware.com/texpress/</a>). 
+
+        It was developed in 1997 and there are 16 installations in Australia, 
+
+        Canada and the USA. <i>KE EMu</i> is a client/server application for Windows 
+
+        95/98/2000/NT clients and Unix or Windows NT servers. It provides the 
+
+        following museum management tasks:</p>
+
+      <ul>
+
+        <li class="normal"><span class="normal">
+
+        Accessioning and deaccessioning 
+
+        </span></li><li class="normal"><span class="normal">
+
+        Event management 
+
+        </span></li><li class="normal"><span class="normal">
+
+        Loans 
+
+        </span></li><li class="normal"><span class="normal">
+
+        Movement histories 
+
+        </span></li><li class="normal"><span class="normal">
+
+        Condition checks and conservation 
+
+        </span></li><li class="normal"><span class="normal">Valuation, insurance, and indemnity 
+
+      </span></li></ul>
+
+      <p class="normal"><i>KE EMu</i> provides a lot of features of a Digital Library 
+
+        System. Administration and maintenance of digital multimedia objects is 
+
+        possible. The complete Dublin Core attribute set is recorded about each 
+
+        resource but the RDF standard (<a href="http://www.w3.org/TR/REC-rdf-syntax" target="new">http://www.w3.org/TR/REC-rdf-syntax</a>) 
+
+        is not supported. Almost all image formats can be displayed and audio 
+
+        and video data can be handled by external applications. </p>
+
+      <p class="normal">A lot of retrieval functionality is provided. The user can 
+
+        choose between query-by-example and the powerful <i>Texql</i> query language, 
+
+        which is a superset of SQL. Context sensitive and phonetic based search 
+
+        is possible. The search results are displayed in table form or as single 
+
+        datasets. The Web interface of <i>KE EMu</i> is aimed at query-only access 
+
+        to the published catalog and related data. It provides a simple keyword 
+
+        query facility and does not allow update.</p>
+
+      <p class="normal"><i>KE EMu</i> has database interfaces to Oracle and Sybase 
+
+        and the Z39.50 and XML standards are supported. The API <i>Texapi</i> 
+
+        is part of the software package.</p>
+
+      <p class="normalIndent2">This software is a Museum Management System but it 
+
+        comes very close to a Digital Library System just lacking the following 
+
+        features:</p>
+
+      <ul>
+
+        <li class="normal"><span class="normal">
+
+        Support of the RDF standard 
+
+        </span></li><li class="normal"><span class="normal">
+
+        SGML interface 
+
+        </span></li><li class="normal"><span class="normal">Comprehensive Web application 
+
+      </span></li></ul>
+
+      <h1>Museum Information Management System MIMS</h1>
+
+      <p class="normal"><i>MIMS</i> (MIMS, 2000) by XWAVE Solutions (<a href="http://www.imx2.com/" target="new">http://www.imx2.com</a>) 
+
+        is a client/server collection management system for use with Oracle or 
+
+        Microsoft SQL server databases. It was published in 1998. It offers no 
+
+        museum administration facilities to support loaning, accessioning, event 
+
+        management,r and condition checks. <i>MIMS</i>&#39;s digital library features 
+
+        are limited to the storage of binary objects, which are to be handled 
+
+        by external applications.</p>
+
+      <p class="normal">Object-oriented data structures are used which can be modified 
+
+        online. During modification data integrity is checked. No predefined data 
+
+        structures are provided and Dublin Core or RDF standards are not supported.</p>
+
+      <p class="normal">A lot of search functionality is implemented. A user can 
+
+        choose between query-by-example and the powerful SQL query language. Search 
+
+        results are displayed in the form of a table, single datasets, or a user-definable 
+
+        report, and it can be saved for future use.</p>
+
+      <p class="normal">The <i>MIMS</i> system provides a browser-based Web interface 
+
+        to the search tool. Especially classified records can be searched for 
+
+        and displayed. XML/SGML import and export are not supported and there 
+
+        is no Z39.50 interface. </p>
+
+      <p class="normal"><i>MIMS</i> is a Museum Management System. It lacks important 
+
+        features to call it a Digital Library System:</p>
+
+      <ul>
+
+        <li class="normal"><span class="normal">
+
+        Ready-to-use data structures for digital objects 
+
+        </span></li><li class="normal"><span class="normal">
+
+        Administration and maintenance of digital objects 
+
+        </span></li><li class="normal"><span class="normal">
+
+        Support of open standards (Dublin Core, RDF, XML, SGML, Z39.50) 
+
+        </span></li><li class="normal"><span class="normal">Comprehensive Web application 
+
+      </span></li></ul>
+
+      <h1><i>Agora</i> from SRZ </h1>
+
+      <p class="normal">The Digital Library System <i>Agora</i> was developed by 
+
+        the Satz-Rechen-Zentrum SRZ (Berlin, Germany) in collaboration with the 
+
+        Göttinger Digitalisierungszentrum (Göttingen, Germany) for the 
+
+        storage of and access to digital documents, including their structural, 
+
+        bibliographic, and content metadata (<a href="http://www.agora.de/" target="new">http://www.agora.de/</a>). 
+
+        The system complies with the specifications for a distributed digital 
+
+        scientific library as defined by the Deutsche Forschungsgemeinschaft (Mittler, 
+
+        1998). </p>
+
+      <p class="normal">The software is still under development; the first version 
+
+        was announced for August 2000. Beta versions are in use in several German 
+
+        and Austrian libraries. A relational database (with the capability of 
+
+        SQL92 and ODBC/JDBC) and a Web server (with the capability of Java Servlets) 
+
+        are needed additional components.</p>
+
+      <p class="normal">As digital library system <i>Agora</i> provides components 
+
+        for scanning, indexing, image processing and conversion, document preparation, 
+
+        administration, document management, Web presentation, printing-on-demand, 
+
+        and storage on CD-R. The <i>Agora XML Editor</i> ensures the structuring 
+
+        of digitized print material including bibliographical and technical metadata. 
+
+        Output is XML files.</p>
+
+      <p class="normal">Batch import tools are provided to import XML files as well 
+
+        as digital material. Metadata are extracted from the XML tags and from 
+
+        inside the TIFF headers and imported into a relational database as center 
+
+        of the digital library. Images can be converted into other image formats 
+
+        and sizes.</p>
+
+      <p class="normal">One main part of <i>Agora</i> is a Web application based 
+
+        upon Java Servlets. HTML-templates that provide navigation features (catalog 
+
+        data, SGML/XML based tables of contents, indexes, lists of illustrations, 
+
+        thumbnails, etc.), simple, and extended searches are included and can 
+
+        be adapted. The integrated <i>Verity</i> Search engine(<a href="http://www.verity.com/" target="new">http://www.verity.com</a>) 
+
+        offers full-text retrieval. The system supports SGML/XML and RDF. However, 
+
+        there is no Z39.50 interface.</p>
+
+      <p class="normal"><i>Agora</i> is no Library Information or Museum Management 
+
+        System but supports the handling of digital objects. The <i>Agora</i> 
+
+        concept is promising. Nevertheless it still lacks two features:</p>
+
+      <ul>
+
+        <li class="normal"><span class="normal">
+
+        Storage of other media types (video, audio, 3D models, etc.) 
+
+        </span></li><li class="normal"><span class="normal">
+
+        Product status 
+
+        </span></li><li class="normal"><span class="normal">We tried for 9 month to receive 
+
+          a test installation without success. 
+
+      </span></li></ul>
+
+      <h1>ADLIB from ADLIB Information Systems</h1>
+
+      <p class="normal"><i>ADLIB Information Systems</i> is a company with over 
+
+        15 years of experience in information and collection management in libraries, 
+
+        museums, and archives. As software modules they offer since 1992 (<a href="http://www.disbv.com/" target="new">http://www.disbv.com/</a>):</p>
+
+      <p class="normal"><i>ADLIB library: </i>&#39;The Integrated Library Application&#39; 
+
+        that was intended specifically for information and catalog management 
+
+        in libraries.</p>
+
+      <p class="normal"><i>ADLIB Museum: </i>&#39;The Collections Management Program&#39; 
+
+        that features comprehensive functionality for professional collections 
+
+        management.<i></i></p>
+
+      <p class="normal"><i>ADLIB Archive:</i> It was intended especially for archive 
+
+        management.</p>
+
+      <p class="normal">These modules are used by several international museums, 
+
+        archives, and libraries and are available in German, English, and Dutch.</p>
+
+      <p class="normal">The <i>ADLIB</i> applications base upon a propriety database. 
+
+        Internet users can search the catalog by any field or combination of fields, 
+
+        using Boolean and logical operators. For the Internet access Microsoft 
+
+        or Netscape Web server software and the <i>ADLIB Internet Server </i>are 
+
+        required.</p>
+
+      <p class="normal"><i>ADLIB Information Systems</i> are a member of the Consortium 
+
+        for Interchange of Museum Information (CIMI). Consequently <i>ADLIB</i> 
+
+        supports standards such as MARC (ISO 2709 MARC exchange format), Dublin 
+
+        Core (export routines), Z39.50, and CIDOC (Guidelines for Museum Object 
+
+        information). <i>ADLIB</i> has built-in image storage and retrieval capabilities.</p>
+
+      <p class="normal"><i>ADLIB</i> can be rated as Library Information and Museum 
+
+        Management System. For a Digital Library System, the <i>ADLIB</i> software 
+
+        lacks the following features:</p>
+
+      <p class="normal">Storage and retrieval of hierarchical structured digital 
+
+        objects (title page, first movement, second movement, etc.)</p>
+
+      <p class="normal">Storage and retrieval of other media types (video, audio, 
+
+        full text, 3D models, etc.)</p>
+
+      <ul>
+
+        <li class="normal"><span class="normal">XML/SGML interfaces</span></li>
+
+        <li class="normal"><span class="normal">Ready-to-use and comprehensive Web application</span></li>
+
+        <li class="normal"><span class="normal">Open database platform</span></li>
+
+        <li class="normal"><span class="normal">Platform independence</span></li>
+
+      </ul>
+
+      <h1>Voyager from Endeavor Information Systems Inc.</h1>
+
+      <p class="normal">The <i>Voyager</i> (<a href="http://www.endinfosys.com/" target="new">http://www.endinfosys.com</a>) 
+
+        integrated library management system consists of several different software 
+
+        modules for public access, OPAC, cataloging, acquisition, circulation, 
+
+        reporting; and system administration. <i>Voyager</i> offers access to 
+
+        images, full text, and other local and remote resources. More than 400 
+
+        installations exist mainly in the US, Canada, and the UK.</p>
+
+      <p class="normal"><i>Voyager</i> is a client/server application with a clear 
+
+        separation between the three components: client functions, server functions; 
+
+        and database functions. It runs on Unix (Solaris, AIX) and Microsoft NT/Windows2000 
+
+        .<i>Voyager&#39;s</i> server software uses a relational database to store 
+
+        and manage all of the libraries bibliographic data. <i>Voyager</i> has 
+
+        Oracle as its relational database management system (RDBMS) and supports 
+
+        SQL as query language. </p>
+
+      <p class="normal">The <i>Voyager</i> client software runs under Microsoft 
+
+        Windows. The existing HTTP client is called <i>WebVoyage</i> and it comes 
+
+        as part of the base <i>Voyager</i> package. It allows Web browsers to 
+
+        query the <i>Voyager</i> database. It is a functional Web OPAC, capable 
+
+        of handling all types of data. All other functions like cataloging, acquisition, 
+
+        and administration can only be performed through the MS-Windows client 
+
+        software. </p>
+
+      <p class="normal"><i>ImageServer</i>, an additional <i>Voyager</i> module, 
+
+        has the task to manage electronic resources, special collections, archives, 
+
+        and digital resources. It supports scanning, indexing, access, and printing 
+
+        of electronic documents and other library objects. A Document Management 
+
+        System with copyright control is integrated. </p>
+
+      <p class="normal">The <i>Cataloging</i> module provides the user with a MARC21 
+
+        interface and batch import functionality. It is possible to import or 
+
+        export records through a USMARC or Z39.50 interface. </p>
+
+      <p class="normal"><i>Voyager</i> is a Library Information and Museum Management 
+
+        System. The following features are missing to call it a Digital Library 
+
+        System:</p>
+
+      <ul>
+
+        <li class="normal"><span class="normal">Hierarchical data structures for digital objects</span></li>
+
+        <li class="normal"><span class="normal">Support of XML/SGML</span></li>
+
+        <li class="normal"><span class="normal">Customizable Web application</span></li>
+
+      </ul>
+
+      <h1>Virtua ILS from VTLS Inc.</h1>
+
+      <p class="normal"><i>Virtua ILS</i> (<a href="http://www.vtls.com/" target="new">http://www.vtls.com</a>) 
+
+        is a client/server software that offers numerous features in an integrated 
+
+        solution to manage library collections. The basic subsystems of <i>Virtua</i> 
+
+        include OPAC, Web Gateway, Circulation, Cataloging, Serials, Acquisitions, 
+
+        System Administration, and Statistics and Reports. There are more than 
+
+        300 installations in 24 countries world-wide.</p>
+
+      <p class="normal"><i>Virtua&#39;s</i> OPAC offers four types of searches: Browse, 
+
+        Keyword, Control Number, and Expert. To further refine search results, 
+
+        users can employ the use of filters in <i>Keyword</i> and <i>Expert</i> 
+
+        searches. <i>Virtua&#39;s</i> OPAC toolbar and views are configurable through 
+
+        the use of the system permissions and parameters.</p>
+
+      <p class="normal">The <i>Chameleon</i> Gateway is the Web Gateway of <i>Virtua 
+
+        ILS</i>. It allows libraries to offer a variety of customized interfaces 
+
+        and it allows end user to choose the one that meets their individual needs 
+
+        best. By creating or modifying a skin, the library can make the gateway 
+
+        match the appearance of the library Web site. Every library can build 
+
+        its own personalized Web portal. The Chameleon Gateway is designed for 
+
+        multimedia access through the Internet. Any user who has a connection 
+
+        to the Internet and an appropriate WWW browser can search through the 
+
+        image collection or other Z39.50 compliant databases. It is not possible 
+
+        to import or export records in XML/SGML.</p>
+
+      <p class="normal"><i>Virtua</i> enables the definition of an unlimited number 
+
+        of original cataloging workforms for various record types and materials 
+
+        formats. Workforms can also be designed for specialized needs, such as 
+
+        monographic series, metadata (such as Dublin Core), and institutional 
+
+        publications.</p>
+
+      <p class="normal"><i>Virtua</i> runs on Unix (Solaris, AIX) and Microsoft 
+
+        Windows (NT/2000). It uses Oracle as a relational database. The client 
+
+        software is only available in a Win95/98/2000 version.</p>
+
+      <p class="normal"><i>Virtua ILS</i> can be classified as a Library Information 
+
+        and Museum Management System. It lacks the following features to be rated 
+
+        as Digital Library System:</p>
+
+      <ul>
+
+       <li class="normal"><span class="normal">Hierarchical data structures for digital objects</span></li>
+
+       <li class="normal"><span class="normal">Support of XML, SGML</span></li>
+
+      </ul>
+
+      <h1>Content Manager by IBM</h1>
+
+      <p class="normal">IBM&#39;s <i>DB2 Digital Library </i>is now integrated in a 
+
+        product called <i>Content Manager (CM). </i>Its use is not restricted 
+
+        to the cultural/museum industry (<a href="http://www-4.ibm.com/software/is/dig-lib/">http://www-4.ibm.com/software/is/dig-lib/</a>). 
+
+        <i>Content Manager </i>manages all digital information -- scanned images, 
+
+        workgroup business documents, computer-generated reports, Web content 
+
+        management (XML/HTML), and more. Its key functionality for digital libraries 
+
+        supports creation and capturing, storage and management, search and access, 
+
+        distribution, and rights management. Different scanner types are supported 
+
+        and new search technologies are embedded into the system such as parametric, 
+
+        content-based (text, image, video, audio), multi-search, navigation, and 
+
+        even intelligent agents. </p>
+
+      <p class="normal">A <i>library server </i>providing the search capabilities 
+
+        mentioned and one or more <i>object servers</i> providing a storage location 
+
+        support a client that needs access to a digital collection. A <i>library 
+
+        server</i> is the single point of control for the system. In particular, 
+
+        it holds index information, controls security and access, dispatches requests 
+
+        to <i>object servers</i> to accept new objects or to move objects to a 
+
+        client, and ensures database integrity. The objects themselves may be 
+
+        located centrally or may be decentralized and close to the users. They 
+
+        are stored in <i>Content Manager</i> <i>object servers</i>. </p>
+
+      <p class="normal"><i>CM</i> supports a broad variety of standard formats, 
+
+        ranging from TIFF, JPEG, XML, MPEG and QuickTime V.4 to hundreds of office 
+
+        document types, including Microsoft Word and Lotus 1-2-3 spreadsheets. 
+
+        Content can be scanned or imported via out-of-the-box clients or capture 
+
+        solutions. It is then organized in a DB2 database or Oracle relational 
+
+        database.</p>
+
+      <p class="normal">A <i>Content Manager</i> server operates on AIX, AS/400, 
+
+        OS/390, Windows NT, and Windows 2000 and supports clients for Windows 
+
+        95, 98, 2000 and NT. <i>Content Manager</i> comes with a client toolkit 
+
+        for building Internet or desktop applications that access information 
+
+        stored in <i>Content Manager</i>. A sample Java applet demonstrates how 
+
+        searches can be performed. APIs include Java, Java Beans, C++, and ActiveX 
+
+        Controls.</p>
+
+      <p class="normal">IBM&#39;s <i>Content Manager</i> is a well-known, powerful Digital 
+
+        Library System. Its main disadvantage is the fact that it is only running 
+
+        on Windows systems or IBM&#39;s Unix dialect AIX. The customization process 
+
+        needs training people with appropriate skills. </p>
+
+      <h1>Dienst by CDLRG (Cornell Digital Library Research Group)</h1>
+
+      <p class="normal"><i>Dienst</i> is a system for configuring a set of individual 
+
+        services running on distributed servers to cooperate in providing the 
+
+        services of a digital library. Interoperability among <i>Dienst</i> servers 
+
+        provides the user with a single logical document collection, even though 
+
+        the actual collection is distributed across multiple servers (<a href="http://www.cs.cornell.edu/cdlrg/dienst/DienstOverview.htm" target="new">http://www.cs.cornell.edu/cdlrg/dienst/DienstOverview.htm</a>; 
+
+        Dienst, 1995). </p>
+
+      <p class="normal">The functionality of a <i>Dienst</i> digital library includes 
+
+        storage and access to resources (digital objects), deposit of new resources, 
+
+        discovery and browsing of those resources, and user registration. <i>Dienst</i> 
+
+        supports indexing, administration and Web publishing of documents. <i>Dienst</i> 
+
+        does not offer collection management facilities such as purchasing, e-commerce, 
+
+        or copyright management. The distributed <i>Dienst</i> software is configured 
+
+        to handle textual resources (documents) in a variety of formats. However, 
+
+        the <i>Dienst</i> architecture includes a sophisticated document model 
+
+        that accommodates a wide variety of digital resources. Using the <i>Dienst</i> 
+
+        software for these other resources will require some programming.</p>
+
+      <p class="normal">The entire package of <i>Dienst</i> software (all services) 
+
+        is only supported on Unix (including LINUX, Solaris, AIX, Ultrix, and 
+
+        HP-UX). The <i>Dienst</i> software is designed and written to run in conjunction 
+
+        with an HTTP server such as the Apache Web server (<a href="http://www.apache.org/" target="new">http://www.apache.org/</a>). 
+
+        The <i>Dienst</i> protocol uses HTTP as a transport layer, making <i>Dienst</i> 
+
+        servers accessible from any WWW client. Z39.50 and SQL is not used for 
+
+        query purposes. The only restriction on metadata used in <i>Dienst</i> 
+
+        is that it is formatted in XML. Examples use three metadata standards: 
+
+        rfc1807 (<a href="ftp://nic.merit.edu/documents/rfc/rfc1807.txt">ftp://nic.merit.edu/documents/rfc/rfc1807.txt</a>), 
+
+        Dublin Core (<a href="http://purl.org/DC/">http://purl.org/DC/</a>), and 
+
+        Open Archive Metadata Set (<a href="http://www.openarchive.org/" target="new">http://www.openarchive.org/</a>).</p>
+
+      <p class="normal"><i>Dienst</i> is not a Digital Library Product in the classical 
+
+        sense: it is a protocol and server that provides distributed document 
+
+        libraries over the World Wide Web. In this context, it is more an infrastructure 
+
+        than a single-hosted Digital Library Solution.</p>
+
+      <h1>Summary: Our Proposal for an Integrated Digital Library Solution</h1>
+
+      <p class="normal">Table 1 describes the four most promising Digital Library 
+
+        Systems after our detailed review. They met our quality criteria checklist 
+
+        best.</p>
+
+      <table border="0" cellspacing="0" cellpadding="0">
+
+        <tbody><tr> 
+
+          <td width="333" valign="top" class="Normal">  </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal"><b>Agora</b></p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal"><b>CM</b></p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal"><b>KE EMu</b></p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal"><b>Virtua ILS</b></p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal"><i>1. Product</i></p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal">  </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">1.1 Current version</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Beta 2000</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">V6.1</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">504</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">2000</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">1.2 Where is the program mainly used?</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal">  </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">1.2.1 Libraries</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">1.2.2 Museums</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">1.2.3 Archives</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">1.3 Where is the focus of the program?</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal">  </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">1.3.1 Catalog</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">1.3.2 Collections Management</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">1.3.3 Archiving</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">1.3.4 Other</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">DMS</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal"><i>2. Collection Management</i></p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal">  </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">2.1 Storage of digital, multimedia objects</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Images only</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y </p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">2.2 Storage of different qualities/versions of digital 
+
+              objects</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">?</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">2.3 Storage of metadata </p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">DC </p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">DC, MARC</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">2.4 Storage of the structure of digital objects (hierarchy)</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">?</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">2.5 Integration of digital watermarks and intellectual 
+
+              property rights</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal"><i>3. Web presentation (Intra- and Internet)</i></p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal">  </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">3.1 Navigation in general </p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">3.2 Navigation in digital objects</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">3.3 Full-text search </p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y </p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">3.4 Structured search for metadata</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">3.5 Changeable templates</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">?</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">3.6 API to access the Digital Library System&#39;s content</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal"><i>4. Supported steps towards a digital library </i></p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal">  </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">4.1 Scanning</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">4.2 Indexing</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">4.3 Administration, Storage</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">4.4 Web presentation</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">4.5 Facsimile reprinting</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">4.6 E-Commerce</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal"><i>5. Technical requirements</i></p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal">  </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.1 Server operating system</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal">  </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.1.1 Unix (Which?)</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Solaris</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">AIX</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Solaris, AIX, SCO, Linux </p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Solaris, AIX</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.1.2 MS Windows (Which?)</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">NT</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">AS/400,2000,</p>
+
+            <p class="normal">NT,OS/390</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">NT</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">NT, 2000</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.2 Which server software is necessary for Web access?</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal">  </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.2.1 Web server (Which?)</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">JAVA Servlets</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">?</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Texhtml</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Apache</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.2.2 Additional Software (Which?)</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal"><span> </span></p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">?</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal"><span> </span></p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.3 Storage in a database? (Which one?)</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">relational</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">DB2, Oracle</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Texpress</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Oracle</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.4 Batch import and export interfaces</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal"><span> </span></p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal"><span> </span></p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal"><span> </span></p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal"><span> </span></p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.4.1 Dublin core (DC)</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.4.2 Z39.50</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.4.3 XML</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.4.4 MARC</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.4.5 MAB</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.4.6 Digital objects</p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Y</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">?</p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">N</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal">5.4.7 Other </p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">Image conv.</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal"> 
+
+            <p class="normal"><i>6. Comments </i></p>
+
+          </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal">No product</p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal"> 
+
+            <p class="normal">No Unix, but AIX </p>
+
+          </td>
+
+          <td width="60" valign="top" class="Normal"> 
+
+            <p class="normal">Weak Web interface</p>
+
+          </td>
+
+          <td width="67" valign="top" class="Normal"> 
+
+            <p class="normal">No XML support</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="333" valign="top" class="Normal">  </td>
+
+          <td width="66" valign="top" class="Normal"> 
+
+            <p class="normal"><span> </span></p>
+
+          </td>
+
+          <td width="76" valign="top" class="Normal">  </td>
+
+          <td width="60" valign="top" class="Normal">  </td>
+
+          <td width="67" valign="top" class="Normal">  </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="601" colspan="5" valign="top" class="Normal"> 
+
+            <p class="normal">Legend:</p>
+
+            <p class="normal"><span> </span>&#39;?&#39;: no information available</p>
+
+            <p class="normal"><span> </span>&#39;DC&#39;: Dublin Core</p>
+
+            <p class="normal"><span> </span>&#39;DMS&#39;: Document Management System</p>
+
+          </td>
+
+        </tr>
+
+      </tbody></table>
+
+      <p class="MsoCaption"> </p>
+
+      <p class="normal"><i>Agora</i> is a special development for digitized objects. 
+
+        It considers all aspects of German working groups that define requirements 
+
+        for the management of digitized material. The concept of <i>Agora</i> 
+
+        is very strong, not so the implementation. The main disadvantage of <i>Agora</i> 
+
+        is that it has not yet left its beta status and that the product release 
+
+        has been postponed several times in the past. </p>
+
+      <p class="normal"><i>CM</i> is a very comprehensive Digital Library System 
+
+        offering a lot of features for the storage and maintenance of digital 
+
+        objects. It is an often applied solution, powerful and well-known. Its 
+
+        main disadvantage is the fact that it is only running on Windows systems 
+
+        or IBM&#39;s Unix dialect AIX. The included toolkit offers great flexibility 
+
+        but needs training people with appropriate skills.</p>
+
+      <p class="normal"><i>KE EMu</i> focuses on collection management for museums 
+
+        where it has its strengths. But the capabilities reach beyond this towards 
+
+        administration of digital objects. Its weak point is the Web interface, 
+
+        which only provides a simple keyword query facility.</p>
+
+      <p class="normal"><i>Virtua ILS</i> has its strengths in the field of Library 
+
+        Information and Museum Management Systems. The main disadvantages are 
+
+        that the support of Web access is restricted to the Web OPAC and that 
+
+        it is not possible to use XML/SGML data. Nevertheless with a few enhancements 
+
+        it can be used as Digital Library System.</p>
+
+      <p class="MsoCaption"><a href="bogenfig4.html" name="FIG4"><img src="thumbnail.bogen.fig4.gif" width="400" height="139" border="0" alt="Steps 4-6 of our market overview"/></a></p>
+
+      <p class="MsoCaption">Figure 4: Steps 4-6 of our market overview</p>
+
+      <p class="normal">So far our work was paper work. In a next step we will run 
+
+        practical tests with the systems selected to check whether the promises 
+
+        of the companies will hold. Of course one has to talk to customers and 
+
+        bring in their special needs too. Finally their criteria will be decision-relevant. 
+
+        No system will cover all features. Therefore we plan extended developments 
+
+        to make a Digital Library Solution out of the Digital Library System selected.</p>
+
+      <h1>References </h1>
+
+      <p class="ReferencesText"><span class="ReferencesText">allegro-C (1997). Systemhandbuch 
+
+        Version 15.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Bogen, M. &amp; Bonkowski, 
+
+        C. &amp; Borowski, M. &amp; and Löffler, J. (2000). Digitizing a 
+
+        Cultural Heritage - The Key Issue for Preservation and Electronic Publishing. 
+
+        In: Proceedings of WebNet&#39;2000, San Antonio, Texas</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Chin (2000). The Canadian 
+
+        Heritage Information Network. Collections Management Software Review. 
+
+        <a href="http://www.chin.gc.ca/Resources/Publications/e_publications.html#CMSR" target="new">http://www.chin.gc.ca/Resources/Publications/e_publications.html#CMSR</a>.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Dienst (1995). Implementation 
+
+        reference manual. Cornell Computer Science Technical Report.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Eversberg, B. (1997). 
+
+        allegro-C: Partitur für Einsteiger. </span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">KE EMu, (1999). KE 
+
+        Software. KE EMu User Guide.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">KE Software (2000). 
+
+        KE EMu Electronic Museum Collections Management System Hardware and Network 
+
+        Requirements.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Knirim, H. &amp; Graf, 
+
+        B. (1998). Softwarevergleich in der Fachgruppe Dokumentation des Deutschen 
+
+        Museumsbundes. <a href="http://www.museumsbund.de/fgdoku/ag-softwarevergleich/inhalt.html#Inhalts-verzeichnis" target="new">http://www.museumsbund.de/fgdoku/ag-softwarevergleich/inhalt.html#Inhalts-verzeichnis</a>.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">MIMS (2000). XWAVE 
+
+        Solutions. Client/Server Operations Manual For The Museum Information 
+
+        Management System (MIMS).</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Mittler, Elmar (Hrsg.): 
+
+        Retrospektive Digitalisierung von Bibliotheksbeständen, Berichte der von 
+
+        der Deutschen Forschungsgemeinschaft einberufenen Facharbeitsgruppen &#34;Inhalt&#34; 
+
+        und &#34;Technik&#34;, Deutsches Bibliotheksinstitut, Berlin 1998</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Noerr, P. (2000). The 
+
+        Digital Library Toolkit. Second Edition. <a href="http://www.oracle.com/us/sun/index.htm" target="new">http://www.sun.com/products-n-solutions/edu/libraries/noerrfinal.pdf</a>.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Tews, A. (1997). allegro-C: 
+
+        allegro-Ouvertüre.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Z39.50 (1998). ISO 
+
+        23950. Information and documentation -- Information retrieval (Z39.50) 
+
+        -- Application service definition and protocol specification.</span></p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</tbody></table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+
+
+
+
+</body><!-- #EndTemplate --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/bogen/bogen.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:51 GMT --></html>

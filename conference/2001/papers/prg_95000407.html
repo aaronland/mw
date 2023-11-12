@@ -1,0 +1,1409 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/park/park.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:49:16 GMT --><head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>Design and Analysis of Virtual Museums</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="/>
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css"/>
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onload="MM_preloadImages(&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tbody><tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"/></a></p>
+      <p> <a href="../../register/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.register&#39;,&#39;document.register&#39;,&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;)"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"/></a> 
+        <br/>
+        <a href="../../workshops/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.workshops&#39;,&#39;document.workshops&#39;,&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;)"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"/></a> 
+        <br/>
+        <a href="../../sessions/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sessions&#39;,&#39;document.sessions&#39;,&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;)"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"/></a> 
+        <br/>
+        <a href="../../speakers/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.speakers&#39;,&#39;document.speakers&#39;,&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;)"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"/></a> 
+        <br/>
+        <a href="../../interact/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.interact&#39;,&#39;document.interact&#39;,&#39;../../nav/mw2001_nav_interacton.gif&#39;,&#39;#943398534416&#39;)"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"/></a> 
+        <br/>
+        <a href="../../demos/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.demos&#39;,&#39;document.demos&#39;,&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;)"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"/></a> 
+        <br/>
+        <a href="../../exhibit/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.exhibits&#39;,&#39;document.exhibits&#39;,&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;)"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"/></a> 
+        <br/>
+        <a href="../../events/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.events&#39;,&#39;document.events&#39;,&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;)"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"/></a> 
+        <br/>
+        <a href="../../best/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.best&#39;,&#39;document.best&#39;,&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;)"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"/></a> 
+        <br/>
+        <a href="../../dates/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.dates&#39;,&#39;document.dates&#39;,&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;)"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"/></a> 
+        <br/>
+        <a href="../../seattle/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.seattle&#39;,&#39;document.seattle&#39;,&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;)"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"/></a> 
+        <br/>
+        <a href="../../sponsor/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sponsor&#39;,&#39;document.sponsor&#39;,&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"/></a> 
+        <br/>
+        <br/>
+        <br/>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"/></a> 
+        <br/>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br/>
+        158 Lee Avenue<br/>
+        Toronto, Ontario<br/>
+        M4E 2P3 Canada<br/>
+        info@ archimuse.com<br/>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tbody><tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"/></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br/>
+            A&amp;MI</font></a> </span></td>
+        </tr>
+      </tbody></table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br/>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class="verysmall">Published: March 15, 2001.<br/>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated: "+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"/><br/>
+      <!-- #BeginEditable "Body" --> 
+
+      <p class="PaperTitle">Design and Analysis of Virtual Museums</p>
+
+      <p class="Author">Gilles Falquet, Jacques Guyot, Luka Nerima, University of 
+
+        Geneva, Switzerland and Seongbin Park, Information Sciences Institute, 
+
+        USA</p>
+
+      <p class="AbstractTitle">Abstract</p>
+
+      <p class="AbstractText">Using the same data, which could come from local databases 
+
+        or external sources such as the Web, virtual museum designers can build 
+
+        different hyperspaces. It is possible that visitors would find some of 
+
+        them more useful than others. Therefore, virtual museums designers should 
+
+        be equipped with a tool by which various hyperspaces for virtual museums 
+
+        can be easily designed and examined.</p>
+
+      <p class="AbstractText">In this paper, we view a virtual museum as a hypertext 
+
+        that consists of nodes and links and show that a database publishing tool 
+
+        called Lazy, which generates a hypertext view (i.e., derived hypertext) 
+
+        of a given database, can be used for designing virtual museums. The 
+
+        Lazy system consists of a declarative hypertext view specification language, 
+
+        a node schema compiler, and a node server that processes node requests. Since the language is purely declarative, it is fairly easy to construct 
+
+        and revise hyperspaces for a virtual museum. With this tool it becomes 
+
+        possible to adopt an iterative design methodology. </p>
+
+      <p class="AbstractText">Given a database for a virtual museum, we first construct 
+
+        a hypertext using the procedure (Falquet &amp; al., 1999) called an initial 
+
+        structure. We then proceed to analyze the initial structure and examine 
+
+        possible refinement operations that can enhance the usability of the created 
+
+        hypertext. For that purpose, we use a simple graph-based analysis and 
+
+        we show kinds of analysis that can be done using the graph-based approach. Once the structure is refined using the refinement operations, we apply 
+
+        grammar-based formalism (Park, 1998) to the refined structure to see whether 
+
+        we can obtain a simpler grammar that can generate the same hyperspace. Our goal is to explore various analysis techniques on the hypertext and 
+
+        give insights into designing a good hyperspace using the analysis results. 
+
+      </p>
+
+      <h1>Introduction</h1>
+
+      <p class="normal">In this paper, we consider the issues that arise in the 
+
+        design and implementation of virtual museums. A virtual museum is defined 
+
+        as &#34;a logically related collection of elements composed in a variety 
+
+        of media, and, because of its capacity to provide connectedness and the 
+
+        various points of access available, [it] lends itself to transcending 
+
+        traditional methods of communicating with the user; it has no real place 
+
+        or space, and dissemination of its contents are theoretically unbounded&#34; 
+
+        (Andrews, 1996). According to this definition, it is reasonable to view 
+
+        the structure of a virtual museum as a hypertext since each element in 
+
+        a hypertext can be connected to others. However, it is well know that 
+
+        large hypertexts, in particular large Web sites, are very difficult to 
+
+        manage. Thus it has become common practice to store data in a database 
+
+        and to use some mechanism to automatically produce the hypertext. </p>
+
+      <p class="normal">In this paper, we will study the construction of virtual 
+
+        museums on top of databases. The content of a database can represent either 
+
+        real-world entities (e.g. existing works of art, or existing museums) 
+
+        or virtual entities (e.g. virtual exhibitions that exist only on the Web). When constructing a virtual museum, it is important to provide visitors 
+
+        to the virtual museum with a well-designed hyperspace so that they do 
+
+        not get lost while navigating inside the space. Although &#34;lost in 
+
+        hyperspace&#34; is a well-known symptom (Conklin, 1987), in our case, 
+
+        we have an underlying database that is structured by a database schema 
+
+        and we can avoid the symptom to some extent.</p>
+
+      <p class="normal">Given database contents, different hypertext structures 
+
+        can be created for the virtual museum, and visitors will find some structures 
+
+        more accessible than others. Therefore, the structure should be carefully 
+
+        designed, and it is important for virtual museum designers to easily define 
+
+        nodes and links that form hyperspaces and see what the results look like 
+
+        (examine different hyperspaces freely). In order to help designers who 
+
+        build virtual museums, we present a database publishing tool called Lazy 
+
+        (Falquet &amp; al., 1998), by which different hyperspaces can be easily 
+
+        constructed. Using the Lazy system, designers can construct the web site 
+
+        for a virtual museum, and once the web site is created, they can analyze 
+
+        the structure of the virtual museum.</p>
+
+      <p class="normal">Some of the related works are as follows: a visual grammar-based 
+
+        formalism was introduced in order to analyze hypertext structures in (Costagliola 
+
+        &amp; al., 2000), and an implementation in Prolog for analyzing hypertext 
+
+        that contains conditional linkage was sketched in [HT99 paper]. Recently, 
+
+        database publishing has attracted interest and some of the techniques 
+
+        are described in (Entin &amp; al., 1998; Toyama &amp; al., 1998). There 
+
+        are several approaches to create hypertexts from databases. In the procedural 
+
+        approach, the hyperspace designer must write programs (CGI programs in 
+
+        C or Perl, Java servlets, PHP scripts, etc.). These programs are generally 
+
+        large since the code must contain both tags and programming constructs. 
+
+        They are therefore difficult to read, and the hyperspace structure is 
+
+        hidden by the programming constructs. For these reasons, such a code is 
+
+        tough to maintain and update. The dynamic document approach consists in 
+
+        extending some document mark-up language (such as HTML) with specific 
+
+        tags for database querying, result processing and formatting, etc. See, 
+
+        for instance, Cold Fusion (<a href="http://www.allaire.com/" target="new">www.allaire.com</a>). 
+
+        These tags introduce procedural parts into the document description. The 
+
+        declarative approach (Fernandez &amp; al., 1998), (Atzeni &amp; al., 1998), 
+
+        (Falquet &amp; al., 1998) consists in specifying a hypertext structure 
+
+        and specifying how to build the hypertext elements from the database content. 
+
+        It is conceptually simple and tends to be closer to the information designer&#39;s 
+
+        conceptual level. Our work is also related to hypertext design methodologies 
+
+        such as RMM (Isakowitz, 1995) and HDM (Garzotto, 1993). It also takes 
+
+        into account adaptive features such as content adaptation, a well-known 
+
+        adaptation technique in the field of adaptive hypermedia (De Bra, 1998).</p>
+
+      <p class="normal">The paper is organized as follows: in the next section, 
+
+        we will introduce the concept of hypertext view with examples constructed 
+
+        with Lazy. Then, we propose a design process for hypertext views and 
+
+        show its application in the design of a virtual museum. We proceed to 
+
+        explain possible analysis on the hypertext. Finally, we conclude the 
+
+        paper with discussions about our approach for the design and analysis 
+
+        of a virtual museum. </p>
+
+      <h1>Constructing Hypertext Views with Lazy </h1>
+
+      <p class="normal">This section presents the Lazy hypertext view specification 
+
+        language. The presentation is rather informal and based on examples from 
+
+        the sphere of virtual museums.</p>
+
+      <p class="normal"> A hypertext view is a set of nodes and links that represent 
+
+        (a part of) the contents of a database. In the declarative approach, the 
+
+        hypertext components (nodes and links) are derived from the database content 
+
+        (relation tuples) according to a hypertext view specification, as shown 
+
+        in Figure 1. </p>
+
+      <p class="MsoCaption"><img src="park_figures-1.gif" width="394" height="157" alt="Fig.1: Generating hypertext views from a database and a hypertext view specification."/></p>
+
+      <p class="MsoCaption">Fig.1: Generating hypertext views from a database and 
+
+        a hypertext view specification.</p>
+
+      <p class="normal">A hypertext view specification consists of a set of node 
+
+        schemas that specify the collection from which the node&#39;s content is to 
+
+        be drawn; the selection and ordering criteria; the elements that form 
+
+        the node content; and links to other nodes. A node definition takes the 
+
+        following form: </p>
+
+      <p class="BlockQuote"><i>node &lt;node-name&gt; [ &lt;parameters&gt; ] </i></p>
+
+      <p class="BlockQuote"><i><span> </span>pre &lt;element-list&gt; </i></p>
+
+      <p class="BlockQuote"><i><span> </span>items &lt;element-list&gt; </i></p>
+
+      <p class="BlockQuote"><i><span> </span>post &lt;element-list&gt; </i></p>
+
+      <p class="BlockQuote"><i>from &lt;collection&gt;, ... </i></p>
+
+      <p class="BlockQuote"><i>selected by &lt;expression&gt; </i></p>
+
+      <p class="BlockQuote"><i>ordered by &lt;expression&gt; </i></p>
+
+   
+
+      <p class="normal">An element of an element-list is an expression of the form, &#39;&lt;&#39; type &#39;&gt;&#39; &#39;(&#39; &lt;element-list&gt; &#39;)&#39; or a &lt;simple-expression&gt; 
+
+        . In the items part, a simple expression may involve literal constants 
+
+        (string, integer, etc.), attribute names, parameter names, operators and 
+
+        functions. An atomic element, specified by a simple expression, represents 
+
+        basic document data (CDATA in XML terms). In the pre and post part, attribute 
+
+        name may only appear within aggregate functions like min(), max(), sum(), 
+
+        etc. </p>
+
+      <p class="normal">Although the node specification language is generic enough 
+
+        to support relational as well as object-oriented databases, in this paper 
+
+        we will only consider the relational case since most existing databases 
+
+        are relational. In this case, the &lt;collection&gt; of a node is a relation 
+
+        (or the cartesian product of several relations) and each node item will 
+
+        represent a selected tuple of that relation. </p>
+
+      <h2>Example: </h2>
+
+      <p class="normal">Throughout this paper we will use the same database schema, 
+
+        shown in Figure 2, that represents a part of a virtual museum database. 
+
+        Note that this structure is close to a (simplified) real museum database 
+
+        schema. In fact, some of the relations (e.g. works) could be existing 
+
+        relations of a museum information systems, while others (e.g. exhibitions) 
+
+        could represent real as well as virtual objects.</p>
+
+      <p class="MsoCaption"><img src="park_figures-2.gif" width="395" height="302" alt="Fig. 2: Museum database schema"/></p>
+
+      <p class="MsoCaption">Fig. 2: Museum database schema</p>
+
+      <p class="normal">Consider the following node definition</p>
+
+      <p class="BlockQuote">node Artists_after[date]</p>
+
+      <p class="BlockQuote"> items </p>
+
+      <p class="BlockQuote"> &lt;p&gt;(name, &#34;(born &#34;, birthdate, &#34;) &#34;, </p>
+
+      <p class="BlockQuote">    href Works_by[ano] (&#34;works&#34;)</p>
+
+      <p class="BlockQuote">   )</p>
+
+      <p class="BlockQuote">from artists</p>
+
+      <p class="BlockQuote">selected by birthdate &gt;= date</p>
+
+      <p class="BlockQuote">order by name</p>
+
+      <p class="normal">This is intended to present lists of artists born after 
+
+        a given date. The c<span class="normal">ontent of an instance <i>Artist_after[d]</i> 
+
+        of this node is computed as follows:</span></p>
+
+      <ul>
+
+        <li class="normal"><span class="normal"> all the tuples t of table artist that satisfy t.birthdate 
+
+          &gt;= d are selected</span></li>
+
+        <li class="normal"><span class="normal"> an item is generated for each selected tuple, it contains 
+
+          an element of type &lt;p&gt; that is made of the artist&#39;s name, 
+
+          the text &#34;( born &#34;, the artist&#39;s birthdate, and the text &#34;)&#34;. </span></li>
+
+      </ul>
+
+      <p class="normal">This element also contains a reference link (works) to a 
+
+        node <i>works_by[ano]</i> which is intended to display the list of works 
+
+        of this artist. This node is defined as follows</p>
+
+      <p class="BlockQuote">node Works_by[artist]</p>
+
+      <p class="BlockQuote"> items</p>
+
+      <p class="BlockQuote"> &lt;p&gt;(&lt;img src=picture&gt;()),</p>
+
+      <p class="BlockQuote"> &lt;p&gt;(&lt;b&gt;(title), &#34; &#34;, c_date, &lt;br&gt;(),</p>
+
+      <p class="BlockQuote">      support,&#34; &#34;, height,&#34; x &#34;,width</p>
+
+      <p class="BlockQuote">    )</p>
+
+      <p class="BlockQuote"> from work</p>
+
+      <p class="BlockQuote"> selected by author = artist</p>
+
+      <p class="normal">Each selected work will be displayed as two paragrahs (&lt;p&gt;), 
+
+        the first one showing an image of the work and the second one giving textual 
+
+        information (title, creation date, etc.). Figure 3 shows the content of 
+
+        an instance <i>Artist_after[1900]</i> and an instance <i>Works_by[...]</i> 
+
+        that can be reached by following an href link.</p>
+
+      <p class="MsoCaption"><img src="park_figures-3.gif" width="395" height="313" alt="Fig. 3: Two node instance generated with the Lazy system."/></p>
+
+      <p class="MsoCaption">Fig. 3: Two node instance generated with the Lazy system.</p>
+
+      <p class="normal">The node definition language supports three kinds of links, 
+
+        which are &#34;reference&#34;, &#34;expand in place&#34;, and &#34;include&#34;. A reference link creates an active element whose action (when activated 
+
+        by a mouse click) consists in jumping to (opening) the referred link. 
+
+        A link specification refers to a node through its identity (schema name 
+
+        together with parameter values). An inclusion link creates a compound-component 
+
+        relationship between two nodes. The content of the included node is a 
+
+        part of the content of the parent node. With inclusion links one can construct 
+
+        arbitrarily complex nodes, for instance to represent complex structured 
+
+        documents. Figure 4 shows an instance of the following node schema that 
+
+        includes three other node instances (Countries, Work_list, and Contemporary 
+
+        (defined in section 3.2)):</p>
+
+      <p class="BlockQuote">node Artist_ext[id]</p>
+
+      <p class="BlockQuote"> items    </p>
+
+      <p class="BlockQuote">    &lt;h2&gt;( name, &#34; (&#34;, birthdate, &#34;-&#34;, 
+
+        deathdate, &#34;) &#34;),</p>
+
+      <p class="BlockQuote">    include Countries[id],</p>
+
+      <p class="BlockQuote">    &lt;h4&gt;(&#34;Some works&#34;), </p>
+
+      <p class="BlockQuote">    &lt;blockquote&gt;(include Work_list[id]),</p>
+
+      <p class="BlockQuote">    &lt;h4&gt;(&#34;Contemporary with: &#34;),</p>
+
+      <p class="BlockQuote">    &lt;blockquote&gt;(include Contemporary[birthdate, 
+
+        deathdate])</p>
+
+      <p class="BlockQuote"> from artist</p>
+
+      <p class="BlockQuote"> selected by ano=id</p>
+
+      <p class="MsoCaption"><img src="park_figures-4.gif" width="396" height="352" alt="Fig. 4: An node instance which includes other node instances ."/></p>
+
+      <p class="MsoCaption">Fig. 4: An node instance which includes other node instances 
+
+        .</p>
+
+      <p class="normal">Finally, an expand-in-place link is an inclusion link that 
+
+        defers the inclusion until the user activates the link. The content of 
+
+        a node with expand-in-place links will thus depend on user actions taken 
+
+        so far. <b></b></p>
+
+      <p class="normal">The hypertext view generation sy<span class="normal">stem 
+
+        is composed of </span></p>
+
+      <ul>
+
+        <li class="normal"><span class="normal"> a node compiler that checks the syntax of node definitions 
+
+          and stores the node definitions (in a coded form) in the data dictionary</span></li>
+
+        <li class="normal"><span class="normal"> a node server (a Java servlet) that receives node 
+
+          requests from clients&#39; (browsers); loads the appropriate node definitions; 
+
+          executes database queries to build the node contents; and sends the 
+
+          resulting Web pages to the clients.</span></li>
+
+      </ul>
+
+      <p class="normal"><span class="normal">The Web site development cycle consists 
+
+        in writing or editing source files that contain node schemas; compiling 
+
+        the definitions; and viewing (testing) the newly defined nodes in a Web 
+
+        browser. Since the system is dynamic, o</span>nce a node definition has 
+
+        been modified and recompiled, the new version is immediately available 
+
+        to the clients (there is no site generation phase).</p>
+
+      <p class="normal">Every page that is viewed by a client is an instance of 
+
+        a node schema; thus any design problem can be readily located (as opposed 
+
+        to procedural approaches in which the same procedure may be used to manage 
+
+        several different Web pages).</p>
+
+      <h1>Design </h1>
+
+      <p class="normal">In this section, we explain how one can construct an initial 
+
+        hypertext structure that reflects the structure of a given database and 
+
+        how that initial structure can be modified through refinement operations. We also present techniques that hypertext designers can use in order to 
+
+        implement an adaptive feature with the Lazy system. </p>
+
+      <p class="normal">Designing efficient and effective hyperspaces is a difficult 
+
+        task, probably because there are an extremely large number of paths that 
+
+        user can follow. It is thus difficult to ensure that the users will be 
+
+        able to reach any information node, that they will not get lost or disoriented 
+
+        in the hyperspace, that any information can be reached within a reasonable 
+
+        amount of time/number of clicks, etc. Since we are starting from an existing 
+
+        database, we already have a conceptual schema, declared by the relation 
+
+        schemes and the integrity constraints such as foreign key constraints. 
+
+        This schema shows the type of entities that are being considered and some 
+
+        semantic relationships (materialized by foreign key constraints) between 
+
+        these entities. However, a database schema is not sufficient to create 
+
+        good hyperspaces. Database design and hypertext design do not have the 
+
+        same objectives. If we rely on the database schema at the semantic level, 
+
+        it will be possible to create a hypertext structure that is efficient 
+
+        for reading and navigating. Our design method for hypertext views proceeds 
+
+        in two phases: 1) define a first hypertext structure based on the database 
+
+        schema; 2) refine this structure by applying various operations to the 
+
+        specifications of nodes and links. </p>
+
+      <h1>Initial structure </h1>
+
+      <p class="normal">For the construction of an initial structure, we assume 
+
+        that the database schema is given and fixed. One obtains the initial structure 
+
+        by defining a node schema for each relation of the data base. An instance 
+
+        of such a schema is intended to represent a single tuple of the relation. 
+
+        The node schema has a single parameter that represents an object of the 
+
+        class (in the relational case it is a set of parameters that forms a key 
+
+        value). The contents of the node items are formed of all the collection&#39;s 
+
+        attributes. </p>
+
+      <p class="normal">Links are formed by attributes or groups of attributes that 
+
+        refer to other relations (foreign keys). For instance, the initial node 
+
+        schema corresponding to the relation</p>
+
+      <p class="BlockQuote">relation work(<u>wno</u>, title, date, author, ...)</p>
+
+      <p class="normal">is</p>
+
+      <p class="BlockQuote">node Work[w]</p>
+
+      <p class="BlockQuote"> items a wno, title, date, author, ...,</p>
+
+      <p class="BlockQuote"> href Artist[author]</p>
+
+      <p class="BlockQuote"> from work selected by wno = w</p>
+
+      <p class="normal">This structure accurately represents the contents of the 
+
+        database, i.e. the graph of all node instances and possible links is isomorphic 
+
+        to the graph of the database objects connected through the reference attributes. 
+
+        However, this structure is not completely navigable, i.e., due to the 
+
+        unidirectionality of links, it is not always possible to reach any node 
+
+        from any other node. Thus reverse links must be added.</p>
+
+      <p class="normal">For example, if a node N has a reference (href M[r ]) to 
+
+        a node M, we add a link from M to N which corresponds to the traversal 
+
+        in the opposite direction. To carry out this operation, an intermediate 
+
+        node schema is defined, and this intermediate node plays the same role 
+
+        as selection menus in systems that support links with multiple ends. </p>
+
+      <p class="normal">Note that the initial structure together with reverse links 
+
+        yields a fully navigable view of the database. This means that if two 
+
+        objects o1 and o2 are connected (directly or indirectly) in the database, 
+
+        there exists some path in the hypertext to go from the representation 
+
+        of o1 to the representation of o2 (and vice versa). </p>
+
+      <h1>Refinement operations </h1>
+
+      <p class="normal">Refinement operations are intended to improve the navigability 
+
+        (or the legibility) of a given hypertext view. We list below some of these 
+
+        operations. </p>
+
+      <h2>Link composition (short cuts)</h2>
+
+      <p class="normal">One way to reduce the number of navigation steps in the 
+
+        hypertext view is to create &#34;shortcut&#34; links. This consists 
+
+        in combining two (or more) links into a new one. This is particularly 
+
+        useful to increase the navigability of the initial structure that typically 
+
+        contains nodes of the form:</p>
+
+      <p class="BlockQuote">node A [...]</p>
+
+      <p class="BlockQuote"> ... href B[key_attribute]</p>
+
+      <p class="BlockQuote">from T ...</p>
+
+      <p class="BlockQuote">node B [k]</p>
+
+      <p class="BlockQuote"> ... href C[x]</p>
+
+      <p class="BlockQuote">from T selected by key_attribute = k</p>
+
+      <p class="normal">where key_attribute is a key of T, In this case, any element 
+
+        of B (e.g. the link to C) can be incorporated into A to suppress a navigation 
+
+        step through B.</p>
+
+      <h2>Inclusions</h2>
+
+      <p class="normal">This operation consists in changing a reference link into 
+
+        an inclusion link. It allows us, for example, to represent complex entities 
+
+        in the form of only one node (including sub-nodes). This operation is 
+
+        particularly interesting when the link has semantics of the type &#34;part-of 
+
+        &#34;or &#34;compound-of&#34;. It is also a way of reducing the number 
+
+        of reference links in the hypertext and thus shortening navigation paths.</p>
+
+      <h2>Summarization</h2>
+
+      <p class="normal">When a node represents a large object having many attributes, 
+
+        it may be desirable to derive a &#34;summarized&#34; node by removing 
+
+        certain attributes of the initial definition. This summarized node will 
+
+        have a link to the complete node. It also should be decided for each link 
+
+        that leads to the initial node if it is necessary to &#34;redirect&#34; 
+
+        it towards the summarized node. </p>
+
+      <h2>Adding computed links</h2>
+
+      <p class="normal">The database schema usually represents relationships between 
+
+        entities through foreign key constraints (or referential constraints). 
+
+        However, some interesting relationships are not represented directly in 
+
+        the database schema. For instance, the relation &#34;contemporary&#34; 
+
+        between artists is not represented, but it can be computed since we know 
+
+        the birth and death dates of the artists. Links corresponding to such 
+
+        derived relationships can be created in the hypertext schema using diverse 
+
+        schemes. For instance, a relationship &#34;contemporary&#34; between 
+
+        artists can be implemented by creating a node</p>
+
+      <p class="BlockQuote">node Contemporary[abirth, adeath]</p>
+
+      <p class="BlockQuote"> item name, href Artist[ano]</p>
+
+      <p class="BlockQuote">from artist</p>
+
+      <p class="BlockQuote">selectedy by deathdate &gt; abirth+15 or bdeath &gt; birthdate+15</p>
+
+      <p class="normal">and adding a new link in Artist</p>
+
+      <p class="BlockQuote">node Artist[id]</p>
+
+      <p class="BlockQuote"> items ...</p>
+
+      <p class="BlockQuote"> href Contemporary[birthdate, deathdate] (&#34;contemporary 
+
+        artists&#34;)</p>
+
+      <p class="BlockQuote"> ...</p>
+
+      <h2>Widening</h2>
+
+      <p class="normal">The widening of a node consists of weakening its selection 
+
+        condition. As a consequence, other objects will be shown in the node. 
+
+        This is a way to contextualize information by presenting it together with 
+
+        related information. For example, a painting could be presented together 
+
+        with other paintings of the same period or of the same region. </p>
+
+      <h2>Previewing</h2>
+
+      <p class="normal">Previewing makes it possible to see part of the contents 
+
+        of a referred node without having to traverse the link. The objective 
+
+        is to avoid navigation to a node whose contents do not correspond to the 
+
+        information we are seeking. This operation consists of creating a summarized 
+
+        node (in general with only a few attributes), as in the derivation operation, 
+
+        and adding to the initial reference link by including the summarized node.</p>
+
+      <h2>Building indices and entry points</h2>
+
+      <p class="normal">An index structure is a set of nodes that allows us, by 
+
+        successive selections starting from a root node, to reach a particular 
+
+        node. A simple, concrete, case is the creation of an index on an attribute 
+
+        A. This requires the creation of a two node schemas: 1) a root node presenting 
+
+        all the possible values of A; 2) a node presenting a list of all the objects 
+
+        having the same value for attribute A. One can generalize this structure 
+
+        to create indices on several levels where each level corresponds to a 
+
+        different attribute. The traversal from the root downwards amounts to 
+
+        fixing an attribute value at each stage. </p>
+
+      <h2>Creation of linear paths </h2>
+
+      <p class="normal">This operation creates links that make it possible to traverse 
+
+        all the node instances of a schema in a prescribed order (guided tour). </p>
+
+      <p class="MsoCaption"><img src="park_figures-5.gif" width="395" height="478" alt="Fig. 5. A hypertext view structure after several refinement steps."/></p>
+
+      <p class="MsoCaption">Fig. 5. A hypertext view structure after several refinement 
+
+        steps.</p>
+
+      <h1>Designing Adaptive Nodes and Links</h1>
+
+      <p class="normal">Adapativeness in hypermedia systems consists mainly in taking 
+
+        into account the user&#39;s profile when deciding on what information to display, 
+
+        how to display it, and how to react to user actions. In the context of 
+
+        hypertext views, this means that the content of a node, and its links, 
+
+        should be generated according to a user profile. It ca<span class="normal">n 
+
+        be implemented in a straightforward way, provided</span></p>
+
+      <ul>
+
+        <li class="normal"><span class="normal"> some &#34;profile&#34; relation contains suitable 
+
+          information about the user profiles,</span></li>
+
+        <li class="normal"><span class="normal"> a global variable USER exists that stores the user 
+
+          name (in the current implementation it is represented by a supplementary 
+
+          parameter in each node schema).</span></li>
+
+      </ul>
+
+      <p class="normal">For instance, the following node schema displays information 
+
+        about a particular work of art. It includes a Details node that will present 
+
+        more detailed information, but only if the user profile has detail_level 
+
+        &gt; 2.</p>
+
+      <p class="BlockQuote">node Work[n]</p>
+
+      <p class="BlockQuote"> items title, c_date, include Details[n], ...</p>
+
+      <p class="BlockQuote">from work selected by wno = n</p>
+
+      <p class="BlockQuote">node Details[n]</p>
+
+      <p class="BlockQuote"> items width, height, acquired, ...</p>
+
+      <p class="BlockQuote">from work, profile</p>
+
+      <p class="BlockQuote">selected by wno = n and </p>
+
+      <p class="BlockQuote"> profile.user = USER and profile.detail_level &gt; 2</p>
+
+      <p class="normal">If the user has detail_level ≤ 2 the selection condition 
+
+        will be false for every tuple and thus the node will remain empty. With 
+
+        the inclusion mechanism, it is thus possible to create contents and links 
+
+        that depend on user profiles or on other contextual information such as 
+
+        time, date, etc. (for instance, forthcoming exhibits could be announced 
+
+        in some nodes during the weeks before their opening).</p>
+
+      <p class="normal">Path-awareness is another form of adaptiveness, and consists 
+
+        of having node contents that depend on the user navigation path. Current 
+
+        Web browsers offer a limited path awareness feature that consists of displaying 
+
+        anchors of previously visited nodes in a particular color. Although very 
+
+        simple, this mechanism proves efficient when exploring a new site. In 
+
+        fact, we can think of many situations in which we would like to have the 
+
+        content of nodes depend on previously visited nodes. For instance, we 
+
+        could have an anchor &#34;latest news&#34; in the heading of every node, 
+
+        as long as the &#34;News&#34; node has not been visited. Once is has, 
+
+        this anchor should disappear from all the nodes. </p>
+
+      <p class="normal">In order to implement this type of behaviour, we need some 
+
+        way to refer to the navigation history. The navigation history can be 
+
+        stored in a HISTORY parameter added to every node definition. Each node 
+
+        can then add its own identity to HISTORY and pass it forward to the nodes 
+
+        it refers to. The general schema is thus</p>
+
+      <p class="BlockQuote">node N[...parameters..., HISTORY]</p>
+
+      <p class="BlockQuote"> ...</p>
+
+      <p class="BlockQuote"> href AnotherNode[ ... parameters ..., HISTORY + &#34;(N)&#34;]</p>
+
+      <p class="BlockQuote">selected by ... conditions on attributes ... </p>
+
+      <p class="BlockQuote">AND condition on HISTORY</p>
+
+      <h1>Analysis </h1>
+
+      <h2>Graph-based Approach </h2>
+
+      <p class="normal">To analyze hypertext structures and see the effect of refinement 
+
+        operations, it is convenient to have a compact graphical representation. Our analysis is done on the node schema instead of node instances, and 
+
+        graphical representation is smaller than the generated hypertext (i.e., 
+
+        the set of node instances and links among them). Based on the analysis 
+
+        of the initial structure for the virtual museum, we can apply appropriate 
+
+        refinement operations. </p>
+
+      <p class="normal">Once we have a graphical representation of the node schemas, 
+
+        these are possible analyses that we can do on the initial structure.</p>
+
+      <p class="normal">(1) Identify links that do not exist in the initial structure, 
+
+        but might be helpful if we created them. Notice that those links that 
+
+        exist in the initial structure are directly come from the associations 
+
+        of data in the database (e.g., foreign key). After such links are identified, 
+
+        we can apply appropriate refinement operations to the initial structure. 
+
+      </p>
+
+      <p class="normal">(2) Check the number of navigation steps between the nodes 
+
+        and determine the semantic proximity (or semantic distance). If they 
+
+        are semantically close, the number of navigation steps should be reasonably 
+
+        small.</p>
+
+      <p class="normal">(3) Explore different types of links between the nodes and 
+
+        select a better type than others; for example, it might be necessary to 
+
+        change &#34;jump&#34; to &#34;include&#34; or &#34;expand in place&#34;. </p>
+
+      <p class="normal">(4) Check whether a node is reachable from a given node 
+
+        (i.e., accessibility analysis). Notice that the schema connectivity does 
+
+        not ensure that the hypertext itself (the node and link instances) is 
+
+        fully navigable. This depends on how objects are interrelated in the database. 
+
+        However, knowing properties of the links (like cardinalities), it is possible 
+
+        to prove the full connectivity of the hypertext view. </p>
+
+      <p class="normal">(5) Compute the maximum number of steps that a user can 
+
+        follow from one node to another. Since the user does not see the entire 
+
+        hypertext, it is not obvious to the user whether a path is the shortest 
+
+        distance from one node to another. Information about the longest path 
+
+        that one can take to reach a destination node can inform us about how 
+
+        a user might get lost in the hyperspace.</p>
+
+      <h2>Grammar-based Approach </h2>
+
+      <p class="normal">After we determine the refined structure for a virtual museum, 
+
+        we can proceed to represent the node schemas in terms of grammar rules 
+
+        for a further analysis. We use grammars in two ways - one for the inner 
+
+        structure (i.e., the structure of a node) and the other for the outer 
+
+        structure (i.e., the structure of a set of nodes and links). Once node 
+
+        schemas are represented by a grammar, the following analyses can be done:</p>
+
+      <p class="normal">(1) Find a different grammar that is simpler than the original 
+
+        grammar, but generates the same hyperspace. The set of all virtual documents 
+
+        can be found first, and we can find another grammar that generates the 
+
+        same set.</p>
+
+      <p class="normal">(2) Investigate a property of the grammar, such as &#34;inherently 
+
+        ambiguous&#34;, and determine the connection between that property and 
+
+        the navigational structure of the hypertext </p>
+
+      <h3>a) Inner structure </h3>
+
+      <p class="normal">The purpose of representing node contents with grammar rule 
+
+        is to obtain a compact representation of the node contents in terms of 
+
+        document structure and semantic content. For a node,</p>
+
+      <p class="BlockQuote"> node N[p] </p>
+
+      <p class="BlockQuote"> items item1, ..., itemk </p>
+
+      <p class="normal"> the corresponding grammar rule (in BNF) is N ::= { s<sub>1</sub> 
+
+        ... s<sub>k</sub> }, where s<sub>i</sub> is (1) empty if item<sub>i</sub> 
+
+        is a constant (2) the attribute list a<sub>1</sub>, ..., a<sub>n</sub> 
+
+        if item<sub>i</sub> is an expression involving these attributes (3) the 
+
+        non terminal symbol M is item<sub>i</sub> is an inclusion of the form 
+
+        include M[...].</p>
+
+      <p class="normal">If we can prove that a node instance will always contain 
+
+        at most one item (this depends on the selection predicate), then the iteration 
+
+        indicators { } can be removed from the grammar rule. For example, the 
+
+        grammar rule corresponding to the node schema </p>
+
+      <p class="BlockQuote">node Artists_after[date]</p>
+
+      <p class="BlockQuote"> items </p>
+
+      <p class="BlockQuote"> &lt;p&gt;(name, &#34;(born &#34;, birthdate, &#34;) 
+
+        &#34;, </p>
+
+      <p class="BlockQuote">   expand href Works_by[ano] (&#34;works&#34;),</p>
+
+      <p class="BlockQuote">   include Biography[ano]</p>
+
+      <p class="BlockQuote">   href ...</p>
+
+      <p class="BlockQuote">   )</p>
+
+      <p class="BlockQuote">from artists</p>
+
+      <p class="BlockQuote">selected by birthdate &gt;= date</p>
+
+      <p class="BlockQuote">ordered by ...</p>
+
+      <p class="normal"><b><span>is Artists_after ::= { name birthdate [Works_by] 
+
+        Biography }.</span></b></p>
+
+      <p class="normal">The grammar of a node is the set of rules corresponding 
+
+        to this node and all the included and expanded nodes. For the above node 
+
+        this could yield (if nodes Works_by and Biography were so defined) </p>
+
+      <p class="normal"><b><span>Artists_after ::= { name birthdate [Works_by] Biography 
+
+        }</span></b></p>
+
+      <p class="normal"><b>Works_by ::= { title date support }</b></p>
+
+      <p class="normal"><b><span>Biography ::= { country date activity }</span></b></p>
+
+      <p class="normal"> Since no rule in this grammar is recursive, this can be 
+
+        rewritten as a single rule: </p>
+
+      <p class="normal"><b><span>Artists_after ::= { name birthdate [{ title date 
+
+        support }] { country date activity } }</span></b></p>
+
+      <p class="normal">In fact, this grammar shows the structure and semantics 
+
+        of a node. It is similar to a basic document type definition (DTD) for 
+
+        this node. </p>
+
+      <h3>2) Outer structure </h3>
+
+      <p class="normal">We explain the construction of grammar productions that 
+
+        describe the outer structure of a given hypertext using a simple example. </p>
+
+      <p class="MsoCaption"><img src="park_figures-6.gif" width="395" height="140" alt="Example: figure 6"/></p>
+
+      <p class="MsoCaption">Example: figure 6</p>
+
+      <p class="normal">In this figure, we see that there is one href link, one 
+
+        inclusion link and one expand-in-place link. In order to describe the 
+
+        outer structure of this hypertext, we find possible paths from each node 
+
+        to others. We see that the Artist node has two different types of links, 
+
+        one for inclusion (to Countries) and the other for href (to Contemporary). From Contemporary, there is one expand-in-place link to Artist. The node 
+
+        Countries does not have any link to other nodes.</p>
+
+      <p class="normal">Let the node Artist be described as two characters, a1d1, 
+
+        the node Contemporary as a2d2, and the node Countries as a2d3. (Each 
+
+        ai and di can be considered as &#34;brackets&#34; for each node.) If 
+
+        we attach prime symbols to each of those, that represents a node instance 
+
+        of the node schema. For example, a1&#39;d1&#39; is a node instance for the node 
+
+        a1d1. Then, each of the following products represents each link in the 
+
+        hypertext. </p>
+
+      <p class="BlockQuote">a1d1 -&gt; a1&#39;d1&#39; | a2d2 | a1a3d3d1</p>
+
+      <p class="BlockQuote">a2d2 -&gt; a2&#39;d2&#39; | a2a1d1d2</p>
+
+      <p class="BlockQuote">a3d3 -&gt; a3&#39;d3&#39; </p>
+
+      <p class="normal">If we change a1d1, a2d2, and a3d3 as x, y, and z, respectively, 
+
+        and introduce a starting symbol S, we get the following products:</p>
+
+      <p class="BlockQuote">S -&gt; x | y | z</p>
+
+      <p class="BlockQuote">x -&gt; x&#39; | y | a1z&#39;d1</p>
+
+      <p class="BlockQuote">y -&gt; y&#39; | a2xd2</p>
+
+      <p class="BlockQuote">a1z&#39;d1 -&gt; x</p>
+
+      <p class="BlockQuote">a2x&#39;d2 -&gt; y</p>
+
+      <p class="normal">Notice that x&#39;, y&#39;, and z&#39; is a1&#39;d1&#39;, a2&#39;d2&#39;, and a3&#39;d3&#39;, 
+
+        respectively.</p>
+
+      <p class="normal">Once this first grammar is found, we can analyze the structure 
+
+        by examining the property of the grammar. We can also find a simpler 
+
+        grammar that represents the same hyperspace. One usage of this grammar 
+
+        formalism would be that one can use it as a site map for a given wWeb 
+
+        site so that users can get an idea of how the hyperspace is structured.</p>
+
+      <h1>Conclusions and Future Directions </h1>
+
+      <p class="normal">In this paper we presented a language to specify virtual 
+
+        museums in the form of hypertext views of databases. Since the language 
+
+        is non-procedural and explicitly shows the structure of the generated 
+
+        hyperspace, it is well suited for an iterative design process. The existence 
+
+        of a hypertext schema makes it possible to check properties of the hypertext, 
+
+        such as path lengths or accessibility, without accessing the hypertext 
+
+        nodes themselves. The development process we propose consists in starting 
+
+        from an initial design and then entering an analysis-refinement cycle. 
+
+        The structural analysis of the hyperspace uses graph and grammar formalisms 
+
+        while the refinement is based on several basic operations.</p>
+
+      <p class="normal">This development process is supported by software tools 
+
+        to compile the specifications and to dynamically generate Web pages (node 
+
+        instances) according to the specifications.</p>
+
+      <p class="normal">In the near future we plan to increase the adaptiveness 
+
+        capabilities of the generated hyperspaces, in particular the path-awareness. 
+
+        We are also starting experiments with a new version of the Lazy system 
+
+        to make the hypertext views active. This means that users will not only 
+
+        navigate in a virtual museum but will also act on this museum by updating 
+
+        the information nodes they see. For instance, users could create their own virtual exhibitions within the virtual museum, add annotations to 
+
+        objects, etc.</p>
+
+      <h1>Acknowledgement </h1>
+
+      <p class="AcknowedgementsText">The authors would like to thank their colleagues 
+
+        Jean-Pierre Hurni and Claire-Lise Mottaz for their precious collaboration.</p>
+
+      <h1>References </h1>
+
+      <p class="ReferencesText">ACM (1995) Special section on hypermedia design. 
+
+        <i>Communications of the ACM</i> Vol. 38, No. 8.</p>
+
+      <p class="ReferencesText">Andrews, J. and Schweibenz, W. (1996). The Kress 
+
+        Study Collection Virtual Museum Project: A New Medium for Old Masters. Version 03-Dec-1996. <a href="http://www.arlisna.org/werner.html" target="new">http://www.arlisna.org/werner.html</a></p>
+
+      <p class="ReferencesText">Atzeni, P., Mecca, G., &amp; Merialdo P. (1998). 
+
+        Design and Maintenance of Data-Intensive Web Sites. In <i>Proceedings 
+
+        of the EDBT&#39;98 Conference, Valencia </i>(pp. 436-450).</p>
+
+      <p class="ReferencesText">Conklin, J. (1987). Hypertext: An Introduction and 
+
+        Survey. <i>IEEE Computer</i>, Vol. 20, No.9, 17-42.</p>
+
+      <p class="ReferencesText">Costagliola, G., Dattolo, A., &amp; Francese, R. 
+
+        (2000). A Visual Grammar-based Approach for the Analysis and Modeling 
+
+        of Hypermedia Structures. In Proc. <i>Multimedia Computing on the World 
+
+        Wide Web</i>, <i>2000</i> . </p>
+
+      <p class="ReferencesText">Dar, S., Entin, G., Geva, S., &amp; Palmon E. (1998), 
+
+        DTL&#39;s DataSpot: Database Exploration as Easy as Browsing the Web, In <i>ACM 
+
+        SIGMOD 98 Proceedings</i>. ACM.</p>
+
+      <p class="ReferencesText">De Bra, P., Adaptive Hypermedia on the Web: Methods, 
+
+        techniques and applications, In <i>Proceedings of the AACE WebNet&#39;98 Conference</i>, 
+
+        pp. 220-225, Orlando, Fl., 1998. </p>
+
+      <p class="ReferencesText">Falquet, G., Guyot, J., &amp; Nerima L. (1998). 
+
+        Language and tools to specify hypertext views on databases. In A. Mendelzon 
+
+        &amp; P. Atzeni (Eds) <i>The Web and Databases, Selected papers from WebDB&#39;98 
+
+        </i>(pp 136-151)<i>. </i>Berlin, Springer Verlag (LNCS 1590). </p>
+
+      <p class="ReferencesText">Falquet, G., Guyot, J., &amp; Nerima L., Vanoirbeek 
+
+        C., Rekik, Y. (1999). Des documents virtuels pour lire les bases de données. 
+
+        In M. Crampes &amp; S. Ranwez (Eds) <i>Documents virtuels personnalisés, 
+
+        atelier de1a conférence francophone Interaction Homme-Machine</i>. Montpellier.</p>
+
+      <p class="ReferencesText">Fernandez, M., Florescu, D., Kang, J., Levy A., 
+
+        Suciu, D. Catching the boat with Strudel: experience with a web-site management 
+
+        system, In <i>Proceedings of SIGMOD Conference 1998.</i></p>
+
+      <p class="ReferencesText">Garzotto, F., Paolini P., &amp; Schwabe, D. (1993). 
+
+        HDM--a model-based approach to hypertext application design. <i> ACM Trans 
+
+        on Information Systems</i>, Vol. 11, 1 26.</p>
+
+      <p class="ReferencesText">Isakowitz, T., Stohr, A., &amp; Balasubramanian, 
+
+        P. (1995). RMM: a methodology for structured hypermedia design. <i>Communications 
+
+        of the ACM 38, 9)</i>, 34 -- 44.</p>
+
+      <p class="ReferencesText">Park, S. (1998). Structural properties of Hypertext. 
+
+        In K. Grønbaek, E. Mylonas, F. Shipman (Eds) <i>Hypertext&#39;98</i>. 
+
+        Pittsburgh: ACM. </p>
+
+      <p class="ReferencesText">Toyama, M. (1998). SuperSQL: An Extended SQL for 
+
+        Database Publishing and Presentation, ACM SIGMOD 98. </p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</tbody></table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+
+
+
+
+</body><!-- #EndTemplate --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/park/park.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:49:16 GMT --></html>

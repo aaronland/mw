@@ -1,0 +1,1147 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/anable/anable.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:39 GMT --><head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>Accessibility Techniques for Museum Web Sites</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="/>
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css"/>
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onload="MM_preloadImages(&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tbody><tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"/></a></p>
+      <p> <a href="../../register/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.register&#39;,&#39;document.register&#39;,&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;)"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"/></a> 
+        <br/>
+        <a href="../../workshops/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.workshops&#39;,&#39;document.workshops&#39;,&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;)"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"/></a> 
+        <br/>
+        <a href="../../sessions/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sessions&#39;,&#39;document.sessions&#39;,&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;)"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"/></a> 
+        <br/>
+        <a href="../../speakers/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.speakers&#39;,&#39;document.speakers&#39;,&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;)"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"/></a> 
+        <br/>
+        <a href="../../interact/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.interact&#39;,&#39;document.interact&#39;,&#39;../../nav/mw2001_nav_interacton.gif&#39;,&#39;#943398534416&#39;)"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"/></a> 
+        <br/>
+        <a href="../../demos/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.demos&#39;,&#39;document.demos&#39;,&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;)"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"/></a> 
+        <br/>
+        <a href="../../exhibit/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.exhibits&#39;,&#39;document.exhibits&#39;,&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;)"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"/></a> 
+        <br/>
+        <a href="../../events/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.events&#39;,&#39;document.events&#39;,&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;)"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"/></a> 
+        <br/>
+        <a href="../../best/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.best&#39;,&#39;document.best&#39;,&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;)"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"/></a> 
+        <br/>
+        <a href="../../dates/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.dates&#39;,&#39;document.dates&#39;,&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;)"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"/></a> 
+        <br/>
+        <a href="../../seattle/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.seattle&#39;,&#39;document.seattle&#39;,&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;)"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"/></a> 
+        <br/>
+        <a href="../../sponsor/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sponsor&#39;,&#39;document.sponsor&#39;,&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"/></a> 
+        <br/>
+        <br/>
+        <br/>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"/></a> 
+        <br/>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br/>
+        158 Lee Avenue<br/>
+        Toronto, Ontario<br/>
+        M4E 2P3 Canada<br/>
+        info@ archimuse.com<br/>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tbody><tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"/></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br/>
+            A&amp;MI</font></a> </span></td>
+        </tr>
+      </tbody></table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br/>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class="verysmall">Published: March 15, 2001.<br/>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated: "+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"/><br/>
+      <!-- #BeginEditable "Body" --> 
+
+      <p class="PaperTitle">Accessibility Techniques for Museum Web Sites</p>
+
+      <p class="Author">Susan Anable, The Dayton Art Institute and Adam Alonzo, 
+
+        Wright State University, USA</p>
+
+      <p class="AbstractTitle">Abstract</p>
+
+      <p class="AbstractText">Like other public institutions, museums strive to 
+
+        make their facilities accessible to people with disabilities, yet these 
+
+        same patrons may be hindered in their use of museum Web sites by electronic 
+
+        accessibility barriers. This presentation will demonstrate that access 
+
+        was a primary design factor in the Virtual Museum Tour, part of the Web 
+
+        site of The Dayton Art Institute. Developed in collaboration with Wright 
+
+        State University, planners of the Virtual Museum Tour faced the challenge 
+
+        of making a variety of Internet technologies accessible to people with 
+
+        visual or hearing impairment or mobility limitations. By adopting a set 
+
+        of Web accessibility guidelines and utilizing them in creative ways, the 
+
+        Virtual Museum Tour provides an enlightening art experience for all visitors.</p>
+
+      <h1>Introduction</h1>
+
+      <p class="normal">The Dayton Art Institute has served residents of southwestern 
+
+        Ohio since 1919. The museum operates on the premise that art is for everyone, 
+
+        and provides the community with free general admission 365 days a year. 
+
+        In addition, the Art Institute&#39;s physical facility is free of architectural 
+
+        barriers that might prevent people with disabilities from accessing exhibitions 
+
+        or participating in programs. Rated &#34;superb in quality&#34; by the 
+
+        American Association of Museums, The Dayton Art Institute has one of the 
+
+        finest mid-size museum collections in the country. As the Art Institute 
+
+        began to make this Collection available on the World Wide Web, the same 
+
+        commitment to barrier-free access was demonstrated.</p>
+
+      <p class="normal">The Virtual Museum Tour is an interactive learning environment 
+
+        for Web visitors to explore The Dayton Art Institute (<a href="http://www.daytonartinstitute.org/" target="new">http://www.daytonartinstitute.org/</a>). 
+
+        The Tour came about through a collaboration between the Art Institute 
+
+        and Wright State University (<a href="http://www.wright.edu/" target="new">http://www.wright.edu/</a>), 
+
+        located in Dayton and known for its outstanding support program for students 
+
+        with disabilities. One of the primary goals of this project was to provide 
+
+        Web visitors with an informative and absorbing experience equal to or 
+
+        better than what they might have in the Museum&#39;s actual galleries. This 
+
+        naturally implied the inclusion of visual and auditory technologies to 
+
+        enhance the visitor&#39;s examination of works of art. Yet the Tour also needed 
+
+        to be as accessible as possible for everyone, including people with disabilities, 
+
+        as prescribed by the U. S. Department of Education grant that funded the 
+
+        development of the Tour. Although the idea of accessibility may seem incongruous 
+
+        to a Web site enriched with images and sounds, it is not impossible. Through 
+
+        cooperation and creativity, the project partners were able to achieve 
+
+        both objectives.</p>
+
+      <p class="normal">One important factor that had to be determined early in 
+
+        the project was the definition of accessibility as it pertains to a Web 
+
+        site. There is a great deal of information about the topic available from 
+
+        books, Web sites and conferences, but the recommendations given by these 
+
+        sources do not always concur. Fortunately, a single authoritative source 
+
+        has emerged from the World Wide Web Consortium, the international body 
+
+        that leads the development of the Web. The Web Accessibility Initiative 
+
+        (WAI) within that organization has published a set of fourteen Web Content 
+
+        Accessibility Guidelines (<a href="http://www.w3.org/TR/WAI-WEBCONTENT/" target="new">http://www.w3.org/TR/WAI-WEBCONTENT/</a>) 
+
+        to help designers create accessible sites. Developed through a process 
+
+        of extensive research and review by a team of experts, the WAI Guidelines 
+
+        were adopted as the accessibility standard for the Virtual Museum Tour 
+
+        project.</p>
+
+      <p class="normal">Because the WAI Guidelines are designed to be universal 
+
+        in scope, they do not specifically address the needs of unique audiences 
+
+        such as museums. As a result, they often require interpretation or simplification 
+
+        in order to be applied. This paper documents how the Guidelines were implemented 
+
+        in practical ways on the Virtual Museum Tour, thereby creating a type 
+
+        of accessibility style guide suitable for other museum Web site designers. 
+
+        Due to the limitations of this paper, only a few of the fourteen Guidelines 
+
+        can be addressed, but more extensive information about accessibility techniques 
+
+        will be available on the Virtual Museum Tour site itself.</p>
+
+      <h1>Accessibility Techniques</h1>
+
+      <p class="normal">Among the fourteen WAI Guidelines, there are a few which 
+
+        have particular relevance to museum Web sites. These are listed in the 
+
+        sections below, along with the techniques used to implement them on the 
+
+        Virtual Museum Tour.</p>
+
+      <h2>Guideline 1. Provide equivalent alternatives to auditory and visual 
+
+        content.</h2>
+
+      <p class="normal">Provide content that, when presented to the user, has conveys 
+
+        essentially the same function or purpose as auditory or visual content.</p>
+
+      <p class="normal">This is perhaps the most basic of the fourteen Guidelines, 
+
+        but it is also the most important. The Web in general, and museum sites 
+
+        in particular, rely heavily upon images to convey information; audio content 
+
+        is also found on many Web sites. But people with visual or hearing impairments 
+
+        may be unable to perceive multimedia features such as images, sounds or 
+
+        video. If a Web page includes equivalent alternatives, however, all Web 
+
+        visitors will be able to experience to some degree the content conveyed 
+
+        by these visual and auditory elements. Equivalent alternatives frequently 
+
+        take the form of text, which is the most broadly accessible type of content 
+
+        available on the Web. It is important to note that Guideline 1 does not 
+
+        prohibit the use of multimedia such as images and sounds, but rather suggests 
+
+        how to convey that content in different ways so all users can understand 
+
+        its meaning.</p>
+
+      <h3>Audio</h3>
+
+      <p class="normal">The Virtual Museum Tour contains a large number of audio 
+
+        clips, spoken by various commentators, containing information about works. 
+
+        In order to implement Guideline 1, each narration is accompanied by a 
+
+        text transcript. All of the recordings were carefully transcribed to ensure 
+
+        that the speaker&#39;s exact words were accurately rendered into text (including 
+
+        sentence fragments and grammatical errors), and to ensure that names, 
+
+        places and terms were spelled correctly.</p>
+
+      <p class="normal">A typical audio segment on the Tour contains the comments 
+
+        of Alexander Lee Nyerges, Director of The Dayton Art Institute, recounting 
+
+        how the Museum acquired the painting <i>Waterlilies</i> by Claude Monet 
+
+        (Fig. 1). The excerpt below shows how the transcript captures the conversational 
+
+        style of the narration, and also demonstrates the need for accuracy in 
+
+        transcribing names and places.</p>
+
+      <p class="BlockQuote">&#34;It really isn&#39;t &#39;til you get to Monet&#39;s highest 
+
+        points, his series which include his series of <i>Waterlilies</i>, that 
+
+        we find the fully developed and fully mature essence of what we now regard 
+
+        as classical Impressionism. This was done in his garden in 1903, and probably 
+
+        represents the highest point of his entire <i>Waterlilies</i> series. 
+
+        This work was given to the Art Institute by a gentleman by the name of 
+
+        Mr. Joseph Rubin, who ran a company in New York City called the Loma Dress 
+
+        Corporation. And sometime before 1953, Dr. Esther Seaver, who was the 
+
+        Director of The Dayton Art Institute in the first part of the 1950s, had 
+
+        encountered this picture and was acquainted with a dealer in New York 
+
+        by the name of Silberman . . . &#34;</p>
+
+      <p class="MsoCaption"><img src="anable.fig1.jpg" width="365" height="292" alt="Fig. 1: Claude Monet (1840-1926) French, WATERLILIES, 1903, Oil on canvas, 32 x 40 inches, Gift of Mr. Joseph Rubin, 1953.11"/></p>
+
+      <p class="MsoCaption">Fig. 1: Claude Monet (1840-1926) French, WATERLILIES, 
+
+        1903, Oil on canvas, 32 x 40 inches, Gift of Mr. Joseph Rubin, 1953.11</p>
+
+      <p class="normal">When incorporated within the Virtual Museum Tour, text transcripts 
+
+        are provided alongside the audio clip itself, so Web visitors can choose 
+
+        the format that is appropriate for them. They can select either a link 
+
+        that plays the recording or a link that leads to the transcript on another 
+
+        page. In this manner, the two formats appear truly equivalent, since one 
+
+        is not presented as subordinate to the other.</p>
+
+      <p class="normal">Although not applicable to the Virtual Museum Tour, it may 
+
+        be necessary to expand text transcripts if there is meaning conveyed by 
+
+        more than just the words themselves. For instance, if an audio clip contains 
+
+        music or sound effects, these should be briefly described in the transcript. 
+
+        In addition, if the tone of voice is significant, or the speaker is portraying 
+
+        a particular character, this may also be alluded to in the transcript</p>
+
+      <h3>Images</h3>
+
+      <p class="normal">In addition to audio, Guideline 1 also applies to visual 
+
+        content such as images, certainly the most common medium found on the 
+
+        Web. In the context of a museum Web site, images can be roughly categorized 
+
+        into two types: simple graphics such as logos, and complex pictures of 
+
+        artwork. Depending upon their type, two different approaches may be used 
+
+        to provide equivalent alternatives to images.</p>
+
+      <p class="normal">Simple graphics can be dealt with relatively easily by taking 
+
+        advantage of a feature of Hypertext Markup Language (HTML), the language 
+
+        that controls the format and function of Web pages. To place an image 
+
+        on a Web page, a designer inserts a particular HTML element into the document; 
+
+        this element is referred to as an &#34;image tag&#34; and appears as 
+
+        a three-letter abbreviation between brackets.</p>
+
+      <p class="BlockQuote">&lt;img&gt;</p>
+
+      <p class="normal">In addition to this term, another statement (called an &#34;attribute&#34;) 
+
+        must be placed inside the brackets. This attribute indicates the filename 
+
+        or &#34;source&#34; of the image; it too is abbreviated.</p>
+
+      <p class="BlockQuote">&lt;img src = &#34;filename&#34;&gt;</p>
+
+      <p class="normal">While no further information is required to produce a visible 
+
+        image on the page, there are several optional attributes that may be used 
+
+        to control properties of the image such as its size and its relation to 
+
+        surrounding screen elements. One such optional attribute can be added 
+
+        to provide a text alternative that briefly describes what the image is. 
+
+        The alternative attribute is also abbreviated, and is used alongside the 
+
+        source attribute within the same image tag.</p>
+
+      <p class="BlockQuote">&lt;img src = &#34;filename&#34; alt = &#34;description&#34;&gt;</p>
+
+      <p class="normal">Text alternatives are not captions that appear alongside 
+
+        the image, and in most cases they will not even be visible on the page. 
+
+        However, there are several ways in which they benefit visitors, particularly 
+
+        those with visual impairments. Web visitors who are blind typically use 
+
+        specialized computer software and hardware that reads pages aloud to them. 
+
+        If a Web page includes text alternatives, they too will be vocalized, 
+
+        informing users about the images found on the page. Without text alternatives, 
+
+        users will not know what the images are or why they are there. Further 
+
+        information on the use of text alternatives is available from the World 
+
+        Wide Web Consortium (<a href="http://www.w3.org/TR/html4/struct/objects.html#adef-alt" target="new">http://www.w3.org/TR/html4/struct/objects.html#adef-alt</a>).</p>
+
+      <p class="normal">Every image on the Virtual Museum Tour is accompanied by 
+
+        a text alternative that is generally no more than a few words in length. 
+
+        Because of their brevity, text alternatives are not used to describe the 
+
+        appearance of images, but simply to identify what they are. For example, 
+
+        the following line of HTML code could be used to identify the Art Institute&#39;s 
+
+        logo (Fig. 2):</p>
+
+      <p class="BlockQuote">&lt;img src = &#34;logo.gif&#34; alt = &#34;The Dayton 
+
+        Art Institute logo&#34;&gt;</p>
+
+      <p class="MsoCaption"><img src="anable.fig2.gif" width="150" height="146" alt="Fig. 2: The Dayton Art Institute logo"/></p>
+
+      <p class="MsoCaption">Fig. 2: The Dayton Art Institute logo</p>
+
+      <p class="normal">For simple graphics such as a logo, a brief text alternative 
+
+        may be adequate, but pictures that show works of art require a more detailed 
+
+        visual description. Visual descriptions are short paragraphs that verbally 
+
+        describe the appearance of images for the benefit of Web visitors who 
+
+        are unable to see them. They serve the same role in the visual arts as 
+
+        audio descriptions do for the performing arts, since both provide participants 
+
+        with a verbal impression of things they cannot see. The Virtual Museum 
+
+        Tour provides a visual description for every piece of artwork presented.</p>
+
+      <p class="normal">The WAI Guidelines suggest different techniques for including 
+
+        visual descriptions with complex images (<a href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#long-descriptions" target="new">http://www.w3.org/TR/WCAG10-HTML-TECHS/#long-descriptions</a>), 
+
+        but there is currently no standard practice in use. The Virtual Museum 
+
+        Tour uses visual descriptions to supplement rather than replace text alternatives: 
+
+        a text alternative gives the title of a work while a visual description 
+
+        tells what it looks like. Links to visual descriptions are prominently 
+
+        placed on a navigation menu alongside links leading to other sources of 
+
+        information about the artwork, thereby presenting them as simply another 
+
+        resource for everyone, not just people with disabilities.</p>
+
+      <p class="normal">Developing quality visual descriptions is a time-consuming 
+
+        task that should be done thoughtfully by individuals with excellent writing 
+
+        and editing skills. No instructions for doing so were available during 
+
+        the creation of the Virtual Museum Tour, but in the course of preparing 
+
+        approximately 100 visual descriptions, a standard process was developed. 
+
+        This process is summarized in the following six Recommendations which 
+
+        can be applied to other Web projects that involve images of artwork. </p>
+
+      <h1>Recommendation One: Be Objective</h1>
+
+      <p class="normal">The sole function of a visual description is to describe 
+
+        the appearance of a work of art. In brief, it should simply answer the 
+
+        question, &#34;What does the object look like?&#34; Descriptions should 
+
+        avoid analytical interpretations or emotional responses. In other words, 
+
+        they should not explore questions like, &#34;What does it mean?&#34; 
+
+        or &#34;How does it make you feel?&#34; Descriptions help visitors to 
+
+        visualize an object, thereby providing a context for other information 
+
+        about the work found elsewhere, such as historical background, the artist&#39;s 
+
+        style, or critical commentary. By combining this factual information with 
+
+        an objective description, Web visitors are sufficiently informed to make 
+
+        a personal analysis or achieve their own emotional response.</p>
+
+      <p class="normal">Objectivity should also be exercised when referring to characters 
+
+        portrayed in a painting or other work of art. Though it is appropriate 
+
+        to describe their appearance, clothing and actions, visual descriptions 
+
+        should not attempt to explain their motivations or feelings, even if these 
+
+        are implied by gestures or context. If the emotions of the characters 
+
+        are obvious in the artwork, then they will likely be apparent in the visual 
+
+        description as well.</p>
+
+      <p class="normal">In this example (Fig. 3), the description was written without 
+
+        references to emotion, although the mood implied by the painting may still 
+
+        be perceived.</p>
+
+      <p class="BlockQuote">&#34; . . . The girl&#39;s body is turned partially 
+
+        to her left while her head is turned to look to her right. Her brown hair 
+
+        is parted in the middle and pulled to the back of her head. She has heavy 
+
+        eyebrows, dark eyes and reddish cheeks. Her mouth is small and her red 
+
+        lips are closed. Both arms are extended and her hands rest on her knees 
+
+        with their fingers intertwined . . . &#34;</p>
+
+      <p class="MsoCaption"><img src="anable.fig3.jpg" width="295" height="467" alt="Fig. 3: William Adolphe Bouguereau (1825-1905) French, THE SONG OF THE NIGHTINGALE, 1895, Oil on canvas, 55 x 35 inches, Gift of Mr. Robert Badenhop, 1954.12"/></p>
+
+      <p class="MsoCaption">Fig. 3: William Adolphe Bouguereau (1825-1905) French, 
+
+        THE SONG OF THE NIGHTINGALE, 1895, Oil on canvas, 55 x 35 inches, Gift 
+
+        of Mr. Robert Badenhop, 1954.12</p>
+
+      <p class="normal">Finally, because artistic taste varies according to the 
+
+        individual, visual descriptions should not contain value judgements on 
+
+        the quality of the art object, nor on the skill of the artist who created 
+
+        it.</p>
+
+      <h1>Recommendation Two: Be Brief</h1>
+
+      <p class="normal">Although length will vary according to the piece of artwork 
+
+        being described, visual descriptions should be as brief as possible. In 
+
+        some settings, visual descriptions are presented as audio recordings read 
+
+        by a narrator. Other times they are provided as text that visitors have 
+
+        to read by themselves. In either case, since extremely long descriptions 
+
+        are tiresome, they should be limited to 250 to 300 words. Depending on 
+
+        the context, visual descriptions may be accompanied by catalogue data 
+
+        about the artwork (such as the artist&#39;s name and life span, title, medium 
+
+        and dimensions). If so, this information need not be included in the overall 
+
+        word count.</p>
+
+      <p class="normal">For better word economy, exclude redundant phrases like 
+
+        &#34;rectangular in shape&#34; or &#34;blue in color.&#34; Simply 
+
+        use &#34;rectangular&#34; or &#34;blue&#34; instead. Likewise, avoid 
+
+        obvious statements such as &#34;she wears a necklace around the neck&#34; 
+
+        or &#34;gloves on her hands.&#34;</p>
+
+      <h1>Recommendation Three: Be Descriptive</h1>
+
+      <p class="normal">Visual descriptions should utilize a broad vocabulary of 
+
+        vivid terminology to describe various features of art objects. Some common 
+
+        terms are categorized below.</p>
+
+      <p class="normal">Shapes can be described as square, cubed, rectangular, flat, 
+
+        straight, circular, spherical, cylindrical, curved, rounded, triangular, 
+
+        conical, pyramidal, angular, irregular, jagged, sloped, diagonal, horizontal 
+
+        and vertical. These words can be used not only to identify the overall 
+
+        shape of the object, but also to describe geometric patterns within it. 
+
+        Avoid words that imply action unless the object actually does move; for 
+
+        instance, &#34;curved&#34; is preferable to &#34;curving.&#34; Also, 
+
+        colloquial terms such as &#34;squiggle&#34; or &#34;zigzag&#34; should 
+
+        not be used.</p>
+
+      <p class="normal">Size can be described as small, tiny, short, miniature, 
+
+        large, tall, monumental, thick, thin, narrow, wide, life-size, true to 
+
+        size, large scale and small scale. The object&#39;s dimensions, provided with 
+
+        the catalogue data, will inform visitors of its actual size.</p>
+
+      <p class="normal">Texture can be described as smooth, glossy, coarse, grainy, 
+
+        rough, worn, weathered, scratched, cracked, broken, rippled, grooved, 
+
+        patterned, striped, dotted and perforated.</p>
+
+      <p class="normal">Color can be described as intense, vivid, bright, light, 
+
+        dark, dull, pale, faint, solid or blended. There is no need to avoid references 
+
+        to color on the assumption that they will be meaningless to visitors who 
+
+        are blind. First of all, descriptions will be used by people without visual 
+
+        disabilities. Second, many people who are now blind were able to see in 
+
+        the past and are able to recall colors. Third, colors sometimes have symbolic 
+
+        meaning in works of art (although interpretive phrases like &#34;warm 
+
+        gold&#34; or &#34;angry red&#34; should not be used).</p>
+
+      <p class="normal">Composition (or the arrangement of elements in a work) can 
+
+        be described as low, high, above, below, parallel, perpendicular, in the 
+
+        foreground (or background), and to the left (or right). When referring 
+
+        to relative locations, describe objects from the viewer&#39;s perspective, 
+
+        unless referring to the left or right of a character portrayed in the 
+
+        work.</p>
+
+      <p class="normal">Artistic technique can be described as realistic, abstract, 
+
+        unnatural, simplified, detailed, precise, imprecise, sharply defined, 
+
+        blurred, splashed, brushed or stroked.</p>
+
+      <h1>Recommendation Four: Be Logical</h1>
+
+      <p class="normal">In order to be easily understood, visual descriptions must 
+
+        describe objects according to a logical sequence. Descriptions should 
+
+        begin with a general overview of what the object is and what it portrays. 
+
+        Depending upon what type of object it is, it may be appropriate at the 
+
+        outset to mention its color and surface texture, and perhaps its construction. 
+
+        Following the overview, the various portions of the object should be described 
+
+        in detail, in some orderly fashion such as left to right or top to bottom. 
+
+        After one portion of the work has been described, an explicit transition 
+
+        should be used to identify the next area and its spatial relationship 
+
+        to the last. If part of the object is extremely complex, it is best to 
+
+        describe each segment separately, perhaps in a numbered sequence.</p>
+
+      <p class="normal">In the following example (Fig. 4), the location of objects 
+
+        in a painting are described in relation to other elements, providing the 
+
+        reader with an understanding of the overall composition of the work.</p>
+
+      <p class="BlockQuote">&#34; . . . To the left of the barn is an area of crisscrossed 
+
+        black strokes like a shadow. Below the barn is a red and gray machine 
+
+        placed awkwardly on its side. Its large wheels and gears give it the appearance 
+
+        of a piece of farm machinery. To the right of the machine are two brown 
+
+        and angular tree branches that rise upward from the bottom edge of the 
+
+        picture. Between the branches, several small scenes are crudely rendered 
+
+        one above another . . . &#34;</p>
+
+      <p class="MsoCaption"><img src="anable.fig4.jpg" width="295" height="200" alt="Fig. 4: Stuart Davis (1894-1964) American, LANDSCAPE WITH BROKEN MACHINE, 1935, Gouache on paper, 15 1/4 x 22 1/8 inches, Bequest of Virginia Rike Haswell, 1977.39"/></p>
+
+      <p class="MsoCaption">Fig. 4: Stuart Davis (1894-1964) American, LANDSCAPE 
+
+        WITH BROKEN MACHINE, 1935, Gouache on paper, 15 1/4 x 22 1/8 inches, Bequest 
+
+        of Virginia Rike Haswell, 1977.39</p>
+
+      <p class="normal">Depending on their design, sculptures or other three-dimensional 
+
+        works will likely need to be described from more than one angle. A logical 
+
+        sequence should be used when doing so, as if the viewer was moving in 
+
+        a circle around the object.</p>
+
+      <p class="normal">When using descriptive words such as adjectives, it is often 
+
+        best to place them after the word they modify, so visitors know what the 
+
+        object is before they are told what it looks like. For example, use &#34;his 
+
+        fingers are long and thin&#34; instead of &#34;he has long, thin fingers.&#34;</p>
+
+      <h1>Recommendation Five: Be Accurate</h1>
+
+      <p class="normal">Because visual descriptions are part of the overall learning 
+
+        experience of art patrons, they should be factual and consistent with 
+
+        other sources of information about the artwork. Background research may 
+
+        be necessary to correctly identify historical figures, religious personalities, 
+
+        geographical locations, types of clothing, breeds of animals, architectural 
+
+        elements and so on. However, descriptions should avoid jargon or specialized 
+
+        terminology that may be unfamiliar to most visitors. For example, the 
+
+        stylistic terms &#34;abstract&#34; and &#34;realistic&#34; are likely 
+
+        to be understood, but &#34;Geometric Abstractionist&#34; and &#34;French 
+
+        Academic&#34; are not.</p>
+
+      <p class="normal">It is strongly recommended that a describer look at the 
+
+        actual object when making initial notes, because color and small details 
+
+        are most accurately observed in person. When these notes are refined into 
+
+        the actual description, slides or photographs may be used as a reminder 
+
+        of the object&#39;s appearance and composition.</p>
+
+      <h1>Recommendation Six: Miscellaneous</h1>
+
+      <p class="normal">Because visitors on a virtual tour may access works of art 
+
+        in any order, writers of visual descriptions should not assume that readers 
+
+        have followed a particular sequence. References to other artwork should 
+
+        not be made within a visual description, not even to works by the same 
+
+        artist or from the same gallery.</p>
+
+      <p class="normal">For the benefit of Web visitors using screen reading software, 
+
+        numbers should be spelled out as words, as in &#34;nineteenth century&#34; 
+
+        rather than &#34;19th century,&#34; and &#34;two and a half&#34; instead 
+
+        of &#34;2 1/2.&#34;</p>
+
+      <p class="normal">Descriptions ought not to assign gender to animals, such 
+
+        as &#34;the dog stands on his hind legs.&#34;</p>
+
+      <p class="normal">When describing the clothing of characters in a work, monotony 
+
+        can be minimized by using varied phrases like &#34;dressed in,&#34; 
+
+        &#34;is wearing&#34; and &#34;has on.&#34;</p>
+
+      <p class="normal">Once visual descriptions have been written and edited, several 
+
+        reviewers (including people with visual disabilities) should provide suggestions 
+
+        for improvement. As a final check, descriptions should be compared, by 
+
+        a team member, in person, to the actual works of art in the galleries.</p>
+
+      <h3>Video</h3>
+
+      <p class="normal">Although the Virtual Museum Tour currently does not contain 
+
+        video clips, the principle of equivalent alternatives also applies to 
+
+        video. In general, it is necessary to provide synchronized captions for 
+
+        all spoken words, as well as descriptions for sound effects, music and 
+
+        visuals. Further details and examples are available at the National Center 
+
+        for Accessible Media (<a href="http://main.wgbh.org/wgbh/pages/ncam/richmedia/index.html">http://main.wgbh.org/wgbh/pages/ncam/richmedia/index.html</a>).</p>
+
+      <h2>Guideline 4. Clarify natural language usage</h2>
+
+      <p class="normal">Use markup that facilitates pronunciation or interpretation 
+
+        of abbreviated or foreign text.</p>
+
+      <p class="normal">The purpose of this guideline is to make it easier for people 
+
+        using adaptive computer equipment to understand the content of Web documents, 
+
+        particularly those that contain periodic language changes. For example, 
+
+        a Web visitor who is blind will probably utilize a certain type of adaptive 
+
+        software called a screen reader to vocalize the words on a page. By identifying 
+
+        the language of the text, the screen reader may be able to respond with 
+
+        the proper pronunciation and accent. This technique can also benefit people 
+
+        who read Web pages with the aid of a Braille device, since words or characters 
+
+        may be displayed differently depending upon the language in use.</p>
+
+      <p class="normal">For a museum Web site this Guideline is crucial due to the 
+
+        frequent use of terminology from a variety of languages. As the Virtual 
+
+        Museum Tour was being developed, a large number of new documents were 
+
+        written, and existing documents were adapted for the site. In both cases, 
+
+        these catalogue entries and commentaries were closely checked, and variations 
+
+        in language were noted. This process was also applied to all visual descriptions 
+
+        and text transcripts of audio segments, which are accommodations themselves.</p>
+
+      <p class="normal">In order to implement Guideline 4, the primary language 
+
+        of a document must first be identified,; then any subsequent changes in 
+
+        language must be indicated. The initial step is accomplished by adding 
+
+        the language attribute to the opening HTML tag found at the top of the 
+
+        document. Instead of using the full name of a language (such as English), 
+
+        a two-letter abbreviation is used.</p>
+
+      <p class="BlockQuote">&lt;html lang = &#34;en&#34;&gt;</p>
+
+      <p class="normal">A lengthy list of these two-letter language codes is available 
+
+        from the Organization for the Advancement of Structured Information Standards 
+
+        (<a href="http://www.oasis-open.org/cover/iso639a.html" target="new">http://www.oasis-open.org/cover/iso639a.html</a>).</p>
+
+      <p class="normal">Once the primary language of a document is identified, changes 
+
+        in language that occur within the text also need to be declared. This 
+
+        can be done by using a pair of span container tags with the language attribute. 
+
+        The opening span tag marks the beginning of a new language segment while 
+
+        the closing tag indicates the end. After the closing span tag, the document 
+
+        reverts to the primary language previously declared. The following example 
+
+        is an excerpt from commentary written by Clarence W. Kelley about a pair 
+
+        of Japanese screen paintings (Fig. 5).</p>
+
+      <p class="BlockQuote">&#34; . . . By the end of the 17th century, a distinctive 
+
+        association had developed between classical literature and a type of screen 
+
+        painting known as &lt;span lang = &#34;ja&#34;&gt;&lt;i&gt;byobu-uta&lt;/i&gt;&lt;/span&gt; 
+
+        (poems for screens), as seen in this pair of screen paintings . . . &#34;</p>
+
+      <p class="MsoCaption"><img src="anable.fig5.jpg" width="290" height="130" alt="Fig. 5: Japan, Edo period (1615 - 1868) MUSASHI PLAIN, late 17th - early 18th century, Pair of six-fold screens: ink, colors and gold on paper, Each panel 66 1/2 x 24 1/4 inches, Museum purchase, 1960.24a-b"/></p>
+
+      <p class="MsoCaption">Fig. 5: Japan, Edo period (1615 - 1868) MUSASHI PLAIN, 
+
+        late 17th - early 18th century, Pair of six-fold screens: ink, colors 
+
+        and gold on paper, Each panel 66 1/2 x 24 1/4 inches, Museum purchase, 
+
+        1960.24a-b</p>
+
+      <p class="normal">In addition to language changes, Guideline 4 also applies 
+
+        to the use of abbreviations and acronyms within Web documents. Further 
+
+        details are available from the Web Accessibility Initiative (<a href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#text-abbr" target="new">http://www.w3.org/TR/WCAG10-HTML-TECHS/#text-abbr</a>).</p>
+
+      <h2>Guideline 8. Ensure direct accessibility of embedded user interfaces.</h2>
+
+      <p class="normal">Ensure that the user interface follows principles of accessible 
+
+        design: device-independent access to functionality, keyboard operability, 
+
+        self-voicing, etc.<i></i></p>
+
+      <p class="normal">This Guideline refers to various Web site features that 
+
+        present users with some sort of onscreen controls besides the typical 
+
+        buttons and menus found in a browser. It is important that these controls 
+
+        be operable through different methods, to accommodate as many people as 
+
+        possible. Computer users with disabilities frequently utilize input devices 
+
+        other than a mouse, since using a mouse requires both sight and manual 
+
+        dexterity. A person who is blind, for instance, might rely upon the keyboard, 
+
+        while someone with a mobility impairment might use a head-mounted pointing 
+
+        device. While Web browsers themselves can be controlled through these 
+
+        methods, additional interfaces may not have the same functionality. A 
+
+        common example found on museum Web sites is an image enlargement system 
+
+        that allows visitors to view works of art in detail. Depending upon the 
+
+        technology, users may be required to click the mouse on the image itself 
+
+        to zoom in. If so, this feature may be difficult for people with certain 
+
+        disabilities to use.</p>
+
+      <p class="normal">In the process of selecting an image enlargement system 
+
+        for the Virtual Museum Tour, keyboard operability was a primary concern. 
+
+        Many popular technologies failed in this respect, but a suitable product 
+
+        was found in the EyeSpy<sup>TM</sup> Image Server from AXS Technologies 
+
+        (<a href="http://www.axs-tech.com/" target="new">http://www.axs-tech.com/</a>). 
+
+        It allows visitors to use a mouse to click on the image, but it also provides 
+
+        a keyboard-accessible interface (Figs. 6 and 7).</p>
+
+      <p class="MsoCaption"><img src="anable.fig6.jpg" width="270" height="288" alt="Fig. 6: Frans Geubels (1535 - 1590) Flemish, KING ABIMELECH RESTORES SARAH TO HER HUSBAND, ABRAHAM, around 1560 - 1570, Tapestry: dyed wool and silk, 166 x 185 inches, Gift of Mr. Robert Badenhop, 1952.10"/></p>
+
+      <p class="MsoCaption">Fig. 6: Frans Geubels (1535 - 1590) Flemish, KING ABIMELECH 
+
+        RESTORES SARAH TO HER HUSBAND, ABRAHAM, around 1560 - 1570, Tapestry: 
+
+        dyed wool and silk, 166 x 185 inches, Gift of Mr. Robert Badenhop, 1952.10</p>
+
+      <p class="MsoCaption"><img src="anable.fig7.jpg" width="270" height="288" alt="Fig. 7: Frans Geubels (1535 - 1590) Flemish, KING ABIMELECH RESTORES SARAH TO HER HUSBAND, ABRAHAM (detail)"/></p>
+
+      <p class="MsoCaption">Fig. 7: Frans Geubels (1535 - 1590) Flemish, KING ABIMELECH 
+
+        RESTORES SARAH TO HER HUSBAND, ABRAHAM (detail)</p>
+
+      <h1>Conclusions</h1>
+
+      <p class="normal">When considering the topic of Web accessibility, it is beneficial 
+
+        to note how the addition of ramps and automatic doors have made access 
+
+        to museum buildings easier not only for people with disabilities, but 
+
+        also for all visitors. A similar phenomenon is likely to take place as 
+
+        museums improve the accessibility of their Web sites. By observing the 
+
+        WAI Guidelines, designers will make their pages more usable by everyone. 
+
+        For instance, text transcripts and described videos can be used by those 
+
+        who do not have the computer hardware or software to play multimedia, 
+
+        and by people with a slow Internet connection. Likewise, visual descriptions 
+
+        may be appreciated even by people with normal eyesight, since the descriptions 
+
+        point out details that they might not have noticed. By incorporating the 
+
+        WAI Guidelines into their design procedures, museums will take a major 
+
+        step toward accomplishing the goal of making art accessible to everyone.</p>
+
+      <h1>Acknowledgements</h1>
+
+      <p class="AcknowedgementsText">The Accessible Arts! program at Wright State 
+
+        University operates with funding from the Rehabilitation Services Administration 
+
+        of the U.S. Department of Education, and in collaboration with a consortium 
+
+        of area arts organizations and businesses.</p>
+
+      <p class="AcknowedgementsText">Thanks to Alan Woods and Nancy Van Voorhis 
+
+        for their informative audio description workshop; to Nancy Van Voorhis 
+
+        and Nancy Mitchell for writing numerous visual descriptions; and to Mike 
+
+        Paciello for tips on the implementation of visual descriptions in Web 
+
+        pages.</p>
+
+      <h1>References</h1>
+
+      <p class="ReferencesText">AXS Technologies EyeSpy<sup>TM</sup> Image Server 
+
+        (2000). Consulted January 14, 2001. <a href="http://www.axs-tech.com/" target="new">http://www.axs-tech.com/</a></p>
+
+      <p class="ReferencesText">National Center for Accessible Media Access to Rich 
+
+        Media Project (2000). Rich Media Accessibility: Resource Center for Developers. 
+
+        Last updated December 6, 2000, consulted January 3, 2001. <a href="http://main.wgbh.org/wgbh/pages/ncam/webaccess/arm/index.html">http://main.wgbh.org/wgbh/pages/ncam/webaccess/arm/index.html</a></p>
+
+      <p class="ReferencesText">Organization for the Advancement of Structured Information 
+
+        Standards (1989). Code for the Representation of the Names of Languages. 
+
+        Last updated July 15, 1998, consulted January 8, 2001. <a href="http://www.oasis-open.org/cover/iso639a.html" target="new">http://www.oasis-open.org/cover/iso639a.html</a></p>
+
+      <p class="ReferencesText">World Wide Web Consortium HTML 4.01 Specification 
+
+        (1999). Objects, Images, and Applets in HTML documents. Last updated December 
+
+        24, 1999, consulted January 3, 2001. <a href="http://www.w3.org/TR/html4/struct/objects.html#adef-alt" target="new">http://www.w3.org/TR/html4/struct/objects.html#adef-alt</a></p>
+
+      <p class="ReferencesText">World Wide Web Consortium Web Accessibility Initiative 
+
+        (1999). Web Content Accessibility Guidelines 1.0. Last updated May 5, 
+
+        1999, consulted January 2, 2001. <a href="http://www.w3.org/TR/WAI-WEBCONTENT/" target="new">http://www.w3.org/TR/WAI-WEBCONTENT/</a></p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</tbody></table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+
+
+
+
+</body><!-- #EndTemplate --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/anable/anable.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:39 GMT --></html>

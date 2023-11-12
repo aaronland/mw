@@ -1,0 +1,227 @@
+<div id="main-content">
+   <!-- <div id="news-old" onclick="location.href='http://conference.archimuse.com/';" style="cursor:pointer;">-->
+<div id="news-container">
+    	
+ 		<div id="evals">
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+			var r_text = new Array ();
+			r_text[0] = "very lively discussion. to be continued ...";
+			r_text[1] = "well curated. high level thinking";
+			r_text[2] = "inspiring ... life-changing conversation";
+			r_text[3] = "the creativity here is palpable";
+			r_text[4] = "very professional. a nice collegial atmosphere. highly intellectual.";
+			r_text[5] = "great inclusive program ... learning so many amazing things about what others are doing.";
+			r_text[6] = "great community where the most innovative and creative people get together!";
+			r_text[7] = "love the openness of everyone participating";
+			r_text[8] = "What's good? The people.  The ideas. The conversations.  The willingness to really talk about issues.   The food and coffee. ";
+			r_text[9] = "an inter-generational community, in which each new layer brings its own talents, technologies, and ideals to the table in a respective and co-creative dialogue.";
+
+
+			var i = Math.floor(9*Math.random())
+			
+			document.write ('<h2 align=\"center\">Feedback from MW2009</h2><ul class=\"news-list\"><li><span style="font-size: 1.3em;">&ldquo;</span>&nbsp;' + r_text[i] + '&nbsp;<span style="font-size: 1.3em;">&rdquo;</span></li></ul>');
+			
+	                // ]]> -->
+				  </script>
+		<noscript></noscript>
+
+	  </div>
+ 		 <div id="news">    
+	        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+                    //USAGE SYNTAX: new rssdisplayer("divid", "rssurl", numberofitems, "displayoptions")
+                    new rssdisplayer("news", "http://conference.archimuse.com/conferences/mw/mw2010/feed", 20, "")
+                // ]]> -->
+				  </script>
+		<noscript></noscript>
+
+      </div>
+         </div>  
+    
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="Intro-Paragraph" --> 
+        <h2 class="Author"><a href="../../bios/au_345013211.html">Mia Ridge</a>, Science Museum, United Kingdom</h2>
+          <p class="URL"><a href="http://sciencemuseum.org.uk/visitmuseum/galleries/cosmos_and_culture.aspx">http://sciencemuseum.org.uk/visitmuseum/galleries/cosmos_and_culture.aspx</a></p>
+          <h3 class="AbstractTitle">Abstract</h3>
+          <p class="AbstractText">&#39;Cosmic collections&#39; was a Web site mashup competition held by the Science Museum in late 2009 to encourage members of the public to create new interfaces with newly accessible collections data prepared for the <em>Cosmos &amp; Culture</em> exhibition. The paper reports on the lessons learned during the process of developing and running the competition, including the organisational challenges and technical context. It discusses how to create room for experimentation within institutional boundaries, the tools available to organise and publicise such an event on a limited budget, the process of designing a competition, and the impact of the competition. It also investigates the demand for museum APIs.</p>
+          <p class="keywords">Keywords: experiment, collaboration, mashup, API, social media, exhibition, collections</p>
+	  <!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="Body-Text" -->
+         
+          <h2>Introduction <strong></strong></h2>
+        <p>In October 2009, the Science Museum, London, launched the first mashup competition held in the museum sector. The Cosmic Collections project was based on a simple proposition: that museum audiences might have access to a more interesting, innovative site if the museum provided machine-readable access to the data already being gathered for the exhibition and threw open the process of developing the exhibition Web site to the public. But how would such a competition work? Would anyone participate?</p>
+          <h2>Project Context</h2>
+        <p>In December 2008, planning began for the exhibition Web site (or microsite) for the &#39;Cosmos and Culture&#39; exhibition. The budget for Web design and development was quite small and had to include costs for external agencies costs as in-house resources were not available at that point. At the same time, we were discussing the possibility of using our content management system to support the exhibition team in writing the content for the in-gallery touchscreen interactives that were to deliver the object captions and interpretation. This content would be delivered to the multimedia applications via Web services from the content management system, taking advantage of infrastructure that linked our collections and image management systems with our content management system created during previous projects. The Web site was originally imagined as an on-line version of the gallery content.</p>
+        <p>At this point, the idea of turning some of the Web  budget into a competition prize arose. On-line crowdsourced astronomy projects such as Galaxy Zoo (<a href="http://www.galaxyzoo.org/">http://www.galaxyzoo.org/</a>) and the Amateur Achievement Award of Astronomical Society of the Pacific (<a href="http://www.astrosociety.org/membership/awards/amateur.html">http://www.astrosociety.org/membership/awards/amateur.html</a>) suggested there was a good match between the potential of the amateur astronomy community and the use of machine-readable collections data. I began to test the idea against the organisational, museological and technical context in which the project would sit.</p>
+          <h3>Organisational context</h3>
+          <p>The potential competition could be aligned to the organisation&#39;s vision to be &#39;the most admired museum&#39; and &#39;the best place in the world for people to enjoy science&#39; and to its mission to make the best use of our collections with the &#39;highest impact for the largest audience&#39;. Aligning a project to organisational mission is important as it provides it with the best chance of on-going organisational support as well as initial approval. We met with the relevant departments to discuss the viability of the project, and then put together a presentation to inform the formal approval process.          </p>
+          <p>Aligning the risk profile of a proposed project to the host organisation&#39;s appetite for risk is vital, particularly in a difficult economic climate. At the time, the organisation&#39;s leadership had a desire for the organisation to take a few more risks, and the relatively small scope of the project made it an acceptable risk. In this case, the worst case scenario would be that no suitable entries were received, but were this to happen, we could use the data to make a site ourselves so that the organisational requirement for a Web site for the exhibition could still be met.</p>
+          <h3>Technical context within the Science Museum</h3>
+        <p>Before I explain the technical context for this project, there are two terms that require definition: mashups and APIs. Put simply, mashups are Web  sites that combine data from one or more sources, or data and visualisation tools such as maps or timelines, into a single integrated interface. They take existing information from known sources and present it to the viewer in a new way. APIs, or application programming interfaces, are a way for one machine to talk to another. They tell a computer, &#39;if you go here, you will get that information, presented like this, and you can do that with it&#39;. A mashup might use one API to access a set of data, perhaps a list of objects, and another to draw a map and place those objects on it.</p>
+          <p>One of the main attractions of the project was that it built on existing technical infrastructure. Underlying Web sites such as &#39;Brought to Life&#39; (<a href="http://sciencemuseum.org.uk/broughttolife">http://sciencemuseum.org.uk/broughttolife</a>) was an innovative &#39;Global Object Database&#39; (or GOD) that acted as &#39;middleware&#39;, making data from disparate and heterogeneous collections and image database available to a content management system so they can be enhanced with interpretative information and published on-line. Object data collated in GOD can be re-purposed and re-published through new interfaces and Web services or APIs, and updates to records in the collections management systems are automatically updated on live Web sites. Within the technical architecture for the Science Museum digital outputs, any functionality developed for future projects should aim to improve the overall capabilities of GOD. Changes were made to GOD to support the migration of an existing large-scale site, and timed to provide functionality required for the Cosmos &amp; Culture gallery kiosks.</p>
+        <p>Alongside major long-term projects like Brought to Life, the Web and new media teams had increasingly worked to a model of using small-scale, bespoke APIs for very specific exchanges of data from a central database with in-gallery kiosks and the exhibition microsite for previous exhibitions. </p>
+        <p>The competition was proposed early enough to fit in with other shared infrastructure required for the overall delivery of the <em>Cosmos &amp; Culture</em> exhibition in gallery; therefore there was only a small later cost of approximately three days development time with our external content management system suppliers for producing the public API. The cooperation of the collections documentation and new media departments at this point were essential to the eventual success of the project. </p>
+          <h3>The call for APIs - technical context within the museum sector</h3>
+        <p>The promise of APIs is considerable: </p>
+        <p class="BlockQuote">The great advantage of this approach - where the data is free and easily accessible and left to others to exploit - is that whereas raw data looks unappealing, anyone can design tools to make it sing, mash it up with other data sources, like maps, to add extra layers of information.</p>
+        <p class="BlockQuoteAuthor"> (<em>Blastland, 2010</em>).</p>
+        <p>APIs are attractive for museums as they allow other people to re-use our data in innovative ways and provide interfaces to our collections that we do not have the resources to create. But is it only a promise? </p>
+        <p>Despite the importance placed on APIs in discussions amongst museum technologists on the UK-based Museums Computer Group e-mail list (<a href="https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=mcg">https://www.jiscmail.ac.uk/cgi-bin/Web admin?A0=mcg</a>, see Ottevanger (2008) for a summary of one discussion), the public demand for machine-readable access to museum data was largely unproven. The extent to which third-party developers would find our content usable was also unknown. Finally, while some technically-confident specialists or researchers might well write scripts to access cultural heritage data, there was at the time very little evidence that a museum API-based site that the general public would find usable, interesting and enjoyable might be created as a matter of course. A mashup competition
+          for the museum sector seemed to be a good way to test the promise of 
+        APIs.</p>
+          <h3>Museological context</h3>
+        <p>The key messages of the Cosmos &amp; Culture exhibition included &#39;amateur astronomers can still make important contributions&#39;. The exhibition included objects from different cultures, eras and locations across the world, items that would lend themselves to visualisations like maps and timelines, and provided many ways to approach the data. Moreover, the physical exhibition was experimenting with new ways of delivering interpretation in gallery and with the form of object cases.</p>
+        <p>Within that context, the goals of the project became:</p>
+          <ul style="margin-top:0in;" type="disc">
+            <li>to make      best use of the limited budget and staff time to get the highest impact Web  presence for Cosmos &amp; Culture</li>
+            <li>to experiment      with new ways of making objects available via the Web </li>
+            <li>to experiment      with new ways of attracting user-generated content</li>
+            <li>to provide      our audiences with new visualisations and interpretative contexts for      objects</li>
+          </ul>
+        <p>Providing machine-readable access to our collections is an on-going project for the Science Museum. Some exhibition microsite APIs had previously been opened to the public, but they were not designed specifically for public use, and it is not known whether they were used by any third-parties. We wanted to release more APIs to enable greater access to our collections data, but it was difficult to find data on the formats and functionality preferred by developers likely to see the data, so a competition seemed an ideal way to run an open beta programme for future APIs. It also provided an opportunity to discover what kinds of documentation would be required to make museum catalogue data comprehensible to people outside the sector.</p>
+          <h3>Timelines</h3>
+        <p>A summary of the timelines is included for reference.</p>
+          <blockquote>
+            <p class="listwithbullets">March 2009: first post about the competition on Science Museum developers&#39; blog (<a href="http://sciencemuseumdiscovery.com/blogs/museumdev">http://sciencemuseumdiscovery.com/blogs/museumdev</a>/).</p>
+            <p class="listwithbullets">April 2009: blogged a project outline and presentation I&#39;d prepared for internal use on the blog, call for feedback.</p>
+            <p class="listwithbullets">October 24, 2009: launch event, API publicly available.</p>
+            <p class="listwithbullets">November 18, 2009: suggested reducing scope of entries.</p>
+            <p class="listwithbullets">November 28, 2009: competition entries due. </p>
+            <p class="listwithbullets">December 2009: judging entries, intended announcement of results.</p>
+            <p class="listwithbullets">Mid-January 2010: announced competition winners, began evaluation surveys.</p>
+            <p class="listwithbullets">February 2010: final site live</p>
+          </blockquote>
+          <h2>Planning and Set-Up</h2>
+        <p>Once the project was approved by the exhibition board, planning continued in earnest. The most important issues were designing the API, finding judges, deciding on appropriate prizes, and determining the optimum competition parameters.</p>
+        <h3>API design</h3>
+        <p>The Cosmic Collections API is very simple. It returns data in XML via GET requests to a RESTful interface. Calls to the API (<a href="http://www.sciencemuseum.org.uk/objectapi/cosmosculturepublic.svc/MuseumObjects">http://www.sciencemuseum.org.uk/objectapi /cosmosculturepublic.svc/MuseumObjects</a>) return either a list of all objects or information about a specific item in the collection.        </p>
+        <p>The API provides data about the object, including accession number, name, &#39;headline&#39; (a visitor-friendly indication of the significance of the object), descriptive text, dates, materials and measurements. Linked places, people and celestial bodies were included to help provide &#39;hooks&#39; for developers to pull in related information or use in visualisations. Full documentation is available at <a href="http://cosmiccollections.pbworks.com/Cosmic-Collections-API">http://cosmiccollections.pbworks.com/Cosmic-Collections-API</a>. </p>
+        <p>After considering the options, I decided not to use an API key (a code that helps track or restrict use of an API) as the benefits of tracking were outweighed by the resources required to implement and manage it. It also would have added a layer of complexity that might have been a further barrier to participation. As we wanted feedback to help improve the next iteration of the API, qualitative data was more important than quantitative usage information.</p>
+          <h3>Competition timing</h3>
+        <p>The timing of the competition was coordinated across other commitments within the museum and to tie in with Autumn Moonwatch (24 October – 1 November 2009). We felt that the competition should not run for more than a month between launch and submission so that participants would not lose momentum. </p>
+          <h3>Judges</h3>
+        <p>The curator, Alison Boyle, and I each selected a judge who was widely recognised and admired in the domains of astronomy and Web  development. Chris Lintott is the principal investigator for the Galaxy Zoo project and co-presenter on the BBC&#39;s <em>Sky at Night</em> program, and Christian Heilmann is Yahoo!&#39;s &#34;International Developer Evangelist&#34;.</p>
+        <p>Judging took place on-line, partly in order to minimise the demands on the time of our judges. We used the criteria as a scoring matrix to ensure that the judging was fair. Comments were optionally recorded to help contextualise the scores.</p>
+          <h3>Criteria</h3>
+        <p>I reviewed the criteria used for other mashup competitions. The <em>Cosmic Collections</em> judging criteria were carefully chosen to match the ethos of Web  development at the Science Museum and to reflect the qualities we wanted to see in entries. </p>
+        <p>The final criteria are listed below, with some explanation for each as published during the competition:</p>
+          <ul style="margin-top:0in;" type="disc">
+            <li><strong>Use      of collections data</strong> – entries that make best use of the collections      information about the Science Museums objects will be favoured.</li>
+            <li><strong>Creativity</strong> – we&#39;d love new insights into the collections, or new ways of thinking      about or presenting the data to the public.</li>
+            <li><strong>Accessibility</strong> – any entry that makes a virtue of accessibility has a good advantage</li>
+            <li><strong>User      experience</strong> – a focus on the end user experience so the site is a joy to      use will win over technology used for the sake of it. An entry that can elegantly      explain complex ideas, or make an interface so intuitive that people spend      hours browsing it will have the edge.</li>
+            <li><strong>Easy      to deploy and maintain</strong> – the submission must be reasonably well documented      so it can be installed easily and maintained for users in the future. Use      of existing libraries is encouraged. Configuration details and any API      keys should be supplied. </li>
+          </ul>
+        <p>As one of our project goals was to make use of limited budget and resources, we needed mashups that could be published without too much additional work. Taking advantage of the transparency we had practised throughout the project, we further explained, &#34;Make it easy for us. We are a small and very busy team. So the easier you make it for us to integrate your Web site into the Science Museum site, and maintain it for the next few years, the more we will like you&#34; (http://cosmiccollections.pbworks.com/Tips-for-entrants).</p>
+          <h3>Prizes</h3>
+        <p>The audiences for the <em>Cosmos &amp; Culture</em> exhibition included older children aged 11 – 16 as well as adults, so we wanted to encourage sites for both audiences, and decided to offer two prizes. We prepared information about museum audiences (<a href="http://cosmiccollections.pbworks.com/About-Science-Museum-online-audiences">http://cosmiccollections.pbworks.com/About-Science-Museum-online-audiences</a>) and tips for entrants, including considerations when designing for non-specialist adults and children. </p>
+        <p>I reviewed other competitions to get a sense of how much prize money was generally offered. A number of competitions, such as last.fm&#39;s 2008 hack day (<a href="http://blog.last.fm/2008/12/22/hack-day-2008">http://blog.last.fm/2008 /12/22/hack-day-2008</a>) and JISC MOSAIC (<a href="http://www.sero.co.uk/jisc-mosaic-competition.html">http://www.sero.co.uk/jisc-mosaic-competition.html</a>), offered a first prize of £1000. We felt that offering a total prize of £2000 was fair. This also allowed us to keep some budget in reserve, with the idea that we could award additional prizes if the project was under budget at the end of the competition.</p>
+<p>I did consider the issue of whether offering a prize would subvert the notion of tinkering for the fun of hacking with new data. Based on my own experience of entering geek &#39;hack&#39; competitions, I decided that prize money is rarely a reward commensurate to activity, but does provide a tangible motivation to finish and submit an entry.</p>
+          <h3>Launch event planning</h3>
+        <p>The launch event was held on a Saturday to enable the largest range of attendees. We checked the possible event date against upcoming events in the relevant computing and astronomy communities, but after settling on the date, a big weekend &#39;unconference&#39; (<a href="http://www.barcamplondon.org/">http://www.barcamplondon.org/</a>) was later announced for the same weekend. Subsequently another &#39;open data&#39; event was announced for the same day. This had an unfortunate effect on attendance levels for our event but shows the size and enthusiasm of the potential developer community.</p>
+        <p>The primary goal of the event was to help people create teams by meeting people with complementary skills. The secondary goal was to inspire them to share our ethos by giving them access to the objects and stories. We felt that experiencing the objects in person was important to help participants convey something of the material relationships between objects in the exhibition. I&#39;d originally planned to run some kind of &#39;speed dating for geeks&#39; but realised that a neat binary division between programming and astronomy or any other division of skills and knowledge may not work for the type of person interested in this event. We decided on an activity that would encourage people to mingle, and used name stickers with colours that represented the participants&#39; primary area of interest. We hoped that people might start to form competition teams, and create a spirit of collaboration that would continue on-line.</p>
+<p>The event programme included a curator-led tour of the gallery, a talk on museum audiences and Web  resources, a talk by Dr. Chris Welch on the latest ways in which scientists are &#39;exploring the cosmos&#39;, and a special guest appearance by a drama character representing Caroline Herschel (1750 -1848), the first female astronomer. The group activity involved story telling around the &#39;Cosmos &amp; Culture wall&#39;. The event itself was a lot of fun, and we received good feedback from participants.</p>
+<p> The lesson we learned from the event was to decide exactly what it should be and make sure the format, particularly the length and venue, is focused around that. While each activity was individually successful, the event ran for four hours, too long for a simple launch, and too short for a hack day or unconference. It was also difficult to communicate the ethos of an unconference to event helpers who had not experienced one for themselves. </p>
+          <h3>Communication and marketing tools</h3>
+        <p>The Science Museum&#39;s Web  team has an on-going commitment to transparency wherever appropriate. Much of the decision-making process was publically visible, and those interested could comment at any point. In the early stages, I used an existing wiki based around discussions of machine-readable data for museums (<a href="http://cosmiccollections.pbworks.com/">http://cosmiccollections.pbworks.com/</a>) alongside our development blog to ask developers for their preferences and thoughts. </p>
+        <p>We used a number of free tools to help publicise and organise the project. Existing tools included the Science Museum Web site (e.g. <a href="http://www.sciencemuseum.org.uk/visitmuseum/galleries/cosmos_and_culture/mash-up_competition.aspx">http://www.sciencemuseum.org.uk/ visitmuseum/galleries/cosmos_and_culture/mash-up_competition.aspx</a>) and Twitter account, <a href="http://twitter.com/sciencemuseum">http://twitter.com/sciencemuseum</a>.</p>
+          <h4>Hash tag</h4>
+        <p>Hashtags are an effective way of creating an ad hoc conversation, and even a temporary community, around a particular topic. Participants do not need to &#39;follow&#39; or subscribe to another account – they can read the existing conversation by searching for the hashtag, and take part in the conversation by using it in a tweet or blog post of their own. With this in mind, we encouraged people to use the tag &#39;coscultcom&#39; when discussing the competition. As with a Twitter account name, there is an art to choosing a hashtag – it should be long enough to be distinctive, but short enough that it doesn&#39;t use up too many of a tweet&#39;s 140 characters, especially when retweeted. &#39;Coscultcom&#39; was also designed to work as a tag that could be said aloud.</p>
+          <h4>Twitter</h4>
+        <p>We assumed that many of the potential participants would be on Twitter and that it was a natural fit as our main method of communication. We created an account with the same name as the hashtag, in part so that replies to the account would be found with the same search term. We started following people who might help spread the message and who were active in the relevant areas of programming, the open data movement, and astronomy. We generally tried to design tweets so that they could be easily shortened when re-tweeted without losing vital meaning.</p>
+          <h4>Wiki</h4>
+        <p>The role of the <em>Cosmic Collections</em> wiki (http://cosmiccollections.pbworks.com/) was to allow people to ask questions, connect with other participants, share tips; it also would provide centralised documentation. Free wikis such as pbwiki (<a href="http://pbworks.com/">http://pbworks.com/</a>) and wetpaint (<a href="http://www.wetpaint.com/">http://www.wetpaint.com/</a>) work well for some projects. However, they can also be slightly difficult for people to manage. In hindsight, given later changes to project resourcing and the levels of participation that we were able to support, a blog that encouraged comments might have been as effective and might create a lower barrier to participation. A wiki might have worked well if we had had time to act as community manager, connecting visitors with each other and encouraging the exchange of tips and information.</p>
+          <h4>Google Group</h4>
+        <p>Frankie Roberto, while still employed by the Science Museum, had set up a free Google Group to discuss Science Museum APIs (<a href="http://groups.google.com/group/science-museum-apis">http://groups.google.com/group/science-museum-apis</a>). Yahoo! Groups or even a Ning site (<a href="http://www.ning.com/">http://www.ning.com/</a>) might also have been suitable free alternatives.</p>
+          <h3>Event promotion and management</h3>
+        <p>We used Eventbrite (<a href="http://www.eventbrite.com/">http://www.eventbrite.com/</a>) to manage event ticketing and RSVPs, as it is free for non-charged events, enables attendance reports, and gives the event organisers the ability to e-mail registered participants. It is also worth listing events on Upcoming (<a href="http://upcoming.yahoo.com/">http://upcoming.yahoo.com/</a>) and Meetup (<a href="http://www.meetup.com/">http://www.meetup.com/</a>). </p>
+        <p>The social media marketing team promoted the event on Twitter and Facebook. Personal posts to relevant lists (such as Museums Computer Group, Google Open Source Jam, Antiquist, Museum Computer Network) and from my personal Twitter accounts also helped promote the event. </p>
+        <h3>Organisational support for marketing and communications</h3>
+        <p>We had significant support from the social media marketing team at some points, but were not always able to take up their offers of support as we felt some specialist contacts would be more appropriate if made through existing communication channels.        </p>
+        <p>The overall project had two different audiences – a comparatively small field of potential participants, and the wider on-line audience for the final mashup. This staged approach to project audiences was difficult to convey internally. </p>
+        <p>It was a difficult project to promote as it involved dealing with new audiences and conveying quite nuanced messages. Over time, we refined the message into five steps :</p>
+          <ol>
+            <li>check out the data; </li>
+            <li>get some help (explore tips and documentation on the wiki); </li>
+            <li>get inspired by visiting the exhibition, viewing some of the objects and interpretation on Flickr or YouTube;</li>
+            <li>get creative and get mashing; and finally, </li>
+            <li>send us a link to your entry. </li>
+          </ol>
+        <p>Had resources allowed, testing potential messages on different audiences before launch would have been useful.</p>
+          <h2>Running the Competition</h2>
+        <p>The organisational context within the Science Museum changed over the lifetime of the project. This meant a significant reduction of the time I had available for planning the final stages before competition launch, and for acting as a &#39;community manager&#39; during the competition. This may be one reason why the wiki was not used by potential participants to communicate with each other, though the offer of prize money may also have meant that people saw each other as competitors and were less likely to share ideas.</p>
+        <p>During the competition, I used Google Alerts to track mentions of the project on-line. Our social media marketing team also responded to some comments. </p>
+          <h3>Changing the scope – do one thing and do it well</h3>
+        <p>Based on feedback from potential participants during the launch and competition, we started to realise that the goal of the specialist or developer making a site that served their own needs or explored the use of a particular technology, and the requirement to be user-friendly for a general audience might be incompatible. After reviewing the available data, and the skills and domain knowledge of probable participants, it seemed that the types of interfaces someone might produce with the API might lend themselves more to exploring one particular idea in depth than to producing something suitable for the broadest range of our audiences. As the competition proceeded, we realised most participants were working alone rather than in teams, and were unlikely to have the range of skills and knowledge required to make a complete site.</p>
+        <p>It was felt that as the main goal was a site for our end users, it would be better to tweak the parameters as needed rather than to stick to conditions that didn&#39;t seem to be working for the sake of maintaining experimental conditions. Being aware that changing the rules mid-competition might be unfair on some participants, I wrote a blog post about the proposed changes and asked people to comment if they objected (<a href="http://sciencemuseumdiscovery.com/blogs/museumdev/cosmic-collections-do-one-thing-and-do-it-well/">http://sciencemuseumdiscovery.com /blogs/museumdev/cosmic-collections-do-one-thing-and-do-it-well/</a>). </p>
+        <p>We&#39;d kept back some budget in case further changes needed to be made to the API, and this contingency enabled us to obtain freelance developer support for combining the best parts of submitted mashups into the final site.</p>
+          <h3>Announcing the results – organisational challenges</h3>
+        <p>A further organisational challenge arose when we came to announce the results. Throughout the planning process we had coordinated the project timing with departments such as press and marketing, and subsequently kept up a line of communication during the project. However, owing to a misunderstanding between the project team and the internal press department that surfaced when we asked for support in announcing the results, the announcement of results was held up from mid-December until early January. The project team wanted a press release on the main Science Museum site to support announcements made over social media such as Twitter, but the press office felt that the target recipients of the news would prefer to receive it over social media. This may signal some confusion between or conflation of RSS-based press releases as a distribution mechanism and social media as a notification method. The misunderstanding may also have arisen because staff did not understand the project and had no way of judging its uniqueness as an innovation within the museum sector, or because organisational priorities had changed in the meantime. The organisation&#39;s social media strategy had also changed since the start of the year, and those changes in social media policy and ownership during the project also caused some minor difficulty.</p>
+        <p>After much discussion, we announced the results on Twitter. However, social media, particularly Twitter, is ephemeral, and our initial announcement of results was missed by many following the project. This may show that social media need to be anchored on more permanent, substantial content or needs to be delivered over multiple channels.</p>
+        <p>The competition winners were Simon Willison and Natalie Down (<a href="http://cosmos.natimon.com/">http://cosmos.natimon.com/</a>). The judges felt that their entry made the best use of our collections data, allowing users to browse objects by people, places and celestial body. Judge Chris Lintott describes it as &#39;having a wikipedia-like quality of sucking the user in for just one more click&#39;. The runner-up was Ryan Ludwig (<a href="http://www.serostar.com/cosmic/">http://www.serostar.com/cosmic/</a>). The judges were impressed with the visual appeal of Ryan&#39;s entry, particularly the image gallery with thumbnails and zoom function. The judges also commended Ray Shah&#39;s entry (<a href="http://collection.thinkdesign.com/">http://collection.thinkdesign.com/</a>), particularly the ability of users to add their own data. We weren&#39;t able to award a prize for the 11 – 16 age group.</p>
+          <h2>Project Evaluation</h2>
+          <h3>Event and communications</h3>
+        <p>The call to action may have been confusing as it asked people to register for the launch event and on the wiki. Wiki spam meant registrations were required to be approved, adding an additional layer of complication to the messages. We were trying to allow for people who couldn&#39;t make it to an event in London but still wanted to participate in a community. Overall, the project did not create a formal on-line community, perhaps because there was no central task or social object to act as a platform for discussion, unlike the launch event. </p>
+          <h3>The call for APIs – an answer</h3>
+        <p>This competition demonstrated that there is an audience for cultural heritage APIs. The sub-set of the audience who can directly consume an API from the source is small; however, the eventual audience for the sites they produce can be as large as any other museum on-line audience. User-experienced focused mashups can be encouraged so that the results are enjoyable by a broad audience. However, the resulting sites were not narrative-driven as exhibition microsites tend to be. This may be the effect of the discrete data records provided – the question of whether mashups have the effect of decomposing exhibition content into collection data would provide an interesting area for further research.</p>
+        <p>Future projects should allow more resources to encourage collaboration between people with Web production skills and experts from other domains to explore issues around the use of additional cultural heritage, historical biographical or scientific data sources. However, individual APIs may be of limited value until a critical mass of discoverable APIs exists to enable the addition of external content. Aggregated APIs may make development easier by providing a consistent interface and a single point of access. APIs are valuable internal tools and can reduce overall costs if designed as part of the project architecture.</p>
+          <h3>Competition as API beta test</h3>
+        <p>We had hoped to provide demonstrations and example code, but after project time was limited, this wasn&#39;t achievable. Feedback from the competition will help us prioritise the allocation of resources for future API work by providing real data on the benefits of practical and user-friendly documentation for a particular API. Feedback also suggested some data cleaning and validation, and disambiguated location data (e.g. Cambridge, Massachusetts, versus Cambridge, England). Feedback also called for more code examples or tutorials, particularly resources accessible to those without a strong existing knowledge of technology. In future, I would partner with larger organisations to run a hack event and help support beginners.</p>
+          <h3>Barriers to participation</h3>
+        <p>Feedback told us that barriers included a lack of time, a short timescale from the time the potential participant heard of the competition to the time submissions were due, and being distracted by other projects. Based on this, in future I would try to find a permission-based marketing model that participants and organisers were happy with, and would probably be a bit more confident about providing more reminders, while making sure we offered people a clear way to remove themselves from any update lists.</p>
+        <p>We were not able to find ways to reliably connect people with different skills and knowledge, so ultimately only people confident with Web  development submitted entries. </p>
+          <h3>Impact</h3>
+        <p>The competition was picked up by two influential Web developer sites, the Yahoo Developer Network and the Programmable Web . One described it as a &#34;crusade to bring museums out into the open as places of innovation rather than preservation&#34; (Heilmann, 2009); the other stated, &#34;with the rollout of a new API to provide access to information about some of its exhibits, the museum itself has become an example of technological innovation&#34; (Manoochehri, 2009). The competition was also covered on astronomy sites like the International Year of Astronomy (<a href="http://www.astronomy2009.org/">http://www.astronomy2009.org</a>) and the British Astronomical Association (http://britastro.org).</p>
+        <p>A small scale pre-evaluation survey carried out in mid-January asked respondents whether anything surprised or delighted them about the competition. Answers included:</p>
+          <ul style="margin-top:0in;" type="disc">
+            <li>&#34;giving      a tough-to-reach community real ownership of the museum project&#34;</li>
+            <li>&#34;That      you were doing it at all. More of this kind of thing! Museums are supposed      to be publically accessible resources for the enrichment and education of      humanity. Their knowledge and data should be too and this was a great      step!&#34;</li>
+            <li>&#34;The      very idea of the competition was awesome&#34; </li>
+            <li>&#34;The      fact that a museum opened up all it&#39;s data is awesome and hopefully more      will follow suit.&#34;</li>
+          </ul>
+          <h2>Conclusion</h2>
+        <p>Overall, we feel the competition succeeded. The winning sites provide engaging and visually appealing experiences for the user, and make good use of the exhibition data. We saw a number of variations on maps and timelines – unsurprising as we had made sure the data could support this – but we also saw some lovely treatments of the relationships within the data. We discovered an ad hoc community of developers who want to engage with our collections, and proved that museum APIs can create interesting Web sites, although support is required to enable wider participation.</p>
+          <h2>Acknowledgements</h2>
+          <p class="AcknowedgementsText">To write a list is to risk leaving someone out, so my sincerest apologies if this is the case. I would like to thank Alison Boyle, Gaetan Lee, Heather Mayfield, Anne Prugnon, Ailsa Jenkins and Raphael Larizza, Daniel Evans, Marivanna Chessa and Peer Lawther, Graham Thomas, Chris Lintott and Christian Heilmann, and our participants and supporters.</p>
+          <h2>References</h2>
+          <p class="ReferencesText">Blastland, Michael (2010). What can data.gov.uk do for me?. Consulted January 24, 2010. Available <a href="http://news.bbc.co.uk/1/hi/magazine/8474581.stm">http://news.bbc.co.uk/1/hi/magazine/8474581.stm</a></p>
+          <p class="ReferencesText">Heilmann, Chris (2009). A new API and hack competition – this time not from a tech company but by a museum! Consulted January 24, 2010, written October 21, 2009. Available <a href="http://developer.yahoo.net/blog/archives/2009/10/a_new_api_and_h.html">http://developer.yahoo.net/blog/archives/2009/10/a_new_api_and_h.html</a></p>
+          <p class="ReferencesText">Manoochehri, Michael (2009). Science Museum Opens API and Challenges Developers to Mashup the Cosmos. Consulted January 24, 2010, written November 19th, 2009 Available <a href="http://blog.programmableweb.com/2009/11/19/science-museum-opens-api-and-challenges-developers-to-mashup-the-cosmos/">http://blog.programmableWeb.com/2009/11/19/science-museum-opens-api-and-challenges-developers-to-mashup-the-cosmos/</a></p>
+          <p class="ReferencesText">Ottevanger, Jeremy (2008). The EDL API debate – Museum Computer Group thread. Consulted January 24, 2010, written February 27, 2008. Available at <a href="http://doofercall.blogspot.com/2008/02/edl-api-debate-museum-computer-group.html">http://doofercall.blogspot.com/2008/02/edl-api-debate-museum-computer-group.html</a></p>
+        <p class="ReferencesText">Pryce, Nat (2008). Evolving an API: Programmers are People Too. Consulted January 24, 2010,  written February 29, 2008. Available <a href="http://www.natpryce.com/articles/000732.html">http://www.natpryce.com/articles/000732.html</a></p>
+          <p class="ReferencesText">Ridge, Mia (2009). Cosmic Collections – do one thing and do it well. Consulted January 24, 2010, written November 18, 2009 Available at <a href="http://sciencemuseumdiscovery.com/blogs/museumdev/cosmic-collections-do-one-thing-and-do-it-well/">http://sciencemuseumdiscovery.com/blogs/museumdev/cosmic-collections-do-one-thing-and-do-it-well/</a></p>
+<!-- InstanceEndEditable --> </div>
+      
+        			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->Ridge, M., Cosmic Collections: Creating a Big Bang<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2010: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2010. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date  based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2010/papers/<!-- #BeginEditable "URL" -->ridge/ridge.html
+				 <!-- #EndEditable --></p>
+	</div>
+  </div>

@@ -1,0 +1,318 @@
+<div id="main-content">
+          
+                      <div id="breadcrumb">
+              <h2 class="element-invisible">You are here:</h2>
+              <a href="../../mw2011.html">MW2011</a> » <a href="../mini-workshops.html">Mini-Workshops</a> » <a href="../programs/installing_the_collaborative_calendar.html">Installing the Collaborative Calendar</a> »             </div> <!-- /breadcrumb -->
+              
+                      <div id="main-content-header" class="clear-block">
+              <h1 id="page-title">Installing the Collaborative Calendar </h1>                          </div>
+          
+          
+          <div id="content"><div id="article-14720" class="article article-promoted paper-article clear-block">
+
+    
+    <div class="article-detail clear-block">
+  <div class="node-edit-link" id="node-edit-link-14720"><ul class="links"><li class="0 first last active"><a href="installing_the_collaborative_calendar.html" class="active">[View]</a></li>
+</ul>
+</div><div id="intro-paragraph">
+<h2 class="Author">Bill Bostick, Balboa Park Online Collaborative; and Larry Garfield, Palantir, USA</h2>
+<p class="URL"><a href="http://www.bpoc.org/">http://www.bpoc.org</a></p>
+<h3 class="AbstractTitle">Abstract</h3>
+<p class="AbstractText">Like most cultural institution Web sites, the sites from BPOC member institutions have a significant emphasis on events – exhibitions, lectures, classes, tours, performances, etc. Commercial calendar products are often not flexible enough to meet the specific needs of the cultural heritage field, forcing many museums to make do with inadequate calendaring systems at great expense. Balboa Park Online Collaborative has developed a calendar package for the Drupal platform that handles complex date functions with an additional layer for aggregating event content from multiple sites into a central portal.</p>
+<p class="AbstractText">This mini-workshop is aimed at anyone with a Drupal based website with complex calendar needs, and at developers that are interested in seeing an installation with an eye towards recreating this feature set on other open source CMS platforms. Participants in the workshop should expect to learn how standard Drupal handles events and calendaring; how to install the BPOC calendar backend on a standalone Web site; how to construct basic calendar views once the backend calendar is installed; the concepts related to sharing content between Drupal Web sites; and how to install the BPOC calendar in a multi-institutional environment. The workshop will be highly interactive, with conceptual information balanced with practical application via hands installs in a live server environment. Participants require a laptop, ftp software, and a general knowledge of Drupal or a similar CMS.</p>
+<p class="keywords">Keywords: Cultural calendar, museum calendar, calendar API, Drupal calendar</p>
+</div>
+<p></p>
+<div id="body-text">
+<h2>Introduction</h2>
+<p>Balboa Park&#39;s central portal, <a href="http://www.balboapark.org/">http://www.balboapark.org</a>, attracts more than 100,000 visitors each month. The event calendar is the third most visited page of the Web site, after the homepage and list of museums. It&#39;s also one of the most time-intensive because of the dozens of cultural institutions that submit information to Balboa Park Central about their exhibitions, films, performances, lectures, and other special events. On any given day, there are more than fifty events that need to appear on the Balboa Park calendar. The Balboa Park Online Collaborative (BPOC), a project serving twenty cultural institutions in the park, initiated a project to develop an advanced calendar on Drupal, an open source platform, to simplify and streamline the process of inputting calendar events. To create this calendar, BPOC worked with Palantir, a Chicago-based Web development firm with extensive experience in Drupal development.</p>
+<p>This mini-workshop will review the advantages of the new Drupal-based cultural calendar that BPOC and Palantir developed. Following step-by-step, workshop participants will learn how to install the calendar backend on a standalone Web site, how to construct basic calendar views, and how to install the calendar in a multi-institutional environment. will also go over the basic concepts related to sharing content between Drupal Web sites.</p>
+<h2>Calendar solutions</h2>
+<p>In a multi-institutional environment like Balboa Park, there is significant need for a centralized, automated calendar system that streamlines workflows for marketing and publicity staff by simplifying the data entry process and allowing the institutions to both coordinate events with their neighbors and distribute accurate event information to the central online portal, the Balboa Park iPhone application, media outlets, and social networks en masse.</p>
+<h2>Repeating events</h2>
+<p>Most calendar systems have the option of creating repeating events. Drupal&#39;s event and date modules have had this capability for years. The challenge that BPOC encountered was that many museums and performing arts organizations had events that were much more complicated than &#34;every third Wednesday of the month.&#34; For example, one museum may have a film that shows every Tuesday and Thursday at 2pm and 4pm except two Fridays out of the month when it shows at 8pm, and every third Wednesday at 3pm when there is a special discounted show for seniors. Date and time logic becomes even more complex once time zones, date-without-time events, and repeating events are added to the mix. It&#39;s a complicated enough issue that the Drupal date module has not solved it in the two and a half years since an issue was first posted about it.</p>
+<p>To solve this issue, Palantir used the iCal module to generate the appropriate instance nodes along with it, each with a single-value date field representing that specific instance, all of them referring back to the event node. Those nodes can be shown in calendar views, edited individually, rated, signed up for, or commented on – just like other nodes created with Drupal. The calendar that Palantir created provides a single place for editing complex repeating event rules with a separate node for each instance.</p>
+<h2>Pushing content between sites</h2>
+<p>BPOC and Palantir then looked at a second issue: moving content between Web sites. Although each museum within Balboa Park is able to create its own events independently, the main Balboa Park site needs to offer visitors a comprehensive look at all events happening in the park during their stay. The site also provides a central repository to then re-syndicate that information out to newspapers, tour groups, mobile applications (namely, the Balboa Park iPhone app), or anything else to which one can connect a Drupal site.</p>
+<p>Drupal already had the ability to move content between sites using feeds, but there were a number of questions to address. Can you have a feed for potentially hundreds of events? How long would the feed need to be? What happens if an event that is no longer on the feed changes because there are so many events?</p>
+<p>The new cultural calendar incorporates several Drupal modules that enable the pushing of complete event nodes in bulk between Drupal sites in a non-Drupal-specific manner on an inconsistent schedule. It also has built-in support for syndicating attached files with duplicate detection so that the same file isn&#39;t syndicated multiple times. The simple syndication of this content will lessen some of the laborious work of posting text and photos to multiple calendars, as well as allow for event changes to be updated across several calendars at once.</p>
+<h2>Calendar Installation</h2>
+<p>Cognizant that these calendar event issues are not unique to Balboa Park, BPOC&#39;s goal was to develop a cultural calendar that could be shared and adapted in other multi-institutional environments, including state or regional arts assocations, library systems, and university settings. Following the step-by-step instructions, anyone with basic knowledge of Drupal or similar content management systems will be able to install the calendar. The workshop will walk through downloading the necessary modules from the Web site <a href="http://www.drupal.org/">http://www.drupal.org</a> as well as show how to install the modules created for the project and use features to create an out-of-the-box working configuration for a collaborative calendar.</p>
+<h3>Preparation</h3>
+<ol>
+<li>Create a new, empty Drupal Web site, named BPOC. This will represent the test Balboa Park central server, and will have a URL of http://bpoc.example.com/.</li>
+<li>Create a new, empty Drupal Web site, named Taco. This will represent the Web site for the Taco Museum, and will have a URL of http://taco.example.com/.</li>
+</ol>
+<h3>Announcements, step 1: BPOC</h3>
+<ol>
+<li>Install the following modules from Drupal.org:            <ol type="a">
+<li>Views</li>
+<li>CCK</li>
+<li>Features</li>
+<li>Rules</li>
+<li>push_hub</li>
+<li>drupal_queue</li>
+</ol> </li>
+<li>Install the following custom-provided modules:            <ol type="a">
+<li>Views Atom</li>
+</ol> </li>
+<li>Install the following custom-provided features:            <ol type="a">
+<li>balboa_announcement</li>
+<li>balboa_announcement_hub</li>
+</ol> </li>
+<li>Enable the Features module.</li>
+<li>Enable the balboa_announcement_hub feature via the Features admin. They should enable any dependent features and modules as needed.            <ol type="a">
+<li>Note: There is a known bug in Rule 1.2 that will show an error on the Features admin about a missing parameter. That warning is caused by a small recent change in the Features API. It has no adverse side effects on functionality, and has already been fixed in the next version of Rules. For the time being, it can be safely ignored. See: <a href="http://drupal.org/node/814416">http://drupal.org/node/814416</a></li>
+</ol> </li>
+<li>Complete the installation of drupal_queue. This requires running the following command from the webroot of the BPOC install:            <ol type="a">
+<li>$ cp sites/all/modules/drupal_queue/drupal_queue_cron.php .</li>
+<li>And then setup a cron process on the server to hit <a href="http://bpoc.example.com/drupal_queue_cron.php">http://bpoc.example.com/drupal_queue_cron.php</a> periodically. (Every hour or less is recommended in this case.)</li>
+</ol> </li>
+</ol>
+<h3>Announcements, step 2: Taco</h3>
+<ol>
+<li>Install the following modules from Drupal.org:            <ol type="a">
+<li>CCK</li>
+<li>Features</li>
+<li>Feeds</li>
+<li>CTools</li>
+<li>Strongarm</li>
+</ol> </li>
+<li>Install the following custom-provided modules:            <ol type="a">
+<li>Feeds Atom</li>
+</ol> </li>
+<li>Install the following custom provided features:            <ol type="a">
+<li>balboa_announcement</li>
+<li>balboa_announcement_subscriber</li>
+</ol> </li>
+<li>Enable the balboa_announcement_subscriber features via the Features admin. They should enable any dependent features and modules as needed.</li>
+<li>Create a new node of type &#34;Announcement Feed&#34;. For the Feed URL, enter http://bpoc.example.com/announcement-feed</li>
+</ol>
+<h3>Announcements step 3: test it</h3>
+<ol>
+<li>Create a node of type Announcement on the BPOC site.</li>
+<li>Run the Drupal queue module. Normally this will happen periodically on its own via the cron configuration above. It may be forced for testing purposes either by visiting http://bpoc.example.com/drupal_queue_cron.php manually in a browser or running the &#34;drush queue-cron&#34; command (assuming Drush is installed).</li>
+<li>Go to admin/content/node on the Taco site. If everything is configured properly, there should be a new Announcement node there, with identical content to the one on the BPOC site.</li>
+<li>To add additional museums to the network, follow the Taco instructions above (Step 2) for each additional museum site.</li>
+</ol>
+<h3>Events, step 1: BPOC</h3>
+<p>For event handling, the individual museums are the &#34;Hubs&#34;, and the BPOC site subscribes to all of them.</p>
+<ol>
+<li>Install the following modules from Drupal.org:            <ol type="a">
+<li>CCK</li>
+<li>Features</li>
+<li>Feeds</li>
+<li>CTools</li>
+<li>Filefield</li>
+<li>Imagefield</li>
+<li>Date</li>
+<li>Install the following custom-provided modules:</li>
+<li>Feeds Atom</li>
+<li>iCal</li>
+<li>remote_allowed_values</li>
+</ol> </li>
+<li>Install the following custom provided features:            <ol type="a">
+<li>balboa_event_subscriber</li>
+<li>Enable the balboa_event_subscriber features via the Features admin. That should enable any dependent features and modules as needed.</li>
+<li>Go to admin/content/taxonomy and add a new Vocabulary. We will name it Event category. Do not enable it for any content types. Check the checkbox On under &#34;Remote allowed values&#34;, and click Save.</li>
+<li>Add desired terms to the Event category vocabulary. These may be any value. Hierarchy, if specified, will be ignored.</li>
+<li>Add a new Vocabulary called &#34;Event keywords&#34;. Enable it for Event instance nodes. Check the &#34;Tags&#34; checkbox and click Save.</li>
+</ol> </li>
+</ol>
+<h3>Events, step 2: taco</h3>
+<ol>
+<li>Install the following modules from Drupal.org:            <ol type="a">
+<li>Views</li>
+<li>CCK</li>
+<li>Features</li>
+<li>Rules</li>
+<li>push_hub</li>
+<li>drupal_queue</li>
+<li>Filefield</li>
+<li>Imagefield</li>
+<li>Date</li>
+<li>Autoload</li>
+<li>Libraries</li>
+<li>UUID</li>
+<li>Modal Frame</li>
+<li>jQuery update (version 6.x-2.0)</li>
+<li>jQuery UI (version 6.x-1.x with jQuery UI 1.7)</li>
+</ol> </li>
+<li>Install the following custom-provided modules:            <ol type="a">
+<li>Views Atom</li>
+<li>iCal</li>
+<li>remote_allowed_values</li>
+<li>inheritedformatter</li>
+<li>Modalframe Exclude Node</li>
+<li>Automodal (use this version as opposed to the version on drupal.org)</li>
+</ol> </li>
+<li>Install the following custom-provided feature:            <ol type="a">
+<li>balboa_event_hub</li>
+</ol> </li>
+<li>Install the provided iCalCreator library, version 2.6, in sites/all/libraries. The library is available for download at: http://www.kigkonsult.se/downloads/index.php</li>
+<li>Install the provided timepicker library in sites/all/libraries. The library is available for download at: http://milesich.com/timepicker</li>
+<li>Complete the installation of drupal_queue. This requires running the following command from the webroot of the Taco install:            <ol type="a">
+<li>$ cp sites/all/modules/drupal_queue/drupal_queue_cron.php .</li>
+<li>And then setup a cron process on the server to hit http://taco.example.com/drupal_queue_cron.php periodically. (Every hour or less is recommended in this case.)</li>
+</ol> </li>
+<li>Enable the Features module.</li>
+<li>Enable the balboa_event_hub feature via the Features admin. That should enable any dependent features and modules as needed.</li>
+<li>Go to admin/content/node-type/event/fields and edit the &#34;Event category&#34; field. Change the &#34;Remote allowed values source URL&#34; to read http://bpoc.example.com/api/vocabulary-terms/1. Replace &#34;1&#34; with the vid of the &#34;Event category&#34; vocabulary on the BPOC Web site, created above. (If it&#39;s an empty site it will be 1; if there were other Vocabularies already, it will be different.) Once the BPOC site has been set-up for real, the feature can be updated to prepopulate the correct vocabulary.</li>
+<li>Add a new Vocabulary called &#34;Event keywords&#34;. Enable it for Event instance nodes. Check the &#34;Tags&#34; checkbox and click Save. (Note: The name of this vocabulary *must* match the exact name used on the BPOC site.)</li>
+<li>Go to the admin screen for the instance (admin/content/node-type/instance) and, under the heading Exclude Fields From ModalFrame, choose the node form fields to exclude in the pop-up on the Ajaxy widget. Save the form.</li>
+<li>Go to the admin screen for automodal (admin/settings/automodal) and choose &#34;Close form windows on submit.&#34;</li>
+</ol>
+<h3>Events, step 3: set-up subscription</h3>
+<ol>
+<li>On the BPOC Web site, create a new Institution node. Name it &#34;Taco Museum&#34;. For the Feed URL, enter http://taco.example.com/event-feed</li>
+<li>On the BPOC Web site, create a new Institution node. Name it &#34;Taco Museum – Deletion&#34;. For the Feed URL, enter http://taco.example.com/event-deletion</li>
+</ol>
+<h3>Events, step 4: test it</h3>
+<ol>
+<li>Create a new Event node on the Taco site. Populate it as desired. Save it.</li>
+<li>Go to the admin/content/node page. There should now be the new Event node we just created as well as one or more Event instance nodes. View one of the instance nodes. It should display the same information that was entered on the Event, including images.</li>
+<li>Run the Drupal queue module. Normally this will happen periodically on its own via the cron configuration above. It may be forced for testing purposes either by visiting http://taco.example.com/drupal_queue_cron.php manually in a browser or running the &#34;drush queue-cron&#34; command (assuming Drush is installed).</li>
+<li>Go to admin/content/node on the BPOC site. If everything is configured properly, there should be one or more Event instance nodes there. Most fields should be identical to those entered on the event node on the Taco site, save for the addition of an Institution node reference that points to the Taco Museum Institution node.</li>
+<li>To add additional museums to the network, follow Steps 2 and 3 for each additional museum site.</li>
+</ol>
+<h3>Using the ajax widget</h3>
+<p>The Ajax widget provides the interface to build out complex repeating rules.</p>
+<h4><span style="font-weight: normal;">Layout</span></h4>
+<p>The editor is broken into three main visual areas. The top left is where individual dates can be added and updated. The lower left is where complex rules can be edited and updated. And the right column is where existing dates and rules can be edited.</p>
+<p class="caption"><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborative_.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig1.jpg" border="0" alt="Fig 1: Interface  " title="Fig 1: Interface  " width="433" height="403"/></a><span class="caption"><strong>Fig 1: Interface</strong></span></span><strong> </strong></p>
+<h4><span style="font-weight: normal;">Individual dates</span></h4>
+<p>To add an individual date, begin by clicking in the start field and entering a start date and time. When you click in the field, a pop-up will appear, providing a visual way to enter the information. The pop-up has a specific format it generates for the date and time, but the form field can accept any valid date and time string within PHP.</p>
+<p style="font-weight: bold;"><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborativ_0.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig2.jpg" border="0" alt="Fig 2: Start date" title="Fig 2: Start date" width="434" height="405"/></a><span class="caption"><strong>Fig 2: Start date</strong></span></span></p>
+<p>When a start date is entered and end date is filled in defaulting to an hour after the start. This provides an intelligent default for the end.</p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborativ_1.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig3.jpg" border="0" alt="Fig 3: Default end" title="Fig 3: Default end" width="342" height="190"/></a><span class="caption" style="font-weight: bold;"><strong>Fig 3: Default end</strong></span></span></p>
+<p>Once the date is entered, click add to add this date to the list of dates and rules. Note: Any dates chosen are not saved until the node is saved.</p>
+<p><span class="inline inline-center"><span class="caption"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborativ_2.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig4_0.jpg" border="0" alt="Fig 4: Saved event date" title="Fig 4: Saved event date" width="394" height="206"/></a></span><strong><strong>Fig 4: Saved event date</strong></strong></span></p>
+<p>Once add is clicked, the individual date will show up on a table in the editor. At this point, the following options are available:</p>
+<ul>
+<li>Remove: will remove this date and it will disappear from the table.</li>
+<li>The date: clicking the date will bring it up in the in the space where it was originally added for the date to be edited.</li>
+<li>Cancel: This will set the status for this individual date to be cancelled.</li>
+</ul>
+<p>At this point, you&#39;ll notice the edit link is not available. The edit link is available where instances have been generated. Since this has not yet been saved, no instances are available.</p>
+<p>If the node is saved and you go edit it again, you will see that the edit link is available. This is because the instance node has been created.</p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborativ_4.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig5.jpg" border="0" alt="Fig 5: Saved event node" title="Fig 5: Saved event node" width="394" height="211"/></a><span class="caption" style="font-weight: bold;"><strong>Fig 5: Saved event node</strong></span></span></p>
+<p>Clicking the Edit link here will bring up a modal window with the node form for the instance so you can edit the instance</p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborativ_5.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig6.jpg" border="0" alt="Fig 6: Edit form" title="Fig 6: Edit form" width="434" height="516"/></a><span class="caption" style="font-weight: bold;"><strong>Fig 6: Edit form</strong></span></span></p>
+<p>The form fields available on this form are configurable with the ModalFrame Exclude Node module (configuring detail elsewhere in documentation).</p>
+<h4><span style="font-weight: normal;">Rules</span></h4>
+<p>Rules have a more complex form to gather all the information needed to generate rules.</p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborativ_6.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig7.preview.png" border="0" alt="Fig 7: Rules form" title="Fig 7: Rules form" width="428" height="520"/></a><span class="caption" style="font-weight: bold;"><strong>Fig 7: Rules form</strong></span></span></p>
+<p>In addition to the start and end fields from the single date form, a name, repeating pattern, and end are required<em>.</em> When they are filled in, click add.</p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborativ_7.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig8.jpg" border="0" alt="Fig 8: Added instances" title="Fig 8: Added instances" width="312" height="206"/></a><span class="caption" style="font-weight: bold;"><strong>Fig 8: Added instances</strong></span></span></p>
+<p>When a rule is added, there are two sections to the rule. The top contains the name and actions you can do on the rule. Below that is a table of individual dates.</p>
+<p>The actions against the rule are:</p>
+<ul>
+<li>Updating: clicking the title lets you update the rule.</li>
+<li>Removing: clicking remove will remove the rule and its instances from the editor and, on node save, will remove all the instances from Drupal.</li>
+<li>Cancel: clicking cancel will set the cancel state for the rule and its instances. The instances will be updated when the node is saved.</li>
+</ul>
+<p>Note: All of the actions described here are updated in the browser and will take effect when the node is saved.</p>
+<p>Instances have two actions for each of them. An instance can be excluded by clicking the Included link to the left of the instance date.</p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborativ_8.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig9.jpg" border="0" alt="Fig 9: Excluding instances" title="Fig 9: Excluding instances" width="324" height="88"/></a><span class="caption">Fig 9: Excluding instances</span></span></p>
+<p>This will gray out the instance and cause the instance to not be generated. Or, if an instance is generated, it will be deleted.</p>
+<p>The other action is to edit the details of the instance. To access this functionality the node will need to be saved with the rule on it first. Once the rule has been saved, edit links will appear next to the instances.</p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborativ_9.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig11.jpg" border="0" alt="Fig 10: Editing details" title="Fig 10: Editing details" width="162" height="151"/></a><span class="caption">Fig 10: Editing details</span></span></p>
+<p>As with editing the individual dates, when you click edit, a node form pops up in a modal. When you save the changes to that instance, they are live on the instance immediately.</p>
+<h3>Configuring search</h3>
+<h4><span style="font-weight: normal;">Saved searches</span></h4>
+<p>Saved Searches require the core Search module and Views. It will take advantage of the Apache Solr module if it is installed.</p>
+<p>Once you enable the Saved Searches module, you will want to turn on its blocks. Two blocks provide nearly all of the Saved Searches UI:</p>
+<ul>
+<li>&#34;saved searches: save this search form&#34; – a form that lets users save, name, rename, and delete their saved searches, depending on their permissions. This will only be visible on search results pages.</li>
+</ul>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborati_10.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig11_0.jpg" border="0" alt="Fig 11: Saving searches" title="Fig 11: Saving searches" width="162" height="151"/></a><span class="caption">Fig 11: Saving searches</span></span></p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborati_11.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig11_1.jpg" border="0" alt="Fig 12: Renaming searches" title="Fig 12: Renaming searches" width="162" height="151"/></a><span class="caption">Fig 12: Renaming searches</span></span></p>
+<ul>
+<li>&#34;savedsearches_user: Block&#34; – a list of the current user&#39;s saved searches, provided by a default View. This will not show up if a user has no searches saved.</li>
+</ul>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborati_12.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig13.png" border="0" alt="Fig 13: Saved Searches" title="Fig 13: Saved Searches" width="431" height="189"/></a><span class="caption">Fig 13: Saved Searches</span></span></p>
+<p>There is an administration user interface at admin/content/savedsearches where users with the &#39;administer saved searches&#39; permission may edit and delete any saved search. This UI is provided by a default View.</p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborati_13.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig14.preview.png" border="0" alt="Fig 14: Administration UI" title="Fig 14: Administration UI" width="520" height="214"/></a><span class="caption">Fig 14: Administration UI</span></span></p>
+<h4><span style="font-weight: normal;">Configure permissions</span></h4>
+<ul>
+<li>The Saved Searches relies on the &#34;search content&#34; permission to determine whether users are allowed to view saved search pages.</li>
+<li>The create, delete, name, and re-use permissions allow different levels of control when saving searches.                   
+<ul>
+<li>&#39;create&#39; allows users to save searches. If they do not have the &#39;name&#39; permission, users will see a simple &#39;save this search&#39; button, and their searches will be named with short random strings.</li>
+<li>&#39;name&#39; will allow users to use a text input box to name their searches; if they leave it blank, their searches will be named with short random strings.</li>
+<li>&#39;re-use&#39; will allow users to save a search using a name they already own, using a select menu.</li>
+<li>&#39;delete&#39; provides users with a checkbox to delete their saved search.</li>
+</ul>
+</li>
+<li>The &#39;create&#39; and &#39;re-use&#39; forms will only show up on un-saved search results pages. The &#39;name&#39; and &#39;delete&#39; forms will show up on saved search results pages – whether the user arrives at the page via the short link, or via the normal search workflow</li>
+</ul>
+<h4><span style="font-weight: normal;">Apache solr facets</span></h4>
+<p>The Apache Solr module provides some facets by default, including CCK fields, node attributes, and vocabularies. Several of these default facets deal with dates, and provide a nice widget with nested date/time granularity. Facets are also referred to as &#39;filters&#39;, and are listed at admin/settings/apachesolr/enabled-filters.</p>
+<p>Once a filter is enabled, Apache Solr provides a block for it. This block will only be visible when there are search results on the page, and when the facet is not empty for the given search. You may configure facets to be visible on empty searches, so that users may start their search by navigating facets (rather than by entering a search keyword).</p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborati_14.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig15.preview.jpg" border="0" alt="Fig 15: Apache Solr Configuration" title="Fig 15: Apache Solr Configuration" width="406" height="520"/></a><span class="caption">Fig 15: Apache Solr Configuration</span></span></p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborati_15.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig16.jpg" border="0" alt="Fig 16: Apache Solr Browse" title="Fig 16: Apache Solr Browse" width="270" height="298"/></a><span class="caption">Fig 16: Apache Solr Browse</span></span></p>
+<p>The Apache Solr Facet Builder module lets you build custom facets using Views.</p>
+<p>After enabling the Facet Builder module, create a new View.</p>
+<ul>
+<li>Add one or more filters to the View; you do not need to expose the filters, and you do not need to add anything to the View other than filters (no arguments, sorts, etc.)</li>
+<li>You may add a field to hide the standard Views error (&#39;Display &#34;Defaults&#34; uses fields, but there are none defined for it, or all are excluded.&#39;), or you can change the row style to &#39;node&#39; instead of &#39;fields&#39; – this doesn&#39;t affect the facet.</li>
+<li>Once you&#39;ve added one or more filters, add a &#39;Facet&#39; display</li>
+</ul>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborati_16.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig17.jpg" border="0" alt="Fig 17: Facet Display  " title="Fig 17: Facet Display  " width="450" height="208"/></a><span class="caption">Fig 17: Facet Display </span></span></p>
+<ul>
+<li>Add a second &#39;facet&#39; display, with a different set of filters.</li>
+<li>Give these facet displays useful names: each facet display that you add to this View will be a checkbox in the search interface.</li>
+</ul>
+<p>Save the View, and then visit admin/settings/apachesolr/enabled-filters – there will be a new section at the bottom entitled &#34;Apache Solr Facet Builder&#34; with a checkbox for your new View. Check this box, then run cron so that the new facet gets added to the index.</p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborati_17.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig18.jpg" border="0" alt="Fig 18: Apache Solr Facet Builder" title="Fig 18: Apache Solr Facet Builder" width="378" height="364"/></a><span class="caption">Fig 18: Apache Solr Facet Builder</span></span></p>
+<p>If you change the facet View you&#39;ve built, you will need to re-index your content.</p>
+<p><span class="inline inline-center"><a href="../../image/bostick_b_and_l_garfield_installing_the_collaborati_18.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/bostick_fig19.jpg" border="0" alt="Fig 19: Queue Content for Rendering" title="Fig 19: Queue Content for Rendering" width="300" height="207"/></a><span class="caption">Fig 19: Queue Content for Rendering</span></span></p>
+<p>If you&#39;ve enabled blocks for other facets, you will want to visit admin/build/block and enable the block for your new facet as well. The block will be named like &#34;Apache Solr Facet Builder: Filter by [view title] ([view_name]))&#34;</p>
+</div>
+<p> </p>
+<p> </p>
+   <div id="citation">
+      <h4>Cite as:</h4>
+
+      <p class="references">Bostick, B., and L. Garfield, Installing the Collaborative Calendar. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2011: Proceedings</em>. Toronto: Archives &amp; Museum Informatics. Published March 31, 2011. Consulted <script language="JavaScript" type="text/javascript">
+         <!-- <![CDATA[
+      // current date - based on http://rainbow.arch.scriptmania.com/scripts
+      // Array of day names
+      var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+      var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+      var dt = new Date();
+      var y  = dt.getYear();
+
+      // Y2K compliant
+      if (y < 1000) y +=1900;
+
+      document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+                       // ]]> -->
+      </script> http://conference.archimuse.com/mw2011/papers/installing_the_collaborative_calendar</p>
+    </div>
+
+    <div id="copyright">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../../files/images/cc-88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License" width="88" height="31" class="c1"/></a>
+
+      <p>Copyright © 2011 - Archives &amp; Museum Informatics.</p>
+    </div>
+<div class="field nodereference field-paper-program-ref">
+                                <h3 class="label inline">Program Item Reference: </h3>
+          <div class="item inline odd"><a href="../programs/installing_the_collaborative_calendar.html">Installing the Collaborative Calendar</a></div>
+              </div>
+ <!-- /content-field -->
+  </div>
+  
+  <div class="article-meta">
+      <p class="submitted">Posted <em class="time">March 31, 2011 - 11:36am</em> by <em class="author"><a href="../../user/billbostick.html" class="username" title="View Bill&#39;s profile.">Bill Bostick</a></em></p>
+  
+    
+  <ul class="taxonomy"><li><a href="../../conferences/mw/mw2011.html" rel="tag" title="Museums and the Web 2011">MW2011</a></li><li><a href="../../paper_keywords/calendar_api.html" rel="tag" title="">Calendar API</a></li><li><a href="../../paper_keywords/cultural_calendar.html" rel="tag" title="">Cultural calendar</a></li><li><a href="../../paper_keywords/drupal_calendar.html" rel="tag" title="">Drupal calendar</a></li><li><a href="../../paper_keywords/museum_calendar.html" rel="tag" title="">museum calendar</a></li></ul>  </div>
+  
+  
+</div> <!-- /article --></div>
+
+        </div>

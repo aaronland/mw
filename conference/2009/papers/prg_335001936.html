@@ -1,0 +1,802 @@
+<div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+
+		<!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+		    <h2 class="Author"><a href="../../bios/au_440016826.html">Timothy Baldwin</a> and <a href="../../bios/au_445017172.html">Lejoe Thomas Kuriakose</a>, University of
+		      Melbourne, Australia</h2>
+	    <h3 class="AbstractTitle">Abstract</h3>
+		    <p class="AbstractText">In this project, we explored the deployment of RFID-based
+		      technologies to observe visitors’ behaviour in a museum to record what exhibits
+		      they visit and when. This data has tremendous potential to enhance museum
+		      visits through personalizing information via dynamic interfaces, or profiling
+		      the visitor to make recommendations for future activity inside or outside the
+		      museum. The outcomes of the project demonstrate the viability of (passive) RFID
+		      technologies for museum visitor tracking and provide empirical validation of
+		      the near-human tracking accuracy of the system in two different environments. </p>
+		    <p class="keywords">Keywords: tracking, RFID, exhibit engagement,
+		      personalized content delivery, visitor location, evaluation</p>
+		    <h2>1. Introduction</h2>
+		    <p>Automatically tracking the location of objects has been an
+		      area of interest for several years in various fields. While GPS has revolutionized
+		      outdoor location-based services, there is no de facto standard for
+		      high-precision indoor localization. Indoor position-based systems have been
+		      slow to take off for a number of reasons, including high cost, complexity,
+		      administrative difficulties and limited accuracy. GPS-like technologies for
+		      indoor-based location tracking still lack positioning accuracy, so alternative
+		      cost-effective location-based services must be considered. Obvious candidates
+		      in terms of the availability and maturity of the underlying technology are
+		      RFID, Bluetooth and Wireless LAN (Hightower and Borriello, 2001).</p>
+		    <p>Our study is focused on tracking the location of visitors in
+		      a museum environment. We explore the deployment of passive RFID-based
+		      technologies for this purpose, primarily because of the affordability of
+		      passive RF tags and readers. Our underlying motivation in tracking visitors is
+		      to use the information as a basis for learning about patterns of
+		      exhibit/gallery interaction, and ultimately to provide personalized information
+		      to visitors (Bohnert et al., 2008a, Bohnert et al., 2008b). Much of the work on
+		      RFID-based tracking in museum environments has relied on the visitor physically
+		      swiping an RFID tag at predetermined locations in the museum space (see Section
+		      4). This has obvious disadvantages in terms of unobtrusiveness (the physical
+		      act of swiping detracts from the museum experience) and reliability of the data
+		      (there’s no guarantee the visitor will continue to swipe the tag throughout the
+		      museum visit). Our approach makes use of the same RFID technology, but assesses
+		      the feasibility of tracking unobtrusively, without any action on the part of
+		      the visitor. The system described in this paper detects and records a set of
+		      triples of tag ID, reader ID and timestamp, representing that a given visitor
+		      was at a particular reader at the indicated time; the position can be inferred
+		      from the predetermined location of each RFID.</p>
+		    <p>This study is a part of the Kubadji project (<a href="../http://www.kubadji.org/">http://www.kubadji.org</a>), a research
+		      collaboration involving the University of Melbourne, Monash University and
+		      Melbourne Museum. The goal of the project is to develop technologies to
+		      dynamically deliver personalized information to visitors in diverse,
+		      information rich, physical environments, focusing on museums. The contribution
+		      of this research is to explore the viability of unobtrusive tracking
+		      technologies to support the physical deployment of the developed technologies
+		      in a physical space. As part of this, we propose a number of evaluation
+		      methodologies to encourage greater cross-comparison of tracking technologies.</p>
+		    <p>The remainder of this paper is structured as follows. First,
+		      we survey location-sensing techniques for indoor-based location tracking and
+		      their basic technological basis. We then survey relevant work on RFID-based
+		      tracking in museums, before presenting the technical details of our approach,
+		      along with the system architecture and details. Finally, we detail a tracking
+		      experiment where we compare the proposed method with human tracker performance
+		      in a physical tracking setting, and discuss and analyze the results.</p>
+		    <h2>2. Location Sensing Technologies</h2>
+		    <p>There exist three basic techniques for location sensing:
+		      triangulation, scene analysis, and proximity. In this section, we detail the
+		      proximity technique as it is the underlying principle behind RFID-based
+		      systems.</p>
+		    <h3>2.1. Proximity </h3>
+		    <p>Proximity-based location-sensing techniques work by
+		      determining how close an object is to a known location. The object’s presence
+		      is detected in a given field of range. The three general approaches to sensing
+		      proximity are: </p>
+		    <ul>
+		      <li>Detecting physical contact: this is the most basic form of
+		        proximity sensing, and relies on physical contact between an object and a
+		        sensor; examples include touch sensors, pressure sensors and capacitive field
+		        detectors.</li>
+		      <li>Monitoring wireless access points: these monitor a mobile device
+		        when it is within the range of wireless access point.</li>
+		      <li>Observing electronic IDs: scanning devices detect electronic IDs
+		        such as electronic card logs or identification tags (e.g. RFID tags).</li>
+        </ul>
+		    <p>In each case, the position of the mobile object can be
+		      inferred from the predetermined location of the sensing device.</p>
+		    <h3>2.2. Location-sensing system properties</h3>
+		    <p>For any location-sensing system, the following properties
+		      must be considered.</p>
+		    <h4>2.2.1. Accuracy</h4>
+		    <p>To determine the accuracy of a location sensing system, the
+		      error distribution incurred when locating objects must be assessed, along with
+		      relevant dependencies such as the density of infrastructural elements. For our
+		      purposes, we are interested in gauging whether we are able to achieve “sufficient”
+		      levels of accuracy with the proposed location sensing technology, relative to
+		      gold-standard human tracking. Separately, we are engaged in research to
+		      ascertain the impact of loss of tracking accuracy on services relevant to the
+		      aims of the Kubadji project,;namely, personalized content delivery and
+		      recommendation.</p>
+		    <h4>2.2.2. Scalability</h4>
+		    <p>The scalability of a location-sensing system is determined
+		      relative to its coverage per unit of infrastructure, and the number of objects
+		      the system can locate per unit of infrastructure over a given time interval.
+		      Time is an important factor due to the limited bandwidth available in sensing
+		      objects. RFID-based technologies can tolerate a maximum number of
+		      communications before the channel becomes congested. Beyond this point, there
+		      is either an increase in locational latency or a loss in accuracy due to the
+		      system calculating an object’s position less frequently.</p>
+		    <p>Systems can often expand scalability by increasing the
+		      number of infrastructure components. Some of the hurdles to scalability are
+		      infrastructure cost and middleware complexity.</p>
+		    <h4>2.2.3. Recognition</h4>
+		    <p>Recognition is the ability to automatically identify located
+		      objects, e.g. to enable a specific action based on its ID. For example, an
+		      airport luggage handling mechanism needs to route luggage to the correct flight
+		      or baggage claim carousel. </p>
+		    <p>Recognition can be achieved by assigning unique names or
+		      GUIDs to objects. In the case of RFID, RF tags are equipped with a unique tag
+		      identifier. Once an object has been identified by its GUID, the infrastructure
+		      can access a centralized database to look up the name, type or other semantic
+		      information about the object.</p>
+		    <h4>2.2.4. Cost</h4>
+		    <p>Cost can be assessed in several ways:</p>
+		    <p class="MsoListParagraphCxSpFirst">1.<span style="font:7.0pt &#34;Times New Roman&#34;">     </span>Time,
+		      including factors such as installation overhead and system administration
+		      needs.</p>
+		    <p class="MsoListParagraphCxSpMiddle">2.<span style="font:7.0pt &#34;Times New Roman&#34;">     </span>Space,
+		      including the amount of installed infrastructure and the hardware’s size and
+		      form factor.</p>
+		    <p class="MsoListParagraphCxSpLast">3.<span style="font:7.0pt &#34;Times New Roman&#34;">     </span>Capital,
+		      including factors such as the price per mobile unit or infrastructure elements
+		      and the salary of support personnel. </p>
+		    <h2>3. Related work</h2>
+		    <p>This section provides a brief summary of related work in
+		      tracking objects of interest.</p>
+		    <h3>3.1. Detecting visitor movement by differential air pressure sensing</h3>
+		    <p>Pantel et al. (2008) described an approach that detects
+		      gross movement and room transitions by sensing differential air pressure from a
+		      single point in a building. It utilizes existing central heating, ventilation
+		      and air conditioning (HVAC) systems. The building or space as a whole forms a
+		      closed circuit for air circulation, and HVAC provides a centralized airflow
+		      source and therefore a central point for monitoring.</p>
+		    <p>Variation in airflow in a monitored space caused by human
+		      movement, particularly obstruction of doorways, results in static pressure
+		      changes in the HVAC air handler unit. The proposed system detects this type of
+		      pressure variation via sensors mounted on the air filter and calculates exactly
+		      where exactly certain movements are occurring in the monitored space. In
+		      experiments by the authors, the system was shown to be able to classify unique transition
+		      events with up to 75-85% accuracy.</p>
+		    <p>Although it makes use of a central monitoring point to
+		      classify human movement, such an approach cannot be utilized in a museum
+		      environment because the spaces are often large and open plan, complicating the
+		      detection of human movement. In addition, museums are usually not closed spaces
+		      (visitors are constantly entering and exiting the museum), it is questionable
+		      whether the system would scale to large volumes of visitor traffic, and there
+		      is no facility to identify which individual is associated with a given
+		      movement. </p>
+		    <h3>3.2. WLAN-based tracking and information management</h3>
+		    <p>Savidis et al. (2008) proposed the combination of different
+		      location-aware systems to locate an object, based on both explicit 2D
+		      positioning technologies such as WLAN (e.g. the Ekahau system: <a href="../http://www.ekahau.com/">http://www.ekahau.com/</a>) and implicit
+		      2D positioning from sensory modules such as RFID (which provides binary
+		      classification of whether an object is located within a given field) and
+		      infrared (which provides field-based or linear “tripwire” information). The
+		      idea is to utilize any available medium to extract position information
+		      regarding an object of interest and use software to resolve the ambiguities. Notable
+		      aspects of the proposed system are spatial content editing with mixed mode
+		      administration, system-initiated information based on location and user
+		      triggered data exploration - an efficient technique for lending out devices
+		      with minimal delay - and integrated usage of various location-sensing
+		      technologies such as WLAN, GPS and infrared beacons.</p>
+		    <h3>3.3. Recognition of viewing activity using electrooculography</h3>
+		    <p>Bulling et al. (2008) proposed a method for detecting eye
+		      movements of people using wearable electrooculography. The relevance of eye
+		      movements to this research is that we ideally wish to know not where visitors are
+		      physically located, but what is occupying their attention, for which purposes
+		      we need to know what they are looking at. See Section 6.3 for further
+		      discussion of this point.</p>
+		    <p>The approach of Bulling et al. can be used in combination
+		      with RFID to precisely determine what exactly visitors are looking at and where
+		      they are physically positioned. RFID only provides their physical positioning,
+		      of course, and if two exhibits are close to each other, the RFID approach
+		      cannot easily pinpoint which they are nearest to. Additionally, it is entirely
+		      possible that they are located next to one exhibit but looking at a second
+		      exhibit. </p>
+		    <p>The proposed method uses electrooculography as a measurement
+		      technique for recognition of user activity and attention. It consists of sensors
+		      worn on the body and thus can be implemented as a wearable system. In terms of
+		      intrusiveness and cost, however, this method has limited applicability in the
+		      museum domain.</p>
+		    <h2>4. RFID Technology in Museums</h2>
+		    <p>This section describes how RFID-based technology has been
+		      deployed in museums around the world.</p>
+		    <p>eXspot is a customized RFID application which was prototyped
+		      in the Exploratorium in San Francisco, USA (Hsi and Fait, 2005). The system
+		      consists of an RFID reader package mounted on museum exhibits along with a
+		      wireless network connecting these readers to dynamically generated Web pages. The
+		      visitors each carry an RF tag in the form of a card or necklace, based on which
+		      eXspot tracks which exhibits they visited. The exhibit information is later
+		      available on a personalized Web page which each visitor can access via the Internet.
+		      The eXspot RFID readers also make it possible for visitors to trigger digital
+		      cameras to take their pictures. eXpot makes all this possible by having the
+		      reader constantly query its field for the presence of RF tags. When a visitor
+		      carrying an RF tag approaches the vicinity of a reader, the tag is read and its
+		      ID is sent over mote radio to a network base station. Similar to our system, a
+		      database is used to stored triples of time, exhibit ID, and tag ID.</p>
+		    <p>Also at the Exploratorium, Fleck et al. (2002) had visitors
+		      swipe RFID cards to “bookmark” features of the museum to follow up on
+		      post-visit.</p>
+		    <p>The Museum of Natural History in Aarhus, Denmark made use of
+		      RFID technology to provide a visitor learning and interaction tool called
+		      TaggedX. In an interactive exhibition called “Flying”, 50 stuffed bird exhibits
+		      were fitted with RFID chips. Visitors carried PDAs fitted with RFID readers
+		      which actively scanned for RF-tagged exhibits. On detecting an exhibit, the PDA
+		      presented the visitor with quizzes, audio and video relevant to that exhibit.</p>
+		    <p>The Tech Museum of Innovation in San Jose, USA implemented
+		      RFID technologies in one of its exhibitions after experimenting with barcode
+		      readers and paper tags. Visitors were given wristbands embedded with RFIDs that
+		      activate exhibits and trigger interaction with displays. Currently, they issue
+		      RFID-embedded tickets that allow users to bookmark information in interactive
+		      kiosks for post-visit access.</p>
+		    <p>In perhaps the most closely-related research in the museum
+		      domain, Kanda et al. (2007) implemented an active RFID-based system to allow
+		      visitors to the Osaka Science Museum in Osaka, Japan to interact with robot
+		      exhibits. They separately used the collected data to estimate visitor
+		      trajectories and analyze visiting patterns. Compared to this research, active
+		      RFID has the advantage of tags regularly emitting a signal, allowing for more
+		      fine-grained analysis of visitor movements. Its primary disadvantage is cost,
+		      with a single unit costing thousands of dollars. It is thus not scalable to
+		      large numbers of visitors.</p>
+		    <p>In summary, the primary use of RFID technologies in museums
+		      has been to support personalized <i>in situ</i> visitor interaction or to record which exhibits a visitor viewed, for use in
+		      post-visit content delivery. Our research differs in that we use RFID
+		      technologies explicitly for visitor tracking purposes, and evaluate the
+		      accuracy of our proposed method relative to human trackers.</p>
+		    <h2>5. Overview of Our Approach</h2>
+		    <p>This research focuses on the utilization of RFID to
+		      unobtrusively track museum visitors. Our immediate interests in the tracking
+		      data are to: </p>
+		    <ol>
+		      <li>predict a visitor’s future
+		        pathway in the museum, </li>
+		      <li>recommend exhibits of potential interest to the visitor, and </li>
+		      <li>personalize content delivered to those visitors (Bohnert et al.,
+		        2008a, Berkovsky et al., 2008). </li>
+        </ol>
+		    <p>There are no doubt other applications for the data, however,
+		      and the proposed system is compatible with the tracking functionalities of
+		      eXspot and the Tech Museum of Innovation, e.g. In essence, our interest is in
+		      developing a low-cost, scalable system which involves minimal instrumentation of
+		      the museum visitor and no explicit action on part of the visitor.</p>
+		    <p>In the interests of determining the true accuracy of our
+		      tracking system, we put particular focus on comparing the performance of our
+		      system with that of human trackers in museum-like environments, based on two
+		      exhibit engagement “modalities”: simple exhibit proximity, and visitor gaze. To
+		      this end, we propose a series of evaluation metrics for evaluating tracking
+		      accuracy.</p>
+		    <p>Below, we first outline the system architecture of the
+		      RFID-based tracking system, and then describe the tracking software used by the
+		      human trackers.</p>
+		    <h3>5.1. System architecture and implementation</h3>
+		    <p>This section describes the system architecture and
+		      implementation of our RFID-based system. The system architecture consists of a
+		      set of RFID readers in known, fixed locations, and a central server monitoring
+		      the readers and logging visitor activity. When a tag is in the vicinity of a
+		      reader, the server records the timestamp, reader ID, and tag ID of the tag. An
+		      overview of the architecture is shown in Figure 1.</p>
+		    <p class="caption"><img src="baldwin-fig1.png" alt="Figure 1" width="378" height="188"/></p>
+		    <p class="caption">Fig 1: Architecture of our tracking system (the dotted
+		      rectangles represent the range of each RFID reader; the black dot in Area2
+		      represents an RF tag)</p>
+		    <p>The server runs services such as the RFID location tracker
+		      and a tool for storing and visualizing visitor tracks. The RFID location
+		      tracker is implemented in .NET using C# and makes use of Skyetek protocol
+		      Version 3 (STPV3) to communicate with the Skyetek RFID readers. It performs the
+		      function of detecting and reading tags in the vicinity of each reader. It does
+		      this via Skyetek APIs for the .NET (C#) platform. Each reader is located in a
+		      fixed location. When a tag is detected, the tag ID, reader ID, and timestamp
+		      are stored in the tracker database, which also contains exhibit details. The database
+		      used is Microsoft SQL Server 2005. The tags used are passive RF tags, which
+		      have the advantage of being cheap and not requiring battery power to function,
+		      but the disadvantage of needing to be in very close proximity to an RFID reader
+		      in order to be detected. To trace the location of a particular tag which is
+		      associated with a visitor, we developed Location Matrix View, also in the .NET
+		      platform. This provides a location matrix of a given tag, from which it is
+		      possible to infer the sequence of exhibits visited, the time spent at each
+		      exhibit, and so on. Location Matrix View also provides a way to extract a
+		      location matrix in the form of an Excel file.</p>
+		    <p>The RFID readers used in this research are SkyeModule M9 by
+		      Skyetek, a multiprotocol UHF (862-955 Mhz) RFID reader platform. It is possible
+		      to adjust the RF power output of the readers from the server, which determines
+		      the range of the reader.</p>
+		    <p>In our implementation, we connected the readers to the
+		      server via a USB interface. For a large-scale deployment this would obviously
+		      not scale well. It would be possible to overcome this restriction by connecting
+		      multiple RFID readers to a multiplexor, which could in turn be connected by any
+		      one of the host interfaces on the server.</p>
+		    <p>Prior to commencement of live tracking, we implemented the
+		      following optimizations. First, we preconfigured the Skyeware software to
+		      recognize only ISO18000-6B RF tags, as this was the only tag type used in
+		      experiments. This improves performance because the reader is not burdened with
+		      auto-detecting the tag type, and is a valid assumption in a museum environment,
+		      where we have control over what types of tags we make available to visitors.
+		      Second, we set the RF output power of the three SkyModule M9 RFID readers to
+		      27dBm to attain the maximum range of 1m. Third, we used antennas with linear
+		      polarization, which has the advantage of providing good range,but at the
+		      expense of tags needing to be at a specific orientation to the antenna.
+		      Finally, we placed 5 separate tags vertically in a single clear plastic badge
+		      holder, which visitors wore around their neck. The reason for using multiple
+		      tags was to increase the probability of tag detection; by using a neck-worn
+		      badge holder, we were able to ensure that the tags were vertically aligned and
+		      avoid tag rotation.</p>
+		    <h3>5.2. Software for manual tracking</h3>
+		    <p>The human trackers used the GeckoTracker software to
+		      manually track visitors to two mini-galleries (Bohnert and Zukerman, 2009).
+		      GeckoTracker is a cross-platform Java-based client which renders a map of a
+		      physical space, with exhibits realized as clickable regions. The human tracker
+		      tracks a single visitor at a time, and logs each exhibit ‘interaction’ by
+		      clicking on the corresponding region at the start of the interaction, and
+		      clicking that region again on completion of the interaction. Similar to the
+		      RFID-based tracking software, GeckoTracker generates a series of 4-tuples
+		      representing the visitor ID, exhibit ID, timestamp, and click event (on or
+		      off).</p>
+		    <p>The clickable map is rendered from an SVG (scalable vector
+		      graphics) representation of the space, including region-based representation of
+		      each exhibit. We generated the SVG images in Inkscape.</p>
+		    <p>GeckoTracker was run on a Linux-based laptop PC and a
+		      Windows-based tablet PC.</p>
+		    <p class="caption"><img src="baldwin-fig2.png" alt="Figure 2" width="154" height="134"/></p>
+		    <p class="caption"> Fig 2: A screenshot of the GeckoTracker interface, with
+		      exhibits highlighted</p>
+		    <p>Figure 2 is a screenshot of the GeckoTracker interface for
+		      Gallery 1 (see Section 6), with the three exhibits highlighted.</p>
+		    <h2>6. Experiments</h2>
+		    <p>In this section, we present our tracking experiments, in
+		      which we compare the accuracy of the proposed RFID-based tracking system with
+		      two human trackers, each using the GeckoTracker software. </p>
+		    <h3>6.1. Tracking setup </h3>
+		    <p>The experiments were carried out in two mini-galleries, set
+		      up in two independent spaces. We accepted one visitor at a time into a given
+		      mini-gallery, and had the system and each of the human trackers independently
+		      track their movements, generating three independent tracks per visitor, which
+		      formed the basis of our evaluation. Additionally, we explored two different
+		      modalities for exhibit engagement: (1) <i>physical
+		        proximity</i>, based on the assumption that proximity to an exhibit equates
+		      with interest in it; and (2) <i>visitor gaze</i>,
+		      where a visitor is considered to engage with an exhibit for the length of time
+		      they maintain eye contact with it. The two human trackers were asked to
+		      alternate between these two tracking modalities between one visitor and the
+		      next, ensuring that a given modality was used as the basis for tracking throughout
+		      a given visit, and also that the two human trackers based their track on the
+		      same modality for a given visitor. Physical proximity-based tracking is
+		      intended to mirror the operation of the RFID-based tracker, and designed to
+		      directly measure the accuracy of the automatic tracker based on its native
+		      modality. Visitor gaze-based tracking, on the other hand, is intended to be a
+		      more faithful representation of the true interest of the visitor, and is the
+		      actual procedure used by Melbourne Museum when manually assessing exhibit
+		      engagement (e.g. in newly-opened galleries). Clearly, the RFID-based tracker is
+		      unable to return direct readings for the gaze-based modality. Intuitively,
+		      therefore, we would expect the human trackers to have higher agreement with the
+		      RFID-based tracker for the physical proximity modality than the visitor gaze
+		      modality. The question we are asking in empirically evaluating the RFID-based
+		      tracker based on the two separate modalities is what the relative difference is
+		      for the two models of visitor engagement with a given exhibit, or conversely,
+		      whether simple physical proximity is an adequate model of true exhibit interest. </p>
+		    <p class="caption"><img src="baldwin-fig3-1.png" alt="Figure 3-1" width="138" height="118"/><img src="baldwin-fig3-2.png" alt="Figure 3-2" width="138" height="119"/></p>
+		    <p class="caption">(a) Gallery 1 map   
+	        (b) Gallery 2 map</p>
+		    <p class="caption">Fig 3: Maps of the two mini-galleries used in our tracking
+		      experiments<br/> 
+		      (coloured regions indicate exhibit locations)</p>
+		    <p>We conducted our experiments across two mini-galleries:
+		      Gallery 1 and Gallery 2. Each mini-gallery contained (the same) three exhibits,
+		      named Exhibit 1, Exhibit 2 and Exhibit 3, as detailed in Figure 3. The exhibits
+		      were prepared with the intention of mimicking a real museum environment, and
+		      contained information on the three heterogeneous themes of Godzilla monsters,
+		      vegetables and joinery, respectively, in the form of a printed set of
+		      PowerPoint-style slides in each case. The printed slides were mounted on a
+		      self-standing poster board in the same layout across the two mini-galleries. An
+		      RFID reader with single dedicated antenna was mounted at the centre of each of
+		      the exhibits. The reason we prepared only three exhibits was a purely
+		      logistical one: we had access to the hardware for only three readers of the
+		      type described above.</p>
+		    <p>Visitors (all graduate students in the Department of
+		      Computer Science and Software Engineering at the University of Melbourne, not
+		      directly associated with this research) were invited to visit one of the
+		      mini-galleries (only one visit was recorded per visitor). The only instructions
+		      they were given were that they were to act as they would in visiting a gallery
+		      in a museum, including being given the option of carrying a camera with them to
+		      take pictures. They were then asked to place the badge holder containing the RF
+		      tags (see Section 5.1) around their neck, and were allowed to browse through
+		      the exhibits at their own pace in whatever manner they chose.</p>
+		    <p>We first tracked 8 visitors in Gallery 1, before relocating
+		      the exhibits to Gallery 2 and tracking a further 7 (unique) visitors. The
+		      reason we used two separate spaces (with the same set of exhibits) was to
+		      control for the effects of the physical space on visitor behaviour and the
+		      accuracy of the RFID-based tracker. Gallery 1 was selected to be a smaller
+		      space with high reflexivity, possibly impacting on the accuracy of RFID
+		      antennae. Gallery 2 was a much larger, more regularly-shaped space, more like an
+		      open-plan gallery in an actual museum. </p>
+		    <h3>6.2. Evaluation methodology </h3>
+		    <p>On completion of the tracking, we had a total of 3 tracks
+		      (two human and one machine) for each of the 15 visitors. We were unable to
+		      identify a standard evaluation methodology for tracking experiments of this
+		      type, and thus chose to develop our own evaluation metrics. In each case, we evaluate
+		      a given pairing of tracks for a given visitor; namely, the pairing of the two
+		      human trackers, and the pairing of the RFID-based tracker with the “intersection”
+		      of the human trackers. The human pairing is intended to be an upper bound
+		      estimate of the best-possible tracking performance we could expect to achieve,
+		      based on the assumption that humans are “gold standard” trackers. The machine-human
+		      pairing, on the other hand, is intended to provide a relative evaluation of how
+		      close to human performance the machine is able to get. We calculate the ‘intersection’
+		      of the human trackers by computing the time intervals where both trackers have
+		      recorded that the visitor is engaged with a given exhibit. For example,
+		      consider the two triples from human tracker 1 and human tracker 2,
+		      respectively:</p>
+		    <blockquote>
+		      <p>(<i>Exibit1, 00:00:05,
+		        00:00:35</i>) [start time = 5 seconds into visit, end time = 35 seconds into
+		        visit]</p>
+		      <p>(<i>Exibit1, 00:00:15,
+		        00:01:00</i>)</p>
+        </blockquote>
+		    <p>The intersection would be calculated as:</p>
+		    <blockquote>
+		      <p>(<i>Exibit1, 00:00:15,
+	          0:00:35</i>)</p>
+        </blockquote>
+		    <p>as this is the duration where both trackers are in agreement
+		      that the visitor is engaged with the exhibit.</p>
+		    <p>We developed a total of two evaluation metrics, based on
+		      either: (1) the simple <i>sequence of
+		        exhibits</i> in each of the two tracks under consideration (ignoring the time
+		      spent engaging with each exhibit); or (2) the <i>timed sequence of exhibits</i>, where the relative agreement in the
+		      duration (and start and end points) of engagement with a given exhibit is taken
+		      into account. </p>
+		    <h4>6.2.1. Edit Distance </h4>
+		    <p>The first evaluation metric, based on the simple sequence of
+		      exhibits, is <i>edit distance</i> (a.k.a.
+		      Levensthein distance). First, for each tracking mode (i.e. RFID, human tracker
+		      1 or human tracker 2), we generate a list of triples of the form (<i>Exhibit ID</i>, <i>start time, end time</i>) for each visitor (ignoring the time spent at
+		      each exhibit). We then calculate the edit distance between a given pairing of
+		      exhibit sequences; that is, the minimal number of insertion, deletion and substitution
+		      operations required to transform one sequence into the second, first for the
+		      pairing of the two human trackers and then for the intersection of the two
+		      human trackers readings and the RFID based readings. For example, let us
+		      consider the two sequences, <i>E1,E2,E3,E4</i> (i.e. Exhibit 1 followed by Exhibit 2, and so on) and <i>E2,E1,E3,E4,E5</i>. Starting from the first sequence, it is possible to
+		      generate the second by: (1) substituting <i>E2</i> for <i>E1</i> (generating <i>E2,E2,E3,E4</i>), (2) substituting <i>E1</i> for the second <i>E2</i> (generating <i>E2,E1,E3,E4</i>),
+		      and (3) inserting <i>E5</i> at the end of
+		      the sequence (generating <i>E2,E1,E3,E4,E5</i>).
+		      The reader can hopefully confirm that this is the minimum number of basic edit
+		      operations needed to transform the first sequence into the second (and also
+		      that the result is symmetric). As a result, the edit distance between the two
+		      strings is calculated to be 3 (2 substitutions and 1 insertion). In practice,
+		      we use the standard dynamic programming algorithm to calculate edit distance.</p>
+		    <p>Edit distance returns a non-negative integer. The lower this
+		      number, the greater the agreement between the two tracks (noting that identical
+		      tracks will have an edit distance of 0).</p>
+		    <h4>6.2.2. Paired <i>t</i>-test </h4>
+		    <p>The second evaluation metric is based on a two-tailed paired <i>t</i>-test, over a pair of timed
+		      sequences of exhibits. The paired <i>t</i>-test
+		      is a parametric hypothesis test for comparing paired samples; i.e., two sets of
+		      observations over a common sample space. In order to apply it to our tracking
+		      data, we need the two timed sequences to be fully aligned. Assume, for example,
+		      we have the following track for human tracker 1:</p>
+		    <blockquote>
+		      <p><i>(Exhibit
+		        1,0:00:05,0:00:35)</i> [start time = 5 seconds into visit, and end time = 35
+		        seconds into visit]</p>
+		      <p><i>(Exhibit
+		        1,0:00:40,0:00:55)</i></p>
+		      <p><i>(Exhibit
+		        2,0:01:00,0:01:30)</i></p>
+		      <p>and the following track for human tracker 2:</p>
+		      <p><i>(Exhibit 1,0:00:15,0:01:00)</i></p>
+		      <p><i>(Exhibit 2,0:01:05,0:01:40)</i></p>
+        </blockquote>
+		    <p>The two sequences are of different length, and cannot be ‘paired’
+		      cleanly. We resolve this by aligning the two sequences by calculating the
+		      pairings with the highest overlap (essentially overlaying the two sequences
+		      onto a timeline and aligning a given observation to the observation in the
+		      second track with the highest time overlap, resolving ties via a greedy search
+		      mechanism to ensure a single observation is mapped to at most one observation
+		      of non-zero overlap in the second track). In our example above, we would arrive
+		      at the following alignment:</p>
+		    <table>
+              <tbody><tr>
+                <th><p><i>Human tracker 1</i></p></th>
+                <th><p><i>Human tracker 2</i></p></th>
+              </tr>
+              <tr>
+                <td><p><i>(Exhibit 1,0:00:05,0:00:35)</i></p></td>
+                <td><p><i>(Exhibit 1,0:00:15,0:01:00)</i></p></td>
+              </tr>
+              <tr>
+                <td><p><i>(Exhibit 1,0:00:40,0:00:55)</i></p></td>
+                <td><p>– </p></td>
+              </tr>
+              <tr>
+                <td><p><i>(Exhibit 2,0:01:00,0:01:30)</i></p></td>
+                <td><p><i>(Exhibit 2,0:01:05,0:01:40)</i></p></td>
+              </tr>
+            </tbody></table>
+		    <p>We then convert the start/end times for each observation
+		      into durations, and for unpaired observations, insert a zero-duration
+		      observation:</p>
+		    <table>
+              <tbody><tr>
+                <th><p><i>Human tracker 1</i></p></th>
+                <th><p><i>Human tracker 2</i></p></th>
+              </tr>
+              <tr>
+                <td><p><i>(Exhibit 1,0:00:30)</i></p></td>
+                <td><p><i>(Exhibit 1,0:00:45)</i></p></td>
+              </tr>
+              <tr>
+                <td><p><i>(Exhibit 1,0:00:15)</i></p></td>
+                <td><p><i>(Exhibit 1,0:00:00)</i></p></td>
+              </tr>
+              <tr>
+                <td><p><i>(Exhibit 2,0:00:30)</i></p></td>
+                <td><p><i>(Exhibit 2,0:00:35)</i></p></td>
+              </tr>
+            </tbody></table>
+		    <p>We normalize the durations by calculating the arithmetic
+		      mean for each pair of observations, and calculating the relative deviation from
+		      the mean for each observation, by subtracting the mean from the original value
+		      and dividing the result by the mean. This would result in the following
+		      normalized values:</p>
+		    <table>
+              <tbody><tr>
+                <th><p><i>Human tracker 1</i></p></th>
+                <th><p><i>Human tracker 2</i></p></th>
+              </tr>
+              <tr>
+                <td><p><i>(Exhibit 1,-0.20)</i></p></td>
+                <td><p><i>(Exhibit 1,0.20)</i></p></td>
+              </tr>
+              <tr>
+                <td><p><i>(Exhibit 1,1.00)</i></p></td>
+                <td><p><i>(Exhibit 1,-1.00)</i></p></td>
+              </tr>
+              <tr>
+                <td><p><i>(Exhibit 2,-0.08)</i></p></td>
+                <td><p><i>(Exhibit 2,0.08)</i></p></td>
+              </tr>
+            </tbody></table>
+		    <p> Finally, we perform a two-tailed paired <i>t</i>-test over the two arrays of normalized
+		      values, and return the <i>t</i> value. For
+		      the detailed mathematics, we refer the reader to a statistics textbook. In our
+		      example, the final <i>t</i> value is 0.59.
+		      Similarly to edit distance, the higher the <i>t</i> value, the greater the difference between the two tracks (but here, two
+		      identical tracks will produce a divide by 0 error, which we can interpret as 0
+		      for the sake of stability). </p>
+		    <h3>6.3. Results and analysis</h3>
+		    <p>We present the results of our tracking experiment for
+		      Gallery 1 and Gallery 2 in Tables 1 and 2, respectively, based on our two evaluation
+		      metrics, separating out the two tracking modalities (gaze and distance).</p>
+              <table>
+                <tbody><tr>
+                  <th> </th>
+                  <th> </th>
+                  <th><p class="TableText">Edit distance</p></th>
+                  <th><p class="TableText">Paired <i>t</i>-test</p></th>
+                </tr>
+                <tr>
+                  <td rowspan="2"><p class="TableText">Distance</p></td>
+                  <td><p class="TableText">HT1 vs. HT2</p></td>
+                  <td><p class="TableText">0.5</p></td>
+                  <td><p class="TableText">0.41</p></td>
+                </tr>
+                <tr>
+                  <td><p class="TableText">HT vs. RFID</p></td>
+                  <td><p class="TableText">0.75</p></td>
+                  <td><p class="TableText">0.71</p></td>
+                </tr>
+                <tr>
+                  <td rowspan="2"><p class="TableText">Gaze</p></td>
+                  <td><p class="TableText">HT1 vs. HT2</p></td>
+                  <td><p class="TableText">0.75</p></td>
+                  <td><p class="TableText">0.43</p></td>
+                </tr>
+                <tr>
+                  <td><p class="TableText">HT vs. RFID</p></td>
+                  <td><p class="TableText">1</p></td>
+                  <td><p class="TableText">0.76</p></td>
+                </tr>
+              </tbody></table>
+		    <p align="left" class="captionTable">Table 1 </p>
+		    <p><b>Table 1</b>: For
+		      Gallery 1<b>, </b>the average edit distance
+		      and <i>t</i> value (based on the paired <i>t</i>-test) for human tracker 1 vs. human
+		      tracker 2 (HT1 vs. HT2), and human tracker intersection vs. RFID-based readings
+		      (HT vs. RFID), for the gaze and distance tracking modalities</p>
+              <table>
+                <tbody><tr>
+                  <th> </th>
+                  <th> </th>
+                  <th><p class="TableText">Edit distance</p></th>
+                  <th><p class="TableText">Paired <i>t</i>-test</p></th>
+                </tr>
+                <tr>
+                  <td rowspan="2"><p class="TableText">Distance</p></td>
+                  <td><p class="TableText">HT1 vs. HT2</p></td>
+                  <td><p class="TableText">1.25</p></td>
+                  <td><p class="TableText">0.17</p></td>
+                </tr>
+                <tr>
+                  <td><p class="TableText">HT vs. RFID</p></td>
+                  <td><p class="TableText">2.25</p></td>
+                  <td><p class="TableText">0.36</p></td>
+                </tr>
+                <tr>
+                  <td rowspan="2"><p class="TableText">Gaze</p></td>
+                  <td><p class="TableText">HT1 vs. HT2</p></td>
+                  <td><p class="TableText">1.25</p></td>
+                  <td><p class="TableText">0.30</p></td>
+                </tr>
+                <tr>
+                  <td><p class="TableText">HT vs. RFID</p></td>
+                  <td><p class="TableText">1.5</p></td>
+                  <td><p class="TableText">0.37</p></td>
+                </tr>
+        </tbody></table>
+		    <p class="captionTable">Table 2</p>
+		    <p><b>Table 2: </b>For
+		      Gallery 2<b>, </b>the average edit distance
+		      and <i>t</i> value (based on the paired <i>t</i>-test) for human tracker 1 vs. human tracker
+		      2 (HT1 vs. HT2), and human tracker intersection vs. RFID-based readings (HT vs.
+		      RFID), for the gaze and distance tracking modalities</p>
+		    <p>First, we observe that the RFID-based tracker always
+		      performs worse than human performance (i.e. the human trackers agree with each
+		      other to a greater degree than they agree with the RFID-based tracker), a
+		      predictable trend given that humans provide the gold-standard for the task.
+		      More importantly, the relative agreement with the human trackers for the
+		      RFID-based tracker is almost unchanged between the distance and gaze
+		      modalities. This leads to the surprising conclusion that the RFID-based tracker
+		      is equally capable of emulating proximity-based tracking as it is gaze-based
+		      tracking, which is a very promising result for the proposed technology. Recall
+		      also that the RFID-based tracker is a proximity-based technology, making it
+		      doubly surprising that it should work so well. Returning to our research
+		      question in Section 6.1, it would appear that proximity is a relatively good
+		      proxy for the gaze modality, and that proximity-based technologies offer a
+		      cheap means of gaze-based tracking. Comparing our human-human upper bound
+		      performance between distance- and gaze-based tracking, we see relatively little
+		      difference for Gallery 1 but a larger difference in terms of the <i>t</i> value for Gallery 2. In fact, for
+		      Gallery 2, the <i>t</i>-test suggests that
+		      there is very little separating human and machine performance. A primary cause
+		      of this result is one particularly “excitable” visitor who continually looked
+		      back and forth between exhibits and the trackers, and attempted to engage the
+		      trackers in conversation on the objectives of the research and what they were
+		      doing. This particular visit was tracked based on gaze, and the continual
+		      changes in gaze and approaches from the visitor led to markedly lower agreement
+		      for this one visitor. We included this in our results, but in practice this is
+		      somewhat of an anomaly and not indicative of what we would expect to observe in
+		      a real-world museum.</p>
+		    <p>Comparing the results for Gallery 1 and Gallery 2, the edit
+		      distance was appreciably higher in Gallery 2, and conversely, the <i>t</i> value was appreciably higher in
+		      Gallery 1. The reason for the relatively low edit distance in Gallery 1 was the
+		      restricted space and particular layout of the exhibits, which tended to cause
+		      the visitors to visit the exhibits in the same order, and never return to an
+		      exhibit they had already visited. Overall tracks were thus shorter, meaning
+		      that the mean edit distance value was lower. In Gallery 2, the open plan meant
+		      that there was more variation in the path followed, and more revisiting of
+		      exhibits by visitors. The longer tracks thus led to higher edit distances. The
+		      reason for the <i>t</i> value dropping
+		      appears to relate to the trackers becoming more familiar with the tracking
+		      methodology and software, and more precise in their start and end times for
+		      exhibit engagement. While we predicted that the higher density of reflexive
+		      surfaces in Gallery 1 could lead to a drop in performance, this was not evident
+		      in our RFID readings.</p>
+		    <p>The primary cause of errors for the RFID-based tracker was
+		      false negatives; i.e. the tracker failing to sense a visitor when s/he was in
+		      the proximity of a given exhibit. In particular, there were no readings for one
+		      visitor, probably as a result of their body blocking the UHF signals. In our
+		      experimental setting, we deliberately chose not to provide any explicit
+		      feedback to the user on whether they were being sensed or not. In fact, there
+		      was no direction to the visitors as to the purpose of the badge holder. In an
+		      actual museum setting where the tracking is tied to a service, it would be more
+		      pertinent to provide real-time feedback to the user to ensure they were tracked
+		      successfully and as a result got the maximum benefit from the service. We
+		      expect this would avoid pathologically bad cases such as this. What it does
+		      point to is the fact that while humans are not 100% consistent (as seen in the
+		      fact that we did not have 0 edit distance and <i>t</i> values for either gallery), they are at least consistent in the
+		      relative level of noise in their observations across visitors. That is, we did
+		      not observe any instances where the level of agreement between the human
+		      trackers was appreciably higher for one particular visitor or one of the two
+		      mini-galleries (other than the space-related effect described above). The
+		      RFID-based tracker, on the other hand, worked well overall, but had poor worst-case
+		      performance.</p>
+		    <p>A secondary cause of the results for the RFID-based tracker
+		      being artificially bad was momentary drop out in the UHF signal when a visitor
+		      remained in front of a given exhibit, meaning that two separate instances of exhibit
+		      were recorded. Under both our evaluation metrics, this leads to a penalty in
+		      the final edit distance or <i>t</i> value.
+		      While we do not present the results there, we experimented with smoothing
+		      methods (based on a sliding window approach) to reduce such noise in the data,
+		      and achieved very slight improvements in our results.</p>
+		    <h2>7. Conclusions and Future Work</h2>
+		    <p>In this paper, we propose a tracking architecture based on
+		      RFID technology, targeted particularly at museum spaces. We deployed the
+		      proposed system in a mini-gallery and used it to track visitors relative to
+		      exhibits. To evaluate the tracking accuracy of the system, we carried out a
+		      direct comparison with human trackers, based on two evaluation metrics and two
+		      separate tracking modalities (distance and gaze). Our results indicate that the
+		      RFID-based tracker is surprisingly accurate, and equally capable of emulating
+		      distance- and gaze-based tracking.</p>
+		    <p>Although the results were promising, they also showed that
+		      RFID is susceptible to environmental interference and suffers from a complete
+		      loss of tracking output, for instance, when a tag is obstructed. Further
+		      research is required to determine the level of user awareness required to
+		      minimize such effects. We are also interested in testing the scalability of the
+		      proposed methodology, with more exhibits, and more importantly, more visitors
+		      at a time. Additionally, we hope to carry out more systematic exploration of
+		      the effect of the physical space (e.g. reflective surfaces, restricted spaces,
+		      and physical obstructions) on tracking accuracy.</p>
+		    <h3>Acknowledgements</h3>
+		    <p class="AcknowedgementsText">We would like to acknowledge the efforts of the
+		      following individuals: Karl Grieser in curating the exhibits used in this
+		      research; Fabian Bohnert for providing considerable technical assistance with
+		      GeckoTracker and input on the evaluation; Lars Kulik, Egemen Tanin and members
+		      of the SUM Lab for various technical discussions and prods in the right
+		      direction; members of the Department of Computer Science and Software
+		      Engineering for being willing “guinea pig” visitors; and Carolyn Meehan for her
+		      support and domain expertise throughout.</p>
+		    <h2>References</h2>
+		    <p class="ReferencesText">Berkovsky, S., T. Baldwin and I. Zukerman (2008) .Aspect-Based
+		      Personalized Text Summarization. In <i>Proceedings
+		        of the 5th International Conference on Adaptive Hypermedia and Adaptive
+		        Web-Based Systems</i>, Hanover, Germany, pp. 267–270.</p>
+		    <p class="ReferencesText">Bohnert, F. and I. Zukerman (2009). A
+		      Computer-Supported Methodology for Recording and Visualising Visitor Behaviour
+		      in Physical Museums. In J. Trant and D. Bearman (eds.). <i>Museums and the Web 2009, Proceedings.</i> Indianapolis, USA. <a href="../http://www.archimuse.com/mw2009/papers/bohnert/bohnert.html">http://www.archimuse.com/mw2009/papers/bohnert/bohnert.html</a></p>
+		    <p class="ReferencesText">Bohnert, F., I. Zukerman, S. Berkovsky, T. Baldwin and
+		      E. Sonenberg (2008a). Using Collaborative Models to Adaptively Predict Visitor.
+		      In <i>Proceedings of the 5th International
+		        Conference on Adaptive Hypermedia and Adaptive Web-Based Systems</i>. Hanover,
+		      Germany, pp. 42–51.</p>
+		    <p class="ReferencesText">Bohnert, F., I. Zukerman, S. Berkovsky, T. Baldwin and
+		      L. Sonenberg (2008b). Using Interest and Transition Models to Predict Visitor
+		      Locations in Museums. <i>AI Communications</i>,
+		      21(2-3), pp. 195–202.</p>
+		    <p class="ReferencesText">Bulling, A., J.A. Ward, H. Gellersen and G. Tröster
+		      (2008). Robust Recognition of Reading Activity in Transit using Wearable
+		      Electrooculography. In <i>Proceedings of
+		        Pervasive 2008</i>. Sydney, Australia, pp. 19–37.</p>
+		    <p class="ReferencesText">Fleck, M., M. Frid, T. Kindberg, E. O’Brien-Strain, R.
+		      Rajani and M. Spasojevic (2002). Rememberer: A Tool for Capturing Museum Visits.
+		      In <i>Proceedings of UbiComp 2002</i>.
+		      Goteborg, Sweden, pp. 48–55.</p>
+		    <p class="ReferencesText">Hightower, J. and G. Borriello (2001). A Survey and
+		      Taxonomy of Location Systems for Ubiquitous Computing. University of
+		      Washington, Department of Computer Science and Engineering, Seattle, USA.</p>
+		    <p class="ReferencesText">Hsi, S. and H. Fait (2005). “RFID Enhances Visitors’
+		      Museum Experience at the Exploratorium,”.<i>Communications
+		        of the ACM, </i>48(9<i>)</i>, pp. 60–65.</p>
+		    <p class="ReferencesText">Kanda, T., M. Shiomi, L. Perrin, T. Nomura, H.
+		      Ishiguro, and N. Hagita (2007). “Analysis of People Trajectories with
+		      Ubiquitous Sensors in a Science Museum”. In Proceedings of the 2007 IEEE International
+		      Conference on Robotics and Automation (ICRA2007). Rome, Italy, pp. 4846–4853.</p>
+		    <p class="ReferencesText">Patel, S.N., M.S. Reynolds and G.D. Abowd (2008). “Detecting
+		      Human Movement by Differential Air Pressure Sensing in HVAC System Ductwork: An
+		      Exploration in Infrastructure Mediated Sensing”. In <i>Proceedings of Pervasive 2008</i>. Sydney, Australia, pp. 1–18.</p>
+		    <p class="ReferencesText">Savidis, A., M. Zidianakis, N. Kazepis, S. Dubulakis,
+		      D. Gramenos, and C. Stephanidis (2008). “An Integrated Platform for the
+		      Management of Mobile Location-aware Information Systems”. In <i>Proceedings of Pervasive 2008</i>. Sydney,
+		      Australia, pp. 128–145.</p>
+      <!-- InstanceEndEditable --> </div>
+  			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Baldwin, T. and L.T. Kuriakose, Cheap, Accurate RFID Tracking of Museum Visitors for Personalized Content Delivery<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2009: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2009/papers/<!-- #BeginEditable "URL" -->baldwin/baldwin.html
+				 <!-- #EndEditable --></p>
+	</div>
+</div>

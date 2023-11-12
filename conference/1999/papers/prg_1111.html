@@ -1,0 +1,992 @@
+<html><!-- Mirrored from www.museumsandtheweb.com/mw99/papers/kanter/kanter.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 19:32:09 GMT --><head>
+
+        <title>Archives &amp; Museum Informatics: MW99 - Papers</title>
+
+        <script language="JavaScript">
+
+
+
+<!--
+
+
+
+// Detect if browser is Netscape 3 + or IE 4 +.
+
+bName = navigator.appName;
+
+bVer = parseInt(navigator.appVersion);
+
+    if ((bName == "Netscape" && bVer >= 3) || 
+
+        (bName == "Microsoft Internet Explorer" && bVer >= 4)) br = "n3"; 
+
+    else br = "n2";
+
+
+
+// Create image objects, preload all active and inactive images.
+
+    if (br== "n3") { 
+
+     
+
+    img2on = new Image();
+
+    img2on.src = "../../nav/mw99_nav_registeron.gif";
+
+    img3on = new Image();
+
+    img3on.src = "../../nav/mw99_nav_workshopson.gif";
+
+    img4on = new Image();
+
+    img4on.src = "../../nav/mw99_nav_demonstrationson.gif";
+
+    img5on = new Image();
+
+    img5on.src = "../../nav/mw99_nav_sessionson.gif";
+
+    img6on = new Image();
+
+    img6on.src = "../../nav/mw99_nav_speakerson.gif";
+
+    img7on = new Image();
+
+    img7on.src = "../../nav/mw99_nav_exhibiton.gif";
+
+    img8on = new Image();
+
+    img8on.src = "../../nav/mw99_nav_sponsoron.gif";
+
+    img9on = new Image();
+
+    img9on.src = "../../nav/mw99_nav_beston.gif";
+
+    img10on = new Image();
+
+    img10on.src = "../../nav/mw99_nav_eventson.gif";
+
+    img11on = new Image();
+
+    img11on.src = "../../nav/mw99_nav_keydateson.gif";
+
+        img12on = new Image();
+
+    img12on.src = "../../nav/mw99_nav_neworleanson.gif";
+
+
+
+     
+
+        img2off = new Image();
+
+    img2off.src = "../../nav/mw99_nav_registeroff.gif";
+
+    img3off = new Image();
+
+    img3off.src = "../../nav/mw99_nav_workshopsoff.gif";
+
+    img4off = new Image();
+
+    img4off.src = "../../nav/mw99_nav_demonstrationsoff.gif";
+
+    img5off = new Image();
+
+    img5off.src = "../../nav/mw99_nav_sessionsoff.gif";
+
+    img6off = new Image();
+
+    img6off.src = "../../nav/mw99_nav_speakersoff.gif";
+
+    img7off = new Image();
+
+    img7off.src = "../../nav/mw99_nav_exhibitoff.gif";
+
+    img8off = new Image();
+
+    img8off.src = "../../nav/mw99_nav_sponsoroff.gif";
+
+    img9off = new Image();
+
+    img9off.src = "../../nav/mw99_nav_bestoff.gif";
+
+    img10off = new Image();
+
+    img10off.src = "../../nav/mw99_nav_eventsoff.gif";
+
+    img11off = new Image();
+
+    img11off.src = "../../nav/mw99_nav_keydatesoff.gif";
+
+    img12off = new Image();
+
+    img12off.src = "../../nav/mw99_nav_neworleansoff.gif";
+
+    }
+
+
+
+// Function to "activate" images.
+
+function imgAct(imgName) {
+
+    if (br == "n3") {
+
+    document[imgName].src = eval(imgName + "on.src");
+
+    }
+
+}
+
+
+
+// Function to "deactivate" images.
+
+function imgInact(imgName) {
+
+    if (br == "n3") {
+
+    document[imgName].src = eval(imgName + "off.src");
+
+    }
+
+}
+
+
+
+// -->
+
+
+
+</script>
+
+</head>
+
+
+
+
+
+
+
+<body bgcolor="#FFFFFF" background="../../../conferences/conferences_bg.html">
+
+<table border="0" cellpadding="5">
+
+
+
+<tbody><tr>
+
+<td valign="TOP" width="135">
+
+
+
+
+
+<a href="../../index.html"><center><img src="../../mw99.gif" width="112" height="155" alt="Museums and the Web 1999" border="0"/></center></a><p>
+
+
+
+
+
+
+
+<a href="../../workshops/index.html" onmouseover="imgAct(&#39;img3&#39;)" onmouseout="imgInact(&#39;img3&#39;)" target="_top">
+
+<img name="img3" src="../../nav/mw99_nav_workshopsoff.gif" width="125" height="15" border="0" alt="Workshops"/></a><br/>
+
+
+
+<a href="../../sessions/index.html" onmouseover="imgAct(&#39;img5&#39;)" onmouseout="imgInact(&#39;img5&#39;)" target="_top">
+
+<img name="img5" src="../../nav/mw99_nav_sessionsoff.gif" width="125" height="15" border="0" alt="Sessions"/></a><br/>
+
+
+
+<a href="../../speakers/index.html" onmouseover="imgAct(&#39;img6&#39;)" onmouseout="imgInact(&#39;img6&#39;)" target="_top">
+
+<img name="img6" src="../../nav/mw99_nav_speakersoff.gif" width="125" height="15" border="0" alt="Speakers"/></a><br/>
+
+
+
+<a href="../../demos/index.html" onmouseover="imgAct(&#39;img4&#39;)" onmouseout="imgInact(&#39;img4&#39;)" target="_top">
+
+<img name="img4" src="../../nav/mw99_nav_demonstrationsoff.gif" width="125" height="15" border="0" alt="Demonstrations"/></a><br/>
+
+
+
+<a href="../../exhibit/index.html" onmouseover="imgAct(&#39;img7&#39;)" onmouseout="imgInact(&#39;img7&#39;)" target="_top">
+
+<img name="img7" src="../../nav/mw99_nav_exhibitoff.gif" width="125" height="15" border="0" alt="Exhibit"/></a><br/>
+
+
+
+
+
+
+
+<a href="../../events/index.html" onmouseover="imgAct(&#39;img10&#39;)" onmouseout="imgInact(&#39;img10&#39;)" target="_top">
+
+<img name="img10" src="../../nav/mw99_nav_eventsoff.gif" width="125" height="15" border="0" alt="Events"/></a><br/>
+
+
+
+<a href="../../best/index.html" onmouseover="imgAct(&#39;img9&#39;)" onmouseout="imgInact(&#39;img9&#39;)" target="_top">
+
+<img name="img9" src="../../nav/mw99_nav_bestoff.gif" width="125" height="15" border="0" alt="Best of the Web"/></a><br/>
+
+
+
+
+
+
+
+<br/> <br/>
+
+
+
+<a href="http://www.archimuse.com/"><img src="../../../nav/nav_ami.html" width="135" height="25" alt="Home" border="0"/></a><br/>
+
+
+
+<font size="-2">Archives &amp; Museum Informatics<br/>
+
+
+
+
+
+2008 Murray Ave.,<br/>
+
+Suite D<br/>
+
+Pittsburgh, PA<br/>
+
+15217 USA</font></p><p><font size="-2">
+
+</font></p><p><font size="-2">
+
+<a href="../../../mw98/index.html">info@museumsandtheweb.com</a><br/>
+
+<a href="http://www.archimuse.com/">www.archimuse.com</a></font></p><p>
+
+</p><p>
+
+<font size="-2">Join our <a href="../../../index.html">Mailing List</a>.</font></p><p>
+
+<font size="-2">
+Published: March 1999.<br/></font>
+
+<script language="JavaScript">
+
+<!--
+
+document.write("<FONT SIZE='-2'>"+"Updated:&nbsp;"+document.lastModified);
+
+// -->
+
+</script>
+</p></td>
+
+
+
+<td width="450" valign="TOP">
+
+<img src="../papers.gif" width="325" height="66" alt="Papers" border="0"/><p>
+
+
+
+</p><h3>Live Web Broadcasting</h3>
+
+
+
+<b><a href="../../bios/au_2916.html">Norbert Kanter</a></b>, Kunst und Ausstellungshalle der Bundesrepublik Deutschland, Germany<p>
+
+
+
+
+
+</p><h3>Introduction</h3>
+
+
+
+&#34;The programme of the Kunst- und Ausstellungshalle is based on a broad concept of culture which alongside art and cultural history also includes the fields of science and technology. The institution has the task of presenting intellectual and cultural developments of national and international significance in visual form and promoting dialogue between leading figures from the fields of art, culture and intellectual life, as well as from the field of politics.&#34;<p>
+
+
+
+</p><center><img src="kanter.fig1.jpg" width="400" height="298" alt="The Kunst- und Ausstellungshalle der Bundesrepublik Deutschland" border="0"/><p>
+
+
+
+<table><tbody><tr><td><font size="-1"><i>Fig.1</i>, The Kunst- und Ausstellungshalle der Bundesrepublik Deutschland.</font></td></tr></tbody></table></p></center>
+
+<p>
+
+
+
+When the Kunst- und Ausstellungshalle was founded in 1989, as can already be seen in the quotation from the Memorandum of Association, the possibilities and fields of activity were broadly defined. Since the opening of the exhibition hall in 1992, exhibitions 70, 71 and 72 are presently on display in Bonn. Treasures from the time of the High Renaissance from the Vatican Museums in Rome are on display, as well as the monograph exhibition &#34;Lob den anderen&#34; on the work of the French painter André Raffray and selected works from the graphic arts collection of the German Bundestag (<a href="http://www.kah-bonn.de/a/ae.htm">http://www.kah-bonn.de/a/ae.htm</a>).</p><p>
+
+
+
+The breadth of the spectrum of exhibitions produced is matched by the variety of the side events arranged to tie in with the exhibitions and events, which are staged in the premises in and around the Kunsthalle. One example was the idea of showing a film retrospective on the major Louis Buñuel exhibition in 1994 in the Forum, a multi-purpose event venue in the exhibition hall, while the exhibition was running, whilst at the same time a whole host of the most varied events is organised, quite separate from the exhibition programme.</p><p>
+
+
+
+</p><center><img src="kanter.fig2.jpg" width="400" height="289" alt="The Forum" border="0"/><p>
+
+
+
+<font size="-1"><i>Fig. 2</i>, The Forum.</font></p></center>
+
+<p>
+
+
+
+Simply in order to underline the variety of these events, I shall mention just some representative examples: a several-part series of international conferences on the &#34;five senses&#34; was organised from 1993 to 1997, the European Film Music Biennial will be staged in the Kunsthalle this year for the second time (<a href="http://www.kah-bonn.de/i/forume.htm">http://www.kah-bonn.de/i/forume.htm</a>), cooperation projects with the opera and theatre in Bonn has led to numerous productions and premières in the Forum of the exhibition hall - thus, all in all, the Kunsthalle has developed into a &#34;cultural centre&#34; over the past few years. The Kunsthalle&#39;s main activity is and remains exhibition work, however over and above this, it has become a place for every kind of fine and performing art  and culture - not to mention the more than 300 events put on by outside organisers every year in premises rented from the Kunsthalle.</p><p> 
+
+
+
+</p></td>
+
+</tr>
+
+</tbody></table>
+
+
+
+<table border="0" cellpadding="5">
+
+
+
+<tbody><tr>
+
+<td valign="TOP" width="135"> 
+
+</td>
+
+
+
+<td width="450" valign="TOP">
+
+
+
+<h3>Basic requirements: Internet, TV studio</h3>
+
+
+
+<center>
+
+
+
+<table width="100%">
+
+<tbody><tr>
+
+	<td><img src="kanter.fig3.gif" width="150" height="165" alt="German homepage" border="0"/></td>
+
+	<td><img src="kanter.fig4.gif" width="150" height="165" alt="English homepage" border="0"/></td>
+
+</tr>
+
+<tr>
+
+	<td><font size="-1"><i>Fig. 3</i>, German homepage</font></td>
+
+	<td><font size="-1"><i>Fig. 4</i>, English homepage</font></td>
+
+</tr>
+
+</tbody></table>
+
+
+
+</center>
+
+<p>
+
+
+
+All these activities have also been mirrored on the Kunsthalle Website since 1996 (<a href="http://www.kah-bonn.de/">http://www.kah-bonn.de</a>). This is where, over the course of the years, a comprehensive archive of well over 1000 pages and 2500 images has been built up, now covering almost 30 exhibitions and countless events. When the Kunsthalle first went online, a mere 20 German and English pages were produced with some images from the exhibition. Since then the use of the medium of the Internet has gradually spread to all areas of multimedia. Nowadays, besides detailed information on every exhibition in the form of texts and images, you will also find videos from the exhibition galleries (e.g. <a href="http://www.kah-bonn.de/1/24/1e.htm">http://www.kah-bonn.de/1/24/1e.htm</a>), 360 degree panoramic views (QuickTime VR, e.g. <a href="http://www.kah-bonn.de/1/25/1e.htm">http://www.kah-bonn.de/1/25/1e.htm</a>) and digitised versions of the audio guided tours (e.g. <a href="http://www.kah-bonn.de/1/20/move.htm">http://www.kah-bonn.de/1/20/move.htm</a>).</p><p>
+
+
+
+In this way the Kunsthalle is trying to transport its activities and the results of its projects into the outside world via the medium of the Internet. The possibilities used thus extend far beyond those of traditional media such as the exhibition catalogue, folders or teaching materials, and also naturally complement the institution&#39;s promotional activities as part of its press and media relations work.</p><p> 
+
+
+
+Another &#34;reasonable&#34; requirement for carrying out the projects described below was fulfilled from within the structure of the Kunst- und Ausstellungshalle. The Kunsthalle is one of the few museums/exhibition halls which have a department for television and video productions with its own studio.</p><p>
+
+
+
+</p><center><img src="kanter.fig5.jpg" width="300" height="225" alt="Kunsthalle TV studio" border="0"/><p>
+
+
+
+<font size="-1"><i>Fig. 5</i>, Kunsthalle TV studio.</font></p></center>
+
+<p>
+
+
+
+  High-quality films on important exhibitions are regularly produced in-house, and the many events in the Kunsthalle are documented by this department. These productions are in turn made available in digital form via the Kunsthalle Website (<a href="http://www.kah-bonn.de/ei/move.htm">http://www.kah-bonn.de/ei/move.htm</a>). The videos can either be called up &#39;on demand&#39; online or they are integrated into the KAH TV channel programme line-up, which is updated on a daily basis (<a href="http://www.kah-bonn.de/cgi-bin/tv/tve.cgi">http://www.kah-bonn.de/cgi-bin/tv/tve.cgi</a>).</p><p>
+
+
+
+The existing digital videos were compressed into Quicktime Movies format by 1997 - with different resolutions and levels of quality. Since 1998 a RealNetworks RealServer (<a href="http://www.real.com/">http://www.real.com</a>) has been installed on the Kunsthalle Webserver, so that most of the Kunsthalle&#39;s video and audio data are now produced in formats for the popular RealPlayer - the technical details will be discussed at greater length below.</p><p>
+
+
+
+The existence of the department for television and video productions, with a broadcast standard television studio, three cameras, sound technician, camera man and production manager, is a basic requirement for the online projects described below. Without the in-house studio, the recordings could either not have been produced at all or could not have been produced to such high quality. The financial means to hire external camera teams would not have been available.</p><p>
+
+
+
+</p></td>
+
+</tr>
+
+</tbody></table>
+
+
+
+<table border="0" cellpadding="5">
+
+
+
+<tbody><tr>
+
+<td valign="TOP" width="135"> 
+
+</td>
+
+
+
+<td width="450" valign="TOP">
+
+
+
+<h3>First project idea, the &#34;open-air season&#34;</h3>
+
+
+
+Every summer since 1997 a four-day &#34;MuseumsMeilenFest&#34; (&#34;Museum Mile Festival&#34;) is celebrated on the square in front of the Kunst- und Ausstellungshalle, a square which architecturally both separates and connects the Kunsthalle with the Kunstmuseum der Stadt Bonn, the Art Museum of the City of Bonn, situated opposite. Open days at five museums in Bonn give free entrance to all collections, exhibitions and events. Children&#39;s events, concerts, cabaret - on these days a wide variety of entertainment is offered by all the museums involved. The &#34;MuseumsMeilenFest&#34; also always marks the start of a long series of concerts which are given throughout the summer on this square under the &#34;floating&#34; marquee structure erected for this purpose.<p>
+
+
+
+</p><center><img src="kanter.fig6.jpg" width="300" height="298" alt="Museumsplatz square with marquee" border="0"/><p>
+
+
+
+<font size="-1"><i>Fig. 6</i>, Museumsplatz square with marquee.</font></p></center>
+
+<p>
+
+
+
+In 1996 Laurie Anderson opened this new series of concerts. Since then the stage on the Museumsplatz square has become an established venue in the programme of many concert organisers. Classical concerts are also given there, as well as rock and pop acts. Well over 100 concerts have been organised over the last two summers and up to 9000 visitors have come to Bonn for individual concerts (the list of artists ranges from Nick Cave via Van Morrison, Tori Amos, Kool and the Gang, CCR and Shirley Bassey through to the Bee Gees).</p><p> 
+
+
+
+Having such an attractive event &#34;on our doorstep&#34; led to the idea of trying to make use of the technical possibilities described above and to plan a live broadcast of one of these events on the Internet. This is consistent with the concept of maintaining and extending the Internet services of the Kunsthalle, not simply extending the structure of existing categories, but rather installing an ever increasing number of new areas onto the server, and using new technologies as means of communication - depending on how appropriate and suitable this is for the content in question, and how feasible this is using the financial and staff resources of the Kunsthalle team, and possibly also outside employees.</p><p>
+
+ 
+
+</p><h3>EVENT 1</h3>
+
+
+
+In February 1998 I met with the Manager for Central Europe at RealNetworks, which was then market leader for video broadcasting software and video servers for the Internet, at the MILIA in Cannes. RealNetworks was very interested in a cooperation project with the Kunsthalle, in particular once the concert programme for summer 1998 was published - RealNetworks had just then opened a new branch in Hamburg. They were therefore very interested in contacts within Germany and offered support for our projects.<p>
+
+
+
+Coincidentally, one of our external Web employees was responsible for the Website of the record group EMI-Electrola (Cologne). Through him contact was established in March 1998 with the manager for new media at EMI, who also showed great interest in cooperation with the Kunsthalle in the area of the Internet. A look at the coming events and concerts scheduled for summer &#39;98 in the Kunsthalle revealed that a female artist, under contract with EMI, was to be playing on 22 June 1998 on the Museumsplatz square in front of the Kunsthalle: Vanessa Mae, a violinist trained in classical music who specialises in performing pop classics.</p><p>
+
+
+
+Our common aim in making this choice was first and foremost to test the technology under what for us was a new set of conditions, to subject the equipment of the Kunsthalle and of EMI in Cologne to this &#34;test&#34; and to study how a live broadcast of this nature on the Internet would be received. This was to be a first attempt which, if successful, would be followed by further live events.
+
+
+
+</p><h3>Negotiations</h3>
+
+
+
+The tasks over the coming weeks were to be divided as follows: within his own company the person responsible for the Internet at EMI first had to convince Vanessa Mae&#39;s product manager about our project. The product manager in turn had to negotiate with Vanessa Mae&#39;s manager, her mother, in order to be given the rights for carrying out the broadcast. Within the Kunsthalle, a deadline and project schedule had to be drawn up together with the department for television and video productions, advertising measures and press announcements had to be discussed with the Press and Media Relations department and finally the technical implementation had to be discussed in detail with EMI. 
+
+
+
+<h3>Minimum requirements for a live broadcast using RealNetworks technology</h3>
+
+
+
+Before I describe the configuration actually implemented and the progress of the project, I would like briefly to mention RealVideo technology and illustrate the minimum configuration by means of a diagram - since, as is so often the case with computer-based applications, the principle can be very simple, but in putting the project into practice, however, much more complex requirements arise. At this point I shall confine myself to a description of RealNetworks technology not only because this is what we used at all three events, but also because, with a market share of over 85%, it is the most widespread streaming technology (see appendix for information about &#34;streaming&#34; and other streaming products).<p>
+
+
+
+</p><center><a href="kanter.fig7b.gif"><img src="kanter.fig7a.gif" width="400" height="171" alt="Minimum requirements" border="0"/></a><p>
+
+
+
+<table><tbody><tr><td><font size="-1"><i>Fig. 7</i>, Minimum requirements (click on image for detail view).</font></td></tr></tbody></table></p></center>
+
+<p>
+
+
+
+In order to broadcast sound and images live on the Internet, the following equipment represents a minimum requirement: video camera (with internal or external microphone, mono or stereo) - the output of the video camera is connected to the video input of a computer graphic card - the audio signal of the camera is connected to the audio input of the computer sound card - the &#34;RealEncoder&#34; software (basic version available as freeware) is active on the computer - the computer is connected to a second computer via a modem or network - the RealServer software is installed on this second computer (available in various scaleable versions). The RealServer must be accessible via the Internet, so the RealServer software is typically installed on a Webserver, or is also connected to the Internet like a Webserver via a permanent connection.</p><p>
+
+
+
+The live signal is thus produced by the camera and the microphones, digitised and compressed in the RealEncoder and transmitted by the RealEncoder to the RealServer. Every RealPlayer - the small programme which Internet users need in order to view the images - can connect to the RealServer and establish a signal path. The RealPlayer then receives the transmitted images live and non-stop from this connection (in actual fact over the entire path, the signal is delayed by a total of between 5 and 20 seconds).</p><p>
+
+
+
+When realising the Kunsthalle&#39;s first live event, the minimum requirements described above were exceeded in some areas. It became clear to us that in order to achieve image and sound material recorded and edited to professional quality standards, it was necessary to work with three cameras. In contrast to the efforts required for video images, in this instance it is relatively easy to achieve an audio signal of professional quality: the signal can be fed out of the audiomixer of the amplifying equipment and into the video studio. This is where all three video images are edited live and transmitted to the computers for digitisation together with the stereo sound. Together with EMI, we decided to perform two separate digitisations  simultaneously, in order to be able to provide the optimal bandwidth and quality of signal for users of relatively slow modems, as well as for users of ISDN lines.</p><p>
+
+
+
+</p><center><a href="kanter.fig8b.gif"><img src="kanter.fig8a.gif" width="400" height="279" alt="Configuration event 1" border="0"/></a><p>
+
+
+
+<table><tbody><tr><td><font size="-1"><i>Fig. 8</i>, Configuration event 1 (click on image for detail view). </font></td></tr></tbody></table></p></center>
+
+<p>
+
+
+
+Nowadays encoding technology is already a step further: using the so-called G2 technology from RealNetworks, only a single broadband signal needs to be produced. The RealPlayer of the &#34;end user&#34; and the relevant RealServer automatically agree on the optimal rate of transmission in each individual case. Using these new software versions, it is then no longer necessary to work with more than one encoding computer, as was still the case when our event was produced.</p><p> 
+
+
+
+Since, although the Kunsthalle has its own permanent Internet connection, this has a bandwidth of only 128 KB, the RealServer for our project had to be installed at EMI, which had a 2 MB connection. Bandwidth is one of the most important requirements for transmitting &#34;streaming video&#34;: every user who establishes a connection to the RealServer from their PC, requires the bandwidth with which the signal was encoded - for the entire duration of the connection. If, for example, the video and audio signals when encoded together require a bandwidth of 20 KB (for slow 28.8 KB modems), our 128 KB permanent connection would be at full capacity with between 5 and 6 users connected at any given time (6 x 20 = 120 KB).</p><p>
+
+
+
+Since it was clear from the very start that the Kunsthalle, for financial reasons, could only cover the costs of the part of the project carried out by its own in-house staff and could only hire additional staff for the video work (cable carriers, image controller, cameramen), the responsibilities were divided as follows:</p><p>
+
+
+
+</p><center><table border="1" cellpadding="5">
+
+<tbody><tr>
+
+	<td>Public Relations</td>
+
+	<td>Kunsthalle and EMI</td>
+
+</tr>
+
+<tr>
+
+	<td>Negotiations with the artist</td>
+
+	<td>EMI</td>
+
+</tr>
+
+<tr>
+
+	<td>Extra fee for artist</td>
+
+	<td>EMI</td>
+
+</tr>
+
+<tr>
+
+	<td>Copyright clarification</td>
+
+	<td>EMI</td>
+
+</tr>
+
+<tr>
+
+	<td>Television and video technology</td>
+
+	<td>Kunsthalle, 3 camera teams, video editing, image control
+
+</td>
+
+</tr>
+
+<tr>
+
+	<td>Video encoding</td>
+
+	<td>EMI in the Kunsthalle studio</td>
+
+</tr>
+
+<tr>
+
+	<td>Video streaming</td>
+
+	<td>Kunsthalle (from Kunsthalle to EMI)</td>
+
+</tr>
+
+<tr>
+
+	<td>RealServer</td>
+
+	<td>EMI</td>
+
+</tr>
+
+</tbody></table></center>
+
+<p>
+
+
+
+Negotiations with Vanessa Mae&#39;s management progressed only very slowly - up until a week before the concert it was still not clear whether the management would agree and, if so, how many songs in the concert would be allowed to be broadcast on the Internet. In the event, up until the evening of the concert, no written declaration of consent had been provided by Vanessa Mae, so that it became necessary for legal reasons for us to request the person responsible at EMI to make a written declaration in which EMI assumed sole responsibility in the case of any compensation claims.</p><p>
+
+
+
+</p><center><img src="kanter.fig9.jpg" width="300" height="225" alt="Concert" border="0"/><p>
+
+
+
+<font size="-1"><i>Fig. 9</i>, Concert.</font></p><p>
+
+
+
+<img src="kanter.fig10.jpg" width="300" height="211" alt="Concert" border="0"/></p><p>
+
+
+
+<font size="-1"><i>Fig. 10</i>, Concert.</font></p></center>
+
+<p>
+
+
+
+Aside from these legal uncertainties, the broadcast itself, lasting barely 2 hours, ran without any technical or organisational complications. The video and audio technology did not present any problems, the encoding worked perfectly, as did the connection from the Kunsthalle network to the RealServer at EMI in Cologne. In total ten Kunsthalle employees and three employees from EMI were involved in preparing and carrying out the live broadcast.</p><p>
+
+
+
+</p><center><img src="kanter.fig11.jpg" width="300" height="225" alt="TV studio during the live broadcast" border="0"/><p>
+
+
+
+<table><tbody><tr><td><font size="-1"><i>Fig. 11</i>, TV studio during the live broadcast.</font></td></tr></tbody></table></p></center>
+
+<p>
+
+
+
+</p><h3>Conclusions from event 1</h3>
+
+
+
+Later statistical evaluation showed that about 900 people had wanted to follow the event live on the Internet (the number of &#34;hits&#34; on the event login page; <a href="http://www.kah-bonn.de/ei/vanessae.htm">http://www.kah-bonn.de/ei/vanessae.htm</a><p>
+
+
+
+</p><center><img src="kanter.fig12.jpg" width="327" height="417" alt="Login page for event 1" border="0"/><p>
+
+
+
+<font size="-1"><i>Fig. 12</i>, Login page for event 1.</font></p></center>
+
+
+
+<p>
+
+
+
+ - the evaluation of the statistics on the RealServer at EMI on the following day indicates, however, that during the two-hour broadcast only about 250 people were able to actually establish a connection to the EMI RealServer. The server was at the limit of its capacity with 2 MB of Internet traffic. As has been mentioned previously, streaming technology is extremely bandwidth-intensive - i.e. with 2 MB bandwidth, a maximum of approx. 80 people can access the server at any one time.</p><p>
+
+
+
+This statistic was clearly unsatisfactory in relation to the work generated by this production. People from over 15 different countries were able to follow the concert, and there were many positive e-mails before and after the concert. Nevertheless, on this occasion there was definitely a disproportionate relationship between effort made and the &#34;viewing figures&#34; achieved. For EMI and the Kunsthalle it was a pilot project and therefore an important experience from which there are appropriate lessons to be learned.</p><p> 
+
+
+
+If there were to be further live broadcasts from the Kunsthalle, it would be necessary to provide greater bandwidth, the broadcasting rights would have to be secured at an early stage and the recording should, if possible, also be accessible on the server of the Kunsthalle once the live broadcast was over, so that the public would also benefit from the work which was invested after the event. Increased demand addressed to the artist&#39;s management led to the strict ruling out of any repetition of the broadcast.</p><p>
+
+
+
+Last but not least, the television team also learned lessons from this experience: for Internet broadcasting, picture production and picture editing must be carried out in a fundamentally different way than for television recording. Since bandwidth constraints mean that the RealPlayer video image is not much bigger than a postage stamp, it is completely redundant to blend shots, and fast pans and zooms cannot be recognised. The editing has to be clear-cut and the camera work must fundamentally be calm and slow. Close-ups are better than wide-angle panoramic views, long-distance shots are better than wide-angle shots.</p><p>
+
+
+
+Even though a concert of this nature is certainly not an everyday event in the &#34;working life&#34; of a museum or exhibition hall, the technical and organisational problems encountered and tasks at hand are similar, even in the case of a performance, a classical concert, a press conference, an event from the field of education or science or an event from the field of media art.
+
+
+
+</p><h3>EVENT 2 and EVENT 3</h3>
+
+
+
+Another request at the end of summer 1998, involving broadcasting a concert on the same location with Ringo Starr, Peter Frampton and Jack Bruce, produced a negative result within the first few telephone calls: according to the management, the copyright situation in relation to the songs to be played at this concert was so complicated that it would be better to avoid any attempt at clarification.<p>
+
+
+
+The programme of media art exhibitions which has been running in the Kunsthalle since 1992 did, however, offer one promising highlight for autumn 1998: the musician, producer and media artist Brian Eno was to present one of his installations in the MedienKunstRaum (Media Art Room) in the exhibition hall from 28 August to 8 November 1998 (<a href="http://www.kah-bonn.de/1/27/0e.htm">http://www.kah-bonn.de/1/27/0e.htm</a>). Already several months before the opening of this exhibition it was definite that there would be events by and with Brian Eno, both at the opening evening and at a later stage. Through the curator of the MedienKunstRaum (Media Art Room), Axel Wirths, contact was made with Eno and enquiries made as to whether he would be interested in a live broadcast of both these events. There were no problems and the artist quickly agreed, even though it was not then entirely clear what would happen on the two evenings, 27 and 29 August 1998.</p><p>
+
+
+
+Since the EMI server connection had proved to have limited capacity, contact was then made through RealNetworks Europe with the multimedia centre at Deutsche Telekom. By definition, Deutsche Telekom, which enjoyed a monopoly in the area of cable networks in Germany for decades, owns the most extensive data network in Germany. After several meetings and consultations, the Kunsthalle and Deutsche Telekom agreed to work together to produce these events and &#34;broadcast&#34; them on the Internet. Deutsche Telekom would pay most of the telecommunications costs, whilst the Kunsthalle would cover the production costs on the ground and part of the power costs, which amounted to DM 5 000 (approx. US$ 3 000) per event.</p><p>
+
+
+
+This arrangement had the enormous advantage that for both these events we had the most powerful &#34;backbone&#34; in Germany at our disposal, and thus, de facto, unlimited bandwidth. In this way servers would not be working at full capacity or be overloaded. The multimedia backbone of Deutsche Telekom works with distributed servers, so that each user is connected to the RealServer which he or she can access the fastest. This distribution of traffic and the broadband backbone structure of Deutsche Telekom ensured unlimited capacity - theoretically thousands of people could follow these events.</p><p>
+
+
+
+In order to make the best use of these very good conditions, a well-timed and intensive advertising campaign was necessary. We had the agreement of Deutsche Telekom to provide links on both days to the live events from the homepage of T-Online, the biggest online service in Europe, with almost 3 million users (<a href="http://www.t-online.de/">http://www.t-online.de</a>). RealNetworks Germany, RealNetworks Europe and RealNetworks Great Britain were also prepared to offer links to the events from their homepages (<a href="http://www.real.com/">http://www.real.com</a>). For our part, we informed a large number of magazines, mailing lists, fan pages, daily newspapers, etc. of the planned events by e-mail. We also provided the relevant information to Timecast (<a href="http://www.timecast.com/">http://www.timecast.com</a>), the most comprehensive listing on the Internet for audio, video and live events. Finally, there were successful negotiations with the television company VH-1 (a subsidiary of MTV), who were interested in reprocessing the video material. So the Brian Eno events were also publicised on the VH-1 homepage (<a href="http://www.vh1.de/">http://www.vh1.de</a>).</p><p>
+
+
+
+</p><center><a href="kanter.fig13b.gif"><img src="kanter.fig13a.gif" width="400" height="242" alt="Configuration for events 2 and 3" border="0"/></a><p>
+
+
+
+<table><tbody><tr><td><font size="-1"><i>Fig. 13</i>, Configuration for events 2 and 3 (click on image for detail view).</font></td></tr></tbody></table></p></center>
+
+<p>
+
+
+
+The technical set-up differed in detail from the previous live broadcast. For reasons of cost, it was only encoded with one data rate - this signal was then sent via a dedicated permanent ISDN line to the Deutsche Telekom distribution server, from where it was then automatically distributed via the entire Deutsche Telekom multimedia backbone.</p><p>
+
+
+
+</p><center><img src="kanter.fig14.jpg" width="400" height="519" alt="Login page for events 2 and 3" border="0"/><p>
+
+
+
+<table><tbody><tr><td><font size="-1"><i>Fig. 14</i>, Login page for events 2 and 3.</font></td></tr></tbody></table></p></center>
+
+<p>
+
+
+
+Several weeks before the opening of the exhibition, the events to be offered on both days had been clarified: &#34;Sushi! Roti! Reibekuchen! A High-Altitude Food Performance with Incidental Music by Slop Shop and Brian Eno&#34; - this was the title of the first event, which took place in the open air under the marquee on the Museumsplatz square. Five cooks from five countries prepared specialities and later there was an improvised concert on a small stage with the band Slop Shop, Brian Eno and Holger Czukay. That day over two and a half hours were recorded live and broadcast.</p><p>
+
+
+
+</p><center><img src="kanter.fig15.jpg" width="300" height="200" alt="Event 2 - Concert with Brian Eno" border="0"/><p>
+
+
+
+<font size="-1"><i>Fig. 15</i>, Event 2 - Concert with Brian Eno.</font></p></center>
+
+<p>
+
+
+
+&#34;Public Talk. Brian Eno: Conversation with Umbrella, Tape Recorder, Record Player, Overhead Projector and Michael Engelbrecht&#34; was the title of the event that took place two days later. In the Forum of the Kunsthalle, Brian Eno and the music journalist Michael Engelbrecht met for two hours in front of an audience of some 500 to talk about music and art and to listen to music.</p><p>
+
+
+
+</p><center><img src="kanter.fig16.jpg" width="300" height="200" alt="Event 3 with Brian Eno" border="0"/><p>
+
+
+
+<img src="kanter.fig17.jpg" width="300" height="200" alt="Event 3 with Brian Eno" border="0"/></p><p>
+
+
+
+<table><tbody><tr><td><font size="-1"><i>Fig. 16 and Fig. 17</i>, Event 3 with Brian Eno.</font></td></tr></tbody></table></p></center>
+
+<p>
+
+
+
+More than 1000 people in over 30 countries followed these two broadcasts, the German and English login pages were accessed about 3500 times on both days and 1.5 GB of data was transferred. Both events led to increased traffic on the Kunsthalle Webserver for several days before and several weeks afterwards. From a statistical point of view, both days of broadcasts also recorded the most &#34;hits&#34; on the Kunsthalle Internet pages to date. Two weeks after the events we were also given the OK from Brian Eno to permanently install the four and a half hours of material on our server, where both videos remain accessible at any time:</p><p>
+
+
+
+<a href="http://www.kah-bonn.de/tv/media/BrianEnoTeil1.ram">http://www.kah-bonn.de/tv/media/BrianEnoTeil1.ram</a><br/>
+
+
+
+<a href="http://www.kah-bonn.de/tv/media/BrianEnoTeil2.ram">http://www.kah-bonn.de/tv/media/BrianEnoTeil2.ram</a></p><p>
+
+
+
+</p><h3>Conclusions from the live broadcasts</h3>
+
+
+
+Even after the much more successful last two broadcasts, the question arises as to whether the efforts required for carrying out a live broadcast are justified. From the point of view of the Kunsthalle, I can say that both the costs and the amount of work involved are justified, if one is bold enough to make comparisons with other &#34;conventional&#34; means of reaching the public. The cost of a full-page advertisement in a well-known art journal can be greater than the cost of a live broadcast on the Internet - and the measurable benefit is much smaller than that achieved by a Web event, the results of which can be evaluated statistically. &#34;Target groups&#34; can be reached much more directly on the Internet and there is no imprecision or uncertainty in answering the question of whether that was what the &#34;viewer&#34; really wanted to see.<p>
+
+
+
+On the other hand, in my experience, projects of this kind can only be carried out in close cooperation with reliable partners: without good connections with service providers (Deutsche Telekom), management/copyright owners (EMI) and with the artists (Brian Eno), events of this kind are not feasible.</p><p> 
+
+
+
+When planning the three events, it was pleasing to discover that, at least in Germany, it is possible for a non-profit organisation in the field of culture, simply through communication with cooperation partners and without major financial commitment, to secure the involvement of these companies, an involvement which would be very costly to other commercial enterprises. It remains the case that in Europe many service providers, telecommunications companies and &#34;portal sites&#34; are looking for &#34;valuable&#34;, high-quality content - something museums have traditionally been able to provide in abundance. In this way museums should be able to expand their position on the Internet. The Kunsthalle at least will attempt to perform some live broadcasts in 1999 again - initial negotiations with cooperation partners are already underway.</p><p>
+
+
+
+
+
+</p><h3> Appendix</h3>
+
+
+
+<h4>&#34;Streaming&#34;</h4>
+
+
+
+&#34;Streaming&#34;, as opposed to &#34;downloading&#34;, is the name of a technology which allows the Internet user to view data (video, audio, etc.) as the file is being received, whereas normally a data file has to be completely transmitted before the result can be seen on the user&#39;s screen. Only in this way is it practically possible to transfer high volumes of data to the Internet user, such as for example digitalised videos (the size of the file of the first two-and-a-half-hour-long Brian Eno recording, for example, is 45 MB).
+
+
+
+<h4>Live streaming video technologies</h4>
+
+
+
+In my description of the three live events, which the Kunsthalle organised in 1998, I confined myself to RealNetworks technology. However I should also mention that there are also indeed other systems on the market which can achieve a similar result. Here is a short list of the most important products with some keywords and explanations:<p>
+
+
+
+</p><h4>RealNetworks:</h4>
+
+<h4>RealServer - Realplayer</h4>
+
+(<a href="http://www.real.com/">http://www.real.com</a>)<p>
+
+
+
+On 28 January RealNetworks published statistics, according to which they now have 50 million registered users and thus an 85% market share of users and servers. Back in the autumn of last year, cooperation with Netscape was announced: RealPlayer Plug-In is an integral part of the Netscape browser from version 4.5 upwards, i.e. Netscape users do not need to download the software package separately. </p><p>
+
+
+
+RealNetworks is offering server solutions in the form of the Basic Server, which allows up to 40 user sessions at any one time for prices starting from US$ 695. A server licence for 400 users at any one time, however, does cost as much as US$ 20 000 - but in this case, as with all software manufacturers, it is advisable to ask for prices for non-profit organisations or for education licences. The RealPlayer, necessary for receiving the &#39;RealContent&#39;, is available free of charge.
+
+
+
+</p><h4>Microsoft:</h4>
+
+<h4>NetShow Server - MediaPlayer</h4>
+
+(<a href="http://www.microsoft.com/ntserver/nts/downloads/recommended/mediaserv">http://www.microsoft.com/ntserver/<br/>nts/downloads/recommended/mediaserv</a>)<p>
+
+
+
+RealNetworks&#39; greatest competitor is definitely Microsoft. Microsoft also offers streaming technology, consisting of a server (NetShow server) and a client (MediaPlayer); the MediaPlayer is already contained in the Windows operating system and therefore enjoys the widest possible circulation. In addition, MediaPlayer also processes foreign formats such as RealVideo, RealAudio, MPEG and Quicktime.
+
+
+
+</p><h4>VDO:</h4>
+
+<h4>VDOLive Server - VDOLive Player</h4>
+
+(<a href="http://www.vdo.net/">http://www.vdo.net</a>)<p>
+
+
+
+Similar to RealNetworks and Microsoft, VDO offers the entire package of server and client tools for transmitting video on-demand and live video on the Internet. Once again, the consumer needs a plug-in for the browser or a separate VDOLive Player.
+
+
+
+</p><h4>VIVO: </h4>
+
+<h4>VIVO Active</h4>
+
+(<a href="http://www.vivo.com/">http://www.vivo.com</a>)<p>
+
+
+
+VIVO developed video streaming technology which was based purely on the programming language Java both at the server end and at the end user end, and which can therefore still be viewed on any Internet browser, regardless of the platform, without additional software. VIVO was acquired by RealNetworks in 1998.
+
+
+
+</p><h4>Geo Interactive:</h4>
+
+<h4>Emblaze</h4>
+
+(<a href="http://www.emblaze.com/">http://www.emblaze.com</a>)<p>
+
+
+
+Just like VIVO, Emblaze is based on Java and the associated tools for creating and compressing video files. The prices for these tools are between US$ 300 and US$ 1000, depending on the package. 
+
+
+
+</p><h4>GTS:</h4>
+
+<h4>GTS Video</h4>
+
+(<a href="http://www.graham.com/">http://www.graham.com</a>)<p>
+
+
+
+GTS Video also works without a separate player, but it does require server software. From the client end, the solution is again based on Java. Server licences range from licences for servers for 10 users at any one time (US$ 2 000) to those for an unlimited number of users (US$ 15 000).
+
+
+
+</p><h4>Apple:</h4>
+
+<h4>Quicktime 3.0</h4>
+
+(<a href="http://www.apple.com/quicktime">http://www.apple.com/quicktime</a>)<p>
+
+
+
+With the new release 3.0, Quicktime offers a kind of &#34;pseudo-streaming&#34;. As previously, Quicktime Movies are downloaded by means of simple HTML links, however data can already be viewed before the downloading is complete. Apple does not yet however offer genuine streaming with a flexible data rate and live broadcasting possibilities.
+
+
+
+</p></td>
+
+</tr>
+
+</tbody></table>
+
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+
+
+
+
+
+
+</body><!--/htdig_noindex--><!-- Mirrored from www.museumsandtheweb.com/mw99/papers/kanter/kanter.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 19:32:24 GMT --></html>

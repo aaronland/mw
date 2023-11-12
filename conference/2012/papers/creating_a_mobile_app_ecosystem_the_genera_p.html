@@ -1,0 +1,174 @@
+<div id="main-content">
+          
+                      <div id="breadcrumb">
+              <h2 class="element-invisible">You are here:</h2>
+              <a href="../../mw2012.html">MW2012</a> » <a href="../sessions.html">Sessions</a> » <a href="../programs/creating_a_mobile_app_ecosystem_the_genera_p.html">Creating a mobile app ecosystem - the Genera project for iOS</a> »             </div> <!-- /breadcrumb -->
+              
+                      <div id="main-content-header" class="clear-block">
+              <h1 id="page-title">Creating a Mobile App Ecosystem—The Genera Project for iOS</h1>                          </div>
+          
+          
+          <div id="content"><div id="article-16854" class="article article-promoted paper-article clear-block">
+
+    
+    <div class="article-detail clear-block">
+  <div class="node-edit-link" id="node-edit-link-16854"><ul class="links"><li class="0 first last active"><a href="creating_a_mobile_app_ecosystem_the_genera_pro.html" class="active">[View]</a></li>
+</ul>
+</div><h3 class="Author">Simon Sherrin and Dr. Elycia Wallis, Museum Victoria, Australia</h3>
+<p class="URL"><a href="http://museumvictoria.com.au/">http://museumvictoria.com.au</a>/</p>
+<p class="URL">http://code.google.com/p/the-genera-project/</p>
+<h3 class="AbstractTitle">Abstract</h3>
+<p class="AbstractText">At the start of 2011, Australia’s Museum Victoria published a <em>Field Guide for Victorian Fauna</em> for iOS devices: iPhone, iPad, and iPod Touch. The app currently contains information for approximately 700 Victorian animal species, including vertebrates such as birds, mammals, snakes, lizards, and frogs; as well as butterflies, snails, spiders, and other invertebrates. Released for free, the app was downloaded over 27,000 times in its first eleven months.</p>
+<p class="AbstractText">In August 2011, Museum Victoria released the source code for the app under an open-source license. Organisations and individuals are using the code to produce field guides for specific animals groups, such as the frogs within a river catchment area, and more general guides, such as to the fauna of Papua New Guinea.</p>
+<p class="AbstractText">The Field Guide data structure and code are built for displaying information about fauna; however, the presentation structure of the app is applicable for displaying information about a wide range of fields. This led to the development of the Genera project for iOS, which, rather than requiring the data about an item to be supplied in a specific structure to fit the Field Guide database, adjusts the database based on the structure of the data supplied. This project can be used to create guides for flora, fauna, minerals, or any type of item. The subject of the guide does not have to be a homogenous set of items, but through the use of templates and identifiers can accommodate different types of items (e.g., fauna and flora).</p>
+<p class="AbstractText">This paper discusses how the experience of developing the Field Guide has led to the development of the Genera project for iOS. Key to the project is the separation of the data, platform, and presentation layers. This paper presents a description of how other organisations can use the Genera platform for their own apps, and suggestions on issues to consider when developing native apps for reuse by other institutions.</p>
+<p class="keywords">Keywords: iOS, mobile, app, development, open source, collaboration, apps, field guide, natural science, code</p>
+<h2>1.     Introduction</h2>
+<p>In March 2011, Museum Victoria published a <em>Field Guide to Victorian Fauna</em> in the iTunes App Store. The initial version contained information on over 700 species of Victorian animals. The app has been popular with users and was downloaded over 27,000 times in the first eleven months. Through the iTunes App Store ratings and review process, the app has received 75 five-star reviews out of a total of 92, and 136 five-star ratings out of a total of 162. Feedback through other channels, such as comments on Museum Victoria’s website, has been overwhelmingly positive. The source code for the project was released under an MIT-style open license in August 2011 to allow other organisations to create their own faunal guides.</p>
+<p>There was interest, both internally at Museum Victoria and externally, in producing similar “field guide” apps for subjects other than animals. Rather than producing a variant on the faunal guide for each subject, a generic guide that could accept data for any subject without having to modify the source code was created—the Genera project. In this paper, we describe the background of the original Field Guide app and how it was used to establish the Genera project. We also detail what data an organisation needs to gather, and show how presentation within the app can be customized without modification of the source code.</p>
+<h2><em>2.     </em><em>Field Guide to Victorian Fauna</em></h2>
+<p>Development of Museum Victoria’s <em>Field Guide to Victorian Fauna</em> began in the last quarter of 2010, based on data that had been written and sourced for another, primarily education and web-based project: Biodiversity Snapshots (<a href="http://www.biodiversitysnapshots.net.au/">http://www.biodiversitysnapshots.net.au</a>). The Field Guide project was developed as a native app for various reasons, but principally because having all the data, images, and audio files locally in the device means the user does not need to have a network connection to make use of the app. This was thought to be important, as a likely scenario for use of the app was by a user in the middle of a national park with no 3G signal. The app was developed for the iOS platform primarily because of the availability of in-house resources that could develop for that platform.</p>
+<p>The design of the app was kept as simple as possible, with the goal of producing a useful tool to help identify animals at the forefront of the development plan. While mobile devices provide the potential for a lot of interaction and functionality beyond a paper-based field guide, the design team did not want to make the app too “tricky.” Thus, the app simply displays information, images, and, where appropriate, audio for the species included.  Decisions about extending the functionality were postponed until the initial success of the app could be assessed. Ironically, the high rating that the app has gained has made the team more hesitant to add new functionality than if the app had received a poor or mediocre response from the public.</p>
+<p>As with Indianapolis Museum of Art’s TourML and TAP project (Stein and Proctor, 2011), a goal of the Field Guide project was to create a code base that could be easily used by other organisations. This reinforced the need for simplicity in design. Each added feature adds a level of complexity to the modification/adaption process. For the same reason, where possible, standard Apple user interfaces were used to display information, rather than trying to design unique or novel interfaces for the app. These standard user interfaces present the user with familiar on-screen behaviour, allowing them to get into the content quickly.</p>
+<p>The Field Guide is a universal app, which means that a user downloads the app once but is presented with different interfaces depending on device. For example, the interface on the iPad takes advantage of the larger screen, and a tabulated format is presented on the iPhone and iPod Touch to account for the smaller screen. The presentation on the iPhone and iPod Touch is different to the presentation on the iPad, but all share the same basic functionality. A user can:</p>
+<ul>
+<li>find an animal by selecting a taxon (major animal group, such as birds or frogs) and then browse through that taxon list grouped by sub-taxon (subgroup);</li>
+<li>find an animal by searching for the scientific name or common names;</li>
+<li>view information on a selected animal, including text, images, and sounds.</li>
+</ul>
+<p>On an iPhone/iPod Touch, the user also has the option of browsing through an index of animals.</p>
+<p>The iPad’s larger screen allows images of the animal to be displayed with the text panel below (figure 1). The images can be scrolled and zoomed independently of the text. The user can adjust the display to show only images or only text. Sound recordings of the animal are accessed using the “musical notes” icon in the top right of title menu bar.</p>
+<p style="text-align: center;"><img src="../../files/sherrin-fig1.jpg" border="0" width="500" height="667"/></p>
+<p style="text-align: center;"><strong>Figure 1: Animal details displayed on iPad</strong></p>
+<p>On an iPhone/iPod Touch, the information about the animal is split between tabs (figure 2). Images and sound files sit on their own tabs, while the single text panel of the iPad is split into three separate tabs. The split prevents the user from having a single long panel to scroll through, and also gives quicker access to information about distribution and scarcity of the animal of interest.</p>
+<p style="text-align: center;"><strong><img src="../../files/sherrin-fig2.jpg" border="0" width="480" height="720"/></strong></p>
+<p style="text-align: center;"><strong>Figure 2: Animal details displayed on iPhone</strong></p>
+<p>“Text panel” is somewhat of a misnomer, as these panels contain both text and graphics. These panels are laid out using HTML and CSS. This is the simplest way to lay out formatted and variable text in the iOS environment. The HTML for the panels is generated on the fly by the app, using a template file and the properties of the animal. This approach offers a great deal of flexibility. There is no need to modify objective C code to alter the text panel layout. Simply changing the HTML template or CSS file can alter the layout within the panels.</p>
+<p>The source code for the field guide app was released in August 2011, under an MIT style license (Open Source Initiative, 2012). This style of license allows the code to be reused for any purpose, commercial or non-commercial, as long as copyright information is retained within the code. The code is hosted as a Google Code project and is available from <a href="http://code.google.com/p/the-field-guide-project/">http://code.google.com/p/the-field-guide-project/</a>.</p>
+<h2>3.     Genera project</h2>
+<h3>Why?</h3>
+<p>The released Field Guide source code is structured so that a faunal field guide can be produced without having to modify the objective C-source code. To create a guide, an organisation only needs to structure the information on the animals it wishes to include in a correctly formatted file. That file, and any associated image and sound files, are added to the project, which is compiled to produce a field guide. Users of the code can change how the detailed information is displayed by modifying HTML templates and associated CSS files.</p>
+<p>The release of the source code was well received, and at the end of January 2012 there had been over 130 downloads of the code from the code repository. Although Museum Victoria’s hope is that others will take the code and release field guides independently of the originating organization, we are working with a water catchment authority to produce a guide to frogs within the authority’s boundaries. To the authors’ knowledge, there is only one, as yet unpublished, guide being developed independently of Museum Victoria.</p>
+<p>It was hoped that other organisations with in-house coding skills would port the Field Guide code to other platforms such as Android and rerelease the code back as open source. To the authors’ knowledge, this has not happened.</p>
+<p>At the same time, we have received expressions of interest in producing apps with the same structure as the faunal Field Guide, but on topics other than animals, such as plants, minerals or cultural artifacts. This could be achieved with the released code by configuring the item data to fit the data schema for animals, or by removing the animal object and schema from the code and replacing it, for example with a plant object and associated data schema.</p>
+<p>Neither approach is ideal. The number of properties of the animal data schema creates a limit in the first approach. There is also built-in formatting within the code that is specific to animals. For example, an animal’s Latin binomial (scientific name) is always italicized by convention, and this is recognized in the code.</p>
+<p>The second approach would require a new project for each type of guide. One for animals, another for plants, a third for a guide that has both plants and animals, and so on. Each of these projects would have a code base that would need to be maintained and updated. </p>
+<p>A better approach is to have a single project that can be used to build a guide on any topic. This is the role the Genera project was created to fill.</p>
+<h3>Development process</h3>
+<p>As with the <em>Field Guide to Victorian Fauna</em>, the approach to the Genera project was to keep it as simple as possible, while being flexible about the data schema in order to present a guide to a single type of item (e.g., paintings) or multiple types of items (e.g., paintings, drawings, and prints). The main interface design would be the same as the Field Guide, and the Genera project can be used to reproduce the original <em>Field Guide to Victorian Fauna</em>. As with the Field Guide project code, someone who wishes to use the Genera project should not have to edit the objective C code to produce a guide.</p>
+<h3>Project overview</h3>
+<p>In the Field Guide code, each animal has a fixed set of possible properties or descriptors. The data on all of the animals is included in the app as a formatted text file. When the application is run, it processes this text file and stores the information in the application database. The limitation of the current Field Guide code is that it only looks for, stores, and makes available the properties it expects to find. You could add a property to the text file on, for example, eye colour for each animal, and the application would simply ignore it. To create a guide on any topic, the code needs to be able to read, store, and make available all and any item properties that are included in the data set.</p>
+<p>In developing the Genera project code, producing a guide to minerals has been used as the example project. Content for this app has again been developed by Museum Victoria.</p>
+<p>Like the Field Guide, the application allows two levels of grouping of items. All items belong to a group.  An item can also belong to a subgroup. The groups form the top level of the navigation tree for the item. For the Field Guide, the animals were grouped by “taxon” (bird, mammal, reptile, spider, etc.). While the set of groups could be inferred from the properties of an item, for display purposes each group can have associated icons or thumbnail.</p>
+<p>The items can have any number of properties, and different types of items can have distinctly different properties. All items have some properties in common, mostly related to their display in the app. Items need to be assigned to a group so that they can be found on the browsing list. Image files need to be identified so they can be displayed in the image viewer, and audio files need to be identified so they can be played by the audio control. The names of some properties have been reserved for specific roles within the application. These properties are (each is defined below):</p>
+<ul>
+<li>Identifier (string)</li>
+<li>Group Name (string)</li>
+<li>Subgroup Name (string)</li>
+<li>Label (string)</li>
+<li>Label Style (“bold,” “normal,” “italic”)</li>
+<li>Sub-label (string)</li>
+<li>Sub-label Style (“bold,” “normal,” “italic”)</li>
+<li>Audio Files (list of Audio Files)</li>
+<li>Image Files (list of Image Files)</li>
+<li>Square Thumbnail (filename)</li>
+<li>Template (object)</li>
+<li>Search Text (string)</li>
+<li>Details (dictionary).</li>
+</ul>
+<p>With the exception of Search Text and Details properties, figures 3 and 4 show where these common properties are used in the interface.</p>
+<p style="text-align: center;"><img src="../../files/sherrin-fig3.jpg" border="0" width="500" height="375"/></p>
+<p style="text-align: center;"><strong>Figure 3: Location of reserved item properties in the browse list</strong></p>
+<p style="text-align: center;"><img src="../../files/sherrin-fig4.jpg" border="0" width="500" height="435"/></p>
+<p style="text-align: center;"><strong>Figure 4: Item display on iPad showing where reserved item properties are used</strong></p>
+<p>The Details property stores all the other properties of an item. In other words, the Details property is a dictionary: an object that consists of key/value pairs.  Each key/value pair consists of two “strings.” A string is unformatted text. The key string can be thought of as the property name, and the value string is the value for that particular property. The only limit to the number of key/value pairs a dictionary can hold is the physical memory of the device. There are two constraints on the keys in the details dictionary. The first is that each key within the dictionary must be unique. The second is that a key cannot be the same as one of the reserved properties names.</p>
+<p>When a user looks something up in the <em>Field Guide to Victorian Fauna</em>, the application searches the species, genus, and common name properties of the animals in the app. Given that the number and names of properties for items in the Genera project is flexible, a different approach is required. Each item has a single property, Search Text, which contains all the search terms associated with that item. If the user searches on any of the terms in an item’s Search Text property, that item will be returned as a result.</p>
+<p>Minerals, in general, don’t make sounds, so their guide does not require an audio tab in the iPhone version. Rarity is also a somewhat different quality in minerals to animals. This meant that there needed to be flexibility in the arrangement of tabs in the iPhone/iPod layout. This flexibility is provided by the addition of a “template object” to the data schema. A template object describes how an item’s information should be displayed. It contains the filename of the HTML template used to display an item on the iPad, and the tab and HTML template filename for an item’s detail view on an iPhone/iPod Touch. The detail view on an iPhone/iPod Touch can contain from one to five tabs, and we assume that developers will use at least two. Tabs have the following properties:</p>
+<ul>
+<li>Name (string)</li>
+<li>Label (string)</li>
+<li>Icon (filename)</li>
+<li>Template (filename).</li>
+</ul>
+<p>Figure 5 shows how the template information is used in the iPhone/iPod Touch version. There are two reserved names for tabs: “Images” and “Audio.” For tabs with those names, the app will ignore the Template file (if listed) and use the Image and Audio controllers, respectively.</p>
+<p style="text-align: center;"><img src="../../files/sherrin-fig5.jpg" border="0" width="500" height="354"/></p>
+<p style="text-align: center;"><strong>Figure 5: Item display on iPhone, showing where tab properties are used</strong></p>
+<p class="listwithbullets" style="text-align: left;">The HTML templates are the key to giving a guide its own distinctive style. The properties of the item are displayed using the HTML templates defined in the initial data file. The HTML templates consist of standard HTML tags with special tags used to indicate where to insert the data for a particular property. This structure is identical to the approach used with the Field Guide (Sherrin, 2011). The difference with the Genera project is that, instead of having a predefined set of special tags, the special tags are defined by the item’s list of properties.</p>
+<p>The code combines the HTML template and the item’s properties to produce a standard HTML document. The generated HTML is displayed in a webview. The webview panel contains all the functionality of a web browser. It will display HTML, style it using CSS, and also run JavaScript. The HTML can be styled using inline styles or an external CSS file. The project is designed so that when a user clicks on a link within the panel, the app will open that link within Safari on the user’s mobile device.</p>
+<h2>4.     Creating a Genera guide with your own data</h2>
+<h3>Getting your data together</h3>
+<p>It’s tempting to think that in using the Genera project, the hard part has been done for you. This is definitely not the case. The major component of the success of the <em>Field Guide to Victorian Fauna</em> is the quality of the content. If we were to rebuild the Field Guide from scratch, we would have to:</p>
+<ul>
+<li>Create text, distributed over twenty different properties, for 702 individual animals;</li>
+<li>Source and negotiate permission to use 2,591 images of animals;</li>
+<li>Manually crop over 700 images to get good-quality thumbnails;</li>
+<li>Manually create maps showing the distribution of the animals, based on data from Australian museum collections;</li>
+<li>Source and negotiate permission to use 164 sound recordings;</li>
+<li>Design four HTML templates and associated CSS files for displaying animal information;</li>
+<li>Design a welcome, about screen, and help graphics and information;</li>
+<li>Create silhouette images;</li>
+<li>Design and produce six icons for the app store and device screens.</li>
+</ul>
+<p>We believe that one of the reasons that there hasn’t been as great an uptake of the Field Guide platform as we’d hoped is the amount of effort required in writing all the content, sourcing the images/sounds, and obtaining the licenses for the same.</p>
+<p>When we created the Field Guide, we were in the fortunate position of having already sourced the images and sounds and created all the text for another web-based project. However, during that first project we did not seek permissions to use many of the images in an app, which created a lot of extra work in re-contacting rights holders to seek the additional permissions. On the plus side, the photographers and sound recordists whose content is included in the app were happy to participate. Interestingly, some photographers put a condition on our license that we could only use their images if the app were free.</p>
+<p>In the same way that museums have begun to think about storing content generated for exhibitions for reuse on the web, if the sector is to going to build a presence in the app arena, consideration needs to be given to reuse of content in apps.</p>
+<h3>Getting the source code</h3>
+<p>The Genera project has been structured so that an organisation does not have to update the objective C code within the app. Adding the data, images, and audio to the project, as well as compiling and uploading the app does, however, require a Mac computer and a copy of XCode, Apple’s objective-C development tool.</p>
+<p>The source code for the Genera project has been split from the Field Guide project and is hosted at a new Google code project site (<a href="http://code.google.com/p/the-genera-project/">http://code.google.com/p/the-genera-project/</a>). As a derivative of the Field Guide project, the Genera project has been released under an MIT style license.</p>
+<h3>Custom settings and item data</h3>
+<p>There are a few layout features that can be set, separate from the data load. You can specify the colour of the title bar, the title browse panel, and the version number for the data. When the project runs for the first time, it loads the group, item, and template data from a structured text file. All of the technical details on how to set these files can be found in the wiki at the Google code project site (<a href="http://code.google.com/p/the-genera-project/w/list" title="http://code.google.com/p/the-genera-project/w/list">http://code.google.com/p/the-genera-project/w/list</a>).</p>
+<p> </p>
+<h3>Putting it all together</h3>
+<p>To finally produce the app, all of the content needs to be gathered together and added to the project in XCode through the standard “Add Files to…” procedure. This content includes the text file containing the item data, all the images, sound recordings, HTML templates, CSS templates, and icons. Once all this material is added to the project, the app is ready to be tested in the iOS environment or deployed to devices for testing. Once the app has passed your internal testing, it can be submitted to the iTunes App Store.</p>
+<h2>5.     Things to consider when releasing your own app</h2>
+<h3>Free or paid</h3>
+<p>The issue of whether to charge or not is one for each organisation to consider. There are a number of different models for publishing apps, some of which involve raising revenue, with their own advantages and disadvantages (Kelly, 2011). It should be noted that price does have a significant impact on downloads. Balboa Park saw a four-fold increase in downloads by reducing the cost of an app from 99 cents to free (Burnette et al., 2011).</p>
+<h3>Test and polish</h3>
+<p>Producing the Field Guide app required a higher level of attention to detail and testing than similar web projects. While small errors with websites can generally be fixed and rolled out immediately, fixing errors in an app require the app to go through Apple’s approval process. Once the update has been approved, which may take weeks, the entire app needs to be downloaded again by the user as an update.</p>
+<h3>Storing content</h3>
+<p>The <em>Field Guide to Victorian Fauna</em> used content that was exported from Museum Victoria’s collection management system. Having this content already stored in a structured database, available to both developers and content producers, made the process of reusing content easier than creating it from scratch. Like the Field Guide, the Genera project is a content presentation system, not a content management system.</p>
+<p>The TAP project (Stein and Proctor, 2011) provides a mobile content management system that may be able to be adapted to provide a content management system for organisations that don’t already have a content management system in place. It would also be useful for generating the initial data files if different formatting is required for other platforms.</p>
+<h3>Feedback</h3>
+<p>While feedback and ratings in the app store are a good source of information, it doesn’t provide a mechanism for getting in contact with users who report a problem. Providing a clear avenue for reporting issues in the “About” screen is important. In Museum Victoria’s case, our organisation already has well-established processes for dealing with public enquiries through our Discovery Centres.</p>
+<h3>Other platforms</h3>
+<p>Apple’s iOS platform is not the only game in town. In the mobile space, there is definite competition, although there is debate as to whether the percentage of the handset market is equal to the percentage of the app market that a platform holds (Gruber, 2012).</p>
+<p>From web usage statistics, however, the iPad still dominates the tablet arena (Sinangil, 2012). It would be foolish to assume that this will always be the case. A port of the Genera project to the Android and Windows platforms would allow guides to be made for multiple platforms with little more effort than required to produce a single guide. The authors would be happy to discuss such an effort with any organisation willing to undertake the task.</p>
+<h3>Releasing an app as open source</h3>
+<p>The source code for the field guide was the first time that the programmers on the team had released the code for a project as open source. The following suggestions spring from that initial experience.</p>
+<h4>Build it for yourself first</h4>
+<p>It’s easy to get carried away thinking about, and adding code for, all the edge cases that other people may dream up. Build the first release for your clearly defined prospective audience and their user needs, and rely on the feedback of others to determine where you need to add flexibility once the code is out there.</p>
+<h4>Program for other people from the start</h4>
+<p>Unless you’re an extremely disciplined developer, it’s easy to fall into the trap of burying settings and values within the code, rather than putting them in a single file where they can be easily edited and replaced. When you come to release the code as open source, you’ll end up spending a lot of time going back through the code fixing things. It takes a little more effort, but being disciplined will save time in the long run.</p>
+<h4>Let go of the fear</h4>
+<p>It can be daunting to release your code as open source, thereby exposing your hacks, workarounds, and idiosyncrasies to public scrutiny. That public scrutiny, however, does give you the opportunity to learn things you would not have otherwise. All the feedback received on the released Field Guide code has been positive.</p>
+<h2>6.     Conclusions</h2>
+<p>The Field Guide project’s focus on fauna meant that the potential group of organisations within the gallery, library, archive, and museum (GLAM) sector that would consider using the project to produce an app was limited to those with natural history faunal collections.</p>
+<p>The Genera project can be used by a wider set of organisations within the GLAM sector to produce apps. One of the goals of the initial Field Guide project was to make it easier for an organisation to present its information on these platforms. However, we acknowledge that having the code base is not the largest hurdle. There is a lot of work involved in gathering the content, a task that should definitely not be underestimated. By opening the source code to the widest possible audience, we hope to spark some more interest in the platform and find out just how useful and versatile the apps that result might be.</p>
+<h2>7.     Acknowledgements</h2>
+<p class="AcknowedgementsText">It’s always a danger when making a list such as this that somebody will be left out, and we extend our sincerest apologies if that is the case. The authors would firstly like to thank the team behind the Biodiversity Snapshots project. Without the work of the curators, developers, photographers, and sound recordists who contributed to that project, there would have been nothing for the Field Guide to display. We would also like to thanks those who have tested, downloaded, and provided feedback on the Field Guide project for their encouragement and support.</p>
+<h2>8.     References</h2>
+<p class="ReferencesText"> </p>
+<p class="ReferencesText">Burnette, A., R. Cherry, N. Proctor, and P. Samis. (2011). “Getting On (not under) the Mobile 2.0 Bus: Emerging issues in the mobile business model.” In J. Trant and D. Bearman (eds.). <em>Museums and the Web 2011: Proceedings. </em>Toronto: Archives &amp; Museum Informatics. Published March 31, 2011. Consulted January 23, 2012. Available at: <a href="http://conference.archimuse.com/mw2011/papers/getting_on_not_under_the_mobile_20_bus">http://conference.archimuse.com/mw2011/papers/getting_on_not_under_the_mobile_20_bus</a></p>
+<p class="ReferencesText">Gruber, J. (2012). “The Church of Market Share.” <em>Daring Fireball</em>. Published January 9, 2012. Consulted January 23 2012. Available at: <a href="http://daringfireball.net/2012/01/the_church_of_market_share">http://daringfireball.net/2012/01/the_church_of_market_share</a></p>
+<p class="ReferencesText">Kelly, L. (2011). “Mobile apps: to charge or not to charge?” Australian Museum: Audience Research. Last Updated January 19, 2011. Consulted January 30, 2012. Available at: <a href="http://www.australianmuseum.net.au/BlogPost/Audience-Research-Blog/Mobile-apps-to-charge-or-not-to-charge">http://www.australianmuseum.net.au/BlogPost/Audience-Research-Blog/Mobile-apps-to-charge-or-not-to-charge</a></p>
+<p class="ReferencesText">Open Source Initiative. (2012). “The MIT License.” Consulted January 9, 2012. Available at: <a href="http://www.opensource.org/licenses/mit-license.php" title="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a></p>
+<p class="ReferencesText">Sherrin, S. (2011). “Release your local species into the iOS ecosystem.” In J. Trant and D. Bearman (eds.). <em>Museums and the Web 2011: Proceedings</em>. Toronto: Archives &amp; Museum Informatics. Published March 31, 2011. Consulted January 31, 2012. Available at: <a href="http://conference.archimuse.com/mw2011/papers/release_your_local_species_into_the_ios_ecosystem" title="http://conference.archimuse.com/mw2011/papers/release_your_local_species_into_the_ios_ecosystem">http://conference.archimuse.com/mw2011/papers/release_your_local_species...</a></p>
+<p class="ReferencesText">Sinangil, S. (2012). “iPad Still Leads Tablet Market for Web Traffic; How Does the Competition Stack Up?” <em>Chitika</em>. Published January 17, 2012. Consulted January 23, 2012. Available at: <a href="http://insights.chitika.com/2012/ipad-still-leads-tablet-market-for-web-traffic-how-does-the-competition-stack-up/">http://insights.chitika.com/2012/ipad-still-leads-tablet-market-for-web-traffic-how-does-the-competition-stack-up/</a></p>
+<p class="ReferencesText">Stein, R., and N. Proctor. (2011). “TourML: An Emerging Specification for Museum Mobile Experiences.” In J. Trant and D. Bearman (eds.). <em>Museums and the Web 2011: Proceedings. </em>Toronto: Archives &amp; Museum Informatics. Published March 31, 2011. Consulted January 23, 2012. Available at: <a href="http://conference.archimuse.com/mw2011/papers/tourml_an_emerging_specification_for_museum_mobile">http://conference.archimuse.com/mw2011/papers/tourml_an_emerging_specification_for_museum_mobile</a></p>
+<div class="field nodereference field-paper-program-ref">
+                                <h3 class="label inline">Program Item Reference: </h3>
+          <div class="item inline odd"><a href="../programs/creating_a_mobile_app_ecosystem_the_genera_p.html">Creating a mobile app ecosystem - the Genera project for iOS</a></div>
+              </div>
+ <!-- /content-field -->
+  </div>
+  
+  <div class="article-meta">
+      <p class="submitted">Posted <em class="time">March 25, 2012 - 12:12am</em> by <em class="author"><a href="../../user/thesherrin.html" class="username" title="View Simon&#39;s profile.">Simon Sherrin</a></em></p>
+  
+    
+    </div>
+  
+  
+</div> <!-- /article --></div>
+
+        </div>

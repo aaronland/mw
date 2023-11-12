@@ -1,0 +1,505 @@
+<div id="main-content">
+          
+                      <div id="breadcrumb">
+              <h2 class="element-invisible">You are here:</h2>
+              <a href="../../mw2011.html">MW2011</a> » <a href="../sessions.html">Sessions</a> » <a href="../programs/computational_linguistics_in_museums_applica.html">Computational Linguistics in Museums: Applications for Cultural Datasets</a> »             </div> <!-- /breadcrumb -->
+              
+                      <div id="main-content-header" class="clear-block">
+              <h1 id="page-title">Computational Linguistics in Museums: Applications for Cultural Datasets </h1>                          </div>
+          
+          
+          <div id="content"><div id="article-14750" class="article article-promoted paper-article clear-block">
+
+    
+    <div class="article-detail clear-block">
+  <div class="node-edit-link" id="node-edit-link-14750"><ul class="links"><li class="0 first last active"><a href="computational_linguistics_in_museums_applicati.html" class="active">[View]</a></li>
+</ul>
+</div><div id="intro-paragraph">
+<h2 class="Author">Judith Klavans, University of Maryland; Robert Stein, Indianapolis Museum of Art; Susan Chun, Independent Consultant and Researcher; Raul David Guerra, University of Maryland, USA</h2>
+
+<h3 class="URL">Abstract</h3>
+<p class="AbstractText">This paper presents work of the <em>T3: Text, Tags, Trust</em> project, an interdisciplinary collaboration of computational linguists, computer scientists, indexing and information retrieval experts, and museum professionals from the University of Maryland and <em>Steve: The Museum Social Tagging Project</em>. The authors define some key problems for managing large-scale datasets, share tools and resources developed for the project, and describe ways that these resources can be deployed by museums without expertise in language processing. In addition, the paper examines some of the ways in which analysis of data collected by the <em>Steve</em> project builds on our understanding of the ways in which users see and describe our collections. The specific challenges of applying batch-processing tools and methods to large, unstructured datasets are addressed, best practices for dealing with a number of sticky issues are shared, and promising applications for future research and promising application areas are considered.</p>
+<p class="keywords">Keywords: computational linguistics, social tagging, steve.museum, collection access, text processing, metadata</p>
+</div>
+<p></p>
+<div id="body-text">
+<h2>1.   Introduction</h2>
+<p>As museums develop increasingly powerful tools for producing and publishing cultural data, many are beginning to face the challenge of optimizing a deluge of content for online visitors, while grappling with the requirement to organize and manage their growing datasets in local systems. And as they seek tools and methods for automating the management of information, both professional- and user-generated, they also hope to understand that information better. Museum professionals have begun to ask questions such as: how might user-generated comments be harvested and processed to determine the nature and meaning of the comment? Is it possible to use existing collection documentation as well as user-generated description to derive relations between similar objects? How can we train systems to automatically recognize (disambiguate) different meanings of the same word? Can automated language processing lead to more compelling browsing interfaces for online collections? Luckily, the field of computational linguistics brings a wealth of experience in dealing with complex data processing problems and a range of useful tools that can be applied to these problems to achieve practical, meaningful results.</p>
+<p>Content from museums is proliferating online, thanks to the development of an array of new tools for creating and publishing cultural information. The enthusiasm of museums for meeting their visitors on the Web does, however, bring new challenges for the cultural heritage community. The deluge of museum information that now floods the Internet – including collection metadata, images, label text, scholarly essays, audio/visual material, and educational resources – threatens to obscure the objects that form the heart of online collections and the rich information that museums create to interpret and contextualize them. Without tools and methods for filtering, categorizing, clustering, weighting, and disambiguating our expanding datasets, museums will face increasing difficulty in managing and organizing their online resources, while their visitors will struggle to locate and make use of them.</p>
+<p>The problem of optimizing museum content for searching and browsing is complicated by the fact that metadata varies in type, quality, and format. User-contributed tags – a new and promising category of metadata for describing and searching museum content – pose a particularly interesting problem. While they can provide valuable new access points for collections, with the potential to enhance searching, browsing, aggregation, and understanding of many types of media and Web content, they are also growing bodies of descriptive content that – because of their volume and lack of structure – can be difficult to employ without automated tools for normalizing, ranking, filtering, and categorizing them. The tools and methods of computational linguistics show potential as a way to solve some of the problems of organizing and disambiguating museum content.</p>
+<h2>2.   A collaboration between museums and computational linguists</h2>
+<p>This paper describes the work of the T3: Text, Tags, Trust project, an interdisciplinary initiative that brings together computational linguists, computer scientists, indexing and information retrieval specialists, and museum practitioners. The project&#39;s experimental goals are to examine the ways in which computational linguistic techniques can provide new insights into user-provided descriptions of museum collections; its practical goals are to test, develop, and report on methods for addressing the complex term-processing needs of museums. Although our work focuses on social tagging, which because of the volume and unstructured nature of its output presents unique problems, we believe that the tools and methods developed by the project team will be applicable to other types of information produced and managed by museums.</p>
+<p>In 2008, the members of <em>Steve: The Museum Social Tagging Project</em> published the final report of a two-year research project into the potential of social tagging for describing museum collections (Trant, 2009). The project&#39;s research found that tagging can significantly enhance museum documentation: 86% of all tags were new access points (i.e. not present in existing museum cataloguing data). Analysis of these new access points by museum staff indicated that the preponderance of tags – more than 88% – could be considered &#39;useful&#39; for searching. Inevitably, the project&#39;s success caused participants to wonder about how an ever-increasing body of tags would be managed by museums and led to the collaboration with the University of Maryland on the T3 project. The Steve project&#39;s original dataset of nearly 50,000 tags applied to 1,785 works (Steve Project, 2009) has proved a valuable research corpus and is the basis of most of the project&#39;s experimental work. Steve team members provide collection and subject-area knowledge and serve as the project&#39;s technical leads for developing and implementing the tools that support the project research.</p>
+<p>At the University of Maryland, a team of specialists with expertise in computational linguistics and information retrieval lead the project&#39;s research activities. The field of computational linguistics consists of developing computer-based methods to process language in ways that enable increased insights. Computational linguistics has been described as a hybrid field crossing theoretical and applied linguistics, cognitive science, computer science, engineering, sociology, anthropology, and psychology. In the context of T3, its methods, including morphological parsers, part-of-speech tagging, and disambiguation techniques, are being used to handle problems related to tag preprocessing and to support analysis of the corpus. The work of the UMD team is heavily informed by the work done by Principal Investigator Judith Klavans in the CLiMB (Computational Linguistics for Metadata Building) project, funded by the Andrew W. Mellon Foundation, which applied computational linguistic techniques to art historical texts to generate object-specific image metadata (Klavans, 2008, Klavans et al. 2009).</p>
+<p>The methodology of the T3 project is straightforward. The experimental tag corpus is made up of terms collected in the original Steve research project as well as their related images and museum-contributed metadata. Working with a known (and openly-licensed) data set allows for the easy evaluation of the efficacy of the term processing methods developed by the project team, as well as the analysis of the tags themselves. This analysis builds on the findings of the original Steve research project to provide new insights into tagger behavior and the value and nature of tags. Both research results and tools will ultimately be documented and released for discussion and use by members of the museum community.</p>
+<h2>3.   The problem of counting and disambiguating terms</h2>
+<p>While vast volumes of collection metadata provide potential access points for search, the volume and inherent ambiguity in language pose challenges to the support of browsing and unguided exploration, particularly for users who do not visit the online collection with a well-defined search query in hand. The purpose of sense disambiguation is to determine the specific meaning or sense of a word, when more than one meaning is possible. While the problem of ambiguity is limited for structured or fielded data such as cataloguing stored in a collections database, a considerable body of museum information – including label texts, publications, audio and video recordings, and, of course, tags – exists in unstructured formats. Resolving the problem of ambiguity is essential for museums wishing to provide useful access to collections via search or browsing. Understanding the correct sense of a term that has been applied to a collection object allows information managers to properly group terms for counting and weighting, or to cluster them by facet, a necessary prerequisite for building successful search and browsing environments.</p>
+<p>Consider the example taken from the Steve project dataset, of tags applied to the image <em>Vorhor, The Green Wave,</em> by George Lacombe. Note that the term &#34;gold,&#34; used both in the tagset and in text associated with the image, can refer either to the color &#34;gold&#34; or to the material &#34;gold.&#34; This is a regular lexical alternation that is common for materials and colors, as for example in &#34;ivory&#34; or &#34;turquoise,&#34; and is reflected in lexical resources such as WordNet (Fellbaum, 1998):</p>
+<blockquote>
+<p>gold (coins made of gold), a hyponym of &#34;precious metal&#34;</p>
+<p>amber, gold (a deep yellow color), a hyponym of &#34;yellow, yellowness&#34;</p>
+<p>Or for another resource, the Art and Architecture Thesaurus (AAT) (http://www.getty.edu/research/tools/vocabularies/aat/index.html):</p>
+<p>gold (metal) (&lt;gold and gold alloy&gt;, nonferrous metal, ... Materials (Hierarchy Name))</p>
+<p>gold (color) (&lt;variable yellow colors&gt;, &lt;yellow colors&gt;, ... Color (Facet))</p>
+</blockquote>
+<p class="caption"><span class="inline inline-center"><a href="../../image/klavans_j_et_al_computational_linguistics_in_museums_a.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/klavans.fig1_.preview.jpg" border="0" alt="Fig 1: Image, tags, and handbook text for Vorhor, The Green Wave, by George Lacombe, Indianapolis Museum of Art" title="Fig 1: Image, tags, and handbook text for Vorhor, The Green Wave, by George Lacombe, Indianapolis Museum of Art" width="520" height="390"/></a><span class="caption"><strong>Fig 1: Image, tags, and handbook text for Vorhor, The Green Wave, by George Lacombe, Indianapolis Museum of Art</strong></span></span></p>
+<p>Without applying disambiguation tools to the tagset, collection managers and end users have no way of knowing whether the term &#34;gold&#34; refers to the color or to the material. We will discuss some methods for resolving the sense of &#34;gold&#34; later in this paper.</p>
+<h2>4.   Tools and methods for processing and analyzing tags</h2>
+<p>Most linguistic methods for handling processing and disambiguation activities rely on a combination of processes. Some of these processes exist in ready-to-use toolkits that are freely available online; others may require custom development based on specialized local requirements. The T3 team has chosen to prioritize the testing, customization, and development of a core set of tools, described in this section, that support both the research priorities of team members, as well as general museum data management practices. To process our dataset, we deploy the various processes needed to normalize and analyze the project dataset in a pipeline architecture. Pipeline architectures are an efficient way to handle linguistic processing using computational methods. The pipeline approach involves performing each processing step, one step at a time, in a chain.</p>
+<table>
+<tbody>
+<tr>
+<th> </th>
+<th>Remove<br/> extra spaces</th>
+<th colspan="2">Check and process<br/> for punctuation</th>
+<th>Part of<br/> speech tagging<br/> with NLTK</th> 
+<th>Lemmatize<br/> with NLTK,<br/>Version 1</th> 
+<th>Lemmatize<br/>with NLTK,<br/>Version 2</th>
+</tr>
+<tr>
+<td>Example Pipeline A</td>
+<td>1</td>
+<td>2</td>
+<td colspan="2">3</td>
+<td>4</td>
+<td> </td>
+</tr>
+<tr>
+<td>Example Pipeline B</td>
+<td>1</td>
+<td> </td>
+<td colspan="2"> </td>
+<td>2</td>
+<td> </td>
+</tr>
+<tr>
+<td>Example Pipeline C</td>
+<td>1</td>
+<td> </td>
+<td colspan="2">3</td>
+<td> </td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p class="caption">Table 1: This example demonstrates three possible term-processing pipelines. Managers of datasets may choose from amongst available processes, and vary the order in which processes are applied, depending on their needs.</p>
+<h3>Fundamental computational linguistic concepts for tag preprocessing</h3>
+<p>As part of data preprocessing, all tags need to be tokenized – or segmented – into words or tokens. Although this may seem like a simple task, the notion of &#34;word&#34; is not always straightforward (Grefenstette and Tapanainen 1994 ). For example, an orthographic word in English is a string of characters with a white space at each end. The sentence, &#34;He has held five jobs&#34; can be tokenized into five orthographic words. However, what counts as a word-token in English is often arbitrary. For example, &#34;ice cream&#34; can be written as two words, separated by white space, or as &#34;ice-cream&#34; or &#34;icecream&#34;; with many prefixes in English, hyphenation is optional, e.g. &#34;multi-disciplinary&#34; or &#34;multidisciplinary.&#34; Decisions must be made about whether to treat a contraction such as &#34;she&#39;ll&#34; as two word tokens for later analysis as a subject and verb. Also, as part of tokenization, rules must be created for treating acronyms (e.g. should PIN be expanded to &#34;personal identification number&#34;), abbreviations, and now SMS usages (e.g. l8r for &#34;later&#34;). Often, the handling of these cases impacts subsequent processing in the pipeline.</p>
+<p>In addition, the notion &#34;word&#34; also includes a type-token distinction that is basic to computational linguistic analysis. A citation form, or lemma, represents a base-form of morphological variation. For example, the lemma or citation form for &#34;is, was, were, being, etc.&#34; is &#34;be,&#34; the verb&#39;s base infinitive form. For nouns, the base is the form stripped of any morphological suffixation: &#34;dog&#34; is the base of &#34;dog, dogs&#34; and &#34;child&#34; is the base of &#34;child, children.&#34;</p>
+<p>We describe these complexities in order to establish some of the questions that need to be addressed in the computational analysis of tags. In the initial analysis of the Steve tagset, there were 49,767 tokens. Without a survey of the preprocessing requirements of this dataset, further analysis of each token into types could not be performed. The next section of this paper describes the initial preprocessing of the tagset, and decisions made on tokenization. Results of subsequent morphological analysis of the data show how many types or lemmatized base forms actually were present in the dataset.</p>
+<h3>Preprocessing anomalies, white space, and punctuation</h3>
+<p>In order to initiate tag preprocessing to determine the base words, a series of steps that reflect the linguistic complexities described above must be undertaken. This includes making decisions about handling the range of anomalous characters occurring in tags, among them white spaces, character returns, and punctuation. After removing white spaces and character returns – a relatively easy process – the first step involving analysis and decision-making is the handling of punctuation. Of the nearly 50,000 tags in the Steve tagset, more than 900 had punctuation marks by token and 500 by type. The punctuation marks included the expected exclamation (!) and question marks (?) but also asterisks (*), hyphens (-), square brackets ([ ]), parentheses, dollar signs ($), slashes (/) and semi-colons (;). Some examples from the tagset are found in Figure 2. The project team hypothesized that the presence of punctuation could inform the likely usefulness of a tag for describing a work. This issue does not arise in preprocessing of running text as it does in tagging. To our knowledge, no in-depth study of the appearance of punctuation for analysis of tag quality has been published before.</p>
+<table>
+<tbody>
+<tr>
+<th>Punctuation</th> <th>Examples</th> <th>Punctuation</th> <th>Examples</th>
+</tr>
+<tr>
+<td>parentheses</td>
+<td>colored stone (extravagant)</td>
+<td>quotes</td>
+<td>&#34;infant, child&#34;</td>
+</tr>
+<tr>
+<td> </td>
+<td>3 evil (monkeys)</td>
+<td> </td>
+<td>&#34;old horse,&#34;</td>
+</tr>
+<tr>
+<td> </td>
+<td>tie (neckware)</td>
+<td> </td>
+<td>&#34;dark skies&#34;</td>
+</tr>
+<tr>
+<td>ampersand</td>
+<td>down&amp;out</td>
+<td>underscore</td>
+<td>lion_face</td>
+</tr>
+<tr>
+<td> </td>
+<td>woman &amp; child</td>
+<td> </td>
+<td>fur_coat</td>
+</tr>
+<tr>
+<td> </td>
+<td>red &amp; black diamond decoration</td>
+<td> </td>
+<td>red_dress</td>
+</tr>
+<tr>
+<td>asterisk</td>
+<td>*if only he know who she is</td>
+<td>hyphen</td>
+<td>full-length</td>
+</tr>
+<tr>
+<td> </td>
+<td>*man want to kill</td>
+<td> </td>
+<td>pince-nez</td>
+</tr>
+<tr>
+<td> </td>
+<td>egypt*</td>
+<td> </td>
+<td>multi-colored</td>
+</tr>
+<tr>
+<td>square bracket</td>
+<td>ink on [paper</td>
+<td>question mark</td>
+<td>not a harp lute?</td>
+</tr>
+<tr>
+<td> </td>
+<td>flower [pots</td>
+<td> </td>
+<td>look egyptian?</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>bell?</td>
+</tr>
+<tr>
+<td>exclamation</td>
+<td>arg!</td>
+<td>apostrophe</td>
+<td>bird&#39;s eye view</td>
+</tr>
+<tr>
+<td> </td>
+<td>ugly!</td>
+<td> </td>
+<td>object d&#39;art</td>
+</tr>
+<tr>
+<td> </td>
+<td>I like this gold statue!</td>
+<td> </td>
+<td>white man&#39;s &#39;fro</td>
+</tr>
+<tr>
+<td> </td>
+<td>You are here!</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>sexy!</td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p class="caption">Table 2. Examples of tags with punctuation</p>
+<p>We examined the 900 punctuated items to determine the best way to handle these tags as part of the preprocessing routine and, based on our assessment, developed a preprocessing method that included removing punctuation such as &#34;?&#34; or &#34;!!!&#34; while retaining the tags; keeping all hyphens (e.g. &#34;still-life&#34;) as is; removing all commas at the end of any tag (since many people just insert commas as part of list-making style). If there is a comma in the middle of a phrase, we check in discipline-specific vocabularies such as the Thesaurus of Geographic Names (TGN) (<a href="http://www.getty.edu/research/tools/vocabularies/tgn/index.html">http://www.getty.edu/research/tools/vocabularies/tgn/index.html</a>) or Union List of Artist Names (ULAN) (<a href="http://www.getty.edu/research/tools/vocabularies/ulan/index.html">http://www.getty.edu/research/tools/vocabularies/ulan/index.html</a>) to see if the tag represents an artist&#39;s name or geographical location. If so, we keep the phrase as it is, but if not, remove the comma, tokenize each word, and count them as separate tags. If there is more than one period in sequence, we remove all, keeping the tag as is. For phrases with a period in the middle, or just one period at the end, we keep the tag as is (as in &#34;St. Luke, 21st Cen.&#34;). Tags containing underscores are divided into two words and ampersands are considered to be a substitution for the word &#34;and&#34; in the tag. Of the 900 tokens, more than 600 were preprocessed in this way and retained as potentially useful access points. At the same time, one-third of the tags with punctuation were deemed not useful and removed, resulting in a cleaner tagset.</p>
+<h3>Lemmatization and stemming</h3>
+<p>While analyzing tags, it may be desirable to conflate tags related to the same topic rather than counting them as distinct tags. To conflate tags, we perform morphological preprocessing. Morphological preprocessing consists of removing suffixes (for English) to identify a canonical representative for a set of related word forms. Lemmatization and stemming are different types of morphological normalization. There is, however, a fundamental difference between lemmatization and stemming which is crucial to the computational linguistic analysis that is performed in the T3 project (Klavans and Tzoukermann 1992).</p>
+<p>Stemming is a relatively simple and efficient process that maps word forms to a stem. It is a deterministic process that has one solution only, with no ability to verify that the produced stem is a correct lemma of the language. Stemming reduces a word to its stem or root by truncating the word following a set of rules.</p>
+<p>A more sophisticated process than stemming, lemmatization maps word forms to their lemma; for example, &#34;believable&#34; maps to &#34;believe,&#34; and &#34;is&#34; maps to &#34;be.&#34; Lemmatization uses rules for the most regular word patterns, but uses a look-up table for the irregular patterns, allowing for the grouping of irregular forms and other variations not recognized in stemming. Thus, to refer to the example in the previous section, although the lemma or citation form for &#34;is, was, were, being, etc.&#34; is &#34;be,&#34; the verb&#39;s base infinitive form, a stemmer would be unable to relate all these forms, and would only identify those related by the character string &#34;being&#34; and &#34;be.&#34;</p>
+<p>Lemmatizing goes farther than stemming to produce an existing word as the base form. To achieve this, lemmatizers use information collected to aid the process, including most likely Part of Speech for a given string (e.g. &#34;shadow&#34; is more likely to be a noun in English than a verb) and lexical databases such as WordNet.</p>
+<p>Both stemmers and lemmatizers have pros and cons. Computationally, stemmers are faster because they do not depend on external databases or on other pre-processing methods like Part of Speech tagging. However, stemmers can produce errors due to overstemming and understemming. An example of understemming happens if &#34;adhere&#34; and &#34;adhesion&#34; are not conflated after stemming (from <a href="http://www.comp.lancs.ac.uk/computing/research/stemming/">http://www.comp.lancs.ac.uk/computing/research/stemming/</a>). An example of overstemming is the conflation of &#34;experience&#34; and &#34;experiment&#34; (from <a href="http://www.comp.lancs.ac.uk/computing/research/stemming/">http://www.comp.lancs.ac.uk/computing/research/stemming/</a>). Irregular forms are generally better handled by lemmatizers. Stemmers truncate and often incorrectly add a best-guess vowel. For example, the Porter Stemmer changes the tag &#34;scary&#34; into &#34;scari.&#34;</p>
+<h4>Creating an evaluation corpus</h4>
+<p>To test the correctness of the stemmers and lemmatizers, 201 one-word tags were chosen at random from the Steve data. These 201 one-word tags were annotated by hand with their base form (or two different base forms if the base form was ambiguous). Only two pairs of tags in the 201 were ambiguous: &#34;painting&#34; and &#34;painted,&#34; and &#34;facing&#34; and &#34;face.&#34; Five different tools were then run on the 201 tags. Tools tested include the Porter (Porter, 1980), Lovins (Lovins, 1968), and Lancaster (Paice, 1977) Stemmers, MorphAdorner (<a href="http://morphadorner.northwestern.edu/morphadorner/download/morphadorner.pdf">http://morphadorner.northwestern.edu/morphadorner/download/morphadorner.pdf</a>), and the Morphy Lemmatizer (public version at http://wordnet.princeton.edu/man/morphy.7WN.html). Output from the different analyzers was compared to the gold standard and the number of tags correctly analyzed tallied to determine which analyzer performed best for this corpus.</p>
+<h4>Results of testing</h4>
+<p>As expected, we saw a significant difference between stemming or lemmatizing and doing nothing to the tags. Since most of the nouns in the evaluation set were regular, stemmers performed better than might be expected. However, based on the results of these experiments, the T3 project chose to employ the Morphy lemmatizer, which is an element of the Natural Language Toolkit (NLTK) (Bird et al. 2009). NLTK is a Creative-Commons-licensed open source project originally launched at the University of Pennsylvania and chosen for its completeness, availability, and accessible documentation. Its software infrastructure contains the basic routines needed to process language, including part of speech tagging, morphological analysis, chunking into phrases, and frequency analysis of many varieties. These routines are generally applied to full text consisting of sentences; in the T3 project, tags are the data, which required some adaptation of NLTK.</p>
+<h3>Normalization and morphology: results</h3>
+<p>The first step in analyzing the tagset was to analyze a selection of tags of differing lengths to determine processing requirements. To do this, we created a set of files with tags consisting of single words, two words, three words, and so on. A survey of multi-word tags suggested that further preprocessing would be useful before submitting the tag list for morphological analysis. What we observed was that two- and three- word terms could be reduced by eliminating the set of words known as &#34;function words&#34; in English. Function words are sometimes called stop words, but there is a subtle distinction. Function words refer to the list of words that cannot undergo morphological analysis; they serve as connectors for content words. In contrast, &#34;content words&#34; are those that hold meaning and can undergo morphological variations. Within a given domain (such as museums), words that are highly frequent (such as &#34;art&#34;) are often added to a stopword list, but this does not always correspond to the notion of function word.</p>
+<p>Table 3 shows examples of raw tags of differing lengths, illustrating the two-step normalization process.</p>
+<table style="width: 433px;">
+<tbody>
+<tr>
+<th>Tag<br/>Length</th> <th>Raw<br/>Tag</th> <th>After<br/> Preprocessing</th> <th>After<br/>Lemmatization</th>
+</tr>
+<tr>
+<td>1-word tags</td>
+<td>columns</td>
+<td>columns</td>
+<td>column</td>
+</tr>
+<tr>
+<td> </td>
+<td>folds</td>
+<td>folds</td>
+<td>fold</td>
+</tr>
+<tr>
+<td>2-word tags</td>
+<td>route 66</td>
+<td>route</td>
+<td>route</td>
+</tr>
+<tr>
+<td> </td>
+<td>bright colors</td>
+<td>bright colors</td>
+<td>bright color</td>
+</tr>
+<tr>
+<td>3-word tags</td>
+<td>flowers on table</td>
+<td>flowers table</td>
+<td>flower table</td>
+</tr>
+<tr>
+<td> </td>
+<td>two sad girls</td>
+<td>two sad girls</td>
+<td>two sad girls</td>
+</tr>
+<tr>
+<td>4-word tags</td>
+<td>End of the Day</td>
+<td>end day</td>
+<td>end day</td>
+</tr>
+<tr>
+<td> </td>
+<td>red rosette in centre</td>
+<td>red rosette centre</td>
+<td>red rosette centre</td>
+</tr>
+<tr>
+<td> </td>
+<td>lonely guests in lobby</td>
+<td>lonely guests lobby</td>
+<td>lonely guest lobby</td>
+</tr>
+</tbody>
+</table>
+<p class="caption">Table 3: Tag Normalization. Column 1 provides a description of raw tags by length (one word, two words, etc.). Column 2 shows raw tags, before any normalization. The first normalization steps are to remove punctuation and white spaces, omitted here for brevity. The next step is to remove function words, shown in column 3. Lemmatization is then performed in order to determine base forms, as described above. The final results of this computational linguistic processing are shown in column 4.</p>
+<p>Table 4 shows the frequency of tags before and after normalization.</p>
+<table style="width: 432px;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<th> </th> <th>Number of<br/>Raw Tags<br/>by Token</th> <th>Number of<br/>Raw Tags<br/>by Type</th> <th>Number of<br/>Normalized Tags<br/>by Type</th>
+</tr>
+<tr>
+<td>1-word tags</td>
+<td>39337</td>
+<td>9644</td>
+<td>7690</td>
+</tr>
+<tr>
+<td>2-word tags</td>
+<td>8796</td>
+<td>5965</td>
+<td>5511</td>
+</tr>
+<tr>
+<td>3-word tags</td>
+<td>1245</td>
+<td>1152</td>
+<td>1117</td>
+</tr>
+<tr>
+<td>4-word tags</td>
+<td>232</td>
+<td>230</td>
+<td>227</td>
+</tr>
+<tr>
+<td>Other</td>
+<td>157</td>
+<td>11</td>
+<td>41</td>
+</tr>
+<tr>
+<td>All Tags</td>
+<td>49767</td>
+<td>17102</td>
+<td>14586</td>
+</tr>
+</tbody>
+</table>
+<p class="caption">Table 4: Tag frequency by raw token and by type, before and after normalization</p>
+<p>The frequencies in Table 4 relate to the processing detailed in Table 3. As in Table 3, the first column indicates tag length. Column 2 in Table 4 is a count of all raw tags by token. For example, if the tagset for an image includes &#34;man, woman, man, tree, blue, green, trees&#34; the raw tag count by token is seven (7). The raw tag count by type is six (6), since there are two occurrences of &#34;man.&#34; After normalization, the count is five (5) since &#34;tree&#34; and &#34;trees&#34; are now normalized to the base form &#34;tree.&#34;</p>
+<p>The data in Tables 3 and 4 are significant in that they represent the impact of normalization on statistical analysis of tags and their occurrence. Consider the fact that the sheer number of raw tags by token (the number used in Trant 2009) vs. the number of tags by type is reduced from 39,337 to 9,644, which is nearly a 75% reduction. Adding simple preprocessing and lemmatization reduces that number to 7690, meaning that the reduction is closer to 80%. Phrased differently, of the original number of tags considered in the Steve project, after minimal normalization, only one of five tags represents a single tag by type. The implications of this finding are potentially highly significant since the computations in the original Steve research did not take tag conflations into account. In our next phase of work, evaluations of these implications will be undertaken in order to provide a fuller view of tag frequency.</p>
+<p>The data in Table 4 also show that approximately one in five tags consist of more than one word. Of these multi-word tags, most (about 85%) are two-word terms. One of the most interesting studies of the next phase of the T3 project is an analysis of multi-word tags by part of speech to determine which two word possibilities, for example, adjective-noun, noun-noun, verb-adverb, occur most frequently. Related to this study will be an analysis of the types of adjectives (color, size) and nouns (person, object) used, and the frequency of their application to particular image type. Identifying patterns in part of speech pairings, term type, and/or object type could lead to practical applications for weighting and filtering the most meaningful two-word terms.</p>
+<p>Table 5 shows the frequencies of tags for the Jizo Bosatsu image shown below and provides a total count of adding all of the frequencies for raw tags and adding all of the frequencies for normalized tags for all images.</p>
+<p class="caption c1"><span class="inline inline-center"><a href="../../image/klavans_j_et_al_computational_linguistics_in_museums_0.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/klavans.fig2_.preview.jpg" border="0" alt="Fig 2: Kshitigarbha Bodhisattva (Jizo Bosatsu), Indianapolis Museum of Art" title="Fig 2: Kshitigarbha Bodhisattva (Jizo Bosatsu), Indianapolis Museum of Art" width="280" height="520"/></a><span class="caption"><strong>Fig 2: Kshitigarbha Bodhisattva (Jizo Bosatsu), Indianapolis Museum of Art</strong></span></span></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<th> </th> <th>Raw Tags for<br/> One Image</th> <th>Count of<br/>Raw Tags<br/> by Token</th> <th>Count of<br/>Raw Tag<br/>by Type<br/>before<br/>Normalization</th> <th>Tags<br/>Normalized<br/>by Type</th> <th>Count of<br/>Normalized<br/>Tags</th>
+</tr>
+<tr>
+<td>For Jizo Bosatsu</td>
+<td>serene</td>
+<td>11</td>
+<td>10</td>
+<td>serene</td>
+<td>9</td>
+</tr>
+<tr>
+<td> </td>
+<td>sceptre</td>
+<td> </td>
+<td> </td>
+<td>sceptre</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>Buddhist</td>
+<td> </td>
+<td> </td>
+<td>buddhist</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>Buddhist</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>sage</td>
+<td> </td>
+<td> </td>
+<td>sage</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>Japanese</td>
+<td> </td>
+<td> </td>
+<td>japanese</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>wood</td>
+<td> </td>
+<td> </td>
+<td>wood</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>lotus</td>
+<td> </td>
+<td> </td>
+<td>lotus</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>a sceptre</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>contemplative</td>
+<td> </td>
+<td> </td>
+<td>contemplative</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>Heian period</td>
+<td> </td>
+<td> </td>
+<td>Heian period</td>
+<td> </td>
+</tr>
+<tr>
+<td>For all works</td>
+<td> </td>
+<td>49767</td>
+<td>41885</td>
+<td> </td>
+<td>40351</td>
+</tr>
+</tbody>
+</table>
+<p class="caption">Table 5: Tag frequency by raw token and by type before and after normalization. Column 2 shows the set of raw tags for this image. Column 3 shows the count of raw tags by token. Column 4 shows the count of raw tags by type, since there are two occurrences of &#34;Buddhist.&#34; Column 5 shows the set of tags by type after normalization. Column 6 provides the count for the normalized tags in Column 5, since there are now two occurrences of &#34;sceptre.&#34;</p>
+<p>Note that there are 49,767 raw tags corresponding to 1785 images. Since Table 5 is computed over each image, and normalized per image, the frequencies in the &#34;All Images&#34; row differ from those in Table 4. In contrast, in Table 4, for the row entitled &#34;All Tags,&#34; each normalized tag is only counted once, and thus the frequencies differ. For example, the image of the Jizo Bosatsu has been tagged &#34;Buddhist&#34; two times. Thus, this tag is counted only once for this image. However, if another image has also been tagged &#34;Buddhist,&#34; then the tag count is two; i.e., one normalized tag for each image. On the other hand, for Table 4, all tags are considered as one large set of tags, with normalization and removal of repeating tags over this entire set. Thus, in this example, &#34;Buddhist&#34; would only be counted as one occurrence.</p>
+<h3>Sense disambiguation: determining the meaning of a tag</h3>
+<p>While disambiguation as a task has a long history in computational linguistics, the impact of word sense distinctions in tags is just beginning to be explored. Applying known computational linguistic techniques to tags describing artworks provides insight into the value of these techniques, including the concept-climbing method demonstrated in Lesk (1986) and other lexical, supervised, unsupervised, and semi-supervised methods summarized in Navigli (2009).</p>
+<p>Lesk demonstrated that concept-climbing, or moving up a thesaural tree to discover the possible concepts to which a term could belong, could serve as a basis for disambiguation. For dictionaries, this could mean looking at the head term of a definition in a semi-structured entry, as in the following from Merriam Webster (www. Merriam-webster.com):</p>
+<p class="BlockQuote"><strong>mouse</strong> (n) any of numerous small rodents (as of the genus Mus) with pointed snout, rather small ears, elongated body, and slender tail</p>
+<p class="BlockQuote"><strong>mouse</strong> (n) a small <a href="http://www.merriam-webster.com/dictionary/mouse?show=0&amp;t=1292538477">mobile</a> manual device that controls movement of the cursor and selection of functions on a <a href="http://www.merriam-webster.com/dictionary/mouse?show=0&amp;t=1292538477">computer</a> display</p>
+<p>where the hypernym of &#34;mouse&#34; is shown in italics as &#34;<em>rodent&#34;</em> or <em>&#34;device.&#34;</em></p>
+<p>Preliminary work in lexical-matching, as well as thesaural concept-matching of tags, was performed on the Steve tag corpus during the 2006 <em>Exploring Social Tagging</em> project, and is reported in Trant (2009). The T3 project team plans to extend this work by producing detailed reports of the number of reported senses for tags in the corpus when matched against a wide range of lexical resources, including WordNet and the Art and Architecture Thesaurus, but also the New York Times, Wikipedia, and Library of Congress subject headings, and linked data repositories such as Freebase.</p>
+<p>The image provided in Figure 1 provides an example of disambiguation by drawing on related text (in this case, a published description of an artwork) and using existing computational linguistic techniques. The fact that the tag cloud contains terms such as &#34;yellow&#34; and &#34;color&#34; and the text contains &#34;color scheme&#34; will, using existing disambiguation techniques, tip an algorithm to guess the color sense, rather than the material sense, of &#34;gold,&#34; since both terms appear in proximity in the text as well as the tagset. Both lexical techniques and unsupervised methods will utilize these facts to make a correct guess on usage. However, this is a simplification of the actual situation. In fact, WordNet contains five noun and two adjective senses, and more than one could apply to this tag. The term &#34;gold&#34; appears in 43 different entries in the AAT, in different places in the faceted hierarchy, and with different hypernyms, including &#34;Living Organism&#34; as in &#34;gold fish&#34; and in &#34;Processes and Techniques&#34; as in &#34;gold writing.&#34; To further disambiguate the term would likely require additional processes, some of which the project team is exploring in its current work on disambiguation, which looks for contextual clues provided by artworks and their metadata that are not normally considered in text-based disambiguation algorithms.</p>
+<p>Two particularly promising experiments include a study of clustering techniques using machine learning and experiments with eye-tracking which may yield valuable clues about tag order and its relationship to term type. The first project seeks to develop methods for automatically sorting tags into meaningful categories; the initial test seeks to develop algorithms for sorting tags from the Steve corpus into Panofsky/Shatford categories (Eleta et al., 2010). A second project relies on data from eye-tracking studies to identify interrelationships between tag order, object type, and term type (Golbeck, 2011).</p>
+<p>While a definitive automated-disambiguation of terms seems unlikely, practical methods such as these offer important improvements in the probability distribution of possible senses. Significant shifts in this distribution can be used in information-retrieval systems as best-guess facets for clustering and browsing that improve upon the naïve approaches commonly used for museum collection websites.</p>
+<h2>5.   Next Steps – Conclusion</h2>
+<p>This paper provides an overview of common challenges encountered by museums managing a proliferation of online content; it describes some of the complex lexical issues encountered when processing datasets of tags. Several methods proposed here offer improvements to current practice for museum information systems, and for tag datasets provide a mechanism for data reduction and hierarchical clustering that can be used in a variety of ways. Museums that collect large numbers of user-generated tags will find these methods valuable when attempting to integrate these tags into a larger system of information retrieval for online collections.</p>
+<p>While the number of museums with tag datasets has increased significantly in the last several years due to the efforts of the Steve project, other kinds of collection documentation are far more likely to be found in online collections. Object labels, gallery didactics, and catalogue entries are common kinds of documentation for many types of collecting and non-collecting museums. And though many of these documents are currently indexed by collection search engines, they are infrequently used as sources for categorical facets or browsing interfaces. As with tags, the application of computational techniques to the extraction, normalization, and disambiguation of terms contained in these resources can provide useful avenues of access to an array of rich content. Methods outlined in this text – applied and tested on datasets of tags – hold promise for similar applications across a wide variety of collection documentation.</p>
+<h2>6.    Acknowledgments</h2>
+<p class="AcknowedgementsText">The research and ideas described in this paper are the result of a collaboration between members of the T3 project team at the University of Maryland and members of <em>Steve: The Museum Social Tagging Project</em>. Team members who have contributed to the project&#39;s experimental design, execution, analysis, and tools development include past and present colleagues at the University of Maryland, especially T3 co-PI Jen Golbeck, Dagobert Soergel, and Rebecca LaPlante, as well as Steve project team members, including T3 Lead Developer Ed Bachta, Charlie Moad, Kyle Jaebker, and all of the members of the project&#39;s Museums Working Group, listed at <a href="http://www.umiacs.umd.edu/research/t3/people.shtml">http://www.umiacs.umd.edu/research/t3/people.shtml</a>. The authors and project team are particularly grateful to the U.S. Institute of Museum and Library Services for the National Leadership Grants that have funded both the T3 research and the Steve project.</p>
+<h2>7.    References</h2>
+<p class="ReferencesText">Bird, S., E. Klein, and E. Loper. (2009). <em>Natural Language Processing with Python: Analyzing Text with the Natural Language Toolkit</em>. Sebastopol, CA: O&#39;Reilly Media.</p>
+<p class="ReferencesText">Eleta, I., B. Emmerling, J. Koepfler, and R. LaPlante. (2010). &#34;Jesus and the Jimson Weed: How do we derive meaning from tags, text, and queries to support improved image access?&#34; Poster presented at the Grace Hopper Women in Computing Conference, Atlanta.</p>
+<p class="ReferencesText">Fellbaum, C., ed. (1998). <em>Wordnet: An Electronic Lexical Database</em>. Cambridge: The MIT Press.</p>
+<p class="ReferencesText">Golbeck, J., J. Koepfler, and B. Emmerling. (2011). &#34;An Experimental Study of Social Tagging Behavior and Image Content.&#34; Accepted for future publication in <em>Journal of the American Society for Information Science and Technology (JASIST)</em>.</p>
+<p class="ReferencesText">Grefenstette, G. and P. Tapanainen. (1994). What is a word, what is a sentence? Problems of tokenization. In <em>3rd Conference on Computational Lexicography and Text Research</em>, Budapest: COMPLEX&#39;94.</p>
+<p class="ReferencesText">Klavans, J. (2008). Computational Linguistics for Metadata Building: Final Report 2004-2008. Available at <a href="http://www.umiacs.umd.edu/~climb/publications/CLiMB_Final_Report_2008.pdf">http://www.umiacs.umd.edu/~climb/publications/CLiMB_Final_Report_2008.pdf</a></p>
+<p class="ReferencesText">Klavans, J., C. Sheffield, E. Abels, J. Lin, R. Passonneau, T. Sidhu, and D. Soergel. (2009). &#34;<a href="http://www.springerlink.com/content/e24q089137573p41">Computational Linguistics for Metadata Building (CLiMB): Using Text Mining for the Automatic Identification, Categorization, and Disambiguation of Subject Terms for Image Metadata.</a>&#34; <em>Journal of Multimedia Tools and Applications</em>, 42(1), 115-138.</p>
+<p class="ReferencesText">Klavans, J. and E. Tzoukermann. (1992). &#34;Morphology.&#34; In S. Shapiro, ed. <em>Encyclopedia of Artificial Intelligence</em>. New York: John Wiley and Sons, 963-972.</p>
+<p class="ReferencesText">Lesk, M. (1986). &#34;Automatic sense disambiguation using machine readable dictionaries: how to tell a pine cone from an ice cream cone.&#34; In <em>SIGDOC 1986: Proceedings of the 5th annual international conference on systems documentation</em>. New York: ACM. 24-26.</p>
+<p class="ReferencesText">Lovins, J. B. (1968). &#34;Development of a stemming algorithm.&#34; <em>Mechanical Translation and Computational Linguistics</em> 11, 22-31.</p>
+<p class="ReferencesText">Navigli, R. (2009). &#34;Word sense disambiguation: a survey.&#34; <em>ACM Computing Surveys</em> 41(2), 1-69.</p>
+<p class="ReferencesText">Paice, C.D. (1977). <em>Information Retrieval and the Computer</em>. London: Macdonald and Jane&#39;s.</p>
+<p class="ReferencesText">Porter, M.F. (1980). &#34;An algorithm for suffix stripping.&#34; <em>Program</em> 14(3), 130−137.</p>
+<p class="ReferencesText">Steve: The Museum Social Tagging Project (2009). Research data. Available from <a href="http://verne.steve.museum/steve-data-release.zip">http://verne.steve.museum/steve-data-release.zip</a></p>
+<p class="ReferencesText">Trant, J. (2009). Tagging, Folksonomy, and Art Museums: Results of steve.museum&#39;s research. Available: <a href="http://museumsandtheweb.com/files/trantSteveResearchReport2008.pdf">http://museumsandtheweb.com/files/trantSteveResearchReport2008.pdf</a></p>
+</div>
+<div id="citation">
+<h4>Cite as:</h4>
+<p class="references">Klavans, J., et al., Computational Linguistics in Museums: Applications for Cultural Datasets. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2011: Proceedings</em>. Toronto: Archives &amp; Museum Informatics. Published March 31, 2011. Consulted
+<script type="text/javascript">// <![CDATA[
+      // current date - based on http://rainbow.arch.scriptmania.com/scripts
+      // Array of day names
+      var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+      var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+      var dt = new Date();
+      var y  = dt.getYear();
+
+      // Y2K compliant
+      if (y < 1000) y +=1900;
+
+      document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+                       //
+// ]]></script>
+http://conference.archimuse.com/mw2011/papers/computational_linguistics_in_museums</p>
+</div>
+<div id="copyright"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img class="c2" src="../../files/images/cc-88x31.png" border="0" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License" width="88" height="31"/></a>
+<p>Copyright © 2011 – Archives &amp; Museum Informatics.</p>
+</div><div class="field nodereference field-paper-program-ref">
+                                <h3 class="label inline">Program Item Reference: </h3>
+          <div class="item inline odd"><a href="../programs/computational_linguistics_in_museums_applica.html">Computational Linguistics in Museums: Applications for Cultural Datasets</a></div>
+              </div>
+ <!-- /content-field -->
+  </div>
+  
+  <div class="article-meta">
+      <p class="submitted">Posted <em class="time">March 27, 2011 - 1:52pm</em> by <em class="author"><a href="../../user/schun.html" class="username" title="View Susan&#39;s profile.">Susan Chun</a></em></p>
+  
+    
+  <ul class="taxonomy"><li><a href="../../conferences/mw/mw2011.html" rel="tag" title="Museums and the Web 2011">MW2011</a></li><li><a href="../../paper_keywords/collectionaccess.html" rel="tag" title="">collection access</a></li><li><a href="../../paper_keywords/computational_linguistics.html" rel="tag" title="">computational linguistics</a></li><li><a href="../../paper_keywords/metadata_0.html" rel="tag" title="">metadata</a></li><li><a href="../../paper_keywords/social_tagging.html" rel="tag" title="">social tagging</a></li><li><a href="../../paper_keywords/stevemuseum.html" rel="tag" title="">steve.museum</a></li><li><a href="../../paper_keywords/text_processing.html" rel="tag" title="">text processing</a></li></ul>  </div>
+  
+  
+</div> <!-- /article --></div>
+
+        </div>

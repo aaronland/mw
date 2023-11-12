@@ -1,0 +1,829 @@
+<html><!-- InstanceBegin template="/Templates/mw2004-papers.dwt" codeOutsideHTMLIsLocked="false" --><!-- Mirrored from www.museumsandtheweb.com/mw2004/papers/richardson/richardson.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:44:45 GMT --><head>
+<!-- #BeginEditable "doctitle" -->
+<title>Museums and the Web 2004 : Papers : Richardson et al., Bits &amp; bolts to Bits and Bytes ... </title>
+<!-- #EndEditable --> 
+<meta name="keywords" content="Museums and the Web 2004, Archives &amp; Museum Informatics, museums online, on-line, cultural heritage online, museum digitization, internet, conference, symposium, workshop, meeting, international, papers, presentations, multimedia, interactive, education, exhibits, evaluation, virtual reality, digitization, information architecture, information design, interface design, digital library, digital libraries "/>
+<!-- #BeginEditable "page keywords" -->
+<meta name="keywords" content="quilts, American History, digital library, digital repository, distributed systems, collaboration, open source"/>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="/>
+<!-- #BeginEditable "script" --><!-- #EndEditable --> 
+<link rel="stylesheet" href="../../../mw2003/Library/mw2003.css" type="text/css"/>
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" background="../../../mw2002/images/mw2002.bg.gif" text="#000000" link="#660099" vlink="#000066" onload="MM_preloadImages(&#39;../../images/nav/register_on.gif&#39;,&#39;../../images/nav/workshops_on.gif&#39;,&#39;../../images/nav/sessions_on.gif&#39;,&#39;../../images/nav/speakers_on.gif&#39;,&#39;../../images/nav/interactions_on.gif&#39;,&#39;../../images/nav/demos_on.gif&#39;,&#39;../../images/nav/exhibits_on.gif&#39;,&#39;../../images/nav/events_on.gif&#39;,&#39;../../images/nav/best_on.gif&#39;,&#39;../../images/nav/dates_on.gif&#39;,&#39;../../images/nav/local_on.gif&#39;,&#39;../../images/nav/sponsors_on.gif&#39;)">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tbody><tr> 
+    <td width="145" align="LEFT" valign="TOP"> 
+      <p><a href="../../index.html"><img src="../../images/mw.gif" width="112" height="155" border="0" alt="/mw/"/></a></p>
+      <p> <a href="../../register/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;register&#39;,&#39;&#39;,&#39;../../images/nav/register_on.gif&#39;,1)"><img name="register" border="0" src="../../images/nav/register_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../workshops/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;workshops&#39;,&#39;&#39;,&#39;../../images/nav/workshops_on.gif&#39;,1)"><img name="workshops" border="0" src="../../images/nav/workshops_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../sessions/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;sessions&#39;,&#39;&#39;,&#39;../../images/nav/sessions_on.gif&#39;,1)"><img name="sessions" border="0" src="../../images/nav/sessions_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../speakers/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;speakers&#39;,&#39;&#39;,&#39;../../images/nav/speakers_on.gif&#39;,1)"><img name="speakers" border="0" src="../../images/nav/speakers_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../interact/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;interactions&#39;,&#39;&#39;,&#39;../../images/nav/interactions_on.gif&#39;,1)"><img name="interactions" border="0" src="../../images/nav/interactions_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../demos/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;demonstrations&#39;,&#39;&#39;,&#39;../../images/nav/demos_on.gif&#39;,1)"><img name="demonstrations" border="0" src="../../images/nav/demos_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../exhibit/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;exhibits&#39;,&#39;&#39;,&#39;../../images/nav/exhibits_on.gif&#39;,1)"><img name="exhibits" border="0" src="../../images/nav/exhibits_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../events/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;events&#39;,&#39;&#39;,&#39;../../images/nav/events_on.gif&#39;,1)"><img name="events" border="0" src="../../images/nav/events_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../best/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;best&#39;,&#39;&#39;,&#39;../../images/nav/best_on.gif&#39;,1)"><img name="best" border="0" src="../../images/nav/best_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../dates/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;dates&#39;,&#39;&#39;,&#39;../../images/nav/dates_on.gif&#39;,1)"><img name="dates" border="0" src="../../images/nav/dates_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../local/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;local&#39;,&#39;&#39;,&#39;../../images/nav/local_on.gif&#39;,1)"><img name="local" border="0" src="../../images/nav/local_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../sponsor/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;sponsors&#39;,&#39;&#39;,&#39;../../images/nav/sponsors_on.gif&#39;,1)"><img name="sponsors" border="0" src="../../images/nav/sponsors_off.gif" width="112" height="18"/></a> 
+        <br/>
+        <br/>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../images/nav/nav_ami.gif" width="135" height="35" border="0" alt="A&amp;MI home"/></a> 
+        <br/>
+      </p>
+      <table width="81%" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr> 
+          <td align="left" valign="top"> 
+            <p align="right"><span class="verysmall">158 Lee Avenue<br/>
+              Toronto Ontario<br/>
+              M4E 2P3 Canada</span></p>
+            <p class="verysmall" align="right">ph: +1 416-691-2516<br/>
+              fx: +1 416-352-6025</p>
+            <p align="right"><span class="verysmall">info @ archimuse.com<br/>
+              <a href="http://www.archimuse.com/">www.archimuse.com</a></span></p>
+            <div align="right"> 
+              <table width="74">
+                <tbody><tr> 
+                  <td> <a href="http://search.museumsandtheweb.com/search" target="_top"> 
+                    <img src="../../images/search.gif" width="24" height="25" alt="Search" border="0" name="Search"/></a> 
+                  </td>
+                  <td valign="MIDDLE"> <a href="http://search.museumsandtheweb.com/search"> 
+                    <span class="verysmall">Search<br/>
+                    A&amp;MI</span></a> </td>
+                </tr>
+              </tbody></table>
+            </div>
+            <p align="right"><font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Join 
+              our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing 
+              List</a>. <br/>
+              <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</span></font></p>
+            <p align="right"> </p>
+            <p align="right">  </p>
+            <p align="right"><span class="verysmall">published: March 2004<br/>
+analytic scripts updated:  
+              <!-- #BeginDate format:Am1 -->October 28, 2010<!-- #EndDate -->
+              </span></p>
+            <p align="right"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0"/></a> </p>
+          </td>
+        </tr>
+      </tbody></table>
+      <p>  </p>
+    </td>
+    <td width="455" align="LEFT" valign="TOP" class="normal"><a href="../../speakers/index.html"><img src="../../images/papers.gif" width="390" height="55" border="0" alt="Museums and the Web 2003 Papers"/></a> 
+      <br/>
+      <!-- #BeginEditable "Body of Page" --> 
+       
+        <p class="PaperTitle">Bits &amp; Bolts to Bits &amp; Bytes: The Quilt Index 
+          On-line Repository and Distributed Archival Management System</p>
+        <p class="Author">Justine Richardson, Michael Fegan, Mark Kornbluh, Dean 
+          Rehberger - MATRIX:  Center for Humane Arts, Letters and Social Sciences 
+          Online at Michigan State University; and Marsha MacDowell, Michigan 
+          State University Museum, USA</p>
+        <p class="URL"><a href="http://www.quiltindex.org/" target="_blank">http://www.quiltindex.org</a></p> <p class="AbstractTitle">Abstract</p>
+         <p class="AbstractText">This paper presents the approaches, strategies and 
+          challenges addressed during the development and deployment of the Quilt 
+          Index, an on-line preservation and presentation project currently containing 
+          more than 1,000 quilts documented in four separate archives.  The Quilt 
+          Index spans eras and collections to provide first-of-its-kind access 
+          to information and images of quilts, an original American art form.  
+          From a Civil War-era family graveyard quilt, to countless variations 
+          on a hexagon theme, to an original contemporary design of Elvis, the 
+          Quilt Index offers preservation and access in a central, searchable 
+          database managed through an on-line, distributed ingestion system — 
+          the MATRIX Digital Repository (Repos).  This Repository is built on 
+          open source database software and designed to facilitate remote records 
+          management by each participating archive through partner-specific Web 
+          browser interfaces. This paper reviews Quilt Index development and deployment, 
+          including standardization of controlled vocabulary for quilt description 
+          metadata, distributed database development, coordination with multiple 
+          partners and their varying requirements for catalogue description, digitization 
+          planning, pilot collection ingestion and modification, searching and 
+          display development from the database, records maintenance and future 
+          planning.</p>
+        <p class="keywords">Keywords:  quilts, American History, digital library, 
+          digital repository, distributed systems, collaboration, open source 
+        </p>
+        <h1>Introduction</h1>
+        <p>This paper presents the development of the Quilt 
+          Index, a comprehensive, trans-institutional on-line collection tool 
+          built upon an open source digital repository.  The Quilt Index intends 
+          to provide access for both research and public presentation of the extensive 
+          documentation on American quilts and quilt making that now exists in 
+          a variety of locations and media - in museums and archives, in public 
+          and private collections, on paper survey forms and in varied electronic 
+          formats. Utilizing the benefits of a distributed repository system and 
+          a comprehensive controlled vocabulary for descriptive metadata, the 
+          Quilt Index is addressing the need to balance centralized information 
+          access with preservation of local variation.          </p>
+        <p>The Quilt Index mission is to be a central resource 
+          that provides access to contextual documentation and images of quilts 
+          from a wide variety of sources, including</p>
+      <ol class="listwithbullets">
+        <li> 
+          images of and documentary information about quilts 
+            in public museum and library collections; </li>
+        <li> 
+          aggregate information about privately held quilts 
+            compiled during the past 17 years by 56 state and regional quilt documentation 
+            projects in the United States; </li>
+        <li> 
+          bibliographies of secondary materials relevant 
+            to quilt study; and </li>
+        <li> 
+          finding aids developed to assist researchers 
+            with locating hard-to-find quilt-related primary and secondary materials 
+            in public collections.              </li>
+      </ol>
+       
+        <p>The Quilt Index was conceived and developed by The 
+          Alliance for American Quilts and implemented in partnership with Michigan 
+          State University&#39;s MATRIX: The Center for Humane Arts, Letters, 
+          and Social Sciences On-line and the Michigan State University Museum. 
+          The planning and pilot phases of the Quilt Index, funded through grants 
+          from the National Endowment for the Humanities, supported collaboration 
+          with four partner institutions that held significant quilt data -- the 
+          Library of Congress&#39; American Folklife Center, the Illinois State 
+          Museum, the Tennessee State Library and Archives (with Quilts of Tennessee, 
+          Inc., documentation project archives), and the University of Louisville 
+          Archives and Records Center (with Kentucky Quilt Project archives).</p>
+        <h1>Project Significance and Background  </h1>
+        <p>Quilting has become the quintessential American art, 
+          its form and history coming to represent the very formation of American 
+          identity.  Originally produced at home by women using patchwork piecing 
+          which arose from thrift and necessity, quilting has become a multi-billion 
+          dollar industry occupying more than 21 million people producing quilts 
+          that in many cases challenge the traditional high forms of art collected 
+          in museums throughout the US and the world. (NFO Research 2003; Kimmelman 
+          2002) Scholars increasingly focus on quilts to gain evidence and information 
+          that can increase understanding of many historical and contemporary 
+          aspects of American life; and the tremendous public draw of quilt exhibits 
+          has boosted museum attendance across the country. (Barnes 2002)</p>
+        <p>Over the course of the 20th century, investigations 
+          into the history and meaning of American quilts have evolved from stereotypical 
+          antiquarian and romanticized efforts prevalent at the turn of the century 
+          to extremely sophisticated studies meeting high academic standards.  
+          New attention to the historical, cultural, and sociological role of 
+          quilts in American society spans a wide range of disciplines. Quilts 
+          have formed the foundation of literary studies (analyses of quilt imagery 
+          in fiction, as for instance in the work of Alice Walker), cultural geography 
+          (the dispersion and distribution of quilt patterns, quilting techniques 
+          and other quilting traditions, as in the work of Henry Glassie), women&#39;s 
+          studies, art history and criticism, material culture studies, textile 
+          history, industrial history, political history, religious history, migration 
+          and immigration studies, racial and ethnic studies (as in studies of 
+          African-American, Native Hawaiian, and Mexican-American quilting), American 
+          social history, and, state, regional, national and international studies.  
+          Scholars have also examined quilts and quilt-related materials in order 
+          to understand better such diverse topics as social activist movements 
+          and protest causes (as in temperance quilts, &#34;green&#34; quilts, 
+          the Boise Peace Quilt Groups, the NAMES Project quilt, etc.) or indigenous 
+          ceremonies (such as the Sioux honoring and Hopi baby naming ceremonies) 
+          (Kornbluh et.al. 2000).</p>
+        <p>This rise in activity has precipitated enormous demand 
+          for access to information on new as well as historical materials, styles, 
+          and techniques.  The vast majority of quilts, however, remain in private 
+          hands and homes, being passed through families and kept on beds or hung 
+          from walls or stored in trunks and closets.  The impetus for this project 
+          is an effort to document this crucial and largely private body of art, 
+          and present it for public appreciation, use and research.</p>
+        <p>Scores of grassroots quilt documentation projects 
+          conducted in every state in the US have documented quilts in personal 
+          and community contexts, described their physical appearance, and captured 
+          the history of their production, ownership, and use.   This movement 
+          began in Kentucky in 1981 with the founding of the Kentucky Quilt Project 
+          and the first statewide quilt survey.  Citizens from around the state 
+          participated in Quilt Days, bringing quilts from their closets, beds, 
+          and trunks to be photographed and entered into a public record. Researchers 
+          photographed quilts, took oral histories and filled out detailed forms 
+          delineating the quilt&#39;s history, fabric, style, and more.  The movement 
+          spread to encompass fifty-six state and regional quilt projects, more 
+          than 1,000 Quilt Days, and more than 165,000 quilts documented around 
+          the country (MacDowell et al 2003, Zegart 2003).</p>
+        <p>Although this increase in documentation fostered 
+          many examinations of the production, type, use, marketing, distribution, 
+          and meaning of quilts, the actual records remain largely inaccessible 
+          to both scholars and the general public. The state survey movement by 
+          itself created a compendium of research materials documenting quilting 
+          that could provide information for many kinds of studies as well as 
+          a comprehensive national profile of quilting traditions in the 19th 
+          and 20th centuries (MacDowell et.al. 2003, Zegart 2003). State survey 
+          documentation is housed, however, in a variety of museums, archives, 
+          historical societies, project offices, and private hands; and only a 
+          portion of the information is indexed or computerized in a variety of 
+          incompatible formats.  </p>
+        <p>No comprehensive and accessible resource currently 
+          exists anywhere in this country to unify access to quilts and quilt 
+          materials for scholars, teachers, students, and the general public. 
+          The Alliance for American Quilts, a national non-profit organization 
+          dedicated to the preservation and perpetuation of the art of quilting, 
+          is the catalyst for the Quilt Index.  Alliance board members made initial 
+          decisions about what information would be included in a national Quilt 
+          Index and canvassed key individuals in the field of quilt scholarship, 
+          women&#39;s studies, and textile history.  The highest priority materials 
+          identified were these records from the various state and regional quilt 
+          documentation projects. While these records constituted the largest 
+          existing body of data on quilts in the world, they were almost entirely 
+          inaccessible for scholarly use.</p>
+        <p>The Alliance partnered with MATRIX and the MSU Museum 
+          to deploy the project.  Both of these agencies brought complementary 
+          and specialized experience, critical to the formation of the project. 
+          MSU serves as the administrative home of the Index, providing additional 
+          technical expertise, financial accountability, project management, and 
+          substantial cost share.</p>
+        <p>MATRIX is devoted to the application of new technologies 
+          in humanities and social science teaching and research. MATRIX creates 
+          and maintains on-line resources, provides training in computing and 
+          new teaching technologies, and creates forums for the exchange of ideas 
+          and expertise in new teaching and research technologies in addition 
+          to serving as the computing home for H-Net: Humanities and Social Sciences 
+          On-line. MATRIX leads collaborative endeavors to digitize and provide 
+          on-line access to archival materials, journals, artwork, artifacts, 
+          oral histories, and music for use by scholars as well as the general 
+          public. These projects include the &#34;National Gallery of the Spoken 
+          Word&#34; (NGSW), and the African On-line Digital Library (AODL), funded 
+          under the National Science Foundation&#39;s Digital Libraries Initiative 
+          Phase II, and The Spoken Word Project, a joint NSF-JISC funded project 
+          to assess teaching and learning with on-line audio resources. Other 
+          collaborative endeavors include a range of efforts to develop new publishing 
+          and distribution models to increase access to scholarly publications 
+          and oral histories for humanists in Western and Southern Africa.</p>
+        <p>The MSU Museum, one of the oldest museums in the 
+          Midwest, is a public steward for over a million objects or specimens 
+          of cultural and natural history from around the world with particular 
+          collection strengths in Great Lakes area archaeology, agricultural heritage, 
+          and folk life.  These collections include the nationally known Michigan 
+          Traditional Arts Program, the Michigan Traditional Arts Research Collection 
+          of objects, taped interviews, field notes, and photographs relating 
+          to folk life providing the only major state resource on this subject, 
+          and the Great Lakes Quilt Center.  The museum&#39;s quilt collection numbers 
+          over 500 and includes historical and contemporary examples from around 
+          the world, with special emphasis on African American quilts, Native 
+          American quilts, and quilts with special ties to Michigan. The Michigan 
+          Quilt Project (MQP), begun in 1985 and based at the MSU Museum, has 
+          documented 5,500 quilts from across the state, including the 500 quilts 
+          owned by the museum. Like many museum institutions, MSUM has an internal 
+          cataloging system based in Argue.  In addition, the information from 
+          the 5,500 documentation files had been partially entered into a relational 
+          Filemaker Pro database, but the quilt images had not been digitized 
+          at the outset of the Quilt Index project.  MSU Museum served as the 
+          core pilot collection, providing expertise in quilt scholarship, quilt 
+          descriptive metadata development, workflow development, and initial 
+          system testing.  </p>
+        <p>The planning and pilot phases of the Quilt Index, 
+          funded through grants from the National Endowment for the Humanities, 
+          supported collaboration with four partner institutions that held significant 
+          quilt data -- the Library of Congress&#39; American Folklife Center, 
+          the Illinois State Museum, the Tennessee State Library and Archives 
+          (with Quilts of Tennessee, Inc., documentation project archives), and 
+          the University of Louisville Archives and Records Center (with Kentucky 
+          Quilt Project, Inc.&#39;s archives).  This combination of institutional 
+          partner collections provides not only a solid representation of the 
+          types and range of existing collections but also a fair sample of the 
+          unique problems and opportunities that are associated with different 
+          kinds of quilt data collections. Furthermore, the institutions have 
+          each demonstrated that they have: </p>
+      <ol class="listwithnumbers">
+        <li> 
+          a base-level of institutional commitment by having 
+            participated in various ways to date in the planning process, </li>
+        <li> 
+          the basic internal infrastructure (staffing, 
+            technology, space) to participate effectively in the project, and</li>
+        <li> 
+          the commitment to allocate or seek matching funds 
+            or in-kind support. </li>
+      </ol>
+      <p>Chosen for both the strength and range of their collections, 
+          each of these institutions has developed a distinct project to put quilt 
+        documentation on line through the Index.</p>
+      <h1>Project Development</h1>
+      <p>The goal of the Index is to become a comprehensive 
+          source of quilt information and documentation that is widely available 
+          and accessible to people with quilt interests and to bring the resource 
+          into other realms as well.  Clearly the benefits of a virtual repository 
+          provide the only realistic solution to meeting the need for national 
+          information coordination that complements and strengthens many diverse 
+        local efforts. </p>
+      <h2>Metadata Challenges -- The Quilt Index Comprehensive Fields</h2>
+      <p>The initial task of the project was development of 
+          comprehensive descriptive metadata for quilts, as unique three-dimensional 
+          objects. Staff of the MSU Museum and MATRIX developed this comprehensive 
+          set of descriptive fields, utilizing the survey forms from documentation 
+          projects throughout the country and soliciting user feedback from quilt 
+          researchers and documentation experts. Project staff culled quilt documentation 
+          forms from nearly every state to find regional variations and cross-referenced 
+          twenty significant reference sources on art and textiles including the 
+          Art and Architecture Thesaurus of the Getty Vocabulary Program (1999) 
+          and Barbara Brackman&#39;s Encyclopedia of Pieced Quilt Patterns (1979).   
+        Many quilt-related terms are not included in the Getty AAT, so the Index 
+        staff is researching concept and term contribution.  </p>
+      <p>The resulting Quilt Index Comprehensive Fields, focusing 
+          mainly on descriptive metadata for the quilt object, is a standardized 
+          metadata schema -- a master list of metadata fields designed to accommodate 
+          all of the information requested on state documentation forms developed 
+          to date. This schema is divided into 27 Groups addressing a range of 
+          technical, administrative and descriptive metadata.  Each metadata field 
+          includes the group name and number, field name (actual database field 
+          name), sequence (order in which field appears within its group), description 
+          (further definition of field for data entry and management), caption 
+          (for on-line management view), field type, note (for any additional 
+          information), and character limit.  The descriptions of the fields clarify 
+          the type and meaning of data entered into each field.  These descriptions 
+          currently serve as both a glossary and as directions for data entry.  
+        Because this Quilt Index Comprehensive Fields is a master list of descriptive 
+        terms for quilts, no single documentation project or pilot site uses 
+        the entire list.   </p>
+      <h2>Technological Challenges</h2>
+      <p>The Quilt Index presented a number of challenges 
+          and research questions that influenced the design and architecture of 
+          the MATRIX digital repository.  The Quilt Index required that each contributing 
+          organization have their own repository with individual ingestion and 
+          administration tools to manage their collections.  Yet, these separate 
+          collections would have to work in tandem as a single resource for the 
+          user.  Users would be able to search across any or all the repositories 
+          and the on-line galleries featured on the site would create dynamic 
+          content pulled from all the repositories.  Even though these projects 
+          would utilize a standardized metadata scheme to describe the quilts, 
+          each organization wanted the ability to also use custom metadata for 
+          their collection that would further describe and help manage the digital 
+          objects internally.  This created a tension in the design of the project 
+        — create a system that would allow for federated searching and 
+          delivery, yet is flexible enough to accommodate the individual cataloguing 
+        needs of each organization.</p>
+      <p>Even though the organizations involved in the project 
+          agreed on a standard scheme to describe the quilts, the metadata scheme 
+          itself presented challenges.  The Quilt Index Comprehensive Scheme was 
+          created so that the organizations would have a standardized way of describing 
+          the quilts across the project.  While this scheme was a necessity for 
+          the application of federated searches and content generation, its shear 
+          magnitude made ingestion, storage, and delivery problematic.  At over 
+          100 separate fields for describing the appearance and composition of 
+          a quilt, the Quilt Index Comprehensive Scheme did not readily map to 
+          any existing metadata standards nor did it easily translate into the 
+          metadata scheme currently employed by the majority of projects in the 
+          MATRIX digital repository.  The architecture for ingesting, administering, 
+          and delivering these collections would have to be flexible enough to 
+          accommodate the scheme and staff would have to create additional tools 
+          for managing the ongoing development of the project, to accommodate, 
+          for example, additions and revisions to the metadata scheme as well 
+        as the addition of new organizations into the Quilt Index.</p>
+      <h1>The MATRIX Digital (Repos)itory</h1>
+      <p>The Quilt Index exemplified many of the key research 
+          questions and goals in the construction of the MATRIX digital (Repos)itory 
+        — REPOS, as it has come to be known.  Previous MATRIX storage 
+          and delivery projects had great success using relational databases to 
+          create on-line content.  However, the creation and maintenance of each 
+          project was an isolated, stand-alone endeavor.  A centralized repository 
+          was conceived to integrate many different kinds of metadata from different 
+          projects into a unified architecture.  This begged the question - how 
+          do you build a database structure to accommodate different kinds of 
+          metadata as new projects deposit their materials into the repository?  
+        Up to this point we had either modified existing tables or added tables/databases 
+        as we encountered metadata that fell outside of the original table structure 
+        and metadata scheme.  Because of the number of objects and variations 
+          of metadata projected for this project, such a route would either require 
+          hours of update and development whenever a new project came on-line 
+          or would lead to the unruly proliferation of loosely related tables/databases 
+        in the repository.</p>
+      <p>While researching these questions, MATRIX become 
+          involved in the development of METS (Metadata Encoding and Transmission 
+          Standard) - a metadata standard specifically created for describing 
+          all facets of a digital object.  Maintained by the Library of Congress, 
+          METS is a standard way for institutions to integrate multiple kinds 
+          of metadata within a single document.  Because the METS schema provides 
+          a standardized way to integrate multiple kinds of metadata, it has proven 
+          to be an excellent medium for institutions to share and exchange metadata.  
+        Even though METS was designed as an XML schema, its &#34;bucket&#34; 
+        approach to metadata provided an interesting solution for a database 
+        driven digital repository.  METS creates a container for each separate 
+          bit of metadata and labels that &#34;bucket&#34; of metadata with 
+          information for interpreting and using that metadata in applications 
+          and exchange.  MATRIX adopted this approach and designed a &#34;schematized&#34; 
+        database design.  Instead of statically defining the columns in a table 
+          to reflect the metadata being stored for a project, REPOS uses two tables 
+          to store the metadata: one table describes the metadata elements for 
+          a scheme and the other table stores the metadata for those elements.  
+        For example, in traditional database architecture we would create a 
+        column called &#34;title&#34; and each row would have the title 
+          of a digital object.  In REPOS, all the columns have generic definitions.  
+        One table in REPOS holds information about the metadata ingested.  It 
+          defines each element, for example:  this element is called &#34;title&#34;, 
+          it is composed of text, it is ingested through a text box, it is a required 
+          field, et cetera.  The second table holds the actual metadata for title 
+          and a pointer to the description of the element housed in the first 
+        table.</p>
+      <p>This table structure offers many benefits for a central 
+          repository. Because metadata formats are being described in a record 
+          rather than a table column, any kind of metadata can be integrated into 
+          the repository without altering the over-all structure of the database. 
+          This allows multiple projects with vastly different collections and 
+          metadata to use the same architecture to create their digital library. 
+          Because the repository stores metadata in a stable, unchanging structure, 
+          MATRIX has been able to construct on-line applications that can be utilized 
+          by all the participating projects regardless of their metadata scheme.  
+        Projects can create and modify their metadata schemes through an easy 
+        to use on-line utility. Because the repository stores information about 
+        the kind of metadata being used by each project, ingestion forms can 
+        be created dynamically. Once metadata is entered for an object, the 
+        object can be uploaded directly to storage servers in the repository 
+        where it is dynamically renamed and placed in the appropriate place.  
+        The object is renamed using a file naming specification developed by 
+        MATRIX composed of an identifier specifying the owning archive (prefix), 
+        a unique digital object identifier (base), and a derivative object subidentifier 
+        (deriv).  The resulting filename from this specification would be for 
+          example, chs-a0a0a1-a (a file extension will also be added based on 
+          the mimetype of the file).  Even though files ingested into REPOS are 
+          renamed, the original filename is automatically stored to facilitate 
+        management and migration of the file.</p>
+      <p>The stable table structure also facilitated cross 
+          project development of dissemination applications.  MATRIX has developed 
+          REPOS Tools, a suite of applications for building browse utilities, 
+          search applications, and content-based galleries with the definition 
+          of just a few project-specific variables.  Applications built for specific 
+          projects can also be utilized across REPOS.  Dynamic thumbnail creation, 
+          caching technologies, and dynamic SMIL based presentations created for 
+          single projects have been easily reused for other projects in the repository.  
+        The net effect of these utilities has been a vast reduction in development 
+        time and project cost. </p>
+      <h1>REPOS and the Quilt Index</h1>
+      <p>REPOS offered the Quilt Index many tangible advantages.  
+        Because REPOS stores extensive information about the nature of each 
+        metadata element in a project&#39;s scheme, any scheme can be shared 
+          across any number of projects.  MATRTIX for instance created the MATRIX 
+          metadata scheme - a comprehensive set of metadata covering descriptive 
+          (DUBLIN CORE), administrative, and technical metadata for a digital 
+          object.  REPOS allows projects to instantly import this scheme and use 
+          it as a starting point for their own repository.  This functionality 
+          was instrumental in the quilt project because the metadata scheme for 
+          describing their objects was so large. The Quilt Index Comprehensive 
+          Scheme could be entered once into REPOS and then be automatically imported 
+          by each of the organizations.  Projects could then add or subtract from 
+          the scheme so the metadata would meet the needs of their particular 
+        collection. </p>
+      <p>REPOS also facilitates the reuse of metadata across 
+          multiple digital objects.  The first record ingested for any object 
+          in the repository describes the original manifestation of the digital 
+          object — the first digital copy.  Any objects created from that 
+          digital copy (thumbnails, delivery copies, etc.) would be ingested as 
+          a derivative of the first object (or the object it was created from).  
+        When creating a derivative, REPOS automatically takes the metadata created 
+        for the master record and populates the record of the derivative.  Because 
+          80% of the metadata remains the same for both objects (descriptive, 
+          source, and rights info usually remain the same), much of the labor 
+          is reduced in cataloging the derivative objects.   As mentioned earlier, 
+          a digital object&#39;s derivative status is recorded in its filename 
+          when a record is created.  MATRIX developed specialized technology for 
+          the Quilt Index that uses a file&#39;s derivative status and file 
+          function to automatically retrieve any additional views of the quilt 
+        in the repository. </p>
+      <p>Metadata workflow is also greatly reduced through 
+          the use of  &#34;presets&#34; - sets of metadata that can automatically 
+          be added when a record is created.  This is extremely helpful with metadata 
+          that remains the same across a whole collection, particularly rights, 
+          source, and other administrative metadata. In the case of quilt data, 
+          all quilts made by a particular quilter will have similar or identical 
+          provenance information.  Thus data entry time is reduced considerably 
+        by utilizing preset options.</p>
+      <p>Development and training time was also greatly reduced 
+          for the project.  Even though each organization had separate holdings 
+          in what seemed a separate repository, each organization used the exact 
+          same on-line site to administer their collections.  This made training 
+          and the development of best practices universal for all the projects.  
+        Because the architecture for ingesting and administering the metadata 
+        and objects was already in place, the organizations participating in 
+        the project could simply concentrate on cataloging and building intellectual 
+        and contextual content around their holdings.  Because REPOS is an on-line 
+          utility, organizations could develop their collections in a distributed 
+        fashion.</p>
+      <h1>Digitization Practices and Workflow </h1>
+      <p>While the project has been researching and analyzing 
+          current best practices for imaging quilts as unique three dimensional 
+          objects, the pilot project sites have already photographed their quilts 
+          during the documentation phase of the project.  Thus, for this phase 
+          of the project, standard practices for digitizing photographs and slides 
+          have been used.  Since the material being contributed is essentially 
+          archival photographic material, the original imaging practices offer 
+          some severe limitations to the amount of manipulation that can be done.  
+        Quilt images exist on slides, photographic prints, and even instant 
+        Polaroid images in a few instances.  Color is a continuing challenge.  
+        Color distortion was sometimes introduced from the original photography, 
+        where lighting or mixture of daylight and tungsten affect the color 
+        tones of the original.  Likewise, depending on storage conditions, fading 
+          was an occasional problem.  There was initial intention to use very 
+          high-resolution scans to facilitate close-up details of sections of 
+          quilts (important for viewing quilts), however the level of detail in 
+          the original slide quickly limited these attempts.  The original slide 
+          medium, however clear in focus, did not retain clarity and detail on 
+          a close zoom.  The most successful cases were when the documentation 
+          project, such as Quilts of Tennessee, included a photographic close 
+          up of each quilt as well as a full quilt shot.  These detail images 
+        proved to offer the best representation of the original quilts. </p>
+      <p>The Quilt Index has developed digitization and workflow 
+          best practices and detailed specifications.  Each site worked with MATRIX 
+          staff to develop their specific workflow, depending on their equipment 
+        set up and institutional requirements.</p>
+      <p><b><i>Processing:</i></b>  Images from the sites 
+          are being scanned at a preservation quality high resolution.  The Index 
+          best practices recommend that all sites digitize slides using Adobe 
+          PhotoShop software with Nikon CoolScan hardware, both set to factory 
+          standard settings.  Sites scan slides and make minimal adjustments restricted 
+          to image rotation, cropping down to quilt image only, and applying minimal 
+          color adjustment if necessary using PhotoShop&#39;s auto-adjust setting.  
+        Although this setting adjusts each slide differently, it utilizes the 
+        preset algorithms for color adjustment on each original.  This adjusted 
+          image is saved as a TIFF file and preservation copies are either burned 
+          to Mitsui Gold Archival CDs for local storage and access or preserved 
+          on the institutional server system.  Access versions in JPEG are created 
+          at the sites from the TIFF files and uploaded via Web entry forms into 
+          the Quilt Index Repository at MATRIX.   MATRIX delivery tools produce 
+          thumbnails and viewing copies of various sizes for the public on-line 
+        pages.</p>
+      <p><b><i>Preservation Images</i></b><i>:</i><b>  </b>The 
+          Index recommends that pilot sites scan original images for digital preservation 
+          at the highest resolution possible on their equipment set up and workflow 
+          (ideally, 48-bit color and 1200 - 1600 ppi, at minimum 24-bit depth 
+          color and 600 ppi).  These images are to be minimally manipulated (rotation, 
+          cropping, color adjustment only if necessary), saved as TIFF and burned 
+          onto Mitsui Gold Archival CDs, and for those images requiring frequent 
+          access, they are stored on hard drives.  Each site may upload and store 
+          a copy of their preservation TIFF in the Index Repository as well.  
+        This is optional for each site depending on their needs.</p>
+      <p><b><i>Index Repository Images (Access):</i>  </b>The 
+          Index Repository requires a highest quality Web-ready access image in 
+          JPEG format. These files are uploaded to the repository by the site 
+          staff.  To strike a balance between uploading speed and file size, we 
+          used the first batch from each site to assess the uploading speed and 
+          workflow for each site and the Index as a whole. Final parameters for 
+          required access JPEGs are 450 to 550 pixels wide (length can adjust), 
+        high quality JPEG, set for progressive scan.</p>
+      <p><b><i>Index On-line Reference Images</i></b><i>:</i><b>  
+        </b>Upon submission, there is an automatic verification that the image 
+          is in the correct format.  The repository tools assign control fields 
+          and rename the uploaded digital file with its unique identification 
+          number (e.g. tennessee-a0a0a0-a.jpg) that corresponds to the metadata 
+          record.  Other tools automatically create the resized access and thumbnail 
+          images needed for on-line reference and presentation in the Quilt Index 
+        and deposit them in the Quilt Index cache.  </p>
+      <h1>Quilt Index Comprehensive Fields Iteration  </h1>
+      <p>As anticipated, the process of ingesting information 
+          from a large quantity of individual hand-written forms has led to additions 
+          and modifications of the descriptive fields in the Quilt Index Comprehensive 
+          Fields metadata schema.  As a result, we have added terms, modified 
+          input forms, and reformatted information requirements to accommodate 
+          the needs of the varied, distributed analog information available at 
+          the multiple sites.  For example, there is a series of fields for quilt 
+          inscriptions.  Dates, in particular, offer very specific data for dating 
+          and identifying quilts and for searching and sorting in the Quilt Index 
+          database.  However, dates are written many ways.  A gifted quilt may 
+          have a date written as February 14, 1969 or Valentine&#39;s Day 1969, 
+          or 2-14-69.  The exact inscription is important for study and meaning, 
+          while consistent date format is necessary for accurate and automated 
+          searching.  To accommodate such discrepancies and also allow for searching 
+          and identifying quilts, we created two entries for such metadata.  The 
+          first is a free text box for inputting the inscription exactly as it 
+          appears on the quilt. The second is a controlled date field for translating 
+          the date into standard numeric form.  Such a format does introduce additional 
+          possibility for error, so it requires skilled and meticulous data entry, 
+          which is also time consuming.  However, such detail allows for more 
+          robust description of the contents of the quilts, a major goal of the 
+        Quilt Index user base.</p>
+      <h1>Launch</h1>
+      <p>The user-tested Quilt Index launched on October 6, 
+          2003 with over 1,000 quilts, a large set of cross-project search and 
+          sorting tools and on-line galleries.  The Quilt Index information request 
+          emails come in daily from people with a wide variety of interests.  
+        The most common queries are from people who had their quilt documented 
+        by a state or regional project and want to know if and when their state 
+        will be added.  The pilot partners continue using the on-line management 
+          tools to enter and edit quilt records in the Index digital repository, 
+        as follows:</p>
+      <p>The MSUMuseum/Michigan Quilt Project, the beta site 
+          for the project, continues to enter quilts and a test of our automated 
+          ingestion is planned in March 2004 with the MSU Museum&#39;s Filemaker 
+          Pro database. MSUM/MQP Quilt Index collaboration is led by Marsha MacDowell 
+        with Beth Donaldson, Pearl Wong, and Rebecca Clark.</p>
+      <p>University of Louisville/Kentucky Quilt Project completed 
+          digitization and ingestion of all quilt images and records with permissions 
+          in the KQP files.  U of L staff members have made some modifications 
+          to records for quilts now owned by the IQSC (see below).  The University 
+          Library and Archives is exploring ways to publicize the project and 
+          increase its holdings of Kentucky quilt records. U of L/KQP Quilt Index 
+          collaboration is led by Shelly Zegart, Kathie Johnson, Carrie Daniels, 
+        and Sheryl Yoder.</p>
+      <p>Tennessee State Library and Archives/Quilts of Tennessee<b> 
+        </b>has achieved its goal of digitizing 900 quilts (full images and 
+          details of each quilt) and is almost halfway towards completing the 
+          data entry on those quilts. Quilts of Tennessee participants have raised 
+          additional local funding to complete the slide scanning (approximately 
+          1100 more quilts) so as to take advantage of the staff, expertise, and 
+          momentum of the project. TSLA/QTenn Quilt Index collaboration is led 
+        by Merikay Waldvogel, Becky Harriss, Wayne Moore, and Kristi Mosley.</p>
+      <p>Illinois State Museum/Illinois Quilt Research Project 
+          has begun entering quilts and should complete the 400 IQRP quilts owned 
+          by the Illinois State Museum.  Staff have been in discussions with the 
+          separate IQRP group, who is under new leadership and appears now interested 
+          in working with the Index to place their materials on-line.  They have 
+          an Access database that they have worked very hard on, but have only 
+          about 100 quilts actually entered.  ISM/IQRP Quilt Index collaboration 
+        is led by Jan Wass. (MacDowell &amp; Richardson 2004)</p>
+      <p>International Quilt Study Center/University of Nebraska, 
+          directed by Pat Crews, is an Index partner for the next phase of Index 
+          development.  Due to a recent gift, IQSC now owns a number of the quilts 
+          that had been photographed for educational purposes by the Kentucky 
+          Quilt Project through various &#34;Louisville Celebrates the Quilt&#34; 
+        exhibitions and entered into the Index by the University of Louisville.  
+      </p>
+      <p>This challenge highlighted the structure of the Quilt 
+          Index as an object-based repository, meaning that the primary item being 
+          managed and presented is the digital image and record of the quilt itself 
+          (not the state documentation projects or collection group).  While the 
+          Comprehensive Fields account for full reporting of the provenance and 
+          history of every quilt record, the public viewing interface is organized 
+          in part by contributing group thus requires identification with a group.  
+        This presented a problem when a quilt was documented by one organization 
+        and then was moved or donated to another.  Thus the Index needed to 
+          develop a specific policy for multiple categorizations and to modify 
+          searching and sorting mechanisms to account for such multiplicities. 
+          The Index is modifying the Quilt Index site to include IQSC as a partner 
+          organization and categorize those quilts under both sets of partners 
+        with their respective roles in the quilts&#39; history. </p>
+      <h1>Next Steps</h1>
+      <p>The Index is committed to working inclusively with 
+          organized quilt documentation and collection groups to expand the on-line 
+          repository.  The Task Force reviews the collection and documentation 
+          standards of the submitting group or collector and serves as an editorial 
+          board to ensure the consistency of quilt records within that group.  
+        This permits difference between groups without compromising the integrity 
+        of the Index.  </p>
+      <p>Through input from the site coordinators and Task 
+        Force, the next phase priority issues were identified as: </p>
+        <ol class="listwithbullets">
+        <li>
+          expanding the 
+            data in the Index by soliciting data from new partners representing 
+            a wide range of diverse factors (type, size, geographic location, 
+            private/public, university, museum, etc.); </li>
+        <li>
+          creating mechanisms 
+            to facilitate ingestion of existing databases through the development 
+            of specially-tailored &#34;middleware&#34; to execute the migration 
+            of data used by various museums or documentation projects to the Index; 
+        </li>
+        <li>
+          completing 
+            the data entry from the Phase Two sites; and </li>
+        <li>
+          developing options 
+            for interactive use of the Index data with special on-line curatorial 
+            and teaching tools. </li>
+      </ol>
+      <p>In response to a major call for partners for a funding 
+          proposal for The Quilt Index, Phase III:  National Expansion and Data 
+          Integration, many state documentation projects, private collections, 
+          and museums came forward with interest in partnership.  The Index managed 
+          to maintain its mission of inclusiveness and encompass within the budget 
+          all documentation projects that responded and submitted their materials 
+          by the proposal deadline.  After much negotiation and discussions, fifteen 
+          new partners were included.  Many more remain interested in partnering 
+        with the Index in the future. </p>
+      <p>Phase III of the Quilt Index will research and implement 
+          long term protocols and expand the database to include collections from 
+          fifteen new partners.  This combination of new quilt documentation partners 
+          spans the country — ranging from the northeastern states of Massachusetts, 
+          Rhode Island, Connecticut, and New Jersey; to the Midwestern research 
+          done in Wisconsin, Minnesota, Iowa, and Nebraska; to the southern coast 
+          of Louisiana; to Wyoming in the west; to the unique efforts to inventory 
+          traditional Hawaiian quilting.  In addition to state documentation projects, 
+          the Index expansion will include three private quilt collections and 
+          one museum collection as test collections for such expansion.  In this 
+          phase, four pre-existing project partners (Michigan, Kentucky, Tennessee 
+          and Illinois) will complete the digitization of their collections and 
+          serve as consultants to the new groups; this diverse set of new partners 
+          will add their collections to the system; Index repository programming 
+          will be designed to integrate new collections with pre-existing databases; 
+          on-line tools will be designed and implemented to create gathering, 
+          sorting and saving options for researchers, teachers and curators; and 
+          the partners will collaborate to develop on-line exhibits and educational 
+        materials.  </p>
+      <p>Long term expansion possibilities for the Index include 
+          important collections of quilt &#34;ephemera&#34; — materials 
+          related to quilting such as pattern books, diaries, and fabric scrap 
+          collections for research and development of methods for individual documentation 
+          of personal or family quilts using on-line forms and standardized Quilt 
+        Index methodology.</p>
+      <h1>References</h1>
+      <p class="ReferencesText">Barnes, B., (2002). Museums Cozy up to Quilts, 
+        <i>Wall Street Journal</i>, Aug. 23, 2002.</p>
+      <p class="ReferencesText">Brackman, B., (1993). <i>Encyclopedia of Pieced 
+        Quilt Patterns</i>, Paducah, KY: American Quilter&#39;s Society.</p>
+      <p class="ReferencesText">Getty Vocabulary Program, (1999, 2000). <i>Art 
+          and Architecture Thesaurus On-line</i> The J. Paul Getty Trust 1999.  
+        <a href="http://www.getty.edu/research/conducting_research/vocabularies/aat/" target="_blank">http://www.getty.edu/research/conducting_research/vocabularies/aat/</a></p>
+      <p class="ReferencesText">NFO Research Inc., and Abacus Custom Research, 
+          Inc., (2003) <i>Quilting in America, 2003.</i> Houston: Primedia and 
+        Quilts, Inc.</p>
+      <p class="ReferencesText">Kimmelman, M., (2002). Jazzy Geometry, Cool Quilters. 
+        Art Review, <i>The New York Times</i>, November 29, 2002.</p>
+      <p class="ReferencesText">Kornbluh, M., M. MacDowell,  and S. Zegart (2000). 
+        &#34;The Quilt Index Application to the National Endowment for the 
+        Humanities,&#34; July 1, 2000.</p>
+      <p class="ReferencesText">MacDowell, M. and J. Richardson (2004). Report 
+          to the Alliance for American Quilts Board of Directors, internal document, 
+        unpublished.</p>
+      <p class="ReferencesText">MacDowell, M., J. Richardson,  M. Kornbluh,  D. 
+          Rehberger, S. Pennington, M. Fegan, and D. Boone (2003).<b> </b>Developing 
+          Collaborative On-line Collections Using an Open Source Digital Repository: 
+          The Quilt Index Case Study. <i>Museums and the Web 2003 </i>On-line 
+          Conference Proceedings, Charlotte, NC, <a href="http://www.archimuse.com/mw2003/papers/richardson/richardson.html" target="_blank">http://www.archimuse.com/mw2003/papers/richardson/richardson.html</a>. 
+      </p>
+      <p class="ReferencesText">Zegart, S., (2003). Since Kentucky:  Surveying 
+          State Quilts, <i>The Quilt Index</i>, <a href="http://www.quiltindex.org/since_kentucky.php">http://www.quiltindex.org/since_kentucky.php</a>; 
+          revised and reprinted from:  Zegart, S., and Holstein, J., eds. (1994). 
+ <i>Expanding Quilt Scholarship — The Lectures, Conferences and 
+ other Presentations of Louisville Celebrates the American Quilt,</i> 
+ The Kentucky Quilt Project, Inc.: Louisville, Kentucky. </p>
+ <!-- #EndEditable --></td>
+  </tr>
+</tbody></table>
+
+<p class="smallPurple"> </p>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+
+
+</body><!-- InstanceEnd --><!-- Mirrored from www.museumsandtheweb.com/mw2004/papers/richardson/richardson.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:44:45 GMT --></html>

@@ -1,0 +1,732 @@
+<html><!-- Mirrored from www.museumsandtheweb.com/mw99/papers/hastings/hastings.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:50:29 GMT --><head>
+
+        <title>Archives &amp; Museum Informatics: MW99 - paper</title>
+
+        <script language="JavaScript">
+
+
+
+<!--
+
+
+
+// Detect if browser is Netscape 3 + or IE 4 +.
+
+bName = navigator.appName;
+
+bVer = parseInt(navigator.appVersion);
+
+    if ((bName == "Netscape" && bVer >= 3) || 
+
+        (bName == "Microsoft Internet Explorer" && bVer >= 4)) br = "n3"; 
+
+    else br = "n2";
+
+
+
+// Create image objects, preload all active and inactive images.
+
+    if (br== "n3") { 
+
+     
+
+    img2on = new Image();
+
+    img2on.src = "../../nav/mw99_nav_registeron.gif";
+
+    img3on = new Image();
+
+    img3on.src = "../../nav/mw99_nav_workshopson.gif";
+
+    img4on = new Image();
+
+    img4on.src = "../../nav/mw99_nav_demonstrationson.gif";
+
+    img5on = new Image();
+
+    img5on.src = "../../nav/mw99_nav_sessionson.gif";
+
+    img6on = new Image();
+
+    img6on.src = "../../nav/mw99_nav_speakerson.gif";
+
+    img7on = new Image();
+
+    img7on.src = "../../nav/mw99_nav_exhibiton.gif";
+
+    img8on = new Image();
+
+    img8on.src = "../../nav/mw99_nav_sponsoron.gif";
+
+    img9on = new Image();
+
+    img9on.src = "../../nav/mw99_nav_beston.gif";
+
+    img10on = new Image();
+
+    img10on.src = "../../nav/mw99_nav_eventson.gif";
+
+    img11on = new Image();
+
+    img11on.src = "../../nav/mw99_nav_keydateson.gif";
+
+        img12on = new Image();
+
+    img12on.src = "../../nav/mw99_nav_neworleanson.gif";
+
+
+
+     
+
+        img2off = new Image();
+
+    img2off.src = "../../nav/mw99_nav_registeroff.gif";
+
+    img3off = new Image();
+
+    img3off.src = "../../nav/mw99_nav_workshopsoff.gif";
+
+    img4off = new Image();
+
+    img4off.src = "../../nav/mw99_nav_demonstrationsoff.gif";
+
+    img5off = new Image();
+
+    img5off.src = "../../nav/mw99_nav_sessionsoff.gif";
+
+    img6off = new Image();
+
+    img6off.src = "../../nav/mw99_nav_speakersoff.gif";
+
+    img7off = new Image();
+
+    img7off.src = "../../nav/mw99_nav_exhibitoff.gif";
+
+    img8off = new Image();
+
+    img8off.src = "../../nav/mw99_nav_sponsoroff.gif";
+
+    img9off = new Image();
+
+    img9off.src = "../../nav/mw99_nav_bestoff.gif";
+
+    img10off = new Image();
+
+    img10off.src = "../../nav/mw99_nav_eventsoff.gif";
+
+    img11off = new Image();
+
+    img11off.src = "../../nav/mw99_nav_keydatesoff.gif";
+
+    img12off = new Image();
+
+    img12off.src = "../../nav/mw99_nav_neworleansoff.gif";
+
+    }
+
+
+
+// Function to "activate" images.
+
+function imgAct(imgName) {
+
+    if (br == "n3") {
+
+    document[imgName].src = eval(imgName + "on.src");
+
+    }
+
+}
+
+
+
+// Function to "deactivate" images.
+
+function imgInact(imgName) {
+
+    if (br == "n3") {
+
+    document[imgName].src = eval(imgName + "off.src");
+
+    }
+
+}
+
+
+
+// -->
+
+
+
+</script>
+
+<meta name="description" content="In Search of Meaningful Events: Curatorial Algorithms and Malleable Aesthetics, an essay by Andy C. Deck"/>
+
+<meta name="keywords" content="andyland,andyman,interactivity,politics,interface,art,censorship,public sphere,java,drawing,white board"/>
+
+</head>
+
+<body bgcolor="#FFFFFF" background="../../../conferences/conferences_bg.html">
+
+<table border="0" cellpadding="5">
+
+
+
+<tbody><tr>
+
+<td valign="TOP" width="135">
+
+
+
+
+
+<a href="../../index.html"><center><img src="../../mw99.gif" width="112" height="155" alt="Museums and the Web 1999" border="0"/></center></a><p>
+
+
+
+
+
+
+
+
+
+<a href="../../workshops/index.html" onmouseover="imgAct(&#39;img3&#39;)" onmouseout="imgInact(&#39;img3&#39;)" target="_top">
+
+<img name="img3" src="../../nav/mw99_nav_workshopsoff.gif" width="125" height="15" border="0" alt="Workshops"/></a><br/>
+
+
+
+<a href="../../sessions/index.html" onmouseover="imgAct(&#39;img5&#39;)" onmouseout="imgInact(&#39;img5&#39;)" target="_top">
+
+<img name="img5" src="../../nav/mw99_nav_sessionsoff.gif" width="125" height="15" border="0" alt="Sessions"/></a><br/>
+
+
+
+<a href="../../speakers/index.html" onmouseover="imgAct(&#39;img6&#39;)" onmouseout="imgInact(&#39;img6&#39;)" target="_top">
+
+<img name="img6" src="../../nav/mw99_nav_speakersoff.gif" width="125" height="15" border="0" alt="Speakers"/></a><br/>
+
+
+
+<a href="../../demos/index.html" onmouseover="imgAct(&#39;img4&#39;)" onmouseout="imgInact(&#39;img4&#39;)" target="_top">
+
+<img name="img4" src="../../nav/mw99_nav_demonstrationsoff.gif" width="125" height="15" border="0" alt="Demonstrations"/></a><br/>
+
+
+
+<a href="../../exhibit/index.html" onmouseover="imgAct(&#39;img7&#39;)" onmouseout="imgInact(&#39;img7&#39;)" target="_top">
+
+<img name="img7" src="../../nav/mw99_nav_exhibitoff.gif" width="125" height="15" border="0" alt="Exhibit"/></a><br/>
+
+
+
+
+
+
+
+<a href="../../events/index.html" onmouseover="imgAct(&#39;img10&#39;)" onmouseout="imgInact(&#39;img10&#39;)" target="_top">
+
+<img name="img10" src="../../nav/mw99_nav_eventsoff.gif" width="125" height="15" border="0" alt="Events"/></a><br/>
+
+
+
+<a href="../../best/index.html" onmouseover="imgAct(&#39;img9&#39;)" onmouseout="imgInact(&#39;img9&#39;)" target="_top">
+
+<img name="img9" src="../../nav/mw99_nav_bestoff.gif" width="125" height="15" border="0" alt="Best of the Web"/></a><br/>
+
+
+
+
+
+
+
+<br/> <br/>
+
+
+
+<a href="http://www.archimuse.com/"><img src="../../../nav/nav_ami.html" width="135" height="25" alt="Home" border="0"/></a><br/>
+
+
+
+<font size="-2">Archives &amp; Museum Informatics<br/>
+
+
+
+
+
+2008 Murray Ave.,<br/>
+
+Suite D<br/>
+
+Pittsburgh, PA<br/>
+
+15217 USA</font></p><p><font size="-2">
+
+</font></p><p><font size="-2">
+
+<a href="../../../mw98/index.html">info@museumsandtheweb.com</a><br/>
+
+<a href="http://www.archimuse.com/">www.archimuse.com</a></font></p><p>
+
+</p><p>
+
+<font size="-2">Join our <a href="../../../index.html">Mailing List</a>.</font></p><p>
+
+<font size="-2">
+Published: March 1999.<br/></font>
+
+<script language="JavaScript">
+
+<!--
+
+document.write("<FONT SIZE='-2'>"+"Updated:&nbsp;"+document.lastModified);
+
+// -->
+
+</script>
+
+
+</p></td>
+
+
+
+<td width="450" valign="TOP">
+
+<img src="../papers.gif" width="325" height="66" alt="Papers" border="0"/><p>
+
+
+
+</p><h3>Digital Image Managers for the New Millennium:
+
+A Museum / University Collaboration</h3>
+
+  
+
+<a href="../../bios/au_2873.html"><b>S. K. Hastings</b></a>, University of North Texas, USA<p>
+
+
+
+</p><h3>Introduction</h3>
+
+
+
+The University of North Texas in Denton and the African American Museum in Dallas, Texas are partners in a program designed to produce a cadre of experts for the field of digital image management.  The School of Library and Information Sciences received a grant from the federal Institute of Museum and Library Services to build a digital imaging laboratory, make the Museum collection available on the Web and provide fellowships for students in an Advanced Certificate of Study Program.  The School of Visual Arts adds experience in museum education, use of computers in art and aids in the digitization of images throughout the program.  The project includes the production of digital images, digital information database creation and management with a focus on advanced network and information technologies.  The production and management of digital images and the management of digital information are important skill sets for current and future museum information professionals.  In addition, the program prepares individuals to assume positions as experts in the broader markets of libraries, archives and information centers.   An integral part of the educational experience for the students enrolled in the program is the opportunity to work as interns at the African American Museum and other area museums.  One result of the project is improved access to a majority of the museum&#39;s collection by making images and information about the collection available through the Web.<p>
+
+
+
+The project produces a model for training professionals in the creation, use and management of digital images.  The project also produces a model of collaboration between museums and universities.   In addition, the project provides the opportunity to assess the impact that improved access to a museum collection may have.</p><p>
+
+
+
+Information has become a critical resource in most facets of American society, and education for the information professions has become strategic for the development of a healthy information economy and the preservation of democracy.  Digital image and information management is a subset of this much larger construct.  In order to compete and lead in a global economic environment we must have experts capable of planning, implementing and managing projects that increase and improve access to our cultural heritage.  This project produces a model for the education and training of digital image and information managers and focuses attention on the importance of digital information.  In addition, the project brings attention to an excellent collection of African American art and helps improve access to the museum collection.</p><p>
+
+ 
+
+Part of the design and plan of action for the project focuses on gathering data to produce a model program of study for the management of digital images.  Data are also collected to support the development of a model for how museums and universities may collaborate.  The models produced are generalizable to the population of state-supported universities, other schools of library and information Sciences, and museums.</p><p>
+
+
+
+</p><h3>Design</h3>
+
+
+
+The general approach of this project is based on a program of study to produce professionals with a specialty in digital image management.  The plan of action is based on goals and objectives and periodic evaluation.  The project also includes a summative evaluation report reflecting how well the project met measurable outcomes.<p>
+
+	
+
+</p><h4><i>Goals and Objectives</i></h4>
+
+
+
+1. To provide opportunities for professionals working in the fields of information organization, museum and library information management, and image storage and retrieval to add new tools, skills and knowledge needed to become experts in the management of digital images.<p>
+
+
+
+</p><blockquote>a. Implement a cross-disciplinary program of study that includes courses from the School of Library and Information Sciences, the School of Visual Arts, digital imaging laboratory experience and practical internship work at the African American Museum. <p>
+
+
+
+b. Identify and nationally recruit 10 currently employed professionals to engage in a program of study that will provide the skills and knowledge needed to become experts in the field of digital image production and management.  Students will graduate with a Certificate of Advanced Study by August 30, 2000.</p></blockquote><p>
+
+
+
+2. To build a digital image database that will provide Web access to art object images previously available in slide or photographic format only from the collection of the African American Museum.</p><p>
+
+
+
+</p><blockquote>a. Select, install, support and maintain a digital imaging laboratory.  The lab contains workstations with slide and photograph scanners as well as a video-conference link to the museum.<p>
+
+
+
+b. Digitize 20,000 slides and photos or create digital images from the collection of objects by July 31, 2000.</p><p>
+
+
+
+c. Select a collection management system or database software, adaptable for use with digital images.  Import data records or create records for the images and link to digital images.</p><p>
+
+
+
+d. Build and maintain digital image database and design and maintain Web access for the collection.</p></blockquote><p>
+
+
+
+3. To produce a model for how academic and museum institutions may collaborate to support and maintain digital imaging laboratories framed by the following questions:</p><p>
+
+
+
+</p><blockquote>a. What direct and indirect costs are associated with the support and maintenance of digitizing laboratories?<p>
+
+b. What skills and knowledge are needed to support and maintain a digitizing laboratory?</p><p>
+
+c. How much time does it require to support and maintain a digitizing laboratory?</p><p>
+
+d. What are the variables in the management of a digitizing laboratory?  What problems are encountered?  At what level?</p><p>
+
+e. What are the outcomes of providing digitizing services?</p><p>
+
+f. What is the level of satisfaction with the project?  From the museum?  From the university?</p><p>
+
+g. What is the process of setting up the laboratory in general?</p><p>
+
+h. What recommendations can be made from our experience?</p></blockquote> <p>
+
+
+
+</p><h4><i>Roles of the Partners</i></h4>
+
+
+
+The African American Museum provides the following services:<p>
+
+
+
+</p><blockquote>1. Access to 20,000 items and objects in the internationally renowned collection.<p>
+
+2. Access to the data records for the objects to be digitized (if available).</p><p>
+
+3. Permission to create digital images from the objects in the digitizing laboratory (note that Museum keeps all copyright).</p><p>
+
+4. Practical experience in the form of internship opportunities for the students enrolled in the project.  This includes co-supervision of the interns with UNT SLIS.</p><p>
+
+5. Participation of the museum staff of experts in video-conferenced laboratory and classroom experiences.</p><p>
+
+6. Supervision of the Digital Image Project Manager position and possible support for the position at the conclusion of the grant period. </p><p>
+
+7. Publicity and marketing for the project.</p><p>
+
+8. Cooperative involvement of the museum library staff, collection management staff and museum administration.</p><p>
+
+9. Participation in the record keeping and reporting requirements of the grant project.</p></blockquote><p>
+
+
+
+The University of North Texas, School of Library and Information Sciences provides the following services:</p><p>
+
+
+
+</p><blockquote>1. Provision of a cohesive program of study for Digital Image Management including courses, laboratory experiences, supervision of internships and administration of fellowships.<p>
+
+2. Identification and recruitment of program participants.</p><p>
+
+3. Physical facilities for the digitizing laboratory.</p><p>
+
+4. Management, maintenance and support for the digitizing laboratory.</p><p>
+
+5. Management for the production of the digital image database.</p><p>
+
+6. Consultation for data management issues in the production of the digital image database.</p><p>
+
+7. Coordination and management of the grant by a faculty member in partnership with the Dean of the School of Library and Information Sciences.</p><p>
+
+8. Primary responsibility for record keeping and reporting requirements of the grant project.</p><p>
+
+9. Management and fiscal responsibility for the grant funds.</p></blockquote><p>
+
+
+
+The University of North Texas, School of Visual Arts agrees to provide the following services not as an official partner but in the spirit of cooperation:</p><p>
+
+
+
+</p><blockquote>1. Provision of courses in the history and management of the museum as part of the required curriculum for the program of study.<p>
+
+2. Consultation in the process of digitization of art objects.</p><p>
+
+3. Shared management of the digitizing laboratory.</p><p>
+
+4. Expertise gained from the School&#39;s participation in the North Texas Institute for Visual Arts Education (NTIEVA) project.</p><p>
+
+5. Assistance in identifying and recruiting participants for the program of study.</p></blockquote><p>
+
+
+
+</p><h4><i>Plan of Action</i></h4>
+
+
+
+The University of North Texas, School of Library and Information Sciences program offers a highly effective structured curriculum.  The energies of the faculty are focused on information related problems including the retrieval of digital images and the management of digital information. <p>
+
+
+
+The following list describes the main activities conducted to insure the success of the project. </p><p>
+
+
+
+
+
+
+
+</p><h4>Activities</h4>
+
+
+
+1. Prepare program information, publicity and information packages.  Announce program and fellowship opportunities.<p>
+
+2. Identify and recruit students for the program of study.</p><p>
+
+3. Award fellowships with priority to under-represented minorities.</p><p>
+
+4. With the help of the museum staff, develop the complete description of duties for the assistant project manager.</p><p>
+
+5. Hire a Graduate Laboratory Assistant.</p><p>
+
+6. Assess museum collection and identify and select first batch of objects to be digitized.</p><p>
+
+7. Assess museum&#39;s collection management information and select collection management software.</p><p>
+
+8. Order and install computer with video-conference board and ISDN line at the museum.</p><p>
+
+9. Order and install digital laboratory equipment and software at the school.</p><p>
+
+10. Set-up the school&#39;s video-conference link for use in the laboratory.</p><p>
+
+11. Test all equipment.</p><p>
+
+12. Prepare press releases throughout the course of the program.</p><p>
+
+13. Schedule tours and demonstrations of the laboratory and video-conference system for professionals in the area and around the nation.</p><p>
+
+14. Design data collection instruments for evaluation process and generation of models.</p><p>
+
+15. Set-up accounting system for the grant.</p><p>
+
+16. Prepare instructions and guidelines for the use of equipment in the digital image laboratory.</p><p>
+
+17. Design checklist for students to use in the digital image laboratory.</p><p>
+
+18. Advise students on the selection and order of their course work and internships.</p><p>
+
+19. Enroll students for Spring 1999 classes.</p><p>
+
+20. Build a test database of images to put on the Web and use as a pilot.</p><p>
+
+21. Evaluate program and activities and revise as needed.</p><p>
+
+22. Test collaborative work environment provided by the video-conference link.  Revise as needed.  </p><p>
+
+23. Schedule presentations by museum experts in the program of study.</p><p>
+
+24. Prepare interim reports and revise project objectives if necessary.</p><p>
+
+25. Identify sources for continued funding and prepare proposals.  This includes contacting companies for possible donations and ongoing support.</p><p>
+
+26. Analyze data for evaluation reports and construction of models of cooperation and the program of study.</p><p>
+
+27. Prepare and disseminate final project reports.</p><p>
+
+
+
+</p><h4>Recruitment of Students </h4>
+
+A concerted effort to recruit minority students included target mailings to the minority caucuses of the American Library Association, the Texas Library Association and the Special Libraries Association Caucus on Diversity Issues soliciting input on potential candidates.<p>
+
+
+
+</p><h4>Criteria and Process for Selection</h4>
+
+Applicants for the Certificate of Advanced Study (CAS) met the general admission requirements for the School which include: holding a master&#39;s degree in Library and Information Sciences from an ALA-accredited school with a grade point average of 3.0 or above; and an advisor&#39;s recommendation for program of study.  In addition, the candidates demonstrate:<p>
+
+
+
+</p><ul>
+
+	<li>strong motivation toward pursuit of a career in digital image management through work experience, personal essays, and interviews;
+
+	</li><li>the potential to successfully contribute to the field and to complete the CAS as evidenced by career progression, prior research and publication and/or professional activities;
+
+	</li><li>the need for financial support in this endeavor, as illustrated by documented projected expenses and assessment of available personal resources as determined by standardized measures specified by the granting agency.
+
+</li></ul>
+
+
+
+<h4>Program of Study</h4>
+
+The courses identified for a <b>Certificate of Advanced Study in Digital Image Management</b> are listed below with descriptions from the current <i>UNT Graduate Catalog</i>.  Note that it is possible to complete the CAS in Digital Image Management with a total of 30 credit hours.<p>
+
+
+
+SLIS 5205:  <b>Information Indexing, Abstracting and Retrieval</b>. 3 hours. Analysis of indexing and retrieval systems. Manual and machine indexing and abstracting. Computer-based systems. File organization and maintenance; information representation and coding; storage and retrieval technology; natural language processing; thesaurus construction; searching strategies. Systems design, operation and evaluation.</p><p>
+
+
+
+SLIS 5711:  <b>Internet Applications for Information Professionals.</b> 3 hours. Specifically, this course is designed to give students a knowledge base that will enable them to evaluate and apply understanding of: Basic technology and protocols that underlie the Internet; Basic Internet applications (e.g., telnet, ftp, email, WWW, gopher); Basic internetworking skills to navigate the Internet; Processes for implementing Internet-based services and resources for libraries and information centers; Internet resources from the perspective of the information professional, e.g., organization, retrieval, dissemination; Policy concerns related to Internet use, resources, and services at organizational, state, national, and international levels. </p><p>
+
+
+
+SLIS 5713: <b>Telecommunications for Information Professionals</b>. 3 hours. A foundation course concerned with digital and analog forms of electronic communications, design and performance of networks and their relationship to the provision of information services. Emphasis on management issues for libraries and information agencies.</p><p>
+
+
+
+SLIS 5714: <b>Website Development and Maintenance</b>. 3 hours. This course is designed to meet the need of government and industry for entry level personnel capable of establishing a Website, composing text and graphic files for the site, writing scripts for the site for interactive applications, installing search engines, and creating reports on site usage.</p><p>
+
+
+
+ART 5390: <b>Seminar in Art Museum</b>.  3 hours.  Study of the functions of an art museum - collection preservation, exhibitions, research and interpretation of art objects.  Visits to North Texas art museums required.</p><p>
+
+
+
+ART 5560: <b>Seminar in Art Museum Education</b>. 3 hours.  Study of the museum&#39;s public role, centering on history, theory, and practice of art museum education.  Audience identification and careers and practices stressed, toward aim of understanding, developing, expanding, and using learning opportunities inherent in museums.</p><p>
+
+
+
+SLIS 5090: <b>Practicum and Field Study</b>. 3 hours. Supervised practice work and field study (120 clock hours minimum) in a cooperating library, learning resources center or information agency, plus seminar conferences and summary report. For students without prior field experience. Prerequisite(s): admission to candidacy, application for practicum early in prior semester and appropriate administration course or type-of-system course (may be taken concurrently). Not counted for degree credit. (Internship)</p><p>
+
+
+
+SLIS 5960 <b>(Digital Imaging Laboratory)</b> Special Problems. 1-3 hours each. Supervised individual or small group study of special problems or topics not otherwise covered by regular course offerings. Prerequisite(s): consent of instructor and dean of school. May be repeated for credit as topics vary.</p><p>
+
+
+
+
+
+</p><h4>Digital Image Laboratory</h4>
+
+
+
+Networked workstations with flatbed and slide scanners, a CD-ROM burner and a color laser printer will serve as the main equipment in the digital image laboratory.  The lab is connected to the museum by a V-Tel video-conference system and ISDN lines.  A computer with a video-conference board is in place at the museum.  The lab is administrated and maintained by Schools of Library and Information Sciences and Visual Arts and the Academic Computing Services.  A Graduate Lab Assistant that reports directly to the School of Library and Information Sciences LAN and Technology Manager works part-time to provide direct support of the lab.  Access to the lab is restricted to students in the digital image management program of study.
+
+
+
+<h4>Evaluation </h4>
+
+
+
+Measures of success of the program of study include:<p>
+
+
+
+</p><ul>
+
+	<li>Statistics on the number of inquiries received and number of applications submitted versus the number of enrollees;
+
+	</li><li>Profiles of all fellows including academic performance and placement information;
+
+	</li><li>Career progress and accomplishments including publications, participation in professional associations, etc.    
+
+</li></ul>
+
+
+
+The overall plan for evaluation of the project has three parts.<p>
+
+  
+
+</p><ul>
+
+	<li>Primary evaluation for the project is based on meeting the measurable objects outlined in the goals and objectives of the design section above.  Primary evaluation includes measures of success of the program graduates and provides opportunities to study the impact of well-prepared professionals in the field. 
+
+	</li><li>Secondary evaluation collects data to produce models of the program of study and the cooperation and collaboration between museums and universities. 
+
+	</li><li>The third level of evaluation is ongoing and tracks the impact of increasing access to a museum collection by providing digital images on the Web.  
+
+</li></ul>
+
+
+
+
+
+<h3>Technical Knowledge</h3>
+
+
+
+Technical expertise is demonstrated in two areas.  First, the construction of the digital imaging laboratory and second in the management of digital image databases.  The School of Library and Information Sciences maintains two electronic classrooms with video-conferencing equipment, a teaching computer classroom with 20 networked workstations and a general graduate access lab with 18 stations.  The School employs a full-time LAN and technology manager, a part-time Webmaster and various graduate assistants with specialties in technology management.  In addition, the current director of Academic Computing Services is an adjunct faculty member of the School.  The School is nationally known for its technical opportunities and our graduates are consistently placed in information technology management positions.<p>
+
+
+
+</p><h3>Summary</h3>
+
+
+
+As an educational experience, one of the most unique features of the project is made possible by the cooperation between a museum and a university.  Students digitize objects from the museum collection and build an image database available on the Web.  The experience includes the use of video-conference technologies to enhance collaboration between the museum and the university.  Students communicate with the museum staff, work on images and database information simultaneously and share experiences immediately.  By linking the digital image laboratory and the African American Museum, students have every opportunity to learn from museum professionals as well as from university professors. <p>
+
+
+
+The project is a model for training professionals in the creation, use and management of digital images and may serve as a model of collaboration between museums and universities.  In addition, the project assesses the impact resulting from improved access to a museum collection through the Web.</p><p>
+
+
+
+The project is ongoing and scheduled to conclude in Fall of 2000.  Preliminary data reports and in-progress evaluations are available at the project Website, linked from <a href="http://www.unt.edu/slis">http://www.unt.edu/slis</a>.  In the Spring of 1999, a test database was made available and the project plan was piloted by students in a Digital Imaging Laboratory course offered at the School of Library and Information Sciences.  Comments and suggestions are encouraged and should be addressed to the author.  Special appreciation goes to the federal Institute of Museum and Library Services for the funds to make this project possible.</p><p>
+
+
+
+
+
+</p></td>
+
+</tr>
+
+</tbody></table>
+
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+
+
+
+
+
+
+</body><!--/htdig_noindex--><!-- Mirrored from www.museumsandtheweb.com/mw99/papers/hastings/hastings.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:50:29 GMT --></html>

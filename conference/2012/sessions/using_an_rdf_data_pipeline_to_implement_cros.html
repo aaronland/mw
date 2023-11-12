@@ -1,0 +1,86 @@
+<div id="main-content">
+          
+                      <div id="breadcrumb">
+              <h2 class="element-invisible">You are here:</h2>
+              <a href="../../mw2012.html">MW2012</a> » <a href="../sessions.html">Sessions</a> » <a href="../sessions/mini_workshop_on_using_an_rdf_data_pipeline_.html">Mini-Workshop on Using an RDF Data Pipeline to Implement Cross Collection Search</a> »             </div> <!-- /breadcrumb -->
+              
+                      <div id="main-content-header" class="clear-block">
+              <h1 id="page-title">Using an RDF Data Pipeline to Implement Cross Collection Search</h1>                          </div>
+          
+          
+          <div id="content"><div id="article-15210" class="article program-article clear-block">
+
+    
+    <div class="article-detail clear-block">
+  <div class="node-edit-link" id="node-edit-link-15210"><ul class="links"><li class="0 first last active"><a href="using_an_rdf_data_pipeline_to_implement_cros.html" class="active">[View]</a></li>
+</ul>
+</div><div class="field nodereference field-program-paper-backref">
+      <h3 class="label">Published Paper</h3>
+                                <div class="item odd"><a href="../papers/using_an_rdf_data_pipeline_to_implement_cross_.html">Using an RDF Data Pipeline to  Implement Cross-Collection Search </a></div>
+              </div>
+ <!-- /content-field -->
+<div class="field text field-program-abstract">
+      <h3 class="label">Abstract</h3>
+                                <div class="item odd"><p>The Missouri History Museum launched a first version cross-collection search in mid-2010.  That implementation uses SOLR as a search engine with data from multiple domains (objects, archives, and photo collections) indexed to SOLR documents with various PHP scripts.  Although some attempts were made to map data values to specific locations, dates, and subjects, most of the data is indexed as text fields.  After user feedback and considering what would be possible with semantic web tools we identified a number of limitations to this approach: 1) text based facets are often ambiguous or vague; 2) users do not have the ability to further explore the context of search results; 3) data from different domains must be ‘watered down’ to conform to the search index; 4) data is not available as linked open data; and 5) we are missing an opportunity to contribute to the web of data through crowd sourcing.</p>
+<p>To overcome these limitations the prototype of our next version is built firmly on sematic web technologies: RDF, SPARQL, and triple/quad stores.  The prototype strives to meet the following requirements: 1) aggregate and index data from different domains and from multiple institutions; 2) expose a repository of linked open data; 3) index by specific data types (personal and corporate entities, geocoded locations, date ranges, and common vocabularies);  4) maintain the rich context of data from multiple domains and institutions; and 5) allow users to make contextual links between items, people, locations, dates, and subjects – thereby contributing to the web of data.  At the heart of this approach is a semantic data pipeline that ‘ingests’ mixed data, converts it to RDF, transforms data to common data formats, aligns collection-specific fields to common fields, indexes to SOLR, and provides both a faceted search interface and a SPARQL endpoint for linked open data.</p>
+<p>The prototype approach is not a single application; rather it is a proposed pipeline that uses many different tools that conform to semantic web standards such as RDF, RDFS, OWL, and SPARQL. Since they rely on web standards, tools may be swapped out for others that serve the same purpose without ‘re-building’ the pipeline.  For example, there are many tools for converting between various data formats  - called ‘RDFizers’, but our prototype uses D2RQ for converting relational databases to RDF; and modmarc2RDF for converting MARC records to RDF.  There are many tools for converting between various RDF formats – our prototype uses the ARC2 library.  Many tools exist for storing and querying RDF – we use Sesame.   Finally, there are several tools available for transforming/mapping RDF data – we use DERI Pipes.</p>
+<p>I will present the motivations and logic behind the proposed pipeline; discuss the pros and cons of various pipeline tools; and discuss the challenges and pitfalls we faced when building the prototype. </p>
+</div>
+              </div>
+ <!-- /content-field -->
+<div class="field text field-program-type">
+                                <h3 class="label inline">Type: </h3>
+          <div class="item inline odd">Mini-Workshop - teaches something or explores approaches</div>
+              </div>
+ <!-- /content-field -->
+<div class="field link field-progam-url">
+                                <h3 class="label inline">Site: </h3>
+          <div class="item inline odd"><a href="http://collections.mohistory.org/search" target="_blank" rel="nofollow" title="Read more about [title]">http://collections.mohistory.org/search</a></div>
+              </div>
+ <!-- /content-field -->
+<div class="field userreference field-program-authors">
+      <h3 class="label">Authors</h3>
+                                <div class="item odd"><div class="view view-field-program-authors view-id-field_program_authors view-display-id-default view-dom-id-1 ">
+    
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-1">
+    <thead>
+    <tr>
+              <th class="picture">
+                  </th>
+          </tr>
+  </thead>
+  <tbody>
+          <tr class="odd views-row-first views-row-last">
+                  <td class="picture">
+            <div class="user-picture"><a href="../../user/dhenry.html" title="View user profile."><img src="../../files/imagecache/medium/pictures/picture-1417.png" alt="dhenry&#39;s picture" title="View user profile." class="imagecache imagecache-medium" width="100" height="70"/></a></div>
+ <!-- /user-picture -->          </td>
+                  <td class="value-2">
+            <div class="program-author"><a href="../../user/dhenry.html">David Henry, Missouri History Museum, USA</a> <span class="contact-link"></span></div> Web Development is my third career.  I have a B.S. in Natural Resource Management and a Masters in Public Policy.  I worked for 10 years as a policy analyst.  During those 10 years I received training in programming and web development.  For the past 10 years, I have been a full time web developer...          </td>
+              </tr>
+      </tbody>
+</table> <!--/views-view-table.tpl.php -->
+    </div>
+  
+  
+  
+  
+  
+  </div> <!-- /views-view -->
+</div>
+              </div>
+ <!-- /content-field -->
+  </div>
+  
+  <div class="article-meta">
+      <p class="submitted">Posted <em class="time">September 30, 2011 - 11:56am</em> by <em class="author"><a href="../../user/dhenry.html" class="username" title="View David&#39;s profile.">David Henry</a></em></p>
+  
+    
+    </div>
+  
+  
+</div> <!-- /article --></div>
+
+        </div>

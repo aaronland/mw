@@ -1,0 +1,498 @@
+<div id="main-content">
+   <!-- <div id="news-old" onclick="location.href='http://conference.archimuse.com/';" style="cursor:pointer;">-->
+<div id="news-container">
+    	
+ 		<div id="evals">
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+			var r_text = new Array ();
+			r_text[0] = "very lively discussion. to be continued ...";
+			r_text[1] = "well curated. high level thinking";
+			r_text[2] = "inspiring ... life-changing conversation";
+			r_text[3] = "the creativity here is palpable";
+			r_text[4] = "very professional. a nice collegial atmosphere. highly intellectual.";
+			r_text[5] = "great inclusive program ... learning so many amazing things about what others are doing.";
+			r_text[6] = "great community where the most innovative and creative people get together!";
+			r_text[7] = "love the openness of everyone participating";
+			r_text[8] = "What's good? The people.  The ideas. The conversations.  The willingness to really talk about issues.   The food and coffee. ";
+			r_text[9] = "an inter-generational community, in which each new layer brings its own talents, technologies, and ideals to the table in a respective and co-creative dialogue.";
+
+
+			var i = Math.floor(9*Math.random())
+			
+			document.write ('<h2 align=\"center\">Feedback from MW2009</h2><ul class=\"news-list\"><li><span style="font-size: 1.3em;">&ldquo;</span>&nbsp;' + r_text[i] + '&nbsp;<span style="font-size: 1.3em;">&rdquo;</span></li></ul>');
+			
+	                // ]]> -->
+				  </script>
+		<noscript></noscript>
+
+	  </div>
+ 		 <div id="news">    
+	        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+                    //USAGE SYNTAX: new rssdisplayer("divid", "rssurl", numberofitems, "displayoptions")
+                    new rssdisplayer("news", "http://conference.archimuse.com/conferences/mw/mw2010/feed", 20, "")
+                // ]]> -->
+				  </script>
+		<noscript></noscript>
+
+      </div>
+         </div>  
+    
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="Intro-Paragraph" --> 
+          <h2 class="Author"><a href="../../bios/au_440016199.html">Nate Solas</a>, Walker Art Center, USA</h2>
+          <h3 class="AbstractTitle">Abstract </h3>
+<p class="AbstractText">A recent redesign of the collection search interface for an on-line art education tool (<a href="http://www.artsconnected.org/">ArtsConnectEd.org</a>) has provided an opportunity to compare usage patterns between the two versions. In this paper I first survey current search interface design patterns, then discuss the new interface, the log cleanup and analysis, and finally present evidence-based recommendations that may be applied to the general problem of presenting large collections on-line.</p>
+          <p class="keywords">Keywords: faceted search, browse, findability, log analysis, interface, art collection</p>
+	  <!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="Body-Text" -->
+
+          <h2>Introduction </h2>
+        <p>Many research papers have been written addressing faceted browse and search in the context of museum collections, but they generally seem to be of the &#34;here&#39;s what we did&#34; variety, with very little retrospective &#34;is it working?&#34; reporting. This paper seeks to determine if there are any objective advantages of a browse interface using category filters over a fairly simple text query box. The analysis is made potentially even more valid by the fact that the data comes from the same site in two consecutive years with the primary difference between versions being the search and browse interface. By comparing usage trends between the two versions of the site, I hope to finally start to answer the big question: does it work? </p>
+        <p>The site in question is ArtsConnectEd.org, or ACE, a joint venture of the Walker Art Center and the Minneapolis Institute of Arts. </p>
+        <p>The first version (ACE1) launched in the mid 90&#39;s and was at the time a groundbreaking resource for educators; it provided access to the collections of both institutions, and allowed users to collect and annotate sets of artwork. The search interface was very plain, a simple keyword field, with options to limit the search to only one institution or to only find objects with images on-line. In May of 2009, a complete rewrite of the site (ACE2) went live, including a fully combined search and browse interface providing filters on aspects such as Medium, Culture, and more. Due to this launch time, all comparisons of the sites will be made in the window of May 1 through December 31, 2008 for ACE1 to May 1 through December 31, 2009 for ACE2. </p>
+        <p>I&#39;ve opted to use log analysis vs. more traditional usability studies with live users for a few reasons: </p>
+          <ul>
+            <li>The old site we&#39;re comparing to is no longer live, but the logs live on. </li>
+            <li>As Christina Wodtke writes, &#34;search is so fast, that if the user is forced to think [e.g., in a usability test], they slow down too much and behave unnaturally&#34; (Morville, 2008). It is hoped that log analysis will reveal more natural usage patterns than would a test environment. </li>
+            <li>I had no budget for usability testing on a scale that would give meaningful results. </li>
+          </ul>
+          <p>This paper will first summarize the current state of collection interfaces on-line, and then delve briefly into the structure of the site we&#39;re using for testing. I&#39;ll summarize and make recommendations on the cleanup needed on the log files, and finally compare the two sites in depth along with analysis and conclusions. This investigation will help illuminate some of the shared issues of findability on our collection sites, as well as common approaches and best practices. I&#39;ll also touch on the role of Google in all of this - as Mike Ellis points out in both his blog and his recent paper on hoard.it (Ellis, 2009), our collections may as well not exist if they&#39;re not in Google&#39;s index. Users do not begin their search on our sites; they begin on Google. </p>
+          <h3>Definitions </h3>
+        <p>Throughout this paper I refer to facets, which may be considered simply as descriptive categories of metadata about an object. For example, when describing a work of art, possible facets are the creator (Picasso, Jasper Johns), the medium (oil painting, bronze), or the creation date. I also make a distinction between &#34;term facets&#34; (facet words occurring within a search string) and &#34;browse facets&#34; (facets chosen from pulldowns in the site interface). </p>
+          <h2>A Brief Survey of Collection Interfaces: Trends and Anomalies </h2>
+        <p>A survey of 12 collection interfaces was made the week of January 17, 2010, and these results reflect the sites at that time. The sites chosen were primarily art institutions, but included several others as well. Within these 12 sites there was a great deal of variety in the interfaces and functionality, as well as several aspects that were nearly ubiquitous. These groupings are notable for their clear trends, but also for their outliers. The sites surveyed are in Table 1, and the results in Table 2. </p>
+        <table width="80%">
+              <tbody><tr>
+                <th>Institution </th>
+                <th>URL </th>
+                <th>Reference name </th>
+              </tr>
+              <tr>
+                <td>ArtsConnectEd.org </td>
+                <td>http://www.artsconnected.org/resource/list </td>
+                <td>ACE2 </td>
+              </tr>
+              <tr>
+                <td>Brooklyn Museum </td>
+                <td>http://www.brooklynmuseum.org<br/>
+                /opencollection/collections/ </td>
+                <td>Brooklyn </td>
+              </tr>
+              <tr>
+                <td>Indianapolis Museum of Art </td>
+                <td>http://www.imamuseum.org/search/mercury </td>
+                <td>IMA </td>
+              </tr>
+              <tr>
+                <td>Museum of Fine Arts, Boston </td>
+                <td>http://www.mfa.org/collections/index.asp </td>
+                <td>MFA </td>
+              </tr>
+              <tr>
+                <td>Museum of Modern Art, NY </td>
+                <td>http://www.moma.org/explore/collection/ </td>
+                <td>MOMA </td>
+              </tr>
+              <tr>
+                <td>Phoebe A. Hearst Museum of Anthropology </td>
+                <td>http://pahma.berkeley.edu/delphi/ </td>
+                <td>PAHMA </td>
+              </tr>
+              <tr>
+                <td>Powerhouse Museum </td>
+                <td>http://www.powerhousemuseum.com<br/>
+                /collection/database/ </td>
+                <td>Powerhouse </td>
+              </tr>
+              <tr>
+                <td>San Francisco Museum of Modern Art </td>
+                <td>http://www.sfmoma.org/pages/collection </td>
+                <td>SFMOMA </td>
+              </tr>
+              <tr>
+                <td>Seattle Art Museum </td>
+                <td>http://www.seattleartmuseum.org/emuseum/<br/>
+                code/emuseum.asp </td>
+                <td>SAM </td>
+              </tr>
+              <tr>
+                <td>Smithsonian Institution </td>
+                <td>http://collections.si.edu/search/ </td>
+                <td>SI </td>
+              </tr>
+              <tr>
+                <td>Victoria and Albert Museum </td>
+                <td>http://collections.vam.ac.uk/ </td>
+                <td>V&amp;A </td>
+              </tr>
+              <tr>
+                <td>Walker Art Center </td>
+                <td>http://collections.walkerart.org/ </td>
+                <td>Walker </td>
+              </tr>
+        </tbody></table>
+          <p class="captionTable">Table 1: Institutions surveyed. </p>
+        <p class="captionTable"> </p>
+          <div align="center">
+            <table width="80%">
+              <tbody><tr>
+                <th>Institution </th>
+                <th>Results with no images </th>
+                <th>Multi-word query operator </th>
+                <th>Stemming </th>
+                <th>Spelling suggestions </th>
+                <th>Browse option </th>
+              </tr>
+              <tr>
+                <td>ACE2 </td>
+                <td>no </td>
+                <td>AND </td>
+                <td>yes </td>
+                <td>yes </td>
+                <td>same interface </td>
+              </tr>
+              <tr>
+                <td>Brooklyn </td>
+                <td>n/a* </td>
+                <td>OR </td>
+                <td>no </td>
+                <td>no </td>
+                <td>backdoor </td>
+              </tr>
+              <tr>
+                <td>IMA </td>
+                <td>included </td>
+                <td>OR </td>
+                <td>no </td>
+                <td>no </td>
+                <td>none </td>
+              </tr>
+              <tr>
+                <td>MFA </td>
+                <td>included </td>
+                <td>AND </td>
+                <td>no </td>
+                <td>no </td>
+                <td>none </td>
+              </tr>
+              <tr>
+                <td>MOMA </td>
+                <td>included </td>
+                <td>AND </td>
+                <td>yes </td>
+                <td>yes </td>
+                <td>separate interface </td>
+              </tr>
+              <tr>
+                <td>PAHMA </td>
+                <td>no </td>
+                <td>AND </td>
+                <td>no </td>
+                <td>no </td>
+                <td>same interface </td>
+              </tr>
+              <tr>
+                <td>Powerhouse </td>
+                <td>included </td>
+                <td>AND </td>
+                <td>no </td>
+                <td>yes, several </td>
+                <td>backdoor </td>
+              </tr>
+              <tr>
+                <td>SFMOMA </td>
+                <td>included (at end?) </td>
+                <td>AND </td>
+                <td>no </td>
+                <td>yes </td>
+                <td>by artist* </td>
+              </tr>
+              <tr>
+                <td>SAM </td>
+                <td>included </td>
+                <td>AND </td>
+                <td>no </td>
+                <td>no </td>
+                <td>backdoor </td>
+              </tr>
+              <tr>
+                <td>SI </td>
+                <td>included </td>
+                <td>AND </td>
+                <td>yes </td>
+                <td>no </td>
+                <td>same interface </td>
+              </tr>
+              <tr>
+                <td>V&amp;A </td>
+                <td>sorted to end </td>
+                <td>AND </td>
+                <td>yes </td>
+                <td>no </td>
+                <td>backdoor* </td>
+              </tr>
+              <tr>
+                <td>Walker </td>
+                <td>included </td>
+                <td>AND </td>
+                <td>no </td>
+                <td>no </td>
+                <td>none </td>
+              </tr>
+            </tbody></table>
+        </div>
+          <p class="captionTable">Table 2: Collection interface survey results. *See text for full description.</p>
+        <p>One question facing institutions as they bring their collections on-line is how to display objects without an image (due to rights issues, or simply not photographed yet). Here the trend is clear: just 2 sites opt for image-only returns by default. One institution, Brooklyn, has largely solved the problem for their collection by always showing at least a thumbnail under fair use. The V&amp;A includes results without images, but the default behavior has them being sorted last, effectively hiding them for most queries. Of the two sites that limit results to those with images, their collections are very heavily weighted towards objects without images: PAHMA has approximately 10 to 20 times as many, ACE2 about 4. Sites that include results without images by default seem to have a much lower ratio: Powerhouse and MOMA both appear to have equal or better representation of objects with images. It therefore seems clear this decision was made to &#34;clean up&#34; the results in collections with a disproportionate number of objects without images, even it means hiding a majority of the collection. </p>
+        <p>Another example of interfaces trending the same way is the decision on how to treat multiple-word queries. This was tested by comparing results of a search for a single keyword, &#34;blue&#34;, and a pair of words, &#34;blue mummies&#34;. If the size of the second result set was the same or larger, the search engine appears to be using an implicit Boolean &#34;OR&#34; to join words. Only two sites use &#34;OR&#34;; the other 10 use &#34;AND&#34;. It is hard to infer meaning from this other than to say that &#34;OR&#34; is more likely to return at least some results, which can be considered positive. But it also means that adding more words doesn&#39;t serve to refine the query, and instead broadens it. </p>
+        <p>In another test of the underlying mechanics, a search was made for &#34;blue&#34; and another for &#34;blues&#34;. If a site returned an identical result set, it means the search engine was using stemming, or reducing words to their roots for broader results. The implementation trend was a bit less clear-cut, but in the end only 4 sites are stemming their vocabularies. Again, this seems to come down to an effort to provide more results for more queries, rather than providing a rigid search framework. </p>
+        <p>One final aspect of search is the ability to suggest spelling corrections. Only 4 of the sites were able to correctly suggest spelling fixes; for example, suggesting &#34;picasso&#34; when given the incorrect &#34;picaso&#34;. </p>
+        <p>The sites were also examined for a way to browse the collection or a “backdoor” browse technique; such as links on object detail pages, or choosing only one aspect of an advanced search. These secondary browse experiences are often quite complete, and sometimes (V&amp;A) even mentioned in the documentation, but are not given primary consideration on the interface. SFMOMA provides browsing by one facet, artist name, and a separate &#34;virtual wall&#34; interface for browsing visually using a keyword to filter. </p>
+        <p>Of the sites with browse, they all use some form of linked breadcrumb to both indicate current position and provide a means to remove filters. Three sites, PAHMA, SI, and V&amp;A, allow parallel selections from within the same category, and two, ACE and MOMA, offer a drilldown mechanism where there can be only one choice per category. Of these, only MOMA does not show counts next to the category filters to show how many results will appear with this selection. Two sites, ACE and MOMA, show all category filters at all times, while the others only show filters that will impact the current result set. This seems clearly related to the number and depth of the categories available for filtering: PAHMA, SI, and V&amp;A have an incredibly rich set of filters across many categories. ACE and MOMA have limited both the categories and the number of filters within them, so this information is less overwhelming to show all the time. </p>
+        <p>Of final note, it&#39;s worth considering how Google handles some of this. Multiple words are combined with ”AND” by default, and while generic stemming is not performed, there is an extremely advanced synonym resolving system in place (Google, 2010). If you entered &#34;blue&#34; but the algorithm thinks it understands the query, you may very well get back some results for &#34;blues&#34;. It does not seem reasonable for museums to replicate this level of analysis, so the jury is out on the &#34;right&#34; answer regarding stemming collection searches. The final thing Google does extremely well, again thanks to analyzing its incredible volume of searches, is suggest spelling fixes. Google is actually spelling agnostic: it simply corrects towards known good searches, so if a misspelling is endemic it can suggest it even though it&#39;s &#34;wrong&#34;. This is something for museums to consider as they begin to index user-entered tags and comments. </p>
+        <p>The state of collection search spans a very broad spectrum, from sites like the Walker and MFA with their collections on-line but primarily only keyword (and sometimes advanced) search to access them, to the new Smithsonian interface giving access to everything at once plus an incredible variety of filters and information about the collection. I don&#39;t think this paper can prove that one is fundamentally better than the other, but it is safe to say that how institutions put their collections on-line is changing all the time, and the trend seems to be towards richer interfaces showing more aspects of the underlying data. </p>
+          <h2>A Description of the New Interface </h2>
+        <p>The new ArtsConnectEd was built with the goal of both exposing the breadth of the collection and encouraging deeper exploration. (See ”Some Real Questions Get Answers” below for an analysis of our success in this area.) </p>
+          <p class="BlockQuote">User studies (Lee et al., 2003; English et al., 2003) have recently been carried out to show that if the user does not know precisely what objects s/he is looking for, then the multi-facet search method with its browsing the shelves sensation is clearly preferred over keyword search or using only a single facet. ... However, if the user is capable of expressing an information need straightforwardly in terms of keywords, then a Google-like keyword search interface is usually faster and preferable.</p>
+          <p class="BlockQuoteAuthor"> (Hyvonen et al., 2004)        </p>
+        <p>Early discussions considered building two interfaces: one for search, and one for browse, but this was quickly scrapped as the two designs began to have more similarities than differences. We eventually decided to focus exclusively on a browse interface, with keyword just another filter to narrow down the results. Including our object metadata as facets with counts gives users two immediate benefits: </p>
+          <ol>
+            <li>it exposes the collection since they can see at a glance how many paintings, sculptures, etc., there are </li>
+            <li>it gives a key way to differentiate between words and meaning. That is, instead of searching for the word &#34;painting&#34;, users can select &#34;Painting&#34; from the Medium pulldown. </li>
+          </ol>
+        <p>The difference may seem subtle, but the results are quite different, and allow further keywords to be used to refine their selection of paintings. For more details on the Art Finder in ArtsConnectEd, please see my blog post from after the launch: <a href="http://blogs.walkerart.org/newmedia/2009/09/22/behind-the-scenes-of-artsconnected-art-finder/">http://blogs.walkerart.org/ newmedia/2009/09/22/behind-the-scenes-of-artsconnected-art-finder/</a>. </p>
+        <p>While our object records provide a rich base to build a faceted search on, the weak link in our implementation was the upstream collection databases, which were sometimes extremely sparse in their metadata and not tied to a controlled vocabulary. Lacking even full descriptions of some objects, a few experiments with the Delphi natural language processing system didn&#39;t provide much that we didn&#39;t already know. The one thing we perhaps could have gained with further tinkering is more hierarchy in our data, but it was decided to skip this for now. </p>
+          <h3>The filters </h3>
+        <p>On the top level, we have a pulldown for Institution, and two checkboxes for &#34;On View&#34; and &#34;Has Image&#34;. A &#34;Reset All&#34; button clears all the filters to bring the user back to the default state. </p>
+          <p class="caption"><a href="http://www.artsconnected.org/resource/list"><img src="solas.fig1.png" width="500" height="482" alt="Figure 1"/></a></p>
+        <p class="caption">Fig 1: The search interface of the new ArtsConnected.org. <a href="http://www.artsconnected.org/resource/list">http://www.artsconnected.org/resource/list</a></p>
+        <p>We chose to facet on the &#34;big three&#34; of the art world: Artist Name, Culture, and Medium. The first, Artist Name, is a text field that autocompletes user input using the full text of our artist names, and the other two are pulldown menus that allow only one selection each. That is, they only allow users to drill down towards a narrower result set; they don&#39;t allow parallel selections. Each pulldown has an &#34;Any&#34; selection that clears its filter, and this is the default. </p>
+          <h3>Term reduction and data cleanup </h3>
+        <p>The lists of unique terms for fields like Culture and Medium were daunting, with each containing many hundred entries. Unfortunately, as our data sources were not normalized to vocabularies such as the Union List of Artist Names (ULAN) or Thesaurus of Geographic Names (TGN) for places / culture, the lists were sprawling and confusing. Early on we intended to clean our data programmatically, but this proved to be out of scope for the project. For artists, this means the site does not know &#34;El Greco&#34; and &#34;Doménikos Theotokópoulos&#34; are the same person -- we can only autocomplete to artist names from our existing vocabulary. </p>
+        <p>Because we lacked organizing hierarchies, and because we wanted a vocabulary accessible to non-professionals (Amuzinskaya et al., 2007), it was decided to reduce the terms into broadly similar types. Administrators from each institution are able to sort and group the 1200 unique Mediums into a very digestible 15 items. A similar approach was taken for Culture, but a manual interface was ruled out due to the size of the list: almost 5,000 unique entries. A naive Bayesian filter was built and quickly trained by starting with the most common words, and now automatically sorts any culture string into one of 27 groups. Administrators can manually override the Culture (and re-train the filter) if something ends up in the wrong group. After some initial work, this system seems to be extremely reliable. </p>
+        <p>Because the lists were small enough to scan visually and we had no hierarchy, it was decided it didn&#39;t make sense to remove those with zero results. It was determined that it was more important to always show all the options rather than whittle the list down to nothing after the first selection. It is unclear if this decision translates to an intuitive user experience (see “Evidence-Based Recommendations”), since it can result in zero result sets. </p>
+        <p>We also had to clean our data for dates and sizes. Each field has a fairly complex parsing routine that can understand a wide variety of formats for each data type. Internally every dimension measurement is normalized to inches, and a representative size value is calculated from the largest two dimensions. </p>
+          <h3>Under the hood </h3>
+        <p>ArtsConnectEd harvests collection data using the Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) to transport object metadata in the lite version of the Categories for the Description of Works of Art format (CDWAlite). </p>
+        <p>We&#39;re using Solr as our search engine. It&#39;s fast and has a nice interface to provide facet counts. All searches are handled as AJAX calls to avoid loading the entire page -- this is especially important since we decided that every change of every facet will immediately retrieve results. There is no need to hit &#34;go&#34; except on the open text fields. Each query is logged in our database along with the session information and a unique browse id. Any actions taken with this result set are tied back to this browse id and can be investigated further. </p>
+          <h2>Log Files and Analysis </h2>
+          <h3>Recovering session data </h3>
+        <p>The log files for the first version of ArtsConnectEd leave much to be desired. I will briefly document the cleanup effort made on this data, as I believe there are a number of institutions sitting on similar log files and these techniques appear to be useful. The log file stored a unique id for each search, the term used, the timestamp, the number of results of the search, and the User Agent string from the browser. No attempt was made to add a session to the logs, so at a glance there is no way to tell if a set of consecutive searches really came from the same person. Further examination of the data, however, allowed me to extract very good approximations of session data using the User Agent and the timestamp. </p>
+        <p>First, I defined a &#34;session window&#34; of 180 seconds, or three minutes. A script then iterates through the search log and looks for a new User Agent. When found, a unique session identifier is generated from the User Agent (UA) and the timestamp of the search. If the same UA is seen within the session window, the script adds that line to the session and moves on. This continues until we leave the session window without seeing another occurrence of the UA. </p>
+        <p>This approach is supported by a recent study from the Electronic Frontier Foundation showing a User Agent string on average contains enough info to uniquely identify a user out of 1,500 other users (Eckersley, 2010). &#34;On its own that isn&#39;t enough information to ... track people perfectly,&#34; but combined with our small session window we can be fairly confident our sessions are accurate. </p>
+        <p>Several additional measures were taken to try to account for the potential overlap of UAs between actually unique users in special cases. For example, the script watches for &#34;bursts&#34; of search activity that occur in sequences faster than a real user can type; this sort of behavior seems to come up often in school labs where all of the machines are using the same browser and OS, resulting in identical UAs. Another algorithm watches for &#34;bouncing&#34;, where a search term is used several times in a row, as if for paging, and then is replaced by a new term, and then we continue to see both of these terms on and off in the session. This usually indicates two users with the same UA doing different things with the system at the same time. In all cases we delete the entire session, since there is no way to accurately pull apart these overlapping actions. </p>
+          <h3>Finding term facets </h3>
+        <p>In addition to the obvious things like number of words per search, I also tried to analyze terms with meaning. Using the object metadata from ACE2 I exported full lists of our artist names, unreduced culture words, and all the medium terms. Each query in the logs was examined against these lists to see if a user was searching for artists, cultures, or medium. This is easy for words like &#34;sculpture&#34;, but a bit trickier for artist names with multiple words. The algorithm we ended up using checks first for the complete artist name in the query, e.g. &#34;Chuck Close&#34;; this was marked as a full match. In the case of a query like &#34;close portrait&#34; it would be marked as a half match since algorithmically it seems likely that the word &#34;close&#34; means the artist, but we can&#39;t be sure. As a further refinement I gave the half matches a bit more weight if the word was capitalized, as in &#34;Close portrait&#34;, since many users capitalize proper names. A final bit of cleanup for names involved copying and reducing diacritics (umlauts, etc) to their base character, so we could match both &#34;durer&#34; and &#34;dürer&#34;. </p>
+        <p>A similar matching approach was taken for medium, where our master list contained several multi-word entries (e.g. &#34;mixed media&#34;). For the culture list it was easier to split multi-word entries into single words, do some manual cleanup, and use this list of single words. </p>
+          <h3>Paging </h3>
+        <p>The last bit of inference from the old ACE1 data was paging, since we did not explicitly record paging information from the search interface. However, by marking consecutive searches in a session that have the same term and the same number of results, we can fairly confidently say these are page changes. It&#39;s possible the user simply reloaded the page and generated another line in the logs, but for the sake of analysis we decided they were all page changes. </p>
+          <h3>Log file recommendations </h3>
+        <p>Based on the amount of data cleanup and recovery I had to do on these logs, it seems wise to suggest not waiting to start analyzing your data. The sooner you try to get the data out, the sooner you realize what&#39;s missing, not recorded in a way that&#39;s useful, or maybe entirely unnecessary. Fortunately there are a few aspects of data that can be recovered or inferred after the fact, but these are limited and extremely resource-intensive to discover. </p>
+        <p>Another reason to recommend performing log analysis sooner is to encourage more publishing of this data. Exposing our successes and failures in hard numbers would be a great step in the journey towards findability, especially if we can begin iterating design changes and track result. if </p>
+          <h2>What Our Logs Tell Us </h2>
+        <h3>Are people trying to browse the old site? </h3>
+        <p>Is there any evidence we can get from ACE1 that people were trying to browse the site using the search interface? I started by examining what terms were being used as people searched beyond page 10, and the results in table 3 are clear: most of the top keywords are Medium facets such as &#34;photographs,&#34; &#34;painting,&#34; &#34;paintings,&#34; &#34;sculpture,&#34; and &#34;ceramics.&#34; Also, note the near-duplicate &#34;painting&#34; and &#34;paintings&#34;; &#34;photo,&#34; &#34;photograph,&#34; and &#34;photography.&#34; This is an argument to make browse facets available on screen so users don&#39;t have to guess what words your institution uses.        </p>
+        <table>
+          <tbody><tr>
+                <th>Term </th>
+                <th>Frequency </th>
+          </tr>
+              <tr>
+                <td>photographs </td>
+                <td>734 </td>
+              </tr>
+              <tr>
+                <td>paintings </td>
+                <td>413 </td>
+              </tr>
+              <tr>
+                <td>sculpture </td>
+                <td>275 </td>
+              </tr>
+              <tr>
+                <td>arts </td>
+                <td>263 </td>
+              </tr>
+              <tr>
+                <td>ceramics </td>
+                <td>169 </td>
+              </tr>
+              <tr>
+                <td>pattern </td>
+                <td>156 </td>
+              </tr>
+              <tr>
+                <td>photograph </td>
+                <td>150 </td>
+              </tr>
+              <tr>
+                <td>landscape </td>
+                <td>123 </td>
+              </tr>
+              <tr>
+                <td>masks </td>
+                <td>121 </td>
+              </tr>
+              <tr>
+                <td>children </td>
+                <td>112 </td>
+              </tr>
+        </tbody></table>
+        <p class="captionTable">Table 3: Keywords used in ArtsConnectEd 1 <br/>
+        when users searched beyond page 10. </p>
+        <p>Using facet words in a query seems to strongly indicate a deeper engagement with the site, and a general willingness to search further and longer. Users including facets in their search terms, on average: </p>
+          <ul>
+            <li>went almost a full page deeper in their results, </li>
+            <li>were 10% less likely to have only empty results in their session, and </li>
+            <li>performed 2.7 times as many searches, including page changes. </li>
+          </ul>
+        <p>When people paged extensively in ACE1, they were significantly more likely to be using facet words (particularly medium) in their query, as Fig 2 shows. </p>
+        <p class="caption"><img src="solas.fig2.png" width="500" height="341" alt="Figure 2"/></p>
+        <p class="caption">Fig 2: Percent of facet words occurring in search string at different page depths in a search session </p>
+        <p>While looking for browsing behaviors, I also did a significant amount of investigation regarding words added and removed, spelling changes, etc. That is, if a word is added, is it a name or a culture word? How many words were changed, and by how much? Was it just a respelling? There is a slight trend in ACE2 to add words to a query instead of leaving the length the same, perhaps indicating more attempts to refine the query. Overall, the numbers give us very little we can be sure of: see Table 4 for more. </p>
+        <table>
+        <tbody><tr>
+          <th> </th>
+          <th>ACE1 </th>
+          <th>ACE2 </th>
+        </tr>
+        <tr>
+          <td>Average words per query </td>
+          <td>1.56 </td>
+          <td>1.42 </td>
+        </tr>
+        <tr>
+          <td>Average words added or removed </td>
+          <td>-.02 </td>
+          <td>.27 </td>
+        </tr>
+        <tr>
+          <td>Percent queries with respelled word(s) </td>
+          <td>4.1% </td>
+          <td>6.7% </td>
+        </tr>
+        <tr>
+          <td>Percent queries with advanced search </td>
+          <td>2.4% </td>
+          <td>1.4% </td>
+        </tr>
+        </tbody></table>
+        
+        <p class="caption">Table 4: Query string comparison between ACE1 and ACE2.<br/>
+See text for in-depth analysis </p>
+        <p>I examined the case in both systems where one or more words were added to an existing query string, and at least one of the original words remains the same. If we assume that adding a word to an existing query means they&#39;re trying to refine their results, and removing one means they&#39;re seeking to expand them, are there trends as to what kind of words they&#39;re adding or removing? Apparently not. There was no appreciable difference in the distribution of respelled words from general usage, except there were slightly fewer artist names added. Of those added, 70% were non-facet words. The same trend is seen in word removals, with a slightly higher number of non-facet words removed at 75%. </p>
+          <h3>How Does the New Site Compare? </h3>
+          <h4>Number of searches per session </h4>
+        <p>The first number to look at is how many times the users searched per session. This is interesting because of the clear spike in the ACE2 line showing that more people did two searches than did just one. This is in contrast to ACE1 where the number of searches per session immediately begins to decline: many more people did a single search and stopped than in ACE2. Overall, the &#34;long tail&#34; of searches is thicker in ACE2, indicating more search activity in the new interface. </p>
+        <p class="caption"><img src="solas.fig3.png" width="500" height="341" alt="Figure 3"/></p>
+        <p class="caption">Fig 3: Number of sessions Y that did X number of searches </p>
+          <h4>Success and Failure </h4>
+        <p>I was unable to come up with a log-based metric to show a successful search, so I decided to try the opposite. If we define a &#34;failed session&#34; as one that saw a user try more than one search and never get any results at all for the session, we can determine the percentage of failures out of all sessions that had at least 2 searches. In ACE1, this figure is a depressing 8.8%. ACE2 is much better, with only 0.5% of all users who did more than one search quitting without ever getting results. </p>
+        <p>In terms of getting at least some results to users before they leave (and ignoring the question of &#34;is it what they wanted?&#34;), ACE2 is a vast improvement over ACE1. </p>
+          <h4>Advanced Search </h4>
+        <p>I defined an &#34;advanced search&#34; as one that includes a Boolean operator, a quoted phrase, or a wildcard &#39;*&#39;. (Note, the word &#34;and&#34; is particularly difficult to interpret, since it occurs so often in titles of works. For these figures, its use was estimated as about half Boolean, half phrase.) From Table 4, we see that ACE2 has nearly 2 times fewer advanced searches, perhaps because the browse facets allow intuitive ways to combine ideas instead of using the query string.</p>
+          <h4>Facet usage </h4>
+        <p>The usage of facets in search terms dropped markedly in ACE2 (about 70% of what was seen in ACE1), except for the Culture category. Investigation of the actual queries seems to indicate users are trying to refine the rather broad Culture categories we&#39;ve provided in the pulldown. </p>
+        <p class="caption"><img src="solas.fig4.png" width="500" height="341" alt="Figur e4"/></p>
+        <p class="caption">Fig 4: Percent term facet usage in ACE2 compared to ACE1 </p>
+        <p>Overall, this drop in keyword facets can be considered a good thing since it is made up for by usage of the browse facets. In ACE2, 3.5% of all searches included an artist name in the query, and 7.1% included a name in the artist browse field. This change in usage is also seen in Medium, with 5.1% of searches having a term facet and 14% using a selection from the pulldown. Culture moved from 4.5% as a term to 9% as a browse facet. See &#34;Browse vs. keyword facets&#34; below for more on term facet versus browse facet usage.</p>
+        <p class="caption"><img src="solas.fig5.png" width="500" height="341" alt="Figure 5"/></p>
+        <p class="caption">Fig 5: Percent of searches including browse facets in ACE2</p>
+        <p class="caption"><img src="solas.fig6.png" width="500" height="341" alt="Figure 6"/></p>
+        <p> </p>
+        <p class="caption">Fig 6: Proportional use and overlap of browse facets in ACE2</p>
+        <p>One final graph (Fig 7, compare to Fig 2) of term usage by page number shows that in sessions that page extensively, the deeper they went, the more likely they were to have an empty query string. This strongly indicates that the browse features were being used for more extensive exploration. </p>
+        <p class="caption"><img src="solas.fig7.png" width="500" height="341" alt="Figure 7"/></p>
+        <p class="caption">Fig 7: Average query string usage as users reach deeper page numbers </p>
+          <h2>Some Real Questions Get Answers</h2>
+          <h3>Collection coverage </h3>
+        <p>How many different objects were viewed in each of the two sites? As with most of these questions, it&#39;s not as straightforward as I&#39;d hoped. Using Google Analytics to extract pageviews and unique URL counts of object detail pages, ACE1 saw 11,756 objects viewed 66,887 times. I expected, and got, an increase in the new site: ACE2 saw 14,105 objects viewed 135,563 times, for an increase in coverage by almost 20%, and views by 100%.</p>
+        <p>As it turns out, a good portion of these object views do not come from clicks in the search results: instead, users are &#34;paging&#34; at the object detail level, or flipping through their improved results like a deck of cards. Another segment of object views comes from search engines due to the new interface allowing deep crawling of our entire collection, instead of relying on links to discover the objects. These are both directly related to the search interface changes, so the increased coverage seems attributable to this change as well. </p>
+          <h3>Time on site </h3>
+        <p>Turning again to Google Analytics for this information reveals a clear increase: the average time spent on search and detail pages went from 28 seconds to 40 seconds, with most of the difference being on the object details themselves. </p>
+        <p>The most significant downside of doing data-only analysis is being unable to declare with confidence why numbers like this changed the way they did. Is it because the interface was able to lead them to objects they were actually interested in, or simply because the page was complicated and they were struggling to make sense of it? I&#39;d like to believe the former, but this cannot be asserted without actual user tests. </p>
+          <h3>Browse vs. keyword facets </h3>
+        <p>When given facets for Medium, do users take advantage of them? Or do they continue to type things like &#34;Sculpture&#34; into the keyword field? The answer overall shows positive uptake for browse facets, although it does seem to vary significantly by medium. For example, the word &#34;painting&#34; occurs as a browse facet about 6 times more frequently than it appears as a keyword facet. The word &#34;sculpture&#34; is closer; it is used as a browse facet only 2.5 times more than as a keyword. The total trend is encouraging, averaging 4 times more use of the browse facets than of equivalent keywords. </p>
+          <h2>Evidence-Based Recommendations </h2>
+          <h3>Prevent dead-ends </h3>
+        <p>Facets need a count in order to prevent dead-ends. In our pulldown lists we are able to tell users how many results each selection will give them, but we don&#39;t provide any clues for several other fields (&#34;on view&#34; and &#34;has image&#34; checkbox, etc.). The difference in dead-ends is striking: with the warning, people are only a third as likely to browse into a &#34;zero results&#34; set as when we don&#39;t warn them. However, this is still almost a full percent of our searches, so it seems clear that some people either don&#39;t believe those numbers or don&#39;t notice them. Of these &#34;unwarned&#34; zero results, the majority (70%) were autocompleted artist names. </p>
+          <h4>Recommendation</h4>
+        <p>Every facet needs a count to indicate the results of adding it to the current search, especially if the result is zero returns. It may be argued that facets should be removed if they will not refine a result set, but with short category lists, removing facets will quickly obscure the variety of the collection. Counts are mandatory; whether or not to remove empty facets is rather collection-specific.</p>
+          <h3>Clean up the &#34;no results&#34; page </h3>
+        <p>It&#39;s easy for users to type their way to a dead-end by adding or changing a keyword, and here we have no facet counts to help. We also see some users get &#34;stuck&#34; on a facet, and seemingly forget that it&#39;s on. This leads to some fairly significant bouts of thrashing as they try various search terms and never find the expected results. </p>
+        <p>Example: </p>
+          <ol>
+            <li>User has applied a browse facet, and has some results. </li>
+            <li>User adds or changes the search string in a non-trivial way (not just a spelling change), and gets no results. </li>
+            <li>25% of these users change the query again and still get no results </li>
+          </ol>
+          <h4>Recommendation</h4>
+        <p>Make the breadcrumb a prominent part of the &#34;no results&#34; message, and give options (with counts!) to remove various pieces of the query (Nudelman, 2009). This eliminates confusion as to why a result set is empty by showing that the keyword is good, just not with that facet in place. </p>
+          <h3>Suggest spelling </h3>
+        <p>When a word is respelled (determined by computing the Levenshtein distance between the two query strings), there are some clear trends in what kind of word it is. From table 4: for ACE1, 4% of the total searches contained a respelling of a word, and of these 14% were artist names; culture and medium words were about 5% each. For ACE2, we saw 5.7% of all searches contain a respelled word, and the percent of facets was much lower: only 8% were names, 2% medium, and 4% culture. The slightly higher rate of respelling and the fact it is more of these &#34;non-facet&#34; words seems to indicate the &#34;did you mean&#34; function of ACE2 was able to successfully correct more general vocabulary that people otherwise missed. </p>
+          <h4>Recommendation</h4>
+        <p>Suggest spelling or use autocomplete wherever appropriate, but especially for artist names. These are clearly difficult for users to spell. </p>
+          <h3>Don&#39;t hide results if they have no images (by default) </h3>
+        <p>I can&#39;t be quite as definitive as I&#39;d like on this, but there is a minority of users who seem to realize their filters should produce results and then uncheck the box limiting them to results with images only. If I look only at cases where users go from 0 results and &#34;has image&#34; <strong>on </strong>to some results and &#34;has image&#34; <strong>off</strong>, it is a fraction of a percent of total searches: 0.4%. Still, as we saw above, we&#39;re not providing count information on this filter to indicate the results of clicking it, so many users probably never realized their valid query was blocked by a parameter they&#39;d never set. About a quarter of all searches show the user turning off the &#34;has image&#34; checkbox, so clearly some users realize its impact and want full results.</p>
+          <h4>Recommendation</h4>
+        <p>By default, all results should be returned, allowing users to select images only if they so choose. The ideal in this regard is the collections site at the Victoria and Albert Museum which sorts results by &#34;richness&#34; so all results always show up, but those with images are first. </p>
+          <h3>Traffic from search engines </h3>
+        <p>Perhaps the biggest difference in the two sites is also the aspect that&#39;s really at the heart of the concept of &#34;findability&#34;: what sort of traffic did our collection get from search engines? Using Google Analytics to create a segment of visitors that landed on an object detail page, we see only 1,756 visitors from search engines in ACE1. The number of visitors landing on object pages from search engines in ACE2 is a stunning 71,276! </p>
+          <h4>Recommendation</h4>
+        <p>Follow standard Search Engine Optimization (SEO) procedures for your object detail pages; i.e., object title and description properly marked up and high on the page, flat images (with title and credit lines nearby) served in addition to fancy zoomable ones that aren&#39;t accessible to search engine spiders, and most important: make sure your entire collection is visible to the bots! This means you either need a full and automatically updating sitemap, or simply must stop hiding it behind a search interface. Google actually has some incredible algorithms it uses to poke forms on the Web to crawl deep pages, but they will never discover our entire collections this way (Google, 2008). </p>
+          <h2>Conclusion </h2>
+        <p>The concept of findability is fluid, changing as our ideas and expectations of the Web grow. What worked when we first brought our collections on-line may no longer provide a complete experience today, especially if we are limiting users to a keyword search. As Peter Morville, the author of <em>Ambient Findability</em>, said, &#34;As long as humans use words to communicate, findability will remain imperfect&#34; (Danzico, 2005). Most museums have what Google would kill for: semantic knowledge of their collection. We know who made the object, when, and where, and what it is made of. Limiting users to a simple keyword search denies these organizational concepts that can reveal our collections in their fullness. </p>
+        <p>The exciting aspect for me is that the journey toward a perfect collection interface is ongoing. In this paper I make only one recommendation that should be written in stone. It was already mentioned, but deserves a special call-out<strong>: our <em>entire</em> collections must be accessible to search engine spiders.</strong> A sitemap is one answer in the meantime, but a potentially more user-friendly idea would be to put the entire collection in a big set of pages that can be browsed, and hey - might as well put some filters on there while you&#39;re at it! </p>
+          <h2>References </h2>
+          <p class="ReferencesText">Amuzinskaya, O., A. Hilgert, J. Lesser, P. Schmitz, and G.Yu (2007). Delphi - An on-line museum collection browser. Retrieved January 22, 2010, from <a href="http://www.ischool.berkeley.edu/files/DelphiFinalReportLinked.pdf">http://www.ischool.berkeley.edu/files/DelphiFinalReportLinked.pdf</a></p>
+          <p class="ReferencesText">Center for Democracy and Technology (2007). Hiding in Plain Sight: Why Important Government Information Cannot Be Found Through Commercial Search Engines. Retrieved January 31, 2010, from <a href="http://www.ombwatch.org/info/searchability.pdf">http://www.ombwatch.org/files/info/searchability.pdf</a></p>
+          <p class="ReferencesText">Danzico, L. (2005). Ambient Findability: Talking with Peter Morville. Retrieved Jan. 20, 2010, from <a href="http://www.boxesandarrows.com/view/ambient_findability_talking_with_peter_morville">http://www.boxesandarrows.com/view/ambient_findability_talking_with_peter_morville</a></p>
+        <p class="ReferencesText">Eckersley, P. (2010). Browser Versions Carry 10.5 Bits of Identifying Information on Average. Published January 27, 2010. Retrieved January 29, 2010 from <a href="https://www.eff.org/deeplinks/2010/01/tracking-by-user-agent">https://www.eff.org/deeplinks/2010/01/tracking-by-user-agent </a></p>
+          <p class="ReferencesText">Ellis, M., and D. Zambonini. “Hoard.it: Aggregating, Displaying and Mining Object-Data Without Consent (or: Big, Hairy, Audacious Goals for Museum Collections On-line)”. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2009: Proceedings</em>. Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted January 29, 2010. <a href="http://www.archimuse.com/mw2009/papers/ellis/ellis.html">http://www.archimuse.com/mw2009/papers/ellis/ellis.html</a></p>
+          <p class="ReferencesText">Ellis, M. (2009). &#34;Can I find it on Google?&#34; Published October 16, 2009. Retrieved Jan. 30, 2010, from <a href="http://electronicmuseum.org.uk/2009/10/16/can-i-find-it-on-google/">http://electronicmuseum.org.uk/2009/10/16/can-i-find-it-on-google/ </a></p>
+          <p class="ReferencesText">Google.com (2008). Crawling through HTML forms. Retrieved Jan. 30, 2010, from <a href="http://googlewebmastercentral.blogspot.com/2008/04/crawling-through-html-forms.html">http://googlewebmastercentral.blogspot.com/2008/04/crawling-through-html-forms.html </a></p>
+          <p class="ReferencesText">Google.com (2010). <a href="http://www.google.com/analytics">http://www.google.com/analytics</a></p>
+          <p class="ReferencesText">Google.com (2010). Helping computers understand language. Retrieved Jan. 30, 2010, from <a href="http://googleblog.blogspot.com/2010/01/helping-computers-understand-language.html">http://googleblog.blogspot.com/2010/01/helping-computers-understand-language.html </a></p>
+          <p class="ReferencesText">Hyvonen et al. (2004). “Finnish Museums On The Semantic Web: The User’s Perspective On MuseumFinland”. David Bearman and Jennifer Trant (eds). <em>Museums and the Web 2004: Proceedings</em>. Toronto: Archives &amp; Museum Informatics, 2004. Consulted January 29, 2010. <a href="http://www.archimuse.com/mw2004/papers/hyvonen/hyvonen.html">http://www.archimuse.com/mw2004/papers/hyvonen/hyvonen.html </a></p>
+          <p class="ReferencesText">Nudelman, G. (2009). Starting from Zero: Winning Strategies for No Search Results Pages. Published February 9, 2009. Retrieved January 12, 2010, from <a href="http://www.uxmatters.com/mt/archives/2009/02/starting-from-zero-winning-strategies-for-no-search-results-pages.php">http://www.uxmatters.com/mt/archives/2009/02/starting-from-zero-winning-strategies-for-no-search-results-pages.php</a></p>
+          <p class="ReferencesText">Morville, P. (2008). Christina Wodtke: A Quick Word. Retrieved Jan. 20, 2010, from <a href="http://findability.org/archives/000212.php">http://findability.org/archives/000212.php</a></p>
+          <p class="ReferencesText">Wikipedia.org (2010). Faceted Search. Retrieved Jan 30, 2010 from <a href="http://en.wikipedia.org/wiki/Faceted_search">http://en.wikipedia.org/wiki/Faceted_search</a></p>
+          <p class="ReferencesText">Wikipedia.org (2010). Naive Bayes classifier. Retrieved Jan 30, 2010 from <a href="http://en.wikipedia.org/wiki/Naive_Bayes_classifier">http://en.wikipedia.org/wiki/Naive_Bayes_classifier</a></p>
+          <p class="ReferencesText">Yee, K-P., K. Swearingen, K. Li, M. Hearst (2003). “Faceted Metadata for Image Search and Browsing”. In <em>Proceedings of the ACM Conference on Computer-Human Interaction, 2003.</em>
+         <a href="http://bailando.sims.berkeley.edu/papers/flamenco-chi03.pdf">http://bailando.sims.berkeley.edu/papers/flamenco-chi03.pdf</a></p>
+
+<!-- InstanceEndEditable --> </div>
+      
+        			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->Solas, N., Hiding Our Collections in Plain Site: Interface Strategies for &#34;Findability&#34;<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2010: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2010. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date  based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2010/papers/<!-- #BeginEditable "URL" -->solas/solas.html
+				 <!-- #EndEditable --></p>
+	</div>
+  </div>

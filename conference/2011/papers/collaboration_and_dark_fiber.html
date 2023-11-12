@@ -1,0 +1,203 @@
+<div id="main-content">
+          
+                      <div id="breadcrumb">
+              <h2 class="element-invisible">You are here:</h2>
+              <a href="../../mw2011.html">MW2011</a> » <a href="../mini-workshops.html">Mini-Workshops</a> » <a href="../programs/collaboration_and_dark_fiber.html">Collaboration and Dark Fiber</a> »             </div> <!-- /breadcrumb -->
+              
+                      <div id="main-content-header" class="clear-block">
+              <h1 id="page-title">Collaboration, Dark Fiber and the Challenges of Deploying Mobile Infrastructure</h1>                          </div>
+          
+          
+          <div id="content"><div id="article-14742" class="article article-promoted paper-article clear-block">
+
+    
+    <div class="article-detail clear-block">
+  <div class="node-edit-link" id="node-edit-link-14742"><ul class="links"><li class="0 first last active"><a href="collaboration_dark_fiber_and_the_challenges_of.html" class="active">[View]</a></li>
+</ul>
+</div><div id="intro-paragraph">
+<h2 class="Author">Rich Cherry, Balboa Park Online Collaborative, USA</h2>
+<p class="URL"><a href="http://www.bpoc.org/">http://www.bpoc.org</a></p>
+<h3 class="AbstractTitle">Abstract</h3>
+<p class="AbstractText">The Balboa Park Online Collaborative (BPOC) was created to lead technology-focused cooperation between 21 Balboa Park institutions. One of the challenges BPOC quickly uncovered when it began was a serious limitation to supporting collaboration caused by the lack of IT infrastructure necessary to network the institutions together. As a result, BPOC has installed the infrastructure necessary for a high speed (1GB/second) connection to network the organizations, to provide a 100mb Internet connection, and also to provide a connection to CalREN, the California Research and Education Network to which the vast majority of the state&#39;s K-20 educational institutions are connected. The connection to CalREN also provides connectivity to non-California institutions and industry research organizations such as Internet2, high-speed networks in Mexico and the Association of Pacific Rim Universities Networks.</p>
+<p class="AbstractText">This mini workshop will explore the technology options as they relate to Wide Area Networks (WANs) and the technical, civil engineering and political challenges that the different options create; provide a planning checklist for dealing with the challenges; and describe the reasons that multiple institutions might desire to collaborate on a private WAN. All of this information will then be reviewed in the context of the Balboa Park Network Project deployment as well as other museum WAN deployments, with failures and successes highlighted.</p>
+<p class="keywords">Keywords: technology-focused collaboration, networking, collaboration, mobile</p>
+</div>
+<p></p>
+<div id="body-text">
+<h2>1.    Who or What is BPOC?</h2>
+<p>The Balboa Park Online Collaborative (BPOC) is a project of the Legler Benbough Foundation designed to support the technology needs of 21 museums and cultural organizations in Balboa Park, San Diego. The overarching goal is for every participating institution to be able to build organizational capacity while engaging a larger audience with a deeper and richer experience. To accomplish this, BPOC aims to:</p>
+<ul>
+<li>Facilitate and execute a fundamental change in the way museums, cultural arts and science institutions in Balboa Park approach the use of on-line technology by making on-line technology an integral part of the way the institutions fulfill their missions, interact with patrons, and collaborate;</li>
+<li>Improve the technology capabilities of member institutions while reducing costs by bringing organizations with similar needs together on mutually beneficial projects;</li>
+<li>Allow smaller institutions the benefit of having technology systems of the same quality as larger organizations, which in turn benefit from streamlined expenditures; and</li>
+<li>Provide public and scholarly access to the deep and valuable resources of the park.</li>
+</ul>
+<p>When BPOC began operations in 2008, its staff uncovered a serious limitation to supporting collaboration caused by the lack of and unevenness of the information technology infrastructure across the organizations, which vary in size from a few staff to hundreds of employees. The existing infrastructure also varied from well managed server farms to no real servers at all.</p>
+<h2>2.    Collaboration at the Physical Layer</h2>
+<p>The physical layer of a network defines the relationship between a device and a transmission medium, such as a copper or optical cable. Immediately after commencing work, BPOC began exploring the infrastructure options necessary to advance the operational goals of members and other park institutions that share a geographic area about a third larger than New York&#39;s Central Park. From a technical standpoint, the project consisted of connecting 14 buildings, some of which are so close together they share walls.</p>
+<p>BPOC member needs are complex but unlike some of the large multi-university networks, BPOC was to start with production usage and then later look at the potential for research. This was primarily driven by a desire to foster closer collaboration and the following factors.</p>
+<ol>
+<li>Escalating infrastructure costs due to:            
+<ul>
+<li>A growing urgency for better Internet access (many organizations were using DSL and cable connections); and</li>
+<li>Increased collaboration on digitization projects resulting in exponential growth in size and amount of data sets being generated.</li>
+</ul>
+</li>
+<li>A need for customized services to meet a variety of needs instead of a one-size-fits-all approach; utilizing cloud infrastructure we could provide:            
+<ul>
+<li>Shared storage;</li>
+<li>Virtualized servers; and</li>
+<li>Phone systems.</li>
+</ul>
+</li>
+<li>Opportunity to provide a platform for next-generation applications:            
+<ul>
+<li>Park-wide public wifi;</li>
+<li>Park-wide membership / member benefit tracking; and</li>
+<li>Shared digital asset management systems.</li>
+</ul>
+</li>
+<li>A need for connectivity to state, national, and international high-performance research and education networks including demand for high-speed access to Internet2 resources (specifically 4XHD digital video for IMAX).</li>
+<li>Experimental opportunities that are yet to be defined.</li>
+</ol>
+<h3>Early Research</h3>
+<p>Initial work was done on the specification of a point-to-point network using traditional services from public telecommunication providers. Such providers offer point-to-point private network services using a variety of options. Many people are familiar with the terms T1 and T3 as well as DSL and cable modems, but few of us understand the technical and service level details of different services. Additionally new services such as metro ethernet and high speed wifi services are popping up. Because the technology for providing these services has advanced and tolerance for service levels varies significantly between organizations, telecom providers have struggled to keep prices competitive. For example, a T1 line provides 1.5 mb/s upload and download and may be 5X more expensive as a commercial cable modem running at 10mb download and .5mb upload.</p>
+<p>As expected, these services presented quite limited options and were cost prohibitive for the more robust solutions which were required to fit some of the basic requirements.</p>
+<p>For example, a 100mb and a 1GB Metro Ethernet solution was priced at $750 and $2500 per month per connection respectively after significant price reductions, meaning that a full network to 14 buildings would cost between $10,000 and $30,000 per month! To be clear, this would provide a carrier class solution with sophisticated support organizations and five lines of availability, but it is generally outside the reach of most organizations. Research into local wifi providers indicated that they would only be useful as back up Internet providers because of bandwith restrictions.</p>
+<p>The next step was to explore point-to-point wireless options. Luckily the park buildings have fairly good lines of site between most buildings.</p>
+<p>There were several potential solutions that were explored, and they each have limitations and advantages. For the purposes of this project we focused on products that offered 300MB to 1.25GB of speed. Options in the area included:</p>
+<ul>
+<li>Licensed Point-to-Point Microwave:            
+<ul>
+<li>Higher cost</li>
+</ul>
+</li>
+<li>Unlicensed Point-to-Point Microwave            
+<ul>
+<li>Lower cost</li>
+<li>Higher potential for radio interference</li>
+</ul>
+</li>
+<li>Point-to-Point Laser            
+<ul>
+<li>Potential for optical interference (evening and morning fog in San Diego)</li>
+</ul>
+</li>
+</ul>
+<p>If the bandwidth requirements are lower than 300MB you can also consider point-to-multipoint wireless systems, non-line of site wireless and 4G cellular, all of which have different advantages.</p>
+<h3>Initial Design</h3>
+<p>Based on the funds available and the restriction of the Laser option, we started to pursue Unlicensed Point to Point Microwave for a pilot project to connect four buildings and to connect to a hospital in the neighborhood owned by UCSD that has a connection to Internet2. It was estimated that we could install a network among these buildings in the 300MB range as a pilot for $50,000.</p>
+<p>The next steps were to explore the issues with mounting antennae. Like many museums, the buildings in Balboa Park are owned by the government (city of San Diego) but are also governed by a number of additional park specific regulations and boards. Based on past experience with construction we decide to engage a land use attorney who had experience not only with the laws governing the potential project but also with the city and board personal involved. Regulations against alteration of historic landmarks and unsightly antenna are fairly common fare, but at some expense we determined that if we were creative we could use a couple of loopholes in the regulations to make the install relatively easy while also honoring the spirit of the regulations. One such loophole was an exception for one antenna per roof from the permit process. This meant that if we could use only one antenna per site we could avoid some of the potential review.</p>
+<p>Balboa Park is situated very close to downtown San Diego and if you ever fly in, you generally fly right over the park and see high rise office buildings and residential towers to your left; usually the plane is lower than the tallest of these buildings. We consequently explored the options to lease space on top of one of these buildings. At the same time, we engaged an architect to create profile drawings that indicated that – in most cases – we could eliminate a view of the antenna from the ground within a 500 ft. radius of the buildings, and where this was not possible, we could mitigate the impact by painting the antenna to match the surrounding environment.</p>
+<p>However, during this time we were introduced to another option: the use of Dark Fiber. Dark Fiber or unlit fiber is unused optical fibers available for use in fiber-optic communications.</p>
+<h3>A Change to Dark Fiber</h3>
+<p>During the dot-com bubble, a number of companies built optical fiber networks, each with the business plan of cornering the market in telecommunications by providing a network with sufficient capacity to dominate an entire region. This was based on the flawed assumption that telecom traffic, particularly data traffic, would continue to grow exponentially for the foreseeable future. In addition to the flaws in the base assumption, new technology further reduced the demand for fiber by increasing the capacity that could be placed on a single fiber by a factor of as much as 100. As a result, the wholesale price of data traffic collapsed. A number of these companies filed for bankruptcy and disappeared as a result.</p>
+<p>This Dark Fiber boom was well publicized, and some of the Dark Fiber was purchased by non-profits and companies for pennies on the dollar, allowing them to resell the fiber for much less than the capital costs of the fiber.</p>
+<p>But while the term Dark Fiber was originally used when referring to the potential network capacity of telecommunication infrastructure mentioned above, it also refers to the increasingly common practice of installing and leasing fiber optic cables from a network service provider. Local carriers generally do not sell dark fiber to end users, because selling this core asset would cannibalize their other, more lucrative services. However ,carriers in the U.S. are required to sell access to run Dark Fiber to competitive local exchange carriers (CLECs); because a similar requirement exists for selling services, you can have CLEC services delivered on AT&amp;T and Verizon cable.</p>
+<p>So after the collapse of the dot-com bubble and because of demand, new companies arose specializing as dark fiber providers, many of which built the overcapacity for the unfortunate carriers in the dot-com boom years. These companies discovered that if they became CLECs they could continue to install fiber and lease it to carriers looking for extra capacity and to end-user enterprises to expand Ethernet local area networks. This became especially easy when the adoption of standards for Gigabit Ethernet and 10 Gigabit Ethernet over single-mode fiber was completed. According to some industry analysts, Moore&#39;s law holds true with fiber optics: the cost of transmitting a bit over an optical network decreases by half every nine months.</p>
+<p>Another technology advantage as it relates to deploying Dark Fiber is Micro-Trenching. The costs of laying fiber are dominated by the work required to put fiber in the ground, amounting to as much as three-quarters of the total cost of the network. There are currently a number of options for deploying fiber, such as direct burying (cable straight into the ground or pre-installed in a direct buried duct), installing in existing or new ducts laid in trenches, drilling directly under the surface of the ground, and using poles for overhead cable. In some cases there is existing conduit which, as noted above, can be leased by the Dark Fiber vendor if there is available space. For other situations, Micro-Trenching is sometimes appropriate.</p>
+<p>Micro-trenching is a low-impact deployment methodology in which fiber and conduit are inserted into a slot-cut trench about 3/4 inch wide and between 9 and 12 inches deep – without damaging or disrupting existing infrastructure. In fact, when the trench is properly reinstated and backfilled with a cold asphalt material, it is difficult for the casual observer to see it. Some micro-trenched systems support more than 250 fibers while some use Vertical Inlaid Fiber conduits that allow the insertion of future fiber runs without additional trenching. The cost savings, speed of deployment and reduction in resources over conventional trenching are making the deployment of Dark Fiber quite within the reach of even the smaller organizations.</p>
+<p>In Balboa Park we had existing AT&amp;T conduit that connected the buildings of BPOC members, but we had no drawings of the conduit nor any understanding of its condition. We hired a vendor to run sensors through all of the conduit and trace the routes on a CAD map. We found the conduit was generally in good condition. There were five locations where some &#39;potholing&#39; to repair conduit was needed. Additionally, a few locations required Micro-Trenching.</p>
+<p>Overall, the cost of the fiber installation, which included six pair to each of 14 buildings, was around $70,000.</p>
+<h3>Lighting the fiber</h3>
+<p>Among network engineers there is a tendency to over-complicate the design of what could be a simple network. Generally this results from a desire to efficiently manage network resources down to the last drop. This means significant bandwidth management tools and administration tools to understand every aspect of the network. Another way to do it is to use simple technology to over-provision the network link. For example, if the primary goal of the network is to get access to the Internet, which is a 50mb connection, and you provide a 1GB network, there is very little need for detailed management of the 1GB network. If, on the other hand, if you believe that a 1GB network will be often over-used and you do not have the ability to increase the bandwidth to 10GB, then management tools are needed. In practice however, for most museums, the former is exceedingly rare. The difference is important as it can mean significant expenditures in both hardware and labor.</p>
+<p>To keep things simple, the backbone is lit at 1GB using an HP layer 3 switch with a 100GB backplane. This means that we generally have full GB speeds from each member organization to our Network Operations Center.</p>
+<p>Because one goal of this network is to provide superior Internet access to the connected member organizations, it&#39;s important to understand that in the environment that current exists, no member has more than a 10Mb connection to the Internet, and many have a 1.5Mb line. Currently the shared connection is 50Mb, and while each user can peak to 50Mb during high traffic times, individual institutions are guaranteed at least their original bandwidth. We believe that this service will be a revenue-generating service as members&#39; current telecom agreements expire.</p>
+<p>Currently we have deployed a VMWARE virtualized server environment and an Open-E virtualized storage environment as well as our pilot wireless network.</p>
+<h2>3.    The Next Phase</h2>
+<p>Future expansion envisions adding the infrastructure necessary for the effective deployment and evaluation of mobile and in-gallery applications for the public. In order to accomplish this efficiently and effectively, a significant amount of research has been completed by BPOC on the various options. Of course there is a simple attraction for museum management to the idea of creating interactive experiences that rely on the visitors bringing the device or using their own device outside of the museum. No device to manage means less capital cost and less public-facing staffing costs, enabling organizations to focus all resources on the game/tour/interactive.</p>
+<p>However, the infrastructure that is required for this idea to work well within a museum can be difficult to install and manage and thus expensive. Many museums don&#39;t have high quality cellular coverage or wireless infrastructure to handle the best and most creative applications that could be created using the current palette of mobile devices, let alone support a large number of simultaneous users of high-bandwidth mobile content. Some organizations have already been the victims of their own (and the network&#39;s) success. Consider the app that functions flawlessly in the lab, but at the opening, when hundreds of users are concurrently overloading the network, the application provides a low- or no-quality experience that results in the app being poorly reviewed. We cannot work towards high uptake of apps and ignore the infrastructure consequences of such plans. In order to make sure that our rich mobile experiences &#39;scale,&#39; we need to understand the basic infrastructure components that should be considered in any deployment, and evaluate the merits of each.</p>
+<p>Mobile devices come with two basic types of connectivity over radio networks and these are unlikely to change significantly over the next few years. First is the &#39;cellular&#39; phone network consisting of voice, SMS, and broadband data transmitted to phones by one or more transceivers known as cells. The second is 802.11, a standard for wireless local area network (WLAN), which supplies broadband data service. Each of these technologies has advantages and disadvantages, as we will discuss. While many &#39;smart phones&#39; allow the use of both technologies, feature phones (75% of the current cell phone market) have only cellular, and the majority of tablet type devices like the iPad only have WLAN. Interestingly, a new technology is evolving called Femtocell; it has some of the benefits of both technologies.</p>
+<h3>Traditional Cellular</h3>
+<p>We are all familiar with cellular networks that have grown over the past 38 years, and with mobile devices that have evolved from 4-pound phones to the current batch of amazingly small smart phones. These networks are dominated by commercial carriers such as AT&amp;T, Verizon and Sprint.</p>
+<p>There are several important aspects of cellular to consider when planning a mobile application, some positive and some negative,</p>
+<h4>Pros:</h4>
+<ol>
+<li>No institutional capital cost (exceptions include repeaters and Femtocell)</li>
+<li>Large coverage area (3km-50km)</li>
+<li>Reduced interference from other signals: Cell companies own their frequency and detect and police interference.</li>
+<li>Location aware: Qualified services may achieve a precision of down to 50 meters in urban areas where mobile traffic and density of antenna towers (base stations) are sufficiently high</li>
+<li>Transition between cells during travel is done without signal interruption</li>
+<li>Allows simple voice/audio tour development with limited technical infrastructure (although production values will vary with investment in tour development)</li>
+</ol>
+<h4>Cons:</h4>
+<ol>
+<li>You don&#39;t own or control the network. Cellular carriers directly or indirectly through companies that build Distributed Antenna Systems (DAS) control where and when the networks are built. Multiple carriers (ATT, Sprint, Verizon, etc.) are required to ensure all visitors are serviced</li>
+<li>You cannot monitor the network: you don&#39;t know how many people are using the network, and what the capacity of the network is</li>
+<li>Lower data bandwidth currently available (depends on signal strength and other factors); Standard Cellular starts at 60 kbp/s and 3G currently tops out at 7.2 Mbit/s; New improvements such as Mobile WiMAX and 4G may outperform WLAN but they will take years to be widely available</li>
+</ol>
+<h3>Wireless LAN</h3>
+<p>Like Cellular, Wireless LAN has been around since the early &#39;70s, was commercially available in the &#39;80s, and then saw wide spread adoption in the &#39;90s as standards for interoperability were developed and formalized.</p>
+<p>The important features of a WLAN deployment to consider when planning a mobile application are somewhat the inverse of cellular:</p>
+<h4>Pros:</h4>
+<ol>
+<li>You own and control the network</li>
+<li>You can monitor the network and evaluate load and traffic patterns</li>
+<li>High bandwidth currently available (depends on signal strength and other factors):10mb-100mb depending on type deployed; Institutions can host or cache data locally, dramatically improving performance</li>
+<li>Transition between WAPs is possible with enterprise systems</li>
+<li>Access points can draw power over the Ethernet cables that provide network access, limiting the cabling requirements</li>
+</ol>
+<h4>Cons:</h4>
+<ol>
+<li>Potentially large institutional capital cost to deploying wireless access points (WAP), and controllers as well as caching technology to improve performance</li>
+<li>Ongoing support and maintenance costs fall on the institution, including back hall Internet connections.</li>
+<li>Smaller coverage area per WAP (50m to a max of 300m for 802.11n)</li>
+<li>30-50 subscribers per radio</li>
+<li>Potential interference from other signals due to use of unlicensed frequency spectrum and neighboring deployments</li>
+<li>Not generally location aware, although it is possible</li>
+<li>Does not allow simple voice or SMS without significant software development</li>
+</ol>
+<h3>Cellular repeaters</h3>
+<p>Cellular repeaters use external antennas to pick up and then amplify cellular signals inside of a building. The systems usually provide improved signal strength. Some (but not all) allow multiple cell phones to use the same repeater at the same time. Repeaters are available in different frequency bands that match different types of phones, and dual- and tri-band systems cost significantly more. Installations of repeaters are somewhat difficult due to the cabling and power requirements. Each repeater generally must be paired with an external antenna, and the internal antennas are subject to limitations on the distance they can cover; less expensive systems can have interference issues when signals from multiple antennas overlap.</p>
+<h3>Femtocell</h3>
+<p>Femtocell is a relatively new implementation of cellular involving a small cellular base station that covers a 10m+ area, typically designed for use in a home or small business. It connects to the service provider&#39;s network via the Internet and supports 8 to 16 active mobile phones in enterprise settings. Deployment of an enterprise Femtocell device would allow museums to extend service coverage indoors, especially useful where access would otherwise be limited or unavailable. This would be at the museum&#39;s expense. The appeal of Femtocell devices is that they are self-managing and can detect and adjust signal strength to avoid interference with other nodes. The museum would benefit from improved coverage, and visitors from potentially better voice quality and better battery life. These systems are just coming on to the market and require provisioning for every carrier they are supporting (this usually involves a separate card per carrier). It is important to note that some of the devices will provide WLAN features in addition to cellular. Because this technology is very new. it may be some time before it matures and is widely available, but because it also uses the same cabling infrastructure as WLAN, it can be rolled out as soon as it is mature.</p>
+<h2>4.    Reflections and Next Steps</h2>
+<p>One of the most important lessons learned is that it&#39;s very important to revisit your base assumptions when deploying large technology projects. While the author had explored Dark Fiber in the past, the cost structure and availability of the CLEC Dark Fiber vendors are relatively new developments. An earlier deployment of Dark Fiber at BPOC would have made the project more efficient and would have provided earlier successes that would have likely improved the project as well as reduced costs.</p>
+<p>While a pilot wireless project is up and running on the fiber, full wireless deployment has yet to be started. BPOC plans to start this project in the summer of 2011, and estimates that it will take approximately two years to complete the deployment in 14 buildings.</p>
+<h3>CalREN and Internet2</h3>
+<p>Working with the staff of The California Institute for Information Technology (CalIT2) at the University of California, San Diego, BPOC will extend the Dark Fiber network to connect it to CalREN, the California Research and Education Network to which the vast majority of the state&#39;s K-20 educational institutions are connected. In order to facilitate collaboration in education and research, CalREN also provides connectivity to non-California institutions and industry research organizations such as Internet2, high-speed networks in Mexico, and the Association of Pacific Rim Universities Networks. BPOC members will be able to provide and access content with all of the educational institutions on the various networks, opening up the knowledge that resides in the member institutions while enabling them to utilize resources typically only available at the university level. For example, the Reuben H. Fleet Science Center is currently deploying a 4K (4 times HD) projection system in the museum&#39;s IMAX Dome theater. A high speed connection would enable them to stream high resolution video from organizations such as the Jet Propulsion Laboratory and NASA, eliminating the costs of shipping large hard drive arrays and having massive storage arrays on-site.</p>
+<h2>5.    Conclusion</h2>
+<p>Nearly a century ago, at the start of the Panama-California Exposition in San Diego&#39;s Balboa Park, the exposition&#39;s master-of-ceremonies proclaimed: &#34;We encountered all the trials and tribulations ever before those who attempt to blaze a new trail or attempt what seems impossible. That which five years ago was a hazy dream is today a reality, and San Diego keeps her promise to the world.&#34; At the time, Balboa Park impressed the world when it unveiled stunning Spanish-style architecture, elaborate landscaping, and structures dedicated to the history of man, sciences, and the arts. It was hard then to imagine one hundred years later, as we approach Balboa Park&#39;s 2015 Centennial Celebration, that information would travel between the park&#39;s buildings using light over strands of glass. Like then, there are currently opportunities we cannot yet imagine. We are currently only using 1/6th of the fiber in the network and only running it at 1/10 of the speed that is easily feasible today. It remains important to continue to review the technology platforms we use… even the ones we are very familiar with, as innovation is presenting us with new opportunities. There are collaborations that will present themselves, projects that will be easy to do because the hard part is done. An environment has been created where true innovation, creativity, and discovery can take place.</p>
+<!-- InstanceEndEditable --></div>
+<div id="citation">
+<h4>Cite as:</h4>
+<p class="references">Cherry, R., Collaboration, Dark Fiber and the Challenges Of Deploying Mobile Infrastructure. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2011: Proceedings</em>. Toronto: Archives &amp; Museum Informatics. Published March 31, 2011. Consulted
+<script type="text/javascript">// <![CDATA[
+ <![CDATA[
+      // current date - based on http://rainbow.arch.scriptmania.com/scripts
+      // Array of day names
+      var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+      var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+      var dt = new Date();
+      var y  = dt.getYear();
+
+      // Y2K compliant
+      if (y < 1000) y +=1900;
+
+      document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+                       // 
+// ]]></script>
+http://conference.archimuse.com/mw2011/papers/collaboration_dark_fiber</p>
+</div>
+<div id="copyright"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img class="c1" src="../../files/images/cc-88x31.png" border="0" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License" width="88" height="31"/></a>
+<p>Copyright © 2011 – Archives &amp; Museum Informatics.</p>
+</div><div class="field nodereference field-paper-program-ref">
+                                <h3 class="label inline">Program Item Reference: </h3>
+          <div class="item inline odd"><a href="../programs/collaboration_and_dark_fiber.html">Collaboration and Dark Fiber</a></div>
+              </div>
+ <!-- /content-field -->
+  </div>
+  
+  <div class="article-meta">
+      <p class="submitted">Posted <em class="time">March 30, 2011 - 10:09am</em> by <em class="author"><a href="../../user/rich_cherry.html" class="username" title="View Rich&#39;s profile.">Rich  Cherry</a></em></p>
+  
+    
+  <ul class="taxonomy"><li><a href="../../conferences/mw/mw2011.html" rel="tag" title="Museums and the Web 2011">MW2011</a></li><li><a href="../../paper_keywords/collaboration_0.html" rel="tag" title="">collaboration</a></li><li><a href="../../paper_keywords/mobile_0.html" rel="tag" title="">mobile</a></li><li><a href="../../paper_keywords/networking.html" rel="tag" title="">Networking</a></li><li><a href="../../paper_keywords/technology_focused_collaboration.html" rel="tag" title="">technology-focused collaboration</a></li></ul>  </div>
+  
+  
+</div> <!-- /article --></div>
+
+        </div>

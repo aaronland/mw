@@ -1,0 +1,345 @@
+<div id="main-content">
+          
+                      <div id="breadcrumb">
+              <h2 class="element-invisible">You are here:</h2>
+              <a href="../../mw2012.html">MW2012</a> » <a href="../sessions.html">Sessions</a> » <a href="../programs/sharing_cultural_heritage_the_linked_open_da.html">Sharing cultural heritage the linked open data way - everyone&#39;s invited</a> »             </div> <!-- /breadcrumb -->
+              
+                      <div id="main-content-header" class="clear-block">
+              <h1 id="page-title">Sharing cultural heritage the linked open data way: why you should sign up</h1>                          </div>
+          
+          
+          <div id="content"><div id="article-16944" class="article paper-article clear-block">
+
+    
+    <div class="article-detail clear-block">
+  <div class="node-edit-link" id="node-edit-link-16944"><ul class="links"><li class="0 first last active"><a href="sharing_cultural_heritage_the_linked_open_data.html" class="active">[View]</a></li>
+</ul>
+</div><h3 class="Author">Johan Oomen and Lotte Belice Baltussen, Netherlands Institute for Sound and Vision, The Netherlands with Marieke van Erp, VU University Amsterdam, The Netherlands</h3>
+<h2 class="AbstractTitle">Abstract</h2>
+<p class="AbstractText">Cultural heritage institutions are beginning to explore the added value of sharing data. We report on Dutch initiatives that have started opening up their data through far-reaching open licenses as well as initiatives that are using the Linked Open Data cloud to integrate and enriching heritage collection metadata.</p>
+<p class="keywords">Keywords: linked data, sharing, access, best-practices</p>
+<h2>1. Introduction</h2>
+<p>As galleries, libraries, archives and museums (GLAMS) are redefining their role as nodes in a wider network of content creators and providers, open innovation becomes key. GLAMS across the world are beginning to explore the added value of sharing data resources following the so-called Linked Open Data (LOD) principles. In this paper, we provide an overview of the practical uses and implications of using Linked Open Data through four projects currently running in the heritage domain. We have chosen these four projects among many because they show the usage of Linked Open Data from different perspectives. In this article, we first introduce the most important aspects of open data and linked data, for those not familiar with it yet (Sections 2 and 3). We shall then present four projects that are active in contributing or using linked data in Section 4, followed by a discussion of risks and advantages and concluding remarks in Section 5.  </p>
+<h2>2. Cultural Commons</h2>
+<p>Two categories of &#39;open&#39; cultural resources can be distinguished: open data and open content. Open data refers to information such as thesauri and descriptive metadata. Content is a work such as a video or photo. Combined, open data and open content are important pillars for establishing a Cultural Commons: a set of resources maintained in the public sphere for the use and benefit of everyone (Edson, 2011). There are several motivations for an open way to make cultural resources such as metadata and objects available. Firstly, the usage of the collections increases by providing open access to them. This helps to drive users to online content and it enables new scholarship that can only be done with open data, which makes collections more meaningful and relevant for end-users. This usage also supports institutions in the fulfilment of their public mission to open up access to our collective heritage.  Secondly, a Cultural Commons stimulates collaboration in the GLAMS world and beyond. This allows the creation of new services and supports creative reuse of material in new productions Collaboration supports innovation. As Bill Joy notes in his ‘Joys law:’ “No matter who you are, most of the smartest people work for someone else” (Lakhani et al., 2007). In other words, encouraging external parties to develop services based on publicly available sources stimulates innovation in the GLAM sector. It is likely that these services are of higher quality and diversity.</p>
+<h2>2.1 Assessing the impact of open</h2>
+<p>Opening up data and content has a wider political and economic context. For instance, it forms an important pillar of European policy on Public Service Innovation. In the Communication &#34;Open data: an engine for innovation, growth and transparent governance,&#34; which was published in December 2011, the importance of open access to information that government agencies produce and support (i.e., through research grants) is emphasized. The types of information include geographic information, statistics, weather data, publically funded research, and cultural heritage that has been digitized with public funds. The report describes the social value of &#34;open&#34;, such as accelerating innovation in science. There is also a great financial value, since &#34;the overall economic benefits resulting from access to this resource in the EU could reach 40 billion euros a year.&#34; (European Commission, 2011)<br/> <br/> GLAMS have a lot to offer in this context, given their:</p>
+<ul>
+<li>incredibly rich and structured datasets accumulated over many years organized by domain;</li>
+<li>experts’ ability to reach out to audiences to enrich datasets and also carry out evaluations with end-users;</li>
+<li>long-standing expertise in metadata management and (co-)curation;</li>
+<li>authoritative knowledge on a wide range of subjects.</li>
+</ul>
+<p>The way data is being published on the web is currently in transition. New applications and appropriations require data to be accessed in ways that support machines to understand and users to manipulate data. Just pointing to a database with records, for instance, no longer suffices. </p>
+<h2>3.   Linked Data 101</h2>
+<p>The aim of linked data is to connect data from the Web that was not previously connected. For a very long time, information on the Web was mostly connected through hyperlinks that create connections on document level. Although these connections already provide a wealth of context by enabling one to click through to various resources, they are coarse-grained and furthermore do not express what type of connection there is between two pages, merely that there is one. Linked data aims to connect more fine-grained bits and pieces of data, information and knowledge through explicitly typed links. On the Web, one could, for example, imagine that the Rijksmuseum Amsterdam Web page on a Vermeer painting would contain a link to the term Vermeer lemma in the Getty Union List of Artist Names. A visitor would then still need to infer herself that the link connects the Rijksmuseum Amsterdam Web page to ‘more information about Vermeer.’ In the Linked Datasetting, one can very precisely specify that the mention of Vermeer on the Rijksmuseum Amsterdam Web page refers to the same person as the one described on the DBpedia (a linked data encyclopedia derived from Wikipedia) page about Vermeer, as the link is not just a hyperlink, that indicates that there is some link, but the link is typed. Furthermore, on the DBpedia page of Vermeer (<a href="http://live.dbpedia.org/page/Johannes_Vermeer" title="http://live.dbpedia.org/page/Johannes_Vermeer">http://live.dbpedia.org/page/Johannes_Vermeer</a>), the information about his birth, his death and his works is structured in such a way that one can easily sort it and find similar pieces of information (e.g., to easily jump to more Dutch painters) without this having to be hard-coded in a menu. More information is findable simply by virtue of the underlying data structure.</p>
+<h2>3.1 The 5 star deployment scheme</h2>
+<p>Linked data comes in various formats. The guidelines for Linked data come from the four rules and five stars formulated by Tim Berners-Lee in 2006 (<a href="http://www.w3.org/DesignIssues/LinkedData.html" title="http://www.w3.org/DesignIssues/LinkedData.html">http://www.w3.org/DesignIssues/LinkedData.html</a>). The four rules are:</p>
+<ol>
+<li>Use URIs as names for things;</li>
+<li>Use HTTP URIs so that people can look up those names;</li>
+<li>When someone looks up a URI, provide useful information, using the standards (RDF*, SPARQL);</li>
+<li>Include links to other URIs, so that people can discover more things.<br/> <br/> </li>
+</ol>
+<p>As Berners-Lee states himself, these rules are not golden rules, but merely optimisation rules: if many abide by them, the basis for connecting information is laid. More interesting however, is the five star deployment scheme, added to the Linked Open Data paradigm in 2010:</p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top">
+<p>★</p>
+</td>
+<td valign="top">
+<p>Available   on the web (whatever format) <em>but with an open licence, to be Open Data</em></p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>★★</p>
+</td>
+<td valign="top">
+<p>Available   as machine-readable structured data (e.g. excel instead of image scan of a   table)</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>★★★</p>
+</td>
+<td valign="top">
+<p>as (2)   plus non-proprietary format (e.g. CSV instead of excel)</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>★★★★</p>
+</td>
+<td valign="top">
+<p>All the   above plus, Use open standards from W3C (RDF and SPARQL) to identify things,   so that people can point at your stuff</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>★★★★★</p>
+</td>
+<td valign="top">
+<p>All the   above, plus: Link your data to other people’s data to provide context</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><br/> The more stars your data has, the higher the chances of it being connected to other data. Note that these stars mostly refer to Linked <em>Open</em> Data. Naturally, not all information is suitable to make available to everyone (for example, due to privacy issues), however, one can also use the stars internally to format data in such a way that in-house data can easily be connected to external, <em>open</em> data.<br/> <br/> The most important and well-known example of Linked Data is the Linked Open Data (LOD) cloud (<a href="http://www.linkeddata.org/" title="http://www.linkeddata.org">http://www.linkeddata.org</a>).  This cloud of datasets has doubled in size every 10 months since 2007 (<a href="http://www.readwriteweb.com/cloud/2011/01/the-concept-of-linked-data.php" title="http://www.readwriteweb.com/cloud/2011/01/the-concept-of-linked-data.php">http://www.readwriteweb.com/cloud/2011/01/the-concept-of-linked-data.php</a>), enabling more and more meaningful applications to be explored. Naturally, these datasets had to find their way to the cloud in some way, which was usually through collaboration with researchers in the semantic web, hence the current focus on datasets commonly used in that community (biomedical, research, libraries).</p>
+<h2>3.2 A note on Copyright</h2>
+<p>To be useful for third parties, data made available by GLAMS must be published under a clear rights statement. There are various statements and licenses that can be used to publish data, ranging from restrictive to fully open. During the LOD-LAM summit that took place in San Francisco in 2011, a four-star classification system was proposed in which these ranges of copyright statements are incorporated (from <a href="http://lod-lam.net/summit/2011/06/06/proposed-a-4-star-classification-scheme-for-linked-open-cultural-metadata/" title="http://lod-lam.net/summit/2011/06/06/proposed-a-4-star-classification-scheme-for-linked-open-cultural-metadata/">http://lod-lam.net/summit/2011/06/06/proposed-a-4-star-classification-sc...</a>):</p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top">
+<p>****</p>
+</td>
+<td valign="top">
+<p>Public Domain: the data falls in the public domain, or the   rights holder has waived all rights. The user can use the metadata for any   purpose without restrictions.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>***</p>
+</td>
+<td valign="top">
+<p>Attribution License (BY) when the licensor considers   linkbacks to meet the attribution requirement. The user can use the metadata   for any purpose, provided he retains the attribution link.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>**</p>
+</td>
+<td valign="top">
+<p>Attribution License (BY) with   another form of attribution: The user can use the metadata for any purpose,   provided he gives attribution in the way specified by the provider.</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>*</p>
+</td>
+<td valign="top">
+<p>Attribution Share-Alike License (BY-SA): the user can use   the metadata for any purpose, provided he gives attribution in the way   specified by the provider. Unlike the other ‘star’ options, the metadata can   only be combined with data that allows re-distributions under the terms of   this license.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>There are licenses that have been developed specifically for data re-use:</p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top">
+<p><strong>License</strong><strong> </strong></p>
+</td>
+<td valign="top">
+<p><strong>Domain</strong><strong> </strong></p>
+</td>
+<td valign="top">
+<p><strong>BY</strong><strong> </strong></p>
+</td>
+<td valign="top">
+<p><strong>SA</strong><strong> </strong></p>
+</td>
+<td valign="top">
+<p><strong>Comments                     </strong><strong> </strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Open Data Commons Public   Domain Dedication and License (PDDL)</p>
+</td>
+<td valign="top">
+<p>Data</p>
+</td>
+<td valign="top">
+<p>N</p>
+</td>
+<td valign="top">
+<p>N</p>
+</td>
+<td valign="top">
+<p>Dedicate to the Public   Domain (all rights waived)</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Open Data Commons   Attribution License</p>
+</td>
+<td valign="top">
+<p>Data</p>
+</td>
+<td valign="top">
+<p>Y</p>
+</td>
+<td valign="top">
+<p>N</p>
+</td>
+<td valign="top">
+<p>Attribution for data(bases)</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Open Data Commons Open   Database License (ODbL)</p>
+</td>
+<td valign="top">
+<p>Data</p>
+</td>
+<td valign="top">
+<p>Y</p>
+</td>
+<td valign="top">
+<p>Y</p>
+</td>
+<td valign="top">
+<p>Attribution-ShareAlike for   data(bases)</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Creative Commons Public   Domain Mark (CC0)</p>
+</td>
+<td valign="top">
+<p>Content, Data</p>
+</td>
+<td valign="top">
+<p>N</p>
+</td>
+<td valign="top">
+<p>N</p>
+</td>
+<td valign="top">
+<p>Dedicate to the Public   Domain (all rights waived)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Please note that these licenses (except CC0) have been specifically developed for data and that there are separate, distinct ‘open’ licenses for content. See <a href="http://opendefinition.org/licenses/" title="http://opendefinition.org/licenses/">http://opendefinition.org/licenses/</a> for an overview of these and other licenses and more general information on copyright. <br/> <br/> The European digital library, Europeana, has adopted the Creative Commons Public Domain Mark and all partners that provide metadata to Europeana have to adhere to the Data Exchange Agreement and release their metadata under CC0. This is the most ‘open’ of all data licenses, and Europeana has opted to use it in order to make re-use of their holdings as free and open as possible (see also <a href="http://pro.europeana.eu/support-for-open-data"><em>http://pro.europeana.eu/support-for-open-data</em></a>). The Europeana data will become available under CC0 mid-2012, which means that the data of over 20 million items (and counting) from a great breadth of GLAMS from all over Europe will then be openly available for re-use.  In Section 6, we discuss some of the anxieties that GLAMS have in applying open licenses.</p>
+<h2>4. From Open Data to Open Linked Data</h2>
+<p>There is a growing (international) interest within the GLAM domain regarding open data. One leading international community was established at the International Linked Open Data in Libraries, Archives, and Museums Summit mentioned above. The LOD-LAM website (<a href="http://lod-lam.net/summit/" title="http://lod-lam.net/summit/">http://lod-lam.net/summit/</a>) has grown into an active knowledge-sharing platform. In addition, the ‘Museums and the machine-processable web’ wiki (<a href="http://museum-api.pbworks.com/" title="http://museum-api.pbworks.com/">http://museum-api.pbworks.com/</a>), offers access to an ever-increasing list of online available GLAM resources throughout the globe. Other bodies that support open cultural data include W3C, which has set up the Library Linked Data Incubator Group (<a href="http://www.w3.org/2005/Incubator/lld/XGR-lld-20111025/" title="http://www.w3.org/2005/Incubator/lld/XGR-lld-20111025/">http://www.w3.org/2005/Incubator/lld/XGR-lld-20111025/</a>) that aims to ‘help increase global interoperability of library data on the Web’ and Europeana, which has recently communicated its plans to support wide availability of open data. Finally the Open Knowledge Foundation (OKFN), a not-for-profit organization promoting open knowledge, has a global Open GLAM network (<a href="http://openglam.org/" title="http://openglam.org/">http://openglam.org/</a>) that is working on opening up content and data held by GLAMS. The OKFN supports this process by developing ‘open’ principles, tools and manuals and organizing events such as conferences and so-called hackathons, events where programmers meet to develop new tools and services. The OKFN recently published a comprehensive resource, the Open Data Handbook (<a href="http://opendatahandbook.org/en/"><em>http://opendatahandbook.org/en/</em></a>) that elaborates on the legal, social and technical aspects of open data. Finally, OKFN hosts the Data Hub (h<em>ttp://thedatahub.org/), </em>a community-run catalogue of datasets on the Internet that also includes cultural heritage data.</p>
+<p>These international initiatives provide support for organizations that want to exploit the possibilities of LOD. Below, we examine practical examples in the Netherlands, first by looking at examples of institutions opening up their data, and secondly by discussing some examples of LOD used in a number of practical applications.</p>
+<h2>4.1 Recent examples of open data in the Netherlands</h2>
+<p>Within the Dutch heritage sector several open data and open content projects are currently running. One of the first examples of this is the collaboration between the Dutch Royal Tropical Institute and Wikipedia. This collaboration started in 2009, when the Institute’s Tropenmuseum ‘donated’ a large amount of photos to the Wikimedia Commons, the media depository used for Wikipedia and other Wikimedia Foundation projects. Wikimedians were invited to correct or add information to the photos, which they have enthusiastically done, greatly enriching the descriptions (<a href="http://ultimategerardm.blogspot.com/search/label/Tropenmuseum" title="http://ultimategerardm.blogspot.com/search/label/Tropenmuseum">http://ultimategerardm.blogspot.com/search/label/Tropenmuseum</a>). Furthermore, the Wikimedia community has digitally restored images donated by the Tropenmuseum.</p>
+<p>A year after the Tropenmuseum started its collaboration with the Wikimedia community, the National Archives of the Netherlands followed by providing a collection of political portraits to the Wikimedia Commons in 2010. Since then, the images of the National Archives have been used in hundreds of Wikipedia articles, which together have been viewed 5 million times (Zeinstra, 2011).</p>
+<p>In March 2010, The Amsterdam Museum has made its images and metadata from more than 70,000 objects available under a Creative Commons license (De Boer, 2012). Not long after that the Netherlands Institute for Sound and Vision made its general thesaurus for audiovisual archives available under an Open Databases License (<a href="http://www.informatieprofessional.nl/nieuws/7930.html">http://www.informatieprofessional.nl/nieuws/7930.html</a>).</p>
+<p>The Netherlands Heritage Board announced in May 2011 that it would release more than 400,000 images and associated metadata (<a href="http://creativecommons.nl/2011/05/23/449-318-fotos-van-de-rijksdienst-cultureel-erfgoed-onder-cc/"><em>http://creativecommons.nl/2011/05/23/449-318-fotos-van-de-rijksdienst-cultureel-erfgoed-onder-cc/</em></a>). And still new initiatives pop up. Late in 2011, the Rijksmuseum Amsterdam gave access to 100,000 objects (metadata <em>and</em> content) through an open API (<a href="http://www.rijksmuseum.nl/en/api?lang=en" title="http://www.rijksmuseum.nl/en/api?lang=en">http://www.rijksmuseum.nl/en/api?lang=en</a>).</p>
+<p>Although these examples of ‘open’ initiatives are not yet that old, there are already many striking examples of reuse and enrichment of these open data sources. The Netherlands Heritage Board dataset was an important basis for the Wiki Loves Monuments photo contest. The aim of the contest is to stimulate the crowd to take high-quality pictures of national heritage sites and monuments that can consequently be contributed to the Wikimedia Commons under an open license. Also plenty of new applications have already been created from the collections of Rijksmuseum Amsterdam and the Amsterdam Museum by programmers, see <a href="http://www.opencultuurdata.nl/?tag=demo"><em>http://www.opencultuurdata.nl/?tag=demo</em></a> for examples. The collaboration between the National Archives, the Tropenmuseum and Wikipedia yielded much valuable user contributed information about the collection, such as the recognition of certain people in photos or particular details.<br/> <br/> Adhering to the linked open data principles, the National Archives of the Netherlands uses the thesaurus of Netherlands Institute for Sound and Vision. With the explosive growth of the ‘cloud’ of datasets available, more and more meaningful exchanges of data can be explored. In the remainder of this section, we will detail some key examples of projects that have started to do so.</p>
+<h2>4.2 Community support effort ‘Open Cultural Data’   </h2>
+<p>The Dutch Heritage Innovators Network (Grob et al., 2011)–a network that stimulates innovation in the GLAM sector–launched the ‘Open Cultural Data’ (Open Cultuur Data in Dutch) initiative in September 2011 (<a href="http://www.opencultuurdata.nl/" title="http://www.opencultuurdata.nl/">http://www.opencultuurdata.nl/</a>). The aims: make cultural datasets available under open conditions and stimulate the creation of useful and innovative applications in which these are incorporated. <br/> <br/> In order to stimulate re-use, Open Cultural Data collected and contributed datasets for the national app contest Apps for the Netherlands, organised by ‘Hack de Overheid’ (‘Hack the Government’), that was held from September 2011 to January 2012 and which was primarily aimed at re-using open governmental data. For this, Open Cultural Data defined rules and tips in order to make clear to contributors what principles open cultural data should at least adhere to, such as not excluding commercial re-use and making clear that there is a distinction between licenses for open data and open content.<br/> <br/> With these principles in mind, Open Cultural Data contacted colleagues in the GLAM sector and organized workshops to open up datasets.</p>
+<p style="text-align: center;"><img src="../../files/oomen-fig1.png" border="0" width="901" height="538"/></p>
+<p style="text-align: center;"><strong><em> Figure 1: Open Cultural Data workshop during the Apps for the Netherlands hackathon in November 2011. Photo by: Breyten Ernsting (<a href="http://www.flickr.com/photos/breyten/6424726115/in/set-72157628203357013" title="http://www.flickr.com/photos/breyten/6424726115/in/set-72157628203357013">http://www.flickr.com/photos/breyten/6424726115/in/set-72157628203357013</a>)</em></strong></p>
+<p>n total, eight datasets were made available under open conditions from the collections of Rijksmuseum Amsterdam (<a href="http://www.rijksmuseum.nl/" title="http://www.rijksmuseum.nl/">http://www.rijksmuseum.nl/</a>), Amsterdam Museum (<a href="http://www.amsterdammuseum.nl/" title="http://www.amsterdammuseum.nl/">http://www.amsterdammuseum.nl/</a>), EYE Film Institute Netherlands (<a href="http://www.eyefilm.nl/en/" title="http://www.eyefilm.nl/en/">http://www.eyefilm.nl/en/</a>), National Archives (<a href="http://en.nationaalarchief.nl/" title="http://en.nationaalarchief.nl/">http://en.nationaalarchief.nl/</a>), the Netherlands Institute for Sound and Vision(<a href="http://www.beeldengeluid.nl/en" title="http://www.beeldengeluid.nl/en">http://www.beeldengeluid.nl/en</a>) and a dataset containing information on the National Heritage Sites of the Netherlands (<a href="http://api.rijksmonumenten.info/"><em>http://api.rijksmonumenten.info/</em></a>). See <a href="http://www.opencultuurdata.nl/?page_id=122f">http://www.opencultuurdata.nl/?page_id=122 f</a>or the details of the datasets.</p>
+<h2>4.2.1 Creating new value</h2>
+<p>The Open Cultuur Datasets were presented by people from their respective institutions at the Apps for the Netherlands hackathon at the end of November 2011, and a total of 13 apps were made with the Open Cultural Datasets. The Apps for the Netherlands prizes were awarded in January and handed out by the Minister of Economic Affairs, Agriculture and Innovation Maxime Verhagen. Three apps made with cultural data won prizes. In the category Education, the Rijksmonumenten.info (<a href="http://rijksmonumenten.info/" title="http://rijksmonumenten.info/">http://rijksmonumenten.info/</a>) mobile app by ab-c media (<a href="http://www.ab-c.nl/" title="http://www.ab-c.nl/">http://www.ab-c.nl/</a>) containing (location-based) information on Holland’s 61,000 heritage sites won. ConnectedCollection (<a href="http://www.opencultuurdata.nl/?p=583" title="http://www.opencultuurdata.nl/?p=583">http://www.opencultuurdata.nl/?p=583</a>) from Cit (<a href="http://www.go2cit.nl/" title="http://www.go2cit.nl/">http://www.go2cit.nl/</a>) won an encouragement prize to further develop their tool that allows cultural institutions to add a button on their collection websites showing related objects from other heritage institutions when clicked. The app that went home with the overall gold prize was ‘Vistory‘ (<a href="http://www.vistory.nl/what-is-vistory.shtml" title="http://www.vistory.nl/what-is-vistory.shtml">http://www.vistory.nl/what-is-vistory.shtml</a>), built and designed by Glimworm IT (<a href="http://www.glimworm.com/" title="http://www.glimworm.com/">http://www.glimworm.com/</a>). Vistory combines history and videos from the Open Images dataset (<a href="http://www.opencultuurdata.nl/?incsub_wiki=nederlands-instituut-voor-beeld-en-geluid" title="http://www.opencultuurdata.nl/?incsub_wiki=nederlands-instituut-voor-beeld-en-geluid">http://www.opencultuurdata.nl/?incsub_wiki=nederlands-instituut-voor-bee...</a>) provided by Sound and Vision by using a smart phone’s geo-location technology on a certain spot. By freezing a frame, the user can recognize a location and take a photo over it using a &#34;reverse augmented reality&#34; function with the app and the camera on a smart phone. When a picture is taken, the video is tagged with a geo-location so others can find it more easily. Also, the specific time signature on the video will be tagged with the photo of how the scene looks, creating a &#34;then and now&#34; effect. A demo of the Vistory app can be found at <a href="http://youtu.be/MXt4ExebHsA"><em>http://youtu.be/MXt4ExebHsA</em></a></p>
+<p> </p>
+<p style="text-align: center;"><img src="../../files/oomen-fig2.png" border="0" width="921" height="497"/></p>
+<p style="text-align: center;"><strong><em>Figure 2: Screenshot of the Vistory Website at <a href="http://www.vistory.nl/ " title="http://www.vistory.nl/ ">http://www.vistory.nl/ </a> <br/></em></strong></p>
+<h2>4.2 Linked open heritage data<strong> </strong></h2>
+<p>At the time of writing, GLAMS are only sparsely represented in the LOD cloud whereas they have the potential of connecting many different domains, as was explained in Section 2.1. This situation is changing quite rapidly. Intensive collaborations between pioneering cultural heritage institutions and computer science researchers have led to interesting use cases that show the potential of Linked Data for the heritage domain. <br/> <br/> 4.2.1 Agora<strong> </strong><br/> In Agora (<a href="http://agora.cs.vu.nl/" title="http://agora.cs.vu.nl">http://agora.cs.vu.nl</a>), the Rijksmuseum Amsterdam and the Netherlands Institute for Sound and Vision collaborate with the Computer Science and History departments at the VU University Amsterdam to integrate their collections and enrich them with historical information to facilitate a more comprehensive understanding of the historical dimension of objects in online heritage collections.</p>
+<p>At the time of writing, the Agora project is mostly a consumer of Linked Open Data. Various thesauri and other resources such as geonames.org and WordNet are used to consolidate and enrich the data sources from Rijksmuseum Amsterdam and the Netherlands Institute for Sound and Vision.  At the end of the project, Agora aims to return the enriched datasets, insofar they do not consist of copyrighted or sensitive materials to the Linked Open Data Cloud for further reuse.</p>
+<p style="text-align: center;"><strong><img src="../../files/oomen-fig3.png" border="0" width="1024" height="521"/></strong></p>
+<p style="text-align: center;"><strong><strong><em>Figure 3: Screenshot of the Agora demo that shows how linking collection objects to a geographical resource can result in a visual representation of the locations associated with the collection objects.</em></strong></strong></p>
+<p><strong><strong> <strong> </strong></strong></strong></p>
+<h2>4.2.2 Europeana</h2>
+<p>Adhering to the Linked Open Data principles is a clear goal in Europeana (Gradmann, 2010) and with the Europeana Data Model, a suitable data model for publishing and linking Europeana metadata is currently being developed (Europeana, 2010). For example, the Europeana Thought Lab (<a href="http://www.europeana.eu/portal/thought-lab.html">http://www.europeana.eu/portal/thought-lab.html</a>) semantic search engine prototype (<a href="http://eculture.cs.vu.nl/europeana/session/search" title="http://eculture.cs.vu.nl/europeana/session/search">http://eculture.cs.vu.nl/europeana/session/search</a>) developed by the VU shows how LOD principles can aid the search process (Gradmann 2011).</p>
+<p>The search engine contains data of the Rijksmuseum Amsterdam, the Musée du Louvre in Paris, and the Rijksbureau voor Kunsthistorische Documentatie (Netherlands Institute for Art History). Various thesauri and vocabularies (e.g. AAT, ULAN, WordNet, IconClass) have been used to enrich the artworks and link them together. For instance, by performing a search on ‘Rembrandt,’ the search results are clustered into various semantic clusters, like ‘works created by matching person’ and ‘works showing matching person’.          </p>
+<p style="text-align: center;"><img src="../../files/oomen-fig4.png" border="0" width="1024" height="496"/></p>
+<p style="text-align: center;"><strong><em>Figure 4: Screenshot of the Europeana Thoughtlab Interface Showing objects related to “Rembrandt”</em></strong></p>
+<p>4.2.3 Open Images</p>
+<p>Open Images (<a href="http://www.openimages.eu/" title="http://www.openimages.eu">http://www.openimages.eu</a>) provides access to a large and growing collection of Creative Commons licensed and Public Domain archive material. Right now, there are over 1,800 videos on the Open Images platform. The metadata is converted to RDF, allowing the creation of rich semantic links between other datasets such as the Amsterdam Museum dataset.</p>
+<p style="text-align: center;"><img src="../../files/oomen-fig5.png" border="0" width="940" height="512"/></p>
+<p style="text-align: center;"><strong><em>Figure 5: Screenshot of Open Images homepage.</em></strong></p>
+<p>Furthermore, the videos on Open Images are also contributed to the Wikimedia Commons and in turn added to Wikipedia articles, which has resulted in millions of page views.<br/> <br/> 4.2.4 The Amsterdam Museum<br/> The Amsterdam Museum was the first museum in the Netherlands to convert its complete museum collection database to RDF. The resulting resource consists of more than 5 Million RDF triples describing over than 70,000 cultural heritage objects related to the city of Amsterdam (<a href="http://semanticweb.cs.vu.nl/lod/am" title="http://semanticweb.cs.vu.nl/lod/am">http://semanticweb.cs.vu.nl/lod/am</a>).</p>
+<p>The Amsterdam Museum data is five stars according to the 5-star LOD deployment scheme described in Section 3.1. This fifth star is achieved by linking the Amsterdam Museum data to other datasets in the Linked Open Data cloud. Concepts in the Amsterdam Museum data are linked to two thesauri, geographical names are linked to geonames.org and to the Dutch version of the Art and Architecture Thesaurus (AATNed). Persons that are mentioned in the Amsterdam Museum collection, such as painters, are linked to the Getty’s Union List of Artist Names (ULAN) and to DBPedia pages about persons. These mappings are created automatically, where only those mappings with the highest confidence are included in the dataset. </p>
+<p>The Amsterdam Museum dataset has been a popular resource for application developers to design for example semantic mobile tour apps (Van Aart et al., 2010).</p>
+<p style="text-align: center;"><img src="../../files/oomen-fig6.png" border="0" width="361" height="427"/></p>
+<p style="text-align: center;"><strong><em>Figure 6: Mobile City Guide that was created from Amsterdam Museum data by a third party</em></strong></p>
+<h2>5. Discussion</h2>
+<p>GLAMS have been safe keepers of data for a very long time and have set up very meticulous working practices. Sharing GLAM data openly on the web for everyone to make use of it is quite a departure from established working practice, based on a much more one-way and write-once philosophy. At the same time, professionals at GLAMS have been amongst the most vivid enthusiasts of the web and contributed heavily to the standards for information exchange that are common now. In “Facilitating Access to the web of data: a guide for Librarians”, David Stuart reflects on the advent of open data, writing:</p>
+<p>The growth in the web of data provides one of the most significant changes in the publishing process, and brings with it a host of new opportunities, not only for those who want to make use of this data, but also for library and information professionals who incorporate facilitating access to the web of data into their work. […] clinging onto the traditional role is likely to see them increasingly marginalized in the face of the twin forces of cutbacks and new technologies. <em>Stuart, 2011</em></p>
+<h2>5.1 Assessing the risks and advantages</h2>
+<p>Examining at the impact of the projects outlined above, several advantages of (Linked) Open Data can be identified, including:</p>
+<ul>
+<li>Driving users to online content held by GLAMS (e.g., by improved search engine optimization);</li>
+<li>Stimulating collaboration in the library, archives and museums domain and beyond, for instance by inviting people to clean/enrich existing data;</li>
+<li>Enabling new scholarship that can only be done with open data;</li>
+<li>Allowing the creation of new services for discovery;</li>
+<li>And more generally, quoting Verwayen (2011) “increas[ing] relevance to digital society.”</li>
+</ul>
+<p>Within the heritage sector there is currently a lively debate about the impact of &#39;open&#39; long-term strategy and operations. Europeana, a major player in this field, recently published a report in which the pros and cons are compared.<br/> <br/> The report defines two main potential risks:</p>
+<ul>
+<li>Loss of Attribution <em>“Heritage institutions are the gatekeepers of the quality of our collective memory, therefore a strong connection between the object and its source is felt to be desirable. There is a fear that opening up metadata will result in a loss of attribution to the memory institution, which in turn will dilute the value of the object. Investigations need to be made on the technical, legal and user levels to safeguard the level of integrity of the data.”</em><br/> <br/> </li>
+<li>Loss of potential income: <em>“It has been established that a very limited amount of Institutions currently make significant money selling metadata. It must be argued that the loss of this income can be averted by product differentiation. A larger issue is the fear of losing the opportunity to sell data in the future when data is openly available for everyone to use. This requires a change of mindset and the acknowledgement that the reality of the web in the 21st century is that we are all invited to create new, commercial services based on open data.</em>”(Verwayen et al., 2011)</li>
+</ul>
+<p>The report, which was the result of broad consultation within the heritage domain, concludes that the potential risks (loss of attribution, loss of earnings) outweigh the gains.  It is essential to establish new metrics to measure the effect of data and content made openly available to the creative industries. These could include:</p>
+<ul>
+<li>Income: measured in money</li>
+<li>Public Outreach: to measure the number of (online) visitors</li>
+<li>Reuse: to measure the use of data and content by heritage institutions themselves and by others</li>
+<li>Public Participation: to measure the added metadata and content</li>
+</ul>
+<h2>5.2 Open, intelligent and participatory</h2>
+<p>Above, we have shown how providing data under open conditions is a powerful way to bring collections to the attention of a broad, new and interested audience. They can be used as basis for new cultural, educational and creative purposes by third parties. Adhering to the Linked Open Data principles can create a new level of meaning and comprehension; for instance by creating links that convey relations between objects across collections. It allows new questions to be asked and old questions to be posed in new ways.</p>
+<p>We envision the future cultural heritage to be open, built on intelligent infrastructures and on the concept of participation between the various stakeholders. This will allow GLAMs, as a driving force behind the Cultural Commons, to excel in terms of knowledge, applications and technologies for the wide range of end users they cater for.<br/> <br/> <strong>Acknowledgements</strong><br/> This research had been funded by NWO in the CATCH programme, grant 640.004.801 (The Agora project) and Images for the Future. The authors would also like to thank Maarten Brinkerink and Nikki Timmermans for their valuable input.</p>
+<h2>References</h2>
+<p class="ReferencesText">Van Aart, C., Wielinga, B., Van Hage, W. R. (2010). “<a href="http://www.few.vu.nl/~wrvhage/papers/Mobile_cultural_heritage_guide_ekaw2010.pdf">Mobile cultural heritage guide: location-aware semantic search</a>.” <em>Proceedings of Knowledge Engineering and Knowledge Management by the Masses (EKAW 2010)</em> Lisbon, Portugal, Oct. 2010. </p>
+<p class="ReferencesText">Baltussen, L., et al., Why Reinvent The Wheel Over And Over Again? How an Offline Platform Stimulates Online Innovation. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2011: Proceedings</em>. Toronto: Archives &amp; Museum Informatics. Published March 31, 2011. Consulted March 31, 2012. <a href="http://conference.archimuse.com/mw2011/papers/why_reinvent_the_wheel"><em>http://conference.archimuse.com/mw2011/papers/why_reinvent_the_wheel</em></a> Consulted 31 March 2012.</p>
+<p class="ReferencesText">De Boer, V., Wielemaker, J. Van Gent, J., Hildebrand, M., Isaac, A., Van Ossenbruggen, J., and Schreiber, G. (2012). “Supporting Linked Data Production for Cultural Heritage institutes: The Amsterdam Museum Case Study.” Forthcoming in: <em>Proceedings of the 9<sup>th</sup> Extended Semantic Web Conference (ESWC 2012) </em>Heraklion, Greece. May 27 – 31.</p>
+<p class="ReferencesText">Edson, Michael. “Making and the Commons.” Keynote given at Europeana’s European Cultural Commons conference in Warsaw Poland, October 12, 2011. <a href="http://www.slideshare.net/edsonm/museums-and-the-commons-helping-makers-get-stuff-done-6779050" title="http://www.slideshare.net/edsonm/museums-and-the-commons-helping-makers-get-stuff-done-6779050">http://www.slideshare.net/edsonm/museums-and-the-commons-helping-makers-...</a></p>
+<p class="ReferencesText">European Commission (2011). “Open data: An engine for innovation, growth and transparent governance.” Communication from the Commission to the European Parliament, the Council, the European Economic and Social Committee and the Committee of the Regions. Brussels.</p>
+<p class="ReferencesText">Europeana (2010). “Europeana Data Model Primer.” Technical report. August 2010.</p>
+<p class="ReferencesText">Gradmann, S. (2010). “Knowledge=Information in Context: On the Importance of Semantic Contextualisation in Europeana.” The Hague: Europeana Office.</p>
+<p class="ReferencesText">Lakhani, K.R., and Panetta, J. A. (2007). “The Principles of Distributed Innovation.” <em>Innovations: Technology, Governance, Globalization,</em> 7 (3) Summer 2007.</p>
+<p class="ReferencesText">Stuart, D. (2011). <em>Facilitating access to the web of data: A guide for librarians. </em>London: Facet Pub.</p>
+<p class="ReferencesText">Verwayen, H., Arnoldus, M., and Kaufman, P. B. (2011). <em>The Problem of the Yellow Milkmaid: A Business Model Perspective on Open Metadata. </em>Intelligent Television. November 2011.</p>
+<p class="ReferencesText">Zeinstra, M. (2011). ‘Nationaal Archief joins Wikipedia’ effectmeting 2012. Amsterdam / Den Haag: Stichting Nederland Kennisland / Nationaal Archief.</p>
+<div class="field nodereference field-paper-program-ref">
+                                <h3 class="label inline">Program Item Reference: </h3>
+          <div class="item inline odd"><a href="../programs/sharing_cultural_heritage_the_linked_open_da.html">Sharing cultural heritage the linked open data way - everyone&#39;s invited</a></div>
+              </div>
+ <!-- /content-field -->
+  </div>
+  
+  <div class="article-meta">
+      <p class="submitted">Posted <em class="time">April 7, 2012 - 12:06pm</em> by <em class="author"><a href="../../user/johanoomen.html" class="username" title="View Johan&#39;s profile.">Johan Oomen</a></em></p>
+  
+    
+    </div>
+  
+  
+</div> <!-- /article -->  <div id="comments" class="paper-comments">
+          <h2 id="comments-title">
+        Comments <a href="../../crss/node/16944html.html" class="feed-icon"><img src="../../misc/feed.png" alt="Syndicate content" title="Comments for &#34;Sharing cultural heritage the linked open data way: why you should sign up&#34;" width="16" height="16"/></a>      </h2>
+        <a id="comment-4957"></a>
+<div class="comment odd comment-with-links">
+
+
+
+<div class="comment-inner clear-block">
+
+<div class="submitted-wrapper clear-block">
+    <div class="user-picture"><a href="../../user/ruisuko.html" title="View user profile."><img src="../../files/imagecache/thumb/images/userdefault.png" alt="ruisuko&#39;s picture" title="View user profile." class="imagecache imagecache-thumb" width="46" height="46"/></a></div>
+ <!-- /user-picture -->
+      <p class="submitted">by <em class="author"><a href="../../user/ruisuko.html" class="username" title="View Rui&#39;s profile.">Rui Suko</a></em> - <em class="time">Apr 12 2012 - 10:48am</em></p>
+  </div>
+
+<h3 class="comment-title">
+<a href="sharing_cultural_heritage_the_linked_open_data.html#comment-4957" class="active">Sharing photos in Asturias, region in north of Spain</a></h3>
+
+<div class="comment-content clear-block">
+<p>Using google Picasa, 3000 pictures related to tourism resources were geotagged and included full metadata of each one.<br/>
+People can view and download for free every picture in high resolution, license is CC BY-NC-SA but practically almost all commercial use is allowed, as the site says &#34;The term &#34;commercial use&#34; refers exclusively to direct economic profit resulting from trade of the photographs themselves&#34;.<br/>
+Enjoy this beautiful opendata example: <a href="https://picasaweb.google.com/srtfotovideo" title="https://picasaweb.google.com/srtfotovideo">https://picasaweb.google.com/srtfotovideo</a><br/>
+And full dataset is available in SPARQL/XML (application/sparql-results+xml), SPARQL/JSON (application/sparql-results+json), RDF/XML (application/rdf+xml), HTML (text/html), RDF/N3 (application/n3) and TURTLE (application/x-turtle) formats in <a href="http://risp.asturias.es/catalogo/index.html" title="http://risp.asturias.es/catalogo/index.html">http://risp.asturias.es/catalogo/index.html</a></p>
+</div>
+
+</div>
+<div class="comment-links clear-block">
+</div>
+</div> <!-- /comment -->
+  </div>
+ <!-- /comment-wrapper -->
+</div>
+
+        </div>

@@ -1,0 +1,248 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- #BeginTemplate "/Templates/mw2005.dwt" --><!-- DW6 --><!-- Mirrored from www.museumsandtheweb.com/mw2005/abstracts/prg_280000878.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:39:58 GMT --><head>
+<!-- #BeginEditable "HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2005: Abstract: Let&#39;s go mobile!  Design issues in multichannel
+&#34;accessible&#34; applications for cultural heritage</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2005: Abstract: Let&#39;s go mobile!  Design issues in multichannel
+" accessible"="" applications="" for="" cultural="" heritage"=""/>
+<!-- #EndEditable -->
+<!-- #BeginEditable "Keywords" -->
+<meta name="Keywords" content="mobile devices, application design, user needs, multichannel
+application, interoperability, location awareness, papers, abstracts, sessions, presentations, archives &amp; museum informatics, archives, museums, informatics, technology, digital museums, network, internet, digital archives, digital art, museums online, archives online, libraries online, world wide web, www, conferences, digital libraries,  on-line"/>
+<!-- #EndEditable -->
+<!-- #BeginEditable "Description" -->
+<meta name="Description" content="Museums and the Web 2005: the international conference for culture and heritage on-line"/>
+<!-- #EndEditable -->
+<!-- #BeginEditable "copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2005"/>
+<!-- #EndEditable -->
+<meta name="document-class" content="Published"/>
+<meta name="document-rating" content="General"/>
+<meta http-equiv="Content-Language" content="EN"/>
+<meta name="document-rights" content="Copyrighted Work"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<link rel="stylesheet" href="../Library/mw2005.css" type="text/css"/>
+<!-- #BeginEditable "ImageRotateScript" -->
+<script language="JavaScript" type="text/javascript">
+/*************************************************************************
+  This code is from Dynamic Web Coding 
+  at http://www.dyn-web.com/
+  Copyright 2001-3 by Sharon Paine 
+  See Terms of Use at http://www.dyn-web.com/bus/terms.html
+  Permission granted to use this code 
+  as long as this entire notice is included.
+*************************************************************************/
+function initImgRotation() {
+  // create rotating image objects here 
+  // arguments: image name, rotation speed
+  var rotator1 = new rotateImgObj('img1',2500);
+  // add the images to rotate into that image object
+   rotator1.addImages("sessionsPM3.html", "sessionsPM2.html", "sessionsPM1.html", "speakers2-2.html", "speakersCM.gif ");
+
+  // DON'T CHANGE ANYTHING ELSE but the directory path below
+  
+  rotator1.rotate();
+  
+  rotateImgObj.start();
+}
+// If all the images you wish to display are in the same location, you can specify the path here 
+rotateImgObj.imagesPath = "../images/index.html";
+// no need to edit code below 
+/////////////////////////////////////////////////////////////////////
+rotateImgObjs = []; // holds all rotating image objects defined
+// constructor 
+function rotateImgObj(nm,s) {
+  this.speed=s; this.ctr=0; this.timer=0;  
+  this.imgObj = document.images[nm]; // get reference to the image object
+  this.index = rotateImgObjs.length; rotateImgObjs[this.index] = this;
+  this.animString = "rotateImgObjs[" + this.index + "]";
+}
+rotateImgObj.prototype = {
+  addImages: function() { // preloads images
+    this.imgObj.imgs = [];
+    for (var i=0; arguments[i]; i++) {
+      this.imgObj.imgs[i] = new Image();
+      this.imgObj.imgs[i].src = rotateImgObj.imagesPath + arguments[i];
+    }
+  },
+  rotate: function() {
+    if (this.ctr < this.imgObj.imgs.length-1) this.ctr++;
+    else this.ctr = 0;
+    this.imgObj.src = this.imgObj.imgs[this.ctr].src;
+  }
+}
+// sets up rotation for all defined rotateImgObjs
+rotateImgObj.start = function() {
+  for (var i=0; i<rotateImgObjs.length; i++) 
+    rotateImgObjs[i].timer = setInterval(rotateImgObjs[i].animString + ".rotate()", rotateImgObjs[i].speed);                     
+}
+
+</script>
+<!-- #EndEditable -->
+</head>
+
+<body onload="initImgRotation()">
+<table width="720" border="0" align="center" cellspacing="0">
+  <tbody><tr> 
+    <td width="126" rowspan="3" class="menuLogo"><div align="center"><a href="../index.html"><img src="../images/mw.no.date.jpg" alt="MW2005 Logo" width="112" height="155" border="0" align="middle"/></a>
+    </div>
+    </td>
+    <td width="114" class="menuTop"><a href="../register/index.html" class="menu">Register</a></td>
+    <td width="117" class="menuTop"><a href="../dates/index.html" class="menu">Key Dates</a></td>
+    <td width="114" class="menuTop"><a href="../sescal/index.html" class="menu">Schedule</a></td>
+    <td width="113" class="menuTop"><a href="../events/index.html" class="menu">Events</a></td>
+    <td width="90" class="menuTop"><a href="../local/index.html" class="menu">Local Info</a></td>
+    <td class="menuTop" width="32"> </td>
+  </tr>
+<tr>
+    <td colspan="3" class="pageTitle"><a href="../index.html" class="pageTitle">Museums and the Web 2005</a><br/>
+      <!-- #BeginEditable "PageTitle" --><a href="../sessions/index.html">Sessions</a>: Abstracts
+    <!-- #EndEditable --></td>
+    <td colspan="3" rowspan="2" align="center" class="imageRotate"><!-- #BeginEditable "imageRotate-100x136-nam=img1" --><img src="../images/sessionsPM3.gif" alt="Sessions" width="130" height="100" name="img1"/><!-- #EndEditable --><br/>
+      <a href="../images/credits.html" class="imageRotate">Photo Credits</a></td>
+</tr>
+  <tr>
+    <td colspan="3" class="introParagraph">
+      <!-- #BeginEditable "IntroParagraph" -->
+      <p class="introParagraph">Speakers from around the world present their latest work at MW2005.</p> 
+    <!-- #EndEditable --></td>
+  </tr>
+  <tr>
+	<td align="left" valign="top" class="menuSideStretch">
+	<table border="0" align="left" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td class="menuSide"> </td>
+</tr>
+ <tr> 
+    <td class="menuSide"> <a href="../workshops/index.html" class="menu">Workshops</a> </td>
+  </tr>
+  <tr> 
+    <td class="menuSide"> <a href="../sessions/index.html" class="menu">Sessions</a> </td>
+  </tr>
+  <tr>
+    <td class="menuSide"> <a href="../speakers/index.html" class="menu">Speakers</a> </td>
+  </tr>
+  <tr> 
+    <td class="menuSide"> <a href="../interact/index.html" class="menu">Interactions</a> </td>
+  </tr>
+  <tr> 
+    <td class="menuSide"> <a href="../demos/index.html" class="menu">Demonstrations</a> </td>
+  </tr>
+  <tr> 
+    <td class="menuSide"> <a href="../exhibit/index.html" class="menu">Exhibits</a> </td>
+  </tr>
+  <tr>
+    <td class="menuSide"><a href="../best/index.html" class="menu">Best of the Web </a></td>
+  </tr>
+    <tr>
+    <td class="menuSide"> </td>
+  </tr>
+  <tr>
+    <td class="menuSide"> </td>
+  </tr>
+  <tr>
+    <td class="menuSideAMI">produced by
+    <a href="../../index.html"><img src="../images/nav_ami.gif" alt="Archives &amp; Museum Informatics Wordmark" width="116" height="35" border="0"/></a></td>
+  </tr>
+  <tr>
+    <td class="menuSideAMI"><form method="get" id="searchform" action="http://wp.museumsandtheweb.com/">
+<input type="text" class="field" name="s" id="s" placeholder="Search"/>
+<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search"/>
+</form></td>
+  </tr>
+  <tr>
+    <td class="menuSideAMI"><a href="../../index.html" class="menuAMI">Join our Mailing List</a><br/>
+      <a href="../../privacy.html" class="menuAMI">Privacy Policy</a> </td> 
+  </tr>
+    </tbody></table>
+    </td>
+	<td id="body" rowspan="2" colspan="6"><!-- #BeginEditable "BodyText" --> <h2><a target="_blank" href="../papers/colazzo/colazzo.html">Let&#39;s go mobile!  Design issues in multichannel
+&#34;accessible&#34; applications for cultural heritage</a></h2>
+<p><a href="../bios/au_370013212.html">Sebastiano Colazzo</a>, Politecnico di Milano, Italy<br/> 
+<a href="../bios/au_3833.html">Franca Garzotto</a>, Politecnico di Milano, Italy<br/> 
+<a href="../bios/au_3056.html">Paolo Paolini</a>, Politecnico di Milano, Italy</p><p><span class="red">Session: </span><a href="../sessions/index.html#EVT100000342">Accessibility</a></p>
+<p>A &#39;traditional&#39; Web application for cultural heritage (CH) is intended for use in a stationary setting, far away (or at least separated) from the space where CH material resources are located and can be physically perceived by visitors. Mobile technology enables the creation of challenging CH applications that support new on-site experiences for the public and simultaneously expose users to both physical CH resources (e.g., paintings in a museum or ruins in an archaeological park) and digital virtual resources. When &#34;porting&#34; an existing Web site for culture heritage to mobile devices, a number of design issues arise, as we discuss in this paper. We give an overview of both the potential and the limits of mobile technology, and note the implications for application design. We introduce the concept of multi-channel Web applications and explore, from a design perspective, the concept of interoperability. We discuss the issue of location awareness and its design tradeoffs. Finally, we consider the requirements of disabled users, addressing the issues of design for accessibility in mobile applications.</p>
+<!-- #EndEditable --></td>
+  </tr>
+ 
+  <tr>
+   <td align="left" valign="top" class="menuSideStretch"> </td>
+  </tr>
+  <tr> 
+    <td rowspan="2" class="menuUpdateInfo">
+		last updated:<br/>
+      April 2005<br/>
+	analytic scripts updated:<br/>
+	October 2010<br/><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0"/></a></td>
+    <td colspan="6" class="menuContactInfo" id="contactInfo"> Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E 2P3 Canada <br/>
+      Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail: 
+        <script language="JavaScript" type="text/javascript">
+		<!-- <![CDATA[
+
+				user = "mw2005";
+				site = "archimuse.com";
+				position = "Page Footer";
+				document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2005 Web Site: ' + position + '\">');
+				document.write( user  + ' @ ' + site + '</a>');
+		 // ]]> -->
+		</script>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="6" class="menuCopyright">Copyright © 2005 - Archives &amp; Museum Informatics.</td>
+  </tr>
+</tbody></table>
+<br/>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+
+
+</body><!-- #EndTemplate --><!-- Mirrored from www.museumsandtheweb.com/mw2005/abstracts/prg_280000878.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:39:58 GMT --></html>

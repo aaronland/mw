@@ -1,0 +1,624 @@
+<div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+
+		<h2 class="Author"><a href="../../bios/au_195013154.html">Eero Hyvönen</a>, Eetu Mäkelä, Tomi Kauppinen, Olli Alm, Jussi
+		  Kurki, Tuukka Ruotsalo, Katri Seppälä, Joeli Takala, Kimmo Puputti, Heini
+		  Kuittinen, Kim Viljanen, Jouni Tuominen, Tuomas Palonen, Matias Frosterus, Reetta
+		  Sinkkilä, Panu Paakkarinen, Joonas Laitio, and Katariina Nyberg, Semantic Computing Research Group (SeCo), 
+		  Helsinki University of Technology (TKK) and University of Helsinki, Finland</h2>
+		<p class="URL"><a href="../http://www.seco.tkk.fi/">http://www.seco.tkk.fi/</a></p>
+		<h3 class="AbstractTitle">Abstract</h3>
+		<p class="AbstractText">We present an overview of CultureSampo, an ambitious
+		  system for creating a collective semantic memory of the cultural heritage of a nation
+		  on the Semantic Web 2.0, combining ideas underlying the Semantic Web and the
+		  Web 2.0. The system addresses the semantic Web challenge of aggregating highly
+		  heterogeneous, cross-domain cultural heritage collections and other contents into
+		  a semantically rich intelligent system for human and machine users. At the same
+		  time, CultureSampo is an approach to solving the social and practical Web 2.0
+		  challenge of organizing the underlying collaborative ontology development and
+		  content creation work of memory organizations and citizens. This paper focuses
+		  on CultureSampo’s search, recommendation, and visualization services for the
+		  end-users. The key idea here is to access cultural heritage on the Semantic Web
+		  through nine “thematic perspectives”: such as places on the maps, the social network of
+		  cultural persons, timelines, and narrative texts, e.g. biographies and literary
+		  works.</p>
+		<p class="AbstractText">Keywords: CultureSampo, semantic memory, cultural
+		  heritage, thematic perspectives, Semantic Web, Web 2.0, user interfaces, semantic search, recommendation system, visualization</p>
+	<!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+
+      <h2 class="MsoTitle">1.   Publishing
+        Collections Collaboratively on the Semantic Web 2.0</h2>
+      <p>CultureSampo (<a href="../http://www.kulttuurisampo.fi/">http://www.seco.tkk.fi/applications/kulttuurisampo/</a>)
+        (Hyvönen et al., 2008) is a publication system and a portal by which memory
+        organizations and citizens can publish their collections on the Semantic Web in
+        a collaborative way. CultureSampo extends our earlier application “MuseumFinland
+        - Finnish Museums on the Semantic Web” (Hyvönen et al., 2004, Hyvönen et al., 2005)
+        (<a href="../http://www.museosuomi,.fi/">http://www.museosuomi.fi/</a>), a system
+        for publishing artifact collections on the Semantic Web, by supporting
+        publication of different kinds of cross-domain contents, both material and
+        immaterial. The system also introduces many novelties to both end-users and
+      publishers. </p>
+      <p>Creating a system like CultureSampo is challenging for two
+      major reasons:</p>
+      <p class="MsoList"><b>Semantic challenges</b>. Cultural heritage content is
+        semantically heterogeneous and available in various forms (documents, images,
+        audio tracks, videos, collection items, learning objects etc.); it concerns
+        various topics (art, history, handicraft etc.); it is written in different
+        languages; and it is targeted to both nonprofessionals and experts.
+        Furthermore, the content is semantically interlinked, as depicted in figure 1.1.
+        For example, the content may contain a person’s narrative biography, works of
+        art she created, places of interest where she lived, Wikipedia articles or
+        novels about or by the person, social connections to other persons, and events
+        in history that the person was related to. In our work, semantic Web technologies
+        (<a href="../http://www.w3.org/2001/sw/">http://www.w3.org/2001/sw/</a>) are used
+      to address these challenges.</p>
+      <p class="MsoList"><b>Organizational challenges</b>. Museums, archives,
+        libraries, media organizations, associations, and individual citizens create
+        cultural heritage content independently from each other. This has led to a situation
+        where metadata produced by different organizations is usually incompatible one with
+        another in terms of metadata schemas, vocabularies, and cataloguing conventions.
+        In our work, ideas underlying Web 2.0 are used to support collaboration and
+      promote interoperability in distributed content creation.</p>
+      <p class="caption"><img src="hyvonen-figure1.1-linked-w.png" alt="figure 1.1" width="500" height="361"/></p>
+      <p class="caption">Fig 1.1: Cultural heritage is semantically heterogeneous
+      and mutually linked.</p>
+      <p>CultureSampo has been developed since 2004 as a part of the
+        FinnONTO project (2003–2007, 2008–2010) (<a href="../http://www.seco.tkk.fi/projects/finnonto/">http://www.seco.tkk.fi/projects/finnonto/</a>).
+        The goal of this work is to build a national level semantic Web content
+        infrastructure and demonstrate its usefulness in practical applications. The
+        first public prototype of CultureSampo was published in September 2008 and can
+      be used in three languages on the Web at <a href="../http://www.kulttuurisampo.fi/">http://www.kulttuurisampo.fi/</a>.</p>
+      <p>CultureSampo consists of three components (cf. figure 1.2):</p>
+      <ol>
+        <li><b>Collaborative ontology infrastructure</b>. The basis of CultureSampo
+          is the national FinnONTO infrastructure (Hyvönen et al., 2008b). It includes a
+          collaboratively created system of cross-domain ontologies and related ontology
+          services for utilizing them cost-efficiently as services. The ontologies and
+          the services were published as the National Ontology Service ONKI (<a href="../http://www.yso.fi/">http://www.yso.fi/</a>) on September 12,
+          2008.</li>
+        <li><b>Content production system</b>. Our content creation model
+          consists of a set of metadata models and a content creation process for
+          producing and harvesting content from museums, libraries, archives and other
+          organizations, as well as from individual citizens and (inter)national Web 2.0
+          sources.</li>
+        <li><b>Semantic Web 2.0 portal</b>. The portal itself is unique in its
+          use of versatile cross-domain semantic models, new semantic searching and
+          browsing methods, and semantic visualizations for the end-users.</li>
+      </ol>
+      <p class="caption"><img src="hyvonen-figure1.2-components-w.png" alt="Figure 1.2" width="500" height="278"/></p>
+      <p class="caption">Fig 1.2: Three components of CultureSampo.</p>
+      <p>In the following, these three components are overviewed
+        with an emphasis on the end-user interface of the portal. After this,
+      contributions of the work to related research are summarized.</p>
+      <h2>2.   Collaborative
+      Ontology Infrastructure</h2>
+      <p>The ontologies of the FinnONTO infrastructure constitute
+        an integral part of CultureSampo. They complement the generic, logic based W3C semantic
+        web recommendations, such as RDF, OWL, and SPARQL, with domain specific concept
+        descriptions in different domains. Most of the FinnONTO ontologies were developed
+        by transforming nationally used thesauri into lightweight ontologies. The process
+        was not purely mechanical, like e.g. in (van Assem, 2006), but also manual
+        processing was required in order to refine the semantic thesaurus relations
+        into full-blown subsumption hierarchies. In the FinnONTO model, the ontologies in
+        different domains are developed in a distributed fashion by collaborating
+        expert groups of different fields, and are mapped together to form a large
+        national ontology called KOKO encompassing all domains. KOKO includes e.g. an
+        upper ontology YSO (20 600 concepts), a cultural heritage ontology MAO (6800
+        concepts), an agriforestry ontology AFO (5500 concepts), an applied art
+        ontology TAO (2600 concepts), and a photography ontology VALO (1900 concepts).
+        Figure 2.1 illustrates the KOKO system of mutually mapped ontologies where YSO
+      constitutes the upper ontology.</p>
+      <p class="caption"><img src="hyvonen-figure2.1-koko-w.png" alt="figure 2.1" width="500" height="315"/></p>
+      <p class="caption">Fig 2.1: KOKO system of mutually mapped cross-domain ontologies.</p>
+      <p>The ontologies are provided to end-users not only in
+        RDF/OWL form, as usual, but also as ready to use semantic Web widgets (Mäkelä
+        et al., 2007) using Web 2.0 AJAX APIs, as well as through conventional Web Services.
+        In addition to KOKO, CultureSampo also utilizes a geographical registry of 800,000
+        places in Finland, a spatiotemporal ontology of historical Finnish municipalities
+        1865–2007 (Kauppinen et al., 2008), and an ontology of persons and organizations.
+        Furthermore, international vocabularies, such as the Iconclass (http://www.iconclass.nl/),
+        the Art and Architecture Thesaurus (AAT) (<a href="../http://www.getty.edu/research/conducting%20research/vocabularies/aat/">http://www.getty.edu/research/conducting
+          research/vocabularies/aat/</a>), and the Union List of Artists’ Names
+        (ULAN) (<a href="../http://www.getty.edu/research/conducting%20research/vocabularies/ulan/">http://www.getty.edu/research/conducting
+      research/vocabularies/ulan/</a>) are used.</p>
+      <h2>3.   Content
+      Production System</h2>
+      <p>CultureSampo contains cultural objects of nearly 67
+        different content types including artifacts, paintings, drawings, sculptures, pieces
+        of abstract art, novels, comics, Web pages, three types of folklore, five types
+        of folk music, photos, aerial photos, persons, organizations, biographies,
+        historical events, skills, videos, buildings, and archeological sites. These
+        content types are represented using 18 different metadata schemas. The
+        aggregated knowledge base contains 134,000 cultural objects and 285,000 other
+        resources, such as ontological class concepts and place instances. The cultural
+      objects and other resources are described by 2.4 million RDF property triples.</p>
+      <p>The content is enriched
+        using reasoning, resulting in some 11.4 million property triples. The enriched
+        knowledge base is used for intelligent information retrieval and for creating
+        semantic recommendation links between objects. The content is represented using
+        RDF and OWL, and SPARQL is used for querying recommendations. The system also
+        utilizes external Web resources through Web services: all Wikipedia articles in
+        English and Finnish that have coordinate information, as well as photographs of
+        the Panoramio service Panoramio (<a href="../http://www.panoramio.com/">http://www.panoramio.com/</a>)
+      can be found on CultureSampo’s map views.</p>
+      <p>These information
+        sources have diverse ownership. The contents come from 22 Finnish museums, archives,
+        and libraries, most of which produce their contents independently from each
+        other using heterogeneous cataloguing systems and practices. Wikipedia and
+        Panoramio content is created (inter)nationally by the public. CultureSampo also
+        has a commenting facility by which individuals can contribute new knowledge to
+        individual content items; e.g. identify persons in an old photograph of a museum
+        collection. In these ways, citizens are able to contribute to the national
+        semantic memory. Furthermore, distributed content production based on the SAHA
+        editor (Valkeapää et al., 2007) has been used internally in the system by the participating
+      organizations.</p>
+      <p class="caption"><img src="hyvonen-figure3.1-culsa-w.png" alt="figure 3.1" width="500" height="314"/></p>
+      <p class="caption">Fig 3.1: CultureSampo system in a nutshell.</p>
+      <p>Figure 3.1 depicts the CultureSampo system as a whole. In
+        the center is the KOKO ontology and other infrastructure ontologies. The
+        collection items (cf. figure 1.1) around the ontologies are attached to the
+        ontologies by metadata. The content providers depicted around the circle, i.e.
+        CultureSampo, publish metadata locally and independently using shared metadata
+        schemas and ontologies. The result is a large global semantic RDF network
+      linking different contents together in ontologically meaningful ways.</p>
+      <p>From a semantic
+        modeling viewpoint, one research focus of our work has been event- and
+        process-based annotations used in artificial intelligence and knowledge representation
+        (Sowa, 2000). In our case, events have been used for modeling cultural
+        processes and narrative stories (Junnila et al., 2008) and for metadata schema
+        integration (Ruotsalo, Hyvönen, 2007). The KOKO ontology was designed to
+        support this by clearly separating events and processes from other concepts as
+      in Dolce (Gangemi et al., 2002).</p>
+      <p>In some metadata
+        schemas of CultureSampo it is possible to annotate content using processes in
+        terms of events, subevents and their sequences. The model in use in the
+        prototype is a simplified version of our earlier schema (Junnila et al., 2008).
+        The portal then automatically generates an interactive representation of the
+        process as a kind of temporal table of contents. This system is used in the
+        prototype for creating skill models, cultural process models, and documentation
+      of processes in videos:</p>
+      <p class="MsoListContinue"><b><span lang="EN-GB" xml:lang="EN-GB">Semantic skill models</span></b><span lang="EN-GB" xml:lang="EN-GB">. An example of a skill model is the model “Production of Ceramics”
+        produced by experts at the University of Applied Arts in Helsinki. It illustrates
+        and explains the composition of different work phases when manufacturing
+        ceramics. At each phase, semantic recommendations to other relevant CultureSampo
+        contents can be created automatically. For example, links to products in
+        collections that were manufactured using the same techniques are automatically
+      obtained.</span></p>
+      <p class="MsoListContinue"><b><span lang="EN-GB" xml:lang="EN-GB">Semantic models of cultural
+        processes</span></b><span lang="EN-GB" xml:lang="EN-GB">. There is a similar kind of chronological
+          model “A Year on a Farm” of the seasonal farming events and processes taking
+          place at a typical farm in Finland. Again, tools and other materials from CultureSampo
+          are linked automatically with related events. This model was created by a
+          farmer employed at the Finnish Museum of Agriculture. The permanent exhibition
+          of this museum is actually organized using the same idea of presenting farming
+      events taking place during different yearly seasons.</span></p>
+      <p class="MsoListContinue"><b><span lang="EN-GB" xml:lang="EN-GB">Semantic documentation on videos</span></b><span lang="EN-GB" xml:lang="EN-GB">. The annotation model can be applied also to documenting instances
+        of actual skill events or processes documented on a video. The case example
+        available on the portal describes how the shoemaker Onni Wirlander manufactured
+        a pair of traditional leather boots. The video was produced and the annotation
+        created by the Espoo City Museum using the SAHA editor connected to the ONKI
+        ontology services. The semantic model describes what happens at different
+        (sub)sequences on the video. Semantic search can find not only the video as a
+        black box, as in systems such as YouTube, but also points of interest inside
+        the video. The video can be viewed directly starting from different points of
+      interest. This is important with longer videos.</span></p>
+      <p>The examples above demonstrate our new ideas of
+        representing and storing non-material, procedural cultural heritage in the
+        memory system, here descriptions of handicraft skills and cultural processes.
+        Typical cultural heritage portals contain metadata only about static objects
+      such as artifacts.</p>
+      <p>Content creation in CultureSampo, both ontologies and the
+        metadata, is based on distributing the work to organizations and citizens in a Web
+        2.0 fashion. In this strategy, extra costs can be minimized by reorganizing the
+        work done already in the organizations and in public. The work is supported by
+        a number of generic FinnONTO tools, such as the metadata editor SAHA,
+        information extraction tool POKA (Valkeapää et al., 2007), and the semantic
+      content validator VERA (<a href="../http://www.seco.tkk.fi/services/vera/">http://www.seco.tkk.fi/services/vera/</a>).</p>
+      <p class="caption"><img src="hyvonen-figure4.1-perspectives-w.png" alt="figure 4.1" width="500" height="389"/></p>
+      <p class="caption">Fig 4.1: Front page of CultureSampo.</p>
+      <p class="caption"><img src="hyvonen-figure4.2-searchbox-w.png" alt="figure 4.1" width="500" height="375"/></p>
+      <p class="caption">Fig 4.2: Using the semantic search box.</p>
+      <h2>4.   Semantic Web
+      2.0 Portal: Thematic Perspectives</h2>
+      <p>Figure 4.1 depicts the front page of the portal
+        CultureSampo. The system is multilingual: Finnish, Swedish, or English can be
+        selected by the links in the upper right corner. However, because nearly all
+        contents are in Finnish and translations of some parts of the Finnish KOKO ontologies
+        are not available, the system is not equally powerful in other languages. On
+        the bottom of the page, lately viewed objects from the knowledge base are shown,
+      as well as objects that have elicited comments lately by end-users.</p>
+      <p>In the upper left
+        corner, there is a Google-like search box for typing in a search query. CultureSampo
+        utilizes semantic autocompletion (Hyvönen, Mäkelä, 2006) in order to guess the
+        possible query words that the user is aiming at. Semantic query expansion based
+        on the ontologies is used in order to enhance recall. Furhermore, the underlying
+        ontologies are used to organize the hit results into meaningful categories. For
+        example, in figure 4.2 the user is typing into the search box “Kuller...” aiming
+        probably at the hero “Kullervo” of the Kalevala epic. The hit results are
+        categorized by the roles connecting the hero and the matched objects; e.g., paintings
+      depicting him, runes telling about him, etc.</p>
+      <p class="caption"><img src="hyvonen-figure4.3-map-w.png" alt="figure 4.1" width="500" height="371"/></p>
+      <p class="caption">Fig 4.3: Collection objects on the map based on 12
+      different spatial relations.</p>
+      <p class="caption"><img src="hyvonen-figure4.4-helsinki-w.png" alt="figure 4.1" width="500" height="341"/></p>
+      <p class="caption">Fig 4.4: Historical areas tab.</p>
+      <p>A major novelty of the portal is to provide the end-user
+        with access to the cultural RDF knowledge base through nine “thematic
+        perspectives”. They are available at the main entry page and as choices in the
+        menu bar (cf. figure 4.1 in the middle). These perspectives are overviewed below
+        in order to illustrate the underlying ideas and functionalities available. New
+        perspectives can be added into the system fairly easily, because the underlying
+        architecture is based on a set of general service components, such as the semantic
+      recommending system. </p>
+      <h3>Perspective 1: Maps Search and Browse Views</h3>
+      <p>There are four map views (Kauppinen, et al., 2006)  available using Google Maps. Each
+      view has its own tab:</p>
+      <ol>
+        <li>The tab “Search for Items on the Map” shown in figure 4.3 displays
+          any collection object with coordinate information on Google Maps, and tells the
+          semantic relations of objects to the places. There are 12 different spatial
+          relations in use, such as “place of acquirement”, “place of subject”, and
+        “place of manufacture”.</li>
+        <li>The tab “Historical Areas” is used for finding old Finnish
+          counties with their digitized limits on the maps, based on the spatiotemporal
+          Finnish place ontology SAPO (Kauppinen et al., 2008) . In figure 4.4, a link
+          directory to old places is shown on the left, and the user has selected historical
+          Helsinki. Semantic recommendation links to related collection items are
+          automatically shown on the bottom of the page with short explanations about
+          their relation to the place.<br/>  
+          <span class="noIndent"><img src="hyvonen-figure4.5-monrepos-w.png" alt="figure 4.1" width="500" height="542"/></span><br/>  
+        <span class="caption">        Fig 4.5: Historical maps on Google Maps.</span></li>
+        <li>The tab “Historical Maps” (Kauppinen, et al., 2006) is used for viewing
+          historical maps layered semi-transparently over modern Google Maps. Wikipedia
+          articles in Finnish or English with coordinate information and photos from the
+          Panoramio service can be seen on the maps and can be opened by clicking on
+          them. For example, in figure 4.5 old Finnish Karelian maps are viewed
+          semi-transparently on top of modern Russian Google Maps (this area is part of Russia
+          today). The user has located the historical Finnish park “Monrepos”, and found
+          a modern Panoramio photograph there, taken by a contemporary Russian citizen.
+          On the left, there is also the index of old Finnish places on the maps as
+          direct selection links. Semantic recommendations to collection items related to
+          historical places on the maps are displayed below. In this case, for example, links
+          to pieces of folk music and poems collected from the region can be seen, as
+          well as related paintings, artifacts, and old aerial photographs. <br/>
+          <br/>
+          <span class="caption"><img src="hyvonen-figure4.6-nearby-w.png" alt="figure 4.1" width="500" height="369"/></span>
+        <br/>
+     
+        <span class="caption">Fig 4.6: Finding nearby cultural sites.</span></li>
+        <li>The fourth tab “Nearby objects” is used for finding nearby
+          objects of interest: the user clicks a point and the system finds nearby
+          cultural sites of interest (cf. figure 4.6).</li>
+      </ol>
+      <h3>Perspective 2: relational search</h3>
+      <p>The relational search perspective is a demonstration of
+        relational search (Kurki, Hyvönen, 2007)  also called association identification
+        or knowledge discovery (Sheth et al., 2005). Here the idea is to search not
+        for objects but for associative relation chains between objects. We used the
+        ULAN registry of 120,000 artists and organizations with 390,000 names. Here the
+        user can type in two names, using semantic autocompletion, and CultureSampo
+        tells how the persons or organizations are related to each other by the social
+        network based on some 50 different social roles (e.g., parent-of, teacher-of, patron-of
+        etc.). The underlying social RDF/OWL network can also be browsed by a graphical
+        network browser. For example, in figure 4.7 the user typed in Napolean I (the
+        French emperor) and Akseli Gallen-Kallela (a Finnish artist), and CultureSampo
+        found a social path of 7 steps between the persons. The browsable social
+      network of Napolean I is depicted on the right hand side window.</p>
+      <p class="caption"><img src="hyvonen-figure4.7-relational-w.png" alt="figure 4.7" width="500" height="339"/></p>
+      <p class="caption">Fig 4.7: Answering the question “How is Napolean I, the
+        French emperor, related to Akseli Gallen-Kallela, the Finnish artist?” by
+      relational search.</p>
+      <h3>Perspective 3: search and organize</h3>
+      <p>In the <b>search and organize</b> perspective, the idea
+        is to move beyond locating interesting singular items. Using the tools of this
+        perspective, it is possible to analyze the contents and create organized
+        presentations that are able to bring out interesting trends and information
+        contained in the data as a whole. For example, it is possible to find out what
+        the most popular themes in Finnish fiction were in the year 2007. In figure
+        4.8, the end-user is analyzing how beard fashions have changed during the ages
+        by first searching for collection items depicting beards in different ways, and
+        then projecting the results on a timeline. In figure 4.9, images of churches
+        are visualized on the map in order to investigate the geographical distribution
+      of different kinds of churches in Finland.</p>
+      <p>The user interface of the perspective is divided into two
+        functional parts. On the top, constraints for the result set are specified and
+        changed. For example, in figure 4.9, the user has formulated the query &#34;Tell
+        me about photographs related to the keyword church&#34;. On the bottom, the
+        constrained result set can be organized, grouped and visualized according to
+        different ontological facets as lists, on a map, or on a timeline. For example,
+        it is possible to view the results &#34;as a list according to the most
+        popular theme&#34;, &#34;according to time of manufacture on a timeline&#34;
+        or &#34;colored according to style and placed on a map according to place of
+        manufacture&#34;. For both query constraining and organizing, the perspective
+        makes use of domain-centric faceted search (Mäkelä et al., 2007), a
+      generalization of the faceted search paradigm to heterogeneous data.</p>
+      <p class="caption"><img src="hyvonen-figure4.8-beard-w.png" alt="figure 4.1" width="500" height="153"/></p>
+      <p class="caption">Fig 4.8: How have beard fashions changed during the ages?
+        Paintings, photographs and other visual objects relating to the keyword &#39;beard&#39;
+      rendered on a timeline.</p>
+      <p class="caption"><img src="hyvonen-figure4.9-churches-w.png" alt="figure 4.9" width="500" height="375"/></p>
+      <p class="caption">Fig 4.9: Is Finland a land of churches? Photographs relating
+      to the keyword &#39;kirkko&#39; (church in Finnish) rendered on a map.</p>
+      <h3>Perspective 4: collections</h3>
+      <p>Here the contents can be accessed based on an
+        organizational view. Each participating organization has an automatically
+        generated home page in the system with links to its collections and the actual
+      collection items.</p>
+      <h3>Perspective 5: Finnish history</h3>
+      <p>This view is based on an ontology representing events in
+        Finnish history (Hyvönen, MuseumFinland, 2007). These events are of interest
+        on their own, but are also used to create semantic recommendations to other
+        contents; e.g. to biographies of persons participating in the events. The
+        history ontology in the prototype system contains 220 events on a timeline in
+        1860–1919. The content originates from the Agricola portal (<a href="../http://agricola.utu.fi/">http://agricola.utu.fi/</a>) maintained
+      by history researchers.</p>
+      <p class="caption"><img src="hyvonen-figure4.10-wirlander-w.png" alt="figure 4.1" width="500" height="449"/></p>
+      <p class="caption">Fig 4.10: Semantic video viewing with dynamic
+      recommendations.</p>
+      <h3>Perspective 6: Skills and Cultural Narratives</h3>
+      <p>Figure 4.10 depicts the idea of documenting traditional
+        skills semantically on videos, and providing the documentation through a
+        semantic video viewer. The use case here is the shoemaker Wirlander producing a
+        pair of leather boots. This process has been described semantically as a sequence
+        of hierarchical events that take place in the video in different parts. The
+        corresponding “table of contents” is automatically generated for the end-user
+        on the left. The user can then view any part of the video by selecting items
+      from the list.</p>
+      <p>In the screenshot, the user is viewing the part
+        “sharpening of the knife”. At the same time, the system recommends items of
+        interest in the collections, in this case different knives belonging to the
+        collections of the museums. Each part of the video that forms a meaningful
+        entity is a search object of its own, and can be found through the general
+      search engine of the system.</p>
+      <p class="caption"><img src="hyvonen-figure4.11-biography-w.png" alt="figure 4.1" width="500" height="310"/></p>
+      <p class="caption"> Figure 4.11: Biographical perspectives to cultural heritage .</p>
+      <h3>Perspective 7: Biographies</h3>
+      <p>In this view, biographies of the National Biography are
+        used to access CultureSampo contents. When reading the biographies, related
+        contents are shown as recommendations based on the concepts extracted from the
+        text using the information extraction tool POKA (<a href="../http://www.seco.tkk.fi/tools/poka/">http://www.seco.tkk.fi/tools/poka/</a>).
+        Figure 4.10 depicts the situation where the user is reading the biography of
+        Akseli Gallen-Kallela, retrieved from the server of the Finnish Literature
+        Society (SKS), and provides her with links to e.g. the art works of the artist
+      as well as biographies of other persons related to his life.</p>
+      <p class="caption"><img src="hyvonen-figure4.12-biography-w.png" alt="figure 4.1" width="500" height="362"/></p>
+      <p class="caption">Figure 4.12: Semantic Kalevala epic.</p>
+      <h3>Perspective 8: Semantic Kalevala</h3>
+      <p>This view contains a semantically annotated version of the
+        national epic of Finland, Kalevala, that is related in many ways to Finnish art
+        and culture. The epic also has interesting links to old Finnish folklore, on
+        which it is actually based, and to folk music lyrics. Thousands of runes and
+        pieces of folk music are available in the portal. When reading Kalevala,
+        annotations related to its subsequences can be viewed to help reading, and
+        semantic recommendations to related materials in CultureSampo are automatically
+      produced 
+      (Hyvönen et al., 2007b).</p><p>For example, in figure 4.12 the user is reading a part of
+        the fourth rune in Kalevala. A part of the rune is selected, and a modern
+        Finnish explanation of the part can viewed. Furthermore, the system is
+        suggesting semantic links to objects related to the part selected, in this case
+        e.g. to sculpture depicting the fictive person Aino mentioned in the selected poem
+      part.</p>
+      <h3>Perspective 9: Karelia</h3>
+      <p>This last thematic perspective contains Wikipedia articles
+        about the Karelia area in Finland that has been influential to the Finnish
+        culture. For example, lots of folklore has been collected into national
+        archives from this area, and the Kalevala epic is strongly associated there.
+        Like in the biographies view, the POKA system is used for extracting concepts
+        from the texts (here Web pages). Based of the extracted concepts, semantic
+        recommendations to related contents are created for additional information (cf.
+      figure 4.12). </p>
+      <p>In addition to human end-users, the system can be used by
+        machines via AJAX interface and widgets. The application use case here is that a
+        collaboratively aggregated and semantically enriched national knowledge base
+        can be used not only by the CultureSampo portal but also by other portals and
+        systems on the Web. To facilitate this we introduce the cost-effective idea of utilizing
+        ready-to-use Web 2.0 mash-up services in the same spirit as Google Ads or Maps
+        are used on external Web pages and applications. In this way, museums,
+        libraries, tourism portals, news papers, individual citizens, and other users
+        can include CultureSampo materials, such as semantic search results and
+        recommendation links, on their Web pages using mash-ups. This clearly benefits
+        everybody: the materials of the CultureSampo collaborative network get more
+        visibility and the external users can enrich their own materials for ”free”:
+      only 1–2 lines of Javascript code is needed. </p>
+      <p class="caption"><img src="hyvonen-figure4.13-widget-w.png" alt="figure 4.1" width="500" height="379"/></p>
+      <p class="caption">Figure 4.13 Semantic CultureSampo Widget.</p>
+      <p>An example mash-up is depicted in figure 4.13. Here the
+        user types in a search word in the input field. After each character input, the
+        CultureSampo service is queried and the matching results are displayed below
+        the search field. In this case, the user is typing “beauty” in English, and bathroom
+        equipment and some paintings related to the concept are returned. The actual contents
+        are available only in Finnish. However, searches can be performed successfully
+        because parts of the underlying ontologies are available in English and
+      Finnish.</p>
+      <h2>5.   Discussion</h2>
+      <p>The vision and design of CultureSampo goes beyond current
+        semantic Web portals for cultural heritage (Hyvönen, 2009). The contributions
+        of the work underlying the CultureSampo system have many facets and have been
+        made over several years. The contribution of this paper is to give an overview of
+        the whole system, its philosophy, and the new thematic perspective-based end-user
+        interface, with pointers to papers and Web sites explaining the approaches and
+      software developed in more detail.</p>
+      <p>To summarize our work, CultureSampo contributes to the research
+        and development of semantic portals for cultural heritage especially in the
+      following ways:</p>
+      <ol>
+        <li><b>Cross-domain content, ontologies, and metadata</b>: The system
+          is highly cross-domain with dozens of content types and metadata schemas. Usually
+          only one schema, such as Dublin Core or VRA Core (<a href="../http://www.vraweb.org/projects/vracore4%20/">http://www.vraweb.org/projects/vracore4/</a>),
+          is used in cultural portals (cf. e.g. (Schreiber et al., 2006; Wang et al.,
+          2008)).</li>
+        <li><b>Event-based narrative semantic models.</b> CultureSampo makes
+          use of sophisticated semantic annotation models, including events and processes.</li>
+        <li><b>Semantic search and recommending.</b> The system uses new kinds
+          of semantic search and recommendation techniques.</li>
+        <li><b>Semantic visualizations</b>. The system has an exceptionally
+          versatile selection of semantic visualizations available; such as different map
+          views, timelines, graphs, process visualization, and semantic video viewing.</li>
+        <li><b>Collaborative ontology development</b>. The system is based on
+          a large nationwide collaboratively maintained infrastructure of ontologies and
+          ontology services.</li>
+        <li><b>Collaborative metadata creation</b>. The system includes a
+          model of and tools for collaborative semantic content creation.</li>
+        <li><b>Machine semantics and services</b>. The services can be made
+          available for machines.</li>
+        <li><b>Large collaboration network</b>. The system has been developed
+          on a national level with content from over 20 memory organizations, and
+          includes content from many international sources.</li>
+        <li><b>Multilinguality</b>. Although the contents are in Finnish, the
+          system can be used in two other languages.</li>
+      </ol>
+      <p>Two user evaluation studies concerning semantic
+        recommendations of an earlier version of CultureSampo have been performed with
+        some promising results (Ruotsalo and Hyvönen, 2007). However, end user evaluation
+        of the interfaces of the new prototype with its various features has not yet
+      been done.</p>
+      <p>The portal is scalable
+        in terms of its Web 2.0 content creation model and different types of content.
+        An explicit concern in implementing the portal has been computational
+        efficiency in terms of speed and memory consumption, since a national level cultural
+        heritage portal, if successful, will have lots of content inside and a large
+        number of simultaneous users. For this goal, our earlier memory- and Prolog-based
+        search engine used in MuseumFinland was replaced by conventional search engine technology,
+        Apache Lucene, that was configured to do semantic search using semantic
+        indexing. The CultureSampo search engine has been tested with a knowledge base
+        of 20 million objects resulting in response times of less than 2 seconds on
+      ordinary PC hardware.</p>
+      <h2>Acknowledgements</h2>
+      <p class="AcknowedgementsText">Several
+        researchers, including, Airi Hortling, Jouni Hyvönen, Ellen Karhulampi, Suvi
+        Kettula, Helena Mäkimattila, and Jari Väätäinen, have contributed to developing
+        CultureSampo contents and the related infrastructural components. This work is
+        a part of the national FinnONTO research project 2003–2007, 2008–2010, funded
+        mainly by Tekes and a consortium of 38 companies and public organizations. The
+        work is also partly funded by the EU FP7 SmartMuseum project 2008–2010, and the
+      Finnish Cultural Foundation (2008–2010).</p>
+      <h2>References</h2>
+      <p class="ReferencesText">Gangemi, A., N. Guarino,  C. Masolo,  A. Oltramari, and L.
+        Schneider. (2002)Sweetening ontologies with DOLCE. In: <i>Proc. of the 13th International Conference on Knowledge Engineering and
+          Knowledge Management</i>. Ontologies and the Semantic Web, Springer–Verlag
+      (2002).</p>
+      <p class="ReferencesText">Hyvönen, E., T. Ruotsalo,  T. Häggström, M. Salminen,  M.
+        Junnila,  M. Virkkilä, M.  Haaramo, T. Kauppinen, E. Mäkelä, K. Viljanen (2008).
+        “CultureSampo–Finnish culture on the semantic web. The vision and first results”.
+        In: Klaus Robering (Ed.). <i>Information Technology
+      for the Virtual Museum</i>. LIT Verlag. (2008a).</p>
+      <p class="ReferencesText">Hyvönen, E., K, Viljanen,  J. Tuominen,  K. Seppälä
+        (2008). “Building a national semantic web ontology and ontology service
+        infrastructure–the FinnONTO approach”. In: <i>Proceedings
+      of the ESWC 2008</i>. Tenerife, Spain, Springer– Verlag (2008b).</p>
+      <p class="ReferencesText">Hyvönen, E., O.Alm, H. Kuittinen (2007). “Using an
+        ontology of historical events in semantic portals for cultural heritage”. In: <i>Proceedings of the Cultural Heritage on the Semantic
+          Web Workshop at the 6th International Semantic Web Conference</i> (ISWC 2007).
+      (November 12 2007).</p>
+      <p class="ReferencesText">Hyvönen, E., J. Takala,  O. Alm, T. Ruotsalo, E. Mäkelä
+        (2007). “Semantic Kalevala–accessing cultural contents through semantically
+        annotated stories”. In <i>Proceedings of the
+          Cultural Heritage on the Semantic Web Workshop at the 6th International SemanticWeb
+          Conference</i> (ISWC 2007), Busan, Korea.Hyvönen, E. (2009).” Semantic portals
+        for cultural heritage”. In: <i>Handbook of Ontologies</i>,
+        2. Edition. Springer-Verlag.</p>
+      <p class="ReferencesText"> Hyvönen, E., E. Mäkelä (2006). “Semantic
+        autocompletion”. In <i>Proceedings of the First
+      Asia SemanticWeb Conference</i> (ASWC 2006). Beijing, Springer-Verlag. </p>
+      <p class="ReferencesText">Hyvönen, E., E. Mäkela, M. Salminen, A. Valo,  K. Viljanen,
+        S. Saarela, M. Junnila, S. Kettula, S. (2005). “MuseumFinland–Finnish museums
+      on the semantic web”. <i>Journal of Web Semantics</i> 3(2) (2005) 224–241 </p>
+      <p class="ReferencesText">Hyvönen, E., J. Junnila, S. Kettula, E. Mäkelä,  S. Saarela,
+        M. Salminen, A. Syreeni, A. Valo. and K. Viljanen (2004). “Finnish Museums on
+        the Semantic Web: User’s Perspective on MuseumFinland”. In <i>Proceedings of Museums and the Web 2004</i> .
+      (MW2004), Ed J Trant and D. Bearman.  Archives &amp; Museum Informatics (2004). Available http://www.archimuse.com/mw2004/papers/hyvonen/hyvonen.html</p>
+      <p class="ReferencesText">Junnila, M., E. Hyvönen,  M. Salminen (2008).“Describing
+        and linking cultural semantic content by using situations and actions”. In
+        Klaus Robering (Ed.) <i>Information Technology
+      for the Virtual Museum</i>. LIT Verlag. (2008).</p>
+      <p class="ReferencesText">Kauppinen, T., R. Henricksson, J. Väätäinen, C. Deichstetter and E. Hyvönen (2006). &#34;Ontology-based Modeling and Visualization of Cultural Spation-temporal Knowledge&#34;. Developments in Artificial Intelligence and the Semantic Web. Proceedings of the 12th Finnish AI Conference STeP 2006, Finnish AI Society, Espoo, Finland, 2006.</p>
+      <p class="ReferencesText">Kauppinen, T., J. Väätänen, J., E. Hyvönen (2008). “Creating
+        and using geospatial ontology time series in a semantic cultural heritage
+        portal”. In <i>Proceedings of the ESWC 2008</i>,
+        Tenerife, Spain. Springer–Verlag. </p>
+      <p class="ReferencesText">Kurki, J., E. Hyvönen (2007). “Relational
+        semantic search: Searching social paths on the semantic web”. In <i>Poster Proceedings of the ISWC + ASWC 2007</i>.
+        Busan, Korea. </p>
+      <p class="ReferencesText"> Kurki, J., and E. Hyvönen (2007). Relational Semantic Search: Searching Social Paths on the Semantic Web. Poster and Demo Proceedings of the 6th International 
+        Semantic Web Conference (ISWC 2007), Busan, Korea, 2007. <a href="../http://iswc2007.semanticweb.org/program/AllContent.asp">http://iswc2007.semanticweb.org/program/AllContent.asp</a></p>
+      <p class="ReferencesText">Mäkelä, E., K.Viljanen, O. Alm, J. Tuominen, O. Valkeapää, T. Kauppinen,
+        J. Kurki, R. Sinkkilä, T. Känsälä, R. Lindroos, O. Suominen, T. Ruotsalo, E. Hyvönen
+        (2007). “Enabling the Semantic Web with Ready-to-Use Web Widgets”. In Nixon,
+        L., R. Cuel, &amp; C. Bergamini, eds. <i>First
+          Industrial Results of Semantic Technologies, proceedings,</i> <i>co-located with ISWC 2007 + ASWC 2007</i>.
+      Busan, Korea.  CEUR Workshop Proceedings, Vol 293.</p>
+      <p class="ReferencesText">Mäkelä, E., O. Suominen, E. Hyvönen (2007). “Automatic
+        exhibition generation based on semantic cultural content”. In <i>Proc. of the Cultural Heritage on the Semantic
+        Web Workshop</i> at ISWC + ASWC 2007.</p>
+      <p class="ReferencesText">Ruotsalo, T., E. Hyvönen (2007). “An
+        event-based approach for semantic metadata interoperability”. In <i>Proceedings of the ISWC 2007 + ASWC 2007</i>.
+        Busan, Korea, Springer–Verlag.</p>
+      <p class="ReferencesText"> Ruotsalo, T., and E. Hyvönen (2007). A Method for Determining Ontology-Based Semantic Relevance. Proceedings of the 18th International Conference on Database and Expert Systems Applications (DEXA 2007), Regensburg, Germany, Springer-Verlag.</p>
+      <p class="ReferencesText"> Schreiber, G., A. Amin, M. van Assem, V. de
+        Boer, L. Hardman, M.  Hildebrand, L. Hollink, Z. Huang, J. van Kersen, M. de
+        Niet, B. Omelayenko,,J. van Ossenbruggen, R. Siebes,  J. Taekema, J. 
+        Wielemaker, B.J. Wielinga (2006). “MultimediaN e-culture demonstrator”. In <i>The Semantic Web – Proceedings of the 5th International
+      Semantic Web Conference 2006</i>. pp 951–958.</p>
+      <p class="ReferencesText">Staab S.,R. Studer (eds.)(2009). <i>Handbook on Ontologies</i>. Springer-Verlag, March 2009 (2. edition).</p>
+      <p class="ReferencesText">Sheth, A., B. Aleman-Meza, I.B. Arpinar, C. Bertram,  Y.
+        Warke, C. Ramakrishnan, C. Halaschek,  K. Anyanwu, D. Avant, F.S. Arpinar, K.
+        Kochut (2005).”Semantic association identification and knowledge discovery for
+        national security applications”. <i>Journal of
+      Database Management on Database Technology 16(1)</i> (Jan–March 2005) 33–53. </p>
+      <p class="ReferencesText">Sowa, J. (2000).”Knowledge Representation”. <i>Logical, Philosophical, and Computational Foundations</i>.
+        Brooks/Cole. Valkeapää, O., O. Alm, E. Hyvönen (2007). “Efficient content
+        creation on the semantic web using metadata schemas with domain ontology
+        services”. In <i>Proceedings of ESWC 2007</i>.
+      Innsbruck, Austria: Springer–Verlag (2007).</p>
+      <p class="ReferencesText">van Assem, M., V. Malaise, A. Miles, G. Schreiber
+        (2006). “A method to convert thesauri to SKOS”. In <i>Proceedings of the Third European Semantic Web Conference (ESWC’06)</i>.
+      Springer-Verlag (2006).</p>
+      <p class="ReferencesText">Viljanen, K., J. Tuominen, E. Hyvönen (2008). “Distributed
+        semantic content creation and publication for cultural heritage legacy systems”.
+        In <i>Proceedings of the 2008 IEEE International
+          Conference on Distibuted Human- Machine System.,</i> Athens, Greece: IEEE Press
+      (2008).</p>
+      <p class="ReferencesText">Viljanen, K., J. Tuominen, T. Känsälä, E. Hyvönen, E.
+        (2008).“Distributed semantic content creation and publication for cultural
+        heritage legacy systems:. In <i>Proceedings of
+          the 2008 IEEE International Conference on Distibuted Human- Machine Systems</i>.
+        Athens, Greece: IEEE Press.g, Y., N. Stash, L. Aroyo, P. Gorgels, L. Rutledge, G.
+        Schreiber (2008). “Recommendations based on semantically-enriched museum
+      collection”. <i>.</i></p>
+<!-- InstanceEndEditable --> </div>
+  			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->  <span class="Author">Hyvönen</span>, E., et al., CultureSampo - Finnish Culture on the Semantic Web 2.0: Thematic Perspectives for the End-user<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2009: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2009/papers/<!-- #BeginEditable "URL" --> hyvonen/hyvonen.html
+				 <!-- #EndEditable --></p>
+	</div>
+</div>

@@ -1,0 +1,786 @@
+<div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+        <h2 class="Author">Leila Liberge and Job Gerlings, Watwaswaar.nl,
+          The Netherlands</h2>
+        <p class="URL"><a href="http://www.watwaswaar.nl/">http://www.watwaswaar.nl</a></p>
+        <h3 class="AbstractTitle">Abstract</h3>
+        <p class="AbstractText"><i>WatWasWaar.nl</i> is a
+        recently-released national platform for historical-geographical information in
+        the Netherlands. This joint initiative of over 25 cultural heritage
+        institutions provides the general public with easy access to historical data
+        with a location component. WatWasWaar.nl caters for the broad interest in local
+        history that was reconfirmed by recent research conducted by the Dutch
+        government (Wubs,  2006a, Wubs,  2006b and Huysmans, 2007). This research
+        concluded that the main interest of the general public regarding cultural
+      heritage on-line focuses on family history and local history.</p>
+      <p class="AbstractText">The adventure of developing this simple, smart, fast and
+        fun map-based publication platform started early in 2005. At that time Google
+        Maps and Google Earth were still to be launched, and map-based applications
+      were ‘for professionals’.</p>
+      <p class="AbstractText">Topics addressed are the application itself; focus points
+        in the development process; the unique features of the application: the
+        combination of the elements of time and space; the content; the users; policy
+      goals; first results; and future plans.</p>
+      <p class="keywords">Keywords: national project, publication platform, institutional
+      collaboration, GIS, geographical-historical information</p>
+		<!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+
+    
+      <h1>Introduction</h1>
+      <p class="caption"><img src="liberge-figure_1_copy.jpg" alt="Figure 1" width="377" height="58"/></p>
+      <p class="caption">Fig 1: Logo WatWasWaar.nl</p>
+      <p><i>WatWasWaar.nl</i> is the first map-based publication
+        platform for historical information on a national level in the Netherlands, and
+      very possibly in the world.</p>
+      <p>Development
+        of the platform started early in 2005. Map-based on-line publication platform
+        user interfaces were still in their infancy at this time. Google Earth and
+        Google Maps were still to be launched, and map-based publication platforms
+        unlocking larger or complex data collections were still predominantly based on
+      the design of Geographic Information System (GIS) desktop software.</p>
+      <h1>The Key Issues</h1>
+      <ul>
+        <li>GIS desktop applications enable users to
+          generate maps based on mathematically determined queries. Translated to the
+          Web, this results in user interfaces with a map based on several variables
+          chosen by the user. Making the selection of variables needed to generate a map
+          often requires knowledge in advance and is regarded as demotivating, to say the
+          least.</li>
+        <li>Since maps shown are created upon consumer
+          demand, they are mainly generated live (on the fly). This often results in
+          map-based platforms which are extremely slow, according to current Web
+          standards.</li>
+        <li>To navigate the map or access information on
+          items on the map, several tools are needed. These tools are generally
+          positioned next to the map. Getting users even to notice these tools, let alone
+          work with them, is known to be a key usability issue to be tackled.</li>
+        <li>The user experience of such user interfaces is
+          usually described as: &#34;a Web site for professionals&#34;. Dutch examples of
+          such map-based Web sites are <a href="http://www.kaart.nieuwekaart.nl/">www.kaart.nieuwekaart.nl </a>(offering a view of the Netherlands in the future based on present construction
+          plans), and <a href="http://www.kich.nl/">www.kich.nl</a> (offering policy
+          makers in-depth possibilities to visualize cultural heritage on the map). Since
+          they both target a professional audience, the above-noted usability issues play
+          less important roles. </li>
+      </ul>
+      <p class="caption"><img src="liberge-figure_2_copy.jpg" alt="Figure 2" width="400" height="250"/></p>
+      <p class="caption">Fig 2: <a href="http://www.denieuwekaart.nl/">www.denieuwekaart.nl</a></p>
+      <p class="caption"><img src="liberge-figure_3_copy.jpg" alt="Figure 3" width="400" height="301"/></p>
+      <p class="caption">Fig 3: <a href="http://www.kich.nl/">www.kich.nl</a> </p>
+      <p>The task
+        of the WatWasWaar.nl (WWW) team, however, was to design a map-based platform
+        targeted at the general public, so these usability issues needed to be
+      addressed. </p>
+      <h1>Making A Web GIS Simple, Smart, Fast And Fun</h1>
+      <p>Luckily
+        the WWW team did not have to start from scratch. Since WatWasWaar.nl had a
+        map-based predecessor, deWoonOmgeving.nl (no longer on-line), the team could
+        build upon previous experience. To tackle the known usability issues while
+        focusing on <b>simplicity, smartness, speed</b> and <b>fun</b> was key during the design and development
+        process. Owing to the large number of participants in the project and the aim
+      of enlarging public access to cultural heritage, <b>findability</b>, <b>accessibility</b> and <b>interoperability</b> also played important roles.</p>
+      <h2>Simplicity </h2>
+      <p>The
+        simplicity of the user interface was envisioned by providing the user with maps
+        based on predetermined queries instead of offering user-generated maps based on
+        a broad number of variables to be selected. In order to determine these
+        queries, location, time, persons, objects and events were chosen as key
+        elements in the search for cultural heritage or historical data. Since the WWW
+        platform was developed to publish geographical-historical data, location and
+        time were taken as focus points. Persons, objects and events were marked as
+        linking elements. Apart from location and time, category typology (image,
+        audio, text, map, etc) and the source-holding institute were also determined as
+      focus points in order to ensure a readable and traceable output. </p>
+      <p>This made
+        it possible to choose a map-based interface offering a total overview of all data
+        available in the system (maps and objects on the map) from the start. In order
+        to decrease search results, filtering the results was made possible on the
+        basis of location, time, type of data and source-holding institute. Apart from
+        the fact that it is possible to publish point and shape data side by side, the
+        time-filter deserves extra attention; this is what sets WatWasWaar.nl apart
+        from most on-line map-based publication platforms such as Google Maps. The
+        time-filter on this map-based platform enables the users to browse through
+        geographical-historical data in more than the one-dimensional manner these data
+        require, through TIME and SPACE. The time-filter enables users to filter data
+        such as images, maps and air views by location and time, offering them the
+      possibility of acquiring an overview of the development of the landscape.</p>
+      <p class="caption"><img src="liberge-figure_4_copy.jpg" alt="Figure 4" width="400" height="236"/></p>
+      <p class="caption">Fig 4: Screenshot of filters on <a href="http://www.watwaswaar.nl/">www.watwaswaar.nl</a></p>
+      <h2>Smartness</h2>
+      <p>Smart
+        interaction on the platform was achieved by learning a lot from Google Maps but
+        also by moving beyond them. Since the system would contain at least one or more
+        items of data per parcel, the use of icons to indicate data on the map was seen
+        as problematic. The use of icons in information-dense, map-based publication
+        systems often results in the map’s vanishing behind the icons. To prevent this,
+        a new feature was introduced. This feature consists of refreshing the list of
+        search results shown next to the map on mouseover when scrolling over the map.
+        This, and some other changes, made it possible to do away with the navigation
+        and information tools positioned next to the map, as well as the use of icons
+      on the map. </p>
+      <p class="caption"><img src="liberge-figure_5_copy.jpg" alt="Figure 5" width="400" height="239"/></p>
+      <p class="caption">Fig 5: Screenshot of live-generated search results on
+      mouseover on <a href="http://www.watwaswaar.nl/">www.watwaswaar.nl</a>. </p>
+      <h2>Speed</h2>
+      <p>The speed
+        of the WWW application is mainly secured by caching (storing) the tiles of
+        whatever maps in the Web-based GIS systems are used. The rendering of the tiles
+        starts fully automatically at the highest zoom level every time new material is
+        published. In addition, all maps that are not pre-rendered are rendered upon
+        user request and cached for the next user. This results in a platform which is
+        actually made faster by frequent usage, although this is of course within
+      certain limits.</p>
+      <p class="caption"><img src="liberge-figure_6_copy.jpg" alt="Figure 6" width="186" height="224"/><br/>
+      Fig 6: Pointer of WatWasWaar.nl. </p>
+      <h2>Fun</h2>
+      <p>The fun
+        part of the platform is provided by the playful and light design of the logo
+        and user interface, which contrasts nicely with data often qualified as
+        ‘serious’. In addition,  the flexibility of the logo concept enables a
+        cross-media communication strategy of which only a fraction has been put into
+        practice as yet. Part of the logo concept is the choice of the name.
+        ‘WatWasWaar’ has a double meaning. Literally it means ‘What Was Where?’ But it
+      can also be read as ‘What Was True?’ - indicating that history can be coloured. </p>
+      <p class="caption"><a href="liberge-mov_1.qt">Movie 1: Introduction movie of watwaswaar.nl [8.6MB QuickTime .mov file]</a>    </p>
+      <p class="caption"><img src="liberge-figure_7_copy.jpg" alt="Figure 7" width="400" height="284"/></p>
+      <p class="caption">Fig 7: Possible off-site use of WatWasWaar.nl pointer.</p>
+      <h1>Content</h1>
+      <p>Just as
+        the usability of the application determines its success, the content it
+        discloses is key to attracting visitors. WatWasWaar.nl was fortunate that,
+        during the creation of its predecessor, twenty pilot projects had been carried
+        out exploring the possibilities of linking historical data to location. This
+        resulted in WWW’s being able to claim nationwide coverage of every location
+      when launched. </p>
+      <p>Highlights
+      of the current collection include:</p>
+      <ul>
+        <li>The first national cadastral map and
+          cadastral administration of the Netherlands dating from 1832. This fully
+          scanned collection consists of more than 17,000 particle maps and 155,000
+          related pages with parcel information such as volume, value, usage and
+          information on owners of land.</li>
+      </ul>
+      <p class="caption"><img src="liberge-figure_8_copy.jpg" alt="figure 8" width="400" height="279"/></p>
+      <p class="caption">Fig 8: A regional map from the Dutch cadastral map of 1832 </p>
+      <p class="caption"><img src="liberge-figure_9_copy.jpg" alt="Figure 9" width="400" height="280"/></p>
+      <p class="caption">Fig 9: A detailed map from the Dutch cadastral map of 1832 </p>
+      <p class="caption"><img src="liberge-figure_10_copy.jpg" alt="Figure 10" width="400" height="307" class="caption"/></p>
+      <p class="caption">Fig 10: A page from the Dutch
+      cadastral administration of 1832</p>
+      <ul>
+        <li>A digital version of parts of the
+          cadastral map of 1832, enabling users to view live the development of the
+          landscape from 1832 till now.</li>
+      </ul>
+      <p class="caption"><img src="liberge-figure_11_copy.jpg" alt="Figure 11" width="400" height="242"/></p>
+      <p class="caption">Fig 11: Screenshot of digital cadastral map of Leeuwarden,
+      1832 on <a href="http://www.watwaswaar.nl/">www.watwaswaar.nl</a></p>
+      <p class="caption"><img src="liberge-figure_12_copy.jpg" alt="Figure 12" width="400" height="248"/></p>
+      <p class="caption">Fig 12: Screenshot of the topographical map of Leeuwarden,
+      2004 on <a href="http://www.watwaswaar.nl/">www.watwaswaar.nl</a></p>
+      <ul>
+        <li>Beautiful and extremely detailed
+          military maps dating from 1840–1861.</li>
+      </ul>
+      <p class="caption"><img src="liberge-figure_13_copy.jpg" alt="Figure 13" width="344" height="354"/></p>
+      <p class="caption">Fig 13: Military map of the city of Amsterdam,
+        1840–1861 on <a href="http://www.watwaswaar.nl/">www.watwaswaar.nl</a>, source: National Archive of the
+      Netherlands</p>
+      <ul>
+        <li>Aerial views by The Royal Air Force
+          (RAF) and the United States Air Force (USAF) dating from the Second World War.</li>
+      </ul>
+      <p class="caption"><img src="liberge-figure_14_copy.jpg" alt="Figure 14" width="400" height="502"/></p>
+      <p class="caption">Fig 14: Aerial view of fields in the Netherlands by the RAF
+        dated 1944 on <a href="http://www.watwaswaar.nl/">www.watwaswaar.nl</a>, source:
+      Kadaster (Dutch Land Registry Office)</p>
+      <ul>
+        <li>Several local historical image
+          databases such as the one for Veere, a small fortified town in the province of
+          Zeeland.</li>
+      </ul>
+      <p class="caption"><img src="liberge-figure_15_copy.jpg" alt="Figure 15" width="400" height="267"/></p>
+      <p class="caption">Fig 15: Historical postcard of the town of Veere on <a href="http://www.watwaswaar.nl/">www.watwaswaar.nl</a>, source:
+      Zeeuws Archief, The Netherlands.</p>
+      <p>In order
+        to facilitate and stimulate the growth of content as much as possible, WWW has
+        taken into account that location-based publication of historical data is new to
+        most collection-holding institutes. To facilitate and stimulate participation
+      and thus the growth of the collection, WWW offers:</p>
+      <ul>
+        <li>advice on location metadata
+          management </li>
+        <li>assistance with linking collections
+          items to locations </li>
+        <li>location-based files (tables with
+          matching x/y coordinates, postal codes, addresses)</li>
+        <li>a simple, expandable and flexible
+          data model</li>
+      </ul>
+      <p>WWW has
+        kept the required METADATA to a minimum and made the metadata model flexible
+      and expandable.</p>
+      <p>Minimum
+      metadata required for publication on WWW are:</p>
+      <ul>
+        <li>location (can be x/y coordinates,
+          postal code, address or town)</li>
+        <li>time (exact date or start and end
+          dates)</li>
+        <li>descriptions (in the form of a title
+          and/or full description)</li>
+        <li>source holder</li>
+        <li>type of material (geographical point
+          or shape data, images, moving images or text)</li>
+        <li>More metadata categories can be
+          added on demand. </li>
+      </ul>
+      <h1>Users Of WatWasWaar.nl</h1>
+      <p>Users of WatWasWaar.nl can be divided into
+      two main groups: consumers and participants.</p>
+      <h2>Consumers</h2>
+      <p>On-line consumers with an interest in
+        geographical-historical information were clearly identified, characterised and
+        grouped in research conducted by the Dutch government (Wubs, 2006b). In this
+        research consumers and potential consumers for WWW are described as those
+        members of the Dutch public with an interest or potential interest in their
+        personal history, i.e. their family history or the history of their local
+        environment. This group consists of 42% of the Dutch population. The total
+        population of Holland is more than 16 million people, so this results in 6.7
+        million consumers or potential consumers in the national market. This group of
+        consumers can be divided into three sub-categories: semi-professionals (A),
+        starters among the historical explorers (B) and people with a potential
+        historical interest (C). Groups A and B consist of 13% of the population (2.1
+        million people). Group C consists of 28% of the population (4.6 million
+      people). The interests of the groups are as following:</p>
+      <table border="1" cellspacing="0" cellpadding="0" width="431">
+        <tbody><tr>
+          <th> </th>
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+      </tr>
+        <tr>
+          <td>Existing (activated) historical interest:</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+        <tr>
+          <td>House</td>
+        <td>XX</td>
+        <td>XX</td>
+        <td>XX</td>
+      </tr>
+        <tr>
+          <td>Family</td>
+        <td>XX</td>
+        <td>XX</td>
+        <td>XX</td>
+      </tr>
+        <tr>
+          <td>Living
+          environment</td>
+        <td>XX</td>
+        <td>XX</td>
+        <td>XX</td>
+      </tr>
+        <tr>
+          <td>Milestones:</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+        <tr>
+          <td>Birth</td>
+        <td>XX</td>
+        <td>X</td>
+        <td> </td>
+      </tr>
+        <tr>
+          <td>Marriage</td>
+        <td>XX</td>
+        <td>X</td>
+        <td> </td>
+      </tr>
+        <tr>
+          <td>Building
+          a house/settling down </td>
+        <td>XX</td>
+        <td>XX</td>
+        <td>XX</td>
+      </tr>
+        <tr>
+          <td>Interest:</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+        <tr>
+          <td>Hobby/study</td>
+        <td>XX</td>
+        <td>X</td>
+        <td> </td>
+      </tr>
+        <tr>
+          <td>Leisure</td>
+        <td>X</td>
+        <td>XX</td>
+        <td>XX</td>
+      </tr>
+        <tr>
+          <td>Facts,
+          details, knowledge data</td>
+        <td>X</td>
+        <td>XX</td>
+        <td>XX</td>
+      </tr>
+      </tbody></table>
+      <p class="caption">Table 1: Overview
+      of interests of consumer groups of WatWasWaar.nl</p>
+      <p>In practice this means that the interest in
+        cultural heritage (family and location) starts around the age of 30 when people
+        start to settle down, buy a house and/or have children. Interest peaks around
+        the age 55. In general, interest is greater among males and/or those with a
+      high level of education.</p>
+      <p>The <b>additional value </b>of WWW for consumers was defined as:</p>
+      <ul>
+        <li>offering one
+        central point of access to historical data from different providers</li>
+      <li>offering data
+        from different providers within relation to each other (location)</li>
+      <li>publishing
+        geographical-historical data in a logical, attractive and easily
+        accessible manner (map-based)</li>
+      <li>providing
+        national coverage.</li>
+    </ul>
+      <p>Target numbers for WWW are: </p>
+      <ul>
+        <li>100,000
+        unique visitors a month after two years</li>
+      <li>200,000
+        visits per month after two years</li>
+      <li>2 sessions on
+        average per person after two years</li>
+      <li>brand
+        awareness of 20%  (1.4 million people know the name) after two years</li>
+    </ul>
+      <p>These target numbers are partly based on
+      actual Web site statistics of several cultural heritage sites.</p>
+      <table>
+        <tbody><tr>
+          <th>March 2007</th>
+        <th>Visits</th>
+        <th>Unique Visitors</th>
+        <th>Sessions <br/>
+          per visitor </th>
+      </tr>
+        <tr>
+          <td>Genlias.nl</td>
+        <td>276,068</td>
+        <td>74,375</td>
+        <td>3.7x</td>
+      </tr>
+        <tr>
+          <td>dewoonomgeving.nl</td>
+        <td>15,747</td>
+        <td>10,774</td>
+        <td>1.5x</td>
+      </tr>
+        <tr>
+          <td>kb.nl (royal library)</td>
+        <td>216,160</td>
+        <td>145,029</td>
+        <td>1.5x</td>
+      </tr>
+        <tr>
+          <td>geheugenvannederland.nl</td>
+        <td>65,356</td>
+        <td>47,446</td>
+        <td>1.4x</td>
+      </tr>
+        <tr>
+          <td>rijksmuseum.nl</td>
+        <td>155,000</td>
+        <td>118,000</td>
+        <td>1.3x</td>
+      </tr>
+      </tbody></table>
+      <p class="caption">Table 2:
+      Web statistics of various Dutch cultural heritage Web sites in March 2007</p>
+      <p><b>Genlias.nl</b> and <b>deWoonOmgeving.nl</b> were taken as the most
+        vital indicators for determining targets because WatWasWaar.nl offers
+        historical information on locations and persons. Genlias.nl is the largest
+        search engine for genealogical data, indicating the popularity of a Web site
+        catering to family history interests. DeWoonOmgeving.nl was a first attempt to
+      publish historical data in map-based form. Targets were as follows.</p>
+      <p>The target numbers for WWW are seen as
+        realistic because relatively little effort is put into marketing Genlias.nl and
+        deWoonOmgeving.nl, so an increase in visitors is to be expected with an active
+        marketing strategy. Making pages of the new platform robot-traceable (think
+        Google of Yahoo) to a deep level was seen as an option for increased 
+      findability and thus higher visitor statistics.</p>
+      <p>In order to reach the targets, a
+      communication strategy was developed of which the following elements are vital:</p>
+      <ul>
+        <li>actively
+          increasing public reach by:
+            <ul>
+              <li>launching
+                WWW as a public event on Cultural Heritage Day</li>
+              <li>presenting
+                WWW at events visited by the target audience such as the <i>50+ beurs</i> (national over-50s fair) and the <i>Woonbeurs</i> (national home and household fair)</li>
+              <li>media
+                coverage</li>
+            </ul>
+        </li>
+        <li>continuously
+          adding new content through:
+            <ul>
+              <li>acquisition
+                of new content participants</li>
+              <li>broadening
+                the partnership with current participants</li>
+            </ul>
+        </li>
+        <li>continuous
+          improvement of the user interface and adding new features and services</li>
+      </ul>
+      <h2>Collaborators</h2>
+      <p>The participants can be divided into two
+      groups: </p>
+      <ul>
+        <li>prosumers
+        (consumers contributing content)</li>
+      <li>participants
+        (cultural heritage institutions contributing content).</li>
+    </ul>
+      <p>The development of WatWasWaar.nl consists
+        of several stages. The first stage was to get the map-based publication
+        platform up and running and then provide it with content; in the following
+        stages more services and products can be added. Public participation, and thus
+      catering for prosumers, is seen as an extra service to be developed in the future.</p>
+      <p><b>Potential participants </b>are all institutions with relevant collections. In practice these
+      are often archives, museums and libraries.</p>
+      <p><b>Current participants </b>are the National Archive, and all regional archives, the Dutch Land
+        Registry Office and archives and/or museums of larger cities and smaller
+        regions. An up-to-date overview of participants can be found on <a href="http://www.watwaswaar.nl/">www.watwaswaar.nl</a>. Whilst some participants
+        themselves apply to participate, WWW also actively approaches organisations and
+      requests them to participate, and also seeks funding to generate content.</p>
+      <p>WWW offers participants:</p>
+      <ul>
+        <li>access to the
+          map-based publication platform dedicated to historical data and targeted
+        at the general public</li>
+      <li>the
+        possibility of publishing geographical point and shape data next to
+        traditional data such as images (including moving images), text and maps.</li>
+      <li>advice and
+        support when dealing with collections with a location component</li>
+    </ul>
+      <p>The <b>additional value </b>for participants consists of:</p>
+      <ul>
+        <li>an extra
+          window on their collection</li>
+        <li>a rise in the
+          number of on-line consumers of their collection</li>
+        <li>exposure of
+          their institute on a national platform</li>
+        <li>publicity for
+          their collection in national WWW publicity campaigns and actions</li>
+        <li>simultaneous
+          publication of their collection on other map-based platforms such as <a href="http://www.kich.nl/">www.kich.nl</a> or Google Earth, in addition to
+          WWW</li>
+        <li>the
+          possibility of co-operation not open to small or single parties such as:
+            <ul>
+              <li>a permanent
+                WWW icon in the Google Earth toolbar indicating the layer dedicated to
+                WWW content (negotiation phase)</li>
+              <li>collaboration
+                with real estate Web sites (currently being researched)</li>
+              <li>cross-media
+                spin-offs such as cultural heritage GPS tours (currently being
+                researched)</li>
+            </ul>
+        </li>
+      </ul>
+      <h1>Organisation And General Policy Goals</h1>
+      <p>A small team takes care of the
+        policy-making and carries out the daily tasks at WWW. This team operates under
+        the juridical form of a foundation. Participants can take a seat on the board
+        advising the WWW team. The board meets six times a year. Participants are also
+      consulted during the two annual meetings organised specially for participants.</p>
+      <p>WWW is financed by the Dutch State through the Department of Education, Culture and Science (<i>Ministerie van Onderwijs Cultuur en Wetenschap</i>). Under the current financial structure,
+        participants also contribute financially in the form of an annual fee (variable
+      according to the size of the participating institute).</p>
+      <p>In 2009, a new financial structure will be
+        introduced. This is currently under debate. WWW is striving towards financial
+      independence for the permanent costs and the abolition of participants’ fees.</p>
+      <p>The funding of a map-based publication
+        platform for geographical-historical data by the state is not an isolated
+        initiative. The development of WWW is part of broader vision developed by the
+      Dutch government to stimulate the public reach of cultural heritage. </p>
+      <p>This plan consists of the digitalisation of
+        several key collections under the care of Dutch cultural heritage institutes.
+        The first cadastral map of The Netherlands is considered one of these
+        collections. The development of several national on-line publishing platforms
+        to make these digital collections easily accessible is another part of this
+        plan. In addition to WWW, the portal <a href="http://www.geheugenvannederland.nl/">www.geheugenvannederland.nl</a><a href="http://www.geugenvannederland.nl/"></a> is an example of such a platform. The next step is to interlink these
+        platforms. The technology to reach this goal may be provided by search and
+        annotation software, presented at Museums and the Web  2007 (Ossenbruggen et al., 2007).</p>
+      <h1>First Results</h1>
+      <p>WWW was launched in September 2007. The
+        results of the first four months have been very positive. The following tables
+        show a significant increase in unique visitors, and visits have been completed.
+        But the numbers also indicate that more action is still needed to reach the
+      targets set. </p>
+      <table>
+        <tbody><tr>
+          <th> </th>
+        <th>Unique Visitors </th>
+        <th> %  of numbers of former platform</th>
+      </tr>
+        <tr>
+          <td>Launch WWW 8 September</td>
+        <td>40,496</td>
+        <td>369%</td>
+      </tr>
+        <tr>
+          <td>Oct-07</td>
+        <td>25,498</td>
+        <td>212%</td>
+      </tr>
+        <tr>
+          <td>Nov-07</td>
+        <td>18,075</td>
+        <td>154%</td>
+      </tr>
+        <tr>
+          <td>Dec-07</td>
+        <td>30,588</td>
+        <td>212%</td>
+      </tr>
+        <tr>
+          <td>Jan-08</td>
+        <td>34,440</td>
+        <td>269%</td>
+      </tr>
+        <tr>
+          <td><b>Average</b></td>
+        <td><b>29,819</b></td>
+        <td><b>243%</b></td>
+      </tr>
+      </tbody></table>
+      <p class="caption">Table 3:
+        Overview unique visitors of WWW based on Web statistics. Note: a unique visitor
+      is a visitor not registered in the last 24 hours</p>
+      <table>
+        <tbody><tr>
+          <th> </th>
+        <th>Total Visits</th>
+        <th> %  of numbers of former platform</th>
+      </tr>
+        <tr>
+          <td>Launch WWW 8 September</td>
+        <td>89,091</td>
+        <td><i>679%</i></td>
+      </tr>
+        <tr>
+          <td>Oct-07</td>
+        <td>56,096</td>
+        <td><i>383%</i></td>
+      </tr>
+        <tr>
+          <td>Nov-07</td>
+        <td>39,765</td>
+        <td><i>266%</i></td>
+      </tr>
+        <tr>
+          <td>Dec-07</td>
+        <td>67,294</td>
+        <td><i>383%</i></td>
+      </tr>
+        <tr>
+          <td>Jan-08</td>
+        <td>65,436</td>
+        <td>190%</td>
+      </tr>
+        <tr>
+          <td><b>Average</b></td>
+        <td><b>63,536</b></td>
+        <td><b>380%</b></td>
+      </tr>
+      </tbody></table>
+      <p class="caption">Table 4:
+      Overview of visits a month on WatWasWaar.nl based on Web statistics</p>
+      <p>To give more insight on the statistical
+        results of WatWasWaar.nl, the following table gives an overview of the average monthly results of WWW and based on that, estimated yearly results. Next to
+        that the table shows what this would mean in other national contexts based on
+      population size.</p>
+      <table>
+        <tbody><tr>
+          <th> </th>
+        <th>Population Size</th>
+        <th>Av. Nr. Unique
+          Visitors a Month</th>
+        <th>Total Unique visitors
+          a Year</th>
+        <th>Av. Nr. Visits a
+          Month</th>
+		<th>Total Visits a Year</th>
+      </tr>
+        <tr>
+          <td>The Netherlands / WWW</td>
+        <td>16,570.613</td>
+        <td>29,819</td>
+        <td>357.833</td>
+        <td>63.536</td>
+        <td>762.437</td>
+      </tr>
+        <tr>
+          <td>Canada</td>
+        <td>33,390.141</td>
+        <td>60,087</td>
+        <td>721.041</td>
+        <td>128.027</td>
+        <td>1.536.327</td>
+      </tr>
+        <tr>
+          <td>France</td>
+        <td>60,876.136</td>
+        <td>109,549</td>
+        <td>1.314.585</td>
+        <td>233.416</td>
+        <td>2.800.995</td>
+      </tr>
+        <tr>
+          <td>United Kingdom</td>
+        <td>60,776.238</td>
+        <td>109,369</td>
+        <td>1.312.428</td>
+        <td>233.033</td>
+        <td>2.796.399</td>
+      </tr>
+        <tr>
+          <td>United States of America</td>
+        <td>301,139.947</td>
+        <td>541,912</td>
+        <td>6.502.943</td>
+        <td>1.154.655</td>
+        <td>13.855.865</td>
+      </tr>
+      </tbody></table>
+      <p class="caption">Table 5:
+      Average statistic results of WatWasWaar.nl placed in an international context</p>
+      <h1>Future Plans</h1>
+      <p>In order to meet the targets set, WWW will
+      focus on three areas:</p>
+      <ul>
+        <li>Further
+        development of the application</li>
+      <li>More content</li>
+      <li>Publicity</li>
+    </ul>
+      <h2>Further Applications</h2>
+      <p>Since WWW contains not only historical data
+        with location components but also data with information on private persons, the
+        data in WWW are also of great interest to genealogists. Because of the huge
+        existing interest in such data, making the data accessible by full text search
+      will be one of the first new features to be introduced. </p>
+      <p>Other products and services on the WWW list
+      are:</p>
+      <ul>
+        <li>A widget for
+        participants to indicate participation in WWW on their own site.</li>
+      <li>The
+        introduction of mywww.nl for a more personalised experience, offering an
+        overview of last search orders, recent search results, and an overview of
+        related content on other locations on the Web.</li>
+      <li>The
+        projection of scanned images and maps in the map-based interface, creating
+        the opportunity to walk through this material alongside the digital maps.</li>
+      <li>The extension
+        of the on-site map to a full-screen version on top of which the menus will
+        be placed, as for game interfaces.</li>
+    </ul>
+      <h2>Content Development</h2>
+      <p>The growth of content will be stimulated
+      by:</p>
+      <ul>
+        <li>Acquisition
+        of new participants and collections.</li>
+      <li>Interlinking
+        WWW with platforms such as <a href="http://www.kich.nl/">www.kich.nl</a> and <a href="http://www.geheugenvannederland.nl/">www.geheugenvannederland.nl</a>, and the exchange of content.</li>
+      <li>Offering an
+        API to create map-based mash-ups on the basis of the WWW map to make
+        participation even more worthwhile.</li>
+      <li>The
+        introduction of a geo metadata standard, use of which is required in
+        government-funded digitising projects. In addition, the placement of
+        government-funded digitised data in WWW will be mandatory.</li>
+    </ul>
+      <h2>Publicity</h2>
+      <p>Publicity will be generated by:</p>
+      <ul>
+        <li>Communicating
+        the introduction of new collections and services.</li>
+      <li>Adding famous
+        collections such as the maps of Willem Blaeu.</li>
+      <li>Adding fun
+        collections such as an overview of haystacks and ship wrecks.</li>
+      <li>Adding
+        theme-based collections, linked, for example, to the Second World War or
+        to slavery.</li>
+    </ul>
+      <h1>References</h1>
+      <p class="ReferencesText">Huysmans, F. and J. de Haan (2007). <i>Het bereik van
+        het verleden, </i>Den Haag, Sociaal en
+      Cultureel Planbureau. <a href="http://www.scp.nl/boeken/9789037702842.shtml">http://www.scp.nl/boeken/9789037702842.shtml</a>, 11.02.2008.</p>
+      <p class="ReferencesText">Ossenbruggen, J., et al., Searching and Annotating Virtual Heritage Collections with Semantic-Web Techniques. In J. Trant and D. Bearman (eds). Museums and the Web 2007: Proceedings. Toronto: Archives &amp; Museum Informatics, published March 31, 2007 at<br/>
+        <a href="http://www.archimuse.com/mw2007/papers/ossenbruggen/ossenbruggen.html">http://www.archimuse.com/mw2007/papers/ossenbruggen/ossenbruggen.html</a> </p>
+      <p class="ReferencesText">Wubs, H. and F. Huysmans (2006)a. <i>Klik naar het
+        verleden, </i>Den Haag, Sociaal en Cultureel
+        Planbureau. <a href="http://www.scp.nl/boeken/9037702791.shtml">http://www.scp.nl/boeken/9037702791.shtml</a>,
+      11.02.2008.</p>
+      <p class="ReferencesText">Wubs, H. and F. Huysmans (2006)b. <i>Snuffelen en
+        Graven, </i>Den Haag, Sociaal en Cultureel
+        Planbureau. <a href="http://www.scp.nl/boeken/9037702767.shtml">http://www.scp.nl/boeken/9037702767.shtml</a>,
+      11.02.2008.</p>
+    <hr class="msocomoff" align="left" size="1" width="33%"/>
+<!-- InstanceEndEditable --> </div>
+  				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Liberge, L., and J. Gerlings, Cultural Heritage on the (Geographical) Map<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2008: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2008. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2008/papers/<!-- #BeginEditable "URL" -->liberge/liberge.html
+				 <!-- #EndEditable --></p>
+</div>

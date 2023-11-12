@@ -1,0 +1,1219 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/bennett/bennett.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:50 GMT --><head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>Building a Web-based Collaborative Database--does it work?</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="/>
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css"/>
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onload="MM_preloadImages(&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tbody><tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"/></a></p>
+      <p> <a href="../../register/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.register&#39;,&#39;document.register&#39;,&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;)"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"/></a> 
+        <br/>
+        <a href="../../workshops/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.workshops&#39;,&#39;document.workshops&#39;,&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;)"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"/></a> 
+        <br/>
+        <a href="../../sessions/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sessions&#39;,&#39;document.sessions&#39;,&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;)"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"/></a> 
+        <br/>
+        <a href="../../speakers/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.speakers&#39;,&#39;document.speakers&#39;,&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;)"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"/></a> 
+        <br/>
+        <a href="../../interact/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.interact&#39;,&#39;document.interact&#39;,&#39;../../nav/mw2001_nav_interacton.gif&#39;,&#39;#943398534416&#39;)"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"/></a> 
+        <br/>
+        <a href="../../demos/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.demos&#39;,&#39;document.demos&#39;,&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;)"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"/></a> 
+        <br/>
+        <a href="../../exhibit/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.exhibits&#39;,&#39;document.exhibits&#39;,&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;)"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"/></a> 
+        <br/>
+        <a href="../../events/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.events&#39;,&#39;document.events&#39;,&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;)"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"/></a> 
+        <br/>
+        <a href="../../best/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.best&#39;,&#39;document.best&#39;,&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;)"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"/></a> 
+        <br/>
+        <a href="../../dates/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.dates&#39;,&#39;document.dates&#39;,&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;)"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"/></a> 
+        <br/>
+        <a href="../../seattle/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.seattle&#39;,&#39;document.seattle&#39;,&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;)"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"/></a> 
+        <br/>
+        <a href="../../sponsor/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sponsor&#39;,&#39;document.sponsor&#39;,&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"/></a> 
+        <br/>
+        <br/>
+        <br/>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"/></a> 
+        <br/>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br/>
+        158 Lee Avenue<br/>
+        Toronto, Ontario<br/>
+        M4E 2P3 Canada<br/>
+        info@ archimuse.com<br/>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tbody><tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"/></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br/>
+            A&amp;MI</font></a> </span></td>
+        </tr>
+      </tbody></table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br/>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class="verysmall">Published: March 15, 2001.<br/>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated: "+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"/><br/>
+      <!-- #BeginEditable "Body" --> 
+
+      <h1 class="PaperTitle">Building a Web-based Collaborative Database--does 
+
+        it work?</h1>
+
+      <h2 class="Author">Nuala A. Bennett, Trevor Jones Digital Imaging and Media 
+
+        Technology Initiative University of Illinois at Urbana-Champaign, USA</h2>
+
+      <h1 class="abstractTitle">Abstract:</h1>
+
+      <p class="AbstractText">Designed to create a model collaborative environment, 
+
+        the Digital Cultural Heritage Community Project (DCHC) focuses on the 
+
+        digitization of materials from Central Illinois museums, archives and 
+
+        libraries for integration into elementary grades&#39; social science 
+
+        curricula. Using teachers&#39; curriculum units and the Illinois State 
+
+        Board of Education Learning Standards for Social Sciences as a framework, 
+
+        curators, librarians and archivists identify primary source materials 
+
+        from their collections for inclusion in a Web-based database to be used 
+
+        in third, fourth and fifth grade classrooms. The DCHC provides a means 
+
+        for museums, libraries and archives to identify common ground among their 
+
+        collections, and to provide schools with digital access to these materials. 
+
+        The Early American Museum (EAM) joined the DCHC out of a desire to digitize 
+
+        and increase electronic access to its collections. In this paper, we will 
+
+        discuss both the initial aims and goals of the DCHC from the standpoint 
+
+        of a large university library responsible for administering the project, 
+
+        as well as from the perspective of a smaller participant museum. We will 
+
+        discuss the artifact selection process for the database, and the implementation 
+
+        of a single database for a wide variety of collections, with particular 
+
+        reference to how the database design was viewed by the Early American 
+
+        Museum. Finally, we will explain how the project worked in reality.</p>
+
+      <h1>Introduction</h1>
+
+      <p class="normal">Designed to create a model collaborative environment, the 
+
+        Digital Cultural Heritage Community Project (<a href="http://images.library.uiuc.edu/projects/dchc">http://images.library.uiuc.edu/projects/dchc</a>) 
+
+        focuses on the digitization of materials from Central Illinois museums, 
+
+        archives and libraries for integration into elementary grades&#39; social 
+
+        science curricula. The ultimate goal of the project is to enable early 
+
+        and late elementary grade teachers in the locality to integrate digital 
+
+        cultural heritage materials into their curriculum, utilizing the Illinois 
+
+        State Board of Education Learning Standards. The project, which is administered 
+
+        by a unit of the University of Illinois Library at Urbana-Champaign, involves 
+
+        five other museum, archive and library partners and three elementary schools. 
+
+      </p>
+
+      <h1>Project Participants</h1>
+
+      <p class="normal">The Digital Imaging and Media Technology Initiative (<u><a href="http://images.library.uiuc.edu/">http://images.library.uiuc.edu</a></u>) 
+
+        administers the Digital Cultural Heritage Community (DCHC) project. The 
+
+        Digital Imaging and Media Technology Initiative (DIMTI) is a part of the 
+
+        University of Illinois Library at Urbana-Champaign. The unit was originally 
+
+        established in 1994 to perform research with collections and users to 
+
+        determine the best methods of providing digital access to the University 
+
+        Library&#39;s collections, The overall goals of the Digital Imaging and Media 
+
+        Technology Initiative program include: utilizing digital methods to preserve 
+
+        and to make accessible fragile and under-utilized visual resources; to 
+
+        promote the use of digital media throughout the campus and scholarly community; 
+
+        and to conduct research that advances the creation and use of these resources. These goals are met by establishing &#34;best practices&#34; for digitizing 
+
+        various classes of visual and textual materials, by developing multimedia 
+
+        databases that deliver visual resources and other media in innovative 
+
+        ways, and by conducting research on the ways in which visual information 
+
+        (photographs, drawings, illustrations, etc.) is used in the digital environment.</p>
+
+      <p class="normal">Other museum and library participants in the DCHC include 
+
+        the Illinois Heritage Association, the McLean County Museum of History, 
+
+        Lincoln Trail Libraries System, the Rare Book and Special Collections 
+
+        Library at the University of Illinois and the Early American Museum. The 
+
+        Early American Museum (<u><a href="http://node-02.advancenet.net/~early/">http://node-02.advancenet.net/~early/</a></u>), 
+
+        which is accredited by the American Association for Museums, is located 
+
+        in Mahomet, Illinois and is a facility of the Champaign County Forest 
+
+        Preserve District. It has an extensive collection interpreting 19th- and 
+
+        early 20th-century life in east-central Illinois. Two floors of exhibits 
+
+        present information on architecture, agriculture, trades and occupations, 
+
+        decorative arts, and childhood and domestic life in the past. The Discovery 
+
+        Room offers hands-on opportunities for children, and educational programs 
+
+        are offered for all ages throughout the year. The museum has an annual 
+
+        budget of under $250,000 and a full time staff of three. The museum&#39;s 
+
+        mission is to collect, preserve and interpret the history of East Central 
+
+        Illinois, specifically Champaign County, for the education and enjoyment 
+
+        of present and future generations. </p>
+
+      <p class="normal">In this paper, we will discuss both the initial aims and 
+
+        goals of the DCHC from the standpoint of a large university library responsible 
+
+        for administering the project, as well as from the perspective of one 
+
+        smaller participant museum, the Early American Museum (EAM). EAM joined 
+
+        the DCHC out of a desire to digitize and increase electronic access to 
+
+        its collections. The EAM curator was excited by the project&#39;s goal 
+
+        of putting &#34;primary materials at teachers&#39; fingertips through the 
+
+        Internet&#34; [1] and hoped that it would provide an effective way for the 
+
+        museum to make its artifacts available in local classrooms. The experiences 
+
+        or comments of other curators or librarians participating in the DCHC 
+
+        might differ from those of the museum&#39;s curator, but this paper will 
+
+        only discuss the EAM experience.</p>
+
+      <h1>Time Commitment</h1>
+
+      <p class="normal">Before the proposal for the project was finalized and submitted 
+
+        to the IMLS for funding, the director of each participating museum and 
+
+        library was asked to sign a letter of commitment agreeing that a staff 
+
+        person would work on the project for a minimum of two hours a week. Similarly, 
+
+        school principals also signed a letter showing that they understood the 
+
+        project would involve teacher time of two hours a week. In order to monitor 
+
+        each partner&#39;s contributions, time sheets were distributed and each 
+
+        partner submitted their hours to the Project Coordinator on a monthly 
+
+        basis. There was also an online version of the time sheet so that those 
+
+        who wished could submit their hours online.</p>
+
+      <p class="normal">It was appreciated by DIMTI that it was up to each partner 
+
+        to fulfill their obligation to the project, and that the work might require 
+
+        more than two hours a week. At the EAM, the curator sometimes spent much 
+
+        longer than two hours in one week doing work for the DCHC. However, while 
+
+        some weeks the curator would spend a lot more time than two hours working 
+
+        on the project, during other weeks he would put in considerably less time. 
+
+        At the end of the year, he calculated that he had spent approximately 
+
+        100 hours over the course of a full year, which averages out to slightly 
+
+        less than two hours a week. </p>
+
+      <p class="normal">The EAM is open on a seasonal basis throughout the year. 
+
+        Because of this, the amount of time the curator spent working on the project 
+
+        did not necessarily detract from other projects at the museum. The biggest 
+
+        issue in terms of time was trying to create enough free time for extensive 
+
+        research that would benefit the DCHC. Although the process of digitizing 
+
+        information was not particularly time-consuming, the curator needed larger 
+
+        blocks of time to consider the interpretation of artifacts for the database. 
+
+        Experience now tells us that it would have been easier for the curator 
+
+        if artifacts chosen for the DCHC database could somehow also have been 
+
+        coordinated with exhibit development at the museum. </p>
+
+      <p class="normal">As at most small museums, artifact research at the Early 
+
+        American Museum is almost always undertaken only in conjunction with the 
+
+        exhibit development process. The museum usually completes one major exhibit 
+
+        project each year. If, for example, the museum were working on an exhibit 
+
+        about growing up in the early 1900s, it would have been easiest for the 
+
+        museum to digitize and interpret artifacts related to this theme. The 
+
+        problem of course, is that the museums and the teachers, as well as the 
+
+        libraries, are rarely flexible enough to change their plans for a specific 
+
+        project like the DCHC. Collaborative projects, however, that served both 
+
+        the teacher&#39;s educational objectives and the museum&#39;s exhibition objectives 
+
+        could potentially serve both parties well. This type of collaboration 
+
+        was beyond the scope of our project, but it raises intriguing possibilities 
+
+        for the future.</p>
+
+      <h1>Choosing Materials for Digitization</h1>
+
+      <p class="normal">The DCHC was set up to provide a means for museums, libraries 
+
+        and archives to identify common ground among their collections, and to 
+
+        provide schools with digital access to these materials. One of the first 
+
+        aspects of the project was to choose the collections that would be digitized 
+
+        for the online database. The teachers participating in the DCHC project 
+
+        were teaching third, fourth and fifth grade students. In order to give 
+
+        a sense of what kinds of artifacts and items the teachers would like in 
+
+        the database, they first shared with the museum curators, librarians and 
+
+        archivists, their curriculum units for social sciences (<u><a href="http://images.library.uiuc.edu/projects/dchc/resources.htm">http://images.library.uiuc.edu/projects/dchc/resources.htm</a></u>).</p>
+
+      <h1>Illinois Learning Standards</h1>
+
+      <p class="normal">In Illinois schools, the teachers must adhere to learning 
+
+        standards, as recommended by the Illinois State Board of Education. Adopted 
+
+        in 1997, the Illinois Learning Standards for Social Science (<u><a href="http://www.isbe.state.il.us/ils/socscience/social.html" target="new">http://www.isbe.state.il.us/ils/socscience/social.html</a></u>) 
+
+        outline expectations for student learning in the classroom from early 
+
+        elementary through high school education. The standards are a means to 
+
+        assess student achievement and &#34;define what Illinois citizens believe 
+
+        all students should know and be able to do as a result of their public 
+
+        schooling&#34; [2]. They also help to provide fair and equitable education 
+
+        for all students throughout the state. </p>
+
+      <p class="normal">The teachers also included the Illinois State Board of Education 
+
+        Learning Standards for Social Sciences appropriate to each curriculum 
+
+        unit. The third grade curriculum units were more appropriate to the early 
+
+        elementary level of Learning Standards, while the fourth and fifth grade 
+
+        units corresponded to the late elementary Learning Standards. Curriculum 
+
+        units covered a broad spectrum within the social sciences. The Third Grade 
+
+        units ranged from &#34;How we learn about communities&#34;, &#34;Communities and their 
+
+        geography&#34; to &#34;Celebrations and Festivals&#34;, while the Fourth Grade units 
+
+        included &#34;French in Illinois&#34;, &#34;Prehistoric Indians of Illinois&#34; and &#34;Government 
+
+        in Illinois.&#34; Fifth Grade units covered topics from &#34;The English Colonies&#34;, 
+
+        &#34;U.S. Constitution and Government&#34;, &#34;Westward Expansion&#34; to &#34;Revolutionary 
+
+        War.&#34;</p>
+
+      <p class="normal">Using the Illinois State Board of Education Learning Standards 
+
+        for Social Sciences as a framework, and the teachers&#39; curriculum 
+
+        units as a guiding source, the curators, librarians and archivists then 
+
+        identified primary source materials from their collections for inclusion 
+
+        in a Web-based database to be used in the third, fourth and fifth grade 
+
+        classrooms. They were to choose materials that would be particularly appropriate 
+
+        to the curriculum units submitted by the teachers. At DIMTI, we had anticipated 
+
+        that there would be many artifacts in each of the participating museums 
+
+        and libraries that could be digitized for use in the classroom by the 
+
+        teachers.</p>
+
+      <p class="normal">Deciding what to digitize for the project proved to be a 
+
+        major challenge for the EAM. Within their curriculum units, the teachers 
+
+        had some specific requests, but they were unsure of the type of things 
+
+        museums had in their collections and how those artifacts could help with 
+
+        their classroom teaching. The curriculum units each listed a theme, the 
+
+        time spent on that theme, and the major historical events and figures 
+
+        addressed. While the units provided the museum with some new ideas, they 
+
+        also presented new problems. The units primarily focused on state and 
+
+        national history, and only infrequently made use of local examples. </p>
+
+      <p class="normal">Using the state&#39;s Learning Standards for Social Studies 
+
+        alone to determine what artifacts to digitize would also prove very difficult 
+
+        to implement. By using the standards, museums and libraries should theoretically 
+
+        have been able to digitize artifacts that would mesh with social studies 
+
+        curricula not only in the participant classrooms but also throughout the 
+
+        state. A more challenging obstacle for determining what to digitize turned 
+
+        out to be the vagueness of the standards themselves. Designed to provide 
+
+        a broad framework for teaching, the standards include very few specific 
+
+        recommendations, making it arduous to determine which specific artifacts 
+
+        in the museum&#39;s collection could serve each particular learning goal. 
+
+        At the same time, the curator could also think of several hundred other 
+
+        artifacts that might serve equally well. The scope of the standards was 
+
+        so broad that it was necessary to find a way to narrow down the list of 
+
+        potential artifacts. </p>
+
+      <h1>Curriculum Units</h1>
+
+      <p class="normal">The vast scope of the curriculum units again created problems 
+
+        for the EAM. The museum focuses on the history of East Central Illinois, 
+
+        and consciously works to interpret the lives of ordinary people who do 
+
+        not often show up in history textbooks. As a result, the collection includes 
+
+        few objects of state or national significance, and has a limited chronological 
+
+        scope. The collection includes some artifacts pertaining to Native Americans 
+
+        and the expansion of the west, but the majority of artifacts were made 
+
+        after Champaign County, Illinois (the county where the EAM is situated) 
+
+        was founded in 1833. The museum collections could easily support the &#34;Westward 
+
+        Expansion&#34; unit, a small section of the &#34;French in Illinois&#34; and &#34;Revolutionary 
+
+        War&#34; units, but very little of the others. </p>
+
+      <p class="normal">The museum had problems not only finding artifacts for the 
+
+        teachers, but also in answering other requests which they posed. To the 
+
+        EAM curator, the teachers often seemed to be seeking not simply images 
+
+        of artifacts, but rather entire educational components which could be 
+
+        used to expand their curriculum. Their requests for &#34;a pictorial timeline 
+
+        of different transportation methods&#34; for a unit on &#34;American Communities 
+
+        in History&#34;, or &#34;theories about the decline of the Hopewells and the Mississippians&#34; 
+
+        for a Native American unit made it clear that the teachers were looking 
+
+        to the museums and libraries for answers that required substantial historical 
+
+        interpretation. </p>
+
+      <p class="normal">Through subsequent online discussions with all project participants, 
+
+        the museum curators, archivists and librarians suggested artifacts from 
+
+        their collections that might be digitized to match the teachers&#39; 
+
+        curriculum units. They also suggested resources that the teachers might 
+
+        not have considered using, but which the curators and librarians felt 
+
+        matched the Illinois State Learning Standards corresponding to the teachers&#39; 
+
+        units. Artifacts were eventually chosen for digitization through extensive 
+
+        online discussions with the teachers. In the end a substantial number 
+
+        of artifacts were chosen not because of the teachers originally requested 
+
+        them, but because the museum curators and librarians suggested items to 
+
+        the teachers who in turn agreed that they would be useful. </p>
+
+      <h1>Digitization of Materials</h1>
+
+      <p class="normal">DIMTI organized a scanning workshop to ensure that all museum 
+
+        curators and librarians would be able to produce quality and consistent 
+
+        images for use in the final online database. The focus of the workshop 
+
+        was the capture of print or graphical materials and creation of digital 
+
+        files, as opposed to other aspects of scanning such as file storage, object 
+
+        description or intellectual property issues. Participants were introduced 
+
+        to scanner operation, the use of scanning utilities, image manipulation 
+
+        software, resolution, color-depth, and quality indices as well as calibration 
+
+        of scanners and monitors for optimal digitization. They also learned about 
+
+        the general guidelines for digitization as presented by the Library of 
+
+        Congress [3] and also, using the Cornell University digitization formulae 
+
+        [4]. The Library of Congress guidelines cover formats used for archiving 
+
+        and for Web access to their American Memory collections (<u><a href="http://memory.loc.gov/">http://memory.loc.gov/</a></u>). 
+
+        The Library of Congress guidelines are an &#34;attempt to balance reproduction 
+
+        quality, convenience of access, likely longevity of the format itself, 
+
+        production cost, and a preference for true standard formats or for industry 
+
+        formats that have been widely adopted&#34;. </p>
+
+      <p class="normal">Guidelines have been set up at the Library of Congress for 
+
+        three categories of image -- thumbnail, access and archival. For example, 
+
+        the Library of Congress guidelines recommend that thumbnail images of 
+
+        photographs be 72 dpi and 150-200 pixels across the long dimension. The 
+
+        access image is a higher quality image that has been compressed for speed 
+
+        of access and has a lower spatial resolution than the archival image. 
+
+        In turn, the archival image is an uncompressed image, which would be useful 
+
+        for users for reproduction efforts or held for future reprocessing as 
+
+        compression or other image-processing standards might change. In the 
+
+        case of a photograph, the image should be 3,000 to 5,000 pixels across 
+
+        the long dimension. The Library of Congress recommends guidelines for 
+
+        different types of artifacts. For the DCHC, we concentrated on those guidelines 
+
+        for scanning text documents, photographs, maps, and graphic materials 
+
+        such as artwork.</p>
+
+      <p class="normal">Although all of the project participants agreed to adhere 
+
+        to the standards, they had little experience of digitizing for archival 
+
+        purposes or for specific online databases, and it took time for some participants 
+
+        to become familiar with the requirements for the DCHC database. Creating 
+
+        archival images at local museums and libraries would take up a lot of 
+
+        computer storage, and take up costly space to download the images directly 
+
+        into the database over a modem connection. Therefore, participants were 
+
+        also supplied with CD writers in order to able to burn their images onto 
+
+        CD. The complete CDs were subsequently mailed to the Digital Imaging and 
+
+        Media Technology Initiative in order to download the images into the database. 
+
+        It is worth pointing out that for a bigger project, this would create 
+
+        a lot of CDs for storage, so other storage facilities might be investigated.</p>
+
+      <h1>Artifact Description</h1>
+
+      <p class="normal">The participants simultaneously determined the steps necessary 
+
+        to make the final digital content available to teachers and students, 
+
+        and to create the digital repository that would be accessible through 
+
+        the project Web site. In order to create an integrated system usable by 
+
+        each participant institution, the use of metadata for the image database 
+
+        was of major concern. The next workshop held in conjunction with the DCHC 
+
+        was a daylong session to address metadata issues. Participants came to 
+
+        terms with metadata topics and then discussed their institutional concerns 
+
+        about metadata. For example, the museum participants were all very concerned 
+
+        about interpretive comments about artifacts, while library participants 
+
+        were less concerned about interpretation. We believe all DCHC project 
+
+        participants would agree with Abby Smith from the Council of Library and 
+
+        Information Resources, when she said, &#34;Museums ... have a mandate to 
+
+        interpret. Librarians ... traditionally place a high value on making 
+
+        information accessible without mediation&#34; [5].</p>
+
+      <h1>Database Design</h1>
+
+      <p class="normal">DIMTI had to develop a set of guidelines and standards for 
+
+        the museums and libraries to enable the creation of a consistent database 
+
+        that would easily map between different controlled vocabularies and organizational 
+
+        data. It was decided to base the fields in the database on the Dublin 
+
+        Core (DC) fields, but due to the diversity of the partners and their collections, 
+
+        some adjustment of the original fifteen DC fields was necessary. Figure 
+
+        1 shows a sample record from the database with each of the fifteen fields 
+
+        shown in bold. Almost none of the participants had worked with DC before 
+
+        their involvement in this project, so it was imperative to set very specific 
+
+        guidelines to enable the entering data into the database with complete 
+
+        consistency. </p>
+
+      <p class="MsoCaption"><img src="bennett-fig1.jpg" width="400" height="274" alt="Example record from the Illinois Heritage Association.  The fields are listed in bold type."/><br/>
+
+        Figure 1. Example record from the Illinois Heritage Association. The 
+
+        fields are listed in bold type.</p>
+
+      <p class="normal">Dublin Core is a set of fifteen elements, or fields, that 
+
+        are intended for facilitation of electronic resources. This element set 
+
+        has several characteristics that made it ideal for the DCHC. In particular, 
+
+        its relative simplicity enabled us to ensure that all project participants 
+
+        could quickly grasp the relevant issues. Its semantic interoperability 
+
+        also made it a prime candidate for project users at museums and libraries, 
+
+        with very diverse collections. Finally, the DC extensibility also allowed 
+
+        for additional metadata elements, which could encompass the variety of 
+
+        the participating institutions. (There is a more detailed discussion of 
+
+        the database fields in [6]). </p>
+
+      <h1>Interpretation of Artifacts</h1>
+
+      <p class="normal">While the DCHC database was designed to digitize and make 
+
+        accessible items from the partner institution&#39;s various collections, 
+
+        it was not specifically intended as an aid to interpreting the meaning 
+
+        of these artifacts for teachers. Digital and cataloging expert Jim Blackaby 
+
+        wrote in his letter of support [7] for the DCHC that the project &#34;focuses 
+
+        on making primary materials available in a context that is enabling. It 
+
+        is not the delivery of interpreted materials, such as an exhibit, which 
+
+        is momentarily satisfying and may address immediate needs, but in the 
+
+        long run may lose some of its efficacy. Where libraries and archives have 
+
+        focused on building a solid core of information systems that provide access 
+
+        to primary materials, museums have not. In this respect, those institutions 
+
+        and their methods bring museums along&#34;.</p>
+
+      <p class="normal">The decision originally not to build an interpretive component 
+
+        into the original DCHC design proved to be very frustrating for the EAM 
+
+        and reflects philosophical differences between museums (especially history 
+
+        museums) and libraries. Historians believe that historical events must 
+
+        be placed in a broader context in order to have meaning, while libraries 
+
+        often feel that their primary role is to provide objective access to information. 
+
+        Museum professionals in general are keenly aware that it is almost impossible 
+
+        to provide objective information in the museum context. The process of 
+
+        choosing which objects to exhibit, how they are labeled, and the decision 
+
+        whether to mount them at front or the back of a case all work to tell 
+
+        visitors what we think is important for them to know. In the words of 
+
+        M. Jane Young, simply placing an object on a shelf &#34;changes the shape 
+
+        of the object, divorcing it from contextual relationships, isolating it 
+
+        from experience, and thus largely predetermining the visitor&#39;s perception 
+
+        of it&#34; [8].</p>
+
+      <p class="normal">While it is also true that libraries interpret data, their 
+
+        interpretive functions are less pervasive than in museums. Libraries interpret 
+
+        by choosing which books to purchase or not purchase and by recommending 
+
+        titles to their patrons. Regardless of whether interpretation is typically 
+
+        a library function, it became one for all of the DCHC partners during 
+
+        the course of the project. All of the partner institutions performed a 
+
+        clear interpretive task by choosing which artifacts, photographs and maps 
+
+        to digitize and place on the DCHC database. </p>
+
+      <p class="normal">Interpretation is much more powerful and useful, however, 
+
+        when interpretation of artifacts is acknowledged as important, and a conscious 
+
+        effort is made to do it well. Good interpretation does not mean telling 
+
+        visitors or patrons what to think, but rather provides a basis for them 
+
+        to ask questions and learn answers for themselves. Museums can play an 
+
+        important role in this process by providing access to artifacts and contextual 
+
+        information about them. In general people &#34;respond more directly and immediately 
+
+        to objects than to verbalized concepts. Artifacts do seem to inspire, 
+
+        excite, motivate and communicate&#34;<sup> </sup>[9]. This concept of interpretation 
+
+        of artifacts was very new to almost all the librarians participating in 
+
+        the DCHC.</p>
+
+      <p class="normal">At the EAM, the goal is to help teachers use artifacts to 
+
+        inspire and motivate their students to get excited about history. An important 
+
+        part of the museum&#39;s educational role is to provide teachers with 
+
+        the type of specialized historical information they might not have the 
+
+        time or expertise to gather. The museum curator sees artifacts as useful 
+
+        in that they help to communicate ideas to the public. The power of artifacts 
+
+        stems from the stories they can tell about the lives of people in the 
+
+        past, and our lives in the present. Originally the DCHC database made 
+
+        no provision for communicating these stories to the teachers who would 
+
+        use the artifacts in the classroom. All of the partner teachers wanted 
+
+        to use artifacts to teach their students, but most knew little about 19th 
+
+        century material culture or how to effectively incorporate it into their 
+
+        lesson plans. </p>
+
+      <p class="normal">An artifact from the DCHC database, as seen in Figure 2, 
+
+        helps illustrate the importance of contextual information. One artifact 
+
+        the Early American Museum digitized was a bed key. The description in 
+
+        the DCHC database states that it is made of wood, is 12.25&#34; long, consists 
+
+        of a Y-shaped shank with a round cross bar pegged near the top, and was 
+
+        made between 1775 and 1830. This information is descriptive, but it does 
+
+        not help elementary school students learn about the past. Adding interpretive 
+
+        information might make a digital image of this artifact more useful: &#34;In 
+
+        the 19th century many bed frames used ropes to hold up mattresses which 
+
+        were often filled with corn husks. It was hard to sleep well on a saggy 
+
+        mattress, so periodically people had to tighten the ropes in order to 
+
+        sleep well -- this is where the phrase &#34;sleep tight&#34; comes from.&#34; This 
+
+        snippet of interpretive information connects the past to the present and 
+
+        helps the artifact come alive. By using the artifact as an introduction, 
+
+        a teacher could use it as a springboard to discuss the cycle of a pioneer&#39;s 
+
+        day, sleeping habits, notions of privacy, the importance of corn in pioneer 
+
+        life, or any number of other things. </p>
+
+      <p class="MsoCaption"><img src="bennett-fig2.jpg" width="400" height="243" alt="Bedkey, example image from the Early American Museum."/><br/>
+
+        Figure 2. Bedkey, example image from the Early American Museum.</p>
+
+      <p class="normal">Although the original DCHC concept contained no provisions 
+
+        for interpretation, the project&#39;s database, based on Dublin Core, 
+
+        was modified to include a separate interpretive field. The new field provided 
+
+        a method to add the interpretive information, which the EAM feels is so 
+
+        crucial. The addition of Interpretation was considered a major improvement 
+
+        to the database, but additional work could still be done. Even with the 
+
+        interpretive field in place the majority of the artifacts in the database 
+
+        are still expected to &#34;speak&#34; for themselves, and most of the information 
+
+        entered into the interpretation field remains superficial. Ideally, the 
+
+        museum curator would like interpretation to be a central part of the DCHC 
+
+        database. Each digitized image could be tied to an appended list of potential 
+
+        sources, links to other sites, comparisons with similar objects, and tie-ins 
+
+        to larger historical themes and arguments.</p>
+
+      <p class="normal">Unfortunately, the problem with good interpretation is that 
+
+        it takes a lot of time. Writing even a short descriptive paragraph with 
+
+        minimal interpretive information for each digitized item is a painstaking 
+
+        process, and placing each item into a broader historical context would 
+
+        be an even greater challenge. The amount of time necessary to do this 
+
+        could run into many more hours than the two hours each week originally 
+
+        agreed to by all participants. Nevertheless, the EAM curator thinks it 
+
+        is worth doing. Putting images in a database facilitates access to museum 
+
+        and library collections, which may be useful to researchers, but it can 
+
+        fail to make history come alive for elementary school students. If projects 
+
+        like the DCHC are truly more interested in assisting educators do a better 
+
+        job teaching American history, rather than simply providing access to 
+
+        information, we need to spend more time making what we digitize useful 
+
+        for teachers and students and less time worrying about getting it on the 
+
+        Web. In fact, every participant of the DCHC feels so strongly about the 
+
+        importance of using the database for education that we are planning for 
+
+        2001-2002 to work on a new project, &#34;Teaching with Digital Content--Describing, 
+
+        Finding and Using Digital Cultural Heritage Materials&#34; (<u><a href="http://images.library.uiuc.edu/projects/tdc">http://images.library.uiuc.edu/projects/tdc</a></u>), 
+
+        where we hope such issues can be addressed.</p>
+
+      <h1>Agreements between Partners</h1>
+
+      <p class="normal">Intellectual property issues involved in the digitization 
+
+        of images include the right to distribute materials, permissions to host 
+
+        materials, institutional ownership, content that could be offensive to 
+
+        some users, and conditions of use. Because the DCHC partners were concerned 
+
+        with these matters, the partners worked to develop a set of terms and 
+
+        conditions into a Collaborative Agreement for digital access to their 
+
+        collections. </p>
+
+      <p class="normal">The agreement ensures that there are no misunderstandings 
+
+        among partners either during the course of the project or after it is 
+
+        officially completed. Project participants agreed to provide selected 
+
+        images and accompanying information in digitized form. The agreement outlines 
+
+        procedures for making the digitized images, descriptive text and other 
+
+        media available to participating institutions in agreed upon formats, 
+
+        and confirms how works are selected for inclusion in the project. The 
+
+        agreement also covers copyright issues, such as whose responsibility it 
+
+        is to obtain permissions to digitize objects, and it confirms that images 
+
+        and their accompanying metadata remain the intellectual property of the 
+
+        partner. </p>
+
+      <p class="normal">As well as the collaborative agreement for each partner 
+
+        institution, a &#34;Conditions of Use&#34; (<a href="http://images.library.uiuc.edu/projects/dchc/conditions.htm">http://images.library.uiuc.edu/projects/dchc/conditions.htm</a>) 
+
+        statement for the project Web site was also created. In this case, the 
+
+        statement was created for the protection of the project participants and 
+
+        the database users. </p>
+
+      <p class="normal">The EAM supports the commitment to maintain the database 
+
+        for at least two years beyond its official end date. The EAM was not particularly 
+
+        concerned with possible copyright violations, as it does not generate 
+
+        revenue from its collection the way that a larger museum might. A larger 
+
+        institution might be concerned with possible revenue losses if the database 
+
+        was maintained for a longer term. The EAM is, however, concerned about 
+
+        the interpretation of artifacts and the use of the interpretation as it 
+
+        sits on the DCHC web site. This will have to be monitored as closely 
+
+        as possible over the next few years.</p>
+
+      <h1>Future Plans</h1>
+
+      <p class="normal">From the perspective of the university library, the project 
+
+        has been a success. The DCHC was set up as a &#34;Model Program of Cooperation&#34; 
+
+        and in that perspective it was an excellent example of cooperation among 
+
+        several diverse institutions. Work was carried out collaboratively in 
+
+        various forms. There were several workshops and meetings with all project 
+
+        participants, as well as many on-site visits from project staff. Communication 
+
+        was also carried out by telephone, email, initially using a Listserv and 
+
+        subsequently switching to an online web-based discussion board (WebboardTM). 
+
+        Everything that was initially planned for the project was carried out. 
+
+        The project began with a timeline of activities set out for the course 
+
+        of the project. While the activities on the timeline may have moved during 
+
+        the project lifespan, the actual activities were all completed, some more 
+
+        or less than initially planned. Some parts of the project, such as selection 
+
+        of artifacts and entering them into the database took considerably longer 
+
+        than anticipated. Nevertheless, the database took shape and became available 
+
+        to the teachers for use in their classrooms.</p>
+
+      <p class="normal">The true test of the usefulness of the database itself is 
+
+        how it is used by teachers and students. The most exciting part about 
+
+        the DCHC is that it can make it easier for teachers and students to view 
+
+        a diversity of collections in their own classroom. We are currently carrying 
+
+        out more research into how the teachers actually use the database images 
+
+        in their curriculum. As part of this research, future extensive outcome-based 
+
+        evaluation studies will help us ascertain how much use the database is 
+
+        actually receiving from our local users as well as from users worldwide. 
+
+        Further work will be done to develop innovative ways in which teachers 
+
+        may further develop their curriculum units using the images in the database. 
+
+        In order to continue to push the boundaries of the project we have also 
+
+        have enlisted the support of an Advisory Group of eight experts from various 
+
+        fields who provide suggestions on how to improve the DCHC in the future. 
+
+      </p>
+
+      <h1>Acknowledgements</h1>
+
+      <p class="normal"><span class="AcknowedgementsText">This work is sponsored 
+
+        by the Institute of Museum and Library Services under its National Leadership 
+
+        Grant Program. </span></p>
+
+      <h1>Bibliography</h1>
+
+      <p class="ReferencesText"><span class="ReferencesText">[1]</span><span class="ReferencesText"> Grant application to the Institute of Museum and Library Services for 
+
+        the Digital Cultural Heritage Community Project, 1998.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">[2] Illinois State 
+
+        Board of Education, Illinois Learning Standards, <a href="http://www.isbe.state.il.us/ils/" target="new">http://www.isbe.state.il.us/ils/</a>, 
+
+        last viewed Jan. 10, 2001.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">[3] Carl Fleischhauer 
+
+        (Last updated July 13, 1998), <i>Digital Formats for Content Reproductions</i>, 
+
+        Library of Congress. Last viewed December 19, 2000. <u><a href="http://lcweb2.loc.gov/ammem/formats.html/">http://lcweb2.loc.gov/ammem/formats.html/</a> 
+
+        </u></span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">[4] Anne R. Kenney, 
+
+        Stephen Chapman (June 1996), <i>Digital Imaging for Libraries and Archives</i>. 
+
+        Ithaca, NY: Cornell University.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">[5] Smith, Abby 
+
+        (January 2000), <i>Putting Culture Online</i>, in Collections, Contents, 
+
+        and the Web. Council on Library and Information Resources.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">[6] Bennett, N.A., 
+
+        B. Sandore, A.M. Grunden, P. Miller (2000), <i>Integration of Primary 
+
+        Resource Materials into Elementary School Curricula</i>, in Proc. MW2000, 
+
+        pp. 31-38.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">[7] Jim Blackaby 
+
+        (April 17, 1998), &#34;Support for the IMLS Project&#34;, Digital Cultural Heritage 
+
+        Community Grant Application to the Institute of Museum and Library Services.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">[8] M. Jane Young 
+
+        (1987), &#34;The Value in Things: Folklore and the Anthropological Museum 
+
+        Exhibit&#34;. In <i>Folklife and Museums</i> (p. 103.), Patricia Hall and 
+
+        Charlie Seeman, eds. Nashville: AASLH.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">[9] Michael J. 
+
+        Ettema (1987), &#34;History Museums and the Culture of Materialism&#34;. In <i>Past 
+
+        Meets Present: Essays about Historic Interpretation and Public Audiences</i> 
+
+        (p. 77), Jo Blatti, ed. Washington D.C.: Smithsonian Institution Press.</span></p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</tbody></table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+
+
+
+
+</body><!-- #EndTemplate --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/bennett/bennett.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:50 GMT --></html>

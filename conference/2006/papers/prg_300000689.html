@@ -1,0 +1,144 @@
+<div id="main-content">
+			<div id="callout">
+ 	     	 </div>
+			<div id="papers">	 
+		  		<div id="intro-paragraph">
+					<!-- InstanceBeginEditable name="IntroParagraph" -->
+    			
+			
+
+
+<h3>Ian Croxford, Victoria &amp; Albert Museum, London</h3>
+
+<div id="abstract">
+	<h5>Abstract</h5>
+	
+<p>The V&amp;A was one of the earliest adopters of Wireless networking in Europe as it offered a cost effective solution for providing network access for operational functions where the historic fabric of the building made it very difficult to get approval for traditional copper cabling. We have charted the progress of technology and standards, and have first hand experience of the problems of security and reliability inherent in the technology. We now have an IP based telephony system at the main South Kensington site, and have to manage a fully converged network that requires standards of reliability hitherto unknown in the museum.
+We have progressed from using Wireless networks for internal use to providing interactives and digital installations in the galleries, and hope to use Wireless as the main technology for providing digital activities in the galleries. 
+With the opening of the Education Study Centre in 2007, we will be providing full open wireless access facilities to students and visitors, and have planned the infrastructure and security necessary to manage them in a cost effective and safe manner.
+We look forward to sharing experiences with other academic institutions that have similarly opened up their networks.</p>
+<p id="keywords"><strong>Keywords:</strong> wireless, network, handheld, public access</p>
+</div>
+
+
+  				<!-- InstanceEndEditable -->
+		  		</div>
+				<!-- InstanceBeginEditable name="BodyText" --> 
+<h2>Introduction</h2>
+<p>The term ‘Wireless networking’ means many things to many people. It can include Bluetooth, Infrared, Microwave, Laser, Mobile Telephony and even RFID technology, but for the purposes of this paper I intend to deal mainly with WiFi, the technology described in the IEEE 802.11 standards which is now becoming ubiquitous on laptop computers, and is an essential component in our plans for delivering public and educational access to collections information within our Galleries, and the development of handheld multimedia activities.</p>
+
+<p>The original IEEE 802.11 standard which was ratified in 1997 and extended to become 802.11B in 1999 is the most commonly used wireless networking protocol and gives up to 11Mb/s using the 2.4GHz spectrum. It is characterised by very low power outputs compared to mobile phone technology, and a range of 150M in open conditions without special aerials. It does not propag<!-- #BeginDate format:Am1a -->March 7, 2006 5:48 PM<!-- #EndDate -->Implementations were available before 1997, but these were proprietary. It was not possible to mix and match suppliers’ equipment. The options available were expensive and lacked proper security.</p>
+
+<h2>Early Applications at V&amp;A</h2>
+<p>The V&amp;A had several areas where it was necessary to become an early adopter of the technology. Blythe House near Olympia is the old Post Office Savings Bank building. It is shared by the V&amp;A, British Museum and Science Museum. It is used as a store, as a  working area for staff that haven’t got space in South Kensington and Covent Garden, and as access to our archives for the public. The rooms are vast and cavernous. It is very difficult to get copper network cabling to the work locations within the storage areas, and so an early Orinoco solution was employed to give access to desktop PCs in these areas. It worked really well in early years; however the 11MB/s shared bandwidth proved to be a limitation. There was no security and we did get ’cyber squatters’ on the network. As people moved desks and large metal filing cabinets the quality of signal strength would change, leading to further problems. In the past year a considerable number of extra staff have moved to Blythe House, and so the increased densities and the demand for high bandwidth of image intensive applications such as our Digital Asset Management System have made it more economic to provide proper cabling to desktops. Most of the wireless has been removed, including all the 7 year old access points, many of which had failed anyway.</p>
+
+<p>The National Museum of Childhood at Bethnal Green needed to put an information desk in a central location where it was not easy to put fixed network cabling, and so a wireless network connection was used. The museum is now closed for refurbishment and proper network cabling is being installed.</p>
+
+<p>Apsley House, the Wellington Museum, was part of the V&amp;A until 2004. In this case it proved to be impossible to get network cables to the director’s office due to planning restrictions and objections from the residents of the rest of the house. Once again, a point to point wireless connection proved to be effective for this temporary arrangement.</p>
+
+<p>Our first real failure with wireless was with the opening of a temporary exhibition shop at South Kensington in 2004. The location of the tills was more than 100 metres away from the nearest communications cabinet and so it was not possible to put direct copper wiring in. We thus put in place a wireless point to point link which worked perfectly well during testing. However, when the shop went live, there was occasional interference from some source. Whether this was mobile phones, electrical equipment used in Building work, Bluetooth devices, or other computers with wireless, we never found out. Occasional packets were lost. Such things are normal and to be expected on wireless networks in the real world. Services that run on TCP/IP are designed to expect such packet loss and will resend packets and carry on happily. Unfortunately the 3rd party software that did credit card authorisation was not so forgiving and would lock up whenever interference occurred. We hastily put in temporary copper network wiring with a switch acting as relay.</p>
+ 
+<p>Learning point: when deploying wireless: make sure the software is resilient enough to cope with temporary loss of connection, as 802.11B/G at 2.4GHz is particularly subject to interference.</p>
+
+<p>The first major use of wireless in the Galleries was in 2002 with an exhibition called <em>Digital Interventions</em>. For a year, artists submitted their digital art projects for a series of one month displays. Some of these required Internet access, and so a wireless link from the next door office was used, as it was so quick to set up and remove for these temporary exhibitions.</p>
+
+<p>With the right aerials, wireless can be used to cover much longer distances. When the original Blythe wireless network was installed in 1998, a point to point link was established from the top of the dome at South Kensington to Blythe house, a distance of 1.8 km. This provided an 11Mb/s wide area connection at a fraction of the cost of a leased circuit. In 2002 it was supplemented by a 155Mb/s infrared laser which was much more capable of shifting the high resolution images required by a part of the photographic department and the staff who were based at Blythe working on the People Play UK Web site. This laser provides very high bandwidth at negligible cost. Unfortunately it does not work in snow, heavy rain or fog. Sadly we are based in London and not New Mexico, and so the original 802.11 wireless still earns its keep after 8 years.</p>
+
+<h2>Telephony and Security</h2>
+<p>Up until 2005 the telephone service for the 3 South Kensington Museums was provided as a common service from the Natural History Museum. The V&amp;A decided to pull out of the partnership and so an IP based new telephone system was installed and went live in September. In order to provide the reliability required by a telephone service, and to support the extra CCTV cameras being installed throughout the museum, we needed a data network that was 99.999% reliable. This was the biggest IT project in 2005 and for 2 weeks required the replacement of all 110 ‘edge’ switches with new ones giving Quality of Service and Power over Ethernet. These were dual cabled with separate fibres to the two main passport switches on opposite sides of the museum. Split Multi Link Trunking is used to provide total redundancy of switching to all locations; separate VLANS keep data, telephony and CCTV separate. There is also a clear need for the use of wireless IP telephones for staff, but as yet we haven’t put the infrastructure in place. It was clear that we could not compromise the security of the network by continuing to use the cheap and cheerful wireless network kit that we had been using up until then, and we had to implement something more robust.</p>
+
+<h2>Wireless security</h2>
+<p>Open networks have no security at all. A Windows XP PC can browse available networks, the user can select an ssid, connect and the wireless access point will often give an IP address, subnet mask, default gateway and DNS address using Dynamic Host Configuration Protocol, which is then all the user needs to browse the network and cause havoc if desired. ‘War Driving’ is a popular activity for sad IT people in big cities where it is fun to take a laptop and see how many networks you can hack into. It was considered illegal in the UK, but in practice it is difficult not to connect to such networks by accident. The danger of using such networks is that everyone else can, and all packets can be sniffed by anyone else on the same access point. I It’s not a good idea to do anything confidential when sitting in your local coffee shop unless you are using https: or a secure VPN.</p>
+
+<p>The simplest standard is WEP (Wired Equivalent Privacy). For this, all the devices have to have the same simple key whose length depends on the capability of the devices. Cheap access points and PC cards have 40 bit encryption which is not secure against a serious criminal sniffer. For safety, 128 bit should be considered the minimum. Better is Wi-Fi Protected Access (WPA) or WPA2 now ratified as IEEE 802.11i and which includes the Advanced Encryption Standard AES. Serious wireless access systems incorporate all these standards, but unfortunately the majority of handheld devices and the laptops our visitors are carrying don’t support better than WEP. Also, my experience is that the majority of laptop users struggle with the concepts and can’t set up WEP on their machines.</p>
+
+<h2>Small Office and Home Use of Wireless</h2>
+<p>Simple wireless access points are now very cheap ($25), and in the UK combined wireless access points and ADSL routers are one of the most popular ways of setting up a connection to the Internet for home and small offices. Although these devices offer encryption and firewalling, the out of the box configuration generally used offers DHCP, Network Address Translation and DNS proxy to give any idiot instant access from their home desktop or laptop. But sadly for them, they also offer the same services to the next 20 houses in the street. In a city such as London, you can normally access 10 different wireless networks wherever you are, and half of these will be totally open.</p>
+
+<p>This was the equipment we had been using for the last few years, as it was cheap and easy to get hold of and set up in a hurry for temporary applications.</p> 
+
+<p>However this technology is no longer suitable in the museum environment. It is hard to secure properly, (but a more recent kit does have WEP and WPA security). Often signal strength is weak due to poor aerial design. The technology works fine in small flats and houses, but doesn’t give the full range in big museums with thick walls. It does not permit the roaming we require for handheld multimedia applications. Typically, when a user moves from the range of one point to another the network ssid changes and so does the IP address. (We have also found that most cellular mobile solutions do the same thing. They are designed for people to use in coffee shops and airport lounges, but they don’t work on the move as applications such as mail Web access can’t cope with changing IP addresses within a session.) For serious museum handheld digital activities, people need to be able to wander throughout the museum estate attached to the same network ssid and keeping the same IP address.</p>
+
+<p>Hence we need to put in a proper management system such as Cisco Aironet or Trapeze, but then the cost of individual access points rises to £500 a time. A museum the size of the V&amp;A with metre thick walls that won’t propagate 2.4GHz wireless needs over 1000 of them to provide full coverage in all public spaces.</p>
+
+<h2>Planned Use of Wireless</h2>
+<p>The most important application for the future is to provide wireless access in the Galleries so that a variety of hand held activities can download information from databases and the Internet. Such activities will include tours, games, quizzes and guides. Users will be able to download information about the objects and the cultures that created them, and will be supported  in a variety of styles, levels of interest and different languages. Wireless is needed because current handheld devices just don’t have the memory to hold the rich variety of information available on the 4 million objects in our collections (6TB and growing fast).</p>
+
+<p>We have already piloted these activities using 50 Sony PSPs to download specially created content as part of our Friday Late contemporary programme.
+The National Art Library is part of the V&amp;A, and researchers need to be able to search the Public OPAC catalogue of books. This facility has been available on fixed computers and the Internet for some time, but wireless access for these researchers is now expected as the norm. Most regular readers have a laptop computer that includes a wireless card giving 802.11b/g as standard, and there is an expectation that they will be able to use them in the same way they can in most large public libraries.</p>
+
+<p>We run a whole series of courses for students, some being degree course in conjunction with the Royal College of Art. Registered students now expect to be able to log into our systems, download information, and submit course work on-line. With the opening of the Education Study Centre in 2007, we will create a whole zone with full wireless access available throughout. Key to the success of this project is the creation of activities both educational and entertaining to go out into the galleries, interact with cultural heritage objects, and manipulate and create content. Users can take it home and share with friends, relatives and the whole world. Since handheld devices don’t have enough memory to store information on the whole collection, we need wireless access to download and upload information as visitors go around. Hence we do need to WiFi enable the whole museum and start with the most culturally important galleries.</p>
+
+<p>The Madejski garden which opened in 2005 and the new public restaurants which open this year are places where people can sit. Some will choose to work and  expect the ‘open zone’ experience available in most coffee houses and public areas in London, where wireless devices can pick up access to the Internet for checking emails, etc. The V&amp;A also books rooms for corporate events, and attendees now expect wireless Internet access as the norm.</p>
+
+<p>Finally, our staff increasingly needs to work out of the offices, either in the galleries or at ‘hot desk’ locations because we have too little office space. In the summer the garden is a favourite place to work.</p>
+
+<h2>Secure Solution</h2>
+<p>We have had to implement a security and management solution that can handle these diverse access types in a secure manner whilst providing homogeneous access across the whole estate. The big problem with wireless users is that they are unpredictable. Individual access points may have no users or a school party of 30, all with handheld devices. An individual access point should take 12 devices at maximum. Therefore large rooms need multiple access points even though one may be all that is needed to give geographic coverage. The management system needs to be able to move connections from one access point to another and keep different users and groups from interfering with each other. The system must cope with roaming so that a user can move from access point to access point without losing connection or reconfiguring. Wireless users in large areas like museums or airports are often likened to herds of wildebeest roaming the Serengeti.</p>
+
+<p>An access point can be plugged into any RJ45 connection to the switched network and draws its power from the Ethernet switch. It goes into a separate Vlan from the main data network, the telephone system and the CCTV network. A management system then manages all the wireless access points as one homogeneous wireless network with one ssid for each service type. Most of these will have WEP or WPA security, but the public guest access will be completely open, although all http requests will funnel to a login page that will force users to accept the conditions of the service if they wish to proceed. Any wireless device needs to authenticate to a radius server according to one of the means below and is then put into a separate network whose access is controlled by the integrated firewall.</p>
+
+<p>For the handheld devices, authentication is via the Mac address of the device and 802.1X security built into the applications.</p> 
+<ul>
+<li>Casual users do not need to register user names and passwords.</li> 
+<li>Students will have to register and have proper accounts.</li> 
+<li>Readers in the National Art library also register and have a unique identifier.</li>
+<li>Public access in the café is via Guest accounts that only give limited bandwidth access to the Internet via a bluecoat proxy server that will block inappropriate use.</li>
+<li>Staff of course have full access and are governed by the electronic communication policy and their contract of employment.</li> 
+</ul>
+
+<p>The solution we have implemented uses a radius server to authenticate these different groups of users, putting them into separate Vlans to prevent them interfering with each other, and has a firewall which strictly controls what they can access on the internal network or the Internet.</p>
+
+<p>Both main wireless access solutions provide both 802.11b/g at 2.4GHz and 802.11a at 5GHz. For staff access we plan to use 802.11a which is a newer standard than 802.11b. It has a longer range, is less susceptible to interference, and in practice gives much higher bandwidth. Although 802.11g works at 54Mb/s, it only takes one device operating at 802.11b at 11Mb/s or less to slow down everything on that access point to the lowest common denominator. The majority of devices at present are 802.11b/g and many will only support Wireless Encryption Protocol up to 40 bits. Bluetooth also operates in the 2.4GHz band and can cause interference.</p>
+
+<h2>Location</h2>
+<p>An interesting benefit of the main commercial implementations of these wireless management systems is that they also give the location of the wireless devices to within a few metres. The wireless access points that can detect the device can match the signal strength to calibrated patterns and will show on a map display the probability of the device being at the location. The hot spot is the most likely place, getting colder over a distance of several metres. This cannot be exact as wireless propagation changes with the number of people and objects in the room. It will certainly show which room the device is in. The more wireless access points available,  the more the improvement in quality and frequency of the calibration, and this should improve accuracy so that we can be 95% certain of the nearest case or large object a user is standing by. We see this as giving two main benefits:</p>
+<ul>
+<li>We can use it to track schools parties and people who borrow our devices and equipment for activities. Immediately it will help learning and interpretation staff to find people who’ve got lost in the 7.5 miles of our galleries. It will also allow us to find where people go, and how long they spend in specific places. This will be very useful in planning resources if we can handle all the data.</li>
+<li>It will also provide this information to handheld applications. If the application knows what room people are in and what cases or objects they are near to, it can offer a limited relevant choice of information for download. It will also help with future way-finding applications. Sadly, wireless will not tell you which way you’re facing. Note that GPS is far more accurate but will not work indoors. It is possible to supplement the locational information with either RFID or Bluetooth. We will be trialling some RFID applications this year.</li>
+</ul>
+
+<h2>Radio Frequency Identification Tags (RFID)</h2>
+<p>There are basically two types of RFID tags.</p>
+
+<p><strong>Passive</strong> tags cost just a few pence. They require an external electromagnetic field to activate them into sending out their signal. The most common application is in retail where many stores have by the doors large induction loops which cause tags attached to goods to send out their identification signal and set off an alarm. They are also used extensively for stock control instead of bar codes. If passive RFID tags are attached to objects at the V&amp;A they could be very useful for object tracking provided we load the main Collections Information System with the tag identity.</p>
+
+<p>For any handheld multimedia application to use passive RFID tags to identify objects, the handheld device will have to have a way of activating the tag, whilst not activating any of the other tags. I don’t think this is feasible as the technology is not directable like infrared. However, I am willing to be convinced, as it would make an elegant way of identifying objects. I would welcome response from anyone who has done it.</p>
+
+<p><strong>Active tags</strong> have batteries attached. They cost roughly $20 a time, have a life of 3 years, and are much larger than passive tags. There are active tags on cases and the identities are held in CIS.</p>
+ 
+<p>My feeling is that RFID detection is not going to be a feature commonly available on handheld devices, particularly the ones owned by visitors to the museum, and therefore RFID is not my first choice for identifying objects in handheld multimedia applications.</p>
+
+<p>However, the following could work, and it is worth testing out a prototype, even if only to dismiss the technology and produce a very interesting paper on how not to do it!</p>
+
+<p>Using a handheld device that has both RFID detection and 802.11b/g wireless, the user points the device at a case. The application then downloads from a portal server all the object information from CIS, DYNIX and the DAM about the objects in the case. Users then pick from a list that contains museum numbers and small thumbnails about any object and get a fuller description, perhaps translated into another language or read aloud by a text to speech converter.</p>
+
+<p>The advantages that this method of identifying objects would have over any other are that it doesn’t require any user typing and does not rely on potentially inaccurate radio positioning.</p>
+
+<h2>Smart phones</h2>
+<p>One of our aims is to provide services on the visitors’ own technology. That way we don’t have to provide the device, keep it secure or fix it when they drop it. Modern smart phones are also PDAs based usually on Windows PC or Symbian technology. The GPRS or 3G networks are wireless networks that could be used to download and upload content. They are already provided. The technology penetrates most of the museum walls and so they look attractive. However the bandwidth is very limited in comparison, and data charges in the UK are astronomical: $1 per MB is typical. Unless we get sponsorship from one of the network providers, we are unlikely to consider this option. But once again, we would be interested in talking to anyone else who has trialled using cell phones or Blackberrys in interesting ways.</p>
+
+<h2>Conclusion</h2>
+<p>Wireless networking is ubiquitous in 2006. It offers lots of opportunity for delivering ’Museums on the Web’ to people on handheld devices in galleries, and is being demanded by researchers and other museum users with their own laptops and handheld devices. It is complex to manage on a large scale, but hotels, airports and universities have already learned to do so, and there are mature products on the market. It does suffer from interference, particularly with the more common 802.11b/g 2.4GHz standard. Applications need to be robust. The different herds of wildebeest need to be clearly identified and understood, and the right security model needs to be implemented from the start.</p>
+
+<h3>References</h3>
+<p>RFID, Wikipedia description <a href="http://en.wikipedia.org/wiki/RFID" target="_blank">http://en.wikipedia.org/wiki/RFID</a></p>
+
+<p>802.11 standards, Wikipedia Article <a href="http://en.wikipedia.org/wiki/802.11" target="_blank">http://en.wikipedia.org/wiki/802.11</a></p>
+
+<p>IEEE, 1999 802.11 standard <a href="http://standards.ieee.org/getieee802/download/802.11-1999.pdf" target="_blank">http://standards.ieee.org/getieee802/download/802.11-1999.pdf</a></p>
+
+<p>IEEE, 1999 802.11b standard <a href="http://standards.ieee.org/getieee802/download/802.11b-1999.pdf" target="_blank">http://standards.ieee.org/getieee802/download/802.11b-1999.pdf</a></p>
+
+<p>IEEE, 1999 802.11a standard <a href="http://standards.ieee.org/getieee802/download/802.11a-1999.pdf" target="_blank">http://standards.ieee.org/getieee802/download/802.11a-1999.pdf</a></p>
+
+<p>IEEE, 2003 802.11g standard <a href="http://standards.ieee.org/getieee802/download/802.11g-2003.pdf" target="_blank">http://standards.ieee.org/getieee802/download/802.11g-2003.pdf</a></p>
+
+			 	<!-- InstanceEndEditable -->
+				 <h4>Cite as:</h4>
+				<p class="references"><!-- InstanceBeginEditable name="OnlineCitation" --> Croxford I., Wireless Networking at the Victoria &amp; Albert Museum<!-- InstanceEndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2006: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics, published March 1, 2006 at http://www.archimuse.com/mw2006/papers/<!-- InstanceBeginEditable name="URL" -->croxford/croxford.html<!-- InstanceEndEditable --></p>
+				<br/>
+	  	 	</div>
+		</div>

@@ -1,0 +1,553 @@
+<div id="main-content">
+   <!-- <div id="news-old" onclick="location.href='http://conference.archimuse.com/';" style="cursor:pointer;">-->
+<div id="news-container">
+    	
+ 		<div id="evals">
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+			var r_text = new Array ();
+			r_text[0] = "very lively discussion. to be continued ...";
+			r_text[1] = "well curated. high level thinking";
+			r_text[2] = "inspiring ... life-changing conversation";
+			r_text[3] = "the creativity here is palpable";
+			r_text[4] = "very professional. a nice collegial atmosphere. highly intellectual.";
+			r_text[5] = "great inclusive program ... learning so many amazing things about what others are doing.";
+			r_text[6] = "great community where the most innovative and creative people get together!";
+			r_text[7] = "love the openness of everyone participating";
+			r_text[8] = "What's good? The people.  The ideas. The conversations.  The willingness to really talk about issues.   The food and coffee. ";
+			r_text[9] = "an inter-generational community, in which each new layer brings its own talents, technologies, and ideals to the table in a respective and co-creative dialogue.";
+
+
+			var i = Math.floor(9*Math.random())
+			
+			document.write ('<h2 align=\"center\">Feedback from MW2009</h2><ul class=\"news-list\"><li><span style="font-size: 1.3em;">&ldquo;</span>&nbsp;' + r_text[i] + '&nbsp;<span style="font-size: 1.3em;">&rdquo;</span></li></ul>');
+			
+	                // ]]> -->
+				  </script>
+		<noscript></noscript>
+
+	  </div>
+ 		 <div id="news">    
+	        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+                    //USAGE SYNTAX: new rssdisplayer("divid", "rssurl", numberofitems, "displayoptions")
+                    new rssdisplayer("news", "http://conference.archimuse.com/conferences/mw/mw2010/feed", 20, "")
+                // ]]> -->
+				  </script>
+		<noscript></noscript>
+
+      </div>
+         </div>  
+    
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="Intro-Paragraph" --> 
+          <h2 class="Author">Ethan Wilde and Laura Mann, Mediatrope Interactive, USA</h2>
+          <h3 class="AbstractTitle">Abstract</h3>
+          <p class="AbstractText">With the availability and maturation of open source technologies, museums are increasingly using existing open source tools for technology development. However, in most cases, museums are still developing customized applications and tools in isolation. Considerable cost and effort is invested in solving the same challenge repeatedly at many different institutions. Institutions share information, but the collaborative development of open source tools and applications is still relatively unusual. We believe there is a better way, and recent projects in the museum field point to a new development model. What are the possibilities for collaborative open source development in the museum field? We explore current museum projects and examples from other fields, including higher education and the arts. </p>
+          <p class="keywords">Keywords: open source, collaboration, community source, Pachyderm, CollectionSpace, Omeka, Steve.museum</p>
+	  <!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="Body-Text" -->
+
+          <h2>Introduction</h2>
+          <p>With the availability and maturation of open source technologies, museums are increasingly using existing open source tools for technology development. However, in most cases, museums are still developing customized applications and tools in isolation. Considerable cost and effort is invested in solving the same challenge repeatedly at many different institutions. Institutions share information, but the collaborative development of open source tools and applications is still relatively unusual. We believe there is a better way, and recent projects in the museum field point to a new development model. </p>
+          <p>The investment of resources in similar custom projects and the lack of commercial software choices points to a need for reusable, shared tools and applications that meet museum needs. In exploring the opportunities for collaboratively-developed open source technology, we were specifically interested in projects and technology tools that are shared with the museum community at large.  </p>
+          <p>We began this project by asking a series of questions about the possibilities for the collaborative development of shared open source tools as a new model for technology development in the museum field. The paper is structured around these questions. </p>
+          <h3>Methodology</h3>
+          <p>We were motivated to learn more about the possibilities for collaborative development following conversations with our colleagues and clients in the museum field. We have no involvement in any of the projects we describe in this paper. We conducted interviews with more than a dozen museum, library and technology professionals with experience developing software and shared technology tools. In a testament to the willingness of the museum community to share information, virtually everyone we contacted for interviews was willing to share information and their perspectives in support of this paper. </p>
+          <h2>What Are The Fundamental Needs of Museums?  </h2>
+        <p>As we explored collaborative efforts at software development, we realized that an understanding of the needs of museums was essential in order to identify and possibly rank the opportunities for institutional collaboration. In the development of our set of needs, we first made these observations about the characteristics of museums. Our process was aided by the existence of accreditation criteria from the American Association of Museums (AAM). For example, one of the basic criteria for accreditation by AAM is the holding of collections (<a href="http://www.aam-us.org/museumresources/accred/upload/Accred%20Program%20Eligibility%20Criteria%201-1-05.pdf">http://www.aam-us.org/museumresources/accred/upload/ Accred%20Program%20Eligibility%20Criteria%201-1-05.pdf</a> ).</p>
+        <ul>
+          <li>Museums hold collections – often explicitly in the public trust. 
+            <ul>
+              <li>These collections are vast and varied – and further help distinguish typologies of museums: the science museum, the natural history museum, the art museum.</li>
+              <li><em>Museums need to provide public access to their collections.</em></li>
+            </ul>
+          </li>
+          <li>Museums are educational in nature.
+            <ul>
+              <li>Museums educate broad and diverse audiences.</li>
+              <li><em>Museums strive to improve their outreach via education both in and beyond their galleries.</em></li>
+            </ul>
+          </li>
+          <li>Museums have revenue to generate and manage, although most are non-profits.
+            <ul>
+              <li>For most museums, some combination of membership programs, donations, grants, event ticket sales, and store sales represent incoming cash flow.</li>
+              <li><em>Museums need efficient tools for financial management.</em></li>
+              <li><em>Museums need to support marketing activities.</em></li>
+            </ul>
+          </li>
+          <li>Museums host and sponsor a variety of public events.
+            <ul>
+              <li>From the smallest to the largest museums, a wide range of events take place on museum premises.</li>
+              <li><em>Museums need to manage diverse event schedules and the dependencies of those events.</em></li>
+            </ul>
+          </li>
+          <li>Museums are typically under-funded and under-resourced, especially when it comes to technology.
+            <ul>
+              <li>The lack of resources – both material and human – makes support and knowledge sharing about technology challenging.</li>
+              <li><em>Museums need to identify means for supporting their technology needs.</em></li>
+            </ul>
+          </li>
+          <li>Museums are mission-driven institutions.
+            <ul>
+              <li>Most museums have defined missions, often shaped around their permanent collections. The museum’s decision-making and goals are guided by this mission.</li>
+              <li><em>Does developing software – independently or collaboratively – fall within Museums’ missions?</em></li>
+            </ul>
+          </li>
+        </ul>
+          <p>With this abbreviated list of a half dozen characteristics and their related needs, we set about to determine whether these needs represented opportunities for the development of technology-based solutions – software, to be specific. Do the fundamental needs of museums require unique software solutions?</p>
+        <p>While pondering this query, we encountered a couple of related questions that a potential team of collaborators must ask themselves:</p>
+          <ul>
+            <li>Should museums build their own software? In our survey, we see other fields such as higher education pursuing this approach. </li>
+            <li>If so, should we build a stand-alone solution focused on our needs, and therefore rely on only our contributions?</li>
+            <li>Or should we adapt and extend an existing solution built and supported by a larger community of collaborators?</li>
+          </ul>
+          <p class="MsoListParagraph" style="margin-left:0in;">The choices here will get addressed later on in our investigation.</p>
+          <h3>Why should museums collaborate on software development? </h3>
+          <p class="MsoListParagraph" style="margin-left:0in;">We were able to inventory some of the motivations for collaborative development in our survey of participants in the collaborative projects in the field:</p>
+          <ul>
+            <li>Museums need software options that can easily be adapted and re-used without always having to re-invent the wheel. </li>
+            <li>Current commercial options are lacking in helping museums with their mission-critical needs, and customization is not always cost-effective.</li>
+            <li>The traditional vendor-client model is limited by scale of funding and limited size of market.</li>
+            <li>Commercial software solutions do not exist for particular museum needs. </li>
+          </ul>
+          <p class="MsoListParagraph" style="margin-left:0in;">In tandem with these motivations, there exist a set of formidable challenges:</p>
+          <ul>
+            <li>“If you build it, they will come” doesn’t always play out in the museum field. The availability of software doesn’t always translate to adoption of software. </li>
+            <li>The demand is there, but the majority of museums are not in a position to take advantage of what exists in the market because funding is not available.</li>
+            <li>With little or no technical staff, museums may not be aware of available technology options and or be able to evaluate them effectively. </li>
+          </ul>
+          <p>Museums are not actors on their own accord, of course, but the people who comprise those institutions are actors with free will, and therefore, possess the opportunity for mutually-beneficial collaboration. The challenge lies in demonstrating the benefits of such endeavors.</p>
+          <h2>What Are the Goals of Collaboratively Developed Software? Measures of Success?  </h2>
+        <p>We are in a world that is teeming with collaborative software development activities. The open source development model has swept the field like wildfire and affected great changes in the ways software is made, distributed, and used.</p>
+        <p>Recent collaborative projects are working to demonstrate that the fundamental needs of museums represent opportunities for software-based solutions. Our survey of the existing collaborative efforts demonstrates their existence. The participants in these projects have faced the challenge of defining goals and related measures for success.  </p>
+        <p>Based on a review of current projects – both within and outside the museum field – we set forth a set of working goals and measures for success for collaborative software development.</p>
+        <ul>
+          <li>Viable product: a stable product that is better or cheaper than the alternatives, preferably both.</li>
+          <li>Adoption
+            <ul>
+              <li>Just because software is developed it doesn’t mean museums will use it. </li>
+              <li>What’s the most commonly accepted measure of success in our market-driven world? Popular use.</li>
+              <li>The means most often used to achieve this goal in our market-driven world: marketing. Evangelism is essential to the process of adoption.</li>
+              <li>Measuring adoption can be done, as many other fields have demonstrated. The model of shareware software demonstrates that adoption reporting can be built right into the software tools themselves.</li>
+            </ul>
+          </li>
+          <li>Sustainability
+            <ul>
+              <li>While arguably related in a fundamental way to adoption, the sustainability of a collaborative effort cannot be overlooked. By sustainability, we mean the ability for a collaborative effort to continue past initial software release into support, maintenance, and periodic releases.</li>
+              <li>The models for sustaining a collaborative effort at software development are numerous, and we’ll look at many of these later on in our investigation.</li>
+              <li>Measures of sustainability begin with the basic lifespan of a project, as well as metrics like numbers of active collaborators.</li>
+            </ul>
+          </li>
+          <li>Promotion of change in the field
+            <ul>
+              <li>Many of the folks we interviewed – already engaged in collaboration – held the pragmatic goal of affecting change.</li>
+              <li>Either through direct adoption of the software solutions produced, or via the “rub-off” effect of influencing other software development efforts – both closed and open source software are needed</li>
+              <li>The evolutionary goal is the availability of better, more affordable, software solutions to meet the needs of museums.</li>
+              <li>The measurement of change in a field is less tangible, but a self-reflecting measure could be the number of active collaborative projects in the field.</li>
+            </ul>
+          </li>
+          <li>Advancement of technology in the museum field.
+            <ul>
+              <li>Any activity that promotes better software-based solutions to meet the needs of museums is good.</li>
+              <li>The active engagement of people from museums in the creation of software-based solutions helps to bridge the gap between museums and technology.</li>
+              <li>Measuring the advancement of technology can be done by observing the distribution of annual expenditures for museums, as compared to other markets. Museum spending on Web services – as reported in 2005 – averages $35,000 per year, within a range of $8,000 to $500,000 (Bearman &amp; Trant, 2005) . Extrapolate the averages out generously across the estimated 17,500 museums in the United States and you get $612.5 million, a likely inflated figure for annual IT spending in the museum field. Gartner reports that the IT spending for the smallest vertical market they measure – agriculture, mining and construction – will be $25,805 million (http://www.slideshare.net/rsink/gartner-report-it-spending-2010).</li>
+            </ul>
+          </li>
+        </ul>
+<p>Armed with well-defined measures for success, the participants in collaborative development can demonstrate the success of specific collaborations. And in demonstrating the benefits brought about by the outcomes of specific collaborations, one can promote the growth of collaborative efforts in the field.</p>
+          <h2>What Are The Models For Creating Software?</h2>
+        <p>Software can be developed by individuals, but most often it is created by groups of people. Taking a look at the ways people work together to make software will aid the evaluation of the efforts in the museum world. In the business world, there are multiple models, and different variables that differentiate them. Key variables include the ways creators work together, the ways creators define permissions for the use of their creations, and the way creation efforts are sustained.</p>
+        <p>Groups of people, especially commercial enterprises, often make software for their own private use. Companies – vendors that derive their revenue from the sale of licenses for the use of software applications they create, most often with closed (or hidden) source code - have also long existed. In both of these scenarios, there are users and creators: rarely are these overlapping groups. It is interesting to discover that the licensing terms that dictate the non-creators’ (users’) use of the software and access to its source code are exclusively bound to the method of creation. In other words, software created by collaboration does not always carry an open source license.</p>
+        <p>Collaboration among individual people happens all the time in commercial software development, just mainly among employees of a single firm. But other kinds of collaboration – such as between creators and users – is not as common. This model of collaboration has been popularized by the open source movement. </p>
+          <h3>Collaborative Models</h3>
+<table>
+            <tbody><tr>
+              <th> </th>
+              <th>Creators (Vendors)</th>
+              <th>Users</th>
+            </tr>
+            <tr>
+              <td>Open source</td>
+              <td>Vendor-driven open source</td>
+              <td>User-driven open source</td>
+            </tr>
+            <tr>
+              <td>Closed source</td>
+              <td>Vendor-drive closed source</td>
+              <td>User-driven closed source</td>
+            </tr>
+          </tbody></table>
+          <p class="captionTable">Table 1: Collaborative Models of Software Creation</p>
+          <p>User-driven collaboration – or community sourcing – is a model of software creation that is proving itself useful to providing solutions for smaller vertical applications. When a community of users grows small enough, there will be no spontaneous developer community involvement at that scale, whether open or closed source. That’s where a community source approach becomes so important.</p>
+        <p>Community sourcing is a software development model that offers an alternative to the traditional vendor-driven commercial software paradigm, and a variation on the pure open source approach. The community is a group of users - often individuals from a group of participating institutions. Every aspect of the development process involves users, from gathering of requirements to final implementation. The approach provides the collaborating users the benefits of direct control, while mitigating the risk by sharing it across peer organizations.</p>
+        <p>In surveying the activity of software development across a number of fields, most notably higher education, we see that user-driven collaborations are emerging. The field of higher education has been involved in collaborative software open source development for close to a decade. In particular, the Andrew W. Mellon Foundation’s Research in Information Technology (RIT) program has made significant investments in community source software development over the past nine years, funding more than 50 projects in higher education, libraries and museums. Mellon estimates that 10-30 million people use this software daily (Mackie, 2009). Details about the Mellon RIT program are available on the Mellon’s site at <a href="http://www.mellon.org/grant_programs/programs/rit">http://www.mellon.org/grant_programs/programs/rit</a>. Today, the challenges for the creators, adopters and users is to discover what steps will ensure sustainability for these projects. This is the same challenge that creators of commercial close source software must also grapple with.</p>
+          <h2>Is Community Source a Good Model for Museums?</h2>
+          <p class="MsoBodyText">What does the community source model of collaborative software development offer the museum community? The greatest possible benefit would be software solutions that are both more affordable and better tailored to the fundamental needs of museums. Financial resources that might have been invested in a purpose-built solution for a single institution are leveraged to create a more ambitious, robust solution that will benefit many museums.  In addition to the more efficient use of financial resources, community source software also offers the potential to create a better product through the collaboration process itself. Having software users also serve as software developers also has an important impact on future sustainability. Those who helped build the software are more likely to remain connected to the project. </p>
+          <p class="MsoBodyText">The museum world has limited resources and common problems shared across institutions of all sizes. The shared solution offered by a community sourced effort should be attractive and logical for at least those museums which would otherwise lack the means to have access to any such solution.</p>
+          <p class="MsoBodyText">Collaboration is part of the museum world. Exhibitions get toured, collection objects get loaned, conferences and events around the world provide opportunities for the people working in museums to share ideas and experiences and engage in group efforts. Does this model of collaboration hold up in the development of technology? </p>
+          <p class="MsoBodyText">A challenge to collaboration between museum organizations is the highly hierarchical pattern of activity most often seen within individual museum organizations. Museums are used to operating in a hierarchy, with a vertical workflow. Collaborative software development often operates with less enforced hierarchy and involves risk-taking. We’ll discuss additional challenges and risks of community source software later in this paper. </p>
+          <h2>What are the Current Collaborative Development Efforts in the Museum Community? </h2>
+        <p>A small group of collaborative software development efforts are already underway in the museum world, and these provide a set of possible models, some of which are cast in the community source paradigm. It is important to provide some of the distinctions that characterize each of these current efforts, as this will help us evaluate possible variables for determining future success.</p>
+        <h3>Community-sourced efforts</h3>
+        <ol>
+          <li> Pachyderm (<a href="http://pachyderm.nmc.org/">http://pachyderm.nmc.org</a>)<br/>
+            A multimedia authoring tool for educators and museum staff.<br/>
+            <br/>
+            Pachyderm represents the earliest collaboratively developed open source project in the museum field and the most mature of all of the projects described in this paper (Samis and Johnson, 2005). It has been available as an open source project since 2007. </li>
+          <li>Steve (<a href="http://www.steve.museum/">http://www.steve.museum</a>)<br/>
+            Social tagging research and software for extending collections meta-data via public contributions (Trant, 2007).</li>
+          <li>Omeka (<a href="http://www.omeka.org/">http://www.omeka.org</a>)<br/>
+            A Web-based publishing solution for providing public online access to collections.</li>
+          <li>Collective Access (<a href="http://www.collectiveaccess.org/">http://www.collectiveaccess.org</a>)<br/>
+            Web-based collections management software.</li>
+        </ol>
+        <p>A few other projects are organized along the lines of the community source model, and are still in initial design or development of the actual software solutions.</p>
+        <ol>
+          <li>CollectionSpace (<a href="http://www.collectionspace.org/">http://www.collectionspace.org</a>)<br/>
+            Web-based collections management software.<br/>
+            <br/>
+            CollectionsSpace is the first specifically museum-oriented project funded by Mellon using the community source model that has been developed in higher education. </li>
+          <li>ConservationSpace (<a href="http://www.conservationspace.org/RIT.html">http://www.conservationspace.org/RIT.html</a>)<br/>
+            Conservation management software, in design phase. Likely to be a module of CollectionSpace.</li>
+          <li><em class="listwithnumbers">Fluid Engage</em> (<a href="http://www.fluidproject.org/projects/fluid-engage/">http://www.fluidproject.org/projects/fluid-engage/</a>)<br/>
+            Authoring toolkit for multimedia in-gallery, on-line and on mobile devices.</li>
+        </ol>
+        <p>A number of other projects are just getting underway – driven by an individual group (vendor or adopter) – that do or will offer open source software solutions and may evolve to foster a community-sourced model.</p>
+        <ol>
+          <li>Open Exhibits (<a href="http://www.openexhibits.org/">http://www.openexhibits.org</a>)<br/>
+            Authoring toolkit for multitouch-enabled in-gallery multimedia, applying for funding as this paper was completed.</li>
+          <li>Balboa Park On-line Collaborative (<a href="http://www.bpoc.org/">http://www.bpoc.org</a>)<br/>
+            A collaborative effort to create a range of technology tools including Drupal modules for museums.</li>
+          <li>GLAMKit (<a href="http://www.glamkit.com/">http://www.glamkit.com</a>)<br/>
+            Museum Web site framework, with support for public events, exhibitions, and collections, just reaching an initial release as this paper was completed.</li>
+        </ol>
+        <p>In learning about the established and nascent efforts listed above, we can observe:</p>
+          <ul>
+            <li>Community-sourced software represents a new trend in the museum field.</li>
+            <li>Significant financial and human resources are being invested in the development of diverse tools by a range of institutions. </li>
+            <li>These efforts often involve university partners and all are supported by external government or foundation funding.</li>
+            <li>There is only loose adoption and sustainability-related data about some early efforts. (More concrete lessons can be had from other fields such as higher education, performing arts, and the broader open source community.)</li>
+            <li>Most of these projects are so recent that the jury is still out on community-sourced software in the museum field. </li>
+          </ul>
+          <h3>Collaborative nature and funding of museum software projects</h3>
+        <table>
+    <tbody><tr>
+              <th>Project</th>
+              <th>Collaborative?</th>
+              <th>Grant Funding</th>
+            </tr>
+            <tr>
+              <td>Pachyderm<br/>
+                v2.1<br/>
+              <a href="http://pachyderm.nmc.org/">http://pachyderm.nmc.org</a></td>
+              <td>Since v2.0
+                v1.0 developed by SF MOMA</td>
+              <td>Institute for Museum and Library Services (IMLS)<br/>
+                $499,500</td>
+            </tr>
+            <tr>
+              <td>Steve<br/>
+                v2.0<br/>
+                  <a href="http://steve.nmc.org/">http://steve.nmc.org</a></td>
+              <td>Yes</td>
+              <td>IMLS<br/>
+                $503,550 (2006)<br/>
+                $955,000 for Steve in Action (2008)</td>
+            </tr>
+            <tr>
+              <td>Omeka<br/>
+                v1.1<br/>
+              <a href="http://omeka.org/">http://omeka.org</a></td>
+              <td>Initial single developer and an implementation partner</td>
+              <td>IMLS, Mellon Foundation<br/>
+                $249,817 (IMLS)<br/>
+                $50,000 (Mellon)</td>
+            </tr>
+            <tr>
+              <td>Collective Access<br/>
+                v0.55<br/>
+                <a href="http://www.collectiveaccess.org/">http://www.collectiveaccess.org</a></td>
+              <td>Yes</td>
+              <td>IMLS grant award to the American Museum of the Moving Image for   $150,000 part of which was for the development of OpenCollection, the   predecessor to Collective Access. </td>
+            </tr>
+            <tr>
+              <td>CollectionSpace<br/>
+                v0.3<br/>
+              <a href="http://www.collectionspace.org/">http://www.collectionspace.org</a></td>
+              <td>Yes</td>
+              <td>Mellon Foundation<br/>
+                $2,600,000 </td>
+            </tr>
+            <tr>
+              <td>Conservation Space<br/>
+                (in development)<br/>
+              <a href="http://www.conservationspace.org/RIT.html">http://www.conservationspace.org/RIT.html</a> </td>
+              <td>Yes</td>
+              <td>Mellon Foundation<br/>
+                $296,000</td>
+            </tr>
+            <tr>
+              <td>Fluid Engage<br/>
+                (in development)<br/>
+              <a href="http://www.fluidproject.org/projects/fluid-engage/">http://www.fluidproject.org/projects/fluid-engage/</a></td>
+              <td>Yes</td>
+              <td>Mellon Foundation<br/>
+                $2,500,000 (for entire Fluid project of which Fluid Engage forms a part)</td>
+            </tr>
+            <tr>
+              <td>GLAMKit<br/>
+                 (in development)<br/>
+                 <a href="http://www.glamkit.com/">http://www.glamkit.com</a></td>
+              <td>Initial single developer</td>
+              <td>None </td>
+            </tr>
+            <tr>
+              <td>Open Exhibits<br/>
+                (seeking funding)<br/>
+              <a href="http://www.openexhibits.org/">http://www.openexhibits.org</a></td>
+              <td>Initial single developer</td>
+              <td>Seeking funding from National Science Foundation</td>
+            </tr>
+            <tr>
+              <td>Balboa Park Online Collaborative<br/>
+                (in development)<br/>
+                <a href="http://www.bpoc.org/">http://www.bpoc.org</a></td>
+              <td>Yes </td>
+              <td>Legler Benbough Foundation, Google AdWords Grant<br/>
+                $3,100,000 (Benbough)<br/>
+                $375,000 (Google Adwords)</td>
+            </tr>
+            <tr>
+              <td>Art Babble<br/>
+                v1.0<br/>
+                <a href="http://www.artbabble.org/">http://www.artbabble.org</a></td>
+              <td>Single developer</td>
+              <td>Ball Brothers Foundation<br/>
+                $50,000</td>
+            </tr>
+          </tbody></table>
+          <p class="captionTable">Table 2: Collaborative nature and funding of museum software projects</p>
+          <h3>Museum software project participating organizations          </h3>
+          <table>
+            <tbody><tr>
+              <th>Project</th>
+              <th>Institutions</th>
+            </tr>
+            <tr>
+              <td>Pachyderm<br/>
+                v2.1<br/>
+                <a href="http://pachyderm.nmc.org/">http://pachyderm.nmc.org</a></td>
+              <td>New Media Consortium, San Francisco Museum of Modern Art (SFMOMA),   Metropolitan Museum of Art, Cleveland Museum of Art, Fine Art Museum of San   Francisco, California State University Center for Distributed Learning,   University of Arizona, Case Western Reserve University, University of   Calgary, DesignWorlds for Learning</td>
+            </tr>
+            <tr>
+              <td>Omeka<br/>
+                v1.1<br/>
+                <a href="http://omeka.org/">http://omeka.org</a></td>
+              <td>Center for History and New Media at George Mason,   Minnesota Historical Society</td>
+            </tr>
+            <tr>
+              <td>Steve<br/>
+                v2.0<br/>
+                <a href="http://steve.museum/">http://steve.museum</a><br/>
+                  <a href="http://steve.nmc.org/">http://steve.nmc.org</a></td>
+              <td>Phase I: Indianapolis Museum of Art, Cleveland Museum of Art, Denver   Art Museum, Guggenheim Museum, Metropolitan Museum of Art, Minneapolis   Institute of Art, Rubin Museum of Art, SFMOMA, 
+                Steve in Action: New Media Consortium, Blanton Museum of Art, Dallas Museum of   Art, Denver Art Museum,  Indianapolis Museum of Art, Los Angeles County Museum of Art,   University of California Los Angeles, Metropolitan Museum of Art, Minneapolis   Institute of Arts,   Minnesota Digital Library McNay Art Museum, SFMOMA, Rubin Museum of Art,   Walker Art Center </td>
+            </tr>
+            <tr>
+              <td>CollectionSpace <br clear="all" style="page-break-before:always;"/>
+                v0.3<br/>
+                <a href="http:// www.collectionspace.org/">http://
+                www.collectionspace.org</a></td>
+              <td>Museum of the Moving Image, UC Berkeley, University   of Cambridge, University of Toronto</td>
+            </tr>
+            <tr>
+              <td>Conservation Space<br/>
+                (in development)<br/>
+                <a href="http://conservationspace.org/RIT.html">http://conservationspace.org/RIT.html</a></td>
+              <td>Yale University<br/>
+                Individual project advisors from National Gallery of Art, Washington, Art   Institute of Chicago. Metropolitan Museum of Art, British Museum, Getty   Research Institute, Rochester Institute of Technology</td>
+            </tr>
+            <tr>
+              <td>Fluid Engage<br/>
+                (in development)<br/>
+                <a href="http://www.fluidproject.org/projects/fluid-engage/">http://www.fluidproject.org/projects/fluid-engage/</a></td>
+              <td>University of Toronto, Detroit Institute of Arts,   McCord Museum of Canadian History, Museum of the Moving Image, Open University   of Catalonia, Simon Fraser University, University of Colorado</td>
+            </tr>
+            <tr>
+              <td>GLAMKit<br/>
+                (in development)<br/>
+                <a href="http://glamkit.com/">http://glamkit.com</a></td>
+              <td>Interaction Consortium</td>
+            </tr>
+            <tr>
+              <td>Open Exhibits<br/>
+                (seeking funding)<br/>
+                <a href="http://www.openexhibits.org/">http://www.openexhibits.org</a></td>
+              <td>Ideum, Institute for Learning Innovation, Don   Harrington Discovery Center, Maxwell Museum of Anthropology, New Mexico   Museum of Natural History and Science</td>
+            </tr>
+            <tr>
+              <td>Balboa Park Online Collaborative<br/>
+                (in development)<br/>
+                <a href="http://www.bpoc.org/">http://www.bpoc.org</a><a href="http://www.bpoc.org/"></a> </td>
+              <td>17 museums in Balboa Park</td>
+            </tr>
+            <tr>
+              <td>Collective Access<br/>
+                v0.55<br/>
+                <a href="http://www.collectiveaccess.org/">http://www.collectiveaccess.org</a><a href="http://www.collectiveaccess.org/"></a> </td>
+              <td>Whirl-i-gig, Deutsche Kinemathek, Museum of   the Moving Image (original partner)</td>
+            </tr>
+            <tr>
+              <td>Art Babble<br/>
+                v1.0<br/>
+                <a href="http://www.artbabble.org/">http://www.artbabble.org</a></td>
+              <td>Indianapolis Museum of Art</td>
+            </tr>
+          </tbody></table>
+        <p class="captionTable">Table 3: Museum software project participating institutions</p>
+          <h2>What Are Other Models for the Development of Shared Tools?</h2>
+        <p>There is room in the museum field for multiple approaches to software development, and no single model is appropriate for every project. Different types of projects will be better suited to some development approaches more than others. Community Source Software is only one potential route to software development in the museum field. Tools can also be developed by a single institution and shared with the community.</p>
+        <p>Tools developed by a single museum and then shared with the larger community can be very successful.  ArtBabble (<a href="http://www.artbabble.org/">www.artbabble.org</a>) is representative of this type of project. ArtBabble is an on-line video platform for museums developed by the Indianapolis Museum of Art andthat launched in April 2009. The goal of ArtBabble is to provide a single on-line portal for high-quality video about art. Currently 22 partners contribute video to the site. The site is supported by the IMA through grant funding. ArtBabble is open access rather than open source. There is no fee for participation, but the IMA has not released the source code. </p>
+        <p>In this case, collaboration happens not in the development of software, but in the implementation of the platform. The success of ArtBabble will depend in part on a robust and growing community of partners contributing content to the platform. ArtBabble highlights an issue that is generally true in the ecosystem of community source and shared software: success and long-term sustainability depends upon both software producers and software consumers (these groups are not mutually exclusive; in fact, community source software assumes they overlap).</p>
+          <h2>Why Not Build On Larger Community-Driven Projects Like Drupal With Museum-Specific Extensions? </h2>
+        <p>One of the major advantages of open source software is the opportunity it offers to leverage the work of the larger community.  For example, the Drupal community is one of the largest and most dynamic with a large and growing community of developers contributing thousands of modules back to the Drupal community. Can the museum community build on larger community-driven projects, like Drupal, and add museum-specific modules to these platforms? </p>
+        <p>The Balboa Park On-line Collaborative (<a href="http://www.bpoc.org/">www.bpoc.org</a>) is proposing to do exactly this. BPOC was created to change the way museums in Balboa Park approach the use of on-line technology, and the collaborative is currently working with 20 Balboa Park museums on a range of projects.  BPOC will be deploying Drupal as the baseline content management system and developing modules for event calendars, collections and on-line transactions.</p>
+        <p>BPOC is not alone in looking to Drupal. Dozens, if not hundreds, of museums have built or are building Web sites in Drupal. But BPOC is unusual in their plan to contribute their Drupal modules back to the community; very few museums contribute their code back to the community. Why is this? </p>
+        <p>There is the practical need to support and update the module. Bryan Kennedy, Exhibit Project Leader at the Science Museum of Minnesota and a Drupal developer, observed that if you’re going to contribute code back to the community, you also need to be “a responsible member of the community,” updating the module and addressing support issues with your contributed code (B. Kennedy, personal communication February 10, 2010). This can pose a challenge if there is a perception within the museum that staff shouldn’t be spending time on contributing code back to the open source community.  </p>
+        <p>This kind of sharing is not part of museum culture. A small number of museums have contributed code back to the larger open source community but there is little cultural expectation or institutional pattern within museums to support this process. </p>
+        <p>To be sure, contributing code back is not the only way to participate in the community. There is extensive informal sharing of information with museum staff serving as resources for each other via personal communication, list servs and industry conferences. We would advocate for greater visibility of the Drupal community within the museum community, perhaps through a users’ group under the umbrella of an existing organization such as Archives &amp; Museum Informatics or Museum Computer Network. More extensive sharing between museums will likely require active promotion by a group of museums or a larger museum organization.</p>
+          <h2>Do Museums Need Partner Organizations to Succeed in Software Development? If So, Who? </h2>
+        <p>A small handful of museums have the technical expertise, capacity and resources to take on the development of large complex software development projects independently, but they are the exception.   </p>
+          <h3>Funders </h3>
+        <p>All of the major software development projects that we explored for this paper have external funding from private foundations (Mellon, Hewlett and local foundations) and government funders such as Institute for Museum and Library Services (IMLS) and the National Science Foundation (NSF). The funding organizations make these large-scale development efforts possible. They bring the most significant direct financial resources to the table, but they have short term or limited involvement with the project, usually not more than a three-year-funding-cycle. The Mellon Foundation, in particular, had been focused on funding projects that are independent and sustainable following initial development, and they do not play a role in housing the projects following development.  </p>
+          <h3>Universities</h3>
+        <p>Universities are frequent partners with museums in large software development projects. Why might universities be good partners for museums in technology projects? </p>
+          <ul>
+            <li>Shared interest: Universities have collections, creating a shared need with museums</li>
+            <li>Universities have information technology resources and expertise lacking in the museum field. Institutions of higher education are far more likely than museums to have IT developers on staff. Partnering with universities in collaborative development projects enables museums to ‘borrow’ that technical expertise. </li>
+            <li>Universities have access to low-cost project labor (students); that creates greater economies for software development. </li>
+            <li>Technology design and development is part of the mission for some University research centers, and as a result they often have additional capacity.</li>
+          </ul>
+        <p>In the case of the Omeka (<a href="http://www.omeka.org/">http://www.omeka.org</a>) project, the Center for History and New Media at George Mason serves as the project’s lead developer. Omeka is housed at CHNM, which has a long term interest in supporting the project. CHNM plans to offer a hosted version of Omeka beginning in 2010, offering an additional level of service to Omeka users. Providing hosted accounts and support will provide CHNM with a revenue stream for the project ,but supporting a growing community of users may be challenging for the university over the longer term. </p>
+          <h3>Professional Organizations</h3>
+        <p>The New Media Consortium (<a href="http://www.nmc.org/">http://www.nmc.org/</a>), a professional organization serving learning-focused organizations including universities, museums and research centers; it serves as the home for the Pachyderm and Steve in Action projects. NMC works with educational organizations to acquire grant funding and support projects during the grant period. Until recently, NMC also hosted Pachyderm accounts through Pachyderm services, but NMC does not have an active technical support team.</p>
+          <h2>What Lessons Can Museums Learn From Other Industries? </h2>
+          <h3>Open source community</h3>
+        <p>For those who question the viability of open source technology solutions, the larger open source community offers many examples of highly successful projects (such as Apache, Linux, Mozilla and Drupal) with significant market share, widespread adoption and thriving communities. Museums are already consumers of many of these open source technologies. For the purposes of this paper, we are more interested in what these projects can (or cannot) offer museums as a model for collaborative software development. The projects listed above are characterized by large decentralized volunteer developer communities creating software with broad general application. This model succeeds through an aggregation of will rather than an aggregation of resources. The large active community drives software development through repeated iteration. Scale is critical to the success of this model. </p>
+        <p>The museum industry is too small to support this community volunteer model for the development of museum-specific software. </p>
+        <p>However, on a more general level, the principles of openness, collaboration, and community that characterize the open source community are important guideposts for museums.</p>
+          <h3>Higher education</h3>
+        <p>Two recent higher education projects funded by the Mellon Foundation, Kuali and Sakai, provide useful examples of Community Source model for collaborative software development. Sakai and Kuali were developed by groups of collaborating universities.  Both have now made the transition from grant-funded project to self-sustaining product. In both cases, governance is provided through a nonprofit software foundation which provides structure, support, a “home” for the code and a revenue stream for ongoing software development. </p>
+          <h4>Sakai</h4>
+          <p class="MsoBodyText">Sakai (<a href="http://www.sakaiproject.org/">www.sakaiproject.org</a>) is an open source Learning Management System that competes with products like Blackboard and Moodle. Sakai is used in 160 educational institutions, in production settings ranging from 200 to 200,000 users (<a href="http://sakaiproject.org/whos-using-sakai">http://sakaiproject.org/whos-using-sakai</a>).</p>
+          <p class="MsoBodyText">Anyone can download and use the software, but the Sakai Foundation also has a membership structure for academic institutions, non-profits and commercial organizations. Membership in the Sakai Foundation is optional. The Sakai Web site explains that the 120 members “provide the intellectual, human and financial capital necessary to support both the foundation and the work of the community.”  Specifically, members “participate in foundation governance; help determine priorities for the community; and work cooperatively in every phase of Sakai&#39;s software production process” (<a href="http://sakaiproject.org/sakai-partners-program-becoming-member-foundation">http://sakaiproject.org/sakai-partners-program-becoming-member-foundation</a>). Annual membership fees range from $5,000 to $10,000 for universities, based on size of student enrollment, and from $2,000 to $10,000 for commercial affiliates, based on annual revenue (<a href="http://sakaiproject.org/sakai-partners-program-becoming-member-foundation">http://sakaiproject.org/sakai-partners-program-becoming-member-foundation</a>). As of 2007, colleges, universities, and commercial firms were contributing $1 million annually to the Sakai Foundation and even greater resources in staff time through collaborative community work (Wheeler, 2007). Sakai has 13 commercial affiliates who provide consulting and support services for Sakai customers in addition to contributing to foundation revenue.  </p>
+          <h4>Kuali</h4>
+        <p>Kuali (<a href="http://www.kuali.org/">http://www.kuali.org/</a>) develops community source enterprise software systems for higher education. Kuali applications include  Kuali Financial Systems, enterprise resource planning (ERP) software; Kuali Coeus, a research administration system; and Kuali OLE (On-line Library Environment), a library management system. The Kuali Financial Systems project was begun in 2004, and the first major deployments launched in 2009. There are currently five major deployments of Kuali Financials with more in development by Kuali’s 33 member institutions. </p>
+        <p>Like Sakai, Kuali funds ongoing development in part through membership in the Kuali Foundation.  Annual membership dues for universities and commercial members range from $4,500 to $24,500 based upon annual budget. (<a href="http://www.kuali.org/membership">http://www.kuali.org/membership</a>). Members are also encouraged to contribute staff time to Kuali Foundation projects. Kuali also has 10 commercial affiliates that offer service and support for Kuali deployments.</p>
+          <h4>Lessons learned from higher education </h4>
+          <p class="MsoBodyText">The higher education community has learned some important lessons about what works and doesn’t work in collaborative software development.  Kuali and Sakai are two of the most mature examples of community source software in higher education, and they reflect the lessons learned from previous projects. An early effort, the Open Source Portfolio Initiative (OSPI), followed the model of classic open source, assuming that “if we build it, they will come.”  They didn’t. MIT and members of the Coeus consortium for research administration software realized that while MIT was well-suited to being the software developer, they were not the ideal choice to be the software vendor. DSpace has seen widespread adoption of its software, but it has had difficulty recruiting members of the community to actively contribute to the software (Wheeler, 2007).   </p>
+          <h3>What can the museum field take away from the experience of higher education? </h3>
+          <h4>A core model</h4>
+        <p>There is a core model for how to coordinate, scale and sustain collaborative software development. It includes the following:  </p>
+          <ul>
+            <li>A group of partners who commit resources to the project</li>
+            <li>Well-defined project roles and responsibilities for decision making</li>
+            <li>External funding </li>
+            <li>Copyright for the software signed over to the project or foundation </li>
+            <li>Date-driven delivery schedule, usually 10 to 30 months</li>
+            <li>Transition from an investor-driven project to a community and a foundation. Today many projects in higher ed begin life within an existing foundation. </li>
+          </ul>
+          <h4>Building community is more than half the work</h4>
+        <p>Brad Wheeler, the Chief Information Officer for Indiana University and a leading proponent of community source software, observes that, </p>
+          <p class="BlockQuote">Developing enterprise-quality software alone is hard, developing it with the help of a distributed community is really, really hard. Building a sustainable community to support it is even harder but doing so is essential for any real confidence of adoption and of access to the motivating economics of the endeavor  (<em>Wheeler, 2007</em>).  </p>
+        <p>Jim Spadaccini of Ideum echoed this sentiment, commenting that the process of collaborating on Open Exhibits software is “as much about building community as building software” (J.Spadaccini, Personal Communication February 1, 2010). The “community” in community source software is the community that supports and sustains the software, not just those who are on the initial development team. Building this community is challenging, and it requires resources and commitment at the beginning of the project.  </p>
+          <h4>Sustainability </h4>
+        <p>A model for sustainability is critical to the long-term success and adoption of the software. Who will continue to develop and iterate the software following the end of initial grant funding? How will the software continue to evolve and thrive? As we have observed, traditional open source approaches to development and sustainability do not work well in smaller vertical markets like higher education and museums.</p>
+          <h4>A diverse ecosystem that includes commercial providers</h4>
+        <p>The long-term success of community source software, and indeed of any collaboratively developed software, depends upon a robust ecosystem of software producers, software consumers and vendors who provide support. Adoption of the software depends, in part on the availability of vendors who provide implementation, service and support. This is particularly critical in the museum field where technical resources are so scarce. In higher education, the vendor community has responded to the availability of community source software with bundled service offerings and solutions that provide more turnkey options for deploying the software. One commercial affiliate for Kuali and Sakai, rSmart ,offers a fully packaged, tested and supported distribution of the Sakai software. This is a familiar model from the open source community:  rSmart distributes and supports Sakai and Kuali in much the same way that RedHat™ distributes and supports the Linux™ operating system.</p>
+        <p>One of the benefits of open source software is that it “unbundles ownership of the intellectual property (the software) and support for it”, offering organizations options for support in a competitive marketplace of vendors and service providers (Wheeler 2007). But this benefit depends upon a healthy ecosystem of vendors and service providers. </p>
+          <h4>How Are Museums Different From Higher Education? </h4>
+          <p class="MsoBodyText">Museums can learn a lot from the experience of higher education in developing community source software. However, the museum and university markets are different. The U.S. higher education market is worth $260 billion a year (Collins 2002) while the museum market is a fraction of this at $13 billion a year (<a href="http://www.firstresearch.com/industry-research/Museums-Zoos-and-Parks.html">http://www.firstresearch.com/industry-research/Museums-Zoos-and-Parks.html</a>). The museum market may not be large enough to sustain the same types of models that work in higher education. This underscores the need for an effective model for sustainability that reflects the culture, technical capabilities and financial realities of museums.</p>
+          <h4>Performing Arts</h4>
+        <p>Tessitura™ (<a href="http://www.tessituranetwork.com/">www.tessituranetwork.com</a>) provides an unusual example of software developed by a nonprofit cultural organization that has been successfully shared with the community. </p>
+          <p class="MsoBodyText">Tessitura is software for ticketing, box office operations, customer relationship management, list management and fundraising. Tessitura users are primarily in the performing arts industry but also include museums, governments and universities. Tessitura was originally developed by the Metropolitan Opera in 1998. The Opera’s Board did not want to sell-off the intellectual property, but they felt it was outside the Opera’s mission to support and sell software, so a non-profit cooperative was formed in 2001.  </p>
+          <p class="MsoBodyText">Tessitura Network member organizations pay annual dues based on their size. Dues cover support, annual software upgrades, documentation and education. License holders make up the Board of the organization and play a role in the future direction of the software. </p>
+          <p class="MsoBodyText">Tessitura is closed source software and as the vendor of a closed source product, Tessitura operates on a fundamentally different model from an open source organization. In some ways, Tessitura operates much like a commercial vendor. It has a professional staff that provides a range of consulting, implementation, support, product development, marketing and business development services to its target market. However, Tessitura operates for the benefit of its members, not for the profit of external investors and shareholders.   </p>
+          <p class="MsoBodyText">While Tessitura wasn’t originally developed collaboratively, it does represent one successful model for collaborative management and distribution of software (including ongoing development). By the measure of adoption and size of community, Tessitura is very successful. License and sublicense holders have grown from 7 in 2001 to 275 in early 2009. Attendance at the Tessitura users’ group conference also provides a good benchmark for Tessitura’s increasing popularity and active adoption. The first conference in 2001 had 32 attendees, while more than 1000 people attended the 2008 conference. </p>
+          <h2>What Are the Risks and Challenges of Collaborative Development? </h2>
+          <p class="MsoBodyText">The potential benefits of collaborative software development are enormous: new software tools; software that is better and cheaper than current alternatives; and opportunities to learn from our museum, university and library colleagues.  But collaborative software development also brings with it considerable risks and challenges.</p>
+          <p class="MsoBodyText">Chief among these challenges is the difficulty of collaboration itself. As Sayre and Dowden note in their discussion of the new ArtsConnectED site, the difficulty of collaborating across multiple institutions should not be underestimated (Sayre and Dowden, 2009). </p>
+          <h3>Challenges of collaboration </h3>
+        <p>What are the major challenges of collaboration?</p>
+          <ul>
+            <li>Determining roles and decision-making responsibilities. This is a challenge with any large project, but it is multiplied with a collaborative effort. </li>
+            <li>Differing project goals. This can be managed to the benefit of the project, but it adds a level of complexity to the effort. </li>
+            <li>Differing levels of technical expertise, time commitments and approach to the project. Having partners with different levels of technical expertise may be inevitable in the museum community; in fact, it may be one of the motivations behind the collaboration. </li>
+            <li>Risk of personnel changes during a project.</li>
+            <li>Different organizational cultures. Discrepancies in organizational culture can be particularly challenging when collaborating across types of institutions. Working with academic research centers, there may be less importance placed on working software; university designers or developers may not fully understand museum working processes, data or visitors. Lack of technical expertise on the museum side can lead to miscommunication. </li>
+          </ul>
+          <h3>Development timelines driven by grant funding</h3>
+        <p>Development timelines for large community source projects are often aggressive, and they are driven by the availability of external funding and timelines imposed, to some degree, by funders. Open source projects often take considerable time and iteration to achieve a level of software maturity and market adoption. Does the community source software model allow for sufficient software iteration before the end of the funding? (R. Stein, personal communication, January 28, 2010). If the software isn’t ready for general release when the grant ends, the project is at considerable risk. </p>
+          <h3>Forking the software</h3>
+        <p>The flexibility of community source software carries with it the risk of “forking” the software and having it develop too many blind alleys. There is a strong need for balance between the demands of the marketplace for specific new features and managing the integrity of the core software (Wheeler, 2007).</p>
+          <h3>Resistance to developing shared tools </h3>
+          <p class="MsoBodyText">There may be resistance in the museum community to developing shared tools and contributing software back to the larger community. Josh Greenberg, Director of Digital Strategy at the New York Public Library challenges the assumption that “sharing is culturally familiar” in libraries, museums and similar institutions (J. Greenberg, personal communication, February 8, 2010). Several people we spoke with echoed this perspective. There can be a surprising amount of competitiveness between cultural heritage organizations even if they are not actually competing for visitors. Greenberg argues for greater “institutional humility”, greater focus on how we are similar to each other and less focus on “we are a unique snowflake” position that highlights the details of the different ways we handle our data.  Greenberg sees shared open source platforms as one place where that can play out.</p>
+          <h3>What’s required for long-term success? What should we be looking for as these projects evolve?</h3>
+          <p class="MsoBodyText">What is needed for self-sustaining software that successfully makes the transition from grant-funded project to independent community-supported product and beyond?  </p>
+          <h3><em>A community of support with a diverse ecology of contributors including software producers, software consumers and vendors/service providers.</em></h3>
+        <p>The vendors and consultants who have a business interest in responding to RFPs and who offer implementation and support services are key to driving adoption. Greater adoption will provide greater resources for future development. This is essential in a small vertical market.</p>
+          <h3><em>A foundation, consortium or coordinating body that provides a ‘home’ for the software. </em></h3>
+          <p class="MsoBodyText">To be sustainable, these new software efforts must ultimately find a home in a governing nonprofit environment. There is a case for having a coordinating body that is separate from the individual museums, universities or commercial developers who originally created the software. This organization could be new or a branch of an existing organization. There may even be opportunities for museums to partner with the existing foundations that support software projects in higher education. This organization could be supported by a revenue stream from members and commercial affiliates. It needs to have sufficient technical expertise to serve as the coordinating body for future software development. The organization would not solely be a governing body for collaboratively-developed software, but it could also be a communication and sharing agent and an arena for sharing information about less formal software development initiatives in the community. </p>
+          <h3>Building technical capacity in museums </h3>
+          <p class="MsoBodyText">Many museums, particularly smaller institutions, may not be able to use available open source tools because of lack of equipment, media production resources and in some cases, awareness of the availability of low-cost or free software tools. Adoption of open source software, by smaller museums in particular, may also require additional support. </p>
+          <p class="MsoBodyText">The Edward and Betty Marcus Digital Education Project for Texas Art Museums supported 39 museums in Texas in developing multimedia educational interactives using the open source tool Pachyderm. The Marcus Foundation Project provided the museums with Pachyderm software training and support, training and support in creating digital media, and hardware for media production including video cameras, microphones and laptops. In this case, the opportunity to use open source software required the building of organizational capacity in content and media creation. A participant in the Marcus Foundation Project, Pei-San Brown from Ballet Austin observed that, “We have acquired the capability to create beautiful, media-rich, user-friendly educational interactives that we otherwise would not have been able to produce and could not afford to outsource” (Marcus Collection 2009).  </p>
+          <h3>Buy-in from leadership at large museums</h3>
+        <p>Senior leadership at universities needed to be convinced that open source and community source software represent a viable alternative to commercial software (Courant and Griffiths, 2006). A similar case will need to be made to the leadership of the major museums. If collaboratively developed software is to be successful, it will depend in part on making the business case for the value of shared open source software to museum leadership. The experience of AMICO suggests that museums will pay service fees for offerings they perceive as valuable (J. Trant, personal communication February 4, 2010). But this will require a clear understanding of the benefits of shared software and a willingness to commit museum resources to the effort. </p>
+        <h2>Acknowledgements</h2>
+          <p class="AcknowedgementsText">We could not have written this paper without the generous input of our colleagues in the museum field. In preparing this paper we interviewed Rich Cherry, Susan Chun, Carl Goodman, Josh Greenberg, Bryan Kennedy, Scott Sayre, Tom Scheinfeldt, Jim Spadaccini, Angela Spinazze, Rob Stein, Jennifer Trant, Greg Turner and Rachel Varon. We are grateful to Carrie Davenport Anderson for extensive research, interview transcription and extended discussions about the substance and structure of the paper. All errors are our own.        </p>
+        <p><strong>References</strong></p>
+          <p class="ReferencesText"> Bearman, D. and J. Trant (2005). Survey of museum web implementations. Archives &amp; Museum Informatics, published on-line March 2006. Accessed February 8, 2010. available <a href="http://www.archimuse.com/ research/mwbenchmarks/report/mwbenchmarks2005.html">http://www.archimuse.com/ research/mwbenchmarks/report/mwbenchmarks2005.html</a></p>
+          <p class="ReferencesText">Collis, D. J. (2002). “New business models for higher education”. In S. Brint (Ed). <em>The future of the city of intellect: the changing American university</em>. Palo Alto, Calif.: Stanford University Press, 181-202. consulted February 10, 2010. <a href="http://net.educause.edu/ir/library/pdf/ffpiu0006.pdf"><span class="MsoHyperlink">http://</span>net.educause.edu/ir/library/pdf/ffpiu0006.pdf</a></p>
+          <p class="ReferencesText">Courant, Paul N. and Rebecca J. Griffiths (2006, July 26). Software and collaboration in higher education: a study of open source software. Consulted December 23, 2009. <a href="http://www.ithaka.org/about-ithaka/announcements/ooss-study-final-report">http://www.ithaka.org/about-ithaka/announcements/ooss-study-final-report</a></p>
+          <p class="ReferencesText"> Dowden, R., and S. Sayre. “Tear down the walls: the redesign of Arts ConnectEd”. In D. Bearman and J. Trant (eds). <em>Museums and the Web 2009: Proceedings</em>. Toronto: Archives &amp; Museum Informatics, 2009. Last updated April 28, 2009, consulted January 29, 2010. <a href="http://www.archimuse.com/mw2009/papers/dowden/dowden.html">http://www.archimuse.com/mw2009/papers/dowden/dowden.html</a></p>
+          <p class="ReferencesText">Mackie, C.J. (2009, June 1). Doing more with less: the crisis, cooperation, and the library. NELIENT Annual Conference, Devens, MA. <a href="http://www.slideshare.net/kramsey/doing-more-with-lessthe-crisis-cooperation-and-the-library">http://www.slideshare.net/kramsey/doing-more-with-lessthe-crisis-cooperation-and-the-library</a></p>
+          <p class="ReferencesText">Marcus collection catalogue: The Edward and Betty Marcus Digital Education Project for Texas Arts Museums, 2009. <a href="http://www.nmc.org/publications/marcus-catalogue">http://www.nmc.org/publications/marcus-catalogue</a></p>
+          <p class="ReferencesText"> Samis, P. and L. Johnson (2005). “Taking teaching by the tusks: introducing Pachyderm 2.0”. In D. Bearman and J. Trant (eds). <em>Museums and the Web 2005: Proceedings</em>. Toronto: Archives &amp; Museum Informatics, 2005. Consulted January 23, 2009. <a href="http://www.arhimuse.com/mw2005/papers/samis/samis.html">http://www.archimuse.com/mw2005/ papers/samis/samis.html</a></p>
+          <p class="ReferencesText">Trant, J., et al. (2007).  “The eye of the beholder: steve.museum and social tagging of museum collections”. In D. Bearman and J. Trant (eds.) <em>International Cultural Heritage Informatics Meeting (ICHIM07): Proceedings</em>. Toronto: Archives &amp; Museum Informatics, 2007. Consulted January 29, 2010. <a href="http://www.archimuse.com/ichim07/papers/trant/trant.html">http://www.archimuse.com/ichim07/papers/trant/trant.html</a></p>
+          <p class="ReferencesText">Wheeler, B. (2007). “Open source 2010: reflections on 2007”. <em>EDUCAUSE Review, </em>vol. 42, no. 1, 148–67. Consulted February 4, 2010. <a href="http://www.educause.edu/EDUCAUSE+Review/%20EDUCAUSEReview%20MagazineVolume42/OpenSource2010Reflectionson200/158109">http://www.educause.edu/EDUCAUSE+Review/ EDUCAUSEReview MagazineVolume42/OpenSource2010Reflectionson200/158109</a>. </p>
+<p> </p>
+<!-- InstanceEndEditable --> </div>
+      
+        			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->Wilde, E., and L. Mann, Open Source Collaboration: New Models for Technology Development in the Museum Community<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2010: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2010. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date  based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2010/papers/<!-- #BeginEditable "URL" -->wilde/wilde.html
+				 <!-- #EndEditable --></p>
+	</div>
+  </div>

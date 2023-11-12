@@ -1,0 +1,547 @@
+<div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+        <h2 class="Author"><a href="../../bios/au_435014643.html">Frankie Roberto</a>, Science Museum, United
+          Kingdom</h2>
+        <p class="URL"><a href="http://www.museum-collections.org/">http://www.museum-collections.org/</a></p>
+        <h3 class="AbstractTitle">Abstract</h3>
+        <p class="AbstractText">Any museum professional will tell you
+    that collections are at the heart of what a museum is about. With collection
+    sizes typically too large to have everything on display at once, museum Web
+    sites have often been called upon to help provide greater access to museum
+    objects. The approach, though, is typically one of depth rather than breadth,
+    focusing on highlighted objects and curated themes. This can deliver great
+    educational content - but how might you build a Web site to represent the
+    collections of a museum as a whole?</p>
+  <p class="AbstractText">The
+    paper sets out to answer this question by way of original research and
+    experimentation on real data sets of museum objects, obtained from a number of
+    UK museums by way of a Freedom of Information request. These data sources are
+    roughly hewn together - a technical and semantic challenge that&#39;s briefly
+    explained - to form a single, enormous database.The
+    result is a prototype Web   site employing a fresh approach to viewing museum
+    collections on-line, eschewing details in favour of high-level overviews and
+    visualisations, incorporating user annotations and revealing insights into the
+    histories of museum collecting. The &#39;who&#39;, &#39;what&#39;, &#39;where&#39; and &#39;whens&#39; of
+    objects are all examined in turn as axis for understanding and grouping
+    collections, with the &#39;why&#39; left open for interpretation and comments.</p>
+  <p class="AbstractText">Looking forward, the paper asks how  
+    museum objects might fit into a &#39;web of data&#39;, where  collections from
+    different museums can be compared with each other, and perhaps even with
+    private and personal  collections. </p>
+  <p class="keywords"> Keywords: on-line collections, social
+    software, quantitative analysis, data visualisation</p>
+	  <!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+  <h1>Introduction</h1>
+  <p>A stereotypic description of what&#39;s inside
+    museums might be &#39;things in glass cases&#39;. Whilst many museums now contain far
+    more than this, delivering an experience that encompasses a whole range of
+    presentational devices to tell compelling stories, the collection and display
+    of historic objects is nonetheless still at the heart of what museums
+    are about.</p>
+  <p>Something that&#39;s well known amongst museum staff, but less
+    well known to the general public, is the scale of museum objects not on public
+    display. Percentages of 10% or less aren&#39;t uncommon, and the sheer size of
+    reserve collections can be pretty staggering. At the Science Museum, for
+    instance, despite having  60,000 square metres of floor space, there&#39;s still a
+    need for two separate off-site object storage facilities. The first is Blythe
+    House, a huge building that used to be HQ for the Post Office Savings scheme,
+    with over 90 rooms of objects. The second is even bigger, an ex RAF air base, where
+    airplane hangars have been converted into huge warehouse-sized storerooms for
+    museum objects. Together with the museum, these locations hold over 300,000
+    objects.</p>
+  <p>As storing vast quantities of objects that nobody knows
+    about could be considered a waste of time (and considerable expense), museums
+    typically embark upon schemes to give greater access to this untapped
+    collection of objects. These can include public tours of the storage facility,
+    or temporary exhibitions operating a kind of squad rotation to put different
+    objects on public display. A third way, though, is to offer some kind of
+    Web-based &#39;access&#39;, which has the advantages of infinite capacity and
+    potentially world-wide reach.</p>
+  <p>There seem to be two approaches to producing
+    collection-based Web sites, both of which will be familiar to the museum
+    professional. The first approach is to focus upon interpreting a modest number
+    of objects, using curated themes and rich-media to tell stories and deliver
+    educational outcomes. Examples of this kind of work from my institution are
+    Ingenious (<a href="http://www.ingenious.org.uk/">http://www.ingenious.org.uk</a>), Making the Modern World
+    (<a href="http://www.makingthemodernworld.org.uk/">http://www.makingthemodernworld.org.uk</a>), and an upcoming project, internally
+    called &#39;Sickness and Health&#39;.</p>
+  <p>The second approach is to transfer a museum&#39;s internal collections
+    records into a Web site. This is usually only practical if the records are held
+    in an electronic format, and of course you can only publish the data that you
+    have ­– and that data may not extend to photographs and well-written
+    descriptions of every object. Nevertheless, the result can be a valuable
+    resource. Usually the primary user interface is a search box, and the primary
+    use is for research purposes. It can be possible to enable a more
+    browsing-based interaction, and even serendipitous experiences (see Chan 2007).</p>
+  <p>The root of the research that the rest of this paper
+    explores, however, comes from an observation that neither of these approaches
+    gives much of a sense of the totality of a museum&#39;s collections. Neither offers
+    much help in answering the question, &#39;What kind of stuff does this museum
+    generally have?&#39; This isn&#39;t, perhaps, the most important question that museum
+    Web sites should be answering. Many people will only be interested in a
+    particular subset of objects, or in learning about a particular topic. However,
+    I think there&#39;s value in attempting to represent the breadth of a museum&#39;s
+    collections, and doing so might help to reveal some
+    interesting things about a museum&#39;s very identity.</p>
+  <h1>Getting Started</h1>
+  <p>A discussion at the University of Leicester
+    kicked off the idea that got me started with this project. An information
+    workshop day held before the UK Museums on the Web Conference 2007 looked at
+    the creation of &#39;mashups&#39;. Naturally, object databases were  obvious candidates
+    for a source of data to &#39;mash up&#39;. A lively debate ensued, where participants
+    pointed out the difficulties involved in accessing and combining
+    collections data. These difficulties include bad or inaccurate data,
+    incompatible meta-data standards, the use of proprietary and difficult-to-handle
+    data formats, and so on. Even well-funded, multi-institution projects that aim
+    to present a single searchable object repository can be beset with problems.</p>
+  <p>In a fit of frustration with these apparent difficulties, I
+    suggested that inaccurate data didn&#39;t matter for the purposes a generalized
+    aggregate view of the objects and that different meta-data standards could be
+    crudely mapped together. The problem of actually getting the data could be
+    solved, I suggested, either by screen-scraping an institution&#39;s Web site (a
+    common hacker technique which basically parses data out from an automated crawl
+    of Web pages), or by simply asking a museum for the data under a Freedom of
+    Information request. Whilst someone joked that this might amount to a Denial-of-Service
+    attack on a museum&#39;s records department, there was general consensus that this
+    could actually work, and I was encouraged to &#39;give it a try&#39;.</p>
+  <p>Fast-forward a couple of a months, and I put my money where
+    my mouth is by issuing FOI requests to each of the UK&#39;s National Museums (as
+    designated by an Act of Parliament). I&#39;m not expecting every museum to comply
+    with the request, but I hope that a few will, giving me enough data to get
+    started. Meanwhile, I began designing the prototype Web site that will hold
+    this data.</p>
+  <h1>Architectural Design</h1>
+  <p>In designing this prototype Web site, I&#39;ve
+    used the framework that&#39;s emerged from recent thinking about designing
+    for a &#39;Web of Data&#39;. This concept suggests that Web sites are moving away from
+    pages of content, and towards providing representations of large data sets,
+    exposing these through Web services as well as HTML pages. These services
+    result in a rich set of resources that live beyond a single Web site, and can
+    co-exist alongside other services, giving access to different data.</p>
+  <p>Tom Coates (Coates, 2006) proposes some key architectural
+    principles for building a service that can aggregate with this &#39;Web of Data&#39;.
+    One of the first principles he proposes is &#39;to identify your first order
+    objects, and make them addressable&#39; (via a unique, persistent identifier). Some
+    examples from popular data-driven Web services are &#39;products&#39; on Amazon
+    (<a href="http://www.amazon.com/">http://www.amazon.com</a>), &#39;photos&#39; on Flickr (<a href="http://www.flickr.com/">http://www.flickr.com</a>) and &#39;URLS&#39;
+    on del.icio.us (<a href="http://www.ingenious.org.uk/">http://www.ingenious.org.uk</a>).  For the purposes of this project, the
+    first-order objects are clearly &#39;museum objects&#39;. </p>
+  <p>One key attribute which first order attributes need is to be
+    clearly discrete. There&#39;s an interesting side-argument here for museum objects,
+    which colleagues remind me are notoriously difficult to count. With a stamp
+    collection, for example, should the individual stamps count as objects, or
+    should the books that contain them count? Whilst there are  some interesting
+    metaphysical arguments to be had here, for the purposes of designing a Web site
+    exposing museum objects, we can simply defer to the institution as to what
+    counts as an single object, and what doesn&#39;t. Whilst this might not be
+    standardised, the choices made might actually reveal something about the museum
+    - the point of this Web site, after all.</p>
+  <p>Having identified our first order objects, and given them a
+    URI (see table below), the next architectural principle to follow is to build
+    &#39;list views&#39; that can be used to navigate between the first-order objects. For
+    examples of these navigations axes, we can turn to Flickr, which has them in
+    spades, including all of the following: photographer (user), tags, date taken,
+    location, group &#39;pool&#39;, camera model, users who have &#39;favorited&#39; it, and so on.
+    Note that some of this data is gathered automatically (date taken and camera
+    model), whilst other data is added manually by users (tags and location).</p>
+  <p>Museum objects can have a wealth of meta-data surrounding
+    them. Indeed, establishing meta-data standards for museum data is something
+    that has long been debated by experts. Whilst this is a valid
+    activity, for the purposes of this research I am not interested in detailed and
+    accurate data for individual objects, but instead in data that can be
+    aggregated and used to provide some insights into the collection as a whole.
+    This data can be crude and sometimes inaccurate, so long as it&#39;s available for
+    a reasonably large portion of the data set.</p>
+  <h1>The &#39;5 Ws&#39;</h1>
+  <p class="MsoBodyText">To find these core meta-data axes, I
+    turned to the &#39;5 Ws&#39; of journalism,  said to provide the key first bits of
+    information: Who, What, Where, When and Why. &#39;<b>Who</b>&#39; is a reasonably tricky one for objects, as different people could
+    be involved in an object&#39;s design, manufacture, or even as its subject (eg in a
+    photograph). Sometimes all of this data is recorded for museum objects, but I
+    wanted simply to focus on what the object might say about the institution, and
+    so the only &#39;Who&#39; I&#39;m interested in is the person who collected it. This could
+    be a historic figure (Henry Wellcome), or a curator. In many cases, this data
+    isn&#39;t recorded, but where it is, it could prove interesting.</p>
+  <p>The second W, <b>&#39;What&#39;,</b> is perhaps the most important, but also the most potentially
+    difficult to define. Typically, collections databases may devote paragraphs of
+    content to describing &#39;what&#39; an object is. In order to show an aggregated view
+    of what objects a museum has, however,  data needs to be easily processable.
+    The model I&#39;ve adopted for the design of this prototype is to gather short
+    key-words, or tags, that describe the object on a most basic level. These might
+    be, for example, &#39;clock&#39;, &#39;flag&#39;, &#39;coin&#39;, and so on. Gathering these keywords
+    may be a challenge, but I hope to be able to extract them in a crude manner
+    from whatever categorisation data is available. If this fails, perhaps there&#39;s
+    a social solution (see next section).</p>
+  <p>The third W, <strong>&#39;Where&#39;</strong>, might refer to the place an object is
+    from. I don&#39;t want to worry too much about which sense of belonging this might
+    refer to. For our purpose it can simply be where an object was collected from,
+    information that is often part of the data recorded by museums. As places are
+    relatively abstract concepts, to use place as an axis for aggregation, we need
+    to pick a level of granularity that yields a reasonably discrete list. &#39;City&#39;
+    is a bad choice, as many objects aren&#39;t from cities, and so I&#39;ll take the easy
+    option of only caring about places at the country level. Whilst country borders
+    and identities aren&#39;t without dispute, they&#39;re stable enough, and there&#39;s a
+    helpful list provided by the ISO, with standardised codes for each country.</p>
+  <p>The fourth W, <strong>&#39;When&#39;</strong>, adds a temporal dimension. As museums
+    typically keep objects for a long time, and have historic collections, this is
+    a key one. Timelines are a fairly standard means of navigation on museum object
+    Web sites, and for good reason. In my case, as I&#39;m interested in what a
+    museum&#39;s collections might say about the museum, the &#39;when&#39; I&#39;m interested in
+    is when the object was collected. Not only is this significant in telling the
+    story of a museum&#39;s historic activities, but it also tends to be one of the
+    things that routinely gets noted in a museum&#39;s records. This may be recorded as
+    a full date, but for aggregation purposes I&#39;m only going to bother with dates
+    at the level of year. </p>
+  <p>The fifth W is <strong>&#39;Why&#39;</strong>. This is the trickiest, as the reason
+    for collecting an object might never get recorded. Even if it is, as in the
+    modern museulogical practice of adoption acquisition policies, it&#39;s hard to see
+    a way of exposing this as a means for aggregating a museum&#39;s objects. So I&#39;m
+    going to cop out and not bother with this one. To replace it (five is a nice
+    number), we can borrow &#39;How&#39;, which is sometimes lumped in with the five Ws
+    anyway. &#39;How&#39; in these circumstances can refer to &#39;how&#39; an object was
+    collected. The exact means by which an object was acquired might be complex and
+    unrecorded, but there are a few different options that we can generalise upon:
+    objects can be acquired through purchase, donation, or loan (&#39;stolen&#39; might be
+    a fourth option, but let&#39;s not go there). This is not perhaps the most
+    interesting-sounding  meta-data, but it might give us some insights
+    nevertheless.</p>
+  <p>So, to recap, the axes I&#39;ve selected (and each gets its own
+    URI; see table below) are Who (a person), What (some tags), Where (a country),
+    When (a year) and How (purchase, donation or loan). Each of these concepts is
+    fairly simple, and they are so widely used that there are standardised ways to represent them in machine-readable formats. People, tags
+    and dates, for example, can all be represented by &#39;microformats&#39; (see <a href="http://microformats.org/">http://microformats.org/</a>).
+    This is significant, as microformats aim to &#39;pave the cow paths&#39; of current
+    behaviours and usage patterns, and represent simple bits of semantic information
+    that can be embedded within normal HTML pages. So if our meta-data correlate
+    with existing microformats, rather than complex Semantic Web-style ontologies,
+    there&#39;s more chance that the data will be interoperable, and actually used.</p>
+  <table>
+    <tbody><tr>
+      <th>URI</th>
+        <th>Description</th>
+      </tr>
+    <tr>
+      <td>/objects/ID</td>
+        <td>Object page</td>
+      </tr>
+    <tr>
+      <td>/people/ID</td>
+        <td>&#39;Who&#39; - the people who collected the objects</td>
+      </tr>
+    <tr>
+      <td>/tags/TAGNAME</td>
+        <td>&#39;What&#39; - tags describing the object</td>
+      </tr>
+    <tr>
+      <td>/countries/ID</td>
+        <td>&#39;Where&#39; - the countries the objects were collected from</td>
+      </tr>
+    <tr>
+      <td>/time/YEAR</td>
+        <td>&#39;When&#39; - the year an object was acquired.</td>
+      </tr>
+    <tr>
+      <td>/acquisition/METHOD</td>
+        <td>&#39;How&#39; - the means by which an object was acquired.</td>
+      </tr>
+  </tbody></table>
+  <p class="caption">Table 1:  URI
+    scheme for a museum object data Web site prototype.</p>
+  <h1>Social Interactions</h1>
+  <p class="MsoBodyText">I have so far identified the first-order
+    objects and &#39;list views&#39; for a museum object Web site, but a final design step
+    is to think about how this &#39;web of data&#39; might be socialised. We don&#39;t need to
+    add a social dimension to data visualisation to be interesting, but it could
+    help us in a number of ways. The first, most prosaically, would be the augmentation
+    of our data, with users both filling in gaps and adding extra data. The second
+    is as a way of allowing the most interesting observations to surface. The final
+    reason is to simply keep the service alive - socialising around the web of data
+    is something people naturally do, and it will often drive the use of the data,
+    and even the data itself, in interesting and unpredicted ways.</p>
+  <p>Rather than just guessing at what social
+    elements might work for a &#39;web of data&#39; around a museum&#39;s object collection,
+    blogger Jyri (Engeström, 2005) has defined a useful framework which in some
+    ways builds upon the architectural principles proposed by Coates. Engeström
+    suggests we start by defining what our &#39;social object&#39; is. This is important,
+    he reasons, because the most engaging interactions happen around objects -
+    photos, films, books, and son on. He contrasts these interactions with the
+    initial social networks - Friendster being the main example - which were
+    focused solely around people and their connections. Here, he says, there was
+    nothing much to do other than to &#39;add friends&#39;. Once this activity (and calling
+    it an activity is apt, as Jyri quotes another blogger who went so far as to say
+    about Friendster that &#39;That was the &#34;game&#34; right? He who has
+    the most contacts wins.&#39;) dried up, the sites stagnated. Myspace
+    (<a href="http://www.myspace.com/">http://www.myspace.com</a>) might be an example here, but it has arguably come to
+    find its social object in bands and musicians.</p>
+  <p>Do museum objects make a good &#39;social objects&#39;.  Jyri has
+    posted some thoughts on this too (Engeström, 2007). One key factor is something
+    he describes as an object&#39;s &#34;social gravitational pull&#34; - in short,
+    how much people care about it, and how many ‘handles’ there are to generate
+    discussion and conversation points.</p>
+  <p>If you look at most of the successful Web services that have
+    built around the &#39;Web of Data&#39; model, the &#39;social object&#39; that the site is
+    built around tends to fit one of two categories. Either it is an object that
+    all users create, as in the photos on Flickr or the trips on Dopplr, or it is
+    an object of culture that few people create, but lots of people are interested
+    in, as in the books on Amazon or the films on IMDB/ or Netflix. The former
+    group of objects have inherently high social pull, as the people who create
+    them have a natural emotional attachment. The second group of objects are less
+    inherently social, but instead are elevated to a level of social engagement
+    through their position in popular culture. Museum objects don&#39;t really fall in
+    either camp. They aren&#39;t created by the users, nor do they fall into easily
+    accessible culture.</p>
+  <p>Museums typically hold some objects which do have high
+    emotional and social appeal, however. These are usually either icons from
+    history (such as the Science Museum&#39;s Stevenson&#39;s Rocket), or items with a high
+    recognition factor, evoking personal memories and nostalgia (old televisions,
+    washing machines and toys). Across the collection as a whole, though, these
+    objects can be few and far between. An anecdote often quoted at the Science
+    Museum is that we have, somewhere, a collection of several thousand scalpels,
+    each subtly different from the next, but largely similar. Whilst this
+    collection as a whole is interesting, the individual items can often have low
+    social pull.</p>
+  <p>This creates a problem for any Web site trying to add value
+    to a web of museum object data through social networking and user interaction.
+    A better museum candidate for something to build a social Web service around is
+    exhibitions. These are less granular, and have social &#39;pull&#39; from the fact that
+    people physically visit them, sometimes even paying for a ticket. A social Web
+    site based around museum exhibitions would be an interesting project to pursue,
+    although it would have to cover all museums in order to have enough data to be
+    interesting.</p>
+  <p>For this project, though, the focus is firmly on museum
+    objects. A way to get around the problem of the millions of individual objects
+    having low social pull is to de-emphasise  the importance of the individual
+    object pages, which will have very little data anyway, and play up the
+    importance of the aggregation pages. If an individual scalpel isn&#39;t
+    interesting, then perhaps the collection of scalpels will be. This is somewhat
+    equivalent to the &#39;groups&#39; feature in Flickr, where a &#39;pool&#39;
+    of photos can be collected, with discussion and members attached to the
+    collective group of photos.</p>
+  <h1>Aggregation pages, or &#39;List Views&#39;</h1>
+  <p>Designing a Web service around aggregation
+    pages is hard. Not only do I need the pages for each Who, What, Where, When and
+    How, but I also need pages where these can be combined, so that it&#39;s possible
+    to point people at a pages of &#39;objects from the Science Museum collected
+    in 1962 from India&#39;, or &#39;objects from the National Maritime Museum that are
+    coins and were acquired by a purchase&#39;. There are, of course, millions of
+    permutations. These views could simply be accessible through an advanced
+    search, of the type where you select two fields, their values and an &#39;AND&#39;
+    operator to specify the intersection of these fields. This is a possible, and perhaps
+    even useful feature, but it would be hard to make it easily usable. It&#39;s
+    well-known that &#39;advanced search&#39; options rarely get used on public Web sites,
+    and anyway, this feature would suffer from the problem that, before searching,
+    a user would have no way of knowing how many results would be in the returned
+    collection.</p>
+  <p>A better approach might be to use some kind of sophisticated
+    computing algorithm which identifies properties of objects that seem to follow
+    a pattern, and suggests collections which are possibly interesting. Flickr has
+    experimented with this kind of approach with their &#39;clusters&#39;
+    feature, where the image tags are analysed for tags that often appear together;
+    they are then presented as a group comprising the photos which are tagged by most
+    of the tags within that cluster. This relatively simple concept can generate
+    some genuinely meaningful groupings. The clusters for the tag &#39;museum&#39; are, at
+    present &#39;art,  architecture,  sculpture&#39;, &#39;newyork,  nyc,  newyorkcity&#39;,
+    &#39;paris,  france,  louvre&#39; and &#39;london,  england,  uk&#39; - which together do seem
+    represent some of the most popular locations and types of museum.</p>
+  <p>Finally, we can look to social actions to
+    help pick out some of the most interesting aggregation pages. There&#39;s a good
+    history of this approach. At the simplest level, you can simply watch what
+    people are talking and blogging about elsewhere. Google Earth, for example, is
+    an enormous resource for aerial photography, but much of the world is just
+    boring ocean, dessert, or endless suburban sprawl. Nevertheless, there are
+    plenty of fascinating things in there if you know where to look, and helpful
+    bloggers have documented many of them. A feature on The Register, for example,
+    asked people to send in sightings of &#39;black helicopters&#39;, or other secret
+    military equipment (see Haines 2005). The result was staggering - not only were
+    there many spottings of black helicopters, but also spottings of crop circles,
+    fighter planes, nuclear submarines and more. For other examples, we can look at
+    the work of Stamen Design (<a href="http://stamen.com/">http://stamen.com/</a>), an agency famed for data
+    visualisations. One of their projects, Trulia Hindsight
+    (<a href="http://hindsight.trulia.com/">http://hindsight.trulia.com/</a>) plots house building data on an interactive map,
+    showing how cities and towns were formed over time. Again, much of it looks the
+    same, but users are able to point to interesting places, such as where planned
+    towns were rapidly constructed, or where an area had to rebuild homes lost to a
+    fire, and these places are then exposed to users as good starting
+    points. This kind of model could work for a collection of museum objects.</p>
+  <p>Having established what our social objects are, and how
+    social activity will be focused around the aggregation pages, it&#39;s worth
+    thinking briefly about what these social interactions might be. Engeström
+    suggests that a key principle is to &#39;define your verbs&#39;. These are often to
+    &#39;add&#39; something (a photo, a comment, a tag), or might be to share, to save, to
+    recommend... For a Web site about museum objects, the kinds of things we might
+    want our users to do might be &#39;to bookmark&#39; a collection, either within the site or on an external service like del.icio.us, &#39;to comment&#39;
+    on some objects, and perhaps &#39;to correct&#39; information, if they believe it to be
+    wrong.</p>
+  <h1>Implementation</h1>
+  <p>Now that I&#39;ve outlined the framework for
+    how museum object data might be presented in a Web site, I&#39;ll return to the
+    practicalities of producing a prototype for demonstration. At the time of
+    writing, I&#39;ve received object data resulting from the Freedom of
+    Information requests from four museums. The data arrived in different formats,
+    with different types of meta-data, requiring some work to compile these sources
+    together.</p>
+  <p>One list of objects came as a folder full of Word documents,
+    each containing a table with the object data - not the easiest format to import
+    into a database, but a bit of copying and pasting into a spreadsheet, then
+    exporting as a comma-separated-values file, made it more or less machine
+    readable. Another practical problem came from a museum which sent me their object
+    data as a huge, 1GB+ xml file. I couldn&#39;t even open the file without my machine
+    crashing, and so the solution was to run a command to split the file into a few
+    hundred smaller files that were easier to work with. One reason to outline
+    these issues is to make the point that it doesn&#39;t matter too much which format
+    a museum makes their data available in. Some formats are easier to use than
+    others, but the determined developer can usually find a way, and so there&#39;s
+    little excuse in practical terms for not making this data available.</p>
+  <p>The second challenge I&#39;ve faced in pulling together data for
+    a prototype is not having data available in a structured format. One data set,
+    for example, had a &#39;location&#39; listed for a good proportion of the objects, but
+    these locations were listed in a free text field rather than containing a
+    reference to country or town. Even at a country level, countries were referred
+    to in different ways (&#39;Republic of France&#39; vs &#39;France&#39;, etc). Going through
+    every record and picking out which country the location referred to would have
+    been a huge job, so the solution here is to take a pragmatic approach. Rather
+    than going through every record, we can just generate a list of all the unique
+    location strings, order them by how frequently they occur, and then start at
+    the top. In this way, within an hour or so I was able to convert most of the
+    locations into structured references to a country. Locations which only
+    occurred once or twice were discarded. This means having slightly less data,
+    but it&#39;s a worthwhile compromise that quickly gives some useful data to start
+    with.</p>
+  <p>For construction of the prototype Web site, I&#39;ve used the
+    Web framework language Ruby on Rails, which allows data-driven Web sites to be
+    quickly built and rapidly iterated. To generate graphs and charts which help to
+    visualise the data, I&#39;ve used the Google Charts API, which lets you simply pass
+    variables to Google and receive back an image file containing your chart. To
+    illustrate where objects come from in the world, I&#39;ve
+    developed a custom Flash animation which takes a dynamically-created XML file
+    and colours in the countries of the world accordingly. None of these is
+    particularly complex, and I&#39;m sure there&#39;s a lot more that could be done in the
+    way of clever visualisations, but I think this a good enough start to
+    illustrate the ideas that this paper introduces.</p>
+  <h1>Initial Observations</h1>
+  <p>Having constructed this framework and begun
+    to import museum object data into it, I am already able to make some initial
+    observations. First, holes in the information available are fairly
+    apparent. Whilst there is data available for hundreds of thousands of objects
+    from one museum, the proportion of these that have both an acquired year and a
+    country of origin is fairly small, making it harder to visualise where and when
+    the objects entered the collections. These data holes are unfortunate, and
+    emphasise the importance of a well-kept set of object records.</p>
+  <p>Despite the holes, though, there&#39;s already enough data to
+    allow making some useful and interesting assessments. A simple graph showing
+    how many objects were acquired each year for different museums is instantly
+    quite appealing, and the trends are easy to spot. Likewise, a map showing where
+    in the world a museum’s objects have been acquired from is also interesting -
+    and for one museum, shows a clear bias towards coastal countries.</p>
+  <p>One interesting, and perhaps obvious, flaw
+    to point out, though, is that these visualisations treat all objects as equal.
+    That is, for the purposes of the map visualisation, a count is simply kept of
+    how many objects have been acquired from each country.
+    Countries with a higher count are shaded in a darker colour. This gives a
+    reasonable account of the proportion of the collection that comes from
+    different countries, but can easily be skewed. Two hundred small coins end up
+    counting for far more than a single large train. In some ways, this is fine, as
+    the collection of coins is in some ways bigger than the single train. However,
+    it may be interesting to explore ways of weighting collections based on other
+    factors, such as physical size, or perhaps even some measure of &#39;importance&#39;
+    (how this could be measured, I leave as an exercise to the reader). Physical
+    dimensions are often stored in object records, but parsing this data into a machine-readable
+    format would require a fair amount of work.</p>
+  <p>Finally, it&#39;s worth making the point that
+    the objects in this prototype are all described in text form only. It&#39;s
+    typically thought fairly critical to include photos of objects when
+    representing them on-line, and taking these photos can consume a huge amount of time, effort and money. Because this paper examines an approach for
+    representing a huge volume of objects - a &#39;quantitative approach&#39;- though, and
+    focuses on the aggregation pages, the absence of images has less of an impact.
+    If images were to be added, it perhaps would be less useful to have photos of
+    the individual objects; instead, photos could be added to loosely represent the
+    collections of objects - types of objects, objects from a particular country,
+    etc. If this were the case, there would be less need to make sure that images
+    were paired up precisely with the objects photographed in them, and so you
+    could allows users to contribute photos - such as those taken in the museum.</p>
+  <h1>Conclusions</h1>
+  <p>The purpose of this paper is not to describe a finished
+    piece of work; rather, to explore a direction in which museum object data could
+    travel. The core of this idea is to open up the data that museums hold about
+    their objects, and to expose the data in interesting ways that can be used to
+    make observations about a museum&#39;s history. The work of creating the
+    visualisations and overviews doesn&#39;t even have to be done by the museum itself
+    - if the data is made public (or indeed, officially requested), interested
+    third parties can interpret the data themselves. This spirit of openness allows
+    museum objects to form part of the &#39;web of data&#39; that is now emerging, and
+    holds great potential to engage the public in the debate about the history and
+    future of museum collections. </p>
+  <p>Whilst the most famous Web services have so far been driven
+    by user-created content, there is a growing trend to place public information
+    in the &#39;Web of data&#39;. Examples from the UK include the excellent work of
+    MySociety (<a href="http://www.mysociety.org/">http://www.mysociety.org/</a>),
+    which has moved political information such as the voting records of MPs and the
+    debates from parliament into an open Web environment. There is no reason why
+    museum data cannot exist here too.</p>
+  <p>Looking forward, once it is possible to compare collections
+    from different museums, there is also the scope to look at private collections
+    - of which the principal source may be eBay, where millions of collectable
+    objects are acquired every week (indeed, sometimes by museums).</p>
+  <p>I&#39;d like to conclude by pointing readers towards the on-line
+    manifestation of the research that this paper is based on. It can be found at <a href="http://www.museum-collections.org/">http://www.museum-collections.org/</a> (from April 2008). The prototype is, of course, in perpetual &#39;beta&#39;, and your
+    feedback is very welcome.</p>
+  <h1>Acknowledgements</h1>
+  <p class="AcknowedgementsText">I&#39;d like to thank all of the museums which
+    graciously responded to my Freedom of Information requests for their object
+    collections information, particularly those who took the time to export and
+    send me their raw data. I&#39;d also like to thank my colleague Anne Prugnon, who
+    helped me with the Flash map code, and my colleagues Daniel Evans and Mike
+    Ellis for their general support.</p>
+  <h1>References</h1>
+  <p class="ReferencesText">Chan, S. (2007). “Tagging and
+    Searching – Serendipity and museum collection databases”. In J. Trant and
+    D. Bearman (eds). <i>Museums and the Web 2007: Proceedings</i>. Toronto: Archives &amp; Museum Informatics, published March 31,
+    2007 at <a href="http://www.archimuse.com/mw2007/papers/chan/chan.html">http://www.archimuse.com/mw2007/papers/chan/chan.html</a></p>
+  <p class="ReferencesText">Coates, T. (2006). “Native to a Web of
+    Data”. Presentation, first delivered at Future of Web Apps 2006, London.
+    Retrieved January 31, 2007, from plasticbag.org: <a href="http://www.plasticbag.org/files/native/">http://www.plasticbag.org/files/native/</a></p>
+  <p class="ReferencesText">Engeström, J. (2005, April 13). Why
+    some social network services work and others don&#39;t — Or: the case for
+    object-centered sociality. Retrieved January 31, 2007, from zengestrom.com
+    blog: <a href="http://www.zengestrom.com/blog/2005/04/why_some_social.html">http://www.zengestrom.com/blog/2005/04/why_some_social.html</a></p>
+  <p class="ReferencesText">Engeström, J. (2007, April 13). What
+    makes a good social object. Retrieved January 31, 2007, from zengestrom.com
+    blog: <a href="http://www.zengestrom.com/blog/2007/08/what-makes-a-go.html">http://www.zengestrom.com/blog/2007/08/what-makes-a-go.html</a></p>
+  <p class="ReferencesText">Haines, L. (2005, October 14). Google
+    Earth: the black helicopters have landed. Retrieved January 31, 2007, from The
+    Register: <a href="http://www.theregister.co.uk/2005/10/14/google_earth_competition_results/">http://www.theregister.co.uk/2005/10/14/google_earth_competition_results/</a></p>
+        <!-- InstanceEndEditable --> </div>
+  				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->  Roberto, F., Exploring Museum Collections On-line: The Quantitative Method<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2008: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2008. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2008/papers/<!-- #BeginEditable "URL" --> roberto/roberto.html
+				 <!-- #EndEditable --></p>
+</div>

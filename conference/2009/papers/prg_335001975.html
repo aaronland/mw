@@ -1,0 +1,722 @@
+<div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+        <h2 class="Author"><a href="../../bios/au_3658.html">Robin Dowden</a>, Walker Art Center, and <a href="../../bios/au_3117.html">Scott Sayre</a>, Sandbox
+          Studios, USA</h2>
+        <p class="URL"><a href="../http://www.artsconnnected.org/">http://www.artsconnnected.org</a></p>
+        <h3 class="AbstractTitle">Abstract</h3>
+        <p class="AbstractText">In the fall of 2006, the Minneapolis Institute of Arts
+    and Walker Art Center embarked on a large-scale redesign of their highly
+    acclaimed Web site, ArtsConnectEd. Since its launch in 1998, ArtsConnectEd had
+    become a core resource for K-12 educators and their students, serving well over
+    a million users per year. </p>
+  <p class="AbstractText">Despite its accomplishments, museum educators eventually
+    wanted better tools for adding new content, creating links between assets, and
+    managing their relationships with ArtsConnectEd’s audiences. Coupled with new
+    opportunities provided by Web 2.0 technologies, the redesign project aimed to
+    redefine how on-line educational resources are developed and managed. The new
+    site, internally referred to as ArtsConnectEd2, is an open source, highly
+    flexible environment with audience-specific toolsets for building, sharing, and
+    managing internal and external user-generated content.</p>
+  <p class="AbstractText">This paper will provide an overview of the research,
+    design, and development strategies employed in the creation of ArtsConnectEd2,
+    particularly focusing on the roles and products of the internal,
+    cross-institutional, and external collaborative teams.  Extensive project
+    research generated a unique set of requirements which illuminate new
+    expectations for museums, staff roles, and technology, all applicable to any
+    museum interested in developing a similar resource.</p>
+  <p class="keywords">Keywords: K-12 education, collaboration, user generated
+    content, standards, redesign, usability</p>
+
+	  <!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+  <h2>1. Beginnings</h2>
+  <p>ArtsConnnectEd (<a href="../http://www.artsconnected.org/">http://www.artsconnected.org</a>) first
+    launched in the fall of 1998 as a collaborative project between the Minneapolis
+    Institute of Arts and Walker Art Center. The objective of the site was to
+    combine the collections, educational resources, and archives of both
+    institutions specifically for the use of K-12 teachers and students. The
+    long-term goal was to more effectively serve a state-wide educational community
+    while reducing the production and distribution of physical materials (slide
+    sets, reproductions, newsletters, etc.). While the institutions are
+    significantly different, the education departments offer many similar programs,
+    resources, and services. Over the previous decade, the education departments
+    had begun to collaborate on their marketing to reduce cost and teacher
+    confusion (Wetterlund, 2009). ArtsConnectEd was designed as an extension of
+    this idea, providing “one-stop shopping” for Minnesota teachers using the
+    museums’ joint educational resources.</p>
+  <p>The impetus for ArtsConnectEd came from the institutions’
+    new media departments rather than their education departments. The departments
+    had already been collaborating on one on-line education project, ArtsNet
+    Minnesota, (Bridges, 1998) and were looking for another in order to take
+    advantage of new state funding for technology projects. Both museums were
+    seeking the financial resources to kick-start digitization of their own vast
+    collections for contribution to the Art Museum Image Consortium (AMICO) (Trant, Bearman &amp; Richmond, 2000) and their own Web sites. It
+    was through ArtsConnectEd and its predecessor, the Integrated Arts Information
+    Access project (Dowden, Sayre, &amp; Dietz, 2000), that these separate goals
+    were brought together.</p>
+  <p>At the time, the site and the philosophy behind it were
+    quite experimental. Museums were just starting to put their collections on-line
+    and very few, if any, had begun to integrate other resources (library records,
+    audio, video, texts, educational interactives, etc.), particularly those
+    dedicated to a K-12 audience. The technical and intellectual groundwork was in
+    many ways unwritten. After months of data mapping, standards research, and
+    collaborative development, the first version of ArtsConnectEd launched in 1998
+    - the same year as Google - with a front page containing a single form field
+    that simultaneously searched all resources across the two institutions. The new
+    media groups were pleased with their achievement, as were their colleagues: the
+    project won Museums and the Web’s Best Educational Site and the American
+    Association of Museum’s MUSE award for Best Educational Program. Unfortunately,
+    these kudos proved to be premature when the project went to the first usability
+    lab in late 1999. There, they found that few members of the target audience
+    could effectively use the site, or worse, even understood its purpose. The team
+    returned to the drawing board and redesigned the user interface, moving away
+    from a sole reliance on queries to a more menu-based approach, which tested
+    much better in a second, follow-up lab. </p>
+  <p class="caption"><img src="sayre.fig1.jpg" alt="Figure 1" width="500" height="372"/></p>
+  <p class="caption">Fig 1: Homepage for first ArtsConnectEd site design pre
+    usability testing 1998</p>
+  <p>The resulting ArtsConnectEd grew in popularity with its
+    teacher and student end-users as well as the larger museum community.
+    Eventually it was held up as a model: a number of other educational Web
+    resources were developed following ArtsConnectEd’s lead. These sites include
+    the North Carolina Museum of Art’s ArtNC (http://www.ncartmuseum.org/artnc),
+    the Art Institute of Chicago’s Art Explorer (http://www.artic.edu/artexplorer),
+    the Virtual Museum of Canada’s CollectionX (http://www.collectionx.museum), the Whitney Museum of American Art’s <a href="mailto:Learning@Whitney">Learning@Whitney</a> (<a href="../http://whitney.org/learning">http://whitney.org/learning</a>), and
+    the Museum of Fine Arts, Boston’s MFA Educators Online
+    (http://educators.mfa.org). While none of these
+    resources are stand-alone sites or integrate the collections of multiple
+    institutions like ArtsConnectEd, they all provide toolsets and resources
+    designed to meet the needs of teachers and students. </p>
+  <h2>2. The Community</h2>
+  <p>Despite the original site’s awards and its substantial
+    funding for development and marketing, early use was quite limited. Museum
+    educators and teachers often did not understand the purpose of the resource,
+    let alone how to successfully integrate ArtsConnectEd into their day-to-day
+    work. To address this issue, the museums secured additional funding to develop
+    and implement a state-wide “Train the Trainer” program (Sayre &amp; Wetterlund,
+    2002). This program provided laptops and extensive on-site training to a
+    contracted group of twenty-four teacher-trainers distributed throughout
+    Minnesota, a state with over five million residents, covering over 84,000
+    square miles (217,736, sq. km.). After
+    completing the training, the teachers returned to their communities and were
+    contracted to train a minimum of sixty teachers in their region over the next
+    two years. By the end of 2002, over fourteen hundred teachers statewide had
+    been trained to use ArtsConnectEd. </p>
+  <p>Beyond this initial program, over half of the trainers
+    stayed in close touch with ArtsConnectEd and the museums. Some continued to
+    offer training in both off-line and on-line settings. At the same time, the MIA
+    created a position for a full-time educational technology specialist whose
+    responsibilities included organizing and conducting ArtsConnectEd training for
+    both in-service and pre-service teachers (college students). The training
+    program and marketing eventually paid off, with annual user sessions peaking at
+    over two million as of this writing (<a href="../http://www.artsmia.org/stats">http://www.artsmia.org/stats</a>).</p>
+  <p class="caption"><img src="sayre.fig2.jpg" alt="Figure 2" width="500" height="415"/></p>
+  <p class="caption">Fig 2: Homepage for first ArtsConnectEd site after
+    usability testing redesign 2000</p>
+  <h2>3. A Need for Change</h2>
+  <p>The MIA and Walker educators were only peripherally
+    involved with the initial development of ArtsConnectEd, since the new media
+    departments had secured the original funding and led the Web site development.
+    This, combined with the involvement of externally contracted trainers, had
+    helped expedite the site’s development, but had not engaged the museum
+    educators. The education directors of both institutions were on the project’s
+    steering committee, and other education staff had participated in the teacher
+    training. Nevertheless, the internal “clients” for the project were
+    disconnected from it. Museum educators were initially unsure how ArtsConnectEd
+    would fit into their ever-expanding workload. It was not until job descriptions
+    and internal work processes were formally changed that the site was fully
+    embraced by these primary stakeholders. </p>
+  <p>In the same way they moved from the telephone to e-mail,
+    museum educators began to use ArtsConnectEd in place of hardcopy materials.
+    ArtsConnectEd had many advantages over print-based resources, but it began to
+    pose some significant obstacles. The primary issue was the museum educators’
+    lack of ability to modify the site’s content. Neither museum had secured funds
+    beyond the initial development funding, nor had they developed a process to
+    continue expansion of the site. Museum educators had to put in work requests to
+    their new media departments to change anything on the site. Consequently, educators
+    had a difficult time efficiently responding to the needs of their audiences.</p>
+  <h2>4. Birth of a New Idea</h2>
+  <p>Close to a decade after the site’s initial launch,
+    ArtsConnectEd was starting to show its age. Increasingly poor response times,
+    out of date content, and rising expectations as a result of Web 2.0 technologies
+    called into question the site’s relevance. In search of a solution, MIA and
+    Walker educators worked to obtain the resources to redesign the site and
+    develop a long-term strategy for its future growth. After numerous meetings
+    with members of the original project team and current new media staff, the
+    group came up with a new approach: the site would take its cues from
+    social-networking applications and empower end-users, as well as museum
+    educators, to contribute to and manage the content within the site. </p>
+  <p>One of the most popular components of the original site
+    was an early Web 2.0 tool called Art Collector. This unique tool, similar to an
+    on-line version of PowerPoint™, allowed users to assemble, annotate, save, and
+    present collections of works of art. This versatility inspired the team to move
+    ArtsConnectEd from impenetrable barrier to highly interactive hub.
+    ArtsConnectEd2 was to provide a new Web 2.0 toolset to meet the needs of museum
+    educators on one hand, and teachers and students on the other. Both groups
+    would be able to share content in the form of Art Collector sets, and museum
+    educators would have a mechanism to approve and distribute contributed
+    resources back through ArtsConnectEd itself. A formal proposal was crafted, and
+    in the fall of 2006, funding was secured through an Institute of Museum and
+    Library Service’s (IMLS) National Leadership Grant. </p>
+  <h2>5. Reconstructing the Collaborative Teams</h2>
+  <p>The original ArtsConnectEd project was managed by four
+    committees, each made up of members from both institutions: a steering
+    committee, a technology committee, a marketing committee, and an education
+    committee. As the project had matured, active technical support waned, and so
+    too did the committees. Between staff turnover and new priorities, management
+    of the site had dwindled down to occasional institutional meetings and informal
+    meetings between the individual partners. With the development of the redesign
+    proposal and its eventual funding, many of the original team returned, even
+    though a few of them no longer worked at either institution. </p>
+  <p>With the launch of the redesign project, new collaborative
+    committees were formed:</p>
+  <ul>
+    <li>Technology Committee – composed of new media developers,
+      designers, and directors; responsible for the site’s design and development
+      (seven people)</li>
+    <li>Education Committee – composed of museum educators; responsible
+      for the repurposing and development of new content and providing design input
+      (fifteen people)</li>
+    <li>Management Committee – composed of museum project directors and
+      external contracted project managers; responsible for coordinating the
+      priorities and workflow between the groups (four people) </li>
+    <li>Steering Committee – composed of education directors, new media
+      directors, project directors, and project managers; responsible for setting
+      policy and making executive decisions (eight people)</li>
+  </ul>
+  <p>In addition, a new group was formed. Called the “power
+    users,” this group of a dozen highly experienced end-users was invited to
+    participate as paid volunteers. Many of them were from the first ArtsConnectEd
+    teacher-trainer group. </p>
+  <p>Shortly after the project received funding, the technical
+    team launched a simple project site (http://ace2.artsconnected.org) to serve as
+    a communication hub. The site had three objectives: </p>
+  <ol>
+    <li>to communicate the project’s scope, progress, and research to the
+      public and museum community,</li>
+    <li>to collect and share information from the power user group, and </li>
+    <li>to organize and archive communication documents from the internal
+      collaborative committees. </li>
+  </ol>
+  <p>One of the first efforts was to create a comprehensive
+    list of ArtsConnectEd-like sites, as well as non-museum Web 2.0 tools and
+    design approaches that could inform the new site design. These link lists were
+    organized and publicly posted on the project site. Prior to the needs
+    assessment, the museum educator committee and the power users were asked to
+    formally review and rate these sites and tools
+    (<a href="../http://ace2.artsconnected.org/index.php?option=com_bookmarks">http://ace2.artsconnected.org/index.php?option=com_bookmarks</a>). It was hoped
+    that this process would familiarize all of the committee members with the
+    current state of on-line tools and resources, and potentially stimulate new
+    ideas for features and functionality.</p>
+  <h2>6. Needs Assessment and Consensus Building </h2>
+  <p>ArtsConnectEd2 benefited from the perspective of the many
+    returning team members, but also from the tremendous amount of assessment data
+    that had been collected. A wide range of statistical data on site usage, search
+    terminology, and tool usage had been collected since the original site’s
+    launch. The museums also had results from multiple teacher focus groups and the
+    two usability labs, in addition to evaluation data from the teacher-trainers.
+    The project managers used this data as a foundation for a larger needs
+    assessment to inform the development of ArtsConnectEd2. They held dozens of
+    meetings to survey museum educators and power users. One-on-one interviews were
+    conducted with museum educators from both institutions. A daylong focus group
+    was conducted with the power users. The goals were to better understand the
+    usage of ArtsConnectEd and other on-line tools, discover any perceived
+    limitations of the site, and identify new applications and desired
+    functionalities for the redesign.</p>
+  <p class="caption"><br/>
+    <img src="sayre.fig3.jpg" alt="Figure 3" width="500" height="311"/></p>
+  <p class="caption">Fig 3: ArtsConnectEd2 Power User group meeting 2008</p>
+  <p>The collected data was then consolidated, ordered by
+    stakeholder group, and ranked by the number of times each suggestion occurred.
+    The resulting list was organized into three categories: 1) general site
+    functionality, additions, and improvements; 2) Art Collector improvements; and
+    3) content additions. This needs assessment summary document was then reviewed
+    by the technology committee, who added their recommendations of potentially
+    useful tools and functionality. Finally, the document was vetted by the
+    steering committee, which made the first round of executive decisions on which
+    requested features would be seriously considered. A compendium of all findings
+    was posted on the project site (<a href="../http://ace2.artsconnected.org/index.php?option=com_content&amp;task=blogcategory&amp;id=10&amp;Itemid=25">http://ace2.artsconnected.org/index.php? option=com_content&amp;task=blogcategory&amp;id=10&amp;Itemid=25</a>).</p>
+  <p>Items were cut for various reasons, both technical and
+    practical. Integrating relevant educational products into search returns as a
+    source of revenue was deemed too logistically challenging, and a number of
+    proposed visualizations (timelines and geographic mapping, etc.) would be
+    difficult due to the data limitations of the over eighty thousand object
+    records. One area of significant concern for the education directors was the
+    impact different two-way communication functionalities would have on staff
+    time. To address this concern, submission criteria were developed and the
+    number of interactions that required immediate or guaranteed responses from
+    staff was limited.</p>
+  <p>After the steering committee had approved and edited this
+    “major feature” list, it was presented to the power user and education
+    committees. Both groups were extremely enthusiastic about the extent to which
+    the proposed features addressed their expressed needs. Because much of the
+    redesign focused on greatly expanding the functionality of the Art Collector
+    tool, a number of users expressed concern about losing their personal Art
+    Collector sets in the transition from the old site to the new. Some of the power
+    users had created over fifty personalized sets that they used in their
+    classrooms on a regular basis. The technical committee assured them that their
+    data would be transferred to the new site.</p>
+  <h2>7. Use Case Scenarios and Specifications</h2>
+  <p>The ArtsConnectEd2 software specification
+    development was envisioned as a series of documents:</p>
+  <ol>
+    <li>User
+      Scenarios (needs described by type of user and the tasks and processes they are
+      likely to perform)</li>
+    <li>Information
+      Architecture (diagrams of each page and/or process addressing the needs
+      identified in the User Scenarios)</li>
+    <li>Definitions
+      Document (major components and functional definitions including working
+      terminology)</li>
+    <li>Specification
+      Document (technical requirements by section and function) </li>
+  </ol>
+  <p>A linear process for developing the
+    specification was outlined - each document to be written in the order listed - and
+    initiated by the technology committee. Documents drafted by the technology
+    committee were reviewed and then approved by the project directors with input
+    from the steering committee as needed. In theory, developers and designers
+    would proceed with the production phase of the project after the complete
+    specification was written. In practice, because of time constraints and a
+    desire to start prototyping, only the first two of the four documents were
+    written.</p>
+  <p>The prioritized list of features and
+    functionality that grew out of the needs assessment in the research phase set
+    the stage for the definition of user types and development of user scenarios.
+    User tasks (e.g., register) were listed by user type (museum educator, power
+    user, outside educator, general public, and unregistered user). User scenarios
+    were recast as use cases that described step by step how the application or a
+    particular process was expected to work. Over forty use cases were developed in
+    the general categories of: 1) search, browse, and item records; 2) creating
+    content; 3) help; 4) user account maintenance; and 5) site administrator
+    functions. A sample use case is provided in Appendix A.</p>
+  <p>Considerable time and effort was invested
+    in the creation of the use cases and the wireframes (information architecture)
+    that were made in response to them. As previously noted, the definitions and
+    specification documents were never generated. Instead, developers started
+    building the application, applying Agile software development principles and
+    Trac project management software to develop a roadmap.</p>
+  <h2>8. New Content Development</h2>
+  <p>As the technology committee began development, the museum
+    educators identified what new content was to be added to the site. Both
+    institutions had historically produced hundreds of physical resources that
+    could potentially be re-purposed for delivery through ArtsConnectEd2. The
+    education committee set upon creating a comprehensive inventory of these items,
+    which ranged from typed worksheets to multi-component slide/tape programs. Each
+    institution logged its resources based on format, content, and audience. </p>
+  <p>The collected resources were then divided up for review
+    amongst the educators. A resource evaluation tool was developed to assist the
+    museum educators in their assessment of each resource. The tool assisted the
+    educators in assigning each resource a numeric rating of its “repurposability,”
+    weighted by a variety of factors including: a) quality and relevance of
+    content; b) availability of preexisting digital assets; c) copyright
+    limitations; and d) opportunities for digital enhancement. The tool also
+    assisted the reviewer in determining what the best format for repurposing would
+    be: text page, PDF, or museum-educator-built Art Collector set. A summary of
+    the selection criteria and evaluation tools was posted on the project Web site
+    (<a href="../http://ace2.artsconnected.org/index.php?option=com_content&amp;task=blogcategory&amp;id=18&amp;Itemid=29">http://ace2.artsconnected.org/index.php?option=com_content&amp;task=blogcategory &amp;id=18&amp;Itemid=29</a>).</p>
+  <p>After assessing all of the resources within the inventory,
+    the museum educators gathered and separated the resources into categories: a)
+    easy and worthwhile to convert, b) worthwhile but challenging (due to copyright
+    issues, digitization requirements, rewriting, etc.), and c) not worthwhile. This
+    process was extremely useful, not only to ArtsConnectEd2, but also as a larger
+    institutional assessment of all educational resources.  Upon the
+    completion of this process, the museum educators began the process of
+    gathering, organizing, and digitizing all easily repurposed assets.  A
+    temporary server space was set up for the educators to upload and organize the
+    assets until ArtsConnectEd2 was ready for the final uploading. The review,
+    gathering and uploading process will continue until all repurposable resources
+    have been converted.</p>
+  <p class="caption"><img src="sayre.fig4.jpg" alt="Figure 4" width="500" height="399"/></p>
+  <p class="caption">Fig 4: ArtsConnectEd2 in the usability testing lab 2008</p>
+  <h2>9. New Tools for User Empowerment</h2>
+  <p>At the core of the new ArtsConnectEd are two functions:
+    finding things (Art Finder) and managing collections or sets of things (Art
+    Collector). The thematic sections of the original site - Art Gallery, Library
+    &amp; Archives, For Your Classroom, Playground, and Search All - have been
+    abandoned for a less hierarchical interface focused on actions and toolsets to
+    facilitate user-generated content. As previously described, the drafting of use
+    case scenarios and diagrams of the architecture preceded programming. Once the
+    developers started building the site, individual components and features were
+    routinely and iteratively tested by internal team members and contracted power
+    users, reflecting the Agile software development principles the project strove
+    to implement. In the fall of 2008, Art Finder and Art Collector were formally
+    tested in Target Corporation’s usability lab. The original ArtsConnectEd Web
+    site had benefited from this same lab in the mid-1990s (Dowden, Sayre &amp;
+    Dietz, 2000) and once again, the rigor of the lab environment was key to
+    identifying and resolving issues.</p>
+  <h3>Asset Retrieval</h3>
+  <p>Of the site’s features, none has been more scrutinized
+    than Art Finder, the combined search and browse solution. Tabs divide assets by
+    kind - works of art, audio/video, texts, interactive resources, Art Collector
+    sets, events, or “all” - and form fields and drop down lists within the tabs
+    are used to filter results.  In a tabbed section, the first row of filters
+    applies to all assets. A second row provides filters specific to the asset,
+    like “culture” in works of art and “type” in texts (e.g., article, artist
+    statement, or bibliography). </p>
+  <p>From the beginning, the project’s technologists were
+    interested in an orientation that began with a result set - an approach that
+    made the breadth of resources in ArtsConnectEd visible immediately. The use
+    cases reflected a fairly conventional strategy: search and browse were defined
+    as discrete features, the distinction being whether the user started a session
+    with nothing (search) or all items (browse).  Early sketches showed search as
+    part of the global navigation, allowing users to initiate a search from
+    anywhere in the site. In subsequent versions, the search field was moved to Art
+    Finder only, first outside of the asset tabs and ultimately within them. Search
+    was posited as just another kind of filter, not a separate function in its own
+    right, and testing demonstrated that collapsing the functions could yield
+    interesting results as long as other modifications were made to the interface.</p>
+  <p>A major point of contention among team members was giving
+    users the option to hide or show filters. Hiding filters simplified the
+    interface, but usability lab testing demonstrated that out of sight was truly
+    out of mind: users quickly forgot that hidden filter settings were affecting
+    their results. The usability lab also demonstrated that starting a session in
+    the “all” tab was a mistake. Some assumed that showing a variety of results was
+    important to communicating the breadth of the repository, yet users were often
+    confused by it. Today, Art Finder opens with works of art as the active tab,
+    limited to showing records that have an image. </p>
+  <h3>User Enhancement of Records</h3>
+  <p>All assets within ArtsConnectEd2 can be enhanced with
+    user-generated content.  Registered users can tag, rate and comment on the
+    utility of everything from works of art to interactive resources and Art
+    Collector sets.  Museum educators have an extended set of capabilities,
+    including the ability to link assets to one another and endorse specific
+    assets.</p>
+  <h3>Two-way User Created Content</h3>
+  <p>The central tool within ArtsConnectEd is still Art
+    Collector. It is much more robust than the original version: users of Art
+    Collector can build sets mixing MIA and Walker assets from any category (works
+    of art, audio/video, texts, interactive resources, and other Art Collector
+    sets) with external resources (e.g., Flickr images or YouTube videos). The tool
+    is rich with features that allow sets and their contents to be easily
+    manipulated and presented using templates that support everything from
+    comparison slides, various combinations of text and media, links to information
+    outside the presentation, and much more. The range of features reflects the
+    dual audience for which Art Collector was written: museum educators as well as
+    teachers and students. There is no separate suite of tools for our internal
+    educators; the same interface serves external audiences, and the actions
+    available in a particular context vary according to the administrative
+    privileges granted to an account type. By collapsing this aspect of the
+    authoring tool into a single set of screens, the site provides one community - outside
+    teachers - with far more than requirements analysis suggested they needed.
+    While usability testing forced the technology committee to rethink the
+    complexity surrounding Art Collector’s editing functions, it remains to be seen
+    how users take advantage of the expanded functionality.</p>
+  <p>These ArtsConnectEd2 toolsets also permit internal and
+    external users to add their Art Collector sets to ArtsConnectEd. Internal users
+    can directly publish their sets on the site, while external users use a
+    submission function. Their set is then internally reviewed and approved for
+    publication. This reviewed publishing process was adopted by the steering
+    committee after they weighed the pros and cons of immediate publication. It was
+    felt that the perceived formality of the submission process would improve the
+    quality of the submitted material. It was also decided that the only real
+    criterion for publishing submitted sets would be that they not contain any
+    legally problematic material. Qualitative assessment would come from user
+    ratings and the museum educator’s ability to mark a resource as “ArtsConnectEd
+    endorsed.”</p>
+  <h3>Two-way Communication</h3>
+  <p>Another part of breaking down ArtsConnectEd’s barriers was
+    developing mechanisms for communication between the museum educators and the
+    publics they serve. A new news-oriented homepage design and an Ask the Educator
+    section were designed to facilitate this. The new homepage contains a variety
+    of features controlled by museum educators, permitting them to customize
+    articles, post announcements, and highlight content. The Ask An Educator
+    section is a blog-like toolset allowing museum educators to publish short
+    articles as well as to respond to questions and comments submitted by external
+    users.  All of this content is indexed as text assets for potential retrieval
+    within Art Finder.</p>
+  <h3>Administration</h3>
+  <p>Museum educators also have a number of new administrative
+    tools to empower them to control the new site.  Administrative functions
+    include tools for managing user accounts and privileges, uploading and cataloguing
+    non-art assets (text, audio, video, interactive resources, etc,), and more.  It
+    is hoped that these tools will reduce the museum educators’ reliance on the new
+    media departments as well as greatly increase the quality and quantity of new
+    content.</p>
+  <p class="caption"><img src="sayre.fig5.jpg" alt="Figure 5" width="500" height="429"/></p>
+  <p class="caption">Fig 5: Art Finder section of ArtsConnectEd2 2009</p>
+  <h2>10. Tools and Standards</h2>
+  <p>From the beginning, the technology-based collaborative
+    efforts of the Walker and MIA have emphasized the importance of standards in
+    the storage, sharing, and dissemination of digital materials. Under the
+    umbrella of the Integrated Arts Information Access project (ArtConnectEd’s
+    predecessor), the two institutions participated in the Computerized Interchange
+    of Museum Information (CIMI) Dublin Core initiative and used AMICO’s data
+    definitions for the descriptions of works of art in the combined ArtsConnectEd
+    catalogue. While these early consortiums were important to ArtsConnectEd’s original
+    development, it took the redesign of the software for the promise of these
+    endeavors - standards-based sharing and integration - to truly come to
+    fruition. </p>
+  <p>XML schemas and aggregation formats like RSS were
+    identified in the IMLS proposal as the means by which the new site’s data would
+    be imported. In part this reflected the Walker’s Web strategy, which emphasizes
+    open standard technologies and content reuse. Ultimately, a more robust range
+    of standards and protocols was selected, including the Categories for the
+    Description of Works of Art (CDWA) Lite XML schema to describe the Walker and
+    MIA’s collections; Qualified Dublin Core for audio/video and text records;
+    iCalendar for the transfer of event data; and custom RSS feeds for audio and
+    video podcasts, specifically the Walker’s Art on Call audio guide
+    (http://newmedia.walkerart.org/aoc) and Walker Channel archives
+    (<a href="../http://channel.walkerart.org/">http://channel.walkerart.org</a>). The Open Archive Information Protocol for
+    Metadata Harvesting (OAI-PMH) was used to populate the repository, making
+    future expansion - such as including other institutions’ holdings - possible,
+    as well as supporting the option that either collection, or the ArtsConnectEd
+    repository as a whole, could be contributed to another union catalogue. This
+    harvesting model stands in stark contrast to the previous institution-specific,
+    custom approach to moving data from the Walker and MIA. </p>
+  <p>For the MIA, which had moved to Gallery Systems TMS
+    collections management system since ArtsConnectEd was first developed, implementing
+    a CDWA Lite export using OAI-PMH was a particular challenge. With the help of
+    OCLC’s Museum Data Exchange Project
+    (<a href="../http://www.oclc.org/programs/ourwork/collectivecoll/sharecoll/museumdata.htm">http://www.oclc.org/programs/ourwork/collectivecoll/sharecoll/museumdata.htm</a>),
+    the project was able to get an early copy of an export utility developed by
+    Cogapp as part of their COBOAT publishing system. Using this aspect of the OCLC
+    project supports ArtsConnectEd2’s investment in open standards, ensuring the
+    repository’s relevance and future growth. </p>
+  <p>Similar objectives informed the selection of the
+    technologies used to develop the software itself. Here too, the emphasis on
+    open software solutions was a departure from the proprietary tools used in the
+    first implementation (Adobe’s Cold Fusion, Microsoft’s IIS and SQL Server, and
+    Live Picture’s FlashPix). As the master list of system requirements and
+    functionality was defined, the need for a development framework and a
+    “pluggable” software design methodology was articulated. Symfony was selected
+    as the framework, and a wide range of existing tools to develop the new site’s
+    functionality were incorporated, from media players (JW Media Player) and
+    presentation tools (Slidy), to image zooming (IIPImage), rating features, and
+    much more. Over the course of the software development, this approach fostered
+    rapid prototyping of feature sets and permitted late changes, even in decisions
+    as fundamental as choice of Web server (from Apache to Lighttpd) and search
+    engine (Lucene to Solr). For a complete list of the software used, see the
+    development section of the project site, <a href="../http://ace2.artsconnected.org/">http://ace2.artsconnected.org</a>.</p>
+  <p>One API the project planned to
+    use and did not was the steve.museum tagger. Having selected Symfony as the
+    framework to build ArtsConnectEd2, it was
+    believed that implementing the steve API - which only tags works of art - would
+    separate the museum objects and their operations from the benefits of the
+    framework. ArtsConnectEd2 implements tagging
+    across all assets, and the steve tagger presented search integration issues
+    that added a level of complexity at odds with the software development effort. </p>
+  <p>Another unrealized opportunity
+    was the integration of the Getty Vocabularies. They were licensed, but will not
+    be included when the redesign is publicly launched. Eventually, ArtsConnectEd2
+    hopes to implement the vocabularies as a means of search expansion and to
+    provide more context about an artist. </p>
+  <p>Beyond the tools needed to build
+    the application, ArtsConnectEd2 adopted a suite of tools to manage
+    software development and project communications. Joomla was chosen for the
+    project dashboard and configured with a public and private side for making
+    information available to staff and project teams, as well as the larger
+    community. Selected for its ease of use and range of plug-in components,
+    which include blog-like publishing, calendars, and forums, as well as bookmark
+    and file management, Joomla’s toolset was not robust enough to meet the demands
+    of the technology committee. While still used for group communications and
+    final reports, the technology committee turned to the newly-released Google
+    Docs for document sharing, and Trac to manage the software development effort.
+    ArtsConnectEd2 used Trac for issue tracking, roadmap administration, and
+    browsing source revisions maintained by SVN.  </p>
+  <h2>11. Collaborative Challenges</h2>
+  <p>In the decade since ArtsConnectEd was first launched it
+    has become a model for museum K-12 on-line resources. The importance of the
+    project has been acknowledged on a number of levels, including as an
+    outstanding example of institutional collaboration. The strength of the
+    partnership is due in part to early efforts to define common goals and
+    motivations. A 1998 White Paper declared a set of shared assumptions about
+    technology and communication, the nature and value of museum information, and
+    the role that museums play in the modern world (<a href="../http://outreach.lib.uic.edu/www/issues/issue5_6/dowden/">Dowden,
+    Sayre &amp; Dietz, 2000</a>). Despite
+    this long history and strong partnership, the challenges to complete
+    ArtsConnectEd2 were considerable. </p>
+  <h3>Team Dynamics</h3>
+  <p>If managing team dynamics is a delicate process within one
+    institution, it is even more challenging across multiple institutions. The
+    initial design of the ArtsConnectEd2 technology committee was based on an equal
+    distribution of work between like positions in both institutions (two
+    developers, two designers, two managers). On paper, this approach seemed
+    sensible, but in reality the model posed challenges. One issue was fairly
+    balancing the workload through the life of the project. Each technologist came
+    to the table with a unique skill set, a different approach to work, and a
+    different set of institutional  time constraints beyond ArtsConnectEd2. These
+    differences led to the Walker taking a leadership role in the development of
+    the software. Shifts in responsibilities, along with a six-month extension of
+    the project timeline, caused significant tension and affected all team members.
+    In a single institution, personnel strengths and different working styles can
+    be managed much more easily than in a partnership, where team members reside in
+    vastly different institutional cultures. Throughout the project, the external
+    project manager and the new media directors worked to resolve these tensions by
+    redistributing the work and making staff changes. </p>
+  <p>Another team-related challenge was collaboration in areas
+    where the institutions had different standards and aesthetics. While the
+    partners’ shared values helped navigate these issues at a macro-administrative
+    level, the thousands of micro-decisions (design, grammar, etc.) required the
+    staff “in the trenches” to compromise with their colleagues at the partner
+    institution. </p>
+  <h3>Mixed Expertise</h3>
+  <p>In hindsight, many felt the first ArtsConnectEd site was
+    compromised by the limited involvement of the education staff. Almost a decade
+    later, the impetus for developing ArtsConnectEd2 came from the museum
+    educators. More than a Web site, ArtsConnectEd had become a core component of
+    the Walker and MIA’s school programs. When it came to the development of
+    ArtsConnectEd2, the challenge was to balance the new media staff’s desire to
+    innovate with the museum educators’ needs. A formal assessment conducted early
+    in the ArtsConnectEd2 project showed that the education committee had a strong
+    interest in Web 2.0 tools, but had the least experience using them. In
+    contrast, the technology committee was steeped in researching, using, and
+    developing these tools, but had limited understanding of the work of museum
+    educators and the audiences they serve. Needs assessment and use case scenarios
+    certainly helped, but managing each group’s assumptions - particularly
+    regarding functionality versus practicality - was an area of continual
+    negotiation.</p>
+  <h3>Commitment</h3>
+  <p>Collaborations like ArtsConnectEd can be very much like
+    marriages, and each challenge tests the relationship and partners’ commitment.
+    Because ArtsConnectEd2 was not the sole project of either institution,
+    competing institutional demands could easily threaten or compromise a project’s
+    success. The ArtsConnectEd2 development project absorbed nearly all of the
+    technology committee’s time for over a year and half. Beyond the dedication of
+    the designers and developers themselves, the directors of these departments
+    were instrumental in seeing the project to completion while working hard to
+    satisfy other commitments.</p>
+  <h2>12. Conclusions</h2>
+  <p>ArtsConnectEd2 is redefining how museum educators and K-12
+    teachers work on-line. The redesign project attempted to tear down the walls
+    between museum educators and their customers as well as the internal divisions
+    that separate education from new media. The project’s importance to its
+    developers and the expectations of its internal and external users set a very
+    high bar for everyone involved and tested the strength and potential of the
+    collaboration at every level. These expectations and the expansive product
+    illustrate the potential and the challenges faced in user-driven software
+    redesign.</p>
+  <p>ArtsConnectEd2 is the most ambitious software development
+    effort ever undertaken by the two museums, individually or together.  While
+    there was general recognition of the scope of our aspirations going into the
+    project, the demands that would be placed on developers and management were not
+    entirely understood or anticipated. When finally completed, the project was six
+    months over schedule, a consequence of the complex frameworks, staffing
+    resources, and software development process. An unanswered question is whether
+    the non-existent program specifications and requirements documents affected the
+    overall project. It is possible that more detailed requirements may have
+    shortened the development cycle, but it is also likely that the iterative
+    nature of the work - responding to user-feedback over following a plan - led to
+    a better product.  Regardless of all the testing, the answer remains, as
+    always, in the real-world experience of our end-users.</p>
+  <h2>References</h2>
+  <p class="ReferencesText">Bearman, Richmond and Trant (2000). Bearman, D.
+    Richmond, K and Trant, J. Pictures and People: Collaborative Cultural Resource
+    Creation: the example of the Art Museum Image Consortium. In D. Bearman and J.
+    Trant (eds.). Museums and the Web 2000: Proceedings. Toronto: Archives &amp;
+    Museum Informatics, 2000. consulted January 5, 2009.
+    <a href="../http://www.archimuse.com/mw2000/papers/trant/trant.html">http://www.archimuse.com/mw2000/papers/trant/trant.html</a></p>
+  <p class="ReferencesText">Bridges (1998). Bridges, B. R. Collaboration and
+    Student Involvement on an Art Curriculum Website. In D. Bearman and J. Trant
+    (eds.). Museums and the Web 1998: Proceedings. Toronto: Archives &amp; Museum
+    Informatics, 1998. last updated March 20, 1998, consulted January 5, 2009. <a href="../http://www.archimuse.com/mw98/papers/bridges/bridges_paper.html">http://www.archimuse.com/mw98/papers/bridges/bridges_paper.html</a></p>
+  <p class="ReferencesText">Dowden, R. (2000), S. Sayre, and S. Dietz.
+    ArtsConnectEd: Collaboration in the integration and access to museum resources.
+    First Monday 5 (6). consulted January 30, 2009.
+    <a href="../http://firstmonday.org/htbin/cgiwrap/bin/ojs/index.php/fm/article/view/752/661">http://firstmonday.org/htbin/cgiwrap/bin/ojs/index.php/fm/article/view/752/661</a></p>
+  <p class="ReferencesText">Minneapolis Institute of Arts and Walker Art Center
+    (1999) Integrated Arts Information Access: Project Description and Reports.
+    last updated March 30, 1999. consulted January 30, 2009. <a href="../http://www.walkerart.org/iaia/">http://www.walkerart.org/iaia/</a></p>
+  <p class="ReferencesText">Minneapolis Institute of Arts (2009) Statistics. last
+    updated December 31, 2008. consulted January 30, 2009. <a href="../http://www.artsmia.org/stats/">http://www.artsmia.org/stats/</a></p>
+  <p class="ReferencesText">Minneapolis Institute of Arts and Walker Art Center
+    (2009) ArtsConnectEd 2 Project Planning Site. last updated January 2009.
+    consulted January 30, 2009. <a href="../http://ace2.artsconnected.org/">http://ace2.artsconnected.org/</a></p>
+  <p class="ReferencesText">Sayre and Wetterlund (2002). Sayre, S. and K.
+    Wetterlund. Pyramid Power: A Train-the-Trainer Model to Increase Teacher Usage
+    of the ArtsConnectEd Online Resource. In D. Bearman and J. Trant (eds.).
+    Museums and the Web 2002: Proceedings. Toronto: Archives &amp; Museum
+    Informatics, 2002. consulted January 5, 2009. <a href="../http://www.archimuse.com/mw2002/papers/sayre/sayre.html">http://www.archimuse.com/mw2002/papers/sayre/sayre.html</a></p>
+  <p class="ReferencesText">Wetterlund, K. (2009). In prep. Keep your friends
+    close: The history of a museum partnership and its community of teacher
+    learners. For: The Journal of Museum Education 34 (1).</p>
+  <h2>Appendix A</h2>
+  <h3>ArtsConnectEd2 Sample Use Case</h3>
+  <h3>Use Case 10: Search for an Item</h3>
+  <p>Description: Any user can search for ACE
+    assets (artwork, audio, video, document, website, collection) and external
+    events (MIA/WAC RSS feeds) from any page in ACE.</p>
+  <p>Actors: All users</p>
+  <p>Preconditions: Non</p>
+  <p>Steps:</p>
+  <ol>
+    <li>Enter search string, hit GO</li>
+    <li>Returns are shown with matching search terms
+      highlighted in context</li>
+    <li>Returns include item lists sorted by relevance
+      within category. Category headers (tabs) include item totals. System defaults
+      to “all” tab but will remember the last category selected in a browser session.</li>
+  </ol>
+  <p>Results may be:</p>
+  <ul>
+    <li>viewed by category (artwork, audio/video,
+      documents, websites, collections, events) </li>
+    <li>globally filtered by contributor (Walker-only,
+      MIA-only, user-contributed) </li>
+    <li>further refined by filters that change according
+      to the category selected </li>
+    <li>sorted/reordered within category by metadata yet
+      to be defined; all categories include the option to sort results according to
+      date added to ace </li>
+    <li>selected to view item detail </li>
+    <li>selected individually or as a page within
+      category to add to a collection (this is an Ajax implementation: selected items
+      are automatically added to a collection without losing focus or need to
+      refresh) </li>
+    <li>paged through</li>
+  </ul>
+  <p>Notes:</p>
+  <ul>
+    <li>Tagging was requested but removed as a feature
+      available in search results (see instead uc#16a &#34;Batch Tag&#34;).</li>
+    <li>Clarifying metadata searched versus what is used
+      for display and filtering cannot be determined until metadata is defined.</li>
+    <li>Global filters are limited to contributor.</li>
+    <li>ACE2 will not have a separate advanced search</li>
+    <li>Some Boolean operators will be available
+      depending on what is present in Lucene.</li>
+    <li>Last category selected persists for browser session.</li>
+    <li>User can change/specify number results displayed
+      per page as a session preference.</li>
+  </ul>
+  <p>Author: Jim Ockuly, Robin Dowden, Scott
+    Sayre 7/5/07</p>
+  <p>Updated: Robin 8/29/07</p>
+
+<!-- InstanceEndEditable --> </div>
+  			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Dowden, R., and S. Sayre: Tear Down the Walls: The Redesign of ArtsConnectEd<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2009: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2009/papers/<!-- #BeginEditable "URL" -->dowden/dowden.html
+				 <!-- #EndEditable --></p>
+	</div>
+</div>

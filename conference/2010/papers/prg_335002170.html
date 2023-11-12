@@ -1,0 +1,192 @@
+<div id="main-content">
+   <!-- <div id="news-old" onclick="location.href='http://conference.archimuse.com/';" style="cursor:pointer;">-->
+<div id="news-container">
+    	
+ 		<div id="evals">
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+			var r_text = new Array ();
+			r_text[0] = "very lively discussion. to be continued ...";
+			r_text[1] = "well curated. high level thinking";
+			r_text[2] = "inspiring ... life-changing conversation";
+			r_text[3] = "the creativity here is palpable";
+			r_text[4] = "very professional. a nice collegial atmosphere. highly intellectual.";
+			r_text[5] = "great inclusive program ... learning so many amazing things about what others are doing.";
+			r_text[6] = "great community where the most innovative and creative people get together!";
+			r_text[7] = "love the openness of everyone participating";
+			r_text[8] = "What's good? The people.  The ideas. The conversations.  The willingness to really talk about issues.   The food and coffee. ";
+			r_text[9] = "an inter-generational community, in which each new layer brings its own talents, technologies, and ideals to the table in a respective and co-creative dialogue.";
+
+
+			var i = Math.floor(9*Math.random())
+			
+			document.write ('<h2 align=\"center\">Feedback from MW2009</h2><ul class=\"news-list\"><li><span style="font-size: 1.3em;">&ldquo;</span>&nbsp;' + r_text[i] + '&nbsp;<span style="font-size: 1.3em;">&rdquo;</span></li></ul>');
+			
+	                // ]]> -->
+				  </script>
+		<noscript></noscript>
+
+	  </div>
+ 		 <div id="news">    
+	        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+                    //USAGE SYNTAX: new rssdisplayer("divid", "rssurl", numberofitems, "displayoptions")
+                    new rssdisplayer("news", "http://conference.archimuse.com/conferences/mw/mw2010/feed", 20, "")
+                // ]]> -->
+				  </script>
+		<noscript></noscript>
+
+      </div>
+         </div>  
+    
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="Intro-Paragraph" --> 
+        <h2 class="Author"><a href="../../bios/au_3850.html">Slavko Milekic</a>, University of the Arts, Philadelphia, US</h2>
+          <h3 class="AbstractTitle">Abstract</h3>
+          <p class="AbstractText">Eye- and gaze-tracking has firmly established itself as a valuable tool for market and Web-design. However, until recently the technology was fairly exclusive and expensive. This paper will present current research on the topic, using economical, commercially available components (Web cams, open source software) for building applications that use eye- and gaze-tracking.  Implications for museums are far reaching and include: (a) improvement of Museum Web site designs, (b) development of specific museum Web-based applications that will be sensitive to usersâ€™ intentions and preferences, (c) collecting data for museum studies, and (d) enhancing â€˜knowledge disseminationâ€™ via Web-based applications. </p>
+          <p class="AbstractText">The author of the paper was recently (Summer 2009) granted a US patent for an original way of interacting with a display using eye- and gaze-tracking.</p>
+          <p class="keywords">Keywords: eye-tracking, gaze-tracking, museums, distance education, Web design</p>
+	  <!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="Body-Text" -->
+
+          <h2>Introduction</h2>
+        <p>Eye and gaze-tracking has been subject of research interests for over a century (Huey, 1908). Even though early applications focused on interpretation of the gaze pattern in interpretation of works of art (Yarbus, 1967), the technology was adopted mainly by researchers in the fields of psycholinguistics (for example, see Rayner &amp; Pollatsek, 1987); design of modern car controls (Yu-ming and Li, 2007); as a focusing device in traditional film cameras; and for the most part, in Web design and marketing research (Google, 2009), as well as for the design of mobile devices (PÃ¶lÃ¶nen et al, 2003). An attempt made by the National Gallery of Art in London to collect gaze patterns of visitors using eye-tracking equipment also yielded some publishable data (Wooding, 2002). </p>
+        <p>The technology started by using very primitive techniques (for example, affixing small mirrors with suction cups to the eyeballs of â€˜subjectsâ€™); it has benefited greatly by the advancement of digital technologies.  Modern eye-trackers can be easily attached to a laptop (or be built into one), and sophisticated software analysis allows free head movements while still tracking the gaze direction of the viewer. </p>
+          <h2>Eye- and Gaze-Tracking Overview</h2>
+        <p>Although it is possible to use a wide variety of methods to track the eye movements (see Duchowski, 2002), currently the most widespread and commercially available method is to use infra-red illumination of the eye and infer gaze direction by comparing the position of the pupil relative to the position of corneal â€˜glintâ€™ (that is, a spot of reflected light from the cornea that exists whenever there is enough ambient light to see; see Figure 1). A non-technical description of the methodology that is relevant to museum professionals can be found in an earlier paper (Milekic, 2003). </p>
+          <p class="caption"><img src="milekic.Fig1.jpg" width="364" height="206" alt="Figure 1"/></p>
+        <p class="caption">Fig 1: A photograph of an eye showing the position of the pupil (A &amp; B) and the â€œglintâ€�</p>
+        <p>Although the existing technologies have found their commercial applications in a variety of fields like Web design, product design and various areas of research in the cognitive science area, several obstacles prevented their broader use. These problems are related to:</p>
+          <ul>
+            <li>cost of eye-tracking equipment</li>
+            <li>portability</li>
+            <li>ease of use</li>
+            <li>eye-control interface design.</li>
+          </ul>
+        <p>The first three problems are mainly related to technologies currently used in eye-tracking and will be dealt with in the following section. Eye-control interface problems belong to an entirely different category and will be addressed separately.  </p>
+          <h2>Low Cost Eye-Tracking</h2>
+        <p>One of the major barriers for the development of eye-tracking applications is the cost of the equipment itself. Current prices range from $6000 to $40.000+ and are often just for the lease of equipment. When these technologies were originally developed, existing personal computers lacked sufficient processing power and special video input. However, during the last decade personal computers have dramatically improved processing speed, amount of storage and communication with external devices (USB2 ports, fire wire port). At the same time, consumer driven demand for free video communication over the Internet has led to miniaturization and increased resolution of Web cams. Indeed, nowadays an average laptop (as well as mobile devices like cell phones) comes equipped with built-in cameras whose technical specifications exceed the ones of commercially available products from just a few years ago. Since the minimal technological requirements for eye-tracking became available either as cheap off-the-shelf devices (Web cams), or were integrated into existing devices, it is not surprising that a number of researchers and innovators turned their attention to this area.</p>
+          <h3>Web cam based eye-tracking</h3>
+        <p>It was in 2002 that one of the first papers on the possible use of Web cams in the area of eye-gaze assistive technology was published (Corno, Farinetti, Signorile, 2002). However, while it provided handicapped users with an alternative way of interacting with digital content, the software was slow and imprecise (see the more recent paper by Corno &amp; Garbo, 2005 for a more sophisticated solution). It is only in the past two years that the use ofWweb cams as eye-tracking devices has received new interest. The following sections provide an overview (by no means exhaustive) of both professional researchers and computer enthusiasts who have designed low-cost or free (open source) software for Web cam based eye-tracking.</p>
+        <p>An example of academic research for low-cost eye-tracking is provided by Piotr ZieliÅ„skiâ€™s <strong>Opengazer</strong> as open-source software using an ordinary Web cam (see references for Web link). The most recent version of the software also provides face-tracking and the recognition of facial gestures (for example, smile and frown detection).  </p>
+        <p>A group of researchers from the IT University of Copenhagen (San Agustin et al, 2009) has developed an open-source eye-tracking program <strong>ITU Gazetracker, </strong>as well as applications that use eye-tracking for text input (<strong>GazeTalk</strong>, <strong>StarGazer</strong>) and an application which allows eye-controlled interaction with video content on the popular YouTube site (<strong>EyeTube</strong>).</p>
+        <p class="caption"><img src="milekic.Fig2.jpg" width="500" height="320" alt="Figure 2"/></p>
+        <p class="caption">Fig 2: Setup screen from GazeTracker</p>
+        <p>Another single-camera eye-tracking system has been described in detail by Hennessey at al. (2006).  Besides academic research, eye- and gaze-tracking has attracted the attention of numerous open-source programmers, hackers and artists as an alternative way of interacting with digital content. Perhaps the best example of such efforts is the <strong>EyeWriter</strong> project (<span class="BodyTextChar"><a href="http://www.eyewriter.org/">http://www.eyewriter.org/</a></span>) where a group of programmers, artists and designers (Members of Free Art and Technology (FAT), OpenFrameworks, the Graffiti Research Lab, and The Ebeling Group) came together to design a cheap eye-tracking device to help their friend Tony Quan, an LA graffiti writer, publisher and activist who was rendered paralyzed with the onset of amyotrophic lateral sclerosis (ALS). </p>
+        <p class="caption"><img src="milekic.Fig3.jpg" width="500" height="332" alt="Figure 3"/></p>
+        <p class="caption">Fig 3: Tony Quan with eye-tracker built with off-the-shelf components (image from: <a href="http://www.eyewriter.org/">http://www.eyewriter.org</a>)</p>
+        <p>A similar system (head mounted) was described under the name <strong>openEyes </strong>and can be built using open-source software and cheap hardware (Li, Babcock, Parkhurst, 2006). </p>
+        <h3>Applications using eye-tracking</h3>
+        <p>Often, many of the applications using eye- and head-tracking were developed by independent programmers for first person â€˜shoot them upâ€™ games. In these games the playerâ€™s eye controls the cross-hairs on the screen, making the experience of shooting the opponents equivalent to looking at them (on the screen) and pressing the trigger button. Examples include the head-tracking program <strong>CameraMouse</strong> (see Web references) and the game <em>Aliens</em><em>.</em> Eye-tracking has been successfully integrated with a number of popular games, like <em>Quake II</em>, or <em>Warcraft</em>. Using the keywords â€œeye-trackingâ€� and â€œgamesâ€� will bring links to a dozen examples on YouTube. </p>
+          <h3>Museums and eye-tracking</h3>
+        <p>The use of eye-tracking in museums has been severely limited, mainly due to the problems associated with a museum professionalsâ€™ general lack of knowledge of the existing technologies as well as the difficulties of setting up the equipment for a large number of diverse visitors. However, recent advancements in marketing with eye-aware displays, as well as a number of interactive art installations that use eye- and gaze-tracking,have sufficiently demonstrated that the technologies in question are mature enough for use in public spaces. For example, Amnesty International has sponsored the development of a poster that raises awareness about domestic violence. The poster entitled â€œIt happens when nobody is watchingâ€� depicts a seemingly content couple; that is, only when one is looking directly at it. However, when one turns the gaze away, the scene changes dramatically to that of a violent beating (Figure 4). </p>
+        <p class="caption"><img src="milekic.Fig4.jpg" width="500" height="464" alt="Figure 4"/></p>
+        <p class="caption">Fig 4: Amnesty International poster using eye-tracking</p>
+        <p>The video installation â€œBig Smileâ€� by a multimedia artist Brian Knep uses the same technology â€“ a large â€œsmiley faceâ€� has a growing smile as long as no one is looking at it. The moment it detects a pair of eyes looking at it, it puts on a â€œstraight faceâ€� with no smile (Knep, 2003). </p>
+        <p>One of the first large scale studies involving the use of eye-tracking equipment in a museum was undertaken by the National Gallery in London, during the exhibit â€œTelling Timeâ€� (Figure 5). However, besides demonstrating that it is possible to use eye-tracking technology in large scale exhibits, the study did not substantially enhance museumâ€™s visitor experience. </p>
+        <p class="caption"><img src="milekic.Fig5.jpg" width="500" height="421" alt="Figure 5"/></p>
+        <p class="caption">Fig 5: Early data from the experiment showing fixations and scan-paths of participants looking at Paul Delaroche&#39;s &#39;The Execution of Lady Jane Grey&#39; (National Gallery, London &amp; Applied Vision Research Unit at the Institute for Behavioral Sciences, Darby, Exhibition â€œTelling Timeâ€�)</p>
+        <p>The author of this paper is of the opinion that eye- and gaze-tracking technologies have huge potential for use in the areas of physical museum visitorsâ€™ experience, as well as for the enhancement of museum presence on the Web. </p>
+          <h2>Proposed Research &amp; Applications</h2>
+        <p>It is important to note that the following proposals are based on currently available technologies and methodologies that were already successfully used in other areas such as marketing or product design. Possible museum applications can be broadly grouped in two categories:</p>
+          <ul>
+            <li>gaze-aware applications, and</li>
+            <li>gaze-controlled applications.</li>
+          </ul>
+        <p><strong>Gaze-aware</strong> applications are those where a userâ€™s gaze direction and fixation location are tracked, and based on this information, the application can trigger an event. The observed articles can be physical paintings, large scale projections, screens and even sculptures. The triggered events would most likely have the function to provide additional information that is relevant to an observerâ€™s interest, as specified by gaze direction.</p>
+        <p><strong>Gaze-controlled</strong> applications are the ones where a user can actively interact with content (displayed on a screen, or projected) by using eye-movements. This approach has large potential for use in Web-based museum applications since the content is already digitized and presented on a screen.</p>
+        <p>Of course, it is entirely possible to create applications that would use a mix of both approaches.</p>
+          <h3>Gaze-aware applications in museums</h3>
+        <p>Figure 6 illustrates a possible gaze-aware application in a physical museum. What is depicted is an <em>explanation</em> of the process. A museumâ€™s visitor experience would be that of looking at the physical painting. However, focusing attention on a certain detail (for example, the face) would â€œmagicallyâ€� start an appropriate narrative (depicted by callout boxes next to gaze fixation points). </p>
+        <p class="caption"><img src="milekic.Fig6.jpg" width="500" height="477" alt="Figure 6"/></p>
+        <p class="caption">Fig 6: An example of gaze-aware information delivery in a museum setting. Red circles indicate points of gaze fixation. Callout boxes indicate the triggering of a target specific voice narration (painting from the Clay Center, Charleston, WV in an interactive application designed by the author) </p>
+        <p>Figure 7 illustrates similar approach for the viewing of a large scale artifact, in this case a mural depicting a sequence of different scenes. Looking at the mural through the oval â€œviewing windowâ€� (which ensures that the viewerâ€™s eyes will be at the specific location and thus trackable) positions a spotlight corresponding to oneâ€™s gaze direction and triggers a voiceover that is relevant to gaze fixation.   </p>
+        <p class="caption"><img src="milekic.Fig7.jpg" width="500" height="412" alt="Figure 7"/></p>
+        <p class="caption">Fig 7: A possible setup for gaze-guided audio delivery. The marked parts of the installation are as follows: (A)observed artifact (B)eye-tracking mechanism (infra-red light emitters &amp; camera) (C)viewing station with built-in speakers (D)gaze â€˜focusâ€™ spotlight(E)computer projector</p>
+          <h3>Gaze-controlled applications for museum content</h3>
+        <p>While gaze-controlled museum applications can be displayed in physical museums, their true potential is unleashed in combination with inexpensive Web cam-based eye-tracking. Web cams are already a standard feature of modern laptops, and based on the number of previously described open-source programs, it is only a question of time until Web-based content (or, for that matter, anything displayed on a screen) will be open to yet another source of input â€“ a userâ€™s gaze. Interest in these methodologies is not trivial and may have huge commercial implications - as indicated by the fact that one of the leaders in the design of digital devices, Apple™, has recently acquired the largest eye-tracking equipment manufacturer (Tobii™). Academic research is following the same trends. Recently, as a part of cross-discipline collaboration named StudioNext, two teams of students from different departments at the University of the Arts were investigating possible eye-tracking applications (StudioNext, 2009).</p>
+        <p>Any gaze-controlled application has to solve a problem which is known in literature as â€œMidas touchâ€� â€“ that is, it has to be able to differentiate between looking at something just for sake of observation and looking at something in order to initiate some action. The most common solutions to this problem are either time-based (for example, fixating a button on the screen for a period of time will eventually lead to a simulated mouse click), or location-based (looking at certain parts of the screen defines the function of gaze control, similar to a â€˜tools paletteâ€™ in many programs). </p>
+        <p>In a previous paper (Milekic, 2003), I described yet another method of solving this problem â€“ by using â€œeye gesturesâ€�. In short, eye-gestures are voluntary rapid eye movements, for example to the left, right, up or down, which are not usual during normal observation.  One can think of them as â€œeye-signalsâ€� that we sometimes make, for example, to silently indicate a person we are currently talking about. Depending on the context these eye-gestures can be assigned different functions and can provide sophisticated hands-free interaction with digital content. For an example of possible actions triggered by eye-gestures, see Figure 8.</p>
+        <p class="caption"><img src="milekic.Fig8.jpg" width="500" height="211" alt="Figure 8"/></p>
+        <p class="caption">Fig 8: Arrows indicate the direction and range of eye-movements and functions assigned to them. Moving the eyes in a normal fashion does not trigger any actions.</p>
+        <p>The following illustrations provide an example of hands free interaction with museum content, either in a physical museum (using a projection screen) or on a computer screen with Web content. The proposed interface allows selecting an object (on the vertical right hand panel) just by looking at it. The selected object is displayed in the viewing panel on the left. Using eye-gestures it is possible to zoom-in (glance to the left), zoom-out (glance to the right), grab (glance up) and drop the object (glance down). While the object is â€œgrabbedâ€� it will follow the gaze direction,  allowing examination of different areas under magnification, until it is â€œdroppedâ€� (Figure 9). </p>
+        <p>While â€œhands-freeâ€� manipulation of objects on the screen may seem trivial in a museum Web site context (although it is not in the case of a neurosurgeon interacting with CAT scans of a patientâ€™s brain during an operation), it can be combined with gaze-awareness of objects which can deliver additional information about specific detail that the viewer is looking at. </p>
+        <p class="caption"><img src="milekic.Fig9.jpg" width="500" height="674" alt="Figure 9"/></p>
+        <p class="caption">Fig 9: Example of a gaze-controlled museum Web collection interface. Eye-movement to the left zooms into the image. Looking up would â€œgrabâ€� the image and allow inspection of different parts. A scrollable panel on the right allows choosing another image.</p>
+        <p>Another way of using gaze-tracking for Web-delivered content would be to â€œattachâ€� different tools to a viewerâ€™s gaze. Figure 10 illustrates the use of a magnifier tool â€“ the magnifier follows the userâ€™s gaze.  Of course, it is possible to imagine a wide variety of â€œgaze toolsâ€�; for example, X-ray vision of the painting, microscopic examination of the painting.</p>
+        <p class="caption"><img src="milekic.Fig10.jpg" width="400" height="563" alt="Figure 10"/></p>
+        <p class="caption">Fig 10: An example of gaze-controlled magnification. The magnifier is â€œtiedâ€� to a viewerâ€™s gaze. </p>
+          <h3>Eye-tracking and knowledge dissemination</h3>
+        <p>Eye-tracking does not have to be constrained just to interactions with objects displayed on the screen. Some of the recent studies indicate that eye-tracking can dramatically influence the efficacy of knowledge transfer and retention.  A study by Ozpolat (2009) provided a model that will deliver information (based on eye-tracking data) in a way that corresponds to a viewerâ€™s learning style. With the changing role of museums since the introduction of the digital medium, shifting from conservation and preservation to education and knowledge dissemination, this may play a crucial role in how museum information is delivered, both in the physical museum and on the Web.</p>
+          <h3>Eye-tracking and museum studies</h3>
+        <p>Eye-tracking may prove to be the most powerful tool for museum studies. If Web cam-based eye-tracking becomes a reality, one can only imagine what kind of data will become available to museums. So far, only large corporations are benefiting from controlled eye-tracking studies, mainly for marketing purposes. In academic circles, the last decade was marked by increased interest of cognitive scientists in what came to be known as â€œneuroaestheticsâ€� (Skov, 2009) â€“ a study of neural bases of our perception of beauty. The sad truth is that so far, the success or failure of major exhibits could only be judged by marketing criteria (how many visitors) and not by the impact the exhibit actually had on visitors. Web cam-based data collection would be free and automatic and provide us with a â€œmissing linkâ€� of data â€“ what is it that museums Web site visitors are actually looking at?</p>
+          <h2>Conclusion</h2>
+        <p>For the sake of clarity, I would like to summarize the points that were addressed in previous sections. They are:</p>
+          <ul>
+            <li>cheap Webcam-based eye-tracking already exists</li>
+            <li>it very likely will be incorporated into a new generation of digital devices (laptops, netbooks, iPads, etc.)</li>
+            <li>eye-tracking on its own, and specifically Web cam-based eye-tracking, offers new ways of interacting with museum content, both in a physical museum and in Web-delivered content</li>
+            <li>eye- and gaze-tracking data may play a crucial role in museum Web site design and content delivery, as well as exhibition planning in physical museums.</li>
+          </ul>
+          <p>As with other major revolutions that happened with the introduction of digital media, like the possibility of having a museum Web site, digitizing museum collections, and more recently, delivering content via mobile devices (like iPods and cellular phones), the only question is:</p>
+        <p>Are museum professionals going to wait for someone else to define their future, or are they going to take an active role in it?</p>
+          <h2>References</h2>
+          <p class="ReferencesText">Corno, F., L. Farinetti &amp; I. Signorile (2002). A Cost-Effective Solution for Eye-Gaze Assistive Technology. ICME 2002: IEEE International Conference on Multimedia and Expo, Lausanne, Switzerland</p>
+          <p class="ReferencesText">Corno, F., and A. Garbo (2005). Multiple Low-cost Cameras for Effective Head and Gaze Tracking. 11th International Conference on Human-Computer Interaction, Las Vegas, USA, July 2005. Available at: http://www.cad.polito.it/FullDB/exact/hci05.html</p>
+          <p class="ReferencesText">Duchowski, A.T. (2002). Eye Tracking Methodology: Theory and Practice. Springer Verlag</p>
+          <p class="ReferencesText">Hennessey, C., B. Noureddin, &amp; P. Lawerence (2006). A Single Camera Eye-Gaze Tracking System with Free Head Motion. ETRA 2006. San Diego, California, 27–29 March 2006 </p>
+          <p class="ReferencesText">Huey, E. (1968) The Psychology and Pedagogy of Reading (Reprint). MIT Press 1968 (originally published 1908), available as full text at: <a href="http://books.google.com/">http://books.google.com/</a></p>
+          <p class="ReferencesText">Li, D., J. Babcock, D. Parkhurst (2006). â€œopenEyes: A low-cost head-mounted eye-tracking solutionâ€�. In Proceedings of the ACM Eye Tracking Research and Applications Symposium.</p>
+          <p class="ReferencesText">Knep, B. (2003). Big Smile. Available at: <a href="http://www.blep.com/bigSmile/index.htm">http://www.blep.com/bigSmile/index.htm</a></p>
+          <p class="ReferencesText">Milekic, S. (2003). â€œThe More You Look the More You Get: Intention-based Interface using Gaze-trackingâ€�. In D. Bearman &amp; J. Trant (Eds). Museums and the Web: Selected papers from Museums and the Web 03. Pittsburgh: Archives &amp; Museum Informatics, consulted on 1/31/10 <a href="http://www.archimuse.com/mw2003/papers/milekic/milekic.html">http://www.archimuse.com/mw2003/papers/milekic/milekic.html</a></p>
+          <p class="ReferencesText">National Gallery in London (2000). &#39;Telling Time&#39; exhibit eye-tracking report, consulted on 1/29/2010 <a href="http://www.lboro.ac.uk/research/applied-vision/projects/national_gallery/index.htm">http://www.lboro.ac.uk/research/applied-vision/projects/national_gallery/index.htm</a></p>
+          <p class="ReferencesText">Ozpolat, E., G. Akar (2009). â€œAutomatic detection of learning styles for an e-learning systemâ€�. Computers &amp; Education 53, pp. 355-367.</p>
+          <p class="ReferencesText">PÃ¶lÃ¶nen, M., H. Juha-Pekka, P. Kimmo &amp; H. Jukka (2003). â€œHandheld device usability studies with eye trackingâ€�. ECEM 12, August 20 - 24, 2003, Dundee, Scotland 2003. </p>
+          <p class="ReferencesText">Rayner, K., &amp; A. Pollatsek (1987). â€œEye movements in reading: A tutorial reviewâ€�. In M. Coltheart (Ed.), Attention and performance XII(pp. 327-362) Hillsdale, NJ: Erlbaum.</p>
+          <p class="ReferencesText">San Agustin, J., H. Skovsgaard, J.P. Hansen and D.W. Hansen (2009). â€œLow-cost gaze interaction: ready to deliver the promisesâ€�. In Proceedings of the 27th international Conference Extended Abstracts on Human Factors in Computing Systems. Boston, MA, USA, April 04 - 09, 2009 CHI EA &#39;09. ACM, New York, NY, 4453-4458. Available at: <a href="http://doi.acm.org/10.1145/1520340.1520682">http://doi.acm.org/10.1145/1520340.1520682</a></p>
+          <p class="ReferencesText">Skov, M., &amp; O.Vartanian (eds.) (2009). Neuroaesthetics (Foundations and Frontiers in Aesthetics), Baywood Publishing Company, Amityville, New York.</p>
+          <p class="ReferencesText">Wooding, D.S. (2002). Fixation Maps: Quantifying Eye-movement Traces, ETRA&#39;02 New Orleans, Louisiana, USA, available at: <a href="http://www.cnbc.cmu.edu/~tai/readings/active_vision/wooding_fixation_map.pdf">http://www.cnbc.cmu.edu/~tai/readings/active_vision/wooding_fixation_map.pdf</a></p>
+          <p class="ReferencesText">Xu S., H. Jiang, &amp; F.C.M. Lau (2009). User-Oriented Document Summarization through Vision-Based Eye-Tracking. IUIâ€™09, February 8 - 11, 2009, Sanibel Island, Florida, USA</p>
+          <p class="ReferencesText">Yarbus, A. L. (1967). â€œEye Movements and Visionâ€�. Plenum. New York. 1967 (Originally published in Russian 1962).</p>
+          <p class="ReferencesText">Yu-ming, C., &amp; L.W.Li (2007). The Visual Power of the Dashboard of a Passenger Car by Applying Eye-Tracking Theory. SAE World Congress &amp; Exhibition, April 2007, Detroit, MI, USA.</p>
+          <p class="ReferencesText">Zielinski, P. Opengazer: open-source gaze tracker for ordinary webcams. Consulted on 1/30/2010 at <a href="http://www.inference.phy.cam.ac.uk/opengazer/">http://www.inference.phy.cam.ac.uk/opengazer/</a></p>
+          <p class="ReferencesText"><strong>Web links</strong></p>
+          <p class="ReferencesText">Amnesty International eye-tracking poster: <a href="http://www.artandads.com/tag/eye-tracking/">http://www.artandads.com/tag/eye-tracking/</a></p>
+          <p class="ReferencesText">CameraMouse: <a href="http://www.cameramouse.org/index.html">http://www.cameramouse.org/index.html</a></p>
+          <p class="ReferencesText">EyeWriter Initiative: <a href="http://www.eyewriter.org/">http://www.eyewriter.org/</a></p>
+          <p class="ReferencesText">Google eye-tracking study: <a href="http://googleblog.blogspot.com/2009/02/eye-tracking-studies-more-than-meets.html">http://googleblog.blogspot.com/2009/02/eye-tracking-studies-more-than-meets.html</a></p>
+          <p class="ReferencesText">StudioNext project at the University of the Arts, Philadelphia: <a href="http://www.uarts-eyetracking.org/">http://www.uarts-eyetracking.org</a>/</p>
+	  <!-- InstanceEndEditable --> </div>
+      
+        			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->  Milekic, S., Gaze-Tracking and Museums: Current Research and Implications<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2010: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2010. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date  based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2010/papers/<!-- #BeginEditable "URL" -->milekic/milekic.html
+				 <!-- #EndEditable --></p>
+	</div>
+  </div>

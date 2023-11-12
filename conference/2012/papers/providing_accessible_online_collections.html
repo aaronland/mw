@@ -1,0 +1,221 @@
+<div id="main-content">
+          
+                      <div id="breadcrumb">
+              <h2 class="element-invisible">You are here:</h2>
+              <a href="../../mw2012.html">MW2012</a> » <a href="../sessions.html">Sessions</a> » <a href="../programs/providing_accessible_online_collections.html">Providing accessible online collections</a> »             </div> <!-- /breadcrumb -->
+              
+                      <div id="main-content-header" class="clear-block">
+              <h1 id="page-title">Providing Accessible Online Collections</h1>                          </div>
+          
+          
+          <div id="content"><div id="article-16930" class="article paper-article clear-block">
+
+    
+    <div class="article-detail clear-block">
+  <div class="node-edit-link" id="node-edit-link-16930"><ul class="links"><li class="0 first last active"><a href="providing_accessible_online_collections.html" class="active">[View]</a></li>
+</ul>
+</div><h3 class="Author">Rachael Rainbow, Alex Morrison, Cogapp, UK; Matt Morgan, The Metropolitan Museum of Art, USA</h3>
+<p class="url"><em>http://www.metmuseum.org/collections</em></p>
+<h2 class="AbstractTitle">Abstract</h2>
+<p class="AbstractText">Feedback from user research for the recently re-launched Metropolitan Museum of Art website made it clear that users need multiple routes into the collections online. Visitors want to search across data, on multiple dimensions, and find other artworks that may interest them. Enabling this with the data available was a huge challenge. Museum collections data is not necessarily structured to support such multi-dimensional searching, especially in a collection as diverse as the Met’s. In this paper we discuss the system we built to enable the Museum to analyse the data and construct rules to support these user journeys. With this system, Museum staff match terms against standard vocabularies (including AAT and TGN), provide contextual interpretation of terms by department, qualify terms such as locations, and define rules for common misspellings. A powerful Solr search system provides the quick and complex search functionality, establishes the relationships between artworks, provides free-text searching, and gives facet counts.</p>
+<p class="keywords">Keywords: Collections, search, Solr, vocabularies, metadata</p>
+<h2>1. The Metropolitan Museum of Art’s Collections</h2>
+<ol> </ol>
+<p>The Metropolitan Museum of Art in New York is one of the world&#39;s largest and finest art museums. Founded in 1870, its encyclopedic collections include hundreds of thousands of works of art, spanning more than five thousand years of world culture, from prehistory to the present and from every part of the globe. </p>
+<p>In 2009, The Metropolitan Museum of Art commissioned Cogapp to redesign their website. The Museum had already made some of their collection available to the public online but user research carried out as part of the website re-launch project highlighted a number of issues with the existing presentation and functionality:</p>
+<ul>
+<li>Poor search results being returned by the search engine (for example a search for ‘Rembrandt’ returning a selection of African sculptures).</li>
+<li>The first results page of the collection database was discouraging to some users as many of the results were written in languages other than English. </li>
+<li>It was clear that many users wanted to use the collection database to discover new artworks. These users would use search terms such as artists’ names, art movements, dates, geographical regions or cultures, yet they frequently struggled to find relevant results using these terms. </li>
+</ul>
+<p style="text-align: center;"><img src="../../files/rainbow.fig1_.jpg" border="0"/></p>
+<p style="text-align: center;"><strong><em>Figure 1. Existing online collection </em></strong></p>
+<h2>2. User research findings</h2>
+<p>Cogapp approached the website re-launch from a user centred perspective.  We carried out initial one-to-one interviews with 46 users and potential users from a wide range of audiences (including general museum visitors, frequent museum visitors, members, researchers/academics, families and educators) and followed this up with card sorting exercises with a further 14 users. </p>
+<p>From the user research we established a number of user goals for the artworks and collections including:</p>
+<ol>
+<li>Find a specific artwork. </li>
+<li>Find artworks by time period. </li>
+<li>Research specific civilizations. </li>
+<li>Search by a place or country. </li>
+<li>Find artworks by genre. </li>
+<li>Search for paintings by &#39;school.&#39; </li>
+<li>Search for types of artifacts. </li>
+<li>Find out about a specific artist.</li>
+</ol>
+<p>In order to understand more about how users thought about the artworks in the collections, we carried out an open card sort  (a card sort whereby users can create and name their own categories).   Users were presented with a deck of 63 artwork cards which were drawn from the first three objects from the ‘Collection highlights’ of each department on the existing website. The cards were printed with an image of each object and tombstone data. The order of the data fields on the cards was randomized to prevent participants easily honing in on a single facet to sort by. </p>
+<p style="text-align: center;"><img src="../../files/rainbow.fig2_.jpg" border="0" width="500" height="328"/></p>
+<p style="text-align: center;"><em><strong>Figure 2. Artwork card for card sorting</strong></em></p>
+<p>When sorting the art cards participant’s with a pre-existing knowledge of art created a larger number of categories and displayed a greater anxiety to ‘get it right’.</p>
+<p>At one end of the scale Makala (aged 10) diligently sorted the piles into ‘keepers and non-keepers’, which she then labeled ‘Pieces of artwork that would interest children’ and ‘Pieces of artwork that would bore them’. </p>
+<p>With general visitors, personal experience became the determining factor. The response was strongly visual and was easier when the object was clearly apparent. For example, there was a major split between 2D and 3D objects (‘that’s a pot, that’s a painting’), between materials (drawings and paintings), between obvious geography (an American pile was a common theme) and age (‘it looks old’).</p>
+<p>General visitors sorted quickly and had few dilemmas categorizing the cards outside of understanding what some of the objects were. For frequent visitors, a little knowledge led to their creating a few more groups and expressing that the card sort was complex and would be easier if they could label by multi-facets. </p>
+<p>A few favourite artists were given categories of their own:</p>
+<blockquote><p>&#34;Di Vinci belongs to a class by himself&#34; – Gladys (frequent visitor) with familiar artists she pulls out by name.</p></blockquote>
+<p>Frequent visitors still tended to name groups after what they saw on the card images e.g. photography, instruments, but also started to use the curatorial departments they were familiar with i.e. American decorative arts. The other common sorting patterns were geography and artistic period.</p>
+<p>The researcher/academic participants spent more time reading the data on the cards than referring and responding to the images.</p>
+<p>Throughout the card-sorting sessions, it was clear that users wanted to explore the artworks and learn more about them. Some of the most common goals users reported relate to learning about the context of an artwork. Why was it made? Who was the artist? What is it made of? Why has the Museum selected it? What other works does it relate to? It is through building these connections that people are able to further engage with the work. </p>
+<blockquote><p>&#34;We love the marvelous conjunctions, the curiosity chest is more exciting. I’m reaffirming this boring Janson breakdown but I’m open to new ways to explore and see” – Virginia (researcher / academic)</p></blockquote>
+<p>Some of the most positive experiences we observed were where those with a little less knowledge about art were able to learn something about an object they liked. A memorable example was a infrequent museum visitor who, having spent some time exploring a dragon illustration, explained that it could inspire a tattoo. This experience was especially powerful when that knowledge could then be used to build connections between objects.</p>
+<p>The importance of finding an entry point into a collection from an artwork that resonates with the user is something we have observed on multiple occasions. For example, in user testing with the British Museum in 2006, we saw a carpenter who was unenthused by the stone sculptures he saw but got immediately more engaged when he encountered objects made of wood, a material he understood. Similarly when testing a collection of ‘Icons of England’ for the UK’s Department of Culture, Media and Sport, a young car mechanic who had not understood the importance or relevance of Constable’s ‘The Hay Wain’ suddenly understood the concept of an icon when he saw the Mini Cooper was included in the list and surmised that, as the Mini is an important car, then ‘The Hay Wain’ must be an important painting. </p>
+<p>Another  request  we have seen frequently in user testing for museum websites is for large object images. This desire was strongly reinforced in the user testing for the Met.  For many people this is the key component of the artwork record. </p>
+<h2>3. Accessing the collection </h2>
+<p>The user research we conducted made it clear that users need multiple routes into the collections including straight searching for experienced users, and more guided routes for less knowledgeable visitors.  </p>
+<p>During the subsequent development of the information architecture and wireframes for the new website, we developed a number of routes into the collections including a concept of search facets. These are aspects of a collection object or artwork by which site visitors can refine their search, choose an area of interest to browse or discover relationships between artworks. Exposing the metadata within the facets enables a user to quickly and easily find his or her particular areas of interest:</p>
+<p><strong>Who</strong>  - the artist, maker or the culture of the work </p>
+<p><strong>What</strong> - the technique or material used for the artwork</p>
+<p><strong>Where</strong> - geographic location</p>
+<p><strong>When</strong> – era or date the artwork was made</p>
+<p><strong>In the Museum</strong> – the department in the Museum</p>
+<p>In order to provide an entry point for less experienced users and for users who want to be introduced to a broad selection from the Museum’s collections, the website provides two ways of suggesting artworks: Browse Highlights and Artwork of the Day.</p>
+<p>Browse Highlights comprises1,479 highlighted works that are displayed prominently in a slideshow on the collections landing page and on a dedicated ‘Browse Highlights’ page.  Highly visual and designed to provide a selection of easy entry points, the highlights in the slideshow are randomized and change daily to ensure that repeat visitors are presented with a varied selection. </p>
+<p style="text-align: center;"><img src="../../files/rainbow.fig3_.jpg" border="0" width="500" height="345"/></p>
+<p style="text-align: center;"><strong><em>Figure 3. The Browse Highlights slideshow</em></strong></p>
+<p>Editorially selected, Artwork of the Day was a feature from the previous website that proved popular with users. It is available as a tab from the Collections landing page and as an RSS feed and provides a historically-based  introduction to selected works from within the collections. </p>
+<p>To meet the needs of more experienced users who are searching for something specific, we provide a collections search consisting of a free text search box. As users type in their search terms, an “auto suggest” feature automatically suggests the terms they may be looking for by completing the search term with words drawn from the artwork title, artist name, where facet, what facet and accession number. This feature both assists users and reduces the risk of failed searches due to misspellings. Artworks from the collection are also available from the site wide search.</p>
+<p style="text-align: center;"><img src="../../files/rainbow.fig4_.jpg" border="0" width="500" height="344"/></p>
+<p style="text-align: center;"><strong><em>Figure 4. The collections search showing the auto suggest</em></strong></p>
+<p>For users who want to search by a specific aspect such as place or time period, we have included the ability to search within facets, such as by geography or time period. As well as a free text search (with auto suggest drawn only from that facet) the Museum provides a number of editorially-controlled suggested searches. The suggested searches provide both a way into artworks the Museum has decided to promote, and an overview for users about the type of terms likely to produce results in this search.  </p>
+<p style="text-align: center;"><img src="../../files/rainbow.fig5_.jpg" border="0" width="500" height="375"/></p>
+<p style="text-align: center;"><strong><em>Figure 5. The facets search </em></strong></p>
+<p>Once a search has been conducted, the results can be further narrowed down by searching for index terms within any of the facets, enabling the user to build up complex queries such as “Lacquer + Japan + AD 1800-1900.” </p>
+<p>The user research showed that in order to draw users into exploring the collections and enable them to make onward journeys from their chosen entry point, connections between objects are particularly important to let users drill down, expand out and relate across the collection as appropriate.  </p>
+<p>In order to do this, on the individual artwork pages we include a ‘see also’ section which lists all the index terms applicable to the artwork divided into the five facets. This enables users to explore the collection further based on whatever aspect of the work appeals to them. We also suggest related artworks they might be interested in drawn from works by the same artist or, where that is not possible, works that share the same index terms. </p>
+<p style="text-align: center;"><img src="../../files/rainbow.fig6_.jpg" border="0" width="500" height="441"/></p>
+<p style="text-align: center;"><strong><em>Figure 6. The artwork page</em></strong></p>
+<h2>4. Museum collections and data issues</h2>
+<p>Providing the variety of search and browse options needed to satisfy the requirements of the various user groups can only be achieved if the underlying data supports it. When the collections are as large and wide-ranging as the Met’s, this provides a number of challenges. In designing a search system with multiple entry routes and connections between artworks we had to be aware of – and find an approach to – a number of data issues common to many museum collections. </p>
+<p>The data recorded in the collections management system is used for a variety of purposes and is not collected with the primary purpose of display on the public website. It is the museum&#39;s primary source of scholarly object information and must not be changed to meet the requirements of the website.</p>
+<p>Different artworks have different data associated with them. For example, for departments such as Egyptian Art or Greek and Roman Art there are many artworks where no artist is credited with the work, so a search by artist name only would return very few results for these collections.</p>
+<p>Spellings, particularly the names of people and places, vary.</p>
+<p>Whilst the website is likely to mainly in one language (in this case English), preferred terms may be in another language.  </p>
+<p>Data may come from multiple sources, such as different collection management systems per department.</p>
+<p>Different departments may use fields within the collections management system in different ways.  </p>
+<p>Even with an agreed taxonomy, the granularity of the terms used may vary between departments (for example, what is a ‘painting’ in one department might be described as a ‘watercolor’ in another). </p>
+<h2>5. Data processor and standard vocabularies</h2>
+<p>In order to generate index terms for the five facets, we use the following fields:   </p>
+<ul>
+<li>Who – artist’s name (+ culture for some departments) </li>
+<li>Where – geography (+ culture if not included in ‘who’) + artist’s nationality (where available)</li>
+<li>What – medium + classification + object name</li>
+<li>When – date (beginning and end dates)</li>
+<li>In the Museum – Museum department</li>
+</ul>
+<p>In order to provide the index terms within the facets, we added another layer of data processing between the collections database and the online collection. This enables us to perform some additional processing before the data is presented on the website, without changing the underlying collections data in any way.  </p>
+<p>The data processing stage has two elements: </p>
+<ol>
+<li>Mapping the collections data to a number of thesauri.</li>
+<li>Mapping rules set by the Museum staff about how the data should be treated. </li>
+</ol>
+<p>This permits us to: </p>
+<ul>
+<li>Set preferred terms.</li>
+<li>Deal with spelling variants and misspellings.</li>
+<li>Exclude terms that are not meaningful to end users (e.g. ‘non-organic matter’) or not meaningful in a specific context. For example, what is relevant in one branch of a taxonomy may not be the most relevant to the institution’s collection. (‘Stool’ was a memorable issue for the Met as the standard vocabulary term used matched ‘stool’ as an item of furniture to &#39;stool&#39; the biological term, both of which are relevant in the Met&#39;s collection, but never in the same artwork.)</li>
+<li>Enable inferences to be made (if an artwork is from Paris, France, we can infer French and European).</li>
+<li>Assign priorities to terms, for example for the European Paintings department when the term ‘Copenhagen’ is found, Copenhagen in Denmark is prioritized over Copenhagen in Louisiana, in the absence of other disambiguating data.</li>
+</ul>
+<p>For the ‘who’ facet we are using an internal Museum consolidated list of artists’ names; for ‘what’ and ‘where’ we are using the Getty Vocabularies, Art and Architecture Thesaurus (AAT) and the Thesaurus of Geographic Names (TGN) respectively.</p>
+<p>The collections data is processed in three stages:</p>
+<p style="text-align: center;"><img src="../../files/rainbow.fig7_.jpg" border="0" width="500" height="401"/></p>
+<p style="text-align: center;"><strong><em>Figure 7. The three stages of data processing</em></strong></p>
+<ol>
+<li>Raw term filtering stage:</li>
+<p>This stage applies rules to perform basic cleanup on the raw data from the collection object. Museum staff can change the raw field values found on collection objects before any processing is performed on them. This allows them, for example, to correct spelling mistakes and to filter out any undesired terms. </p>
+<p>Each rule can be defined on a “per department” basis, or the rule can be applied to data from any department. In the case that a valid rule for a given term is defined for all departments and for a specific department, the most specific rule is applied.</p>
+<p>Each rule can be applied either to a specific collection object field or to all fields on a collection object. If valid rules are defined for all fields and for a specific field, the most specific rule is applied.</p>
+<li>Source term extraction stage:
+<ol>
+<li>Split. The raw term string for any given field is split into sub-strings according to a list of recognized characters and regular expressions. For example
+<ol>
+<li>Special characters and words such as commas, full stops, slashes and words such as “and” and “or”.</li>
+<li>Regular expressions that look for certain recognized patterns such as “a) [term1]. b) [term2]”.</li>
+</ol>
+</li>
+<li>Match. The sub-strings extracted from the split step are then matched against another list of regular expressions that look for known patterns such as:
+<ol>
+<li>[Term1]<strong> (</strong>[Term2]<strong>)</strong></li>
+<li><strong>(</strong>[Term1]<strong>)</strong> [Term2]</li>
+<li>[Term1]<strong> </strong>and [Term2]</li>
+<li>…</li>
+</ol>
+</li>
+<li>Apply Rules. The mapping rules are applied to transform extracted source terms or remove them from further processing.</li>
+</ol>
+</li>
+<p>The algorithms for extracting meaningful source terms from the Raw Terms output from the previous stage are performed in three steps.</p>
+<li>Source term matching stage
+<ol>
+<li>Apply term mapping rules. If there is a mapping to say that a given source term is to be mapped to a specific vocabulary subject, then apply that mapping. </li>
+<li>Determine subject mapping. Each source term is matched in turn to the terms within the relevant vocabulary and a list of matching subjects is extracted. The following steps apply:</li>
+</ol>
+<ol>
+<li>Each list is sorted according to the depth of the hierarchy position of the term. This means that if there really is no other way to determine a correct subject match, the subject with the shallowest position in the hierarchy is used.</li>
+<li>Each list is sorted by priority if a priority rule exists for the source term being matched. Priority rules can therefore be used to determine which subject from the list is to be used if no other qualifying information is found. </li>
+<li>Each list is matched against each other to see if any subjects found qualify any of the others, e.g. if there are two source terms are “Paris” and “France” then “Paris” will return multiple subjects from TGN (there are many towns and cities in the world called Paris). The data processor will, however, compare all subjects found for the term “France” against them to see if any subjects are parents or children in the hierarchy. Thus “France” in this case will qualify “Paris” and “Paris, France” and select the correct subject accordingly.</li>
+</ol>
+</li>
+<p>These algorithms take the list of source terms extracted in the previous stage and attempt to match them to the known subjects in the AAT, TGN or consolidated list of artist names. In the case of the “What” and “Where” facets, if multiple matches are found these algorithms also attempt to determine which match is the correct one.</p>
+</ol>
+<p>In order that the Museum staff can set the necessary data processing rules, we built an administration interface for the data processor and an object viewer that allows the user to test run collection objects through the data processor to see how the current rules set will index the object. The results of the object viewer test run are not stored or indexed but, given the current rules set, it shows the various index terms for each facet that will be indexed on the next run. </p>
+<h2>6. The Search System</h2>
+<p>To provide the online collections search, including the facets and index terms that provide the onward journeys (as well as the other searches on the website such as events and site search) we needed a powerful search system.</p>
+<p>As search was a key service, we did not limit our review of options to software that uses the same development platform as the content management system (i.e. .NET), though we only considered platforms that would run on the Museum&#39;s choice of operating system, Microsoft Windows. We reviewed and undertook extensive testing with various alternatives across software and hardware, and both proprietary and open source solutions, including Microsoft FAST ESP, Autonomy, Apache Solr/Lucene, and Google Mini.</p>
+<p>The speed at which a set of search results is returned to the user is critical to the usability and success of the website. Whatever the size of the dataset returned from a specific search term, it was envisaged that a search and response cycle should take no longer than one second to complete, and drilling down through results by a facet should be equally efficient, bearing in mind the website would also need to interact with other display components to get the results out to the website visitor. </p>
+<p>As integration to specific external data sources was required, including the collections and events databases, the ability to perform custom integration work and development was also crucial.</p>
+<p>Solr, a freely available, open source software product that provides powerful search capabilities, addressed all the requirements including the provision of simple, powerful administration and configuration interfaces, scalability and caching and faceted search out the box. Solr has a proven track record in the web search arena (over enterprise search providers such as Microsoft FAST, which is directed more towards document searching across an intranet) including successful integration with many content management systems.</p>
+<p>Solr provides all of the capabilities listed in the Museum’s search requirements definitions, and is flexible enough to adapt to changing requirements. It provides the right balance of power and flexibility for all of the functionality required in the site redevelopment. Despite being an open source product, options exist for the commercial support of Solr via various third parties so the Museum has a choice of expertise, rather than being directly tied to a single source of knowledge which some of the large proprietary systems may have required.</p>
+<p>Solr excels in configurability, scaling, performance and query time enhancements including advanced text analysis with the ability to split and pluralize, and relevance ranking for ordering results based on criteria. In addition to the basic functions, Solr provides various advanced search features including spell-checking, search highlighting and auto-suggest based on end user input.</p>
+<p>We have been extremely impressed with the speed of Solr after implementation, and complex search queries across thousands of documents return within a matter of milli-seconds, fulfilling the original requirement.</p>
+<p>In the Museum’s online collection architecture the Solr indexing and delivery functions are split out for performance and security reasons.  </p>
+<p style="text-align: center;"><img src="../../files/rainbow.fig8_.jpg" border="0" width="500" height="375"/></p>
+<p style="text-align: center;"><strong><em>Figure 8. The architecture of the online collections system</em></strong></p>
+<p>Solr pulls data from the data processor prior to indexing. Solr provides a number of Solr text analysis filters that we are using at index time including: </p>
+<ul>
+<li>Stop Word – discards common words from a pre-defined list </li>
+<li>Word Delimiter – splits words into sub-words and performs optional transformations on sub-word groups </li>
+<li>Lower Case – puts all words in lower case</li>
+<li>ASCII Folding – converts alphabetic, numeric, and symbolic Unicode characters which are not in the first 127 ASCII characters (the &#34;Basic Latin&#34; Unicode block) into their ASCII equivalents, if one exists. </li>
+<li>Snowball Porter – stemming (a process for reducing inflected or derived words to their stem, base or root form) for several languages </li>
+<li>Whitespace Tokenizer – removes spaces</li>
+<li>HTML stripper – removes HTML tags</li>
+</ul>
+<p>The same set is generally used at query time, where we also use other functionality including:</p>
+<ul>
+<li>Faceting (displaying aspects or views of a subject, in this case a collection object) with data drawn from multiple fields </li>
+<li>Prefix Facet Query , which matches the characters entered by user input to results in Solr, to form the basis for the auto-suggest</li>
+</ul>
+<p>In order to cope with both the large quantity of data and the large audience numbers, the search system uses techniques to enhance scaling and performance including: </p>
+<ul>
+<li>Multiple cores – A core is an individual instance of Solr with a unique schema.  A Solr server could have several instances all with different schemas. We have split the index into separate cores based around functional areas </li>
+<li>Sharded search – The site search combines the search results from multiple cores. </li>
+<li>Replication – We have automatic replication from an indexing machine out to two dedicated Solr delivery servers. </li>
+<li>Load balanced Solr delivery servers.</li>
+</ul>
+<p><strong>Evaluation</strong></p>
+<p>The search system we have designed and built in order to meet the variety of user needs is undeniably complex; however, feedback from users so far suggests the effort has been worthwhile:</p>
+<blockquote><p>“Perusing the new @metmuseum site. Loving the collections highlights … so much metadata” – Ben Fino-Radin via Twitter</p></blockquote>
+<blockquote><p>“I am in love with the @metmuseum new website. Esp the artwork search. What a wonderful resource!” – Cynthia Wenslow via Twitter</p></blockquote>
+<p>The analytics of the relaunched show repeat visits, time on site, pages and visits are all well above the earlier site’s average so we know that the Collections area is a favorite part of the new site for visitors and it is doing a good job of attracting and engaging them.</p>
+<p>There is undoubtedly effort needed to create and test the mapping rules for the data processor. However, doing so has improved the experience for users significantly, and the ability to make changes to the online collection without having to amend the underlying collections data has reassured many curators. They now know that if they see any sub-optimal results they can simply ask for the rules to be amended. </p>
+<p>The Solr search system is performing well and returning relevant results. With enough memory and servers Solr is extremely fast and enables us to do things on the fly that in a previous generation of systems we would have pre-compiled. It enables us to build up very complicated queries with facet counts.  </p>
+<p>The downside to the extensive use of Solr is that it is another component in the system and the amount of work needed to implement, integrate and maintain it is significant.  As we have used Solr so extensively it is now an essential part of the online collection (and the wider site) so if there are any problems the effect is far reaching. </p>
+<p>Whilst very powerful, Solr can be complicated. Significant customization is required to get the right results and to optimize performance. For example, in the unoptimized form, ‘school of Rembrandt’ had same rating as ‘Rembrandt’; and works with little data except for tombstone information (such as minor works attributed to ‘school of Rembrandt’) appeared above those with a lot of associated material (such as major works by Rembrandt).  We therefore had to make a number of tweaks to the search weightings to make sure the most useful results appeared first. </p>
+<p>In conclusion, we have found that when faced with a very large collection, automated term matching via rules and thesauri is very valuable, but human intervention is always needed to review and improve on it. If Solr is used as a store for this data, complex search interfaces that provide a wide variety of entry points and connections between works can be constructed.</p>
+<div class="field nodereference field-paper-program-ref">
+                                <h3 class="label inline">Program Item Reference: </h3>
+          <div class="item inline odd"><a href="../programs/providing_accessible_online_collections.html">Providing accessible online collections</a></div>
+              </div>
+ <!-- /content-field -->
+  </div>
+  
+  <div class="article-meta">
+      <p class="submitted">Posted <em class="time">April 7, 2012 - 10:22am</em> by <em class="author"><a href="../../user/rachaelrainbow.html" class="username" title="View Rachael&#39;s profile.">Rachael Rainbow</a></em></p>
+  
+    
+    </div>
+  
+  
+</div> <!-- /article --></div>
+
+        </div>

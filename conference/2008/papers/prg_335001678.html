@@ -1,0 +1,490 @@
+<div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" -->
+      <h2 class="Author"><a href="../../bios/au_440015970.html">Jonas Granlie</a>, University of Southern Denmark, Denmark, and <a href="../../bios/au_440015974.html">Kay
+        Macquarrie</a>, Fachhochschule Kiel, Germany</h2>
+      <p class="URL"><a href="http://www.vimu.info/">http://www.vimu.info</a></p>
+      <h3 class="AbstractTitle">Abstract</h3>
+      <p class="AbstractText">Virtual Museums face diverse target groups, reaching from young to old, with varying Internet literacy and learning styles. How does one serve these diverse needs efficiently on one platform? How can we implement an accessible learning environment which can be customised to different learning styles? The approach chosen in this project is to provide two basic features: target group profiles and user customization. Target group profiles indicate the different aims that various users have when accessing the Web site. In addition, users themselves are able to tailor the site according to personal learning styles and needs: visually or textually oriented users are able to configure their view of the Museum with a bias towards textual or multimedia material. </p>
+      <p class="AbstractText"> From an information technology point of view, the overall task has been to provide the infrastructure needed to enable and preferably enhance the intended features, while getting in the way as little as possible between the content and the visitor. The resulting Web of interconnected information resources and subjects significant to this application both invokes curiosity and provides the visitor with a highly intuitive way of acquiring knowledge.</p>
+      <p class="keywords">Keywords: target groups, personalization,
+        usability, accessibility, topic maps, semantic Web</p>
+      <!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+      <h1>1. Introduction</h1>
+      <p>The VIMU
+        Project covers 200 years of modern history of the Danish and German borderland.
+        The Web site has been realised by four university institutions in Denmark and
+        Germany and was co-financed by the European Union. It is the first
+        Danish-German history project in the Internet. VIMU is a purely virtual museum;
+        it has no physical counterpart. </p>
+      <p>The idea
+        of the project is to show the regional history of the two countries in multiple
+        perspectives, combining knowledge from history, informatics, didactics and
+        multimedia experts. Contemporary knowledge and state-of-the-art technology are
+        applied to create a modern and lively Web-based history-learning environment.</p>
+      <p>The
+        concept of the exhibition is to present selected events which took place on
+        both sides of the border, ranging from 1830 to 2000. Deliberately, the purpose
+        of the project was not to show as much material as possible, but to show
+        representative and meaningful occurrences. Actual history didactical standards
+        are merged with the Internet medium.</p>
+      <p>Thirty-six
+        topics with over 250 stories are the ingredients of VIMU. The textual content
+        is enriched by 2000 images, 300 complex multimedia animations, 40 films, 30
+        audio documents and 4 quiz games for kids. The information architecture is
+        realized using the ISO standard of Topic Maps
+        (<a href="http://www1.y12.doe.gov/capabilities/sgml/sc34/document/0322.htm">http://www1.y12.doe.gov/capabilities/sgml/sc34/document/0322.htm</a>), which
+        allows modularization and semantic linking of the content.</p>
+      <p>From
+        05/2005-03/2008, the four institutions developed the Virtual Museum. Involved
+        in the project &#34;Virtual Museum - living regional history of the Danish
+        German border region&#34; are: </p>
+      <ul>
+        <li>Institut for Historie, Kultur og
+          Samfundsbeskrivelse (SDU, University of Southern Denmark); in charge of:
+          selection of stories, historical research</li>
+        <li>Institut für Zeit und
+          Regionalgeschichte (IZRG, University Flensburg, Germany); in charge of:
+          selection of the stories, historical research, didactical concept</li>
+        <li>Institut for Fagsprog, Kommunikation
+          og Informationsvidenskab (SDU, University of Southern Denmark); in charge of:
+          information architecture, programming</li>
+        <li>Multimedia Production (University of
+          Applied Sciences Kiel, Germany); in charge of: make up of content, usability
+          concept </li>
+      </ul>
+      <p>The
+        Virtual Museum project was realised by a core staff of 12 persons and about 20
+        graduate assistants. The project has a budget of 1.6 million €.</p>
+      <p>This paper is focused on issues of content, editing, and display (multimedia),
+        as well as on its information architecture. The criteria for the selection of
+        topics and the profound  didactical thought will not be treated in particular
+        detail. How to meet diverse users’ needs (from the view of the frontend user),
+        and how to handle the technical  implementation angle, are the main focus.</p>
+      <h1>2. Features And Principles</h1>
+      <p>The
+        Virtual Museum addresses a broad audience from both sides of the border regions
+        in Denmark and Germany. Furthermore, it presents history to visitors from
+        outside the region; for instance, tourists. The audience was categorised into
+        six target groups, according to interests and motives which activate a visit: 
+        the general users (&#34;explorers&#34;), students, teachers, researchers,
+        tourists, and kids.</p>
+      <p>The Web
+        site is available in Danish and German. It has been a central political and
+        historical principle to enable users to switch readily between the two
+        languages. This is meant to increase mutual understanding and at the same time
+        provide the option of multi-perspective views.</p>
+      <p>How is it
+        possible to produce and edit content which finds a balance between the needs of
+        the target groups and the limitations of  budget? The idea is to have basic
+        material which serves all, and then target group-specific extra material.
+        Students are provided with school material and special references; teachers get
+        learning sequences, reviews and references; tourists are offered trip
+        suggestions and specific tourist info, and so forth. The exception to the rule
+        is the target group of children. Since they have a completely different way of
+        receiving information, their content is designed differently.</p>
+      <p class="caption"><a name="fig1" id="fig1"></a><a href="granlie-fig1.html"><img src="granlie_fig1.jpg" alt="Figure 1" width="400" height="155"/></a></p>
+      <p class="caption"><a href="granlie-fig1.html">Fig 1: The VIMU target groups with
+        allocation of content</a></p>
+      <p>The
+        information concept of the Web site follows didactical considerations. The
+        basic principle of the layout of the site is to keep it as simple and clear as
+        possible to enable  good orientation. The use of the
+        Web site should be intuitively understandable for visitors of varying computer
+        and Internet literacy. In order to reduce potential information
+        overload, the content on the pages is deliberately displayed according to the
+        profiles of the target groups. The visualisation of content can be further customised
+        to personal needs: fonts sizes and background colour can be changed; animated
+        material can be replaced by static design. </p>
+      <p>A basic
+        principle is the implementation of accessibility. Considering different systems
+        and hardware which people use to access the content, this aspect has been
+        strongly stressed. The construction of the site follows standards provided by
+        the W3 (http://www.w3.org/). The basic guideline for making the content accessible has been the
+        German BITV (http://www.einfach-fuer-alle.de/artikel/bitv/anlage-1/).</p>
+      <p>The digital medium
+        is non-linear. Therefore, it has been a crucial part of the usability concept
+        to implement different navigations and entry points to the content. In order to
+        address and attract all potential visitors, including both those who are
+        familiar with navigating in digital environments and novice learners, several
+        navigational options of different complexity are implemented in the Virtual
+        Museum. On the Welcome page, for example, visitors are given several entry
+        points and navigational options enabling access to the stories. They have
+        choices of entering the exhibition via the main navigation bar, via timeline,
+        via sitemap, or via the search function. The provision of alternatives enables
+        visitors to approach the historical stories on self-chosen paths which can be
+        one of guided or interactive, fast or indirect, visually or textually based. </p>
+      <p>Once visitors leave
+        the Welcome page of the virtual museum, they find that generally the material
+        about a certain topic is presented in several layers of increasing detail:
+        While the very top level provides a rough, summarizing overview of the story
+        which can quickly and easily be perceived, the bottom level contains particular
+        information on subordinated aspects. Thus, visitors are given the opportunity
+        to choose how much they want to know and are able to go into more or less
+        depth, led by their personal interests.</p>
+      <p>Different learning
+        styles are met by differently designed material: complex multimedia animation
+        can be browsed by either a linear or an explorative navigation; animated
+        content can be replaced by static material.</p>
+      <h1>3. How To Serve A Diverse Audience On One Platform
+        Efficiently</h1>
+      <p>People
+        are different. The diverse audience virtual museums are facing ranges from
+        young to old, with varying Internet literacy and learning styles, and different
+        reasons for entering the Web site. How do we serve these needs, considering a
+        limited amount of time and budget?</p>
+      <p class="caption"><a name="fig2" id="fig2"></a><a href="granlie-fig2.html"><img src="granlie_fig2.jpg" alt="Figure 2" width="400" height="128"/></a></p>
+      <p class="caption"><a href="granlie-fig2.html">Fig 2: Illustration – Content,
+        Programming, Interface and Users</a></p>
+      <p>The figure above 
+        illustrates this problem. A large body of historical material is divided 
+        into smaller items, which are then assembled into different collections, 
+        each tailored for a specific part of the highly diverse audience.</p>
+      <p>The basic
+        idea of the Virtual Museum project is to modularise the content into small and
+        flexible units which can then be accommodated to a certain extent by <b>given
+        profiles</b> (editorial) and <b>personalised profiles</b> (individual). </p>
+      <h2>Given Profiles</h2>
+      <p>The term
+        &#34;given profiles&#34; implies that not all the content is shown to all of
+        the audience at all times. In order to reduce the information displayed on a
+        single page, content units are preselected by the editors according to
+        previously defined criteria. These criteria follow the users’ needs and motives
+        when accessing the Web site.</p>
+      <p>When
+        users enters the Web site via vimu.info, they are initially located in the
+        target group of explorer (general user). Users can then select one of the
+        target groups or stay within the default group, depending on their personal motives.
+        The option to change the target group is available at any time.</p>
+      <p>Each
+        target group has an<i> adjusted Home Page</i>. Adjusted Home Pages offer general
+        information, but also indicate target-group-specific material. A map of the
+        region enables tourists to find stories connected to a town or a geographical
+        spot. The homepage of the teachers indicates where to find learning sequences
+        and topics of high value for class lessons. </p>
+      <p class="caption"><a name="fig3" id="fig3"></a><a href="granlie-fig3.html"><img src="granlie_fig3.jpg" alt="Figure 3" width="400" height="324"/></a></p>
+      <p class="caption"><a href="granlie-fig3.html">Fig 3: The Home Page of VIMU for the
+        general target group</a></p>
+      <p>The <i>story
+        pages</i> are the core
+        pages within VIMU. Here one specific story is told by textual and visual
+        content units. The construction generally stays the same within the different
+        profiles: it consists of the story and the related material. The inline-promoted
+        formats will be adjusted according to the target group profiles: students get
+        more visual material like videos and multimedia formats, whereas researchers
+        get more info about background aspects and references. </p>
+      <p>The order
+        of the related formats which are positioned in the right column of the Web site
+        are adjusted according to the specific interests of the target groups: the more
+        valuable a format tends to be for a target group, the more prominently it is
+        positioned. The order is defined in the given profiles.</p>
+      <p class="caption"><a name="fig4" id="fig4"></a><a href="granlie-fig4.html"><img src="granlie_fig4.jpg" alt="Figure 4" width="400" height="364"/></a></p>
+      <p class="caption"><a href="granlie-fig4.html">Fig 4: Screenshot of the &#34;story
+        page&#34; with adjusted inline teasers and the adjusted order of formats
+        (cutout)</a></p>
+      <h2>Personalised Profiles</h2>
+      <p>Users
+        have the option to customise the visual appearance of their pages according to
+        personal preferences and needs. In terms of reading the text, they can adjust
+        the font size, the running length and the contrast.<b> </b> Elderly people mainly make intense use of the option to change the font size,
+        but  people with visual impairment also use these functions.</p>
+      <p class="caption"><a name="fig5" id="fig5"></a><a href="granlie-fig5.html"><img src="granlie_fig5.jpg" alt="Figure 5" width="300" height="248"/></a></p>
+      <p class="caption"><a href="granlie-fig5.html">Fig 5: The configuration icons to
+        personalise the page</a></p>
+      <p>In terms
+        of learning styles, people have the option to make certain adjustments.
+        Visitors can choose between animated and static content. The reason can be
+        manifold: people who are less familiar with navigation on the Web might be more
+        comfortable with non-animated content, whereas experienced users tend to be
+        attracted and motivated by animated content. Furthermore, visitors can choose
+        between more explorative Flash applications and more linear HTML visualisation.
+        At the same time, more linear information serves visitors accessing the
+        platform with hardware like screen readers.</p>
+      <p>In
+        practice, the personal adjustments can be made either along the way or on a
+        central personalisation page. Adjustments are saved in a cookie or – if
+        the user is registered –  in the user’s personal preferences. </p>
+      <h2>Provision Of Multiple Navigation Systems</h2>
+      <p>In
+        physical museums, visitors usually have a designated path which leads them
+        through the exhibition. The Virtual Museum encourages visitors to find their
+        own path through the exhibition by offering several potential paths to the
+        content:</p>
+      <ul>
+        <li>Navigation via menu bars tends to be
+          most familiar to Internet users since this is the classical way of accessing
+          Web sites. Accordingly, the majority of the virtual museum’s visitors are
+          likely to use it.</li>
+        <li>Navigation via a timeline puts the
+          content into a chronological framework and creates selected time-based entry
+          points to the collection.</li>
+        <li>Sitemaps enable visitors to spot the
+          links they wish to access. They usually visualise the entire content structure
+          of the Web site and provide a good overview.</li>
+        <li>The search function provides direct
+          access to the desired content for visitors who have a certain target in mind
+          when they enter the virtual museum.</li>
+        <li>A new and innovative way of
+          navigation is the so-called &#34;spider&#34;. This linked visualisation of
+          the content enables the visitor to browse along semantic conjunctions.</li>
+      </ul>
+      <p class="caption"><a name="fig6" id="fig6"></a><a href="granlie-fig6.html"><img src="granlie_fig6.jpg" alt="Figure 6" width="400" height="255"/></a></p>
+      <p class="caption"><a href="granlie-fig6.html">Fig 6: &#34;Spider&#34; - semantic
+        conjunction of content</a></p>
+      <p>The
+        navigation systems range from having a very linear structure to a very
+        explorative and, in the case of the spider, to even semantic structures. While
+        experts are likely to favour interactive reference sites, directed activities
+        tend to be of higher motivational value for novice learners who prefer to be
+        introduced into the unknown topic. </p>
+      <p>Offering
+        extensive navigational alternatives allows visitors choose their path according
+        to their individual capacities and preferences.</p>
+      <h1>4. Technical Considerations</h1>
+      <p>From a technical
+        point of view, several problems have been solved in order to meet the requirements
+        of the Virtual Museum. First of all, the available historical material has been
+        standardized and made available on the Virtual Museum Web site. Secondly, the
+        differentiated views of the content necessitated by the previously-mentioned
+        six target groups have been implemented. Finally, the facility for visitors&#39;
+        seamless switch between the two languages of the Virtual Museum has been
+        implemented. </p>
+      <p>In addition to this,
+        a couple of semantic features have been implemented. Most notable is the integration
+        of an interactive application which visualizes the implicit semantic relations
+        between historical events, actors, and places, and connects this abstract
+        knowledge structure to the actual content, effectively providing the visitor
+        with a means of associative navigation. Besides this, a semantic search has
+        been integrated into the site as well. This section will shed light on some of
+        the technical measures which have been taken in order to achieve these
+        features.</p>
+      <h2>Information System</h2>
+      <p>The Virtual Museum
+        is essentially a semantic portal, in the sense that it is a relatively
+        content-heavy Web site which is completely ontology-based. In order to
+        elaborate further on the underlying information system and the technical
+        foundation of the Web site in general, it is necessary briefly to outline this
+        ontology. In our case the &#39;domain&#39; in question actually consists of two equal
+        parts. One is the actual historical space, understood as the time and physical
+        space in which the events of the period in question took place, and the other
+        is the very structure of the historical material written for publication on the
+        site. </p>
+      <p>This material is
+        organized according to a so-called didactical concept which has been prepared
+        by our project partners at the Universität Flensburg (Danker, 2004). The
+        didactical concept essentially breaks the historical content down into a number
+        of manageable learning units, which are assembled into a number of meaningful
+        sets, each concerned with a rather narrowly confined area of the border
+        region&#39;s history. The learning units are distributed between four main levels
+        in a partly hierarchical structure: six <i>Dimensions</i> each define some extremely broad themes, whose
+        purpose is primarily to invoke the visitor&#39;s curiosity, and secondly to act as
+        containers for a total of 36 <i>Topics</i>.
+        These topics are in turn concerned with more narrowly defined historical
+        subjects, and each of them contains between six and eight <i>Modules</i>, or stories. The story level is in practice
+        the most essential one, since this is where the actual content is located. A
+        story consists of a longer text and any number of the last type of building
+        blocks, somewhat ambiguously named ­<i>Formats</i>, which are essentially small packages
+        typically consisting of an annotated multimedia resource. This resource
+        constitutes the smallest indivisible unit of the system, and it is highly
+        significant that a multimedia resource cannot be used anywhere on the site without
+        annotation, reference, etc. </p>
+      <p>The part of the
+        ontology which models the structure of the content is thus a formalized version
+        of the didactical concept. Each learning unit has its own representation within
+        the ontology, and each unit is connected to the others by means of one or
+        several semantic relations. Since a learning unit can be related to any number of other 
+        learning units, it would effectively be possible to create custom 
+        learning sequences, even after the full implementation of the Web site. However, only the learning units on
+        the two lowest levels of the system can be freely resampled.</p>
+      <p>Since the didactical
+        concept was present very early in the project phase, it was natural to start
+        out by modeling this part of the ontology first, even though it may seem like a
+        somewhat backward approach. Also, there was a very early need for a functioning
+        pilot version of the Web site, and an ontological implementation of the content
+        structure was a significant prerequisite in this respect. Thus, the Virtual
+        Museum Web site has in practice been built up around this part of the ontology.
+        However, in order to be able to navigate the site along the implicit semantic
+        relations, the content needs to be linked to a semantic model of the historical
+        domain. This effectively makes it possible to associate a given subject such as
+        a specific historical person or a certain event to all available information
+        resources logically concerned with this subject. </p>
+      <h2>Practical Approach</h2>
+      <p>Connecting nodes in advanced
+        knowledge structures to specific information resources is one of the main virtues
+        inherent in Topic Maps (Pepper), and so it has been decided to implement the
+        ontology using Topic Maps. While it would not be strictly necessary to have the
+        content described using an ontology under more general circumstances, it makes
+        good sense when using Topic Maps. </p>
+      <p>The very first task
+        was to standardize all content units in close cooperation with the historians.
+        This produced a list of well-defined units, from which possible data types and
+        possible semantic relations were relatively evident. This list was not only
+        useful for the technical staff; but it also turned out to be highly useful for
+        the historians as a sort of writing manual. The definition of the units that
+        are able to contain other units was relatively straightforward: dimensions,
+        topics and modules should have some kind of descriptive text associated, as
+        well as a piece of multimedia used for graphical navigation. In addition to
+        this, modules should contain a longer text, a bibliography, an  author&#39;s
+        signature, and of course a number of formats. Many of these formats were
+        naturally much more diverse, but some were quite simple. Thus,
+        &#34;Video&#34; and &#34;Audio&#34; as a starting point consist of a
+        reference to a multimedia file, a source reference, and some kind of
+        annotation. Other formats have much wider implications. &#34;Biography&#34;
+        is a good example of this, as it pieced together several entities. At a
+        minimum, a biography should comprise a text describing the subject, an image of
+        the person, and dates and places of birth and death. Some of this information
+        is more closely associated to the biography as a content unit, and some more
+        closely to the person as an abstract subject. Thus, the textual description is
+        naturally part of the biography, while the image rather describes the person
+        (actually, images in this context are generally used as tokens for digitally
+        representing real-world subjects). Furthermore, the image itself could very
+        well be part of a separate format. Dates and places of birth and death are also
+        &#39;native&#39; to the person – but since a place is a subject in its own right,
+        persons&#39; births and deaths at certain locations are expressed by means of
+        associations. Thus, persons related to a given location will be clearly implied
+        in the ontology.</p>
+      <p class="caption"><a name="fig7" id="fig7"></a><a href="granlie-fig7.html"><img src="granlie_fig7.png" alt="Figure 7" width="300" height="211"/></a></p>
+      <p class="caption"><a href="granlie-fig7.html">Fig 7: The ontology
+        models both the content and the historical domain, effectively  making it
+        possible to associate information resources with abstract subjects.</a></p>
+      <p>The semantics of the
+        type of relation between most of the content units is quite obvious: a dimension
+        can contain a number of topics, while a topic can be contained within a
+        dimension, and so on. Thus, the relation type could be described as the
+        predicate <i>contained-in(container, containee)</i>, which is a standard Topic Map relation type.
+        Similarly, in the example above there would be a <i>describes</i>-association between a <i>biography</i> or an <i>image</i> and a <i>person</i>, and <i>died-in</i> and <i>born-in</i> relations, respectively, between <i>persons</i> and <i>locations. </i>The entities needed to complete a biography
+        format belong in both spheres of the ontology, and thus a biography serves as a
+        good example of the interlinked nature or the two ontology parts, and the
+        benefits derived thereof.</p>
+      <h2>Topic Map Specific Issues</h2>
+      <p>While it is generally advisable to implement some sort of 
+        content management systems for larger scaled Web sites, it has not been 
+        a viable option in our case. A central prerequisite for such a system is 
+        an absolutely fixed content structure, which would have been 
+        counterproductive in this particular case. Quite simply, both the 
+        historical and technical staff needed the flexibility of being able to 
+        perform extensive changes to the content structure along the way. 
+        Consequently, the material has been implemented manually.</p>
+      <p>In order to produce
+        the differentiated views needed for the various target groups, a feature
+        specific to Topic Maps has been used. According to the standard it is possible
+        to add scope to associations, subjects, and connected information resources. Topic Map scope has been widely implemented as an effective 
+        means of establishing a connection between a target group and the 
+        information resources particular to it. Also, the German and Danish 
+        versions of the content have been accordingly scoped.</p>
+      <p>While several possible notations for Topic Maps exist, we 
+        have chosen the Linear Topic Map Notation (LTM) for its compact syntax, 
+        which closely resembles that of tolog, a Topic Map querying language
+        LTM is a text format, meaning that the entire data backend of the Virtual
+        Museum has to be written as text files – and effectively, one large Topic
+        Map comprising all of the material is needed. Due to the facility of merging
+        particular to Topic Maps, it has however been possible to modularize the LTM
+        code by writing one module at a time, and it is then merged into the rest of
+        the content. This technique greatly facilitates the implementation of content,
+        and gives the additional advantage that it is simple to remove and reinsert
+        specific parts of the content. While shorter texts are stored directly in the
+        Topic Map ontology, longer bodies of text are stored in external XML files. A
+        custom XML application has been selected for this purpose, in favor of a
+        predefined language such as DocBook. This is because only a very small amount
+        of formatting is actually necessary in this case. The XML documents are processed
+        and tailored to the Web site front-end using XSLT style sheets.</p>
+      <h2>Interoperability Considerations</h2>
+      <p>A large portion of
+        the Virtual Museum content is Flash-based. Since there is no obvious way of
+        querying the Topic Map from external applications, a standardized exchange
+        format was needed in order to enable Flash applications to interact with the
+        data back-end. For example, the previously mentioned semantic navigation
+        application needs a standardized version of the Topic Map data in order to show
+        continuously updated information about both semantic and content-specific
+        relations on the Web site front-end. Several XML standards for Topic Map
+        notation exist, but once again a very simple custom XML language has been
+        created. It simply models the associated nodes around a central node, with some
+        additional information such as type of relation, name of subject, and the like.
+        Presently, only one level of related nodes is taken into account, but this
+        could of course be easily extended. On a longer perspective, this exchange
+        format could also become the basis of interoperability with similar portals
+        across the Internet. In addition, portions of the Virtual Museum content will
+        be syndicated through various RSS feeds for easy use by third parties such as
+        schools or similar portals.</p>
+      <h1>5. Conclusion</h1>
+      <p>For
+        decades, pupils learned about history from books. Animations, sound and videos
+        hardly found their way into the classrooms due to cost and high effort. A lot
+        of organisation was connected with watching one single video, for example.
+        After rounding up the equipment, teachers had to organise the video, and plug
+        in the right cables for the television and the video recorder. Nowadays
+        computers offer the chance to watch videos, listen to interviews with witnesses
+        to history, and show complex coherences with a simplified animation -all from
+        one single platform. Interactive historical learning environments, which are
+        equipped with multimedia formats and can be accessed on multiple paths, offer a
+        great opportunity for pupils to gain a stronger interest in their own past and
+        history. </p>
+      <p>The
+        Virtual Museum project has brought together the common history of two regions 
+        located in two different countries. The permanent and bilingual availability of
+        historical materials and targeted information for residents, students,
+        children, tourists, and researchers could lead to even stronger mutual
+        understanding and social, cultural and economic exchange. </p>
+      <h1>References</h1>
+      <p class="ReferencesText">Accessibility
+        guidelines (BITV), <a href="http://www.einfach-fuer-alle.de/artikel/bitv/anlage-1/">http://www.einfach-fuer-alle.de/artikel/bitv/anlage-1/</a></p>
+      <p class="ReferencesText">Cascading Style
+        Sheets, <a href="http://www.w3.org/Style/CSS/">http://www.w3.org/Style/CSS/</a></p>
+      <p class="ReferencesText">Danker, U. &amp;
+        B. Vesper (2004). Internetpräsentation der Regionalund Landesgeschichte -
+        Regionalhistorische Internetpräsentation zum Thema &#34;Schleswig-Holsteins
+        Weg durch die Moderne&#34; - Machbarkeit  und Konzeption.
+        Schleswig-Holsteinisches Haus der Geschichte: Schriftreihe der
+        Schleswig-Holsteinisches Landtages, 2004.</p>
+      <p class="ReferencesText">Extensible Markup
+        Language (XML), <a href="http://www.w3.org/XML/">http://www.w3.org/XML/</a></p>
+      <p class="ReferencesText">ISO/IEC 13250
+        Topic Maps. <a href="http://www1.y12.doe.gov/capabilities/sgml/sc34/document/0322_files/iso13250-2nd-ed-v2.pdf">http://www1.y12.doe.gov/capabilities/sgml/sc34/document/0322_files/ iso13250-2nd-ed-v2.pdf</a>.</p>
+      <p class="ReferencesText">Macquarrie, K.
+        &amp; K. Steinmann (2004). Potentials of Virtual Museums - Media-Specific
+        Conception of Cultural Learning Environments (Master thesis). <a href="http://www.vimu.info/Medien/Masterthesis.pdf">http://www.vimu.info/Medien/Masterthesis.pdf</a>.</p>
+      <p class="ReferencesText">Pepper, S. The
+        TAO of Topic Maps – Finding the Way in the Age of Infoglut. <span class="URLTegn">http://www.ontopia.net/topicmaps/materials/tao.html</span>.</p>
+      <p class="ReferencesText">Peacock, D. and
+        J. Brownbill (2007). “Audiences, Visitors, Users: Reconceptualising Users Of
+        Museum On-line Content and Services”. In J. Trant and D. Bearman (eds). Museums
+        and the Web 2007: Proceedings. Toronto: Archives &amp; Museum Informatics, published
+        March 31, 2007. Consulted January 31, 2008. <a href="http://www.archimuse.com/mw2007/papers/peacock/peacock.html">http://www.archimuse.com/mw2007/papers/peacock/peacock.html</a></p>
+      <p class="ReferencesText">Toft, B. &amp; J.
+        Granlie (2008). “The Virtual Museum Project – from a Knowledge Modelling
+        and Implementation point of view”. In K. Robering (Ed.) Information Technology
+        for the Virtual Museum – Museology and the Semantic Web, Lit Verlag 2008. </p>
+      <p class="ReferencesText">Valid XHTML, <a href="http://www.w3.org/html/">http://www.w3.org/html/</a></p>
+      <!-- InstanceEndEditable --> </div>
+  				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Granlie, J., and K. Macquarrie, Interactive And Customizable Learning Environments For Various User Needs:  Danish German Virtual Museum Project<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2008: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2008. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2008/papers/<!-- #BeginEditable "URL" --> granlie/granlie.html <!-- #EndEditable --></p>
+</div>

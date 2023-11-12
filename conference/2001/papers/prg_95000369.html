@@ -1,0 +1,1665 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/steinbach/steinbach.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:49:33 GMT --><head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>Using Interactive Broadband Multicasting in a Museum Lifelong Learning Program</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="/>
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css"/>
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onload="MM_preloadImages(&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tbody><tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"/></a></p>
+      <p> <a href="../../register/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.register&#39;,&#39;document.register&#39;,&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;)"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"/></a> 
+        <br/>
+        <a href="../../workshops/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.workshops&#39;,&#39;document.workshops&#39;,&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;)"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"/></a> 
+        <br/>
+        <a href="../../sessions/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sessions&#39;,&#39;document.sessions&#39;,&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;)"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"/></a> 
+        <br/>
+        <a href="../../speakers/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.speakers&#39;,&#39;document.speakers&#39;,&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;)"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"/></a> 
+        <br/>
+        <a href="../../interact/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.interact&#39;,&#39;document.interact&#39;,&#39;../../nav/mw2001_nav_interacton.gif&#39;,&#39;#943398534416&#39;)"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"/></a> 
+        <br/>
+        <a href="../../demos/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.demos&#39;,&#39;document.demos&#39;,&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;)"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"/></a> 
+        <br/>
+        <a href="../../exhibit/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.exhibits&#39;,&#39;document.exhibits&#39;,&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;)"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"/></a> 
+        <br/>
+        <a href="../../events/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.events&#39;,&#39;document.events&#39;,&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;)"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"/></a> 
+        <br/>
+        <a href="../../best/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.best&#39;,&#39;document.best&#39;,&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;)"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"/></a> 
+        <br/>
+        <a href="../../dates/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.dates&#39;,&#39;document.dates&#39;,&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;)"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"/></a> 
+        <br/>
+        <a href="../../seattle/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.seattle&#39;,&#39;document.seattle&#39;,&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;)"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"/></a> 
+        <br/>
+        <a href="../../sponsor/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sponsor&#39;,&#39;document.sponsor&#39;,&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"/></a> 
+        <br/>
+        <br/>
+        <br/>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"/></a> 
+        <br/>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br/>
+        158 Lee Avenue<br/>
+        Toronto, Ontario<br/>
+        M4E 2P3 Canada<br/>
+        info@ archimuse.com<br/>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tbody><tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"/></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br/>
+            A&amp;MI</font></a> </span></td>
+        </tr>
+      </tbody></table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br/>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class="verysmall">Published: March 15, 2001.<br/>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated: "+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"/><br/>
+      <!-- #BeginEditable "Body" --> 
+
+      <p class="PaperTitle">Using Interactive Broadband Multicasting in a Museum 
+
+        Lifelong Learning Program</p>
+
+      <p class="Author">Leonard Steinbach, The Cleveland Museum of Art, USA</p>
+
+      <p class="AbstractTitle">Abstract</p>
+
+      <p class="AbstractText">The Cleveland Museum of Art has embarked on an innovative 
+
+        approach for delivering high quality video-on-demand and live interactive 
+
+        cultural programming, along with Web-based complementary material, to 
+
+        seniors in assisted living residence facilities, community-based centers, 
+
+        and disabled persons in their homes. The project is made possible in part 
+
+        by a grant from the Technology Opportunity Program [TOP], National Telecommunications 
+
+        and Information Administration, U.S. Department of Commerce totaling more 
+
+        than $500,000. The purpose of the grant is to demonstrate how emerging 
+
+        broadband telecommunications technology can deliver &#34;lifelong learning 
+
+        and the arts&#34; to populations for whom direct involvement with cultural 
+
+        institutions would otherwise not be possible.</p>
+
+      <p class="AbstractText"><span> </span>The approach uses Cisco IP/TV interactive 
+
+        video archive/broadcast servers and broadband multicast technology in 
+
+        a controlled public infrastructure environment, rather than the closed 
+
+        corporate or campus network environment for which it was designed. In 
+
+        addition to describing the program design and operation, this paper analyzes 
+
+        how this Museum, whose core competency is not, nor should be, advanced 
+
+        technology development and management, mustered the expertise to achieve 
+
+        technological innovation in pursuit of programmatic goals. It also focuses 
+
+        on the process of convening outside individuals, organizations, and expertise 
+
+        to complement each other to achieve a common goal. </p>
+
+       
+
+      <p class="AbstractText"><b>Key Words:</b> Cisco, Cleveland, TOP, Commerce, 
+
+        IP/TV, broadband, router, multicast, lifelong learning, older persons, 
+
+        assisted living, disabled, grant, evaluation, infrastructure, TOP, Technology 
+
+        Opportunity Program, CIO, core competency, isolation, MPEG, RTP, distance 
+
+        learning, Keane, APK, WVIS, PBS, Cleveland Orchestra, DSL, ADSL, IP Multicast, 
+
+        Windows Media Player, broadcast, video-on-demand, Institute for Learning 
+
+        Innovation, John H. Falk</p>
+
+      <h1>Introduction</h1>
+
+      <p class="Normal">Be forewarned! You are about to read a tale of great technological, 
+
+        social, and educational aspiration. Of community groups, corporate interests 
+
+        and federal funding. Of populations isolated and impaired. Of external 
+
+        evaluation and intradepartmental coordination. It is a work in progress 
+
+        about which the known facts are provided and our hopes for the future 
+
+        are unveiled. </p>
+
+      <p class="Normal">This paper presents an innovative approach for using broadband 
+
+        multicast technology to deliver high quality video-on-demand and live 
+
+        interactive cultural programming, complemented by Web-based resources, 
+
+        to seniors in assisted-living residence facilities, community-based centers, 
+
+        and disabled persons in their homes. But that is a rather cold description. 
+
+        We want to change people&#39;s lives through continuing lifelong learning 
+
+        and the arts and interaction with each other. We strive for no less than 
+
+        arousal of the spirit, though we will define our goals a bit less spiritedly 
+
+        later on. The technology we have chosen comprises the best tools we could 
+
+        find at this time, ones we believe harbinger the future. The combination 
+
+        of technology, program and process form an experiment which has been funded. 
+
+        No doubt the details of technology will change dramatically over time, 
+
+        but we hope that the process and program model we are presenting will 
+
+        survive, evolve and prove useful to others. </p>
+
+      <h1>Background</h1>
+
+      <p class="Normal">To understand the genesis of the program, it is important 
+
+        to understand its host&#39;s core values and experience. The Cleveland 
+
+        Museum of Art, established in 1916, is one of the finest encyclopedic 
+
+        art museums in the United States and is an integral part of Cleveland&#39;s 
+
+        cultural and civic identity. As an institution established &#34;for the 
+
+        benefit of all the people forever,&#34; the Museum welcomes close to 600,000 
+
+        visitors each year. The Museum also has a long history of extensive public 
+
+        programming in film, music, and dance as well as art-related classes, 
+
+        lectures and family programs. In addition, the Museum has strong relationships 
+
+        with the community and community groups through a range of outreach programs 
+
+        and community festivals as well as its teachers school services, and adult 
+
+        continuing education programs. Most recently, in 1998, the Museum became 
+
+        a content provider and remote site for the Ohio SchoolNet Program. Ohio 
+
+        SchoolNet provides live interactive distance learning programs for students 
+
+        in grades K-12 throughout the state (<a href="http://www.osn.state.oh.us/" target="new">http://www.osn.state.oh.us</a>). 
+
+        This is all no quirk of fate. The Board of Trustees had long established 
+
+        the Museum&#39;s strategic goal of creating &#34;rich and diverse educational 
+
+        and public programs that serve and engage many different audiences and 
+
+        communities in an innovative and dynamic fashion.&#34;</p>
+
+      <p class="Normal">In addition to its education context, the emerging role 
+
+        of technology within all areas of the Museum was recognized by the Board. 
+
+        This resulted in another important strategic goal: &#34;to become a national 
+
+        leader in the use of new and emerging technologies to enhance the value 
+
+        to society of the museum&#39;s collections, intellectual initiatives, and 
+
+        other activities.&#34; To accelerate progress in this area, in 1999 the 
+
+        Museum established a new Information Technology Division (I.T.), headed 
+
+        by a Chief Information Officer (CIO) on peer level with other senior management 
+
+        and reporting to the Museum director. The new CIO (the author) immediately 
+
+        established a guiding doctrine for technological leadership and adventurism: 
+
+        &#34;The core competency of a museum is not the mastery of diverse, complex 
+
+        technologies... it is the creative use of them.&#34; There is no contradiction 
+
+        here. It is quite possible for a Museum to achieve its techno-dreams without 
+
+        insisting that it find the capital and human resources necessary to become 
+
+        the be-all end-all of complex technology knowledge and management. This 
+
+        principle will be echoed throughout this project plan.</p>
+
+      <p class="Normal">This backdrop is important. Without a history of community 
+
+        involvement, strong educational programs, and a dedication to the use 
+
+        of new and evolving technologies, it is unlikely that the Museum would 
+
+        ever have conceived of this project nor received the funding and other 
+
+        support needed to make it happen.</p>
+
+      <h1>(Technology) Opportunity (Program) Knocks</h1>
+
+      <p class="Normal">In the fall of 1999, the Museum became aware of the availability 
+
+        of funds for 2000 from the <a name="_Hlt498863789">Technology Opportunities 
+
+        Program (TOP</a>) of the National Telecommunications and Information Administration 
+
+        of the U.S. Department of Commerce. Since 1994, this has been a highly 
+
+        competitive, merit-based federal grant program that brings the benefits 
+
+        of an advanced national information infrastructure to communities throughout 
+
+        the United States (<a href="http://www.ntia.doc.gov/otiahome/top" target="new">http://www.ntia.doc.gov/otiahome/top</a>). 
+
+        The focus of its funding may vary from year to year, but for FY2000 the 
+
+        intent could not have been more congruent with the Museum&#39;s interests. 
+
+        TOP was &#34;especially interested in projects...using advanced network 
+
+        technologies...for example, broadband networks... to deliver immense 
+
+        amounts of data quickly to the desktop.&#34; In addition, the notice identified 
+
+        &#34;Lifelong Learning and the Arts&#34; as an area of interest, particularly 
+
+        &#34;training and instruction to lifelong learners in non-traditional settings 
+
+        such as homes (and) community centers.&#34; With this scope defined, we proceeded 
+
+        to explore whether there was a program the Museum would want to develop 
+
+        which would further its goals. However, it is not our nature to contort 
+
+        our goals in order to &#34;follow the money.&#34;</p>
+
+      <h1>Lurching Toward the Bait</h1>
+
+      <p class="Normal">As would be expected, there was significant brainstorming 
+
+        within the Museum, including staff and leaders from Information Technology, 
+
+        Development, Education, Curatorial, and Community Outreach. We had many 
+
+        answers and ideas, but finally realized that the truth lay not in ourselves 
+
+        but in our stars... our friends and colleagues in the community. We 
+
+        held a technology/program brainstorming party. Colleagues from SchoolNet, 
+
+        from schools, and from nearby cultural organizations converged. Representatives 
+
+        of Community groups aggregated. Technology companies whose help might 
+
+        be needed in specification and installation were there to keep our feet 
+
+        nailed to the ground. (Luckily, we still could reach for the sky.) Curious 
+
+        curators convened. The public TV station was tuned in and got turned on. 
+
+        You could not have too many cooks in this kitchen. After two hours of 
+
+        guided discussion a general consensus seemed to evolve. We would focus 
+
+        on isolated older persons in residential facilities or those who frequented 
+
+        community centers, and, if possible, disabled persons who primarily spend 
+
+        their time at home. We would provide both programming on demand and live 
+
+        interactive programs where they live or congregate. It felt right and 
+
+        meshed with Museum goals. However, more precise goals and next steps would 
+
+        have to be defined.</p>
+
+      <p class="Normal">Before addressing those issues, it is noteworthy that this 
+
+        meeting, born of prior excellent relationships within the community, generated 
+
+        more than a concept. Our guests informed our thought process, and we made 
+
+        it clear that we were in this together. This setting of stage would prove 
+
+        invaluable as the project moved forward.</p>
+
+      <p class="Normal">At this point, the project develop<span class="Normal">ment 
+
+        process still had to answer several critical questions:</span></p>
+
+      <ul>
+
+        <li> <span class="Normal">What did we hope to achieve?</span></li>
+
+        <li> <span class="Normal">Was there available technology which would let 
+
+          us demonstrate the conceived program at feasible cost and effort?</span></li>
+
+        <li> <span class="Normal">Would residential facilities and community-based 
+
+          organizations commit to participating in this program?</span></li>
+
+        <li> <span class="Normal">Where would we get the content, both live and 
+
+          archived, for this project?</span></li>
+
+        <li> <span class="Normal">How could the Museum inaugurate this level of 
+
+          technology without diverting resources, or violating the precept of 
+
+          creatively using technologies without investing an inappropriate amount 
+
+          of time and effort in them?</span></li>
+
+      </ul>
+
+      <h1>Proof of Concept/Definition of Goal</h1>
+
+      <p class="Normal">Intuitively, it seemed reasonable to expect that older and 
+
+        impaired persons might benefit from interaction with cultural activities, 
+
+        but we needed to confirm our hunch. With the assistance of Malvin Schechter, 
+
+        a noted journalist, gerontologist, and consultant on issues of population 
+
+        and aging, important research findings were brought to our attention. 
+
+        Gerontological research seemed to assert that programs in the arts stimulate 
+
+        cognitive functions, enhance daily life experience, and trigger memories 
+
+        and creativity in older Americans. Research confirmed that being part 
+
+        of a social network and diminishing isolation and loneliness have significant 
+
+        impacts on health and longevity (Rowe &amp; Kahn, 1997; Fees &amp; Martin, 
+
+        1999) . One study concluded that &#34;interactive computing technology opens 
+
+        up access to levels of communication and personal control that impact 
+
+        directly on the quality of life for &#39;confined&#39; individuals. 
+
+        Indeed, the term &#39;confined&#39; loses much of its meaning when the 
+
+        world is at one&#39;s fingertips&#34; (McConatha, McConatha &amp; Dermigny, 
+
+        1994). </p>
+
+      <p class="Normal">The Museum also had its own experience in this area. For 
+
+        example, the museum has worked with the Cuyahoga County Board of Mental 
+
+        Retardation and its constituents for about three years in a studio art 
+
+        program.. Work with this population has already resulted in dramatic changes 
+
+        in participants&#39; lives. The simple artistic freedoms like choice 
+
+        of colors or how to position the paper have increased confidence in participants 
+
+        who have since attempted other personal achievements. Participants in 
+
+        this program are now showing their artworks in community exhibitions. 
+
+        One individual learned to climb stairs for the first time at the museum, 
+
+        while another spoke his name for the first time in his life.</p>
+
+      <p class="Normal">We knew enough to know we were on the right track. Our program 
+
+        goal was then articulated as follows:</p>
+
+      <p class="BlockQuote">To enrich the lives of seniors and disabled adults through 
+
+        excellent arts programming delivered to them where they live and congregate 
+
+        via broadband technology. Arts-related programs will be delivered to participants 
+
+        at three types of sites: assisted living residence facilities, community-based 
+
+        centers, and private homes. Older as well as physically and emotionally 
+
+        disabled adults will benefit from relevant and rewarding exchanges wit<span class="Normal">h 
+
+        cultural institutions through the new technologies proposed herein by 
+
+        making it possible for them, for the first time, to participate in a broad 
+
+        range of excellent programs from which they have been historically isolated.</span></p>
+
+      <p class="Normal"><span class="Normal"> Specifically, we would:</span></p>
+
+      <ul>
+
+        <li> <span class="Normal">Develop an art program that provides a mechanism 
+
+          for intellectually stimulating older adult learners;</span></li>
+
+        <li> <span class="Normal">Develop an interactive, art-based program that 
+
+          facilitates social engagement among older adult learners;</span></li>
+
+        <li> <span class="Normal">Develop a delivery medium which can reduce the 
+
+          social isolation often associated with living in senior care facilities; 
+
+          and</span></li>
+
+        <li> <span class="Normal">Develop a replicable model that can be used 
+
+          by other cultural organization seeking to deliver comparable content 
+
+          to similar populations via broadband technologies.</span></li>
+
+      </ul>
+
+      <p class="Normal"><span class="Normal">Most important, our program would explore 
+
+        and demonstrate how le</span>arning makes more meaningful the lives of 
+
+        older persons or disabled persons for whom a visit to the conventional 
+
+        museum and cultural institutions and activities would be difficult, inconvenient 
+
+        or impossible. We would hope to learn how these extramural programs might 
+
+        stimulate such audiences to inquire and learn in satisfying ways. Additionally, 
+
+        we would develop a model and experience base that, by the nature of content 
+
+        and technology, is replicable throughout the country, especially as this 
+
+        technology becomes increasingly available.</p>
+
+      <h1>The Future is Now: Selecting the Technology</h1>
+
+      <p class="Normal">The technological vision for the project now had to emerge 
+
+        alongside the more programmatic and content-oriented goals. The vision 
+
+        was to establish a multi-point &#34;distance learning-like&#34; environment with 
+
+        some level of interactivity, one which would include archived material, 
+
+        additional Web-like content and Web access. The technology should be more 
+
+        open, less complex and less expensive than traditional video teleconferencing. 
+
+        After all, this is the way Internet is going: more, richer content and 
+
+        greater interactivity through affordable access to a high-speed public 
+
+        infrastructure. Even if it is not there yet, our charge was to be innovative 
+
+        in our use of broadband technology and demonstrate what the future may 
+
+        be.</p>
+
+      <p class="Normal">This presented three technical issues: how to capture, digitize, 
+
+        and compress video; how to develop and manage a video archive which can 
+
+        provide video on demand on line; and, how to achieve an infrastructure 
+
+        for getting the content from the source to the client.</p>
+
+      <p class="Normal">A special work group was established to discover what existing 
+
+        technology might be right for us. This small group initially included 
+
+        Museum I.T. staff and a consultant from Keane, Inc., a major national 
+
+        I.T. consulting firm which was engaged in another Museum project. He agreed 
+
+        to contribute the assistance. </p>
+
+      <p class="Normal">Some prospects were easy to rule out. Although we considered 
+
+        cobbling a variety of products and technologies together to accomplish 
+
+        our goal, we knew this would conflict with our &#34;core competency doctrine&#34; 
+
+        and hobble our chance for success. The best opportunity for Museum support 
+
+        and a successful implementation would be as close to a turnkey solution 
+
+        as possible. Environments such as those available from Real Networks or 
+
+        Microsoft NetMeeting and others were immediately ruled out. The nature 
+
+        of both content and clients would demand close to full screen video of 
+
+        near television quality. We wanted our clients to have warm, seemingly 
+
+        familiar experiences with both our technology and our content. After all, 
+
+        the program was not targeted toward highly self-motivated Internet users 
+
+        who would put up with quarter-screen jitters. Our content should be the 
+
+        reason for participating, and our technology should not get in the way.</p>
+
+      <p class="Normal">We knew that we would require high-speed connections to 
+
+        our clients. We also realized that we were looking for an IP multicast 
+
+        solution, particularly for our live broadcasts. We decided that the increasing 
+
+        availability of ADSL (henceforth, DSL), with its emphasis on downstream 
+
+        speed, would be a feasible enabler (Craioveanu, 2000). We did not consider 
+
+        Internet access services through cable-TV providers, since this was not 
+
+        available in our area.</p>
+
+      <p class="Normal">IP multicasting is defined as an &#34;efficient means of transmitting 
+
+        of a single large stream of data to a group of selected users at the same 
+
+        time on a TCP/IP network such as the Internet&#34; (<a href="http://www.techweb.com/encyclopedia" target="new">http://www.techweb.com/encyclopedia</a>). 
+
+        It is also fundamental to the evolution of the Internet as demand increases 
+
+        for better quality transmission of video and audio, and as transmissions 
+
+        become targeted toward groups rather than broadcast to all. IP multicast 
+
+        protocols have been under development since the early 1990&#39;s. Thus 
+
+        far they have been used primarily in corporate and academic environments 
+
+        where network traffic can be carefully engineered and monitored. We were 
+
+        aware of some public initiatives in this area, such as Mbone, since 1996 
+
+        a cooperative and voluntary experimental virtual network within the Internet. 
+
+        This has been succeeded by other &#34;bones,&#34; including 6bone and Qbone, and 
+
+        protocols, like the Internet itself, continue to evolve. But there is 
+
+        no current standard (Wirbel, 2000). </p>
+
+      <p class="Normal">In addition to the protocol issues, IP multicast also requires 
+
+        a telecommunications infrastructure which is &#34;multicast enabled.&#34; That 
+
+        is, it is comprised of routers and cabling which can handle the traffic 
+
+        demanded by rich media and which can also filter signals to allow clients 
+
+        to selectively receive transmission with a quality of service that would 
+
+        make the product palatable. (This is somewhat simplified, but sufficient 
+
+        for this purpose.) The current acceleration of commercial interest in 
+
+        IP Multicast is clearly evidenced by the IP Multicast Initiative, &#34;a world-wide, 
+
+        multi-vendor forum accelerating the adoption of IP Multicast stimulating 
+
+        demand of IP Multicast products and related services&#34; and significant 
+
+        source for articles, white papers, and conference information (<a href="http://www.ipmulticast.com/" target="new">http://www.ipmulticast.com</a>). 
+
+        More than fifty companies now participate in this forum, including Cisco 
+
+        Systems, Real Networks, Yahoo Broadcast, and Lucent Technologies. There 
+
+        are even a number of national conferences each year focusing on this area. 
+
+        Although there may be some complex and costly workarounds, the public 
+
+        infrastructure was not ready yet for broadband IP multicast, even though 
+
+        we were. </p>
+
+      <h1>Welcome to the Turnkey Multicasting System</h1>
+
+      <p class="Normal">Our product review brought us to Cisco Systems, Inc.&#39;s 
+
+        IP/TV system. Cisco&#39;s IP/TV was chosen over other prospective solutions 
+
+        because it provides a more comprehensive set of features, in an end-to-end 
+
+        turnkey solution, than any other solution we could find (<a href="http://www.cisco.com/" target="new">http://www.cisco.com</a>). 
+
+        It comprises video capture with a choice of compression techniques, real-time 
+
+        broadcasting capability, video archiving, an Internet-based interface, 
+
+        and full router support at all points. As a tool designed for education 
+
+        and training applications within an academic or corporate environment, 
+
+        other features, including an interactive question manager and usage monitoring 
+
+        tools, would also add value. A true broadband multicast solution (when 
+
+        used within a network infrastucture supporting these features), IP/TV 
+
+        can provide very high quality full- or near full-screen video, something 
+
+        we had identified as a requirement. We also decided that the implementation 
+
+        of a turnkey solution by a single well-known vendor had the added advantage 
+
+        of one-stop training and support. If our program model of content delivery 
+
+        proved successful, new and more feature-rich products could simply replace 
+
+        the elements we had chosen. Finally, because we would use Cisco routers, 
+
+        Cisco could be held responsible for the system&#39;s performance truly 
+
+        end-to-end. This initial assessment was followed by a product demonstration 
+
+        and tutorial for our technology team at Cisco&#39;s Cleveland office, 
+
+        and additional telephone conferences with Cisco&#39;s IP/TV specialists. 
+
+        The agreement that our local Cisco sales and technical reps would join 
+
+        our technology team as needed, and that the regional office would provide 
+
+        training and technical assistance to help assure project success, clinched 
+
+        the decision.</p>
+
+      <p class="Normal">The decision was later bolstered by an informative case 
+
+        descrip<span class="Normal">tion of an IP/TV project at the Virginia Community 
+
+        College System (<a href="http://www.so.cc.va.us/vccsit/IPTVproj.htm" target="new">http://www.so.cc.va.us/vccsit/IPTVproj.htm</a>).</span></p>
+
+      <p class="Normal"><span class="Normal">The planned configuration of the Cisco 
+
+        IP/TV system comprises the following components:</span></p>
+
+      <ul>
+
+        <li> <span class="Normal"><i>IP/TV 3411 Control Server </i>which centrally 
+
+          manages the entire IP/TV system. The Control Server communicates instructions, 
+
+          such as scheduling information, available video types, and bandwidth 
+
+          considerations to IP/TV Broadcast and Archive Servers, along with program 
+
+          information, to the IP/TV Viewer client software at the workstation. 
+
+          Its interface allows system administrators to manage content, servers, 
+
+          and bandwidth, and schedule broadcasts. It also balances network video 
+
+          loads and optimizes network performance automatically. This server can 
+
+          be fully controlled remotely from any, even low speed, IP-connected 
+
+          terminal.</span></li>
+
+        <li> <span class="Normal"><i>IP/TV 3422/3423 Broadcast Servers </i>capture 
+
+          and digitize, store, and transmit programs according to directions received 
+
+          from the Cisco 3411 Control Server. They are primarily used for multicasting 
+
+          live or prerecorded programs from devices such as video cameras, VCRs, 
+
+          DVDs, satellite, or cable feeds, or from prerecorded Windows Media, 
+
+          AVI, MP3, and MPEG files. The Server must be located physically near 
+
+          the source devices, such as cameras, mixers, etc., to which they directly 
+
+          connect. The model differences pertain to the servers&#39; digitization 
+
+          format capabilities. </span></li>
+
+        <li> <span class="Normal"><i>IP/TV 3431 Archive Server </i>provides large-volume 
+
+          storage capacity for Video on Demand (VoD). It enables the appropriate 
+
+          stored video programs to be delivered at the right time, to the right 
+
+          audience, whether streaming prerecorded video on a scheduled basis or 
+
+          responding to a singular request. This server can be fully controlled 
+
+          remotely from any, even low speed, IP-connected terminal. </span></li>
+
+        <li> <span class="Normal"><i>IP/TV Viewer </i>is<i> </i>the IP/TV system 
+
+          client-side software, which communicates with the IP/TV 3411 Control 
+
+          Server to get information about all available programs and display a 
+
+          program listing. It allows participants to select and display programs, 
+
+          ask to receive a scheduled program, or choose to display a program on 
+
+          demand. (It informs the Control Server of what content is desired, and 
+
+          the control server then directs the content delivery from the Broadcast 
+
+          or Archive servers.) The Viewer can list both available IP/TV format 
+
+          and Windows Media programs and offers VCR-like controls, key word searches 
+
+          and program pre-scheduling. [Although IP/TV content could also be accessed 
+
+          via an html web page and Windows Media Player, this client is required 
+
+          in order to receive archived content stored in Cisco&#39;s proprietary 
+
+          RTP format (sort of an encapsulated MPEG-4). We will require the Viewer 
+
+          on all client stations in order to benefit from RTP&#39;s high quality 
+
+          video compared with the bandwidth needed to receive it]. </span></li>
+
+      </ul>
+
+      <p class="Normal">The configuration of the equipment is described later and 
+
+        portrayed in Figure 1.</p>
+
+      <p class="MsoCaption"><a href="steinbachfig1.html"><img src="steinbach_fig1_400.jpg" width="381" height="285" border="0" alt="igure 1: IP/TV Broadband Multicast Distribution Network"/></a><a name="fig1"></a></p>
+
+      <p class="MsoCaption">Figure 1: IP/TV Broadband Multicast Distribution Network</p>
+
+      <p class="Normal">Supplemental Cisco software which should p<span class="Normal">rove 
+
+        effective for providing, managing, and monitoring content development 
+
+        and delivery include:</span></p>
+
+      <ul>
+
+        <li> <span class="Normal">Web Presenter, which allows the opening of a 
+
+          video window and Web-based slides concurrently. </span></li>
+
+        <li> <span class="Normal">Web Plug-in, which allows a participant to watch 
+
+          an IP/TV program embedded directly in a Web page.</span></li>
+
+        <li> <span class="Normal">Question Manager, which provides a participants 
+
+          interactivity by letting participants type in questions on line. A moderator 
+
+          or instructor either answers the questions in real time or archives 
+
+          them for follow-up. </span></li>
+
+        <li> <span class="Normal">Web Info, which allows participants, while watching 
+
+          a program, to click a button and travel to a predefined URL location, 
+
+          typically a Web page, containing additional program information.</span></li>
+
+        <li> <span class="Normal">SlideCast, which permits participants to simultaneously 
+
+          see the presenter&#39;s PC-generated presentation materials in one window 
+
+          and the presenter in the other, as if they were in the same room. </span></li>
+
+        <li> <span class="Normal">StreamWatch, which gathers participant demographics 
+
+          such as number of participating stations, identities, and viewing times 
+
+          for pre scheduled programs, and for on-demand programs logs information 
+
+          about which programs participants are watching and when.</span></li>
+
+      </ul>
+
+      <h1>Ticket to Ride</h1>
+
+      <p class="Normal">Having tentatively selected the product suite that should 
+
+        meet the video capture, storage, management and distribution requirements 
+
+        of the project, the network infrastructure on which this would ride had 
+
+        to be identified. As noted earlier, the public Internet is anything but 
+
+        ready for broadband multicast prime time. We enlisted the assistance of 
+
+        a local major ISP who recognized the benefits of early involvement with 
+
+        broadcast multiband. Their assistance was also encouraged by their ongoing 
+
+        relationship with the local Cisco office, not to mention the prestige 
+
+        and good will associated with assisting the Museum. This A-Team team, 
+
+        now comprised of <span class="Normal">representatives of Keane, Inc. (consulting), 
+
+        APKnet (ISP), Cisco Systems, Inc., and Museum technical staff, along with 
+
+        any additional ad hoc experts we could think of to call or e-mail, set 
+
+        to task. I love it when a plan comes together (Smith, 1983)... and 
+
+        it did:</span></p>
+
+      <p class="Normal"><span class="Normal">The network infrastructure would work 
+
+        as follows:</span></p>
+
+      <ul>
+
+        <li> <span class="Normal">As a DSL reseller through local telephone providers 
+
+          with direct lines to their central offices, the ISP would create private 
+
+          virtual circuits between themselves and our clients (ISP-to-TelcoPoP-to-client])</span></li>
+
+        <li> <span class="Normal">The DSL client lines at the ISP could be then 
+
+          be connected to a single high speed, broadband, multiprotocol, multimedia 
+
+          router (Cisco 7206VXR) with a highly secure, specially configured gateway 
+
+          connecting it to the public Internet.</span></li>
+
+        <li> <span class="Normal">The IP/TV Control and Archive servers would 
+
+          be co-located at the ISP and connected directly to the high speed router 
+
+          to assure the fastest and most direct service delivery. Demanded video 
+
+          would travel directly from the ISP to the client via the virtual private 
+
+          circuit. The servers could be operated remotely from any site with an 
+
+          authorized IP connection, yet benefit from the power management and 
+
+          physical security inherent in a ISP facility.</span></li>
+
+        <li> <span class="Normal">Live broadcasts would be compressed and fed 
+
+          by Broadcast servers &#34;on location&#34; to the Control servers at the ISP 
+
+          via dedicated T-1&#39;s terminated at the same high speed router; similarly, 
+
+          video-on-demand archival material could be loaded onto the archive/media 
+
+          servers at the ISP using the same Broadcast servers via the same T-1&#39;s.</span></li>
+
+        <li> <span class="Normal">Client locations would require multicast enabled 
+
+          routers (Cisco 1720) in addition to the DSL modems specified by the 
+
+          provider of the DSL loop.</span></li>
+
+      </ul>
+
+      <p class="Normal"><span class="Normal">This configuration establishes a fundamentally 
+
+        closed system. The ISP, wh</span>ich acts as the hub, maintains end-to-end 
+
+        control of all emanating lines. The project relies on a private IP routing 
+
+        scheme for our client stations and media servers. Remote management access 
+
+        is also protected through access control lists that permit access only 
+
+        to devices with authorized IP addresses, in addition to correct passwords. 
+
+        The gateway to the Internet, also located at the ISP, provides network 
+
+        address translation, thereby masking the identity of the originating workstations 
+
+        and servers. In turn, the gateway is configured to provide anti-spoofing 
+
+        protection and a multi-layered and firewalled environment to assure a 
+
+        high level of overall security for components of our system. Similarly, 
+
+        filtering at the gateway prevents our high bandwidth content from spilling 
+
+        into and degrading service on the ISP&#39;s Internet backbone. Overall, 
+
+        thanks to an ISP with end-to-end connection control and willing to provide 
+
+        multicast broadband support for a small population, we expect to successfully 
+
+        emulate the Internet of the future. </p>
+
+      <h1>Content Capture, Transmission and Display</h1>
+
+      <p class="Normal">While the fundamental infrastructure and core components 
+
+        of this project have been described, there are key ancillary devices and 
+
+        technologies worth noting, although elaboration exceeds the scope of this 
+
+        paper. For live transmission we will use MPEG-4 (<a href="http://www.cselt.it/mpeg/" target="new">http://www.cselt.it/mpeg/</a>) 
+
+        with its high ratio of full-motion video quality to bandwidth and other 
+
+        features. For archival storage and video-on-demand we will use Cisco&#39;s 
+
+        RTP format, which is essentially encapsulated MPEG-4 requiring IP/TVViewer 
+
+        client software at the workstation. Content will be digitized locally 
+
+        using Broadcast Servers and downloaded/transmitted via T-1 to the Archive 
+
+        Server at the ISP hub. </p>
+
+      <p class="Normal">Ancillary equipment associated with content production, 
+
+        distribution, and storage include video cameras, microphones, mixers, 
+
+        video editing system with special effects, video recorders, document cameras, 
+
+        slide-to-video projectors and others. Some of these were already available 
+
+        through our existing distance learning programs while others were acquired 
+
+        for this purpose.</p>
+
+      <p class="Normal">Work stations at participant sites will be standard PC&#39;s 
+
+        with at least the equivalent of a PIII/600Mhz processor; the IP/TV Viewer 
+
+        uses the processor to decode MPEG-4 and RTP media. Also,128 MB RAM will 
+
+        be provided. At this time we have not identified any specific video or 
+
+        audio requirements beyond the minimum generally provided with current 
+
+        model workstations. Where a personal residence is the location of participation, 
+
+        standard small speakers and a 17&#34; monitor will be provided. For group 
+
+        facilities, a 36&#34; RGB monitor, appropriate speakers, and wireless keyboard 
+
+        and mouse (if desired) will be provided, along with any special cart or 
+
+        cabinet requested.</p>
+
+      <h1>Program Operation and Management: Partners, Partners, Partners</h1>
+
+      <p class="Normal">The technology plan described, although at the core of the 
+
+        project, is merely a facilitator of the program. The program needs content 
+
+        to distribute and participants to participate. If one concedes that the 
+
+        Museum has designed a program that qualifies as &#34;creative use&#34; of technology 
+
+        on behalf of the Museum&#39;s strategic goals, then there still remains 
+
+        the question of where the mastery of complex technology should reside. 
+
+        The answer is, with those whose core competency is technology. Similarly, 
+
+        although the Museum has extensive experience in educational programming 
+
+        within the scope of its expertise, there is more to Lifelong Learning 
+
+        and the Arts than a single institution can provide. Finally, we needed 
+
+        to identify and enlist community facilities and residents who would be 
+
+        willing to join our experiment and work toward its success. </p>
+
+      <p class="Normal">To achieve this level of distributed responsibility, participation 
+
+        and interest, three spheres of &#34;Partners&#34; have been convened, many of 
+
+        whom had been at our initial brainstorming meeting: Content Partners, 
+
+        Community Partners, and Technology Partners. </p>
+
+      <p class="Normal">Content Partners is a consortium comprised of the Museum 
+
+        and additional arts and cultural institutions, including the Cleveland 
+
+        Orchestra, one of the finest in the world; the Crawford Auto‑Aviation 
+
+        Museum of the Western Reserve Historical Society, a repository for artifacts 
+
+        and archives related to the history of Ohio; and, WVIZ/PBS, the area&#39;s 
+
+        public broadcasting station and active producer of educational television 
+
+        programs. The number of content partners may grow as the program matures. 
+
+        The combined resources of these organizations will provide a broad and 
+
+        varied menu of programs in the areas of local history, visual arts, jazz 
+
+        and classical music, theater and the applied arts, as well as a range 
+
+        of thematic programs about general artistic, cultural and literary issues. 
+
+        We are projecting a minimum archive of 300 programs by the end of year 
+
+        two, in addition to a minimum of 12 live broadcasts offered monthly. These 
+
+        organizations receive no payment for their contribution. It is noteworthy 
+
+        that TOP grant conditions unequivocally stipulate that funds may not be 
+
+        used to &#34;produce information content,&#34; although it will support some &#34;creation 
+
+        or conversion of content (in order) to utilize information infrastructure 
+
+        technologies to address real-world problems&#34; (TOP Application Kit, 1999). 
+
+        For example, the program is funded to videotape an already planned lecture 
+
+        series, but cannot pay to create one. Content partner contributions of 
+
+        time and any direct expenses incurred on the project&#39;s behalf are 
+
+        recorded and considered in-kind match to the federal cash grant. The Museum&#39;s 
+
+        Education and Public Programs Division manages the Content Partners.</p>
+
+      <p class="Normal">Community Partner organizations bring a diverse population 
+
+        to the program, including minorities and seniors, and those with varying 
+
+        levels of physical and mental abilities. Organizations include several 
+
+        assisted living community residential facilities; the Cuyahoga County 
+
+        Board of Mental Retardation&#39;s training center; and a college-based 
+
+        special educational program for persons age 50 and over. As the program 
+
+        matures, participation may change. The personal commitment of community 
+
+        partner staff is crucial to the success of the program. Community partners 
+
+        have committed the time and talents of their on-site staff to facilitate 
+
+        the use of the technology, to integrate the project into their ongoing 
+
+        program activities, and to create follow‑up activities so that their 
+
+        clients can achieve the maximum benefit of this experiment. They have 
+
+        also agreed to encourage use of the system for video‑on‑demand 
+
+        and access to complementary Web resources. This includes making the equipment 
+
+        accessible to clients for independent as well as group use. The partners 
+
+        also agreed to take part in the evaluations, complete surveys and interviews, 
+
+        and send a representative to meet at least quarterly to discuss the program 
+
+        progress and recommend improvements. These organizations receive no payment 
+
+        for their contribution. Their contribution of staff time spent in activities, 
+
+        meetings or paperwork uniquely related to the project and any direct expenses 
+
+        incurred on the project&#39;s behalf are considered in-kind match to 
+
+        the federal cash grant. The Museum&#39;s Education and Public Programs 
+
+        Division manages the Community Partners.</p>
+
+      <p class="Normal">Technology Partners comprises technology organizations whose 
+
+        core competencies are congruent with their projected roles. For example, 
+
+        APKnet, Inc., the major regional ISP referred to above, will provide end-to-end 
+
+        network management and connectivity services and support to our clients 
+
+        and content origination/management points; that is, the Museum and WVIZ/PBS. 
+
+        They will also co-locate the Archive and Control servers on their premises. 
+
+        WVIZ/PBS, the area&#39;s public television station, will remotely manage 
+
+        the Archive and Control servers, including video-on-demand sources and 
+
+        broadcast scheduling. With an IP/TV Broadcast server on their premises, 
+
+        they will also provide their studio as a live broadcast venue as well 
+
+        as download content to the archive. Cisco Systems, Inc.&#39;s Cleveland 
+
+        office has committed to a special technical support effort and has contributed 
+
+        training to assure that the project works. Keane, Inc. will help monitor 
+
+        and evaluate the implementation. Museum Information Technology staff manage 
+
+        the implementation process, and will perform all remote site equipment 
+
+        set-up (except network connectivity devices), provide help desk support 
+
+        for the project, and develop a friendlier end-user interface than is provided 
+
+        with the IP/TV package. The vendor partners are participating on the basis 
+
+        of fee-for-service and/or contribution/discount of services. Contributed 
+
+        time and services from technology partners are accorded a value, which 
+
+        is considered in-kind match to the federal cash grant. The Information 
+
+        Technology Division manages the Technology Partners.</p>
+
+      <h1>Project Evaluation</h1>
+
+      <p class="Normal">Intrinsic to any federally funded project, and vital regardless 
+
+        of auspice, is the ongoing and final formal evaluation of project process 
+
+        and outcome. We have divided the evaluation into two distinct components: 
+
+        technology implementation and program effectiveness. </p>
+
+      <p class="Normal">In order to assess our technology implementation, Keane, 
+
+        Inc. will identify and document all technical implementation, training 
+
+        and support issues, problems and resolutions. This record should serve 
+
+        as an important source document for any organizations that would like 
+
+        to replicate in whole or part the technical program we are modeling. Our 
+
+        Keane representative has been involved with the project from our initial 
+
+        investigations and has an exceptional understanding of what we are trying 
+
+        to achieve. However, since identifying the core technologies, Keane has 
+
+        not been involved in specification or implementation, thereby enabling 
+
+        an unbiased view of our process</p>
+
+      <p class="Normal">In order to assess program effectiveness, we were fortunate 
+
+        to have enlisted the Institute for Innovative Learning, Inc., led by noted 
+
+        researcher John H. Falk. This non-profit research and evaluation organization 
+
+        specializes in &#34;free choice&#34; learning and arts‑related 
+
+        programs and has extensive experience in evaluating Museum-based educational 
+
+        programs.. Formative and summative evaluations, based on integrated evaluation 
+
+        planning with all program partners, will encompass direct observations 
+
+        by evaluators, focussed and open-ended interviews, questionnaires for 
+
+        caregivers, and case studies as appropriate. Interim and final reports 
+
+        will assess the efficacy of our approach and promote the sharing of our 
+
+        experience. Ongoing informal feedback will help us navigate the program. 
+
+        This Institute&#39;s involvement began at the very onset of the program, 
+
+        even before our first formal <i>Partners</i> meetings were convened, and 
+
+        we believe that early involvement of evaluators is essential to the evaluation 
+
+        process</p>
+
+      <h1>Budget and Staffing</h1>
+
+      <p class="Normal">The formal budget for this program is $1.2 million over 
+
+        a two-year period. Of this, $545,000 represents the Technology Opportunity 
+
+        Grant financial assistance award. The remainder is matched through the 
+
+        in-kind support of our Content, Technology, and Community Partners, and 
+
+        the Museum&#39;s dedication of time of existing management and staff, 
+
+        and direct expenses for some equipment and supplies. The federal contribution 
+
+        is primarily used for hardware, software, initial network configuration, 
+
+        and monthly telecommunications charges. Approximately 10% is applied to 
+
+        evaluation. Federal dollars also directly fund 1.5 full-time equivalent 
+
+        positions at the Museum: a full-time Project Coordinator acts as a liaison 
+
+        between Program and Content providers and the Museum&#39;s project managers, 
+
+        evaluators and others, performing a variety of functions to assure that 
+
+        the program runs smoothly and effectively. A half-time Education Assistant 
+
+        works with all content and community partners, including Museum staff, 
+
+        to modify or enhance prospective content to better meet the needs of older 
+
+        or impaired participants. A variety of staff from both the Information 
+
+        Technology and Education and Public Program Divisions are involved with 
+
+        this project as needed. The Museum&#39;s Informaton.Technology Division&#39;s 
+
+        Help Desk also serves as the project&#39;s help desk. The Director of 
+
+        Education and Public Programs is responsible for program content and working 
+
+        relationships with our community partners. The Chief Information Officer, 
+
+        who heads the Information Technology Division and is Project Director, 
+
+        is responsible for all aspects of technical implementation, , all budget 
+
+        management, reporting requirements, and program evaluation. </p>
+
+      <h1>Current Project Status</h1>
+
+      <p class="Normal">The grant award was announced on October 1, 2000. As this 
+
+        paper is prepared in mid-February, 2001, following many planning meetings, 
+
+        much of the IP/TV equipment has arrived. Technical staffs at WVIZ/PBS 
+
+        and APKnet have been experimenting with demonstration units for several 
+
+        weeks. Museum technical staff received a briefing and started demonstrating 
+
+        IP/TV features to our Community and Content partners. This proved a significant 
+
+        energizer for the group, who could finally see what they were getting 
+
+        and know that it was for real. </p>
+
+      <p class="Normal">The only big surprise is that there haven&#39;t been any 
+
+        big surprises. Telecommunications lines have also been ordered and are 
+
+        at the brink of hook-up but here, too, no surprise.... local DSL providers 
+
+        do not really know if DSL is available at a location until the time of 
+
+        installation. Although we &#34;pre-qualified&#34; community partner sites last 
+
+        year, as to whether they could be connected, that turned out to be meaningless. 
+
+        Possibly two of our participants may get T-1 connections until DSL is 
+
+        really available. Site visits have been made to all community facilities, 
+
+        in order to perform facility surveys for equipment selection and set-up, 
+
+        and to start getting to know residents and staff (the &#34;joy&#34; part). </p>
+
+      <p class="Normal">Our community partners have already participated in the 
+
+        baseline stage of the program evaluation, which entailed the on-site collection 
+
+        of baseline data about how staff feel about the forthcoming program, and 
+
+        about the current state of social isolation, activity and relationship 
+
+        with the arts of prospective participants. Here the feedback from our 
+
+        evaluator has already proven invaluable. </p>
+
+      <p class="Normal">First, our informal feedback was that our Community Partners&#39; 
+
+        staffs were extremely enthusiastic about the project and were already 
+
+        identifying additional ways of using the technology before our first program 
+
+        even &#34;airs.&#34; For example, it was suggested that we share special programs 
+
+        currently at one facility with another, or allow residents&#39; talents 
+
+        to be displayed live from our studios. One facility which has a regularly 
+
+        scheduled discussion of social and political issues suggested that we 
+
+        open it up for multi-facility participation or view. We are now challenged 
+
+        to harness this energy and level of ownership which we never presumed 
+
+        to rely on, nor expected to achieve at start-up. </p>
+
+      <p class="Normal">Second, we have discovered that facility staff are planning 
+
+        to target our programming toward persons who still maintain very active 
+
+        lives, and have strong longstanding interests in the arts and our cultural 
+
+        institutions. This may suggest that there is not much room for great improvements 
+
+        for these folk in life satisfaction from our &#34;diminishment of social isolation&#34; 
+
+        or &#34;increased socialization&#34; in this group (or maybe there is?). On the 
+
+        one hand, this population might actively help us evaluate the quality 
+
+        and effectiveness of our programming; on the other hand, this might preclude 
+
+        us from impacting on a more needy population, giving us no more than a 
+
+        short-term Pyrrhic victory. On the third hand, we do not want to dampen 
+
+        staff enthusiasm or set ourselves up for self-fulfilling failure either 
+
+        by second guessing their judgement or foisting our programs on participants 
+
+        before we have ironed out the kinks. For now, we believe we have elegantly 
+
+        solved this trilemma. We will enthusiastically beam our programming toward 
+
+        the audience of the facilities&#39; choice, respond to their feedback 
+
+        and analyze our impact. As we become more experienced at content selection 
+
+        and delivery, and facility staff become more confident in their use of 
+
+        the technology and the success with their audience, we may urge that the 
+
+        audience be expanded to those thus far deprived of participation. We may 
+
+        even find that this occurs naturally over time without our intervention. 
+
+      </p>
+
+      <p class="Normal">The relevance of this scenario is not so much the problems 
+
+        and issues it describes. More importantly, this story illuminates the 
+
+        critical importance of early independent evaluation of program progress, 
+
+        and thoughtfully deliberate intervention (or in this case lack thereof). 
+
+        Without the early warning, this may have become an urgent issue bordering 
+
+        on adversarial. Instead, we share an abundance of lemonade. </p>
+
+      <p class="Normal">Content partners have also been meeting to develop our program 
+
+        schedule, and the wealth of ideas is breathtaking: a special live marimba 
+
+        and organ concert; our Art of the World appreciation course for adults, 
+
+        videotaped and parsed into small morsels and archived for demand, complemented 
+
+        by live follow-up conversation from the museum; an historian showing neighborhoods 
+
+        of yesterday and today to stir memories, emotions, and intellect; a Panorama 
+
+        of African American Theater from WVIZ/PBS. These are ideas and plans, 
+
+        and fodder for another paper. One challenge will be to develop the synergy 
+
+        of this program with the existing programs of the Content Partner institutions. 
+
+        Recalling that grant conditions unequivocally stipulate that funds may 
+
+        not be used for content development, it becomes all the more important 
+
+        to sense what existing programs may be most amenable to re-purposing for 
+
+        this program audience and technology. Another challenge will be to choose 
+
+        programs selectively and carefully, learning from those that have proven 
+
+        most and least effective and popular. Additionally, we may need to consciously 
+
+        differentiate or vary programming to best match differently skilled members 
+
+        of our target population. Learning from our success in art classes with 
+
+        impaired populations, we will probably include live and archived activity 
+
+        lessons, with guides for staff. Only one cloud hangs overhead; that is 
+
+        concern raised by some content partners that in their enthusiasm for our 
+
+        program goals, they may have underestimated the need for their institutions&#39; 
+
+        unreimbursed commitment of time and resources. This may result in a need 
+
+        to attract more content partners, or our partners may find that their 
+
+        contributions are not so onerous after all.</p>
+
+      <p class="Normal">As we continued to walk through and talk through this program, 
+
+        we recognized one more question to confront: Why should staff at our Community 
+
+        Partner facilities actually believe this could be significantly beneficial 
+
+        to their residents - more beneficial than TV or any other leisure activity? 
+
+        Staff attitude in fact might prove key to project success. To help establish 
+
+        insurance in this area, the Museum produced a day-long seminar, demonstration, 
+
+        and pizza lunch for all of our Partners (Technology, Community, Content). 
+
+        We featured a special film and lecture presentation by gerontologist Mal 
+
+        Schechter, who had helped with our original research. Staff from the Cuyahoga 
+
+        Community Board of Mental Retardation and Developmental Disabilities demonstrated 
+
+        how technology benefits the lives of the people they serve. All of us 
+
+        focused on why we believe that this program is not just entertainment; 
+
+        it&#39;s life enhancing. A pre-kickoff rally. And it got rave reviews.</p>
+
+      <h1>Conclusion</h1>
+
+      <p class="Normal">This paper has tried to present the evolution of a notion 
+
+        as it becomes an innovation. It has tried to relate the importance of 
+
+        matching an institution&#39;s persona to an almost far-fetched goal. 
+
+        It tries to make a case for developing sound inter-organizational relationships 
+
+        as a means of achieving projects that would otherwise be out of reach. 
+
+        And of course we are trying to demonstrate how advanced telecommunications 
+
+        may bring cultural organizations closer, and with more profound impact, 
+
+        into many more lives, in the not too distant future. If the process described 
+
+        seemed too well thought out, too much on an even keel, a piece of cake, 
+
+        then I may have abused my literary license. Guilty as charged on bypassing 
+
+        some of the bumps in the road; we are just too busy trying to catch sight 
+
+        of the potholes in the darkness ahead. But really, don&#39;t you just 
+
+        love it when a plan comes together!</p>
+
+      <h1>References</h1>
+
+      <p class="ReferencesText">Rowe, John W., M.D. &amp; Kahn, Robert L., Ph.D. 
+
+        (1997) Successful Aging. <i>Generations</i> 37:4, 443-440.</p>
+
+      <p class="ReferencesText">Fees, Bronwyn S. &amp; Martin, Peter &amp; Poon, 
+
+        Leonard W. (1999) A Model of Loneliness in Older Adults. <u>Journal of 
+
+        Gerontology, Psychological Sciences</u>, July 1999, 231-239.</p>
+
+      <p class="ReferencesText">Wirbel, Loring (2000) Russ Hobby -- Advancing 
+
+        to Internet2 Over &#34;Bones&#34; <u>Electrical Engineering Times</u> September 
+
+        27, 2000, 6.</p>
+
+      <p class="ReferencesText">Craioveanu, Radu. (2000). The benefits of IP multicast 
+
+        over DSL. <i>Network World</i>, February 7, 2000.</p>
+
+      <p class="ReferencesText">Smith, Colonel Hannibal (1983) <i>The A-Team. </i>NBC 
+
+        Television Network. (1983-87).</p>
+
+      <p class="ReferencesText"><a href="http://www.xs4all.nl/~jmm/a-team/ target=" new"=""> http://www.xs4all.nl/~jmm/a-team</a></p>
+
+      <h1>Acknowledgements</h1>
+
+      <p class="AcknowedgementsText">This information was made possible in part 
+
+        by a grant from the Technology Opportunity Program [TOP], National Telecommunications 
+
+        and Information Administration, U.S. Department of Commerce</p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</tbody></table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+
+
+
+
+</body><!-- #EndTemplate --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/steinbach/steinbach.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:49:33 GMT --></html>

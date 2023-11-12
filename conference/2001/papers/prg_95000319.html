@@ -1,0 +1,1363 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/giannoulis/giannoulis.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:40 GMT --><head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>Enhancing Museum Visitor Access Through Robotic Avatars Connected to the Web</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="/>
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css"/>
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onload="MM_preloadImages(&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;);MM_preloadImages(&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tbody><tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"/></a></p>
+      <p> <a href="../../register/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.register&#39;,&#39;document.register&#39;,&#39;../../nav/mw2001_nav_registeron.gif&#39;,&#39;#943398414283&#39;)"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"/></a> 
+        <br/>
+        <a href="../../workshops/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.workshops&#39;,&#39;document.workshops&#39;,&#39;../../nav/mw2001_nav_workshopson.gif&#39;,&#39;#943398455733&#39;)"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"/></a> 
+        <br/>
+        <a href="../../sessions/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sessions&#39;,&#39;document.sessions&#39;,&#39;../../nav/mw2001_nav_sessionson.gif&#39;,&#39;#943398500450&#39;)"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"/></a> 
+        <br/>
+        <a href="../../speakers/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.speakers&#39;,&#39;document.speakers&#39;,&#39;../../nav/mw2001_nav_speakerson.gif&#39;,&#39;#943398534416&#39;)"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"/></a> 
+        <br/>
+        <a href="../../interact/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.interact&#39;,&#39;document.interact&#39;,&#39;../../nav/mw2001_nav_interacton.gif&#39;,&#39;#943398534416&#39;)"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"/></a> 
+        <br/>
+        <a href="../../demos/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.demos&#39;,&#39;document.demos&#39;,&#39;../../nav/mw2001_nav_demoson.gif&#39;,&#39;#943398577050&#39;)"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"/></a> 
+        <br/>
+        <a href="../../exhibit/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.exhibits&#39;,&#39;document.exhibits&#39;,&#39;../../nav/mw2001_nav_exhibiton.gif&#39;,&#39;#943398612066&#39;)"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"/></a> 
+        <br/>
+        <a href="../../events/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.events&#39;,&#39;document.events&#39;,&#39;../../nav/mw2001_nav_eventson.gif&#39;,&#39;#943398640266&#39;)"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"/></a> 
+        <br/>
+        <a href="../../best/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.best&#39;,&#39;document.best&#39;,&#39;../../nav/mw2001_nav_beston.gif&#39;,&#39;#943398663166&#39;)"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"/></a> 
+        <br/>
+        <a href="../../dates/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.dates&#39;,&#39;document.dates&#39;,&#39;../../nav/mw2001_nav_keydateson.gif&#39;,&#39;#943398701050&#39;)"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"/></a> 
+        <br/>
+        <a href="../../seattle/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.seattle&#39;,&#39;document.seattle&#39;,&#39;../../nav/mw2001_nav_seattleon.gif&#39;,&#39;#943398731383&#39;)"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"/></a> 
+        <br/>
+        <a href="../../sponsor/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;document.sponsor&#39;,&#39;document.sponsor&#39;,&#39;../../nav/mw2001_nav_sponsoron.gif&#39;,&#39;#943398934733&#39;)"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"/></a> 
+        <br/>
+        <br/>
+        <br/>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"/></a> 
+        <br/>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br/>
+        158 Lee Avenue<br/>
+        Toronto, Ontario<br/>
+        M4E 2P3 Canada<br/>
+        info@ archimuse.com<br/>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tbody><tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"/></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br/>
+            A&amp;MI</font></a> </span></td>
+        </tr>
+      </tbody></table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br/>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class="verysmall">Published: March 15, 2001.<br/>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated: "+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"/><br/>
+      <!-- #BeginEditable "Body" --> 
+
+      <h1 class="PaperTitle">Enhancing Museum Visitor Access Through Robotic Avatars 
+
+        Connected to the Web</h1>
+
+      <h2 class="Author">George Giannoulis, Mandy Coliou, George S. Kamarinos, 
+
+        Maria Roussou, Foundation of the Hellenic World, Panos Trahanias, Antonis 
+
+        Argyros, Dimitris Tsakiris Foundation for Research and Technology -- 
+
+        Hellas, Greece, Armin Cremers, Dirk Schulz, University of Bonn, Wolfram 
+
+        Burgard, Dirk Haehnel, University of Freiburg, Germany Vassilis Savvaides, 
+
+        THEON Mobile Platforms S.A, Greece, Peter Friess, Deutsches Museum Bonn, 
+
+        Germany, Dimitrios Konstantios, Andromachi Katselaki<sup>, </sup>Byzantine 
+
+        and Christian Museum of Athens Greece </h2>
+
+      <h1 class="abstractTitle">Abstract</h1>
+
+      <span class="AbstractText">Access to cultural exhibits is a central issue 
+
+      in museums and exhibition galleries that is recently approached under a 
+
+      new, technological perspective. Although the cultural industries&#39; practices 
+
+      in the cases of museums and cultural exhibits have remained practically 
+
+      unchanged for long, in recent years we are witnessing a gradual adoption 
+
+      of media-technologies in various aspects, such as collections archiving 
+
+      and digital document preservation, media- and Web-presentation, graphical 
+
+      animations, etc. The advent of such technologies contributes towards providing 
+
+      media-rich presentations of cultural exhibits and consequently offering 
+
+      better services to museum visitors. Lately, Internet and Web-based technologies 
+
+      have been employed for providing access, mostly to images of exhibited objects. 
+
+      With current technology, such access is limited due to the non-interactive 
+
+      nature of pre-recorded images or videos and the difficulty in constant updating 
+
+      of the sites when there is change in the content. In few cases, the incorporation 
+
+      of higher-end technology, such as virtual reality, artificial intelligence, 
+
+      or robotics, is explored. Some science museums, large &#34;edu-tainment&#34; 
+
+      venues, and recreation parks have traditionally been the ones to embrace 
+
+      new media first, by employing fascinating and sophisticated interactive 
+
+      installations and presenting up-to-date results on the creative use of technology.</span><span class="AbstractText">In 
+
+      this paper we present such an effort, the TOURBOT project, which emphasizes 
+
+      the development of alternative ways for interactive museum tele-presence, 
+
+      essentially through the use of robotic &#34;avatars&#34;. TOURBOT, an 
+
+      acronym for TOUr-guide RoBOT, represents a collaboration between museums, 
+
+      technology providers, and brokers of technology to museums. The overall 
+
+      goal of TOURBOT is the development of an interactive tour-guide robot able 
+
+      to provide individual access to museums&#39; exhibits and cultural heritage 
+
+      over the Internet. TOURBOT operates as the user&#39;s surrogate personna 
+
+      (avatar) in the museum by accepting commands over the web that direct it 
+
+      to move in its physical workspace and visit specific exhibits. In other 
+
+      words, the imaged scene of the museum and the exhibits is communicated over 
+
+      the Internet to the remote visitor. As a result the user enjoys a personalized 
+
+      tele-presence to the museum, being able to choose the exhibits to visit, 
+
+      as well as the preferred viewing conditions (point of view, distance to 
+
+      the exhibit, resolution, etc).</span><span class="AbstractText">In addition 
+
+      to remote interaction with the robot, TOURBOT can also act as a flexible, 
+
+      on-site museum guide to visitors that are physically present. By interacting 
+
+      with the tour-guide robot, museum visitors have the ability to individually 
+
+      exploit the expertise stored in the robot, which can react flexibly to their 
+
+      requirements. It can, for example, offer dedicated tours of specific focus 
+
+      to exhibitions or alternatively give overview tours. As a side effect of 
+
+      this concept, museum visitors get acquainted with new, cutting-edge technology 
+
+      by easily interacting with a complex robotic system. Therefore, technological 
+
+      advances are seamlessly assimilated in everyday activities. </span><span class="AbstractText">This 
+
+      approach to cultural heritage access presents a high degree of novelty as 
+
+      well as a number of technical and conceptual issues and challenges. This 
+
+      paper discusses these issues while analyzing the expected benefits and expectations 
+
+      from visitors, the community, and the museums. </span>
+
+      <h1>Introduction</h1>
+
+      <p class="normal">The goal of this project is the development of an interactive 
+
+        TOUr-guide RoBOT (TOURBOT) able to provide individual access to museums&#39; 
+
+        exhibits and cultural heritage over the Internet (TOURBOT, <a href="http://www.ics.forth.gr/tourbot" target="new">http://www.ics.forth.gr/tourbot</a>). 
+
+        TOURBOT operates as the user&#39;s avatar in a museum by accepting commands 
+
+        over the Web that direct it to move in its workspace and visit specific 
+
+        exhibits. The communication network is, thus, effectively extended by 
+
+        the introduction of interactive, mobile robotic platforms as terminal 
+
+        nodes. The imaged scene of the museum and the exhibits, is communicated 
+
+        over the Internet to a remote visitor. As a result the user enjoys a personalized 
+
+        tele-presence to the museum, being able to choose the exhibits to visit, 
+
+        as well as the preferred viewing conditions (point of view, distance to 
+
+        the exhibit, resolution, etc). TOURBOT is able to guide on-site museum 
+
+        visitors providing either group or personalized tours.</p>
+
+      <p class="normal">In order to realize the TOURBOT system, a multimedia Web 
+
+        interface is created to allow people to interact with the tour-guide system 
+
+        over the Internet (Schulz et al., 1999). An on-board interface also facilitates 
+
+        interaction with on-site visitors of the museum. Using the Web interface, 
+
+        people all over the world are able to tele-control the robot and to specify 
+
+        target positions for the TOURBOT system. Camera controls are used to choose 
+
+        the part of the exhibition the user wants to inspect in more detail. The 
+
+        robotic tour-guide possesses a multimedia information base providing a 
+
+        variety of information about the exhibition at various levels of detail. 
+
+        Thus, the TOURBOT system essentially serves as an interactive and remotely 
+
+        controllable tour-guide that provides personalized access to exhibits 
+
+        with a large amount of additional information.</p>
+
+      <p class="normal">A tele-operated interactive tour-guide robot requires a 
+
+        high degree of autonomy since it operates in a populated environment in 
+
+        which humans are also present. Therefore, the project includes the development 
+
+        of a safe and reliable navigation system for TOURBOT (Trahanias et al., 
+
+        1999; Fox et al., 1998; Argyros et al., 1999). The robotic avatar is equipped 
+
+        with a series of state-of-the-art sensors that allow it to acquire information 
+
+        about its environment. The navigation system uses this sensory information 
+
+        to adapt the robot&#39;s internal model of the environment and to plan the 
+
+        robot actions.</p>
+
+      <h1>A New Paradigm in Access to Cultural Content</h1>
+
+      <p class="normal">In the last couple of decades, museums have been evolving 
+
+        their concept and have been setting new priorities and objectives that 
+
+        follow a more global approach. Under this expanded approach, museums are 
+
+        expected to actively and energetically seek (and please) a broader audience 
+
+        (Ames, 1986). This signifies a change in the definition of the museum 
+
+        &#34;public&#34;, now expanded to include school children, the working classes, 
+
+        minorities, individuals and groups with special needs. Changes of this 
+
+        kind were taking place as early as the end of the 19<sup>th</sup> century, 
+
+        when by opening the King&#39;s collections to the people, the primitive 
+
+        idea of the museum open to the public was substituted with the one of 
+
+        the museum belonging to the public (Poisson, 1950). With the advent of 
+
+        technology, museums begun to look at new ways for providing access to 
+
+        their collections and to their activities in general. Most museum technology 
+
+        applications involve the creation of archives, libraries, image galleries 
+
+        but also tools of virtual presentation of collections and 3D representations 
+
+        (Thomas and Mintz, 1998). We have many examples of successful projects 
+
+        presented on CD-ROMS, on-site kiosks, installations, and the Web, in a 
+
+        variety of forms, ranging from simple archives to innovative, experimental 
+
+        and interactive sites (Dietz, 1998).</p>
+
+      <p class="normal">Although significant progress has been realised in the past 
+
+        years, technical limitations still exist. In addition to the varying transmission 
+
+        speeds and copyright issues presented as problems for museum presentations 
+
+        on the Internet, keeping the pre-digitalized collections up to date and 
+
+        providing access to other more dynamic museum information, such as changing 
+
+        events and temporary exhibitions, is still quite difficult, time consuming 
+
+        and expensive. Furthermore, the resulting museum presentation may still 
+
+        be far from satisfying the need of the distant or remotely located visitor 
+
+        to experience the museum &#34;environment&#34;. By museum environment, we mean 
+
+        not only the images and accompanying information of the digitised collections 
+
+        but also the &#34;aura&#34;, the living and changing space where other humans 
+
+        are present. </p>
+
+      <p class="normal">In knowledge of these limitations, the TOURBOT project has 
+
+        attempted to introduce a new paradigm in providing access to cultural 
+
+        heritage exhibits (Konstantios, 1983). Through the introduction of museum 
+
+        visiting via a robotic avatar, it facilitates immersive tele-presence 
+
+        with advanced visualisation capabilities. Full access to cultural exhibits 
+
+        is granted to the user, in the sense that the latter is able to choose 
+
+        the exhibits to visit, as well as the preferred viewing specification 
+
+        (point of view, distance to the exhibit, resolution, etc). </p>
+
+      <p class="normal">There is no doubt that currently access to cultural heritage 
+
+        is limited, enjoyed mostly when physical presence in the exhibition premises 
+
+        can be possible. At the same time, it is common understanding that alternative 
+
+        ways should be developed in order to provide such services for remotely 
+
+        located exhibits. In the case of professionals who need to critically 
+
+        study realistic views of exhibits as part of their work, TOURBOT offers 
+
+        a viable alternative to the current model that requires on-site visits. 
+
+        Additionally, the robotic avatar operates on a twenty four-hour basis, 
+
+        seven days a week, permitting thus more people to exploit this service 
+
+        at their convenience.</p>
+
+      <p class="normal">The TOURBOT approach introduces a novel model of augmented 
+
+        environments, in that it allows human interaction with and workspace exploration 
+
+        of a remote site. Technological advances in various fields have made it 
+
+        possible to envision such immersive, tele-presence applications; the current 
+
+        project exploits fully related technologies to provide an integrated solution 
+
+        for the particular case of exhibition places.</p>
+
+      <p class="normal">Compared to current approaches employed to provide services 
+
+        to people with special needs, TOURBOT presents a viable alternative, since 
+
+        it offers advanced, fully interactive access capabilities from a person&#39;s 
+
+        residence. In the current project, access to cultural exhibits in museums&#39; 
+
+        premises is targeted; however, the concept introduced is quite general, 
+
+        offering a variety of options for new services for independent living, 
+
+        such as access to large trade fairs, technology exhibitions, etc.</p>
+
+      <p class="normal">As a unified service to remote users, TOURBOT extends current 
+
+        communication networks by allowing mobile robots to be part of the overall 
+
+        structure. Such a mobile agent acts as the user&#39;s avatar, operating 
+
+        in a physical environment that is perceived by the user through the robot&#39;s 
+
+        sensors; interaction with the (augmented) environment is achieved by using 
+
+        the robot&#39;s actuators. Therefore, TOURBOT results contribute towards 
+
+        the seamless integration of networks and mobile agents for providing full 
+
+        user access to exhibitions.</p>
+
+      <p class="normal">The next table summarizes the features of the proposed approach 
+
+        for cultural heritage access, contrasting them with the current possibilities 
+
+        offered by conventional Web presentation systems.</p>
+
+      <div align="center"> 
+
+        <div align="center"></div>
+
+        <p class="MsoFooter" align="center"><span class="MsoCaption">Table 1: Comparison 
+
+          of Web vs. Robot-enhanced presentation of museum content to visitors</span></p>
+
+        <table border="1" cellspacing="0" cellpadding="0">
+
+          <tbody><tr> 
+
+            <td width="108" rowspan="2" valign="top" class="Normal"> 
+
+              <p><b>Evaluation Feature</b></p>
+
+            </td>
+
+            <td width="360" colspan="2" valign="top" class="Normal"> 
+
+              <p align="center"><b>Cultural Heritage Access  </b></p>
+
+            </td>
+
+          </tr>
+
+          <tr> 
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p align="center">Conventional Web presentation</p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p align="center">Robotic tour guide</p>
+
+            </td>
+
+          </tr>
+
+          <tr> 
+
+            <td width="108" valign="top" class="Normal"> 
+
+              <p><b>Interaction</b></p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>LOW</b></p>
+
+              <p class="MsoFootnoteText">The presentation is static and pre-programmed.</p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>FAIR</b></p>
+
+              <p>The visitor is virtually present in the museum through its robotic 
+
+                avatar.</p>
+
+            </td>
+
+          </tr>
+
+          <tr> 
+
+            <td width="108" valign="top" class="Normal"> 
+
+              <p><b>Quality of information</b></p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>LOW</b></p>
+
+              <p>Storage and communication requirements trade off quality.</p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>FAIR</b></p>
+
+              <p>The visitor can choose the viewing parameters (viewpoint, resolution, 
+
+                etc).</p>
+
+            </td>
+
+          </tr>
+
+          <tr> 
+
+            <td width="108" valign="top" class="Normal"> 
+
+              <p><b>Accessibility of information in short time</b></p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH</b></p>
+
+              <p>Distance is not a barrier.</p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH</b></p>
+
+              <p>Distance is not a barrier.</p>
+
+            </td>
+
+          </tr>
+
+          <tr> 
+
+            <td width="108" valign="top" class="Normal"> 
+
+              <p><b>Dynamic adaptability to changes in content</b></p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>LOW </b></p>
+
+              <p>Reorganization of the material is required, which is a costly 
+
+                procedure, especially for exhibitions with often changes in content.</p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH</b></p>
+
+              <p>The visitor sees the current content of the museum. Revisiting 
+
+                the museum has zero or minimal additional cost.</p>
+
+            </td>
+
+          </tr>
+
+          <tr> 
+
+            <td width="108" valign="top" class="Normal"> 
+
+              <p><b>Comfort for the typical visitor</b></p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH</b></p>
+
+              <p>The visitor can see the museum exhibits from a computer at the 
+
+                comfort of his residence, any time.</p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH</b></p>
+
+              <p>The visitor can see the museum exhibits from a computer at the 
+
+                comfort of his residence, any time.</p>
+
+            </td>
+
+          </tr>
+
+          <tr> 
+
+            <td width="108" valign="top" class="Normal"> 
+
+              <p><b>Accessibility to visitors with special needs</b></p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH</b></p>
+
+              <p>The only requirement is the ability to interact with a computer.</p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH</b></p>
+
+              <p>The only requirement is the ability to interact with a computer.</p>
+
+            </td>
+
+          </tr>
+
+          <tr> 
+
+            <td width="108" valign="top" class="Normal"> 
+
+              <p><b>Savings in time for a typical visitor</b></p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH</b></p>
+
+              <p>Almost instantaneous access to any presentation.</p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH</b></p>
+
+              <p>Almost instantaneous access to a museum.</p>
+
+            </td>
+
+          </tr>
+
+          <tr> 
+
+            <td width="108" valign="top" class="Normal"> 
+
+              <p><b>Financial savings for a typical visitor</b></p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH</b></p>
+
+              <p>Low cost, even for very distant museums.</p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH </b></p>
+
+              <p>Low cost, even for very distant museums.</p>
+
+            </td>
+
+          </tr>
+
+          <tr> 
+
+            <td width="108" valign="top" class="Normal"> 
+
+              <p><b>Museum added value</b></p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>FAIR </b></p>
+
+              <p>The museum is advertised through the availability of such presentations.</p>
+
+            </td>
+
+            <td width="180" valign="top" class="Normal"> 
+
+              <p><b>HIGH</b></p>
+
+              <p>The tour-guide robot becomes an exhibit by itself.</p>
+
+            </td>
+
+          </tr>
+
+        </tbody></table>
+
+      </div>
+
+      <h1>Innovation</h1>
+
+      <p class="normal">The very objective of the project, namely the development 
+
+        of a robotic avatar that allows virtual user presence in an exhibition, 
+
+        constitutes a contribution in a number of areas: interfaces for mobile 
+
+        agent tele-control; navigation technologies; multimedia presentation systems 
+
+        over the Web; virtual tele-presence and tele-visit. Such areas are deemed 
+
+        essential for the evolution of a new generation of remote access technologies, 
+
+        that built upon existing network infrastructure. </p>
+
+      <p class="normal">The Internet is a very fast evolving technology that electronically 
+
+        connects distant sites; however, up to now, electronic networks serve 
+
+        mainly to exchange and acquire information. In some cases this information 
+
+        is pictorial by means of images taken in &#34;real time&#34; with a stationary 
+
+        Web-camera. To take full advantage of a network such as the Internet, 
+
+        it would be desirable to get real physical interaction with the remote 
+
+        site being visited. Robots, and especially mobile platforms, can extend 
+
+        the Internet towards an interactive platform that allows actions to be 
+
+        carried out and dynamic information to be exchanged between distant sites.</p>
+
+      <p class="normal">The TOURBOT project implements exactly the above concept 
+
+        for the particular case of museums as remote sites. In other words, it 
+
+        augments current networks by substituting a terminal node with a mobile 
+
+        platform. The latter acts as the user&#39;s avatar, by accepting commands 
+
+        over the Internet to rove in its workspace, it therefore permits personalized 
+
+        tele-visiting of remote exhibition sites, physical interaction and dynamic 
+
+        selection and acquisition of the information to be retrieved.</p>
+
+      <p class="normal">The current project capitalises on related, cutting-edge 
+
+        technologies to accomplish its goals. According to the interdisciplinary 
+
+        structure of the project, its major technical contributions lie in: (a) 
+
+        advanced Web-interfaces for mobile agent tele-control and remote visualization, 
+
+        and (b) improved navigation capabilities for complex indoor environments 
+
+        (museum premises). The user interface will allow visitors all over the 
+
+        world to control and interact with the robot. To safely navigate and reliably 
+
+        operate, the robot needs advanced navigation and error recovery capabilities 
+
+        that have not been fully demonstrated so far for autonomous robots operating 
+
+        in populated environments.</p>
+
+      <p class="normal">The field of mobile robotics has made serious progress in 
+
+        the recent years. The technology has reached a state that allows the development 
+
+        of mobile robot systems, able to operate autonomously in human environments 
+
+        over long periods of time, without human supervision. Until today, only 
+
+        laboratory experiments have been carried out, illustrating the capabilities 
+
+        of the developed control systems. These systems, for example, lack mechanisms 
+
+        for monitoring their progress and detecting execution failures. Long-term 
+
+        reliability, however, requires that mobile robots are able to detect and 
+
+        deal with sensor and execution failures and that they can recover from 
+
+        such situations, either by actively choosing the optimal sensor setup 
+
+        or by choosing necessary escape actions. Furthermore, current mobile robot 
+
+        control systems generally consider only the robot and try to maximize 
+
+        the robot&#39;s performance. In populated environments, however, robots must 
+
+        adapt themselves to the behaviour of the people surrounding them.</p>
+
+      <p class="normal">Based on the above, the scientific goals concerning the 
+
+        navigation aspects of a robotic tour-guide include advanced techniques 
+
+        for monitoring the execution and for detecting and escaping from execution 
+
+        failures. Furthermore, they include sophisticated sensor interpretation 
+
+        techniques allowing the robot to monitor its environment and to adapt 
+
+        itself according to the abilities of the people it is guiding.</p>
+
+      <p class="normal">The second aspect of scientific and technological objectives 
+
+        concerns the improved interaction abilities over the Web, as well as with 
+
+        people inside the museum. Current museum presentation systems provide 
+
+        only information at terminals, which are close to the specific exhibits. 
+
+        Visitors in the museum have to access these information terminals to obtain 
+
+        detailed information about the exhibits. Portable CD or MC players provide 
+
+        mobility, but only limited presentation and interaction capabilities. 
+
+        Users have to follow fixed tours and obtain only audio information. These 
+
+        presentation systems cannot in some cases flexibly react to the interests 
+
+        of the users. The goal of this project is to develop a flexible and mobile 
+
+        information agent, which provides individual access to the information 
+
+        stored in a multimedia information base. This information base will include 
+
+        graphics, images, spoken and written text as well as audio. The TOURBOT 
+
+        system will be able to adapt the presentation to the interests of the 
+
+        users, which will partially be derived from the interaction with them, 
+
+        e.g. by monitoring the kind of information required by the users.</p>
+
+      <p class="normal">A further contribution of TOURBOT lies in the aspect of 
+
+        technology integration. The TOURBOT system will use an integrated and 
+
+        inter-operable information base for representing all relevant aspects 
+
+        of the environment. This information base contains all multimedia information 
+
+        needed for the interaction with the users, as well as the layout information 
+
+        needed for navigation tasks. The problem of an integrated model of the 
+
+        environment serving different tasks of the robot, e.g. navigation tasks, 
+
+        scheduling tasks and interaction with users, is still an open issue.</p>
+
+      <p class="normal">In summary, the innovative aspects of TOURBOT include technological 
+
+        and conceptual novelties. TOURBOT capitalizes on relevant technologies 
+
+        to contribute to developments in remote access to cultural heritage. Moreover, 
+
+        it introduces a new model of remote information browsing over the Web. 
+
+        A few years ago, Web browsers were quite primitive; now they are becoming 
+
+        increasingly sophisticated and there are already versions of browsers 
+
+        that allow manipulation of three-dimensional worlds. The next step in 
+
+        this evolution chain seems to be the provision of facilities for active 
+
+        physical exploration of distant sites. TOURBOT presents a real innovation 
+
+        in this aspect, by introducing this concept in museums and exhibition 
+
+        centers.</p>
+
+      <h1>Community Added Value</h1>
+
+      <p class="normal">Information society, in the dawn of the 3<sup>rd</sup> millennium, 
+
+        advances far beyond the mere use of technology in well-established application 
+
+        areas (i.e. banking, booking, office automation, etc), by incorporating 
+
+        novel models of information access and management. With a clear focus 
+
+        on user-friendliness, accessibility of technologies to the broader public, 
+
+        and integration and convergence across information processing, communication 
+
+        and media, research and development efforts are addressing conventional 
+
+        applications under a new perspective. Globalization and the ever-increasing 
+
+        demand for transparent and personalized access to various kinds of information 
+
+        are the driving forces for research in this area, paving the way towards 
+
+        services that are universally and seamlessly accessible to all. </p>
+
+      <h1>Access to cultural heritage</h1>
+
+      <p class="normal">Cultural heritage is currently being under-exploited, accessed 
+
+        mostly through conventional channels. In a few cases, attempts are developing 
+
+        towards Web-based systems, to provide access to specific views of related 
+
+        objects. Still, such systems support limited access, by either presenting 
+
+        static images or low resolution virtual reality representations of sub-sets 
+
+        of cultural exhibits. However, advanced and immersive access to such expositions 
+
+        is a prerequisite for a content-rich information society. TOURBOT assists 
+
+        the globalization of the access to cultural exhibits, by capitalizing 
+
+        on established technologies, to provide tele-presence in a distant museum&#39;s 
+
+        premises and personalized visit of the exhibits.</p>
+
+      <h1>Tele-presence services</h1>
+
+      <p class="normal">The mobility of the robot allows Web visitors to choose 
+
+        a wide variety of view-points and enjoy tele-presence in the museum. Therefore, 
+
+        it provides the means to overcome the barriers of distance, limited time 
+
+        and restricted mobility of potential users, offering them the possibility 
+
+        to visit the museum through a robotic avatar. Citizens and professionals 
+
+        can thus benefit from the increased services offered; moreover, this can 
+
+        be particularly advantageous for people with restricted mobility, since 
+
+        it provides customized, user-friendly and full access to cultural exhibits. 
+
+        Besides, increased interaction capabilities with the exhibits themselves 
+
+        are offered to the user, which may be useful when visiting a science or 
+
+        technology museum. In addition to this increased interactivity, the robotic 
+
+        avatar can deliver high-resolution images over the Web, being thus extremely 
+
+        beneficial to professionals and specialists.</p>
+
+      <p class="normal">There is no doubt that, currently, access to cultural heritage 
+
+        is limited, enjoyed mostly as a by-product of holidays or other recreational 
+
+        activities. At the same time, it is common understanding that alternative 
+
+        ways should be developed in order to provide such services for remotely 
+
+        located exhibits. In the case of professionals that need to critically 
+
+        study realistic views of exhibits as part of their work, TOURBOT offers 
+
+        a viable alternative to the current model that requires site-by-site visits. 
+
+        Additionally, the robotic avatar could operate on a twenty four-hour basis, 
+
+        seven days a week, permitting thus more people to exploit this service 
+
+        at their convenience. Since TOURBOT also operates as a tour guide in a 
+
+        museum&#39;s premises, certain advantages are offered to museum visitors. 
+
+        They have the ability to individually exploit the expertise stored in 
+
+        the tour-guide robot, which can react flexibly to their requirements. 
+
+        It can, for example, offer dedicated tours on temporary focuses of the 
+
+        exhibition or alternatively give overview tours. As a side effect of this 
+
+        concept, museum visitors get acquainted with new, cutting-edge technology 
+
+        by easily interacting with a complex robotic system. Therefore, technological 
+
+        advances are seamlessly assimilated in everyday activities. </p>
+
+      <p class="normal">Successful completion of TOURBOT will trigger new vistas 
+
+        in other, related application areas, such as large trade fairs that need 
+
+        to be visited by remotely located persons. Besides the cultural aspects, 
+
+        TOURBOT has also a clear direction in education and entertainment. Imagine, 
+
+        for example, exploring the exhibits of a museum, all from the comfort 
+
+        of your home as a diversion on a cold winter evening. You are provided 
+
+        with your own, personalized telescope that aims at revealing the wonders 
+
+        of culture; certainly an entertainment and educational possibility.</p>
+
+      <p class="normal">Moreover, TOURBOT addresses the cultural industries&#39; 
+
+        practices and strategies that, in the cases of museums and other cultural 
+
+        exhibitions, have remained practically static for the last decades. Such 
+
+        environments are usually organised in a way that a visitor will benefit 
+
+        from her physical presence to get an appreciation and other information 
+
+        regarding the exhibits. The recent introduction of fixed terminals and 
+
+        other audio-visual aids in museums (Roussou and Efraimoglou, 1999) has 
+
+        contributed towards providing better services to visitors, and thus helped 
+
+        increase their market penetration. </p>
+
+      <p class="normal">Museum Web-visitors are recently also experiencing Internet 
+
+        access to images of exhibits as well as virtual reality representations 
+
+        of a museum&#39;s environment. However, with current technology such 
+
+        access is limited due to the non-interactive nature of pre-recorded images 
+
+        or videos, or the inherent low resolution capabilities of virtual reality 
+
+        worlds. The TOURBOT concept facilitates active navigation in the real 
+
+        museum&#39;s workspace and observation of objects of interest through 
+
+        the robotic avatar. At the same time, the robotic platform serves as an 
+
+        on-site tour guide, providing advanced services to visitors. The above-described 
+
+        expansions to museums&#39; practices and procedures are expected to contribute 
+
+        towards a corresponding increase in the market potential of such organisations 
+
+        and will constitute an asset for museums and other sites for cultural 
+
+        heritage promotion.</p>
+
+      <h1>Economic Development and Prospects</h1>
+
+      <p class="normal">The possibilities of new paradigms in providing access to 
+
+        cultural exhibits offered by the information society are developing fast. 
+
+        In recent years we are witnessing a gradual adoption of media-technologies 
+
+        in various aspects of the sector, such as digital document preservation, 
+
+        media- and Web-presentation, graphical animations, etc. The advent of 
+
+        such technologies contributes towards providing media-rich presentations 
+
+        of cultural exhibits and consequently offering better services to museum 
+
+        visitors. Lately, Internet and Web-based technologies are also employed, 
+
+        for providing access mostly to images of exhibited objects.</p>
+
+      <p class="normal">Worldwide, many museums and exhibition halls are currently 
+
+        exploiting such technologies, aiming at increasing their market shares. 
+
+        The potential offered by the introduction of media technologies is immense, 
+
+        provided that novel and attracting services will be offered as a result 
+
+        of such developments.</p>
+
+      <p class="normal">The TOURBOT concept is in-line with the above issues, facilitating 
+
+        tele-presence and effective access to cultural exhibits through robotic 
+
+        avatars. TOURBOT capitalizes on cutting-edge technologies providing increased 
+
+        interaction with the site being visited. Effectively, it augments existing 
+
+        communication networks that are nowadays used to transmit information 
+
+        that is viewed via a browser, with mobile platforms at particular nodes 
+
+        that allow for dynamic selection and acquisition of the information to 
+
+        be retrieved. An extrapolation of current trends reveals that its employment 
+
+        in the cultural industries&#39; practices will have a positive impact.</p>
+
+      <p class="normal">Furthermore, new vistas open for TOURBOT results in other 
+
+        exhibition sectors, such as large trade fairs. In such exhibitions, and 
+
+        generally in exhibitions where the items presented (content being displayed) 
+
+        change often in short periods of time, TOURBOT technology may be extremely 
+
+        valuable for providing access to distant users. In such cases it is not 
+
+        realistic to provide even simple, static images of the exhibits on the 
+
+        Web, since the dynamic nature of the exhibition&#39;s content would turn 
+
+        the Web pages obsolete very fast. The situation is even worse with richer 
+
+        representations of the exhibits (videos, virtual reality representations), 
+
+        since the effort needed for their development may not pay off. Alternatively, 
+
+        robotic avatars can be introduced in these cases to seamlessly provide 
+
+        access to Web-visitors to the contemporary content of the exhibition. 
+
+      </p>
+
+      <p class="MsoCaption"><img src="giannoulis_fig1.jpg" width="400" height="280" alt="Fig. 1.: The Robot RHINO in the Deutsches Museum Bonn."/></p>
+
+      <p class="MsoCaption">Fig. 1.: The Robot RHINO in the Deutsches Museum Bonn.</p>
+
+      <h1>Concluding Remarks</h1>
+
+      <p class="normal">The TOURBOT project addresses the development of a robotic 
+
+        avatar, able to provide individual access to museums&#39; exhibits over 
+
+        the Internet. Such mobile agents allow virtual tele-presence in physical 
+
+        environments, effectively supplementing existent network infrastructure 
+
+        by allowing mobile avatars to replace network terminal nodes. The project 
+
+        goals are pursued by a consortium comprised by technology providers, brokers 
+
+        of technology to museums and end-users (museums). Early experiments prior 
+
+        to TOURBOT have been conducted at the Deutsches Museum Bonn with RHINO 
+
+        (Burgard et al., 2000).</p>
+
+      <p class="normal">TOURBOT, as currently being pursued, aims at the development 
+
+        of interactive tour-guide robots able to provide access to museums&#39; 
+
+        exhibits over the internet. The proposed approach introduces a novel model 
+
+        of augmented environments, in that it allows human interaction with and 
+
+        workspace exploration of a remote site by means of a robotic avatar. Therefore, 
+
+        it extends current communication networks by allowing mobile robots to 
+
+        be part of the overall structure and it contributes towards the seamless 
+
+        integration of networks and mobile agents, an application that will soon 
+
+        become an integral part of our everyday lives.</p>
+
+      <h1>Acknowledgments</h1>
+
+      <p class="AcknowedgementsText">We would like to acknowledge the financial 
+
+        support of the EU-IST programme to the TOURBOT project. The contribution 
+
+        of all participants in the TOURBOT consortium and, especially, Lena Gaga, 
+
+        Pantelis Georgiadis, Elias Hatzis, Costas Constantinides, Mark Moors, 
+
+        Wasilios Ntallis, Esther Guderley, Andreas Lapourtas, Yiannis Stavrinos, 
+
+        Dimitris Ballas, Magda Syrrou and Heleni Grigoriou is also greatly acknowledged.</p>
+
+      <h1>References</h1>
+
+      <p class="ReferencesText"><span class="ReferencesText">Ames, M.M (1986). <i>Museums, 
+
+        the public and anthropology</i>. L.P. Vidayathi (Ed). Vancouver: University 
+
+        of British Columbia Press.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Argyros, Α.Α. 
+
+        and Bergholm, F. (1999). Combining Central and Peripheral Vision for Reactive 
+
+        Robot Navigation. In Proceedings <i>of Comp. Vision Pattern Rec. Conf. 
+
+        (CVPR&#39;99.)</i> Fort Collins, USA.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Burgard, W., Cremers, 
+
+        A.B., Fox D., Haehnel, D., Lakemeyer, G., Schulz, D., Steiner, W. and 
+
+        Thrun, S. (2000). Experiences with an interactive museum tour-guide robot. 
+
+        <i>Artificial Intelligence (AI)</i>, <i>114 (1-2) 2000.</i></span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Dietz, S. (1998). &#34;Curating 
+
+        (on) the Web,&#34; In D. Bearman &amp; J. Trant (Eds.) <i>Museums and the 
+
+        Web98 Proceedings</i>. CD ROM. Archives &amp; Museum Informatics, 1998.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Fox D., Burgard, W. 
+
+        Thrun, S. and Cremers, A.B. (1998). Position estimation for mobile robots 
+
+        in dynamic environments. In Proc. of the <i>National Conference on Artificial 
+
+        Intelligence (AAAI)</i>.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Konstantios, D. (1993). 
+
+        Cultural Heritage-Modern Methods of Confrontation. In Proceedings of <i>A΄ 
+
+        Cultural Congress of Ioannina.</i></span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Roussou, M. and Efraimoglou, 
+
+        D. (1999). High-end Interactive Media in the Museum. In <i>Computer Graphics</i>, 
+
+        New York: ACM SIGGRAPH, August 1999.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Schulz, D., Burgard, 
+
+        W, Cremers, A.B., Fox, D. and Thrun, S. (1999). Web interfaces for mobile 
+
+        robots in public places. <i>IEEE Magazine on Robotics and Automation</i>.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Thomas, S. and Mintz, 
+
+        A. (1998). <i>The Virtual and the Real: Media in the Museum</i>, American 
+
+        Association of Museums.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">TOURBOT website, <a href="http://www.ics.forth.gr/tourbot" target="new">http://www.ics.forth.gr/tourbot</a>. 
+
+        Last update: Jan. 31, 2000, consulted on January 11, 2001.</span></p>
+
+      <p class="ReferencesText"><span class="ReferencesText">Trahanias P.E., Velissaris 
+
+        S. and Orphanoudakis, S.C. (1999). Visual Recognition of Workspace Landmarks 
+
+        for Topological Navigation. <i>Autonomous Robots Journal</i>.</span></p>
+
+      <p class="ReferencesText"><span lang="FR" class="ReferencesText">Poisson G. 
+
+        (1950). <i>Les Musées de France</i>. Presses Universitaires de France.</span></p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</tbody></table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+
+
+
+
+</body><!-- #EndTemplate --><!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/giannoulis/giannoulis.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:43 GMT --></html>

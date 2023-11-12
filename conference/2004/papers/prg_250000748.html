@@ -1,0 +1,675 @@
+<html><!-- InstanceBegin template="/Templates/mw2004-papers.dwt" codeOutsideHTMLIsLocked="false" --><!-- Mirrored from www.museumsandtheweb.com/mw2004/papers/gano/gano.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:45:02 GMT --><head>
+<!-- #BeginEditable "doctitle" -->
+<title>Museums and the Web 2004 : Papers : Gano et al., ... Framework for Publishing Museum Educational Materials</title>
+<!-- #EndEditable --> 
+<meta name="keywords" content="Museums and the Web 2004, Archives &amp; Museum Informatics, museums online, on-line, cultural heritage online, museum digitization, internet, conference, symposium, workshop, meeting, international, papers, presentations, multimedia, interactive, education, exhibits, evaluation, virtual reality, digitization, information architecture, information design, interface design, digital library, digital libraries "/>
+<!-- #BeginEditable "page keywords" -->
+<meta name="keywords" content="educational resources, content management, digitalpublishing frameworks, metadata, evaluation, open source, standards, GEM"/>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="/>
+<!-- #BeginEditable "script" --><!-- #EndEditable --> 
+<link rel="stylesheet" href="../../../mw2003/Library/mw2003.css" type="text/css"/>
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" background="../../../mw2002/images/mw2002.bg.gif" text="#000000" link="#660099" vlink="#000066" onload="MM_preloadImages(&#39;../../images/nav/register_on.gif&#39;,&#39;../../images/nav/workshops_on.gif&#39;,&#39;../../images/nav/sessions_on.gif&#39;,&#39;../../images/nav/speakers_on.gif&#39;,&#39;../../images/nav/interactions_on.gif&#39;,&#39;../../images/nav/demos_on.gif&#39;,&#39;../../images/nav/exhibits_on.gif&#39;,&#39;../../images/nav/events_on.gif&#39;,&#39;../../images/nav/best_on.gif&#39;,&#39;../../images/nav/dates_on.gif&#39;,&#39;../../images/nav/local_on.gif&#39;,&#39;../../images/nav/sponsors_on.gif&#39;)">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tbody><tr> 
+    <td width="145" align="LEFT" valign="TOP"> 
+      <p><a href="../../index.html"><img src="../../images/mw.gif" width="112" height="155" border="0" alt="/mw/"/></a></p>
+      <p> <a href="../../register/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;register&#39;,&#39;&#39;,&#39;../../images/nav/register_on.gif&#39;,1)"><img name="register" border="0" src="../../images/nav/register_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../workshops/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;workshops&#39;,&#39;&#39;,&#39;../../images/nav/workshops_on.gif&#39;,1)"><img name="workshops" border="0" src="../../images/nav/workshops_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../sessions/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;sessions&#39;,&#39;&#39;,&#39;../../images/nav/sessions_on.gif&#39;,1)"><img name="sessions" border="0" src="../../images/nav/sessions_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../speakers/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;speakers&#39;,&#39;&#39;,&#39;../../images/nav/speakers_on.gif&#39;,1)"><img name="speakers" border="0" src="../../images/nav/speakers_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../interact/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;interactions&#39;,&#39;&#39;,&#39;../../images/nav/interactions_on.gif&#39;,1)"><img name="interactions" border="0" src="../../images/nav/interactions_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../demos/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;demonstrations&#39;,&#39;&#39;,&#39;../../images/nav/demos_on.gif&#39;,1)"><img name="demonstrations" border="0" src="../../images/nav/demos_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../exhibit/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;exhibits&#39;,&#39;&#39;,&#39;../../images/nav/exhibits_on.gif&#39;,1)"><img name="exhibits" border="0" src="../../images/nav/exhibits_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../events/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;events&#39;,&#39;&#39;,&#39;../../images/nav/events_on.gif&#39;,1)"><img name="events" border="0" src="../../images/nav/events_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../best/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;best&#39;,&#39;&#39;,&#39;../../images/nav/best_on.gif&#39;,1)"><img name="best" border="0" src="../../images/nav/best_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../dates/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;dates&#39;,&#39;&#39;,&#39;../../images/nav/dates_on.gif&#39;,1)"><img name="dates" border="0" src="../../images/nav/dates_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../local/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;local&#39;,&#39;&#39;,&#39;../../images/nav/local_on.gif&#39;,1)"><img name="local" border="0" src="../../images/nav/local_off.gif" width="112" height="18"/></a><br/>
+        <a href="../../sponsor/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;sponsors&#39;,&#39;&#39;,&#39;../../images/nav/sponsors_on.gif&#39;,1)"><img name="sponsors" border="0" src="../../images/nav/sponsors_off.gif" width="112" height="18"/></a> 
+        <br/>
+        <br/>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../images/nav/nav_ami.gif" width="135" height="35" border="0" alt="A&amp;MI home"/></a> 
+        <br/>
+      </p>
+      <table width="81%" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr> 
+          <td align="left" valign="top"> 
+            <p align="right"><span class="verysmall">158 Lee Avenue<br/>
+              Toronto Ontario<br/>
+              M4E 2P3 Canada</span></p>
+            <p class="verysmall" align="right">ph: +1 416-691-2516<br/>
+              fx: +1 416-352-6025</p>
+            <p align="right"><span class="verysmall">info @ archimuse.com<br/>
+              <a href="http://www.archimuse.com/">www.archimuse.com</a></span></p>
+            <div align="right"> 
+              <table width="74">
+                <tbody><tr> 
+                  <td> <a href="http://search.museumsandtheweb.com/search" target="_top"> 
+                    <img src="../../images/search.gif" width="24" height="25" alt="Search" border="0" name="Search"/></a> 
+                  </td>
+                  <td valign="MIDDLE"> <a href="http://search.museumsandtheweb.com/search"> 
+                    <span class="verysmall">Search<br/>
+                    A&amp;MI</span></a> </td>
+                </tr>
+              </tbody></table>
+            </div>
+            <p align="right"><font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Join 
+              our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing 
+              List</a>. <br/>
+              <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</span></font></p>
+            <p align="right"> </p>
+            <p align="right">  </p>
+            <p align="right"><span class="verysmall">published: March 2004<br/>
+analytic scripts updated:  
+              <!-- #BeginDate format:Am1 -->October 28, 2010<!-- #EndDate -->
+              </span></p>
+            <p align="right"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0"/></a> </p>
+          </td>
+        </tr>
+      </tbody></table>
+      <p>  </p>
+    </td>
+    <td width="455" align="LEFT" valign="TOP" class="normal"><a href="../../speakers/index.html"><img src="../../images/papers.gif" width="390" height="55" border="0" alt="Museums and the Web 2003 Papers"/></a> 
+      <br/>
+      <!-- #BeginEditable "Body of Page" --><p class="PaperTitle">A Scalable, Modular Framework for Publishing Museum Educational 
+    Materials</p>
+  <p class="Author">Steve Gano, Ro Kinzler, Drew Koning, Monica Philippo, Matthew 
+    Tarr, National Center for Science Literacy, Education, and Technology, American 
+    Museum of Natural History, USA</p>
+  <p class="URL"><a href="http://www.amnh.org/resources" target="_blank">http://www.amnh.org/resources</a></p> <p class="AbstractTitle">Abstract</p>
+   <p class="AbstractText">The National Center was launched in 1997 to take the resources 
+    of the American Museum of Natural History directly to classrooms, informal 
+    science learning centers, and homes throughout the country. Initial efforts 
+    of this program included complete Web site experiences such as <i>Biodiversity 
+    Counts</i>, a nine-week middle school science curriculum. Evaluation indicated 
+    that teachers preferred to integrate select pieces of the curriculum into 
+    their existing lesson plans rather than adopt the entire curriculum. Our 
+    challenge was to keep content like <i>Biodiversity Counts</i> useful and available 
+    to our audience while minimizing our content development and maintenance costs. 
+    In that context, the concept for <i>Resources for Learning </i>emerged. <i>Resources 
+    for Learning </i>presents a collection of educational materials that anyone 
+    can browse or search for content to augment some learning activity. The project 
+    has established a new content-development methodology for the National Center. 
+    When a new Museum hall or exhibit opens, we produce a range of content resources 
+    and present them in a &#34;special collection&#34; tied to the exhibit. We can scale 
+    new content development according to available time and money, and the modular 
+    content we produce can be reused in a range of new and different contexts. 
+    Evaluation has shown that teachers find the modular content easier to appropriate 
+    and integrate into their classroom work. Future developments include a more 
+    visual display of resources to better convey the qualities of the content, 
+    and ways for visitors to collect and organize favorite resources.</p>
+  <p class="keywords">Keywords: educational resources, content management, digital 
+    publishing frameworks,  metadata, evaluation, open source, standards, GEM</p>
+  <h1>Introduction</h1>
+  <p>The American Museum of Natural History was founded in 1869 with the twin 
+    missions of scientific research into the natural world and education of the 
+    public about the world they inhabit. The Museum&#39;s educational activities 
+    span on-site programs, partnerships with schools and community based organizations, 
+    professional development offerings, and the national outreach efforts of the 
+    National Center for Science Literacy, Education and Technology. These activities 
+    are grounded in the research of the Museum&#39;s 200-plus scientists, and strengthened 
+    by its 42 permanent exhibitions and active ongoing development of temporary 
+    exhibits. In a world increasingly shaped by technology and science, the Museum 
+    recognizes that people must have access to scientific knowledge in order to 
+    be full participants in the 21st Century. The Museum sees this mission as 
+    not just an opportunity, but also its responsibility.</p>
+  <p> Launched in 1997, the National Center&#39;s charge is to capture the Museum&#39;s 
+      rich array of resources and make them available to the broadest possible audience 
+      of children, families, schools, and community-based organizations across the 
+      nation and around the world. Forging key partnerships with schools, universities, 
+      publishers, and community-based organizations, the National Center produces 
+      content-rich programs and materials using a range of technologies that includes 
+      software, video, Web sites, and print. The National Center enables people 
+      around the world to experience the Museum&#39;s exhibitions, go behind the scenes 
+      into the labs and collections, meet and be inspired by scientists, and travel 
+      along on research expeditions into the field. </p>
+  <p>A key program in the National Center&#39;s early strategy was the Educational 
+    Materials Laboratory. This group produced science education materials for 
+    distribution on the Web, which in 1997 was just beginning to take shape as 
+    a popular publishing medium. The group&#39;s first efforts included elaborate, 
+    polished Web sites, such as the Black Smoker Expedition, and science curriculum 
+    such as <i>Biodiversity Counts</i>, a nine-week middle school curriculum that 
+    sends students into their schoolyards to collect and share data about plant 
+    and insect diversity.</p>
+  <p>Evaluation of <i>Biodiversity Counts</i> indicated that teachers preferred 
+    to integrate select pieces of the curriculum into existing lesson plans rather 
+    than take on an entirely new curriculum. At the same time we realized that 
+    complete, polished Web site experiences, such as the Black Smoker Expedition, 
+    were too expensive to produce and maintain. We faced a new challenge of 
+    making valuable material like <i>Biodiversity Counts</i> relevant and useful 
+    to educators in a way that we could maintain economically over time. We would 
+    need a flexible and sustainable system to publish these existing resources 
+    as well as new materials produced in fulfillment of our mission to extend 
+    the resources of the Museum beyond the walls. </p>
+  <h1>Initial Development</h1>
+  <h2>Project Goals and Target Audience</h2>
+  <p>The goal of <i>Resources for Learning </i>was to maximize the availability 
+    and utility of the National Center&#39;s diverse educational materials for our 
+    audience while minimizing the costs of new development, production, and, especially, 
+    ongoing operations and upgrading of the site. </p>
+  <p>The first task in new development is always to define who the audience is 
+    and what experience you want them to have. Clearly, K-12 science teachers 
+    were the audience for the curriculum packages that we wanted to reformat. 
+    But the National Center also produces materials for a wide range of audiences 
+    and informal learning settings. For example, <i>OLogy</i>, the Museum&#39;s Web 
+    site for kids, is designed for kids to navigate and enjoy at home on their 
+    own. What value would <i>Resources for Learning </i>add to <i>OLogy</i>, 
+    and for what audience? </p>
+  <p>We imagined that a search engine could help a parent or an after-school coordinator 
+    find an <i>OLogy</i> feature to answer a child&#39;s question or curiosity more 
+    efficiently than by using the kid-oriented interface to <i>OLogy</i>. And 
+    we thought that learners, such as a middle school student who wants to find 
+    something for a homework assignment, also could benefit from this resource. 
+    And so the target audience was defined to be &#34;anyone who wants to quickly 
+    find natural science learning materials to facilitate their own learning or 
+    that of another&#34; including teachers, informal educators, after-school coordinators, 
+    parents, and learners themselves.</p>
+  <h2>Formative Evaluation</h2>
+  <p>Though our audience was broadly defined to include &#34;any facilitator of science 
+    learning,&#34; we worked with teachers in our formative evaluation. We made a 
+    simplifying assumption that teachers would be the most demanding users - they 
+    have limited time to use on-line resources, and specific needs for resources 
+    that supplement existing curricula. Too, we felt that the descriptive language 
+    of formal education, such as school grade level or the length of a class period, 
+    would be familiar to everyone who has attended school, and so we could use 
+    that language in describing our resources.</p>
+  <p>We started with an on-line questionnaire that asked educators what kinds 
+    of on-line resources they were using, how they used the Internet to find resources, 
+    and what worked and didn&#39;t work in their experiences with on-line resources. 
+    From the respondents we invited a small number to participate in focus-group 
+    sessions at the Museum, where we could probe further into their experiences, 
+    and get their reactions to existing resource Web sites and to our own early 
+    concept prototypes. These efforts confirmed that our audience would find 
+    a Museum-branded on-line resource desirable. Lessons from their on-line experiences 
+    gave us some specific usability design challenges to address in our development 
+    work.</p>
+  <p>From those sessions we pulled simple one-liners, such as &#34;I&#39;ve got a half-hour 
+    before I have to leave, and I need something more for tomorrow&#39;s lesson on 
+    the Sun as an energy source,&#34; which sparked discussions on how to address 
+    those design challenges. One-liners like these were our challenge:</p>
+  <p class="listwithbullets">
+    <span class="BlockQuoteAuthor">&#34;I got this <i>Resources for Learning </i>URL at the conference, 
+    I&#39;ve got some free time, let me take a quick tour and see what they&#39;ve got.&#34;</span></p>
+  <p class="BlockQuoteAuthor">&#34;There&#39;s great material on the Museum Web site, but I can&#39;t 
+    tell what&#39;s relevant to my fifth graders, or what I&#39;ll need to present myself 
+    and what I can just let them loose on.&#34;</p>
+  <p class="BlockQuoteAuthor">&#34;This is beautiful material, but does it address the standards 
+    requirements I have to meet?&#34;</p>
+  <p class="BlockQuoteAuthor">&#34;Do I have to be on-line to use this?&#34;</p>
+  <p class="BlockQuoteAuthor">&#34;I&#39;ve only got two days for this topic; how big a commitment 
+    is this activity?&#34;</p>
+  <p>We began to outline the features and structure of the Web site, to understand 
+    the kinds of descriptive data that would be useful, and to know what functions 
+    needed to be up front and at hand.</p>
+  <p>It was very useful to look at other, similar learning-resource Web sites 
+    for both the good and bad examples they provided. We could try out our one-line 
+    scenarios on these Web sites to learn how others had solved certain design 
+    problems. One lesson was how important it is to provide the right amount 
+    of descriptive information about a resource before presenting the resource 
+    itself. It is frustrating, for example, to click on a resource link and begin 
+    downloading several megabytes of data before having decided that it might 
+    be something useful. But it is equally frustrating to click through many 
+    screens of descriptive data before finding a link to the actual resource. 
+  </p>
+  <h2>Defining Metadata</h2>
+  <p>The most challenging design task was defining the metadata. We made it a 
+    goal to be compatible with emerging metadata standards for educational materialsin 
+    order to serve the larger goal of maximizing the availability of our materials. 
+    We found relevant standards at the IMS Global Learning Consortium and the 
+    Gateway to Educational Materials (GEM) organizations. These standards were 
+    not completely defined when we began development. For example, there were 
+    no standard vocabularies to help us describe the particular variety of educational 
+    resources at a museum. Getting the category vocabulary right is important. 
+    If most of the resources fall into only one or two categories, it doesn&#39;t 
+    give people a useful way to discriminate among the natural variety of resources 
+    in the collection. We worked with database-savvy teachers and education experts 
+    to develop our own ad hoc vocabulary for resource types, and took pains to 
+    define the vocabulary to our users.</p>
+  <p><a href="ganoFig1.html" class="caption"><img src="gano1TN.gif" alt="resources available: activities, curriculum materials, articles, evidence and analysis, exhibition materials, and reference lists" border="0" class="caption"/></a></p>
+  <p class="caption"><a name="Fig1"></a>Figure 1: Explanation of resource types<br/>
+  <a href="http://www.amnh.org/resources/about.php" target="_blank">http://www.amnh.org/resources/about.php</a>] </p>
+  <p>We also worked with a cataloging expert from the Museum library to develop 
+    our keyword vocabulary and thesaurus. The keyword search would be the first 
+    search people would try, so it was important to create a keyword vocabulary 
+    that would both use familiar terms and accurately represent the character 
+    of our collection. We began by deriving keywords from the top-level subjects 
+    of the Library of Congress Subject Headings, and then added terms that were 
+    more specific to the work of the Museum and which would appear frequently 
+    in our materials.</p>
+  <p>Other dimensions of metadata were easier to define. Grade level required 
+    no special definition. Duration - the amount of time necessary to complete 
+    a content resource - depends on too many variables to define precisely, yet 
+    it is still useful in indicating the relative amount of commitment required 
+    to use a resource. We decided to define very approximate durations: &#34;less 
+    than a class period,&#34; &#34;about one class period,&#34; &#34;less than a week,&#34; &#34;about 
+    a week,&#34; and &#34;more than a week.&#34;</p>
+  <p>Finally, for our browsing directory subject headings, we defined a two-layer 
+    hierarchy. The first layer was easy; it simply reflects the science disciplines 
+    of the Museum: anthropology, astronomy, biology, Earth science, and paleontology. 
+    For the second layer of subtopics, we worked with curators from across the 
+    Museum to help us define a set of topics.</p>
+  <h2>Prototyping</h2>
+  <p>We began creating simple click-through prototypes of the site architecture 
+    very early in the process. Having an explicit example of what you&#39;re talking 
+    about, one that everyone can see, point to, and critique, helps ground design 
+    discussions. The early prototypes were also important for formative evaluation 
+    by providing concrete examples of site features to which focus groups could 
+    react.</p>
+  <p>Prototyping also helps the development team better understand the scope and 
+    complexity of proposed features. Very often, the full effort required to 
+    implement a desirable feature is not known until development begins. Prototyping 
+    allows team members to get a preview of both the interface design issues and 
+    the implementation challenges before making a final commitment to them. And 
+    by anticipating future feature,s we could lay important groundwork for them 
+    in our initial development. </p>
+  <h2>First Launch</h2>
+  <p>As we were finalizing our architecture and user interface design, representatives 
+    from McGraw-Hill Education asked us to provide on-line materials to supplement 
+    their K-6 science textbook series. We soon realized that this would be an 
+    excellent opportunity to focus our efforts and finalize design decisions so 
+    that we could begin building a live database of resources. Iit would also 
+    be a good proof-of-concept for the <i>Resources for Learning </i>methodology.</p>
+  <p>The resources chosen to match their textbooks would help fill out our first 
+    data set. We began simultaneously creating database records for these resources 
+    and building by hand the Web pages that would display them. Though the final 
+    production site would have a search engine and dynamically generated results 
+    pages, we decided that the first launch would have only static pages. This 
+    would allow us to evaluate and refine our page designs before committing to 
+    them with more technically complex programming. We created ad hoc tools to 
+    generate the static pages from the database, and also to understand and design 
+    the requirements for the publishing tools that we would need for the full-featured 
+    site.</p>
+  <p>The first version of <i>Resources for Learning </i>was launched in Decembe,r 
+    2001, with two special collections, for the Museum&#39;s Hall of Biodiversity 
+    and for the reformatted <i>Biodiversity Counts</i> curriculum. The McGraw-Hill 
+    Science collection was also launched, but was announced only to teachers using 
+    the McGraw-Hill Science textbooks. The initial launch demonstrated our ability 
+    to curate a range of collections of resources derived from the same data set.</p>
+  <h2>Evaluation and Redesign</h2>
+  <p>Soon after the first launc,h we began planning the next one and the modifications 
+    we needed to make. Foremost among these was a new look and feel that would 
+    be cleaner and clearer. We contracted Sean Oakes, who had recently redesigned 
+    the Museum&#39;s main Web site, to give us a new look and logotype that would 
+    blend well with the Museum&#39;s on-line identity. Our users consistently reported 
+    that the association with the Museum&#39;s brand lent authority to our materials, 
+    and so it was important to make that association explicit.</p>
+  <p>We also wanted to perform more thorough user interface evaluations to make 
+    sure that the features and functions of the site were clear to our users. 
+    We contracted with Insight, Inc. to evaluate the site&#39;s usability. This company 
+    conducted two rounds of usability testing. The first round showed that users 
+    were consistently having difficulty with orientation within the site and with 
+    certain terminology we were using for resource types. We also learned that 
+    some of the user interface elements were overlooked or misinterpreted.</p>
+  <p>It was very valuable for all team members to observe the evaluations, to 
+    see their work through a user&#39;s eyes, and enjoy its successes and ponder its 
+    failures. Overall, the message we got was to simplify and clarify the interface, 
+    and to reduce the number of clicks required to access resource materials. 
+    But we were also encouraged by the users&#39; great enthusiasm for the site and 
+    for the resources it contained.</p>
+  <p>Insight recommended a number of user interface modifications, and we determined 
+    some of our own, to address the problems raised in the first round of testing. 
+    During the final development work, we tried and discussed different solutions 
+    and did informal testing in-house, the kind where just a fresh pair of eyes 
+    can tell you whether or not something is working. Before the official launch 
+    in Apri,l 2002, Insight did a second round of usability testing that confirmed 
+    we had definitely improved users&#39; ability to navigate and find things on the 
+    site.</p>
+  <p>While the new look and improved interface were under development, we were 
+    also able to begin final technical development on the search function and 
+    the publishing tools, and to expand the database with additional resources. 
+  </p>
+  <p class="caption"><a href="ganoFig2.html"><img src="gano2TN.gif" alt="Resources for Learning Home Page" border="0"/></a></p>
+  <p class="caption"><a name="Fig2"></a>Figure 2: Revised Resources for Learning home page<br/> 
+    <a href="http://www.amnh.org/resources" target="_blank">http://www.amnh.org/resources</a></p>
+  <h1>Technical Development </h1>
+  <h2>Selecting a Development Platform</h2>
+  <p>We looked into several off-the-shelf content management solutions for <i>Resources 
+    for Learning,</i> but none met all our needs. We knew we would be continuously 
+    refining the user interface as we incorporated lessons learned from real users. 
+    During these iterations we needed to guarantee the continuity of the database 
+    that our production team was busy creating. We also anticipated future on-line 
+    requirements, such as creating custom special collections and user-created 
+    collections, which were not supported by commercial products. In short, we 
+    wanted the flexibility that in-house development would allow us, and we had 
+    the capabilities on staff to build it ourselves.</p>
+  <p>We chose an &#34;open source&#34; technical platform for <i>Resources for Learning.</i> 
+    At its heart is a MySQL database of metadata, data that catalogues and describes 
+    the educational resource materials. The user interface is Web-based, and 
+    includes static pages as well as dynamic pages generated by a custom PhP application. 
+    <i>Resources for Learning </i>is accessible by any Web browser and requires 
+    no special &#34;plug-ins.&#34; Some of the resource materials require additional 
+    software to use, such as Macromedia Flash or Shockwave, Quicktime, or Adobe 
+    Acrobat Reader, but the descriptive metadata informs people of those requirements 
+    before they access the resource. </p>
+  <h2>Why Open Source?</h2>
+  <p>There are many benefits to choosing open source software for developing applications, 
+    particularly for non-profit organizations. Open source is not necessarily 
+    free software, but it doesn&#39;t have the large, up-front licensing fees of proprietary 
+    commercial software. Developers can download, install, and evaluate full 
+    versions of the software and, if it proves to be the wrong tool for the job, 
+    simply abandon it. </p>
+  <p>Open source software depends on a community of developers to provide support 
+    and improvements. While there are no 24-hour technical support phone lines, 
+    there are many avenues for help in on-line newsgroups and Web sites. Using 
+    open source software makes you part of the community, and good citizens support 
+    the community by helping others with technical problems and contributing to 
+    evaluation, testing, and improvements.</p>
+  <p>Not being tied to a particular software vendor allows us more options to 
+    use third-party products, and also to make hardware platform choices unbiased 
+    by our use of a particular product. In part, this is because open source 
+    software, and in particular our platform of Apache Web Server, MySQL database, 
+    and PhP application server, is becoming widely accepted as an industry standard. 
+    The latest versions of these tools offer most of the functionality of their 
+    commercial counterparts.</p>
+  <h2>Search Engine Development</h2>
+  <p class="MsoCommentText">Our primary goal for the <i>Resources for Learning </i>search 
+    engine is to help visitors quickly find the best resource to meet their needs, 
+    and to minimize the &#34;noise&#34; of extraneous, marginally related resources in 
+    their search results. Quick-search &#34;direct hits&#34; are as rare as they are 
+    wonderful, so we provide several search strategies.</p>
+  <p>The simplest search is a keyword search, which utilizes a hand-built, controlled 
+    vocabulary and thesaurus developed by subject experts and professional science 
+    librarians. Every resource has about 10 keyword descriptors that categorize 
+    the primary subject matter of the material. If a keyword search fails to 
+    return satisfying results, users can expand their searches to include a string-match 
+    search of resource titles and their full-text descriptions. If a search returns 
+    too many results, the user can sort or filter the search results with metadata 
+    descriptors such as grade level, science topic, or resource type to bring 
+    forward the most relevant results.</p>
+  <p class="caption"><a href="ganoFig3.html"><img src="gano3TN.gif" alt="List of search results for &#34;biodiversity&#34;" border="0"/></a></p>
+  <p class="caption"><a name="Fig3"></a>Figure 3: Search results page, with advanced search and sorting options </p>
+  <h2>Catalogues and Special Collections for Browsing</h2>
+  <p>If the need is less specific, visitors can browse a catalogue of topics and 
+    subtopics based on the Museum&#39;s scientific disciplines. The catalogue is 
+    a simple two-level hierarchy, so visitors are never more than two clicks away 
+    from a list of resources. The catalogue also displays the number of resources 
+    in each subtopic so visitors can get an idea of the scope and coverage of 
+    our collection at a glance. The catalogue pages and resource counts are generated 
+    dynamically and so are easy to keep up-to-date as the collection expands.</p>
+  <p class="caption"><a href="ganoFig4.html"><img src="gano4TN.gif" alt="List of Topics Under &#34;Earth Science&#34;" border="0"/></a></p>
+  <p class="caption"><a name="Fig4"></a>Figure 4: Browse by Topic - Earth Science </p>
+  <p>Special Collections are curated collections of resources, handpicked and 
+    organized around new Museum exhibits or halls, curriculum materials, or other 
+    topics of special interest. Special collection pages have unique organizations 
+    and written content, but they are easy to update and maintain because their 
+    resource lists are dynamically generated from the most current data in the 
+    database. </p>
+  <h2>Compatibility with Metadata Standards</h2>
+  <p>Early in the development of <i>Resources for Learning </i>we looked for guidance 
+    and inspiration from a number of existing on-line resource initiatives, specifically 
+    Digital Library for Earth System Education (DLESE), Gateway for Educational 
+    Materials (GEM), and NASA&#39;s Space Science Education Resource Directory. Our 
+    reason for being involved was twofold: to take advantage of their lessons 
+    learned, but more important, to participate in the sharing of resources and 
+    to find the largest possible audience for our resources. </p>
+  <p>In order to assure cross compatibility with these and other digital libraries, 
+    we based our metadata design on the Dublin Core standard, specifically its 
+    application to educational materials as defined by GEM. Though our database 
+    does not include every metadata field defined by GEM, we made certain that 
+    our metadata could be clearly and simply mapped to all of the fields required 
+    by the GEM standard. We continue to work closely with GEM to develop methods 
+    for automatically exposing our collection to their search engine. Currently, 
+    GEM catalogues a small subset of our resources, which are highlighted as a 
+    featured collection in its upcoming (early 2004) re-launch.</p>
+  <h2>Content Management Tools</h2>
+  <p>A key development goal for <i>Resources for Learning </i>was to create a 
+    publishing framework that would enable non-technical staff to maintain and 
+    expand the resource collection. To that end, we developed a content management 
+    system that provides a range of Web-based tools for administering the resource 
+    collection. </p>
+  <p class="normal">A variety of skills are needed to catalogue new resources 
+    for the collection. Professional writers with an education background are 
+    enlisted to write clear and concise resource titles and descriptions. Library 
+    science professionals marry the resources to the Library of Congress subject 
+    keyword taxonomy, as well as to a Museum-specific keyword vocabulary. Where 
+    appropriate, expert educators who have many years of experience with the various 
+    educational standards review resources and identify which curriculum standards 
+    they satisfy. (We correlate our resources to the National Academies National 
+    Science Education Standards and the National Council for the Social Studies 
+    Curriculum Standards for Social Studies, with the expectation that teachers 
+    can reconcile the national standards with their state or local standards).</p>
+  <p class="normal">Finally, copy editors and proofreaders review all text 
+    for proper grammar and spelling, to ensure the quality of content that people 
+    expect from the Museum. </p>
+  <p>For each of these roles there is a content management tool that provides 
+    a custom editing view on the database. Content editors can read any of the 
+    database fields, but can edit only the fields in their purview. They can 
+    also preview the data in its final form as they work, for often that is where 
+    errors are most obvious.</p>
+  <p class="caption"><a href="ganoFig5.html"><img src="gano5TN.gif" alt="Resource Record for &#34;The ancient City of Petra&#34; a record from Ology" border="0"/></a></p>
+  <p class="caption"><a name="Fig5"></a>Figure 5: Detailed listing of a resource record </p>
+  <p>The role of the central administrator, who has overarching editing privileges, 
+    is also defined. The administrator can create new accounts in any role, create 
+    new records for resources, assign content editing tasks to specific roles, 
+    and track the progress on assignments from a single user interface. This 
+    administator can also create custom roles for special editing jobs, and specifically 
+    define the scope of each contributor&#39;s access. </p>
+  <p>It was a challenge to develop a system that could maintain data security 
+    and integrity while keeping the administrative system easily accessible to 
+    its users, whose schedules vary greatly, and maintaining public access to 
+    the resource collection. When the administrator opens an existing record 
+    for editing, an interim record is created and assigned to one or more editors. 
+    The content management system keeps a history, in the form of an XML data 
+    log, of all modifications made to interim records, so that it is possible 
+    to roll back changes or recover data if necessary. Once editing is complete, 
+    the administrator can move the interim record to the live database. The overlapping 
+    editing safeguards enable us to make significant additions and changes to 
+    the resource database while maintaining a live and up-to-date presence on 
+    our Web site. </p>
+  <h1>Developing Content for <i>Resources for Learning </i></h1>
+  <p>One of the goals of <i>Resources for Learning </i>was to create a framework 
+    into which we could easily assimilate new materials produced by the National 
+    Center, and which would provide a uniform interface to existing materials. 
+    After the initial launch, we continued to expand the database, both by repackaging 
+    existing content and by incorporating new content as it was produced, and 
+    we found that the framework had a significant influence on the way we conceived 
+    and produced new content.</p>
+  <h2>Repackaging existing content</h2>
+  <p>The dynamic functionality of <i>Resources for Learning </i>enabled us to 
+    repackage existing curriculum materials into the finer-grained content modules 
+    that our target audience wanted, as well as into stand-alone resources. For 
+    example, <i>Biodiversity Counts</i> was originally developed as a nine-week 
+    supplementary curriculum for middle schools, and was designed to be implemented 
+    in a sequential format. To adapt it for distribution through <i>Resources 
+    for Learning,</i> we divided the curriculum materials into over 90 stand-alone 
+    resources, and suggested several different implementation methods that varied 
+    in length and emphasis. Educators also have the flexibility of selecting 
+    individual or groups of resources that suit their needs and time constraints, 
+    such as using an entomologist&#39;s essay to supplement a lesson on spiders and 
+    microhabitats, or creating their own three-week unit on plant identification 
+    and biodiversity. </p>
+  <p>We also examined existing National Center and Museum Web sites for content 
+    modules that educators might find useful, if they could easily find them. 
+    For example, we catalogued individual feature stories from <i>OLogy</i>, the 
+    Museum&#39;s Web site for kids, which enables educators to discover them by keyword 
+    searches or by activity type rather than clicking through the site itself. 
+    <i>Science Bulletins</i>, the Museum&#39;s Web site of current science stories, 
+    is similarly available. The curriculum materials in <i>Seminars on Science</i>, 
+    our on-line professional development courses for science educators, cannot 
+    be extracted from the course without losing context. However, supplementary 
+    resources that were developed for these courses, such as scientist profiles 
+    or interactive explanations, can be extracted and catalogued and made available 
+    to a larger audience.</p>
+  <h2>Creating new content</h2>
+  <p><i>Resources for Learning </i>has had a fruitful influence on the ways in 
+    which we produce new content. When we create new interactives for any project, 
+    we make an effort to design them to be stand-alone; that is, to work and make 
+    sense outside the context of their project of origin. This is usually not 
+    at all difficult, and primarily requires paying attention to details, such 
+    as not making references to specific project content within the interactive. 
+    Moreover, <i>Resources for Learning </i>has influenced the interactives we 
+    choose to produce. Since they now have potential for use in many different 
+    contexts, we tend to favor interactives that have some perennial appeal and 
+    utility. This also allows us to justify a larger commitment to designing 
+    and producing such pieces, because their cost can be amortized over many more 
+    end uses.</p>
+  <p>Our framework also enables us to scale new content production to match available 
+    resources. Before <i>Resources for Learning,</i> when a new hall or exhibit 
+    opened, we would produce a new Web site, a complete beginning-to-end Web experience. 
+    Now we can produce a range of stand-alone content modules - from teacher guides 
+    and classroom activities to on-line interactives and essays - and the number 
+    and scope of them is determined by the time and money we have to spend, rather 
+    than by some preconception of how big the complete experience should be. 
+    Moreover, we can launch a Special Collection tied to an exhibit with a small 
+    set of resources, and then continue to add to it as time and money permit, 
+    without disrupting or redesigning the initial collection.</p>
+  <p>For example, in conjunction with the <i>Vietnam: Journeys of Body, Mind, 
+    and Spirit</i> exhibition, we launched a Vietnam Special Collection that included 
+    an educator&#39;s guide to the exhibit and four related extension activities for 
+    classroom use. We continued the development of two additional resources - 
+    an on-line activity that explores traditions in Vietnam, and an interactive 
+    image gallery that investigates Vietnam&#39;s ethnic diversity. The image gallery 
+    required extensive image research, content reviews, and technical development 
+    of a new interactive template. The flexibility of <i>Resources for Learning 
+    </i>enabled us to take the time necessary to develop high-quality resources 
+    to enhance this Special Collection, while still meeting the deadline established 
+    by the exhibition opening.</p>
+  <p class="caption"><a href="ganoFig6.html"><img src="gano6TN.gif" alt="Three other resources about Vietnam" border="0"/></a></p>
+  <p class="caption"><a name="Fig6"></a>Figure 6: Vietnam Special Collection - Additional Resources</p>
+  <h1> Conclusion</h1>
+  <p>Our evaluation studies have encouraged us to think that <i>Resources for 
+    Learning </i>is a valuable product for educators. The Web site has also received 
+    recognition from the Codie Awards and <i>Learning</i> <i>Magazine</i>&#39;s Teacher&#39;s 
+    Choice Awards, and these awards are gratifying. But we believe that the project&#39;s 
+    most important contribution is as a new model of how a museum can produce 
+    and distribute educational materials on the Web.</p>
+  <p>How can an informal learning institution maintain a consistent, productive 
+    presence through the constant ebb and flow of financial resources, personnel, 
+    and digital technology? <i>Resources for Learning </i>has demonstrated a 
+    methodology for content development and distribution that can go with that 
+    ebb and flow. By changing our focus from producing &#34;feature-length&#34; Web site 
+    experiences to the creation of stand-alone supplementary content modules, 
+    we address the needs of educators who already develop their own &#34;feature-length&#34; 
+    experiences in the classroom or science center, but who can benefit from authoritative 
+    supplemental content from a world-class museum. At the same time, we enable 
+    our production group to scale their efforts according to the resources at 
+    hand, and to produce materials for a framework that maintains a consistent 
+    interface regardless of the scale of effort.</p>
+  <p>As resources permit, we intend to expand and refine the interface framework 
+    to respond to both the needs of our audience and the evolution of digital 
+    technology. We have already improved our search engine once without touching 
+    the core content database; and as new search technologies emerge, we feel 
+    confident that we can incorporate those improvements without starting from 
+    scratch. Now that the core framework is in place and has been proven robust, 
+    we can experiment with more visually inviting interfaces that provide visitors 
+    with greater exposure to the breadth of resources we offer.</p>
+  <p>We intend to add new features, such as enabling visitors to collect resources 
+    and create lesson plans and other kinds of compositions with them, and also 
+    to share collections, compositions, and tips for using them with our educators&#39; 
+    community. We look forward to exploring additional partnerships with educational 
+    publishers, as we have with Macmillan/McGraw-Hill, to produce customized collections 
+    of resources to supplement textbooks and curricula. The scalable, modular 
+    framework of our content collection provides a solid foundation to explore 
+    new interfaces and new forms of business for the educational materials we 
+    produce.</p>
+  <h1>Acknowledgements</h1>
+  <p class="AcknowedgementsText">The authors thank Myles Gordon, Nancy Hechinger, 
+    Tom Baione, Ashton Applewhite, John Barrell, Linda Brown, Jolene Gustafson, 
+    and Evelyn Polesny for their invaluable contributions to this project.</p>
+  <p class="AcknowedgementsText">Development of <i>Resources for Learning</i> has 
+    been made possible by a generous grant from The Louis Calder Foundation. Significant 
+    educational and programming support has been provided by the National Aeronautics 
+    and Space Administration.</p>
+  <p class="AcknowedgementsText">The <i>Biodiversity Counts</i> Special Collection 
+    was developed with the support of the National Aeronautics and Space Administration, 
+    The New York Community Trust, and The Louis Calder Foundation.</p>
+  <h1>References</h1>
+  <p class="ReferencesText">Digital Library for Earth System Education (DLESE)<br/>
+    <a href="http://www.dlese.org/" target="_blank">http://www.dlese.org</a></p>
+  <p class="ReferencesText">The Gateway to Educational Materials (GEM)<br/>
+    <a href="http://www.thegateway.org/" target="_blank">http://www.thegateway.org</a>/</p>
+  <p class="ReferencesText">IMS Global Learning Consortium, Inc.<br/>
+    http://www.imsglobal.org</p>
+  <p class="ReferencesText">NASA Space Science Education Resource Directory<br/> 
+   <a href="http://teachspacescience.org/" target="_blank">http://teachspacescience.org</a> </p>
+  <p class="ReferencesText">The National Academies (National Science Education Standards)<br/>
+    <a href="http://www.nap.edu/" target="_blank">http://www.nap.edu/</a></p>
+  <p class="ReferencesText">National Council for the Social Studies (Curriculum 
+    Standards for Social Studies)<br/>
+    <a href="http://www.ncss.org/" target="_blank">http://www.ncss.org/</a></p>
+
+<!-- #EndEditable --></td>
+  </tr>
+</tbody></table>
+
+<p class="smallPurple"> </p>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+
+
+</body><!-- InstanceEnd --><!-- Mirrored from www.museumsandtheweb.com/mw2004/papers/gano/gano.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:45:03 GMT --></html>
