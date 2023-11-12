@@ -12,7 +12,7 @@ import (
 	"os/exec"
 	"path/filepath"
 	"strings"
-	
+
 	"github.com/anaskhan96/soup"
 )
 
@@ -29,11 +29,11 @@ func main() {
 	var sessions_url string
 	var dest string
 	var path_webster string
-	
+
 	flag.StringVar(&sessions_url, "sessions-url", "", "The root URL containing session information for a MW conference.")
 	flag.StringVar(&dest, "destination", "", "The folder where MW session and paper data will be saved to..")
 	flag.StringVar(&path_webster, "webster", "", "The path to a local instance of the https://github.com/aaronland/webster-cli binary is stored; used to produce PDF files for papers")
-	
+
 	flag.Parse()
 
 	abs_root, err := filepath.Abs(dest)
@@ -47,9 +47,9 @@ func main() {
 	if err != nil {
 		log.Fatalf("Invalid sessions URL, %v", err)
 	}
-	
+
 	//
-	
+
 	rsp, err := http.Get(sessions_url)
 
 	if err != nil {
@@ -67,7 +67,7 @@ func main() {
 	// START OF write sessions to disk
 
 	br := bytes.NewReader(body)
-	
+
 	path_sessions := filepath.Join(abs_root, "sessions.html")
 
 	err = writeData(path_sessions, br)
@@ -89,29 +89,28 @@ func main() {
 		href_ok := false
 
 		fetch_opts := fetchContentOptions{}
-		
+
 		paper_uri_opts := derivePaperURIOptions{}
 
-		// -1998: TBD
+		//     -1998: TBD
 		// 1999-2010: abstracts
-		// 2011-2013: programs
-		// 2014- : SNFU
-		
+		// 2011-2012: programs
+		// 2013-    : SNFU
+
 		if strings.HasPrefix(href, "programs") {
 			href_ok = true
-		} else if strings.HasPrefix(href, "../abstracts"){
+		} else if strings.HasPrefix(href, "../abstracts") {
 			href_ok = true
-
 			fetch_opts.IsPre2006 = true
 			paper_uri_opts.IsPre2010 = true
 		} else {
-			// 
+			//
 		}
 
 		if !href_ok {
 			continue
 		}
-		
+
 		// We have validated this above
 		u, _ := url.Parse(sessions_url)
 
@@ -155,9 +154,9 @@ func main() {
 		}
 
 		log.Println("FETCH PAPER", paper_uri)
-		
+
 		pr, err := fetchPaper(paper_uri, fetch_opts)
-		
+
 		path_p := filepath.Join(abs_root, "papers")
 		path_p = filepath.Join(path_p, fname)
 
@@ -170,7 +169,7 @@ func main() {
 		path_pdf := strings.Replace(path_p, ".html", ".pdf", 1)
 
 		log.Printf("FETCH '%s' SAVE '%s\n", paper_uri, path_pdf)
-		
+
 		err = fetchPaperPDF(path_webster, paper_uri, path_pdf)
 
 		if err != nil {
@@ -194,11 +193,11 @@ func fetchContent(url string, opts fetchContentOptions) (io.ReadSeeker, error) {
 	if opts.IsPre2006 {
 		r = strings.NewReader(doc.HTML())
 	} else {
-		
+
 		ev := doc.Find("div", "id", "main-content")
 		r = strings.NewReader(ev.HTML())
 	}
-	
+
 	return r, nil
 }
 
@@ -233,33 +232,27 @@ func derivePaperURI(sessions_url string, r io.Reader, opts derivePaperURIOptions
 
 	paper_uri = strings.Replace(paper_uri, "../", "", 1)
 
-	log.Println("OMG", paper_uri)
-	
 	u, _ := url.Parse(sessions_url)
 	root := filepath.Dir(u.Path)
 
 	if opts.IsPre2010 {
 		root = filepath.Dir(root)
 	}
-	
-	log.Println("WTF", root)
-	
+
 	u.Path = filepath.Join(root, paper_uri)
 	p_url := u.String()
 
-	log.Println("BBQ", p_url)
 	return true, p_url, nil
 }
 
-func fetchPaper(paper_uri string, opts fetchContentOptions) (io.Reader, error){
-	
+func fetchPaper(paper_uri string, opts fetchContentOptions) (io.Reader, error) {
 	return fetchContent(paper_uri, opts)
 }
 
 func fetchPaperPDF(path_webster string, paper_uri string, dest_uri string) error {
 
-	log.Printf("%s %s %s\n", path_webster, paper_uri, dest_uri)
-	
+	// log.Printf("%s %s %s\n", path_webster, paper_uri, dest_uri)
+
 	cmd := exec.Command(path_webster, paper_uri, dest_uri)
 	return cmd.Run()
 }
@@ -272,7 +265,7 @@ func writeData(path string, r io.Reader) error {
 
 	if err != nil {
 
-		if !os.IsNotExist(err){
+		if !os.IsNotExist(err) {
 			return fmt.Errorf("Failed to stat %s, %w", root, err)
 		}
 
@@ -282,7 +275,7 @@ func writeData(path string, r io.Reader) error {
 			return fmt.Errorf("Failed to create tree for %s, %w", root, err)
 		}
 	}
-	
+
 	wr, err := os.OpenFile(path, os.O_RDWR|os.O_CREATE, 0644)
 
 	if err != nil {
