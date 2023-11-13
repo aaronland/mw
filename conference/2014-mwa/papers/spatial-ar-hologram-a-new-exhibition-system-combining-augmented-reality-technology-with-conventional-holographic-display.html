@@ -1,0 +1,139 @@
+<div id="primary">
+<div id="content" role="main">
+<article id="post-544" class="post-544 paper type-paper status-publish hentry">
+
+
+<h1 class="entry-title">Spatial AR Hologram: a new exhibition system combining augmented reality technology with conventional holographic display</h1>
+<p><a target="_blank" href="http://www.museumsandtheweb.com/member/MinJu Kim/">Minju Kim</a>, KAIST, South Korea, <a target="_blank" href="http://www.museumsandtheweb.com/member/Kwangyun Wohn/">Kwangyun Wohn</a>, KAIST, South Korea</p>
+<p><b>Abstract</b><br/>
+Digital technologies are widespread throughout museums. Computer graphics, virtual reality, augmented reality and holographic display not only help create exhibits but also enhance audiences’ experiences. Holographic display has been used for a long time in the exhibition field by projecting a virtual image through a semi-transparent screen that is spatially aligned with the physical exhibits. Compared with virtual reality (VR) which all takes place in the virtual space, holographic displays enhance the audiences’ perception of reality by displaying additional information on the physical object with the flavor of augmented reality.
+
+As an attempt to further extend the potential of the holographic display, we propose a new exhibition system that combines virtual reality technology with conventional holographic display, and create a prototype to verify the effectiveness. The distinctive features are as follows: 1) 3D display: Even though conventional holographic display is 3D, it displays images on a single layer offering a limited depth effect. Whereas, we use a 2-layer display and apply the stereoscopic imaging to the front display. 2) 3D interaction: Camera faces the audience and tracks their positions and gestures to enable interaction between the system and the audience.
+
+In this paper, we present the design of our system, focusing the user study on how effective is the system in creating the 3D spatial perception. Our initial investigation suggests that the newly conceived holographic display offers the users not only more accurate 3D spatial perception, but also better spatial awareness and realism. Furthermore, it helps the users understand exhibition contents easier and better.</p>
+<p><b>Keywords:</b> augmented reality, holographic display, exhibition technology, user evaluation</p>
+<h1><strong style="color: #000000;">1. Introduction</strong></h1>
+<p>Extensive usage of digital technologies is widespread throughout museums. Digital technologies such as computer graphics, virtual reality, augmented reality and holographic display not only help create exhibits but also enhance audiences’ experiences (Kajinami, 2010). Of those, the holographic display has been used for a long time in the exhibition field to render virtual image through a semi-transparent screen that is spatially aligned with the physical exhibits (Debenham et al., 2011; Jim, 1999). Even though the conventional holographic display is regarded as 3D in the sense that it displays the image in the air, it displays images on a single layer which lacks a depth effect. As such, there are limits on creating exhibits and creating audience immersion.</p>
+<p>In this paper, we propose Spatial AR Hologram, a new exhibition system that combines virtual reality technology with the conventional holographic display. First, we make the space continuous in 3D using a 2-layer display and applying stereoscopic imaging to the front layer. This allows the system to represent exhibits that are not subject to a space limit. Second, we enable audiences to experience the exhibits by applying 3D interaction consistently. A depth camera faces the audience and tracks their positions to enable interaction between the system and the audience.</p>
+<p>We describe the design of our system, focusing the user evaluation on how effective the system is in creating 3D spatial perception. Our investigation suggests that the newly created holographic display provides a three dimensional spatial perception with a good sense of 3D immersion for users. Finally we prototype AR exhibits and that are distinctly different from conventional holographic exhibits: the technology not only offers better spatial awareness and realism, but also helps audiences understand exhibition content easier and better.</p>
+<h1><strong style="color: #000000;">2. Related Work</strong></h1>
+<h2><strong>Exhibition Technology: CG/VR/ AR/ Holography</strong></h2>
+<p>The pervasive use of digital technologies to enhance audiences’ experiences and understanding has been widespread throughout museums (Bimber et al, 2003; Basballe et al, 2010). Computer graphics and animation technologies offer effective ways to create exhibits by re-presenting the scenes that are difficult and inefficient to display in the real world. Virtual reality takes this one step further by immersing the audiences in the virtual space, and thereby maximizes their experiences with the exhibit simulations through real-time visitor interaction.</p>
+<p>Holographic display has been used for a long time in the exhibition field by rendering virtual image through a semi-transparent screen that is spatially aligned with the physical exhibits. Recent research (Hannigan, 2001; Bimber et al. 2005; Hilliges et al. 2012; Gingrich et al. 2013) has shown that compared with VR which all takes place in a virtual space, holographic display enhances audiences’ perception of reality by displaying additional information on the physical object with the flavor of augmented reality. Even though conventional holographic display is 3D, it does not have the capacity to provide three-dimensional AR hologram experience. That is, the images projected on the holographic screen cannot evoke physical depth cues. As a result, there are limits and restrictions on exhibit display. When displaying AR exhibits, virtual images through a semi-transparent screen are not spatially aligned with the physical exhibits. This causes spatial inconsistency and difficulty in understanding the exhibits.</p>
+<h2><strong>3D Visualization</strong></h2>
+<p>3D visualization techniques have been widely used for simulating data, exploring and manipulating information using three-dimensional graphics in the information visualization field, especially scientific visualization. Smallman et al. (2001) claimed that the purpose of 3D visualization is to make people understand data correctly and efficiently by exploiting 3D spatial perception. Recent research has applied the distinctive features of 3D visualization such as web-content visualization (Jun et al., 1993), virtual environment simulations (Rhyne, 2002; George et al., 2004), and many others. They reported that 3D increased the reality of the content and improved the visual experience of the audience.</p>
+<p>The use of stereoscopic views enables 3D graphic realism by creating or enhancing the illusion of depth in an image. Binocular perception makes representing 3D space possible, so it has been utilized in the 3D operation interaction field. According to surveys, Mulder et al. (2004) and Fischer et al. (2007) proposed virtual surgery training and virtual workbenches that overlay virtual images on the physical objects through a transparent screen. Applying stereoscopic technology allows rendered virtual images to be spatially aligned with the physical object in the same space. However Prema et al. (2006) found that the display area is limited to the front and there is the limitation using at exhibition that handles complex and various information. To overcome this limitation, we have developed a multi-layer based spatial AR hologram that made the best use of three-dimensional space around physical exhibits.</p>
+<h1><strong>3. Overview of Spatial AR Hologram System</strong></h1>
+<p>Spatial AR Hologram shows additional information on exhibits effectively in the exhibition field. The newly conceived system provides the audiences not only accurate 3D spatial perception but also with better spatial awareness. Furthermore, it helps the audience understand content easier and better that deals with complex and diverse information such as text, image, video, 3D objects and so on. To achieve this, we need to solve the spatial visualization and the spatial exploration problems. We define the convergence of spatial visualization and spatial exploration as ‘Spatial Experience’. The distinctive features are as follows.</p>
+<p>In order to express spatial visualization, we installed multi-layer displays and applied 3D stereoscopic technologies. Stereoscopic technologies enable complex information to be merged around the physical object naturally. Multi-layer displays offer spatial impressions by increasing the number of displays and arranging them separately in the physical space. In the case of additional exhibit information, it includes indirect background information and foreground information which explain exhibits directly. In general, the audience moves around the exhibition hall and looks this way and that. Therefore for spatial exploration, it is important to offer additional information with visual consistency depending on the user’s physical point of view. The camera faces the audience and tracks their positions to visualize exhibit content by guaranteeing their exhibition experience in real-time. As a result, it enables active interaction between the system and the audience.</p>
+<h1><strong>4. System Implementation</strong></h1>
+<p>The proposed spatial AR holographic display uses two displays (one is the semi-transparent film and the other is the monitor) placed in parallel and separated 1 meter physically by depth. The space in between is used to place the physical object, which serves as the exhibit artifact. The semi-transparent film reflects the image which emanates from the projector underneath, forming a virtual image appearing in mid-air. The other display, placed in the back, serves as the backdrop scene at this moment, but will produce the stereoscopic 3D scene later, as described in the following section. With this configuration, the system can enhance the audience’s spatial experience by allowing them to look at the physical objects while displaying digital exhibits on the front and back displays at the same time. Our physical configuration for Spatial AR Hologram is illustrated in (Figure 1).</p>
+<p>We use Musion Eyeliner 42 inch transparent display for the front display (Musion EyeLiner™, 2014). The physical object and the back layer display are viewed by the audience through the semi-transparent front display. This front display reflects light toward the audience from a projector mounted under the display. The projector displays a 1024×768 pixels image at 4000 ANSI LUMEN. A 50’’ Samsung TV monitor is used as the back layer. We installed the controllable lights inside the system that switch the scene between virtual reality and augmented reality naturally and improve the visibility of the real exhibits. The light system is controlled by using ARDUINO. One depth camera which is installed in front of the system faces the audience and tracks the position in real time. To block the light and enhance usability, we covered the entire system with a black cloth except for the frontal side which serves as the interaction space with the audience.</p>
+<h2><strong>Spatial Visualization: applying multi-layer display and stereoscopic imaging.</strong></h2>
+<p>To visualize spatial images, we applied a stereoscopic visualization at the front display and a 2D image at the back display respectively. A polarized 3D system, one of the three-dimensional representation methods, is not applicable in this case because of the diffused reflection properties. Accordingly, we use anaglyph 3D images which can be implemented easily. We installed two virtual cameras at the distance apart of the width of one’s two eyes in the horizontal direction in Processing (Casey, 2007). Two cameras view the same image and extract each image as red and cyan. As an experimental approach, although we currently use an anaglyph 3D image, an active shutter 3D system is preferable because it is better at three-dimensional representation and high resolution implementation. Meanwhile, according to the characteristics of human visual perception, convergence cannot occur in two different places, so we have made a version plane at the front display. Applying stereoscopic images on both displays is an open question and further investigation will be needed (Figure 2).</p>
+<h2><strong>Spatial Exploration: Head tracking with depth camera</strong></h2>
+<p>A depth camera (Microsoft Kinect) in front of the system faces the audience and tracks the head to enable motion parallax (Figure 4). It tracks the location of the audience’s head and links it with the two cameras which render graphic elements in the virtual three-dimensional space. This allows the audience to view the digital exhibits as their attention is correctly registered on the physical exhibits consistently. Therefore, it ensures the continuity of the spatial experience, increasing the interactivity between the audience and exhibits (Figure 3).</p>
+<h1><strong>User Evaluation</strong></h1>
+<h2><strong>Comparison of 3D spatial perception</strong></h2>
+<p>In this paper, we tested our system with users, focusing the user study on how effective the system is in creating 3D spatial perception. In order to verify 3D spatial perception, it was unnecessary to operate a back layer display at the same time. Twelve participants with past experiences with 3D user interfaces (age 20-32, 5 male and 7 female) were recruited to participate in the study (Figure 5).</p>
+<p>First, users had time to familiarize themselves with the system. Then, they performed the task, arranging virtual images spatially aligned with the physical object. They performed three different randomized tasks for 3D spatial perception configuration, comparing an existing 2D interface and a 3D interface with applied stereoscopic visualization, and a view-dependent 3D interface that applied both 3D visualization and 3D exploration. We formally evaluated the accuracy, task completion time, and the total number of tries. Users were asked to complete the task as accurately and quickly as possible. The total experiment time for each participant was between 30-40 min.</p>
+<p>Results showed clear differences mostly between the 2D and 3D interface and showed no reliable differences between 3D and view-dependent 3D interface. The 3D interface with applied stereoscopic visualization offers users more accurate 3D spatial perception. Especially in the case of view-dependent 3D with applied user interaction, participants performed tasks reliably faster and the error rate was the lower, meaning it is offering consistent depth perception to the users. 2D, on the other hand, performed low in all aspects. Users’ comments include “recognizing the space in 2D interface was difficult since the virtual image always seemed located in front of the physical object”, “I feel as if I am adjusting the image size in the 2D flat screen rather than the depth of the virtual image”. In contrast, in the case of 3D and view-dependent 3D interface, they easily positioned virtual images and the physical object like the given object without confusion. Proposed system applying 3D visualization and 3D exploration make the users reproduce three-dimensional spatial perception more quickly and accurately (Figure 6).</p>
+<h2><strong>Spatial awareness, realism, contents understanding</strong></h2>
+<p>After viewing the exhibit content based on view-dependent 3D, 3D, and 2D interface through the system, a qualitative evaluation was carried out. The questionnaires are listed below (Table 1).</p>
+<table class=" aligncenter" style="height: 227px;" width="570">
+<tbody>
+<tr>
+<td rowspan="3" width="151"><strong>3D spatial awareness</strong></td>
+<td width="407">Virtual image seems to float in the space, not on the screen.</td>
+</tr>
+<tr>
+<td width="407">Virtual image and the physical object are spatially aligned in real space.</td>
+</tr>
+<tr>
+<td width="407">Easy to form physical space perception around the physical object.</td>
+</tr>
+<tr>
+<td rowspan="3" width="151"><strong>3D spatial realism</strong></td>
+<td width="407">Virtual image seems to be around the real physical object.</td>
+</tr>
+<tr>
+<td width="407">AR content is natural like the real world.</td>
+</tr>
+<tr>
+<td width="407">Easy to be immersed in AR content.</td>
+</tr>
+<tr>
+<td rowspan="3" width="151"><strong>Satisfaction and contents understanding</strong></td>
+<td width="407">Easy to understand the exhibit’s content.</td>
+</tr>
+<tr>
+<td width="407">No visual discomfort in observing the content.</td>
+</tr>
+<tr>
+<td width="407">I want to see the content using this system in the future.</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">Table 1. Questionnaire to survey spatial awareness, realism and understanding of content</p>
+<p style="text-align: left;">Questionnaire responses (7-point Likert scale) indicate that it was easy to form depth perception and spatial awareness with the Spatial AR Hologram interface (6.19). Participants performed worse in perceiving three-dimensional spatial realism in the 2D than in the view-dependent 3D interface (3.36 vs. 6.33). Users’ comments included “it was difficult to be immersed in the AR hologram content represented in the 2D interface”, “I had to observe the physical object and virtual image separately to understand it correctly.” Also, satisfaction in the content was the highest in view-dependent 3D interfaces, and there was no great difference between view-dependent and 3D interface (6.3 vs. 5.63). We verify that the proposed system offers the users not only more accurate 3D spatial perception, but also a better spatial awareness and realism.<strong> </strong></p>
+<h1><strong>6. Exhibition Prototyping </strong></h1>
+<p style="text-align: left;">The spatial AR Hologram supports many applications and display possibilities. One of the characteristics of Spatial AR Holograms is the ability for users to experience a seamless mix of real space and virtual content unrestricted to a defined area. This leads to possibilities of more interesting museum exhibits. An example is AR exhibit content that represents and explains the three-story Stone Pagoda of Gameunsa site, which is located in Gyeongju-si, South Korea. At first, we installed a miniature of the three-story stone pagoda between a front display and back display. Then, related exhibit information was shown on each display, describing direct information on the front and indirect and background information on the back display (Figure 7).</p>
+<p style="text-align: left;">The exhibition prototype was implemented using Processing, and the stereo 3D image was projected on the front display and 2D image on the back display at the same time. To make it simultaneous, the image file at Processing was linked to the OSC file. Two virtual cameras were positioned apart by various distances in the horizontal direction in Processing. Controlling the distance between them shows the virtual images in various depth planes. The virtual three-story stone pagoda is produced in 3D Maya and the light system is implemented by using ARDUINO.</p>
+<p style="text-align: left;">The result of prototyping shows significant differences from conventional holographic display system such as the l-layer based display and interface creating 2D images. It offers the users not only more accurate 3D spatial perception, but also efficient exhibit information visualization. Audiences’ comments included that the newly conceived system helped them understand the exhibition content easier and better. Furthermore, audiences can have a vivid experience as if they were watching a three-story stone pagoda in reality at nearby museum without having to go to the place.<strong> </strong></p>
+<h1 style="text-align: left;"><strong>Conclusion and Future works</strong></h1>
+<p style="text-align: left;">In this paper, we have presented a new exhibition system, Spatial AR Hologram, that incorporates the virtual reality technology with the conventional holographic display. To visualize spatial 3D, we use a 2-layer display and apply the stereoscopic imaging to the front display. It allows the system to deliver the spatial information naturally around the physical objects in real space. Also, it makes it possible to create a continuous space, as well as visualize complex information efficiently.</p>
+<p style="text-align: left;">Our results highlight that the newly conceived holographic display applying 3D visualization and 3D exploration provides users with not only more accurate 3D spatial perception, but also better spatial awareness. Furthermore, it helps users understand exhibition content more easily and better.</p>
+<p style="text-align: left;">In addition to the 3D spatial perception problem, there are two other interesting and challenging issues. The first one fully exploits two layers of displays plus the space in-between so that whatever information to be presented is displayed automatically or semi-automatically, the audience experiences a coherent and continuous 3D space. Another is that of interactivity. It is not only the audience but also the presenter (or the docent) who can take the advantage of the interactive nature of the display system. We expect our new AR holographic display to be useful not only in exhibitions but also in other diverse fields such as interactive presentations, stage performances, information visualization and many others.</p>
+<h1 style="text-align: left;"><strong>Acknowledgements</strong></h1>
+<p style="text-align: left;">This research was partially supported by NRF and the BK21 Plus Framework.</p>
+<h1 style="text-align: left;"><strong>References</strong></h1>
+<ol style="text-align: center;">
+<li style="text-align: left;">Basballe, D. A. and K. Halskov. (2010). “Projections on museum exhibits: engaging visitors in the museum setting”. Proceedings of the 22nd Conference of the Computer-Human Interaction Special Interest Group of Australia on Computer-Human Interaction. 80-87.</li>
+<li style="text-align: left;">Bimber, O., L. M. Encarna, and D. Schmalstieg. (2003). “The virtual showcase as a new platform for augmented reality digital storytelling”. Proceedings of the workshop on Virtual environments 2003. 87-95.</li>
+<li style="text-align: left;">Casey R. Ben F. (2007). “Processing: A Programming Handbook for Visual Designers and Artists”. The MIT Press. 712 pages.</li>
+<li style="text-align: left;">Debenham, P., G. Thomas and J. Trout. (2011). “Evolutionary augmented reality at the Natural History Museum”. Mixed and Augmented Reality (ISMAR), 2011 10th IEEE International Symposium on. 249-250.</li>
+<li style="text-align: left;">Fischer G.S., Deguet A., Csoma C., Taylor R.H., Fayad L., Carrino J.A., Zinreich S.J., and Fichtinger G. (2007). “MRI Image Overlay: Application to Arthrography Needle Insertion”. Comput Aided Surg. 12(1), 2-14.</li>
+<li style="text-align: left;">George L., and Costas V. (2004). “Virtual museums for all: Employing game technology for edutainment”. Virtual Reality. 8(2), 96-106.</li>
+<li style="text-align: left;">Gingrich, O., A. Renaud and E. Emets. (2013). “KIMA: a holographic telepresence environment based on cymatic principles”. ACM SIGGRAPH 2013 Art Gallery. 332-343.</li>
+<li style="text-align: left;">Hannigan, B. (2001). “Augmented Reality as a New Media Experience”. Proceedings of the IEEE and ACM International Symposium on Augmented Reality (ISAR’01), IEEE Computer Society. 197-.</li>
+<li style="text-align: left;">Hilliges, O., D. Kim, S. Izadi, M. Weiss and A. Wilson. (2012). “HoloDesk: direct 3d interactions with a situated see-through display”. Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. 2421-2430.</li>
+<li style="text-align: left;">Jim S. (1999). “The Science Behind the Ghost: A Brief History of Pepper’s Ghost”, Hahn, Benjamin Blom, New York, 189 pages.</li>
+<li style="text-align: left;">Jun R. and Mark G. (1993). “The Information Cube: Using Transparency in 3D information visualization”. Proceedings of the Third Annual Workshop on Information Technologies &amp; systems. 125-132.</li>
+<li style="text-align: left;">Kajinami, T., O. Hayashi, T. Narumi, T. Tanikawa and M. Hirose. (2010). “Digital Display Case: Museum exhibition system to convey background information about exhibits”. Virtual Systems and Multimedia (VSMM), 2010 16th International Conference on. 230-233.</li>
+<li style="text-align: left;">Mulder, J. D. and B. R. Boscker. (2004). “A modular system for collaborative desktop VR/AR with a shared workspace”. Virtual Reality. 27-31.</li>
+<li style="text-align: left;">Musion EyeLiner™. (2014). <a href="http://www.musion.com/">http://www.musion.com/</a></li>
+<li style="text-align: left;">Prema V, Roberts G, and Wuensche BC. (2006). “3D visualisation techniques for multi-layer display technology”. IVCNZ ’06. 251-256.</li>
+<li style="text-align: left;">Rhyne, T.-M. (2002). “Computer games and scientific visualization”. Commun. ACM. 45(7), 40-44.</li>
+<li style="text-align: left;">Smallman, H. S., M. S. John, H. M. Oonk and M. B. Cowen. (2001). “Information Availability in 2D and 3D Displays”. IEEE Comput. Graph. Appl. 21(5), 51-57.</li>
+</ol>
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+M. Kim &amp; K. Wohn, Spatial AR Hologram: a new exhibition system combining augmented reality technology with conventional holographic display. In <i>Museums and the Web Asia 2014</i>, N. Proctor &amp; R. Cherry (eds). Silver Spring, MD: Museums and the Web. Published September 15, 2014. Consulted <script type="text/javascript">document.write(full_date);</script>.<br/>
+https://mwa2014.museumsandtheweb.com/paper/spatial-ar-hologram-a-new-exhibition-system-combining-augmented-reality-technology-with-conventional-holographic-display/<br/><br/><hr/>
+</article>
+</div><!-- #content -->
+</div>

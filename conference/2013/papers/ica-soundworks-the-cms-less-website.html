@@ -1,0 +1,193 @@
+<div id="primary">
+<div id="full_width_content">
+			
+
+<h1 class="entry-title">ICA SOUNDWORKS: The CMS-less Website</h1>
+<br/>
+
+<a href="../../user/index1248.html?u=JoeBaskerville">Joe Baskerville</a>, UK, <a href="../../user/indexfced.html?u=dougmcfarlane">Douglas McFarlane</a>, UK<br/><br/><b>Abstract</b><br/>
+<p>Imagine an organisation that wanted to create an on-line and in-gallery<br/>
+resource including lots of content, from multiple contributors - but had<br/>
+little time and a modest budget (sound familiar?).  A project that needed a<br/>
+content management system - but couldn&#39;t afford to implement one. Was there a<br/>
+solution?</p>
+<p>In 2012 the The Institute of Contemporary Arts launched SOUNDWORKS, an online<br/>
+exhibition exploring over one hundred new sound works produced by artists from<br/>
+all over the world. In this paper, hear how the ICA and Cogapp collaborated to<br/>
+create a responsive, immersive and beautiful online experience with no CMS.</p>
+<p>Using modern browser technologies and social media, Cogapp created a unique<br/>
+and innovative stripped back interface that allowed users to explore the works<br/>
+in the exhibition on desktop, tablet and mobile. A special in-gallery mode<br/>
+also allowed visitors to the ICA to enjoy the online experience via a<br/>
+customised interface.</p>
+<p>Discover how we utilised SoundCloud and Twitter APIs to organise and promote<br/>
+the content, ensuring a constant and solid online presence.</p>
+<p>And learn how not having to implement a CMS can actually work to your<br/>
+advantage, increase the visibility of your content and maximise your potential<br/>
+within the constraints of a limited budget.</p>
+<h2><b>Background </b></h2>
+<p>Under the new Executive Director Gregor Muir in 2011, the exhibitions and events in the ICA’s programme had taken on more of a thematic character and have revolved around a central idea or response to a particular movement or approach.</p>
+<p>In early 2012 it was decided that the ICA would put on an exhibition/s themed around sound art. It was felt that there was a growing number of contemporary artists using sound more and more as part of their inter-disciplinary work (i.e. Susan Phillipz had won the Turner Prize, the first for a sound artist) and the ICA could reflect this.</p>
+<p>We secured an exhibition of Bruce Nauman’s <i>Days</i> work, an installation of suspended speakers in a space with voices reciting the days of the week. This work had never been seen by UK audiences before and also spoke to the core values of the medium – time-based, repetitive and experiential. To counterpoint Nauman’s installation it was decided to showcase a range of younger artists working with sound as a medium who perhaps had been influenced by Nauman’s pioneering work in this area.</p>
+<p>Original ideas included having a range of artists installed in the smaller upper gallery space but the show was timed to coincide with the Olympics. The ICA would be in the middle of a security zone and it was unsure whether the public would have access to the building (or even whether staff would). It was decided that we would present an ‘exhibition’ of new artists’ works online but would have an in-gallery element for visitors whilst we were open but that would be easy to deploy and move if necessary.</p>
+<p>It was decided that in order to widen the reach of the project, which had a potentially fairly niche audience, the ICA would initiate partnerships with a network of other galleries and institutions. These partners could nominate artists to be included in the project and the site would act as a platform to showcase a broader range of artists than we might normally have had access to. In turn these partners could utilise their networks to push awareness of the project to a wider audience generally.</p>
+<p>We settled on 100 artists (the show originally was to last 100 days but obviously this was not a factor online) in which we would showcase one a day in the gallery and website.</p>
+<p>The project would aim to embrace the ephemeral and eclectic nature of sound in art at that particular moment and be a ‘snapshot’ of the responses by contemporary artists to the medium and the legacy of the kind of sound work pioneered by Nauman.</p>
+<p>The ask for artists’ works to be included was framed by only minimal conditions (that the work was in MP3 format and under 20 mins long – not to be swamped by GB of storage and bandwidth; however, this was broken by a few artists who were very persistent!)</p>
+<h2>Set-up</h2>
+<p>The current CMS of the ICA is a propriety legacy CMS which had already been mangled to near breaking point and we knew would be unsuitable for the building a website for the project. We were already in the planning stage of moving the site onto a new open source platform so we didn’t want another CMS set up in the interim, partly because of complexity of having to deal with multiple platforms and set-up costs, but also the time limit. Unlike another digital project, this project also had a ‘real-world’ launch date which was fixed. The physical installation of the project in the gallery had to be ready for the opening of the Bruce Nauman show so we had to be ready for hundreds of visitors at the preview!</p>
+<p>The cost and technical set up of hosting and streaming audio files as well was a factor in discussions. As we had already outsourced the video hosting to Youtube and Vimeo, it seemed the logical step to use an external audio hosting platform. A number were subsequently proposed.</p>
+<p>The primary problem at first for such a small team however, was organisational. Namely, how do we get a hundred files with all the associated info and metadata to us in as short a time as possible and without the hassle of managing hundreds of emails and attachments from a plethora of galleries and artists? To mitigate this we used an online service (Wuffoo) to build a simple webpage that incorporated an online form and file storage for the project files. Before we had even decided on a hosting platform or structure we could be easily email the selected artists with instructions on how to submit their work and what info we needed from them. This was actually very usefully internally as well as it focused our minds in how to communicate the project succinctly, which would be helpful for clarifying external comms later on in the process.</p>
+<p>One of the prerequisites for an online exhibition to be a success was the engagement from our digital audience. Online stats and digital reach, as well as in-gallery visitors, are also now counted among the criteria by which Arts Council England judge success in achieving the overall aims of a public arts institution.</p>
+<p>In addition, the ICA has quite a large social media following on Twitter and Facebook (more than 60,000) in comparison with similar sized galleries, so it was decided that a social element to the project would be essential to the contributing factors of the success and spread of the project. At the same time, the solution had to be workable with internal resources of the ICA Comms team (two people), so we needed to be able to have some automated tweeting or scheduling built into the plan.</p>
+<p>The ICA website also has a fairly high percentage of visitors from mobile devices and the website was already built with a responsive template, so being mobile friendly was also a requirement of the website. The added bonus here was that if people came to the gallery and could not get to choose in the installation the track they wanted to hear because other visitors were interacting with the exhibit, they could simply go straight to the site on their phone (via the public Wifi in the gallery). We installed signage in the café bar area of the ICA to encourage this as well.</p>
+<h2><b>Partnering with Soundcloud</b></h2>
+<p>Soundcloud was chosen to host the audio tracks, partly because of the reasonable pricing levels for an unlimited hosting, but also because of its user base and social platform which had just the right kind of built-in audience and tools to engage and spread the work. Users can link to a unique page for each piece of audio and create playlists from their and other people’s audio files. They distribute the audio via a Player widget which can be embedded in any website. For a fee you get access to further functionality, including detailed statistics on usage (how many people listened to audio, how many comments have been received, etc.)</p>
+<p>Nonetheless, hosting externally presented other problems: primarily agreeing to an external hosting platform’s terms and conditions. This was addressed by being upfront about the terms at the point artists submitted their work and reminding them that they needed to comply with this criteria as the content would be hosted with an external partner. On submission of their work, the artists had to check a tickbox that showed they agreed to this in order to be included. This essentially mitigated possible problems posed by Soundcloud taking a dislike to any artwork’s particular content. Artists were alerted upfront that Soundcloud had this power, and that it was essentially out of our control.</p>
+<p>When entered in Soundcloud, the audio tracks have a finite number of fields into which metadata for the audio track can be entered: title, description, artwork etc., which is obviously a lot less flexible than one’s own CMS with bespoke content types. But this issue was taken on as a constraint that could be worked with.</p>
+<p>In the end we talked to Soundcloud and they were extremely supportive of the project as an innovative use of their platform to publish and distribute artworks rather than the usual podcast or music channel. As a result they gave us some in-kind support in the shape of promotion via their blog and email newsletter, which pushed the project to an even wider new audience as well. It also transpired that quite a few of the artists on the shortlist were already on Soundcloud and had very strong following there (for instance Cosey Fanni Tutti and Scanner), so again this was a large in-built audience we could take advantage of in getting the most online reach possible for the project.</p>
+<p>The Soundcloud project could have existed online solely as a Soundcloud playlist. Users could have been directed to the Soundcloud playlist from the ICA website, and nothing more done by the ICA staff or website; however, both the ICA and Cogapp were ambitious about the interface we wanted to create to showcase this audio art. We felt that simply using the built-in Soundcloud widgets and themes wouldn’t do justice to, and in many ways could overshadow, the audio works on show here. Luckily Soundcloud, along with most of the other major players in the Social Media world, offer a solid and fully featured API.</p>
+<h3><b>APIs</b></h3>
+<p>We will pause here to discuss briefly what it means for a website to offer an API to its users, and example of how they are generally used.</p>
+<p>Traditionally a website would keep its data and assets solely within the confines of its own walled garden. Due to bandwidth costs, if any other website were to use, for example, an image from another website on their own website, this was considered ‘leeching’ – basically stealing bandwidth – and was discouraged.</p>
+<p>One of the big changes that came in with the Web 2.0 revolution was the idea that, as bandwidth and storage had gotten very cheap, websites could relax about being leeched from, and in many cases actively encourage it. This started with images, with sites like Flickr encouraging the embedding of their images in other websites, and continued in surprising directions with Youtube allowing the embedding of very expensive – in bandwidth terms – video.</p>
+<p>At the same time as websites were actively encourage the sharing of assets came the idea of sharing data. Websites started opening up the data in their databases and offering them out to the world in the form of an API, or Application Programming Interface. These web services allow external users to query data on a websites internal database, but allow the owner of that database to control exactly how much access external users could get. So for instance, it might allow external users to query how many photos a site has tagged with the term ‘kitten’, but it could choose to not publish the home address of the account holder who took that photo.</p>
+<p>The exact form of a website’s API changes according to implementation, but a typical API would be in the form of a publicly accessible URL, into which parameters can be passed. So to illustrate, let’s imagine what a hypothetical photo sharing website’s API might look like:</p>
+<p>http://www.my-photo-website/api/search.php?query=kitten</p>
+<p>could bring back a response containing details of all of the photos tagged with “kitten”. Typically the response would be in a variety of formats; most common would be XML and JSON, both formats designed to be both useful to computer languages and readable by humans.</p>
+<h3><b>Soundcloud API</b></h3>
+<p>Soundcloud has just such an API. It allows users to receive information on audio tracks, whether as a result of searching for particular terms, or because the track is in a specified playlist, or if the track is owned by a specified user. The data returned about this track includes such information as:</p>
+<ul>
+<li>title of the track</li>
+<li>the user who owns this track</li>
+<li>a perma-link to the page for this track</li>
+<li>a link to the artwork for this track</li>
+<li>a description for this track, etc.</li>
+</ul>
+<p>The full list of available data can be seen here: <a href="http://developers.soundcloud.com/docs/api/reference#tracks">http://developers.soundcloud.com/docs/api/reference#tracks</a></p>
+<p>So it was clear there was a way to approach this problem from two directions. The content could be managed and hosted by Soundcloud, and Soundcloud offered a mechanism for that data to be extracted and pulled into a secondary website.</p>
+<h2><b>Challenges</b></h2>
+<p>Internally the possibility of the Soundcloud platform garnering negative feedback and comments to the works online was a potential worry from an institutional and curatorial point of view. Would artists feel that this was the right audience for their work? How would they react to possible criticism directly in the piece?</p>
+<p>We decided to go with a ‘wait and see’ approach to monitoring and moderation of comments on Soundcloud itself. We could have turned them off but we were curious to see how the wider public would get engaged with the project and what questions and responses the works would give rise to. We also didn’t want the relationship with a new community to start off on the wrong foot because of our being too heavy handed in moderating if negative or trolling comments were pulled through onto our site. Therefore it was decided that the comments would be left on Soundcloud but would not be pulled into the microsite itself situated on the ICA’s website.</p>
+<p>In the end we didn’t have to worry about this particularly as all of the comments were positive or remarked on the track/work itself, which the artists themselves appreciated. We were moderately surprised internally as well, but this shows the strength of success of engaging with a community that is a good fit for your project.</p>
+<h2><b>Microsite interface</b></h2>
+<p>Browsers on both desktops and smartphones have come a long way in recent years and the opportunities to explore exciting and fluid interfaces are now available that don’t necessitate the need for plug-ins such as Adobe Flash.</p>
+<p>Following a collaborative workshop between the ICA and Cogapp, we decided on a design approach. This design was then implemented and adapted for all the devices this project had to reach; desktop, tablet, mobile and a special in-gallery element which ran on an iPad.</p>
+<p>The interface called for a custom audio player. The default Soundcloud player, while functionally very solid, wasn’t going to fit in with the project’s design aesthetics. As a result, a custom player was created.</p>
+<p>The official Soundcloud player uses a Javascript library called Soundmanager 2: <a href="http://www.schillmania.com/projects/soundmanager2/">http://www.schillmania.com/projects/soundmanager2/</a></p>
+<p>This library uses the HTML5 audio capabilities of the browser but falls back to Flash-based audio where this isn’t available. This results in a solution that allows audio playback on a very high cross-section of different browsers, including mobile browsers. The library handles all user actions and gives you feedback on play progress.</p>
+<p>For this solution we wanted our own version of the audio sound wave that Soundcloud offers. We experimented with analysing the audio on the fly in the browser, but this is only supported when using Flash-based playback methods; it’s not currently fully supported in most HTML5 audio implementations. So in order to generate the data required for our custom waveforms, we run it through a Python script that analyses the audio and produces a JSON file for each track. The custom player then reads this in and renders the waveforms in an HTML Canvas tag.</p>
+<p>When creating a web App of this nature, it necessitates a lot of Javascript code, which, if measures are not taken to structure this in anyway, can result in unmanageable and unmaintainable code. With this in mind we chose a Javascript library to aid us in allowing a lot of code to be structured in a predictable way. Backbone is a MVC style framework for just such situations, allowing the separation of data, logic and presentation. It also makes it much easier for multiple developers to be working on the code simultaneously (with the aid of version control software).</p>
+<p>The other benefit of working in this way is that when the user interface needs to change in a responsive way across devices, the same code can be used throughout and only the code responsible for the separate layouts need change. So in this case, the version for the desktop and landscape tablet was identical, but for anything below this breakpoint, the interface changed into a list-based menu approach. The same backend data code was used to populate this secondary interface. Additionally it meant that we could reuse the custom player across all devices, using the same code throughout.</p>
+<p>The main interface to the Soundworks experience echoed the printed posters, in that the names of the artists were ordered by their first names. This worked from an aesthetic point of view, but was obviously not the best way to find specific audio tracks if you only knew the artist’s surname, or the title of the track itself.</p>
+<p>To make this searching easier, the interface called for a set of filters to allow people to find tracks and artists in the above mentioned way. Backbone again made this filtering very easy for us, as it allows developers to choose the sort order in which its internal data structures were stored. So we could read in all the data about all the audio tracks and by changing the sort order to artist’s last name and track title, we could create three different lists from which an interface was created, allowing the selection of specific artists or tracks.</p>
+<p>It was also a requirement that the ICA could highlight an ‘artist of the day’ and promote his or her track on the website. This was a tricky problem to find a solution for as we weren’t using a CMS, and so didn’t have any direct way for the artists to be selected for promotion.</p>
+<p>The solution we found to this problem again increased the visibility of the project to users, as well as providing a very flexible way for the gallery to use existing tools, with no additional training required. We used the ICA’s main Twitter feed.</p>
+<p>A format of tweet was decided upon which along the lines of:</p>
+<blockquote><p>Ancke Exhkhardt &amp; Henry Koch – http://www.ica.org.uk/projects/soundworks/#track/45190588 #ICASoundworks #artistoftheday</p></blockquote>
+<p>Using the Twitter API, the web App would get a list of results from their feed using the hashtag #artistoftheday. From this tweet we parsed out the ID of the track, and used this to populate an additional third filter called “Featured Artists.” This was a list of all the artists that had been featured in the project, by order of date.</p>
+<p>As mentioned above, one of the aims of the project was for the audio tracks to be as visible as possible. Sharing was a big part of this. One of the big advantages of using Soundcloud to host the audio tracks is that they take care of the required sharing functionality. Tracks could be easily shared using Twitter. And with Facebook, Soundcloud has implemented all the required Open Graph metadata on each audio track page, so users can embed the tracks into their Facebook walls very easily. The same is true for blogs and other websites: embedding the Soundcloud widget is very straightforward and actively encouraged.</p>
+<p>Also, by using Soundcloud on this project, certain tracks were able to take on a life of their own outside of the presentation we chose to subject them too. For instance, the Cosey Fanni Tutti track featured in Soundworks became very popular outside of our project and it was shared on various blogs, most notably Boing Boing: <a href="http://boingboing.net/2012/06/19/cosey-fanni-tuttis-music-pie.html">http://boingboing.net/2012/06/19/cosey-fanni-tuttis-music-pie.html</a></p>
+<p>People were able to easily embed the player into their own websites, thus increasing visibility for the project, the artists and their soundworks.</p>
+<h2><b>In-gallery</b></h2>
+<p>With a very minimal installation budget we constructed a listening station / sofa / integrated iPad holder in the ICA’s upper gallery and the sound was sent via Bluetooth to a pair of giant Jamboxes mounted high on the gallery walls. Much like the website itself, this minimal installation worked to our advantage as it focused visitors on the audio works themselves and they were not too visually distracted in the space. We used an app called KioskPro to lock down the iPad to the specialised ‘in-gallery view’ that Cogapp had built. Visitors to the in-gallery iPad install were already very well versed in interacting with mobile devices and were immediately comfortable with browsing and engaging with the installation.</p>
+<p>After a couple of weeks the installation had to be moved from its gallery space to accommodate more Olympic activity and it was easily packed down and reinstalled in another smaller listening space.</p>
+<h2><b>Response and legacy</b></h2>
+<blockquote><p>There are so many experimental and innovative works and it is liberating to be able to engage with them so easily and conveniently. (<em>One Stop Arts review)</em></p></blockquote>
+<p>The Soundworks website and individual tracks became very popular very quickly because of the built-in social elements. In the initial burst of visitors responding to the site and sharing on Twitter, this gradually turned into self-sufficient loop as press picked up on it and individual tracks were featured on magazine sites and blogs with large audiences, such as <em>Boing Boing</em>, the <em>Quietus</em>, <em>The Wire</em>, <em>Wallpaper</em> and the <em>Guardian</em>.</p>
+<h3><b>Stats</b></h3>
+<p>The visitor statistics for the Microsite at ica.org.uk were:</p>
+<ul>
+<li>Pageviews – 16,986</li>
+<li>Visitors – 14,202</li>
+<li>Average dwell time 4:12   (Note: this is twice the site average normally)</li>
+</ul>
+<p>Google, Facebook and Twitter were all equal in directing traffic to the site, which shows the social influence at work: Google was usually at least double other sources, such as Facebook.</p>
+<p>The Soundcloud track stats were:</p>
+<ul>
+<li>Nearly 70,000 plays of tracks in the exhibition</li>
+<li>35 Comments</li>
+<li>250 ‘favourites’</li>
+</ul>
+<p>On Twitter, in one of the initial weeks the #icasoundworks hashtag got 415,000 impressions and was seen by 50,000 users.</p>
+<p>Examples of the sorts of tweets the project received were:</p>
+<blockquote><p>If I didn’t say that the Soundworks online exhibition is amazing, I should have: http://www.ica.org.uk/projects/soundworks/#track/46559607 Cc @ICALondon</p>
+<p><strong>Kate Towsey ‏@katetowsey</strong></p>
+<p> </p></blockquote>
+<blockquote><p>This is INCREDIBLE! Man I love #ICA! MT @ICALondon: Our #ICASoundworks project is LIVE! Hear over 130 sound works… http://bit.ly/NLdrjS</p>
+<p><strong>Paulina Goodwin ‏@shvetsova </strong></p></blockquote>
+<h2></h2>
+<h3><b>Lessons learned</b></h3>
+<p>This project proved that in many situations, using Social Media as a CMS can be very effective, both in terms of budget and visibility. Tools are readily available to be used, many times for free, with a very low barrier of entry in terms of training required to use them. Either content editors are already familiar with the required tools, or the tools have been thoroughly user tested so they are intuitive and very easy to use.</p>
+<p>Sites such as Soundcloud have also taken care of many other infrastructure requirements so they don’t have to be re-implemented on each project:</p>
+<ul>
+<li>Cloud based hosting. We no longer have to worry about large numbers of users accessing expensive file types. Audio, video, images etc. are now very easily to store in Social Media repositories and become highly visible as a result of this, negating the need to set up cloud hosting ourselves, which is non-trivial to say the least.</li>
+<li>Sharing. Embedding the audio player, and sharing on the main Social Networks was very straightforward using Soundcloud. Also, Soundcloud can give you useful statistics as to how your media is being consumed across the internet.</li>
+<li>Content management. It’s possible that, for most use cases, the metadata fields available for a given type of content will suffice.</li>
+</ul>
+<p>However, there are also downsides that need to be weighed up when approaching such a solution.</p>
+<p>The fields available for data to be added to a piece of content can be limiting. For this project we needed more than one field for the title of the track. We needed to specify the artist of the track, which on Soundcloud is usually the owner of the Soundcloud account. In this case that was the ICA. So we had to use a naming convention for each track: the artist name, followed by a hyphen, then the title of the track, hardly an ideal situation but fine for these purposes.</p>
+<p>Reliability needs to be considered. How reliable is the API being connected to? For our project the main API was Soundcloud, and we never had any issues with uptime on the API (which could be one of the benefits of a paid service); however, Twitter is less reliable. Their API can be unreachable several times during the day, so any features of the website should take this into account. In our case, the featured artist filter that relies on Twitter to be active is disabled by default and only gets enabled once we have the data we need from Twitter (which happens in the background, not blocking the main experience).</p>
+<p>The length of time required data is available can be an issue. We didn’t harvest the data about the featured artist tweets coming in from Twitter; we just relied on the search APi of Twitter to give us any currently featured artists. The Twitter search API only gives results for the last six to nine days, so any data that needs to be more permanent than this would need to be harvested in a more concrete way.</p>
+<p>Some APIs have rate limits on them to stop their services being over-used by individual applications. Large parts of the Twitter API are rate limited (this is a recent change, a side-effect of being popular) and are detailed here: <a href="https://dev.twitter.com/docs/rate-limiting">https://dev.twitter.com/docs/rate-limiting</a></p>
+<p>If, for example, a website creates a request to the Twitter API for every user on the server side and includes the output of that API call in the returned HTML in some way, it won’t take many visitors to your website before Twitter stops giving you a response (it will actually return the number of available requests in the headers it returns to you), because it is limiting your usage on the IP address of the server. However, if you push the Twitter request code to the client side, i.e. you do it in Javascript in the users web browser, then it would take a lot of usage by that user to max out the rate limit. This approach only works when using unauthenticated requests to APIs for fear of exposing one’s authentication keys to the whole world in Javascript and opening up a security hole.</p>
+<p>Another issue to think about when using Social Media to store assets is one of copyright and ownership. The terms and conditions for each website should be studied carefully to understand the full implications of storing copyrighted material in such a repository.</p>
+<p>Browser support can be an issue. The methods we have been describing will not work in every browser, only modern browsers (typically Internet Explorer 8 and higher); however, experiences can degrade gracefully for older browsers. The benefit of using a resource such as Soundcloud is that all the information can still be served to these users, just in a less aesthetically pleasing manner.</p>
+<h2><b>Conclusions</b></h2>
+<p>Investing in a new social platform is a risky proposition in a small organisation with a tight team that is already managing ongoing activity and engagement on multiple platforms. This project was a fantastic way of kickstarting our engagement with another community channel as a kind of ‘halo’ project, with minimal management needed at first to generate the awareness of our presence on the new platform.</p>
+<p>In addition it demonstrated internally that we could use Soundcloud as a platform for our audio generally. It was easy to manage and gave us the opportunity to access people who are interested in engaging with us and our programme longer term. The legacy of the ICA followers on our Soundcloud channel from the project meant that we could leverage this afterwards. Now we push all our audio through Soundcloud (talks, interviews, artists Q&amp;As, etc) and use the new in-built podcast tool to publish to this dedicated audience of people who are interested in what we do. Their API means we can also pull this back into the main site and embed their tools back in the website when the website is redeveloped this year with a new CMS.</p>
+<p>It was also a great experience to be able to partner with other institutions, not only to get behind and be enthusiastic about the project, but also have the ability for themselves to push and share the project to their networks of subscribers without the ICA’s help or intervention. These partners helped increase the visibility and awareness of the project (and obviously traffic to it!) and awareness of the ICA’s programme in general.</p>
+<p><b>Soundworks was also a proving-ground internally at the ICA in looking at the broader landscape of what is possible with online art projects, and the desire to create ‘digital first’ experiences. It garnered a lot of internal advocacy and, as a result of the reach and response it got online, there is now a strong momentum within the ICA to take the lessons learned forward and invest heavily in the planning and realisation of more digital and social media projects this year.</b></p>
+<h2><strong>References</strong></h2>
+<p>One stop Arts, (June 2012), http://onestoparts.com/review-soundworks-bruce-nauman-days-ica</p>
+
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+J. Baskerville and D. McFarlane, ICA SOUNDWORKS: The CMS-less Website. In <i>Museums and the Web 2013</i>, N. Proctor &amp; R. Cherry (eds). Silver Spring, MD: Museums and the Web. Published January 31, 2013. Consulted <script type="text/javascript">document.write(full_date);</script> <!-- April 23, 2022 -->.<br/>
+https://mw2013.museumsandtheweb.com/paper/ica-soundworks-the-cms-less-website/<br/><br/><hr/>
+<!-- 
+<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js'></script>
+<script type="text/javascript">
+var tz = jstz.determine();
+tz.name();
+</script>
+
+
+<script type="text/javascript">document.write(tz.name()); 
+</script>UTCApril 23, 2022-->
+
+	<div id="comments">
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="../../wp-login7ec0.html?redirect_to=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fica-soundworks-the-cms-less-website%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+</div><!-- #content -->
+</div>

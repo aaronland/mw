@@ -1,0 +1,100 @@
+<div id="primary">
+<div id="full_width_content">
+			
+
+<h1 class="entry-title">Preserving History for Future Generations at The King Center</h1>
+<br/>
+
+<a href="../../user/indexa0c0.html?u=gdemet">George DeMet</a>, USA<br/><br/><b>Abstract</b><br/>
+<p>This paper will discuss the technology, process, and strategies utilized in the development of the King Center website and online digital archive, which provides online access to thousands of historical documents relating to Dr. Martin Luther King, Jr. and the Civil Rights Movement that have never before been available to the public.</p>
+<p><b>Keywords: </b>King Center, MLK, Martin Luther King, archive, Drupal, Alfresco</p>
+<h2><strong>1. Background</strong></h2>
+<p>The King Center (<a href="http://www.thekingcenter.org/">http://www.thekingcenter.org/</a>) is an organization founded by Coretta Scott King in 1968 that serves as a living memorial to Dr. Martin Luther King, Jr. and helps promote his philosophy of using nonviolent methods to address social problems and economic inequality.</p>
+<p>The King Center houses an archive of an estimated one million historic documents, including correspondence, speeches, handwritten notes, and photographs. Among these items are early drafts of famous speeches by Dr. King, letters and telegrams that he received from world leaders, and handwritten notecards where he jotted down his thoughts on race, religion, philosophy, and other topics. (King Center, 2012)</p>
+<p>In 2011, the King Center embarked on a massive effort to preserve and digitize these documents.  Key to this effort was a new website that would enable people everywhere to learn firsthand from the wealth of knowledge stored in the King Center archives and provide a resource where educators can point students for primary source materials on Dr. King and the Civil Rights Movement.  Another goal was to help the organization better connect with a new generation of people who have been inspired by Dr. King and provide tools to help spread awareness of his philosophy. (King Center, 2012)</p>
+<h2>2. Project Management and Governance</h2>
+<p>The King Center Imaging Project was driven by JPMorgan Chase’s Technology for Social Good group, who was responsible for gathering the talent and resources necessary for such a large undertaking. Key partners and vendors included AT&amp;T, EMC, design agency C&amp;G Partners, website developers Palantir.net, and Microstrategies, Inc. (King Center, 2012)</p>
+<p>The selection of vendors for the website design and development portions of the project occurred in early August, 2011. C&amp;G Partners performed the user research and design work, while Palantir.net was responsible for website development, implementation, and integration.</p>
+<p>The website needed to launch in time for the Martin Luther King, Jr. Day holiday on January 16, 2012, leaving only a few short months to define and prioritize functionality, conduct user research, design, development, perform external systems and data integration, quality assurance testing, and launch.</p>
+<p>In order to meet this aggressive timeline, the development team utilized a rigorous project management approach that incorporated daily team scrums, unified ticket and task management using Redmine, as well as regular check-ins with the other firms working on the project. In addition to these regularly-scheduled meetings, each firm also had direct access to other vendor teams so that obstacles could be unblocked as quickly as possible.</p>
+<p>Toward the later stages of development and quality assurance, principals from several of the firms working on the project also participated in weekly executive check-in calls to address any outstanding issues that had bubbled up from the project teams.</p>
+<h2>3. Development and Implementation</h2>
+<p>The website was built using the Drupal content management platform (<a href="http://www.drupal.org/">http://www.drupal.org</a>) and integrates with data from the King Center’s archives, which is managed using an on-site Alfresco (<a href="http://www.alfresco.com/">http://www.alfresco.com</a>) installation.  Archive data is stored in the cloud using AT&amp;T’s Synaptic Storage as a Service (<a href="https://www.synaptic.att.com/clouduser/html/productdetail/Storage_as_a_Service.htm">https://www.synaptic.att.com/clouduser/html/productdetail/Storage_as_a_Service.htm</a>), powered by EMC’s Atmos technology.</p>
+<p>Drupal was chosen as the content management platform for the website due to its flexibility and ability to integrate with other platforms, such as Alfresco, which had already been chosen to manage the on-site digital archive.</p>
+<p>Alfresco uses the Content Management Interoperability Services (CMIS) standard (<a href="http://wiki.alfresco.com/wiki/CMIS">http://wiki.alfresco.com/wiki/CMIS</a>) to connect to other systems via Web services. While Drupal has a CMIS integration module, it lacked sufficient maturity to be considered for production use for this project.</p>
+<p>The solution was to was to use Drupal’s queuing system in combination with the Migrate module (<a href="http://drupal.org/project/migrate">http://drupal.org/project/migrate</a>) and some custom Alfresco code to pull data from Alfresco, create Drupal nodes containing metadata for each item in the archive, and generate derivative image assets that were then pushed to the Atmos cloud. You can view this workflow as Figure 1 below:</p>
+<p><a href="../../wp-content/uploads/2013/02/demet-fig-1-web.png"><img loading="lazy" class="alignnone size-medium wp-image-3965" alt="demet-fig-1-web" src="../../wp-content/uploads/2013/02/demet-fig-1-web-300x210.png" width="300" height="210" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-1-web-300x210.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-1-web-427x300.png 427w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-1-web.png 691w" sizes="(max-width: 300px) 100vw, 300px"/></a></p>
+<p>The advantage of this solution is that everything visible to the public lives “in the cloud,” and does not rely on always-on access to the King Center’s local Alfresco instance. Only material that is flagged as “Web-ready” within Alfresco will be fetched by Drupal, and it’s also possible to push changes made in Alfresco to the public Drupal site.</p>
+<p>Figure 2 illustrates how a custom Migrate source class created for the Migrate module integrates with CMIS to not only fetch data relating to a document in the archive as well as allow for deletion of content from Alfresco as needed:</p>
+<p><a href="../../wp-content/uploads/2013/02/demet-fig-2-web.png"><img loading="lazy" class="alignnone size-medium wp-image-3966" alt="demet-fig-2-web" src="../../wp-content/uploads/2013/02/demet-fig-2-web-300x186.png" width="300" height="186" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-2-web-300x186.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-2-web-483x300.png 483w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-2-web.png 691w" sizes="(max-width: 300px) 100vw, 300px"/></a></p>
+<p>Figure 3 demonstrates how Drupal queues were used to pull image data from Alfresco and create Web-ready derivatives that were then pushed to Atmos. This was a very data-intensive operation, as the original documents in the King Center archives were scanned at 400dpi, making the primary images between 4MB and 100MB each; far too large to display on the website. The process of preparing for launch highlighted one of the key advantages of cloud computing; 12 virtual machines were used to generate thousands of Web-ready derivatives in the days leading up to the site launch.</p>
+<p><a href="../../wp-content/uploads/2013/02/demet-fig-3-web.png"><img loading="lazy" class="alignnone size-medium wp-image-3967" alt="demet-fig-3-web" src="../../wp-content/uploads/2013/02/demet-fig-3-web-300x208.png" width="300" height="208" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-3-web-300x208.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-3-web-431x300.png 431w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-3-web.png 691w" sizes="(max-width: 300px) 100vw, 300px"/></a></p>
+<p>All of the image assets that are displayed on the King Center site are stored in an Atmos cloud storage instance, provided for the project by AT&amp;T and EMC. The website connects to the Atmos service using a custom stream wrapper, and image IDs are tracked using a custom data storage table. Multiple accounts with different levels of access (i.e. read-only vs. read/write) were used by the development, staging, and production environments to ensure that data was not accidentally deleted during development and testing.</p>
+<p><a href="../../wp-content/uploads/2013/02/demet-fig-4-web.png"><img loading="lazy" class="alignnone size-medium wp-image-3968" alt="demet-fig-4-web" src="../../wp-content/uploads/2013/02/demet-fig-4-web-300x176.png" width="300" height="176" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-4-web-300x176.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-4-web-500x294.png 500w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/demet-fig-4-web.png 691w" sizes="(max-width: 300px) 100vw, 300px"/></a></p>
+<p>On the front-end of the site, a jQuery-based document viewer enables users to view content from the digital archive. While mobile browser compatibility was not a requirement for the initial launch, the use of jQuery (http://jquery.com) instead of alternatives like Flash ensured that users on a wide variety of devices would be able to view the site’s content. To achieve the ever-changing “mosaic” look on the archive pages, jQuery’s Masonry plugin was combined with randomized content lists generated by Drupal’s Views module. In addition to jQuery, CSS3 techniques, including the Sass stylesheet language and the Compass framework, were utilized for maximum flexibility and extensibility.</p>
+<p>In order to facilitate engagement and to better understand what items in the archive are most popular among users, social media sharing tools were added to each image and document page.</p>
+<h2>4. Performance Testing</h2>
+<p>While there was no way to predict how much traffic the site would receive on launch day, everyone involved with the project knew that there would be extensive publicity around the Martin Luther King, Jr. Day holiday, including promotional efforts by JPMorgan Chase at Madison Square Garden and on 16,000 ATMs nationwide. (Acquia, 2012)</p>
+<p>In order to ensure that the site could withstand even the most extreme traffic, the development team worked closely with the site’s hosting company, Acquia, and a cloud testing provider, SOASTA to subject the site to extensive pre-launch testing. Several rounds of testing were conducted in late December 2011 and early January 2012 to identify potential performance bottlenecks both with the site’s configuration and with the hosting architecture. Additional servers and load balancers were added to ensure that the site could accommodate more than 25,000 simultaneous users. (Acquia, 2012)</p>
+<p>The site’s launch ended up receiving coverage from international news outlets such as BBC News, USA Today, ABC News, and CNN, and a lot of traffic also came to the site via a “doodle” on Google’s homepage that brought people to the site through search. In all, over 175,000 unique visitors visited the site on launch day in January 2012. In the weeks following the launch, after traffic leveled out, the number of servers and load balancers was reduced. (Acquia, 2012)</p>
+<h2>5. Post-launch<b id="internal-source-marker_0.394528302596882"></b></h2>
+<p>Since the site’s launch, additional information has been added to provide historical context for material from the archive. In January 2013, new functionality was added to the site to enable visitors to “share their dreams” online, and to browse dreams that others have posted, either by topic or by geographical region (<a href="http://www.thekingcenter.org/dreams">http://www.thekingcenter.org/dreams</a>). The King Center’s site is a living and growing tribute not just to the work of Dr. King, but also to the enduring relevance that his philosophy plays in our world today.</p>
+<h2>Acknowledgements<strong> </strong></h2>
+<p>Arthur Foelsche, Palantir.net, Inc.</p>
+<p>Bec White, Palantir.net, Inc.</p>
+<p>Rick Rose, former IT Director, The King Center</p>
+<p>Anand Sethupathy, JPMorgan Chase</p>
+<h2>References</h2>
+<p>The King Center (2012), “About the Digital Archive” and “Digital Archive Technology”. Consulted January 31, 2013. Available at http://www.thekingcenter.org/archive/about-the-archive and http://www.thekingcenter.org/digital-archive-technology</p>
+<p>Acquia (2012), “The King Center”. Consulted January 31, 2013. Available at <a href="https://www.acquia.com/resources/case-study/king-center">https://www.acquia.com/resources/case-study/king-center</a></p>
+
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+G. DeMet, Preserving History for Future Generations at The King Center. In <i>Museums and the Web 2013</i>, N. Proctor &amp; R. Cherry (eds). Silver Spring, MD: Museums and the Web. Published February 1, 2013. Consulted <script type="text/javascript">document.write(full_date);</script> <!-- April 23, 2022 -->.<br/>
+https://mw2013.museumsandtheweb.com/paper/preserving-history-for-future-generations-at-the-king-center/<br/><br/><hr/>
+<!-- 
+<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js'></script>
+<script type="text/javascript">
+var tz = jstz.determine();
+tz.name();
+</script>
+
+
+<script type="text/javascript">document.write(tz.name()); 
+</script>UTCApril 23, 2022-->
+
+	<div id="comments">
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="../../wp-login25e3.html?redirect_to=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fpreserving-history-for-future-generations-at-the-king-center%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+</div><!-- #content -->
+</div>

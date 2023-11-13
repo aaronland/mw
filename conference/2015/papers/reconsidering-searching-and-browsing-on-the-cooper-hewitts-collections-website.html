@@ -1,0 +1,465 @@
+<div id="primary">
+<div id="content" role="main">
+<article id="post-1327" class="post-1327 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">Reconsidering searching and browsing on the Cooper Hewitt’s Collections website</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/sambrenner/">Sam Brenner</a>, Cooper Hewitt, Smithsonian Design Museum, USA</p><h2>Abstract</h2>
+Recently at the Cooper Hewitt, Smithsonian Design Museum, we completed an overhaul of the website&#39;s search functionality that allows us to take broad, open queries and return meaningful results. These changes include a migration from Solr to Elasticsearch as the back-end provider, the incorporation of non-objects into the search index, and a redesign of the front-end to expose sorting and faceting functionality to the user. In our paper, we discuss the experimentation and reasoning that led to our decision to begin the rebuilding, the implementation of the changes in our site framework, and the resulting speed and accuracy improvements.<p></p>
+<p><b>Keywords:</b> search,interactive,design,browsing,Elasticsearch</p>
+<h2><b>1. Introduction</b></h2>
+<p>Recently, the museum sector has gravitated towards search interfaces capable of “exposing the breadth of the collection,” “encouraging deeper exploration” (Solas, 2010), and providing “guided routes for less knowledgeable visitors” (Rainbow, Morrison, &amp; Morgan, 2012). To this end, a comparison of museum collection websites showed that eight of fourteen surveyed used the same interface to display results for “searching” (the querying of a database to find documents meeting a user’s stated goal) and “browsing” (the exploration of a database without a stated goal). Because browsing is better served by returning more complete records, such as those with images or rich descriptions, using a common interface for searching and browsing means that sacrifices must be made with regard to the accuracy of search results. It is the desire to overcome the “disappointing quality of search results” despite inconsistent metadata (van Hooland, Bontemps, &amp; Kaufman, 2008) that pushes museums to blur the line between their search and browse interfaces, to the point where the interfaces are not effective at either. Conversely, the idea that one database might be expressed through multiple interfaces (Manovich, 2000) is a powerful option museums have to allow their collections to be interpreted dynamically and subjectively, thus uncovering new meanings and shift in “knowledge/power relationships between museums and users” (Cameron, 2003). Towards this goal, it is important to acknowledge and adjust biases depending on how a user believes they are interacting with the museum’s database.</p>
+<p>This paper will first explore the blurring between search and browse interfaces that has become apparent in museum collection websites through comparison and analysis. It will then describe a search interface designed at the Cooper Hewitt, Smithsonian Design Museum with three objectives: first, to provide accurate search results despite a data source containing records of unpredictable completeness and cleanliness; second, to control the degree to which our institutional narrative expresses itself in the result set; and third, to expose the search engine’s powerful back-end through a distinctly non-browse interface that prioritizes a user’s ability to find what they are looking for.</p>
+<h2>2. <b>Comparison of museum search interfaces</b></h2>
+<p>To compare the search and browse functionalities of museums’ collections websites, we revisited the set of websites compared by Nate Solas in his paper <i>Hiding Our Collections in Plain Site: Interface Strategies for “Findability” </i>(Solas, 2010) (removing ACE2, as it does not reflect one specific institution, and adding the Cooper Hewitt, Met, Whitney, and Tate) to see how the museums present their search results on the front-end and what, if any, distinctions between “searching” and “browsing” they make (table 1). Additionally, we compared what potential for narrowing results existed on a search page (through facets) versus what potential for browsing existed from an object page (through links to related content).</p>
+<table>
+<tbody>
+<tr>
+<th>Institution</th>
+<th>URL</th>
+<th>Mentions “Search”</th>
+<th>Mentions “Browse” or “Explore”</th>
+<th>Browse Option</th>
+<th>Facet Categories</th>
+<th>Related Links from Object Page</th>
+<th>Defaults</th>
+</tr>
+<tr>
+<td>Cooper Hewitt, Smithsonian Design Museum</td>
+<td>http://collection.cooperhewitt.org</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Separate Interface</td>
+<td>Item Type, Display Status, Geography, Department, Medium, Type, Width, Height, Depth, Image Status</td>
+<td>Colors, Conservation Endeavors, Countries, Departments, Exhibitions, Locations, People, Periods, Roles, Tags, Types, Videos</td>
+<td>Results Without Images: Shown, Sort: Descending Relevance</td>
+</tr>
+<tr>
+<td>Brooklyn Museum</td>
+<td>http://www.brooklynmuseum.org/opencollection/collections/</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Separate Interface</td>
+<td>None</td>
+<td>Objects, Collections, Locations, Exhibitions, Selected Research Topics</td>
+<td>Results Without Images: Shown, Sort: Descending Relevance</td>
+</tr>
+<tr>
+<td>Indianapolis Museum of Art</td>
+<td>http://www.imamuseum.org/collections</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Separate Interface</td>
+<td>Collections, Maker, Materials, Object Type, Technique, Colors</td>
+<td>People, Collection,Objects</td>
+<td>Results Without Images: Shown, Sort: Descending Relevance</td>
+</tr>
+<tr>
+<td>Metropolitan Museum of Art</td>
+<td>http://www.metmuseum.org/collection/the-collection-online</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Same Interface</td>
+<td>Artist/Maker/Culture, Object Type/Material, Geography, Date/Era, Department</td>
+<td>Gallery</td>
+<td>Results Without Images: Shown, Sort: Not Stated</td>
+</tr>
+<tr>
+<td>Museum of Fine Arts, Boston</td>
+<td>http://www.mfa.org/collections/</td>
+<td>Yes</td>
+<td>No (but exists functionally)</td>
+<td>Separate Interface</td>
+<td>Collections, Classification, Display Status</td>
+<td>Collections, Classifications</td>
+<td>Results Without Images: Shown, Sort: Descending Relevance</td>
+</tr>
+<tr>
+<td>Museum of Modern Art, NY</td>
+<td>http://www.moma.org/explore/collection/index</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Separate Interface</td>
+<td>Status, Department, Decade</td>
+<td>People, Department, Classification, Art Terms</td>
+<td>Results Without Images: Shown, Sort: Not Stated</td>
+</tr>
+<tr>
+<td>Phoebe A. Hearst Museum of Anthropology</td>
+<td>http://pahma.berkeley.edu/delphi/</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Same Interface</td>
+<td>Name (used to signify Type), Collection, Context, Location, Culture, Material, Technique, Color</td>
+<td>Name (used to signify Type), Collection, Context, Location, Culture, Material, Technique, Color</td>
+<td>Results Without Images: Hidden, Sort: Not Stated</td>
+</tr>
+<tr>
+<td>Powerhouse Museum</td>
+<td>http://www.powerhousemuseum.com/collection/database/menu.php</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Same Interface (except for Themes)</td>
+<td>Image Status, Display Status</td>
+<td>Subjects, Objects, Tags</td>
+<td>Results Without Images: Shown, Sort: Not Stated</td>
+</tr>
+<tr>
+<td>San Francisco Museum of Modern Art</td>
+<td>http://www.sfmoma.org/explore/collection</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Separate Interface</td>
+<td>Type</td>
+<td>Other works by same Artist</td>
+<td>Results Without Images: Shown, Sort: Not Stated</td>
+</tr>
+<tr>
+<td>Seattle Art Museum</td>
+<td>http://www1.seattleartmuseum.org/eMuseum/code/emuseum.asp</td>
+<td>Yes</td>
+<td>No (but exists functionally)</td>
+<td>Same Interface</td>
+<td>None</td>
+<td>None</td>
+<td>Results Without Images: Shown, Sort: Not Stated</td>
+</tr>
+<tr>
+<td>Tate</td>
+<td>http://www.tate.org.uk/art/</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Same Interface</td>
+<td>Image Status, Object Status, Date, Type, Related Person, Style, Subject, JMW Turner-specific facets</td>
+<td>Creator, Related Objects, Type, Date, Style, Subject</td>
+<td>Results Without Images: Shown, Sort: Descending Relevance</td>
+</tr>
+<tr>
+<td>Victoria and Albert Museum</td>
+<td>http://collections.vam.ac.uk/</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Same Interface</td>
+<td>Category, Collection, Material, Place, Technique</td>
+<td>Category,Collection, Material, Subject, Technique, Name, Place, Gallery</td>
+<td>Results Without Images: Shown, Sort: Not Stated</td>
+</tr>
+<tr>
+<td>Walker Art Center</td>
+<td>http://www.walkerart.org/collections/</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Same Interface</td>
+<td>Decade, Type, Image Status</td>
+<td>Artist</td>
+<td>Results Without Images: Hidden, Sort: Descending Date Created (for browse), Descending Relevance (for search)</td>
+</tr>
+<tr>
+<td>Whitney Museum of American Art</td>
+<td>http://collection.whitney.org/</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Same Interface</td>
+<td>None</td>
+<td>None</td>
+<td>Results Without Images: Shown, Sort: Ascending Alphabetical by Person (for browse), Not stated (for search)</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1: c<span style="line-height: 1.5;">omparison of search front-ends for collections websites of various museums as they appeared on January 27, 2015</span></p>
+<p>In the comparison, we found that the conflation of search and browse results pages is common: eight of the fourteen museums implemented such a shared interface. This makes sense as a tactic for developing a collections site, because search engines are indeed capable of providing all the result sets that a browse interface requires, and there is no need to build multiple interfaces when you can just send users to a prefiltered search results page. However, it raises two issues. First, it puts an undue burden on users who just want to browse, for they now have to navigate an interface designed for an entirely different purpose. Second, it sacrifices a potentially better search result for the best “well-documented” or best “visually stimulating” result. The Walker and the Hearst, for example, hide search results that do not have images, giving their collections metadata a false appearance of overall completeness. The Met employs a default relevance ranking that seems to favor works currently on display over search-term relevance: the top three search results for the term “cat” are on-display works by Pablo Picasso, Jackson Pollock, and Henri Matisse respectively, but why they have been chosen as relevant to “cat” is unclear. It is not until the fifth result—an off-display painting by Francisco Goya—that a work depicting a cat appears in the results (<a href="https://web.archive.org/web/20150130194315/http://www.metmuseum.org/collection/the-collection-online/search?ft=cat">https://web.archive.org/web/20150130194315/http://www.metmuseum.org/collection/the-collection-online/search?ft=cat</a>). The Whitney seems to group results by collection: the first page of results for the search term “cat” consists mostly of a set of Edward Hopper sketches, some of which depict a cat but most of which do not, despite the appearance of more cats by different artists on subsequent pages (<a href="http://collection.whitney.org/search/object/cat?page=1">http://collection.whitney.org/search/object/cat?page=1</a>).</p>
+<p>The survey also reveals a general lack of browsing opportunities outside of the search results page. If the search interface must function as a browsing tool, it would make sense that the page of an individual search result have many more links to relevant parts of the collections website. While its object pages are often rich in supplemental texts and images, the Seattle Art Museum provides no links to other pages. After clicking on an object from a search or browse page, the user is at a dead end; their only option is to click the back button. The Met gives users the ability to see what else appears in the same physical space at the museum if an object is on display, but that browsing experience ends once a user has clicked on every item in the gallery.</p>
+<p>Whether or not these decisions were made to improve the visual appearance of a search results page, the effect is the same: collections sites with a common interface for searching and browsing sacrifice the quality of search results for bias and a single institutional narrative. They create a set of search results whose ordering logic is hard to discern, suggesting a strong narrative that the museum wishes to impose on its search users. Fiona Cameron writes that “digital technologies have the potential to rewrite the meaning and significance of collections” (Cameron, 2003). If the goal for search results is to reach a point “where every item has the same significance as any other” (Manovich, 2000), then we must work to remove these narratives and biases from the interface that provides search results.</p>
+<p>To do this, we immediately confront the challenge of providing accurate search results despite collection metadata of inconsistent quality. Some of the surveyed websites begin to tackle these issues. The Brooklyn and Victoria &amp; Albert museums, while their default relevancy rankings are unclear, explicitly allow the user to opt in to seeing only the higher quality records, a step towards being transparent about the underlying database. Tate provides links to a work’s creator, type, date, style, subject, and related works from a search result’s detail page, which creates a simple and expansive browsing experience.</p>
+<p>To approach the problem on our own, we set out to build a search interface whose design matched its purpose so users would not have to “switch gears” mentally between browsing and searching while using the site. We would allow them to easily make the transition should they desire to do so. We assessed the ability of our underlying search engine to make the most out of existing data, give us control over the algorithms for assessing relevance, and facilitate the addition of new metadata.</p>
+<h2><b>3. The Cooper Hewitt search stack, v1</b></h2>
+<p>The Cooper Hewitt’s collections database contains references to about 275,000 objects, both in our collection and those we have at one time lent from other institutions. At minimum, an object’s metadata will include an accession number and department. Richer records include images, justifications, label copy, related constituents, and more. We further supplement these records with curator-generated tags, object colors, image complexity scores, and other metadata gathered from bespoke tools. This information is made immediately available through our “browse” interface, where users can explore “first-class items” (objects, exhibitions, people, tags, etc.) in our collection and see how they are linked together. We also provide a “search” interface that allows the querying of our collections for a user-supplied term.</p>
+<p>These interfaces, while functional, were flawed in a few ways. We effectively had broken up search into two features, “normal search” and “fancy search.” A “normal search” would query a field in the search index called “fulltext” that was a concatenation of an object’s title, description, associated people, and other key details. To speed the process up, it excluded facets (groupings of results based on their properties). To improve the appearance of the results page, results were sorted by image complexity, which placed a heavy (albeit documented and open-sourced) narrative on search results (Walter, 2013; http://labs.cooperhewitt.org/2013/default-sort-or-what-would-shannon-do/). The ability to filter was provided on the results page but was hidden behind a drop-down menu. Faceted results and the ability to search on specific fields, such as date ranges, colors, or departments, were part of our “fancy search” interface. Access to the “fancy search” page was available from the collection.cooperhewitt.org/search page or from a search result page, and as such comprised only 6.81 percent of all searches. Fancy search queries were noticeably slower than normal searches, often exceeding 1,500 milliseconds, so its relegation on our Web views was intentional. The results page for both “normal” and “fancy” searches arranged results in the a three-column grid of images that we used throughout our site (figure 1). Through an accordion menu, collapsed by default, both pages allowed results to be sorted and filtered. The only difference was that the “fancy search” page included facets, laid out as sentences across the top.</p>
+<div id="attachment_1248" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/oldsearch.png"><img aria-describedby="caption-attachment-1248" loading="lazy" class="size-large wp-image-1248" src="../../wp-content/uploads/2015/01/oldsearch-1024x836.png" alt="Figure 1: The former search results page of http://collection.cooperhewitt.org" width="584" height="477" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/oldsearch-1024x836.png 1024w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/oldsearch-300x245.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/oldsearch-367x300.png 367w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/oldsearch.png 1157w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-1248" class="wp-caption-text">Figure 1: the former search results page of http://collection.cooperhewitt.org</p></div>
+<p>The search results interface was the same interface that we used for browse pages. These pages—effectively every page on the website <i>except</i> for search results—pulled either directly from our MySQL database or from a predetermined query on the search engine, and displayed the results as a list or image grid on the front-end. They were (and remain) accessible by a drop-down in the header of every page called “Explore the Collection” that contained links to pages for first-class items in our database (figure 2). Results on these pages were similarly sorted by image complexity.</p>
+<div id="attachment_1277" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.04.56-PM.png"><img aria-describedby="caption-attachment-1277" loading="lazy" class="size-large wp-image-1277" src="../../wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.04.56-PM-1024x708.png" alt="Figure 7: The &#34;Explore the Collection&#34; dropdown menu, in its expanded state" width="584" height="404" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.04.56-PM-1024x708.png 1024w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.04.56-PM-300x207.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.04.56-PM-434x300.png 434w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.04.56-PM.png 1066w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-1277" class="wp-caption-text">Figure 2: the “Explore the Collection” drop-down menu, in its expanded state</p></div>
+<p>Furthermore, our initial implementation of the search back-end stopped short of a complete search index of our database. We were only indexing objects—the things we actually put on display at the museum—meaning that the existence of non-objects in our collection (people, media, types, etc.) could only be revealed through faceting. By using Google Refine, we revealed that searches for a person’s name comprised 11.25 percent of all searches. While these searches would turn up objects for a person (if we had them), it would take two additional clicks to arrive at the person’s page, where a biography, list of collaborators, and complete list of objects could be seen.</p>
+<p>The final issue was the difficulty in updating our search index. Due to our search provider, Apache Solr, requiring a schema file to be created for each indexed datum, the process of adding new items to the search index had a fair amount of overhead. The schema file, an XML document that tells the search engine what kind of data to expect, was 284 lines for objects alone.</p>
+<p>Considering these issues, it was proposed that we rebuild the both the front- and back-ends of our search functionality. Specifically, it was suggested that we set up a system with which we can easily index and retrieve non-objects, and that we update the front-end to accommodate these changes. From there, we would be able to better address further issues such as result relevancy and accuracy. Before beginning this work, we also opted to reexamine our use of Solr as a search provider. Solr, whose use by museums has been well documented (Henry &amp; Brown, 2012; Rainbow, Morrison, &amp; Morgan, 2012; Solas, 2010), is a powerful and widely used open-source search provider built on top of Apache Lucene. It is responsible for storing and retrieving indexed records. Specifically, we wanted to weigh its value against a relative newcomer to the available set of search providers, Elasticsearch.</p>
+<h2>4. <b>Elasticsearch and Solr: Reconsidering the search provider</b></h2>
+<p>Elasticsearch is slowly gaining popularity, having reached version 1.0.0 on February 12, 2014, after four years of development. It is also built on top of Lucene, and therefore the feature checklist between the it and Solr is quite similar. Indeed, many of the issues highlighted above regarding the search provider are not at all issues with Solr, and the changes we made could have been implemented with either provider.</p>
+<p>We were attracted to Elasticsearch for a few reasons. Whereas Solr trades a complex schema for a relatively simple query language (figures 3 and 4), Elasticsearch makes more assumptions at index time and then favors a more verbose querying language at retrieval time (figure 5). Elasticsearch is “schemaless,” meaning that one does not have to tell the search engine what types of metadata to expect; rather, one can just throw a JSON document at it and rely on Elasticsearch to figure it out. A core principle underlying the decisions we make in the architecture of our collections site, as stated in the readme of Flamework, the code library that forms the foundation of the site, is that “the speed with which the code running an application can be re-arranged, in order to adapt to circumstances [is preferable], even if it’s at the cost of ‘doing things twice’ or ‘repeating ourselves’” (Cope, 2012; <a href="https://github.com/exflickr/flamework/blob/master/docs/philosophy.md">https://github.com/exflickr/flamework/blob/master/docs/philosophy.md</a>). At first glance, we found this feature of Elasticsearch to fit with that philosophy.</p>
+<pre style="border: 1px solid #000000; padding-left: 30px;">&lt;field name=&#34;description&#34; type=&#34;text_en_splitting&#34; indexed=&#34;true&#34; stored=&#34;false&#34; required=&#34;false&#34; multiValued=&#34;false&#34; /&gt; 
+&lt;field name=&#34;justification&#34; type=&#34;text_en_splitting&#34; indexed=&#34;true&#34; stored=&#34;false&#34; required=&#34;false&#34; multiValued=&#34;false&#34; /&gt;
+</pre>
+<p>Figure 3: two lines from Solr schema XML file</p>
+<pre style="border: 1px solid #000000; padding-left: 30px;">curl &#34;localhost:8983/solr/query?q=cat&amp;facet=true&amp;facet.field=location&#34;
+</pre>
+<p>Figure 4: an example cURL statement to query Solr and facet the results</p>
+<pre style="border: 1px solid #000000; padding-left: 30px;">curl -XPOST &#34;localhost:9200/myIndex/_search&#34; -d &#39;
+{
+   &#34;query&#34;: {
+       &#34;query_string&#34;: {
+           &#34;query&#34;: &#34;cat&#34;
+       }
+   },
+   &#34;aggregations&#34;: {
+       &#34;by_location&#34;: {
+           &#34;terms&#34;: {
+               &#34;field&#34;: &#34;location&#34;
+           }
+       }
+   }
+}&#39;
+</pre>
+<p>Figure 5: an example cURL statement to query Elasticsearch and facet (aggregate, in Elasticsearch parlance) the results. JSON is formatted for readability.</p>
+<p>When research began on the choice of Solr and Elasticsearch, we immediately found the descriptive nature of Elasticsearch’s query language to be more intuitive and powerful than the combination of Solr’s schema files and URL querying method. Elasticsearch minimizes configuration time, makes simple queries easy (albeit with a little extra JSON required) and complex queries within grasp.</p>
+<h2><b>5. Back-end</b></h2>
+<p>After getting Elasticsearch up and running on our development server, the first step was to switch our process for indexing the collection data from Solr to Elasticsearch. Before being placed in the search index, a record is extracted from TMS, filtered to remove information we don’t need, and reorganized to be better suited to Web queries. The data is then saved to a MySQL database from which we seed our search index (figure 6, see end of paper). A script subsequently runs through every row in a given MySQL table and formats it as a JSON object that can be sent to our search provider (figure 7, see end of paper). Because Solr and Elasticsearch both take JSON objects as indexable items, I was able to reuse this code. This process, which we call “prepping,” was previously dependent on every field to be indexed having a presence in the Solr schema. Switching to Elasticsearch removed this requirement, which made the addition of new data to the search index a trivial task.</p>
+<p>Previous papers that have mentioned Solr have noted among its strengths an ability to “do things on the fly,” “adapt to changing requirements” (Rainbow, Morrison, &amp; Morgan, 2012), and handle “diverse data sources” (Henry &amp; Brown, 2012). We found that Elasticsearch is even better suited to these challenges. A specific case of this came with our object tagging tool, Tagatron. Concurrently with the search reimplementation, we had been developing Tagatron, a Web application whose purpose was allow curators to assign tags for objects. To facilitate quick development, we decided Tagatron would live as a standalone NodeJS application on Heroku that would get museum data from our API and store curator-entered data in a MongoDB instance. Knowing that the process of assigning objects with tags would become a perennial task for curators, it was also important that we write lightweight code that could change to meet curator demands.</p>
+<p>Before solidifying a workflow to store the extracted tags in our MySQL database, we leaned on Elasticsearch to merge tags with data from TMS. In the search index prep function, a call would be made to Tagatron to check if there was additional data for a given object. If so, Tagatron would return the tags as a JSON object which would be plugged right in to Elasticsearch. This immediately increased the quality of the index and was capable as a temporary data store until we planned a long-term database solution for tags. In this sense, Elasticsearch better allows us to realize our philosophy that repeating ourselves in the long term is okay if it allows us to try different implementations in the heat of the moment. Furthermore, it allows us to easily improve our metadata quality outside of the framework of a collections management system.</p>
+<h3><b>Back-end: Mappings and analysis</b></h3>
+<p>It was realized in this process that Elasticsearch’s schemaless abilities had to be met halfway because its assumptions on the type of a field were often wrong or required clarification. These clarifications are handled through Elasticsearch’s “mappings” API, which is comparable to Solr’s schema.</p>
+<p>Tags proved an interesting case with regard to mappings because of “language analysis,” a catchall term for a collection of algorithmic processes that are applied to fields assumed to be strings. It includes processes such as <i>tokenization</i>, in which a string is separated into tokens (essentially splitting a string on spaces, commas, hyphens, etc.); <i>stemming</i>, in which a string is reduced to its root element (e.g., “embroidery” and “embroidered” both become “embroider”); and <i>stopwording</i>, in which certain common English words such as “the” and “and” are ignored. Having tags undergo this process was good because it allowed an object tagged as “barrel vault” to show up in results for the general query “vaulted.” On browse pages, however, where a user can look through all possible tags and select one to see its associated objects, tags need to be taken literally. To do this, we had to instruct Elasticsearch through its mappings API to duplicate a tag at index time, making one version to be analyzed and one version to be taken literally.</p>
+<p>While these mappings took effort to identify and implement, overall we believe that overriding Elasticsearch’s default settings with a few custom ones is a simpler and easier-to-read process than implementing a Solr schema.</p>
+<h3><b>Back-end: Relevancy scores</b></h3>
+<p>For every document returned from a query, the search engine provides a relevancy score. Scoring is a function of Lucene (Elasticsearch, n.d.; http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/practical-scoring-function.html) and is therefore the same in both Elasticsearch and Solr. Lucene does this using a “practical scoring function,” an algorithm combining term frequency, overall field length, and other factors to assign relevancy scores to every result. This algorithm is not set in stone and can be modified in a number of ways to alter how relevancy is calculated. Indeed, our survey found that the default relevancy is often manipulated to suppress poor records, which in turn biases search results towards well-documented objects, reinforcing old narratives on a museum’s collection. We were doing this as well, with our image complexity sort. Favoring objects with complex images is well suited to a novel browse interface because it explores a new narrative in our collection. With regard to search, however, we decided that striving for the most accurate search results would allow us to focus efforts on removing as much bias as we could from the results ranking.</p>
+<p>When we rebuilt the back-end, we told Elasticsearch to search on every indexed field instead of one amalgamated field as we had previously done in Solr. This gave us full control over relevancy in a number of ways that provided an immediate improvement in perceived result ranking and worked to reduce a bias towards certain records.</p>
+<ul>
+<li>One aspect of Lucene’s scoring algorithm is called the field-length norm, which assumes that when “a term appears in a short field, such as a title field, it is more likely that the content of that field is <i>about</i> the term than if the same term appears in a much bigger body field” (Elasticsearch, n.d.; <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/scoring-theory.html#field-norm">http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/scoring-theory.html#field-norm</a>). While this would have been a safe assumption if all of our records were of equal completeness, that was not the case, and so the inclusion of a field-length norm ended up favoring records containing shorter texts. By modifying a flag in Elasticsearch’s mapping, we turned this off so the search engine would be able to prioritize the content, not the amount, of metadata.</li>
+<li>The benefit to field-length norm was that it intended to make fields like “title” more important over fields like “description.” This is a worthwhile goal, so we recreated it manually by boosting a search term appearing a person’s “name” or object’s “title” field. We initially saw cases where a person’s record would be ranked below that person’s objects and even below other people, because those entries were more complete and mentioned the person’s name more often.</li>
+<li>We tried multiple settings of image importance in search results. This is a case where Elasticsearch’s plain-and-verbose querying language gave us control and facility over a complex aspect of search engines. We were able to quickly try out various settings: no importance to images, a direct relationship between image count and result ranking, and a relationship scaled on the natural logarithm of the image count. We settled on a configurable solution: the search interface would ignore image count to provide results free of bias towards complete records (if a user searches for an object we don’t have an image of, we should not punish the user for our incomplete metadata by burying the object in the results), and the browse interface would provide results with boosted images to create a more visually pleasurable experience. Users of both interfaces would also have to option to see results with or without images.</li>
+</ul>
+<p>By giving us control over techniques such as language analysis and relevancy scoring, the search back-end facilitated our ability to adjust the degree to which we bias search results, working towards placing our object records on a more equal footing. Designing a back-end that allowed for multiple narratives to be expressed allowed us more freedom in designing a front-end that further distinguished search from browse.</p>
+<h2><b>6. Front-end</b></h2>
+<h3><b>Introduction</b></h3>
+<p>In his user experience textbook <i>Don’t Make Me Think</i>, Steve Krug writes that “using a site that doesn’t make us think about unimportant things feels effortless, whereas puzzling over things that don’t matter to us tends to sap our energy and enthusiasm—and time… if Web pages are going to be effective, they have to work most of their magic at a glance” (Krug, 2006). He notes the importance of designing “self-evident” interfaces, where users do not have to second guess themselves or question whether a link on the page is the link they are looking for. Assessing the self-evidency of our search interface was a useful tactic for making our search functionality distinct from our browse functionality. We cannot assume that a user looking for a specific item or collection of items is the same as a user looking to explore and observe our collection. Therefore, we must provide them with different prompts and different interfaces.</p>
+<h3><b>Front-end: Distinguishing browse</b></h3>
+<p>We are helped towards this end by the fact that a browsing interface was already built in to our website. By linking as many relevant first-class items (e.g., objects, people, exhibitions, tags) from an object’s individual page, we provided users with an open-ended means of traversing our database that allows users to compose their own narratives. We also placed links to the overview pages of first-class items in a drop-down menu in the header of every page. Previously, it was labeled “The Collection,” but to make its purpose more self-evident we updated it to say “Explore the Collection” (see figure 2).</p>
+<h3><b class="size-large wp-image-1277">Front-end: Distinguishing search</b></h3>
+<p>Also in the header of every page was a search input field containing the placeholder text “Search the Collection” with a magnifying glass icon to its right—a clear, self-evident entry point. Submitting the search request, either by clicking the icon or pressing the return key, unfolded a drop-down below the icon that listed some potential categories for search: <em>The collection</em>, <em>People</em>, <em>Objects</em>, <em>Media</em>, <em>Exhibitions</em>, and <em>Fancy search</em> (figure 8). A selection here was required before the search results page would be displayed.</p>
+<div id="attachment_1280" style="width: 981px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.15.51-PM.png"><img aria-describedby="caption-attachment-1280" loading="lazy" class="size-full wp-image-1280" src="../../wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.15.51-PM.png" alt="Figure 8: The search dropdown (this screengrab is from our website&#39;s old visual identity)" width="971" height="251" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.15.51-PM.png 971w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.15.51-PM-300x78.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.15.51-PM-500x129.png 500w" sizes="(max-width: 971px) 100vw, 971px"/></a><p id="caption-attachment-1280" class="wp-caption-text">Figure 8: the search dropdown (this screengrab is from our website’s old visual identity)</p></div>
+<p>To make this interface more self-evident and shift the primary function of this tool further towards searching, we decided to eliminate the drop-down and have searches via the global input field go straight to the results page. Because of the control we had taken over search-result relevancy, we could now be confident that the correct result would show up toward the top, regardless of what category it falls in to.</p>
+<p>Previously, we had two separate results pages: one for “fancy search” that included facets and one for “normal search” that did not. Our back-end changes had allowed us to facet results by default, which enabled us to consolidate these pages. We also redesigned the way facets were displayed, placing them in a sidebar where they would be more obvious to users (figure 9).</p>
+<div id="attachment_1296" style="width: 996px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.32.59-PM.png"><img aria-describedby="caption-attachment-1296" loading="lazy" class="size-full wp-image-1296" src="../../wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.32.59-PM.png" alt="Figure 9, the redesigned search results page" width="986" height="963" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.32.59-PM.png 986w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.32.59-PM-300x293.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/Screen-Shot-2015-01-31-at-6.32.59-PM-307x300.png 307w" sizes="(max-width: 986px) 100vw, 986px"/></a><p id="caption-attachment-1296" class="wp-caption-text">Figure 9: the redesigned search results page</p></div>
+<h2>7. <b>Remaining issues</b></h2>
+<p>In framing our search interface around issues of bias, narrative, and self-evidency, we encountered a number of new issues with our collections site. First is the need to be clearer in expressing to the user our biases, where they exist. This might include giving users control over our result-scoring algorithms and sharing with users what our prepped-for-search object records look like. Second is the need to further distinguish search from browse by exploring new techniques for each. For search, this could include a typeahead input box that attempts to automatically complete a few letters in the search box towards terms that we are confident we know (for example, typing “Sut” would suggest “Ladislav Sutnar”), a feature that would not work in a combined search/browse interface because it limits exploration. For browse, this could include novel interfaces like SFOMA ArtScope (<a href="http://www.sfmoma.org/projects/artscope/index.html">http://www.sfmoma.org/projects/artscope/index.html</a>) or data visualization experiments. The power to question institutional narratives and see the collection in a new light lies in these browse interfaces; our inclusion of as many links as possible is only a first step towards this goal.</p>
+<h2><b>8. Conclusion</b></h2>
+<p>The trend towards combining search and browse interfaces for museum-collection websites helps neither users wanting to search nor users wanting to browse. Specifically, search functionality is weakened because in order for the interface to support browsing, the interface must provide a richer, better-looking set of results that reflects the museum’s curatorial interests and foci over its raw collection. A search back-end can assist browse interfaces to expose new narratives. However, we must create new interfaces in which to explore this functionality, not add it in to a search interface designed for something else.</p>
+<p>By rebuilding our search back-end using Elasticsearch, we were able to gain control over techniques like language analysis and relevance scoring that will help us improve the quality of both our search and browse interfaces. By redesigning the front-end to help distinguish searching from browsing, we helped users reach their goals more efficiently. In the long term, this will help our search interface find items more accurately despite often inconsistent metadata, and it will help our browse interfaces take on new, experimental forms that enable users to discover new meaning in our museum’s collection.</p>
+<pre style="border: 1px solid #000; padding-left: 30px;">id: 18624533
+titles: {&#34;1&#34;:{&#34;ck-xx&#34;:&#34;Design for Sportshack&#34;},&#34;2&#34;:{&#34;en-uk&#34;:&#34;Design for \&#34;Sportshack\&#34;&#34;}}
+created: 888018146
+display_country: USA
+year_start: 1940
+year_end: 1940
+on_display: 1
+is_public: 1
+department_id: 35347493
+source_id: 35352321
+country_id: 23424977
+status_id: 1
+period_id: 0
+display_medium: Brush and gouache, black ink, airbrush and gouache over stencil, graphite on illustration board
+media_id: 68266335
+accession_number: 1988-101-1515
+is_bucket: 0
+type_id: 35237093
+tms_id: 187103
+count_images: 2
+year_acquired: 1988
+tms_extras: {&#34;display_date&#34;:&#34;1940&#34;,&#34;markings&#34;:&#34;Stamps: Black gummed label at lower right: DONALD DESKEY\/630 FIFTH AVENUE\/NEW YORK CITY; two architect&#39;s stamps in black ink on verso: DONALD DESKEY\/630 FIFTHAVENUE\/NEW YORK CITY; manufacturer&#39;s stamp in brown ink on verso: WHATMAN\/ DRAWING BOARD\/H. Reeve Angel &amp; Co., Inc., New York City&#34;,&#34;signed&#34;:&#34;&#34;,&#34;inscribed&#34;:&#34;Inscribed in graphite, center on verso: 9007[underlined]\/13&#34;,&#34;provenance&#34;:&#34;Donald Deskey, New York; 1988: acquired by Museum&#34;,&#34;description&#34;:&#34;An isometric view of a prefabricated sportsman&#39;s cabin with slanted shed roof.  Rooms include living area with sofa and fireplace, and sleeping quarter with three beds (two are bunked). This drawing was published in published in Robert W. Marks, \&#34;Donald Deskey&#39;s Sportshack...\&#34; Esquire, vol. 14 (August, 1940), p. 69.  A model of Sportshack was exhibited at the Metropolitan Museum of Art&#39;s, Contemporary Industrial Design exhibition in 1940 and life-size at the America at Home exhibition in the 1940 season of the 1939-40 New York World&#39;s Fair.&#34;,&#34;dimensions&#34;:&#34;H x W x D: 55.9 \u00d7 76.2 cm (22 \u00d7 30 in.)\nMat: 71.1 x 91.4 cm (28 x 36 in.)&#34;,&#34;name&#34;:&#34;Drawing&#34;,&#34;credit&#34;:&#34;Gift of Donald Deskey&#34;,&#34;public_access&#34;:&#34;1&#34;,&#34;accountability&#34;:&#34;1&#34;}
+justification: NULL
+completometer_score: 12
+parent_id: 0
+tms_media_master_id: NULL
+table_text: Sportshack was Deskey’s earliest foray into the field of prefabricated housing. Like many 1930s and 1940s design drawings, this compelling piece was executed in airbrush, an adjustable-spray technique that misted paint over a stencil to produce a slick, almost mechanical appearance.
+label_chat: Sportshack was Deskey’s earliest foray into the field of prefabricated housing. Like many 1930s and 1940s design drawings, this compelling piece was executed in airbrush, an adjustable-spray technique that misted paint over a stencil to produce a slick, almost mechanical appearance.
+count_videos: 0
+count_videos_public: 0</pre>
+<p>Figure 6: a sample row from our database’s Objects table, formatted as YAML</p>
+<pre style="border: 1px solid #000; padding-left: 30px;">{
+   &#34;object_id&#34;:&#34;18624533&#34;,
+   &#34;accession_number&#34;:&#34;1988-101-1515&#34;,
+   &#34;is_public&#34;:true,
+   &#34;on_display&#34;:true,
+   &#34;title&#34;:&#34;Drawing, Design for Sportshack, 1940&#34;,
+   &#34;description&#34;:&#34;An isometric view of a prefabricated sportsman\&#39;s cabin with slanted shed roof.  Rooms include living area with sofa and fireplace, and sleeping quarter with three beds (two are bunked). This drawing was published in published in Robert W. Marks, \\&#34;   Donald Deskey\&#39;s Sportshack...\\&#34; Esquire,
+   vol. 14 (August,
+   1940   ),
+   p. 69.  A model of Sportshack was exhibited at the Metropolitan Museum of Art\&#39;s,
+   Contemporary Industrial Design exhibition in 1940 and life-size at the America at Home exhibition in the 1940 season of the 1939-40 New York World\&#39;s Fair.&#34;,
+   &#34;department_id&#34;:&#34;35347493&#34;,
+   &#34;type_id&#34;:&#34;35237093&#34;,
+   &#34;type&#34;:&#34;Drawing&#34;,
+   &#34;medium_id&#34;:&#34;68266335&#34;,
+   &#34;medium&#34;:&#34;brush and gouache, black ink, airbrush and gouache over stencil, graphite on illustration board&#34;,
+   &#34;source_id&#34;:&#34;35352321&#34;,
+   &#34;source&#34;:&#34;Gift&#34;,
+   &#34;count_images_total&#34;:2,
+   &#34;count_images_public&#34;:2,
+   &#34;dimensions&#34;:{
+      &#34;height&#34;:{
+         &#34;value&#34;:55.88,
+         &#34;units&#34;:&#34;centimeters&#34;
+      },
+      &#34;width&#34;:{
+         &#34;value&#34;:76.2,
+         &#34;units&#34;:&#34;centimeters&#34;
+      },
+      &#34;largest&#34;:{
+         &#34;value&#34;:76.2,
+         &#34;units&#34;:&#34;centimeters&#34;
+      },
+      &#34;smallest&#34;:{
+         &#34;value&#34;:55.88,
+         &#34;units&#34;:&#34;centimeters&#34;
+      }
+   },
+   &#34;person&#34;:[
+      &#34;Donald Deskey&#34;,
+      &#34;Dr. Gail Davidson&#34;,
+      &#34;Eleonore Kissel&#34;
+   ],
+   &#34;person_id&#34;:[
+      &#34;18041973&#34;,
+      &#34;18048255&#34;,
+      &#34;18047481&#34;
+   ],
+   &#34;person_role_35351535&#34;:[
+      &#34;18041973&#34;
+   ],
+   &#34;person_role_35352245&#34;:[
+      &#34;18048255&#34;,
+      &#34;18047481&#34;
+   ],
+   &#34;person_role_35236703&#34;:[
+      &#34;18041973&#34;
+   ],
+   &#34;person_public&#34;:[
+      &#34;Donald Deskey&#34;,
+      &#34;Dr. Gail Davidson&#34;,
+      &#34;Eleonore Kissel&#34;
+   ],
+   &#34;person_id_public&#34;:[
+      &#34;18041973&#34;,
+      &#34;18048255&#34;,
+      &#34;18047481&#34;
+   ],
+   &#34;person_role_public_35351535&#34;:[
+      &#34;18041973&#34;
+   ],
+   &#34;person_role_public_35352245&#34;:[
+      &#34;18048255&#34;,
+      &#34;18047481&#34;
+   ],
+   &#34;person_role_public_35236703&#34;:[
+      &#34;18041973&#34;
+   ],
+   &#34;role_id_public&#34;:[
+      35351535,
+      35352245,
+      35236703
+   ],
+   &#34;role_public&#34;:[
+      &#34;Donor&#34;,
+      &#34;Cataloguer&#34;,
+      &#34;Office of&#34;
+   ],
+   &#34;score_shannon_entropy&#34;:&#34;8.3648698864759&#34;,
+   &#34;woe_country&#34;:&#34;23424977&#34;,
+   &#34;location&#34;:[
+      &#34;United States&#34;
+   ],
+   &#34;year_start&#34;:1940,
+   &#34;year_end&#34;:1940,
+   &#34;year_acquired&#34;:&#34;1988&#34;,
+   &#34;decade&#34;:&#34;1940&#34;,
+   &#34;tag&#34;:[
+      &#34;architects&#34;,
+      &#34;architecture&#34;,
+      &#34;presentation drawing&#34;,
+      &#34;glass&#34;,
+      &#34;cube&#34;,
+      &#34;World\&#39;s Fair&#34;,
+      &#34;pre-fabrication&#34;
+   ],
+   &#34;tag_id&#34;:[
+      &#34;68796919&#34;,
+      &#34;68796947&#34;,
+      &#34;68798729&#34;,
+      &#34;68798949&#34;,
+      &#34;68799035&#34;,
+      &#34;68799823&#34;,
+      &#34;68802055&#34;
+   ],
+   &#34;score_display_order_exh_23424977&#34;:null,
+   &#34;exhibition_public&#34;:[
+      {
+         &#34;name&#34;:&#34;Making Design&#34;,
+         &#34;section&#34;:&#34;Form&#34;,
+         &#34;section_id&#34;:&#34;68859749&#34;,
+         &#34;id&#34;:&#34;51668983&#34;
+      }
+   ],
+   &#34;score_object_completometer&#34;:&#34;12&#34;,
+   &#34;status_copyright&#34;:&#34;rights reserved&#34;,
+   &#34;status_id&#34;:&#34;1&#34;,
+   &#34;typeahead&#34;:{
+      &#34;input&#34;:&#34;Design for Sportshack&#34;,
+      &#34;output&#34;:&#34;Drawing, Design for Sportshack, 1940&#34;,
+      &#34;payload&#34;:{
+         &#34;type&#34;:&#34;object&#34;,
+         &#34;id&#34;:&#34;18624533&#34;
+      }
+   }
+}
+</pre>
+<p>Figure 7:<strong> </strong>the row from figure 6, having been “prepped” for search indexing</p>
+<h2><strong>References</strong></h2>
+<p>Cameron, F. (2003). “Digital Futures I: Museum Collections, Digital Technologies, and the Cultural Construction of Knowledge.” <i>Curator: The Museum Journal</i> 46: 325–340.</p>
+<p>Cope, A. (2012). “Flamework Design Philosophy – Statement(s) of Bias.” Consulted January 27, 2015. Available https://github.com/exflickr/flamework/blob/master/docs/philosophy.md</p>
+<p>Elasticsearch. (n.d.). “Theory Behind Relevance Scoring.” Consulted January 27, 2015. Available <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/scoring-theory.html#field-norm">http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/scoring-theory.html</a></p>
+<p>Henry, D., &amp; E. Brown. (2012). “Using an RDF Data Pipeline to Implement Cross-Collection Search.” In N. Proctor and R. Cherry (eds.). <i>Museums and the Web 2012: Selected Papers and Proceedings</i>. San Diego: Archives &amp; Museum Informatics. Consulted January 27, 2015. Available http://www.museumsandtheweb.com/mw2012/papers/using_an_rdf_data_pipeline_to_implement_cross_.html</p>
+<p>Krug, S. (2006). <em>Don’t Make Me Think! A Common Sense Approach to Web Usability, s</em>econd edition. Berkeley: New Riders.</p>
+<p>Manovich, L. (2000). “Database as a Genre of New Media.” <i>AI &amp; Society</i> 14: 176–183.</p>
+<p>Rainbow, R., A. Morrison, &amp; M. Morgan. (2012). “Providing Accessible Online Collections.” In N. Proctor and R. Cherry (eds.). <i>Museums and the Web 2012: Selected Papers and Proceedings</i>. San Diego: Archives &amp; Museum Informatics. Consulted January 27, 2015. Available <a href="http://www.museumsandtheweb.com/mw2012/papers/providing_accessible_online_collections.html">http://www.museumsandtheweb.com/mw2012/papers/providing_accessible_online_collections.html</a></p>
+<p>Solas, N. (2010). “Hiding Our Collections in Plain Site: Interface Strategies for ‘Findability.’” In J. Trant and D. Bearman (eds.). <i>Museums and the Web 2010: Proceedings</i>. Toronto: Archives &amp; Museum Informatics. Consulted January 27, 2015. Available http://www.archimuse.com/mw2010/papers/solas/solas.html</p>
+<p>van Hooland, S., Y. Bontemps, &amp; S. Kaufman. (2008). “Answering the Call for more Accountability: Applying Data Profiling to Museum Metadata.” In J. Greenberg (ed.). <i>International Conference on Dublin Core and Metadata Applications</i>. North America: Dublin Core Metadata Initiative.</p>
+<p>Walter, M. (2013). “Default Sort, or what would Shannon do?” Consulted January 27, 2015. Available <a href="http://labs.cooperhewitt.org/2013/default-sort-or-what-would-shannon-do/">http://labs.cooperhewitt.org/2013/default-sort-or-what-would-shannon-do/</a></p>
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+. &#34;Reconsidering searching and browsing on the Cooper Hewitt’s Collections website.&#34; <i>MW2015: Museums and the Web 2015</i>. Published February 1, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br/>
+https://mw2015.museumsandtheweb.com/paper/reconsidering-searching-and-browsing-on-the-cooper-hewitts-collections-website/<br/><br/><hr/>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div>

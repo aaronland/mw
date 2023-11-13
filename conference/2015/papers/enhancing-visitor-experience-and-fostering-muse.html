@@ -1,0 +1,424 @@
+<div id="primary">
+<div id="content" role="main">
+<article id="post-765" class="post-765 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">Using visitor-flow visualization to improve visitor experience in museums and exhibitions</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/strobsn/">Robert Strohmaier</a>, FH JOANNEUM, Austria, <a target="_blank" href="https://www.museumsandtheweb.com/member/tetratoon/">Gerhard Sprung</a>, FH JOANNEUM, Austria, <a target="_blank" href="https://www.museumsandtheweb.com/member/nischi/">Alexander Nischelwitzer</a>, FH JOANNEUM, Austria, <a target="_blank" href="https://www.museumsandtheweb.com/member/schadesa/">Sandra Schadenbauer</a>, FH JOANNEUM, Austria</p><h2>Abstract</h2>
+Within this paper, we propose an approach to visualize the flow of visitors through an exhibition in space and time with the goal to assist curators and other museum professionals in the crucial task of analyzing visitor experience at exhibitions in museums. 
+
+Detailed information about and deep insights into the preferences of visitors are crucial to improve the visitor experience in exhibitions. Accordingly, visualizations of visitor paths and trends must be capable of presenting data in meaningful and understandable ways. We present several solutions to visualize trends and repeating patterns in visitor behavior, as well as most frequently used exhibits. In connection with the exhibition&#39;s floor plans and deep knowledge about the visitor interactions at each exhibit, several interesting and sometimes surprising trends can be identified.
+
+Beside the visualization techniques, this paper describes how data can be collected when interactive computer-based exhibits are used in museums. As an example, the process of gathering data is described based on the scenario of an existing exhibition in which the data was not just utilized for visitor tracking for its own sake. Nevertheless, based on this data we are able to visualize the probability of visitors choosing a distinct exhibit depending on gender, age, time, season, or weekday.
+
+Finally, we include an overview of ideas how data can be gathered in the near future with new technologies for both interactive and non-interactive exhibits.<p></p>
+<p><b>Keywords:</b> Visitor Experience, Exhibit Development, Exhibition Planning, Exhibition Design, Data Visualization, Big Data</p>
+<h2><strong>1. Motivation</strong></h2>
+<p>One of the important motivations of this paper is to visualize visitor flows to identify the most frequently used exhibits, and furthermore to generate meaningful and intuitive visualizations based on this data. Another is to show how to use data that already exists within an exhibition.</p>
+<p>This paper mainly consists of two parts. The first part deals with possibilities to gather and use data that already exists within exhibitions. The second part shows visualization approaches based on the data of the traveling exhibition “Heart over Heels.”</p>
+<p>Using the aforementioned data, visitor flows were visualized to gather meaningful findings about several aspects of the exhibition “Heart over Heels,” such as most common visitor paths through the exhibition. Furthermore, we tried to design an approach that can also be applied to other museums and exhibitions.</p>
+<h2><strong>2. Preconditions</strong></h2>
+<p>Techniques to track visitors in exhibitions and museums range from personal observation studies (Yalowitz &amp; Bronnenkant, 2009) to highly automated technical systems. In the area of automated technical systems, mainly mobile technologies like Bluetooth (Ellersiek et al., 2013; Conte et al., 2014; Martin et al., 2014) or indoor positions systems using wireless local area network access points like the EAGER system (Gutwill et al., 2014) seem to be promising. Beside these techniques, systems based on observation by video cameras (Brunelli et al., 2007) are used to gather insights into the movement of visitors. Radio frequency identification (RFID) systems (Müller &amp; Kälin, 2009) to collect information about movement and length of stay in rooms or specific areas of museums are also very promising.</p>
+<p>Visitor-related data for this paper was gathered with RFID technology, which is applicable for interactive computer-based exhibits. Besides the chance to raise visitor experience when using interactive computer-based exhibits, various visitor-related data regarding the usage of exhibits can be generated. These data sets that can be collected depend on the type of interactivity as well as the content of the exhibition. They may range from counting visitors using simple logging of begin- and end-time of an interaction up to explicit knowledge about visitors and their interaction patterns.</p>
+<p>However, the approach described is not just based on the use of RFID technology for visitor tracking for its own sake. We describe a scenario of an existing traveling exhibition that utilizes RFID technology for interactive exhibits to empower visitors to generate their own content and collect their own data. This visitor-generated content is important for the visitor experience during and after the exhibition visit and is needed to achieve the exhibition’s goals. The generated and collected data sets are analyzed regarding their ability to draw conclusions on the paths of visitors through the exhibition and should give insights in optimization of the placement or of types of interactions of specific exhibits. The analysis of the data collected can be seen rather as quantitative investigation, with the focus on evaluation of computer-based exhibits rather than evaluating visitors (Hooper-Greenhill, 2006).</p>
+<p>The visualizations shown within this paper are applicable also for data generated in another way, as described in the next chapter. The main goal of the visualizations shown in the following chapters was to create meaningful spatial-temporal diagrams to show visitor flows and identify the most frequently used exhibits within the exhibition.</p>
+<h2><strong>3. Gathering data for visitor tracking as side effect</strong></h2>
+<p>As mentioned above, the data we analyzed was not logged intentionally for this purpose. Primarily it was used to improve the visitor experience within the traveling exhibition “Heart over Heels,” designed and realized by FRida &amp; freD – Graz Children’s Museum (<a href="http://www.fridaundfred.at/">http://www.fridaundfred.at/</a>) and equipped with interactive computer-based exhibits developed by the Digital Media Technologies research group (<a href="http://dmt.fh-joanneum.at/">http://dmt.fh-joanneum.at</a>) at the institute of Information Management at the University of Applied Sciences FH JOANNEUM (<a href="http://fh-joanneum.at/iin">http://fh-joanneum.at/iin</a>) in Graz, Austria. In order to gain more detailed insight in this exhibition, it is described in the section below.</p>
+<h3><strong>3.1 Introduction to the exhibition “Heart over Heels”</strong></h3>
+<p>Aiming at children at the age of six years and older as well as at families and preschoolers, the traveling exhibition “Heart over Heels” provides a modular exhibit design with around eighty hands-on exhibits. The theme of the whole exhibition is the human body and furthermore people’s needs, abilities, and desires (FRida &amp; freD et al., 2014).</p>
+<p>Up to twenty-five of those eighty hands-on exhibits are designed as interactive computer-based exhibits. Up to seventeen of these twenty-five exhibits are equipped with RFID readers, which enable visitors with special RFID cards (shown in figure 1) to save the data and content they generate during their visit. Because of the modularity of the exhibition and the different settings at different locations, the number of exhibits is described as “up to” numbers within this paragraph.</p>
+<div id="attachment_756" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/strohmaier.fig1_.jpg"><img aria-describedby="caption-attachment-756" loading="lazy" class="size-large wp-image-756" src="../../wp-content/uploads/2015/01/strohmaier.fig1_-1024x768.jpg" alt="Figure 1: Visitor RFID card placed at the registration terminal (entrance area)" width="584" height="438" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig1_-1024x768.jpg 1024w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig1_-300x225.jpg 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig1_-400x300.jpg 400w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig1_.jpg 1451w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-756" class="wp-caption-text">Figure 1: visitor RFID card placed at the registration terminal (entrance area)</p></div>
+<p>Visitors can move around freely within the exhibition. There is no specific order in which the exhibits have to be visited. Exhibits sharing a common topic (e.g., how do muscles work, what is the cardiovascular system, etc.) are grouped in rooms. Visitors have different possibilities to interact at the interactive computer-based exhibits placed within these rooms. For example, exhibits enable visitors to figure out how high they can jump (figure 2) and how well they can balance on a small bar. Visitors can take pictures of themselves or listen to their own heartbeats and save them as audio files. The various types of interaction with the interactive exhibits can be categorized by the following interaction patterns:</p>
+<ul>
+<li>Interaction on touchscreen (e.g., point and click, gestures, fill out forms, etc.)</li>
+<li>Interaction with arcade buttons</li>
+<li>Physical interaction (e.g., jumping, stretching, balancing, running, cycling, etc.)</li>
+<li>Taking pictures (e.g., of own mimic, of a costume)</li>
+<li>Hearing/listening (e.g., listen to own heartbeat)</li>
+</ul>
+<div id="attachment_757" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/strohmaier.fig2_.jpg"><img aria-describedby="caption-attachment-757" loading="lazy" class="size-large wp-image-757" src="../../wp-content/uploads/2015/01/strohmaier.fig2_-768x1024.jpg" alt="Figure 2: Exhibit “Quickness of the legs”" width="584" height="779" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig2_-768x1024.jpg 768w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig2_-225x300.jpg 225w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig2_.jpg 1200w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-757" class="wp-caption-text">Figure 2: exhibit “Quickness of the legs”</p></div>
+<p>During the use of the interactive computer-based exhibits equipped with RFID readers, the visitor-generated content (e.g., photographs, quickness, reaction time, etc.) and other exhibit related data (e.g., start of interaction) is stored in a database. The collected data is mainly used to print a personalized booklet at the end of the visit for each visitor. Visitor-generated content is also accessible online for museum visitors on a password-protected website. Both the booklet and website are designed to enrich visitor experience during and especially after the museum visit.</p>
+<p>The collected data was evaluated regarding its usage for visitor tracking and serves as the basis for the visualizations within this paper. Some important conclusions about the visitor behavior can be drawn from the data collected. In order to visualize visitor flow, the order of visited exhibits is important. Also, the date and time are available for visitors equipped with RFID cards who enter the exhibition.</p>
+<p>Apart from RFID-equipped exhibits, visitors can also interact with traditional non-computer-based hands-on exhibits, as well as with computer-based exhibits without RFID readers. Visitor-related data for traditional hands-on exhibits does not exist. However, for computer-based exhibits without RFID readers, at least limited conclusions about visitor behavior (e.g., start of interaction) can be drawn.</p>
+<p>To enable a clear interpretation of the following visualizations and get a better overview about the exhibition “Heart over Heels,” in table 1 all interactive computer-based installations are listed, including their type of interaction, visitor-generated content, physical activity level, and the input interface for the interaction. Interactive computer-based exhibits without RFID readers are written in italics. Text not written in italics refers to interactive computer-based exhibits equipped with RFID readers. More detailed information about the exhibition “Heart over Heels” can be found in FRida &amp; freD et. al. (2014) and by watching a video about the exhibition available on YouTube (<a href="http://youtu.be/fF8Cj7eLihI">http://youtu.be/fF8Cj7eLihI</a>).</p>
+<table style="height: 100%; width: 1300px;">
+<tbody>
+<tr style="background-color: #999;">
+<td width="35"><strong>ID</strong></td>
+<td width="142"><strong>Name</strong></td>
+<td width="134"><strong>Type of activity</strong></td>
+<td width="107"><strong>User-generated content </strong></td>
+<td width="89"><strong>Physical activity level </strong></td>
+<td width="113"><strong>Interface</strong></td>
+</tr>
+<tr>
+<td width="35">i01</td>
+<td width="142">I decide</td>
+<td width="134">Look at pictures<br/>
+Point and click</td>
+<td width="107">Personal preferences</td>
+<td width="89">Low</td>
+<td width="113">Touchscreen</td>
+</tr>
+<tr>
+<td width="35">i02</td>
+<td width="142">Televised need fulfilment</td>
+<td width="134">Watch videos<br/>
+Push buttons</td>
+<td width="107">Personal needs</td>
+<td width="89">Low</td>
+<td width="113">Arcade button controller</td>
+</tr>
+<tr style="background-color: #ddd;">
+<td width="35"><em>i03</em></td>
+<td width="142"><em>Bathtub Game</em></td>
+<td width="134"><em>Quiz</em><br/>
+<em>Push buttons</em></td>
+<td width="107"><em>– none –</em></td>
+<td width="89"><em>Low</em></td>
+<td width="113"><em>Arcade button controller</em></td>
+</tr>
+<tr style="background-color: #ddd;">
+<td width="35"><em>i04</em></td>
+<td width="142"><em>Quacky sound collage</em></td>
+<td width="134"><em>Move and place tangible objects</em></td>
+<td width="107"><em>– none –</em></td>
+<td width="89"><em>Low</em></td>
+<td width="113"><em>Tangible objects</em></td>
+</tr>
+<tr>
+<td width="35">i05</td>
+<td width="142">Toothbrush game</td>
+<td width="134">Brush teeth<br/>
+Swipe gestures</td>
+<td width="107">Accurateness</td>
+<td width="89">Low</td>
+<td width="113">Touchscreen</td>
+</tr>
+<tr style="background-color: #ddd;">
+<td width="35"><em>i06</em></td>
+<td width="142"><em>Little Professor Game</em></td>
+<td width="134"><em>Adventure game</em><br/>
+<em>Point and click</em></td>
+<td width="107"><em>– none –</em></td>
+<td width="89"><em>Low</em></td>
+<td width="113"><em>Touchscreen</em></td>
+</tr>
+<tr>
+<td width="35">i07</td>
+<td width="142">Question and Answer Game</td>
+<td width="134">Quiz<br/>
+Point and click</td>
+<td width="107">Questions of interest</td>
+<td width="89">Low</td>
+<td width="113">Touchscreen</td>
+</tr>
+<tr>
+<td width="35">i08</td>
+<td width="142">Detective profiling</td>
+<td width="134">Fill out a form</td>
+<td width="107">Personal data</td>
+<td width="89">Low</td>
+<td width="113">Touchscreen</td>
+</tr>
+<tr>
+<td width="35">i09</td>
+<td width="142">World stage</td>
+<td width="134">Costume yourself<br/>
+Push buttons</td>
+<td width="107">Picture of yourself</td>
+<td width="89">Medium</td>
+<td width="113">Arcade button controller</td>
+</tr>
+<tr>
+<td width="35">i10</td>
+<td width="142">Hand-eye-coordination</td>
+<td width="134">Sports game<br/>
+Push buttons</td>
+<td width="107">Reaction time</td>
+<td width="89">Medium</td>
+<td width="113">Arcade button controller</td>
+</tr>
+<tr>
+<td width="35">i11</td>
+<td width="142">Balancing bar</td>
+<td width="134">Sports game<br/>
+Balance on a bar</td>
+<td width="107">Balancing time</td>
+<td width="89">Medium</td>
+<td width="113">Balance bar</td>
+</tr>
+<tr style="background-color: #ddd;">
+<td width="35"><em>i12</em></td>
+<td width="142"><em>Lip reading</em></td>
+<td width="134"><em>Video quiz</em><br/>
+<em>Point and click</em></td>
+<td width="107"><em>– none –</em></td>
+<td width="89"><em>Low</em></td>
+<td width="113"><em>Touchscreen</em></td>
+</tr>
+<tr style="background-color: #ddd;">
+<td width="35"><em>i13</em></td>
+<td width="142"><em>Hearing test</em></td>
+<td width="134"><em>Audio quiz</em><br/>
+<em>Point and click</em></td>
+<td width="107"><em>– none –</em></td>
+<td width="89"><em>Low</em></td>
+<td width="113"><em>Touchscreen</em></td>
+</tr>
+<tr style="background-color: #ddd;">
+<td width="35"><em>i14</em></td>
+<td width="142"><em>Breezy journey into the lungs</em></td>
+<td width="134"><em>Adventure game</em><br/>
+<em>Breath</em></td>
+<td width="107"><em>– none –</em></td>
+<td width="89"><em>Low</em></td>
+<td width="113"><em>Breath-powered fans</em></td>
+</tr>
+<tr style="background-color: #ddd;">
+<td width="35"><em>i15</em></td>
+<td width="142"><em>Deck chair cave</em></td>
+<td width="134"><em>Puzzle</em><br/>
+<em>Point and click</em></td>
+<td width="107"><em>– none –</em></td>
+<td width="89"><em>Low</em></td>
+<td width="113"><em>Touchscreen</em></td>
+</tr>
+<tr>
+<td width="35">i16</td>
+<td width="142">Bicycle tour into the forest</td>
+<td width="134">Sports game<br/>
+Cycling</td>
+<td width="107">Endurance</td>
+<td width="89">High</td>
+<td width="113">Ergometer</td>
+</tr>
+<tr>
+<td width="35">i17</td>
+<td width="142">Flexibility</td>
+<td width="134">Sports game<br/>
+Push buttons</td>
+<td width="107">Flexibility</td>
+<td width="89">Medium</td>
+<td width="113">Special arcade button controller</td>
+</tr>
+<tr>
+<td width="35">i18</td>
+<td width="142">Quickness of the legs</td>
+<td width="134">Sports game<br/>
+Push buttons</td>
+<td width="107">Jump height</td>
+<td width="89">Medium</td>
+<td width="113">Special arcade button controller</td>
+</tr>
+<tr>
+<td width="35">i19</td>
+<td width="142">Sprint</td>
+<td width="134">Sports game<br/>
+Run</td>
+<td width="107">Quickness</td>
+<td width="89">High</td>
+<td width="113">Photo-electric guard</td>
+</tr>
+<tr>
+<td width="35">i20</td>
+<td width="142">Dancing Test</td>
+<td width="134">Sports game<br/>
+Jump back and forth</td>
+<td width="107">Sense of rhythm</td>
+<td width="89">High</td>
+<td width="113">Dance mat</td>
+</tr>
+<tr>
+<td width="35">i21</td>
+<td width="142">Wallball</td>
+<td width="134">Sports game<br/>
+Throw ball</td>
+<td width="107">Strength</td>
+<td width="89">Medium</td>
+<td width="113">Force sensor</td>
+</tr>
+<tr>
+<td width="35">i22</td>
+<td width="142">Facial muscles</td>
+<td width="134">Watch video<br/>
+Point and click</td>
+<td width="107">Picture of yourself</td>
+<td width="89">Low</td>
+<td width="113">Touchscreen</td>
+</tr>
+<tr>
+<td width="35">i23</td>
+<td width="142">Pulse check</td>
+<td width="134">Hear own heartbeat<br/>
+Point and click</td>
+<td width="107">Heartbeat (audio file)</td>
+<td width="89">Low</td>
+<td width="113">Electronic stethoscope</td>
+</tr>
+<tr>
+<td width="35">i24</td>
+<td width="142">Personal Security Game</td>
+<td width="134">Adventure game<br/>
+Point and click</td>
+<td width="107">– none –</td>
+<td width="89">Low</td>
+<td width="113">Touchscreen</td>
+</tr>
+<tr style="background-color: #ddd;">
+<td width="35"><em>i25</em></td>
+<td width="142"><em>Pump station</em></td>
+<td width="134"><em>Sports game</em><br/>
+<em>Step in rhythm</em></td>
+<td width="107"><em>– none –</em></td>
+<td width="89"><em>High</em></td>
+<td width="113"><em>Stepper</em></td>
+</tr>
+</tbody>
+</table>
+<p>Table 1: interactive computer-based exhibits</p>
+<h3><strong>3.2 Collected and aggregated data</strong></h3>
+<p>Based on the above-described exhibit theme, combined with the setting of RFID cards for visitors and RFID readers at computer-based exhibits shown in table 1, we gathered and aggregated the following data, which can be clearly connected to each of those visitors:</p>
+<ul>
+<li>Visitors with a unique id</li>
+<li>Sequence of visited exhibits of each visitor</li>
+<li>Day and time of the start of the visit</li>
+<li>Sex of visitors (based on voluntary disclosure)</li>
+<li>Age of visitors (based on voluntary disclosure)</li>
+</ul>
+<p>There is also logging data of all of the computer-based exhibits available. Even exhibits without RFID readers, and therefore without the possibility to clearly identify visitors, generate data such as the start of an interaction at an exhibit and the day and time of the start of the interaction.</p>
+<p>This aggregated data allows us to analyze and identify the exhibits a visitor interacted with. Moreover, we are able to analyze the visitor-generated content described in this section, and we can use, adapt, and extend the ideas of Müller and Kälin (2009), such as measuring the amount of visitors per room of an exhibition and following their paths from room to room.</p>
+<h3><strong>3.3 Restrictions</strong></h3>
+<p>Please note that the data collected can be used to analyze how often the interaction at a specific installation was started by a visitor. It cannot be analyzed if a unique visitor interacted with an exhibit more than once. Clear identification of a visitor at an exhibit without an RFID reader is not possible. The data collected, however, allows us to show how many times a computer-based exhibit was used in total. The length of stay at a specific exhibit cannot be analyzed due to the lack of these data. These restrictions occur because the data was designed to meet the requirements of the exhibition setting and not necessarily with the aim of doing visitor research. As described before, the data is sufficient for some analysis in the area of visitor tracking.</p>
+<h3><strong>3.4 Venues and data samples</strong></h3>
+<p>The travelling exhibition “Heart over Heels” was shown at six different venues with varying exhibition length. For this paper, we can utilize data of four different venues across Europe and one venue in the Caribbean. In table 2, the sample size of each venue is shown. Please note that the number of samples correspond just to visitors equipped with an RFID card. It is not possible to draw a conclusion based on this sample size to the total number of visitors for each venue. Also, people without RFID cards can visit the exhibition and interact with both non-computer-based hands-on exhibits and computer-based exhibits.</p>
+<table>
+<tbody>
+<tr>
+<td width="158"><strong>Venue</strong></td>
+<td width="265"><strong>Sample size for visualization (n)</strong></td>
+</tr>
+<tr>
+<td width="158">Graz, Austria</td>
+<td width="265">23.518</td>
+</tr>
+<tr>
+<td width="158">D’Abadie, Trinidad</td>
+<td width="265">2.346</td>
+</tr>
+<tr>
+<td width="158">Dresden, Germany</td>
+<td width="265">23.117</td>
+</tr>
+<tr>
+<td width="158">Bremen, Germany</td>
+<td width="265">14.172</td>
+</tr>
+<tr>
+<td width="158">Dortmund, Germany</td>
+<td width="265">27.779</td>
+</tr>
+</tbody>
+</table>
+<p>Table 2: venues of the exhibition “Heart over Heels”</p>
+<h2><strong>4. Visualizing an overview about the data</strong></h2>
+<p>First, we give an overview about the collected data. To accomplish this, traditional and common known techniques like the sequenced bar chart and a heat map (Rogowitz et al., 1996) are used. The data used for this and the further visualizations was collected at the venue of Dortmund in Germany. We used this data because of the largest number of samples (n = 27.779) shown in table 2.</p>
+<h3><strong>4.1 Overview about the sequence of visited exhibits</strong></h3>
+<p>Before giving detailed information on the paths of visitors across the exhibition, an overview about the sequence of visited exhibits is shown in figure 3. Within this visualization, all exhibits equipped with RFID readers are shown in the sequence in which they were visited. As the visualization technique, a simple sequenced bar chart is used. The first vertical bar stands for the entrance to the exhibition and shows the total amount of visitors with RFID cards. The second vertical bar shows the distribution of the total number of visitors across the exhibits that were visited first. The third vertical bar shows the distribution of the total number of visitors across the exhibits that were visited second and so on. Within each vertical bar visualized as bar segments are the single exhibits. The exhibits are labeled with their abbreviations shown in table 1. As an example, within the second vertical bar can be seen that the most frequently visited exhibit right after entering the exhibition was the exhibit labeled with the abbreviation i19 (“Sprint”). Bar segments labeled with the word “Exit” show the number of visitors who left the exhibition.</p>
+<div id="attachment_758" style="width: 1034px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/strohmaier.fig3_.png"><img aria-describedby="caption-attachment-758" loading="lazy" class="size-full wp-image-758" src="../../wp-content/uploads/2015/01/strohmaier.fig3_.png" alt="Figure 3: Sequence of visited exhibits" width="1024" height="710" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig3_.png 1024w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig3_-300x208.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig3_-433x300.png 433w" sizes="(max-width: 1024px) 100vw, 1024px"/></a><p id="caption-attachment-758" class="wp-caption-text">Figure 3: sequence of visited exhibits</p></div>
+<p>It is interesting to see that most visitors interacted with at least three computer-based exhibits with user registration by RFID during their whole visit. Around 50 percent of visitors interacted with seven exhibits before they left the exhibition. How many other computer-based exhibits without RFID registration or how many non-computer-based hands-on exhibits they interacted with cannot be measured based on the underlying data. Also, other research results in the area of visitor studies state that visitors typically view around 20 percent to 40 percent of the exhibits within a museum. Depending on their own visiting style, people will filter exhibits regarding their very own mindsets on the basis of different aspects (Rounds, 2004).</p>
+<p>On the other hand, only some visitors interacted with all seventeen computer-based exhibits with user registration by RFID. Although this diagram may seem confusing, one interpretation can be that there are too many exhibits within the exhibition. Visitors are not able to interact with all of them. If they are satisfied with the exhibition, they might come back and visit the exhibition more than once. Unfortunately, this interpretation is just an assumption and cannot be measured with the underlying data sets. This aspect might be further researched by a visitor evaluation (Hooper-Greenhill, 2006).</p>
+<h3><strong>4.2 Visitor interactions at each exhibit</strong></h3>
+<p>A heat map was generated to enable a clear overview about the total number of interactions at all computer-based exhibits. Please note that the number of interactions does not necessarily correspond to the number of unique visitors at an exhibit. Visitors can interact with those exhibits more than once. Also, not all of the installations shown in the visualization are equipped with an RFID reader, so the clear identification of a visitor is not possible at every installation.</p>
+<div id="attachment_759" style="width: 1010px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/strohmaier.fig4_.png"><img aria-describedby="caption-attachment-759" loading="lazy" class="size-full wp-image-759" src="../../wp-content/uploads/2015/01/strohmaier.fig4_.png" alt="Figure 4: Number of interactions at each computer-based exhibit" width="1000" height="700" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig4_.png 1000w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig4_-300x210.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig4_-429x300.png 429w" sizes="(max-width: 1000px) 100vw, 1000px"/></a><p id="caption-attachment-759" class="wp-caption-text">Figure 4: number of interactions at each computer-based exhibit</p></div>
+<p>As shown in figure 4, the exhibits where visitors can be physically active seem to be the most frequently used ones between of the computer-based exhibits. With this knowledge in mind, the most common paths of visitors across the exhibition are of great interest.</p>
+<h2><strong>5. Visualizing visitor flows</strong></h2>
+<p>The following visualizations are developed and generated on basis of the data described above. Besides our approach, the visualizations can be used as well for other kinds of spatial-temporal data. Because there is no specific order in which the exhibits have to be visited, a many-to-many relationship of the sequence of exhibits during the museum visit occurs, which will be the same for most other exhibitions and museums.</p>
+<h3><strong>5.1 First approach: Spatial-temporal Sankey diagram visualization</strong></h3>
+<p>Sankey diagrams belong to the category of flow diagrams and can visualize various kinds of sequences. In 1869, Charles Joseph Minard proved the possibilities to display multidimensional data within a Sankey-like diagram by visualizing Napoleon’s Russian campaign of 1812 (Friendly, 2002), as shown in figure 5. Now, Sankey diagrams are likely to be used to visualize flows of energy or materials in networks or processes (Riehmann et al., 2005).</p>
+<div id="attachment_760" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/strohmaier.fig5_.jpg"><img aria-describedby="caption-attachment-760" loading="lazy" class="size-large wp-image-760" src="../../wp-content/uploads/2015/01/strohmaier.fig5_-1024x488.jpg" alt="Figure 5: Charles Joseph Minard’s visualization of Napoleon’s Russian campaign of 1812 (Friendly, 2002) " width="584" height="278" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig5_-1024x488.jpg 1024w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig5_-300x143.jpg 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig5_-500x238.jpg 500w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig5_.jpg 1600w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-760" class="wp-caption-text">Figure 5: Charles Joseph Minard’s visualization of Napoleon’s Russian campaign of 1812 (Friendly, 2002)</p></div>
+<p>Their ability to display flows of different kinds of weighted characteristics over a period of time made them very interesting for our approach to visualize visitor flows. Also, in our domain we like to show this flow along time and, a little bit more specifically, also corresponding to specific locations.</p>
+<p>Within the first attempt, an early stage of a Sankey-like diagram was designed (figure 6) to prove if this approach would work. As the basis for this diagram, the floor plan of the venue in Dortmund, Germany, was used. This floor plan forms the lowest layer of the diagram. On top of this, the single exhibits were marked. Finally the data was aggregated to a data set that shows the paths through the exhibition for each single visitor equipped with the exhibition’s RFID card. In this first attempt, the connections between the single steps (exhibits) are not weighted, so no conclusion about the number of visitors following a specific path can be drawn.</p>
+<div id="attachment_761" style="width: 1010px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/strohmaier.fig6_.png"><img aria-describedby="caption-attachment-761" loading="lazy" class="size-full wp-image-761" src="../../wp-content/uploads/2015/01/strohmaier.fig6_.png" alt="Figure 6: First approach - Spatio-temporal Sankey diagram visualization" width="1000" height="700" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig6_.png 1000w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig6_-300x210.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig6_-429x300.png 429w" sizes="(max-width: 1000px) 100vw, 1000px"/></a><p id="caption-attachment-761" class="wp-caption-text">Figure 6: first approach: spatial-temporal Sankey diagram visualization</p></div>
+<p>This visualization served as a kind of prototype for the planned Sankey diagram. With the help of this prototype, we figured out that this approach might not work with very heterogeneous data like the paths of the visitors in museums and exhibitions. Therefore, we stopped working on this method.</p>
+<h3><strong>5.2 Second approach: Spatiotemporal aggregated visualization of visitor flows</strong></h3>
+<p>This not-very-meaningful prototype led us to the insight that it might be more promising to aggregate the temporal data. Therefore, we determined the frequency of walking from one unique exhibit to another across all visitors.</p>
+<p>With this technique (figure 7), the visualization will not be overly crowded by all the different paths through the exhibition. At the same time, common sequences of visited exhibits can be recognized. To visualize those paths, a graph similar to the technique of flow diagrams (Aigner et al., 2011) was developed. In order to visualize the flow of visitors, the data of movement from one unique exhibit to another is grouped and weighted by the frequency with which this path was used by visitors. As a metaphor for the movement between exhibits, an arrow was chosen. The arrowhead is pointing in the direction of the movement, and the line strength and color show the amount of visitors who were walking along this path. Because there is no required order of visiting the exhibits, the arrow is split into two parts (figure 8) to visualize visitor flow in all possible directions. In this manner, all paths of all visitors of the whole exhibition period can be displayed on a floor map. The floor map was used to create a perfect link between the abstract data and the real-world setting.</p>
+<div id="attachment_762" style="width: 1010px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/strohmaier.fig7_.png"><img aria-describedby="caption-attachment-762" loading="lazy" class="size-full wp-image-762" src="../../wp-content/uploads/2015/01/strohmaier.fig7_.png" alt="Figure 7: Second approach: Spatio-temporal aggregated visualization of visitor flows" width="1000" height="700" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig7_.png 1000w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig7_-300x210.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig7_-429x300.png 429w" sizes="(max-width: 1000px) 100vw, 1000px"/></a><p id="caption-attachment-762" class="wp-caption-text">Figure 7: second approach: spatial-temporal aggregated visualization of visitor flows</p></div>
+<p>Within the visualization shown in figure 7 and figure 8, a color-coding scheme is used. The color red indicates the most common flows between exhibits, whereas cyan displays the least commonly used paths.</p>
+<div id="attachment_763" style="width: 310px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/strohmaier.fig8_.png"><img aria-describedby="caption-attachment-763" loading="lazy" class="size-medium wp-image-763" src="../../wp-content/uploads/2015/01/strohmaier.fig8_-300x210.png" alt="Figure 8: Arrowheads visualize visitor flow in all possible directions" width="300" height="210" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig8_-300x210.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig8_-429x300.png 429w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig8_.png 1000w" sizes="(max-width: 300px) 100vw, 300px"/></a><p id="caption-attachment-763" class="wp-caption-text">Figure 8: arrowheads visualize visitor flow in all possible directions</p></div>
+<h3><strong>5.3 Interpretations based on the approach of spatiotemporal aggregated visualization of visitor flows</strong></h3>
+<p>Regarding Veron and Levasseur (1983), the accumulated path of the most visitors shown in figure 7 could be seen as a butterfly or grasshopper visiting style (Kuflik et al., 2012). In addition to the visitor styles of Veron and Levasseur (1983), we propose the idea that visitors within this exhibition tend to use exhibits with a high level of physical interactivity. If a visitor explores his or her sense of rhythm (exhibit “i20”; very high level of physical interaction), it is very likely that this visitor also checks how fast he or she can run (exhibit “i19”; very high level of physical interaction) and how hard he or she can throw a ball against a wall (exhibit “i21”; high level of physical interaction). Whereas those visitors only sometimes visited exhibit “i22,” where facial muscles can be explored during a computer-based exhibit where they have to watch a movie and afterwards are able to take a picture of their own face. We see playing with different facial expressions as a rather low level of physical interaction. All of those exhibits are placed within the same room with the topic of fitness and muscles. Also, the strong connections between exhibits “i10” and “i11” and between “i17” and “i18” can be seen in a similar way. It seems most visitors tend to interact with exhibits with high levels of physical interaction if they interacted with a similar one before.</p>
+<p>Additionally, the most common starting points of most visitors (exhibits “i09” and “i08”) can be identified. Beside these two exhibits, other visitors chose to start elsewhere in the exhibition. This might be because the entrance zone of the exhibition was crowded, as well as because of visitors’ expectations. In detail, a qualitative investigation such as a visitor evaluation (Hooper-Greenhill, 2006) should be conducted and compared to the visualization to prove this. Finally, common drop-off points can be identified by the exhibits “i01,” “i09,” “i10,” and “i11.”</p>
+<h3><strong>5.4 Interactive spatiotemporal aggregated visualization of visitor flows</strong></h3>
+<p>As shown in figure 7, conclusions about visitor flows in exhibitions can be drawn on the basis of the aggregation and visualization of spatiotemporal data. Certainly, the visualization of the data of all visitors during the whole exhibition period could be improved. Therefore, we propose an interactive solution for this technique. Filter methods to meet restrictions in visualizing visitor flows seem to be very promising. A more detailed examination regarding gender and age of visitors allows much more interesting insights (figure 9).</p>
+<div id="attachment_766" style="width: 1610px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/strohmaier.fig9_.png"><img aria-describedby="caption-attachment-766" loading="lazy" class="size-full wp-image-766" src="../../wp-content/uploads/2015/01/strohmaier.fig9_.png" alt="Figure 9: Screenshot of an interactive spatio-temporal aggregated and filtered visualization of visitor flows" width="1600" height="674" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig9_.png 1600w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig9_-300x126.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig9_-1024x431.png 1024w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig9_-500x211.png 500w" sizes="(max-width: 1600px) 100vw, 1600px"/></a><p id="caption-attachment-766" class="wp-caption-text">Figure 9: screenshot of an interactive spatial-temporal aggregated and filtered visualization of visitor flows</p></div>
+<h3><strong>5.5 Combination of visualizations</strong></h3>
+<p>To gain a deeper insight into the correlation between the most visited exhibits shown in the heat map in figure 4 and the flow of visitors shown in figure 7, both approaches were combined. In figure 10, computer-based exhibits without RFID readers are also considered.</p>
+<div id="attachment_755" style="width: 1010px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/01/strohmaier.fig10.png"><img aria-describedby="caption-attachment-755" loading="lazy" class="size-full wp-image-755" src="../../wp-content/uploads/2015/01/strohmaier.fig10.png" alt="Figure 10: Combination of heat map and visitor flow visualization" width="1000" height="700" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig10.png 1000w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig10-300x210.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/strohmaier.fig10-429x300.png 429w" sizes="(max-width: 1000px) 100vw, 1000px"/></a><p id="caption-attachment-755" class="wp-caption-text">Figure 10: combination of heat map and visitor flow visualization</p></div>
+<h2><strong>6. Conclusion and further work</strong></h2>
+<p>Within this paper, we have shown that using existing data from an exhibition might work to analyze some variables in the field of visitor tracking. The meaningfulness of the results depends mostly on the information within the underlying data sets. However, the approach of using existing data for visitor analysis and visualizing it in a meaningful way is an economic opportunity.</p>
+<p>The visualization of visitor flows shown in figure 7 and figure 10 allows deep insights into the behavior of visitors in exhibitions, such as common paths of visitors between some exhibits as well as most frequently used exhibits.</p>
+<p>Interactive tools for filtering data, as shown in figure 9, can provide more detailed information about visitor flows. Furthermore, a combination of visualizations that give a general overview about data, like the heat map with visualizations where more detailed conclusions about visitors can be drawn, seems to be very promising, as shown in figure 10. In order to find out about the details of single unique visitors, other visualization techniques have to be analyzed and most likely modified. One promising approach could be the use of space-time cubes (Bach et al., 2014). Nevertheless, showing details of single visitors and an overview for all visitors might not work well. As a possible and logical next step, a way to visualize both the single visitor paths as well as the aggregation of the most frequently used paths should be found.</p>
+<p>If no data is available within an exhibition, the new technology of Bluetooth iBeacons seems to be promising (Conte et al., 2014; Martin et al., 2014). Conte et al. and Martin et al. state interesting approaches that seem to be a starting point for further developments in this field. Compared to other common techniques for visitor studies, like Wi-Fi indoor positions systems (Gutwill et al., 2014), observation by video cameras (Brunelli et al., 2007), or RFID systems for visitor tracking (Müller &amp; Kälin, 2009), iBeacons seems to be a good and inexpensive alternative. Beside visitor tracking, these systems can further raise visitor experience if they are integrated within mobile applications for smartphones and tablets, like interactive mobile museum guides or interactive treasure hunts throughout exhibitions.</p>
+<h2><strong>Acknowledgements</strong></h2>
+<p>The authors of this paper wish to thank Jörg Ehtreiber, director of FRida &amp; freD – Graz Children’s Museum (<a href="http://www.fridaundfred.at/">http://www.fridaundfred.at/</a>) and his team for their support and cooperation.</p>
+<h2><strong>References</strong></h2>
+<p>Aigner, W., S. Mikisch, H. Schumann, &amp; C. Tominski. (2011). <em>Visualization of Time-Oriented Data</em>. London: Springer-Verlag London Limited.</p>
+<p>Bach, B., P. Dragicevic, D. Archambault, C. Hurter, &amp; S. Carpendale. (2014). “A Review of Temporal Data Visualizations Based on Space-Time Cube Operations.” In R. Borgo, R. Maciejewski, &amp; I. Viola (eds.). <em>Eurographics Conference on Visualization (EuroVis) (2014) EuroVis – STARs</em>. The Eurographics Association.</p>
+<p>Brunelli, R., O. Lanz, A. Santuari, &amp; F. Tobia. (2007). “Tracking Visitors in a Museum.” In O. Stock &amp; M. Zancanaro (eds.). <em>PEACH – Intelligent Interfaces for Museum Visits</em>. Berlin: Springer-Verlag Berlin Heidelberg, 205–225.</p>
+<p>Conte, G., M. De Marchi, A. Nacci, V. Rana, &amp; D. Sciuto. (2014). “BlueSentinel: a first approach using iBeacon for an energy efficient occupancy detection system.” In M. Srivastava (general chair). <em>Proceedings of the 1st ACM Conference on Embedded Systems for Energy-Efficient Buildings</em>. New York: ACM. 11–19.</p>
+<p>Ellersiek, T., G. Andrienko, N. Andrienko, D. Hecker, H. Stange, &amp; M. Mueller. (2013). “Using Bluetooth to track mobility patterns: depicting its potential based on various case studies.” In M. Tomko, S. Bell, &amp; Ki-Joune Li (eds.). <em>Proceedings of the Fifth ACM SIGSPATIAL International Workshop on Indoor Spatial Awareness</em>. New York: ACM. 1–7.</p>
+<p>FRida &amp; freD et al. (2014). FRida &amp; freD travelling exhibitions presents Heart over Heels. Consulted January 09, 2015. Available <a href="http://kimus2010.tub.at/downloads/docs/19337_FRidafreD_Heart_over_Heels_NEU.pdf">http://kimus2010.tub.at/downloads/docs/19337_FRidafreD_Heart_over_Heels_NEU.pdf</a></p>
+<p>Friendly, M. (2002). “Visions and Re-Visions of Charles Joseph Minard.” <em>Journal of Educational and Behavioral Statistics</em> 27(1), Spring 2002, 31–51</p>
+<p>Gutwill, J., J. Ma, &amp; B. Meyer. (2014). EAGER: An Indoor Positioning System (IPS) for Informal Learning Experiences. Consulted January 12, 2015. Available <a href="http://informalscience.org/images/research/2014-08-17_caise_IPS_JM_final.pdf">http://informalscience.org/images/research/2014-08-17_caise_IPS_JM_final.pdf</a></p>
+<p>Hooper-Greenhill, E. (2006). “Studying Visitors.” In S. Macdonald (ed.). <em>A Companion to Museum Studies. </em>Malden: Blackwell Publishing, 362–376.</p>
+<p>Kuflik, T., B. Zvi, &amp; M. Zancanaro. (2012). “Analysis and Prediction of Museum Visitors’ Behavioral Pattern Types.” In A. Krüger, &amp; T. Kuflik (eds.). <em>Ubiquitous Display Environments</em>. Berlin: Springer-Verlag Berlin Heidelberg. 161–176.</p>
+<p>Martin, P., B. Ho, N. Grupen, S. Muñoz, &amp; M. Srivastava. (2014). “An iBeacon primer for indoor localization: demo abstract.” In M. Srivastava (general chair). <em>Proceedings of the 1st ACM Conference on Embedded Systems for Energy-Efficient Buildings</em>. New York: ACM. 190–191.</p>
+<p>Müller, L., &amp; T. Kälin. (2009). “Analyse von Besucherbewegungen in Museen mittels RFID.” <em>Museum Aktuell</em>, November, 8–10.</p>
+<p>Riehmann, P., M. Hanfler, &amp; B. Froehlich. (2005). “Interactive Sankey Diagrams.” In J. Stasko &amp; M. Ward (eds.). <em>IEEE Symposium on Information Visualization (InfoVis 05).</em> Minneapolis: IEEE, 233–240.</p>
+<p>Rogowitz, B., L. Treinish, &amp; S. Bryson. (1996). “How not to lie with visualization.” <em>Computers in Physics</em> 10(3), May/June, 268–273.</p>
+<p>Rounds, J. (2004). “Strategies for the curiosity-drive museum visitor.” <em>Curator: The Museum Journal</em> 47, 389–412.</p>
+<p>Veron, E., &amp; M. Levasseur. (1983). <em>Ethographie de l’Exposition.</em> Paris: Bibliotheque Publique d’Information.</p>
+<p>Yalowitz, S., &amp; K. Bronnenkant. (2009). “Timing and Tracking: Unlocking Visitor Behavior.” <em>Visitor Studies</em> 12(1), 47-64.</p>
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+. &#34;Using visitor-flow visualization to improve visitor experience in museums and exhibitions.&#34; <i>MW2015: Museums and the Web 2015</i>. Published January 15, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br/>
+https://mw2015.museumsandtheweb.com/paper/enhancing-visitor-experience-and-fostering-museum-popularity-through-deep-insights-in-the-placement-of-exhibits-by-new-techniques-in-visitor-flow-visualization-in-space-and-time/<br/><br/><hr/>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div>

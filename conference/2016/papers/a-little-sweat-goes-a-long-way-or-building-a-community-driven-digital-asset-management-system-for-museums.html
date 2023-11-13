@@ -1,0 +1,196 @@
+<div id="primary">
+<div id="content" role="main">
+<article id="post-1759" class="post-1759 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">A little sweat goes a long way, or: Building a community-driven digital asset management system for museums</h1>
+<p><a target="_blank" href="http://www.museumsandtheweb.com/member/stefanocossu/">Stefano Cossu</a>, The Art Institute of Chicago, USA, <a target="_blank" href="http://www.museumsandtheweb.com/member/dwilcox/">David Wilcox</a>, DuraSpace, Canada</p><h2>Abstract</h2>
+In 2013, the Art Institute of Chicago (AIC) needed a central facility for the ingestion, preservation, and delivery of millions of documents of many different types, accessible by more than twenty institutional departments and by Web users via websites, mobile apps, and public APIs. This system also needed to aggregate data from existing applications and become the sole API for all shared collection information. Finally, the AIC collection and content managers needed the highest flexibility in the DAMS user interface and a seamless user experience between applications. 
+
+None of the solutions reviewed showed the flexibility and robustness necessary to fulfill all these requirements, except for Fedora, an open-source, community-driven software popular among libraries and archives, but scarcely known within the museum community. 
+
+~ Two years later… ~
+The first beta release of the AIC DAMS, named LAKE, has been recently launched. It is an ecosystem consisting of several data stores and applications, all maintained by communities of educational institutions, with Fedora as their central repository. These systems store and exchange Linked Data natively following open standards. All the code produced is open source and available online.
+ 
+Stefano Cossu, the LAKE project technical leader, will share his team&#39;s experience as a case study for Fedora as the core information repository of a major museum.
+ 
+David Wilcox, the Fedora product manager, will address sustainability and shed light on the communities behind Fedora. He will explain how Fedora is supported and improved through an inclusive and transparent decision-making process, how the communities gathered around Fedora and its satellite projects work together to improve interoperability, and how individual adopters&#39; needs are addressed as part of a larger issue, when possible. These factors highlight an alternative approach to the way software is evaluated, adopted, utilized, and maintained.<p></p>
+<p><b>Keywords:</b> dams,open source,architecture,linked open data,sustainability</p>
+<h2>1. The Fedora challenge</h2>
+<h3 class="western" align="left">Background</h3>
+<p class="western" align="left">The Art Institute of Chicago (AIC) collection information is managed by a system named CITI, which has been developed in-house since 1990. In its current incarnation, CITI is a client-server system written in 4D (<span style="color: #000080;"><span lang="zxx"><u><a href="http://www.4d.com/">http://www.4d.com/</a></u></span></span>). It is maintained by two developers and accessed daily by about one hundred staff users. It manages accessioned objects, agents, places, transactions, shipments—in practice, all aspects of our collection items’ life cycle.</p>
+<p class="western">CITI has extensive permission controls and many other features that over time have been custom-tailored to our users. The main advantage of this system is that we can be very responsive to the institution’s needs and estimate the implementation of new features quite reliably.</p>
+<p class="western">Some custom scripts pull Web-published objects using the CITI SOAP API and update a Solr index that powers our public-facing collections website.</p>
+<p class="western">CITI is also managing collection images. A separate home-built system, Phoenix, is used by our Imaging department to manage orders for photo shoots and lab work. New images are uploaded in a file server, and lower-resolution derivatives are uploaded to CITI, which in turn generates derivatives for various internal and public uses.</p>
+<p class="western">While this image management feature in CITI had served us well so far, especially because of its tight integration with the rest of the application, the need for a dedicated system for managing digital assets that we can customize without writing it from scratch became more and more compelling.</p>
+<h3 class="western" align="left">Initial DAMS requirements</h3>
+<p class="western">We need to manage more than just images for the Web; we want to store all existing digital files related to collection operations in a central place, accessible from multiple locations.</p>
+<p class="western">The requirements driving our initial DAMS survey were originally based on the knowledge of DAM solutions we had at that time. Taking other museums’ examples was hardly applicable to us because of the central role played by CITI, which for many other museums is represented by third-party products with a relatively broad user base, which encourage DAM products to build integration with them. An integration with CITI would have to be a one-off effort, which would most likely fall on our shoulders; so the DAM system had better have a very solid, standards-based API to work with.</p>
+<p class="western">We also did not want to be tied to a single user interface. CITI, Phoenix, Web applications, mobile apps, and several other internal and public-facing systems had to be able to upload to, discover, and retrieve content from the same repository, using whatever workflows best fit our stakeholders’ needs. For this reason, our DAMS had better have a very versatile and easy-to-use API.</p>
+<p class="western" align="left">Aside from integration capabilities, we had the following requirements:</p>
+<ol>
+<li>
+<p class="western" align="left">Integrity: We needed a system that would adopt reliable storage technologies and guarantee disaster recovery, corruption detection, etc.</p>
+</li>
+<li>
+<p class="western">Scalability: We wanted to make sure that the system could sustain possibly millions of resources and very large files, possibly scaling to multiple systems instead of a single, large server.</p>
+</li>
+<li>
+<p class="western">Complexity: In addition to the sheer volume of data, we have to deal with a complex and evolving data model, which would allow us to build richer contents and better tools for search and discovery.</p>
+</li>
+<li>
+<p class="western">Security: The CITI security model is very fine-grained. While only part of it would apply to digital assets, the diversity of users accessing contents makes it a challenge to guarantee a flexible and at the same time manageable set of access policies.</p>
+</li>
+</ol>
+<p class="western">After many phone calls with museums, university libraries, vendors, and other institutions, we made a short list of candidates that we built some proof-of-concept applications with. Fedora (Flexible Extensible Durable Object Repository Architecture (<span style="color: #000080;"><span lang="zxx"><u><a href="http://fedorarepository.org/">http://fedorarepository.org</a></u></span></span>)), which we had heard about from many libraries but hardly from any museum, looked like the most promising candidate because it fulfilled all the above conditions far more completely than others.</p>
+<h3 class="western" align="left">Initial challenges</h3>
+<p class="western">A few major challenges were ahead of us when we considered adopting Fedora:</p>
+<ol>
+<li>
+<p class="western">There was almost no precedent. All the use cases we had gathered were from libraries, which have very similar goals but quite different content models and access policies from museums. The Rock and Roll Hall of Fame Museum (<span style="color: #000080;"><span lang="zxx"><u><a href="http://www.rockhall.com/">http://www.rockhall.com/</a></u></span></span>) was the only museum known to us that used Fedora for a relatively large repository (its multimedia archive). While a technical person could abstract Fedora’s functionality from the library context and appreciate its features in a museum environment, higher-level stakeholders did not immediately feel comfortable with a product that was mainly branded for libraries. There were technical challenges, too, since some museum-specific use cases had never been tested in Fedora.</p>
+</li>
+<li>
+<p class="western">Choosing the version of Fedora to start with was a very big challenge. Fedora 3 was a stable, well-tested product, but the intense development of Fedora 4, a complete rewrite of the whole stack, indicated that the old version would be discontinued not too far in the future. On the other hand, Fedora 4 was only at an early alpha stage, and many features were being evaluated as development went on. That also meant that we would have to wait until a stable version was out before implementing any system that relied on some Fedora features that were not guaranteed to stay.</p>
+</li>
+<li>
+<p class="western">Complexity of the architecture. Fedora does not present itself as a “turnkey,” monolithic solution, but rather as a set of components that can be used interchangeably. The great flexibility that this allows also implied for us having many decisions to make and learning the technologies more deeply. This of course paid off in the long run.</p>
+</li>
+</ol>
+<p class="western">After extensive discussion and comparison with other solutions that we evaluated, our senior management became convinced that Fedora was the right choice for us. We have to thank their forward-looking attitude and the trust they granted us if we are now speaking at this conference about Fedora.</p>
+<p class="western">We also decided to go with Fedora 4 because we foresaw a long implementation phase ahead of us with any product we would eventually choose. A migration from Fedora 3 to Fedora 4 would have been a major undertaking, due to the substantial differences in all aspects of the two versions. By the time we implemented a Fedora 3-based DAMS, Fedora 3 itself might have been discontinued, and we would have to rush to migrate to Fedora 4 and throw away most of the initial implementation. We decided to start with Fedora 4 and follow its development as a way to learn the software more deeply. This was a key choice for us.</p>
+<h3 class="western" align="left">Learning along</h3>
+<p class="western">Adopting such a complex piece of software, which involves scores of contributors and is based on multiple other open source projects, from version alpha 1 was quite a challenge, especially considering that some of the technologies were quite new to our existing environment. This challenge, though, shifted the way we were looking at our DAMS and allowed to plan for more comprehensive, broad-minded scenarios.</p>
+<p class="western">One of the great innovations of Fedora 4 is that it speaks Linked Data natively. Understanding how LD works by practical examples allowed us to design our content model in a graph-like shape, which is more fitting to cultural heritage information than a relational database model.</p>
+<p class="western">Another important concept was of distributed and asynchronous architectures. Embracing this concept required a radical change in the way we expect services to function and respond. It made sense for us in particular since we expect to handle very large ingests and background operations, where a traditional “request/response” workflow might not be the best approach.</p>
+<p class="western">Another important discovery was a number of “meta-features” that are not usually advertised in software products and are therefore often neglected, but which can become very powerful factors in the quality of the software:</p>
+<ol>
+<li>
+<p class="western">Community: Any product worth considering has a community behind it. Sometimes a community can replace customer support even for commercial software. A community can amplify your voice and get that bug fixed more quickly.</p>
+</li>
+<li>
+<p class="western">Ease of integration: A DAMS cannot do everything. It needs to integrate with a number of specialized systems. If the DAMS’ APIs are built on widely adopted standards, this can mean less work for you to get your systems to work with the DAMS.</p>
+</li>
+<li>
+<p class="western">Transparency/documentation: An API with poor documentation is a poor API.</p>
+</li>
+<li>
+<p class="western">Transparency/mission: Understanding where the project is going, how healthy it is, and how it is funded are key factors to understand if it will still be a good fit <em>x</em> years from now.</p>
+</li>
+</ol>
+<p class="western">We learned these factors after getting more acquainted with Fedora and coming to appreciate these aspects. If we were to start looking for a DAMS again today, we would include these points in our initial requirements.</p>
+<h3 class="western" align="left">LAKE architecture and functionality (current and planned)</h3>
+<p class="western">Our DAMS is named LAKE, which stands for Linked Asset and Knowledge Ecosystem but is mostly just a nice name to remember.</p>
+<p class="western">It took about a year of research and another year of hands-on development by a part-time contractor to release the first beta. Most of the work made was in the user experience, workflow, and content model areas of the administrative front end. After the research period, we came to understand the minimal approach of Fedora, and instead of trying to add new features to the core repository, we started relying on existing projects that were specialized for the issues we were trying to resolve and integrate easily with the other systems.</p>
+<p class="western">One of our first design tasks for LAKE was to separate the system into some major operational areas:</p>
+<div id="attachment_1754" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2016/01/DAMS_arch_simplex-2.png" rel="attachment wp-att-1754"><img aria-describedby="caption-attachment-1754" loading="lazy" class="wp-image-1754 size-large" src="../../wp-content/uploads/2016/01/DAMS_arch_simplex-2-1024x617.png" alt="DAMS_arch_simplex-2" width="584" height="352" srcset="https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/DAMS_arch_simplex-2-1024x617.png 1024w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/DAMS_arch_simplex-2-300x181.png 300w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/DAMS_arch_simplex-2-768x463.png 768w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/DAMS_arch_simplex-2-498x300.png 498w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/DAMS_arch_simplex-2.png 1920w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-1754" class="wp-caption-text">Figure 1: LAKE operational areas: internal and public</p></div>
+<h4 class="western">Storage and preservation</h4>
+<p class="western">This is the master repository, which first receives the user data. It also aggregates foreign data from other systems, such as CITI, to allow linking assets to them. This repository should be replicated to multiple on-site or off-site systems for disaster recovery purposes.</p>
+<h4 class="western">Service layer</h4>
+<p class="western">This provides a unified gateway to access contents. It provides a security layer, a search API, a content input and delivery API, and other features that are not within the scope of Fedora. There is currently very active discussion in the Fedora community on how to implement this layer.</p>
+<h4 class="western">Content management</h4>
+<p class="western">This is made up of all the applications interacting with LAKE that staff users see. Any arbitrary applications can be used for ingesting, managing, and searching content, as long as they know how to interact with the LAKE API.</p>
+<h4 class="western">Publishing</h4>
+<p class="western">Contents vetted for public consumption are pushed to an open-access, read-only repository outside of the firewall. These contents may be accessed by any service, either within our network or on the Web.</p>
+<h3 class="western" align="left">Current status</h3>
+<p class="western">As of the time of this writing, a beta version is available for a limited number of museum users to test functionality and provide feedback. A 1.0 release is scheduled to be launched in mid-2016.</p>
+<p class="western">LAKE is currently made up of the following components:</p>
+<h4 class="western">Repository</h4>
+<p class="western">This single-node Fedora instance is where all the stuff is stored. The repository has some test assets and also the full set of CITI records that can be linked to assets (about three hundred thousand resources), synced with the source every hour. These records are stored as Linked Data resources and are available for search within LAKE.</p>
+<h4 class="western">Triplestore index</h4>
+<p class="western" align="left">Fedora has no internal search or query engine, but rather relies on repository event messages to update arbitrary indexes. A triplestore is a natural, but not the only possible, choice because it exchanges RDF data in the same way Fedora does and allows to leverage the full power of this data format. Most triplestores have a SPARQL query endpoint. SPARQL has an expressivity close to SQL and allows for very complex queries on the repository. It will be useful in the future to run analytics and other data-mining operations.</p>
+<p class="western" align="left">An important feature of some triplestores is what is called inference: generating new knowledge from existing data by applying some fixed rules (called axioms) on top of the existing data (W3C, n.d.). For example, if I state in my ontology that a painter is a particular type of artist, I don’t have to explicitly assert that for each painter. The triplestore will generate the “X is an artist” bit of information for each “X is a painter” statement.</p>
+<p class="western" align="left">Currently our triplestore index has no ties to any functional part of the DAMS, but we intend to test its capabilities as we populate the repository. We are using Jena (<span style="color: #000080;"><span lang="zxx"><u><a href="http://jena.apache.org/">http://jena.apache.org/</a></u></span></span>) as a testbed triplestore, but we might move to a more scalable system (e.g., Blazegraph: <span style="color: #000080;"><span lang="zxx"><u><a href="https://www.blazegraph.com/">https://www.blazegraph.com/</a></u></span></span>) if the data volumes will grow beyond the capabilities of the current implementation.</p>
+<h4 class="western">Solr index</h4>
+<p class="western" align="left">The index currently used is based on Solr (<span style="color: #000080;"><span lang="zxx"><u><a href="http://lucene.apache.org/solr/">http://lucene.apache.org/solr/</a></u></span></span>). The advantages of Solr over a triplestore are speed, greater popularity, maturity, and ease of integration, as many Web frameworks have libraries and user interface widgets for Solr. This is the index used by default by Hydra, which our administrative front end is based on (see below).</p>
+<h4 class="western">LAKEshore</h4>
+<p class="western">This is the administrative front end for internal staff.</p>
+<div id="attachment_1758" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2016/01/screenshot-2016-02-08_17-25-28.png" rel="attachment wp-att-1758"><img aria-describedby="caption-attachment-1758" loading="lazy" class="wp-image-1758 size-large" src="../../wp-content/uploads/2016/01/screenshot-2016-02-08_17-25-28-1024x812.png" alt="LAKEshore beta interface: search powered by Solr." width="584" height="463" srcset="https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/screenshot-2016-02-08_17-25-28-1024x812.png 1024w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/screenshot-2016-02-08_17-25-28-300x238.png 300w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/screenshot-2016-02-08_17-25-28-768x609.png 768w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/screenshot-2016-02-08_17-25-28-378x300.png 378w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-1758" class="wp-caption-text">Figure 2: LAKEshore beta interface: search powered by Solr</p></div>
+<div id="attachment_1757" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2016/01/screenshot-2016-02-08_17-28-04.png" rel="attachment wp-att-1757"><img aria-describedby="caption-attachment-1757" loading="lazy" class="wp-image-1757 size-large" src="../../wp-content/uploads/2016/01/screenshot-2016-02-08_17-28-04-973x1024.png" alt="screenshot-2016-02-08_17-28-04" width="584" height="615" srcset="https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/screenshot-2016-02-08_17-28-04-973x1024.png 973w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/screenshot-2016-02-08_17-28-04-285x300.png 285w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/screenshot-2016-02-08_17-28-04-768x808.png 768w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/screenshot-2016-02-08_17-28-04.png 1802w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-1757" class="wp-caption-text">Figure 3: LAKEshore beta: relationship view</p></div>
+<p class="western" align="left">This is based on Hydra (<span style="color: #000080;"><span lang="zxx"><u><a href="http://projecthydra.org/">http://projecthydra.org/</a></u></span></span>), one of the two main front-end applications for Fedora. LAKEshore is an adaptation of Sufia (<span style="color: #000080;"><span lang="zxx"><u><a href="https://github.com/projecthydra/sufia">https://github.com/projecthydra/sufia</a></u></span></span>), an application initially developed by Penn State University on top of Hydra and then adopted by other university libraries. AIC has made and is making substantial changes to the content model, UI, and permission model to make it compatible with museum needs.</p>
+<h4 class="western">Geneva</h4>
+<p class="western" align="left">This is an integration framework based on Apache Camel (<span style="color: #000080;"><span lang="zxx"><u><a href="http://camel.apache.org/">http://camel.apache.org/</a></u></span></span>) that listens to multiple events in the LAKE environment and manages asynchronous operations. It is responsible for updating the indexes, for example, and can be used for tasks such as generating derivatives, extracting metadata, or managing large ingest batches.</p>
+<p class="western">From this overview, it is clear how Fedora occupies a central but very specific role (i.e., storage and preservation). Compared with other DAM solutions, this looks very distributed and somewhat overwhelming, but it has many advantages. If, for example, LAKEshore is becoming a bottleneck, I can add RAM to the server. If Jena is not scaling well, I can replace the whole system with another triplestore. As long as the replacement uses the same communication protocol, this needs minimal changes in configuration or custom code. That is why adopting standards is very important in this kind of setup.</p>
+<h3 class="western" align="left">Content migration</h3>
+<p class="western">One major challenge ahead, needless to say, is migrating contents. We have about 40 terabytes of Imaging files in a file server. These need to be migrated in order for LAKE to replace the current CITI image manager.</p>
+<p class="western">The image metadata are in the CITI database. The master files are not linked to the CITI records, but they are consistently named after their Imaging UID, which is a field in CITI, so the only approach to reconciling the original file with the metadata is a filename-based search. We are writing ETL scripts for this kind of task.</p>
+<p class="western">There are also images stored in other servers. The diversity of file-naming conventions will require different mapping schemes.</p>
+<p class="western">Similarly, we have so-called “interpretive resources” in CITI that are managed separately from images. These are a much smaller volume but present much more diverse file types and metadata: audiovisual, text documents, links to Web pages, etc.</p>
+<p class="western">Further investigation is in progress to list one-off, isolated repositories (image folders on local workstations and department servers, FileMakerPro databases, spreadsheets, etc.) across the institution that are meant to be shared and need to be ingested in LAKE. The ingestion (possibly scripted, manual otherwise) of these contents will be scheduled based on institutional priorities.</p>
+<h3 class="western" align="left">Next goals for LAKE</h3>
+<p class="western">The next major milestone for LAKE is the 1.0 release. This is meant to allow institution-wide staff to create new assets for internal use only. File format support will be limited to text and image in this version. Legacy content will not be available until the following phase.</p>
+<p class="western">In v1.1, we want to build a public mirror that filters contents from the master repository and provides an open-access endpoint for public-facing applications. We also plan to expand the content types supported. At this point, the system should be ready to sustain the ingestion of massive legacy content.</p>
+<h2 class="western">2. Fedora beyond the code</h2>
+<h3 class="western" align="left">Core mission</h3>
+<p class="western" align="left">Fedora is a free, open source, community-driven project. Though it was initially developed in libraries, Fedora is well suited to museum use cases precisely because it is agnostic toward the content and structure of the data it stores, manages, and preserves. This inherent flexibility is Fedora’s greatest strength, though it can also be daunting for new adopters. This is why the Fedora community encourages people to develop and maintain standard frameworks for Fedora that make it easier to adopt and use for particular use cases; Hydra (<span style="color: #000080;"><span lang="zxx"><u><a href="http://projecthydra.org/">http://projecthydra.org</a></u></span></span>) and Islandora (<span style="color: #000080;"><span lang="zxx"><u><a href="http://islandora.ca/">http://islandora.ca</a></u></span></span>) are two such frameworks, though others (including custom frameworks) also exist.</p>
+<p class="western">Fedora is fundamentally middleware; it provides a limited set of services along with clear patterns for integration with other applications and services. The core Fedora services—Create/Read/Update/Delete operations, security, versioning, fixity, and transactions—are provided via well-documented RESTful APIs in accordance with established community standards. These services can be separated from a particular implementation of Fedora, which provides additional flexibility to support a variety of implementation use cases. For example, some institutions may want to focus on preservation and consistency, while others might be more concerned with high availability and performance. These two use cases would be best served by different back-end environments, which Fedora can accommodate while still providing the same services in a consistent way.</p>
+<h3 class="western" align="left">Governance model</h3>
+<p class="western">Fedora is governed by two groups: a Leadership Group and a Steering Group. The Leadership Group is made up of representatives from institutions that commit either funding, developer effort, or some combination of the two at approved levels. The Leadership Group approves the overall priorities and strategic direction of the project by approving the annual budget allocation and any modifications, approving the product roadmap, nominating and electing Steering Group members, voting on key decisions presented by Steering Group, and helping to raise funds and secure other resources on behalf of the project.</p>
+<p class="western">The Steering Group provides project oversight and ensures that the priorities of the Leadership Group and members are met by providing strategic direction to the project, providing guidance to the product manager and technical lead, recommending annual budget allocations, presenting key decisions to the Leadership Group for discussion and approval, and raising funds and securing other resources on behalf of the project.</p>
+<h3 class="western" align="left">Community</h3>
+<p class="western">Fedora is not just open source; it is community source. Fedora is designed, developed, maintained, and supported by the community. This model is critical to the success of Fedora because it gives the community a sense of ownership—contributing to Fedora is not an external project but an internal one, because Fedora is something we all own and maintain.</p>
+<p class="western" align="left">This sense of community extends to external projects as well; Fedora integrates not only with external standards and applications but also with their communities. Fedora leverages a number of other open source projects, such as ModeShape ( <span style="color: #000080;"><span lang="zxx"><u><a href="https://modeshape.wordpress.com/">https://modeshape.wordpress.com</a></u></span></span>), Infinispan (<span style="color: #000080;"><span lang="zxx"><u><a href="http://infinispan.org/">http://infinispan.org</a></u></span></span>), and Camel (<span style="color: #000080;"><span lang="zxx"><u><a href="http://camel.apache.org/">http://camel.apache.org</a></u></span></span>), along with standards such as the Linked Data Platform (<span style="color: #000080;"><span lang="zxx"><u><a href="https://www.w3.org/TR/ldp/">https://www.w3.org/TR/ldp/</a></u></span></span>) and Memento (<span style="color: #000080;"><span lang="zxx"><u><a href="http://timetravel.mementoweb.org/">http://timetravel.mementoweb.org</a></u></span></span>), all of which have their own communities. Fedora community members participate in these other communities by fixing bugs, attending meetings, and making suggestions for improvements. In turn, members of these communities participate in the Fedora community, thus enriching the entire ecosystem.</p>
+<p class="western">Members of the Fedora community also lead efforts to extend Fedora by proposing new features and plugins. These proposals are openly discussed on the mailing list and weekly technical calls, and if enough stakeholders are interested in helping to move the new feature forward a group is formed. These groups self-organize to collect use cases, plan implementations, and allocate resources.</p>
+<h2 class="western">3. Fedora for museums</h2>
+<h3 class="western" align="left">A different way to evaluate software</h3>
+<p class="western">The DAMS evaluation process changed deeply the way we look at software. Instead of focusing only on the advertised features, we are looking at what is actually happening around it. Even for a small plugin for your website, it is important to know who is maintaining it, how active it is both in terms of discussion and development, how it is documented, etc. For a core component of a museum information architecture such as a DAMS, this can become a matter of hefty financial and human resources, and of whether these resources are spent on a project that is going to be maintained for a long time.</p>
+<p class="western">Among the “meta-features” described above, the community and governance factors have become major sources of confidence in Fedora for us. By becoming Fedora members, the AIC is contributing financially and with staff resources to improving the software. As other institutions do the same, their synergy, coordinated by the Fedora Leadership and Steering groups, leads to a clear path to innovation and sustainability.</p>
+<p class="western">The AIC approach to implementing Fedora was also quite unusual. By adopting a product in a very early development phase, which was radically different from the previous version but also carried many years of experience with developing a repository solution for Cultural Heritage institutions, the AIC had to deal with a project in very rapid evolution, where features were still being tested, some of which could not be included in the final release. On the other hand, AIC’s commitment as a stakeholder allowed to provide use cases and testing that were specific to museums, and helped shape Fedora 4 as a more versatile solution.</p>
+<h3 class="western" align="left">Packaging Fedora</h3>
+<p class="western">As mentioned before, grasping the way Fedora works and what should be expected from it can be a challenge for those evaluating a DAMS. In particular, if they have many options on the table, Fedora may look kind of like a one-off that advertises very different features from most museum DAM solutions. For example, Fedora does not ship with a default front end. There are several projects maintained by separate communities offering different approaches, but Fedora does not make assumptions about any of them. This makes sense if one believes that a presentation layer is something too complex and detailed to be tightly coupled to a system that is meant primarily to fulfill completely different tasks.</p>
+<p class="western">Fedora is not a standalone DAMS, but it can be used to make a really good one. Of course, this flexibility makes it harder for institutions with a small budget, narrow time limits, or restricted IT staff to adopt it.</p>
+<p class="western" align="left">It took the AIC two years to research and implement a Fedora-based DAMS. That does not mean that other museums should invest as much time in the effort. LAKEshore is available on Github ( <span style="color: #000080;"><span lang="zxx"><u><a href="https://github.com/aic-collections/aicdams-lakeshore/">https://github.com/aic-collections/aicdams-lakeshore/</a></u></span></span>), and we welcome adoption, feedback, and contributions. Our goal is to start collaborating on a project involving multiple institutions to create a management and workflow interface for Fedora that is specifically built for museums: metadata, workflows, integration with collection management systems, and publishing are all aspects that make our use case particular. Still, LAKEshore is not a complete DAM system; it has to be wired together with the rest.</p>
+<p class="western" align="left">There are efforts underway to “package” a fully functional Fedora-based environment in a virtual machine that can be downloaded and started with minimal effort. The Hydra-in-a-Box project (<span style="color: #000080;"><span lang="zxx"><u><a href="http://hydrainabox.projecthydra.org/">http://hydrainabox.projecthydra.org/</a></u></span></span>), still in an early stage, proposes to create and maintain such environment.</p>
+<p class="western">Forking Hydra-in-a-Box to create a museum-specific environment and maintaining a similar “packaged version” of LAKE would be a great collaboration opportunity for museums if a community grows around this idea and actively contributes to its development.</p>
+<h2 class="western">References</h2>
+<p class="western" align="left">Allemang, D., &amp; J. Hendler. (2011). <i>Semantic Web for the Working Ontologist, Second Edition: Effective Modeling in RDFS and OWL.</i> Waltham, MA: Morgan Kaufmann/Elsevier.</p>
+<p class="western" align="left">DuCharme, B. (2013). <i>Learning SPARQL</i>, second edition<i>.</i> Beijing: O’Reilly.</p>
+<p class="western" align="left">Duggan, D. (2012). <i>Enterprise Software Architecture and Design—Entities, Services and Resources.</i> Hoboken, NJ: Wiley.</p>
+<p class="western" align="left">Harris, S., &amp; A. Seaborne. (2013). <i>SPARQL 1.1 Query Language—W3C Recommendation 21 March 2013</i>. Available <span style="color: #000080;"><span lang="zxx"><u><a href="https://www.w3.org/TR/sparql11-query/">https://www.w3.org/TR/sparql11-query/</a></u></span></span></p>
+<p class="western" align="left">Hyvönen, Eero. (2012). <i>Publishing and Using Cultural Heritage Linked Data on the Semantic Web, in Synthesis Lectures on Semantic Web, Theory and Technology.</i> San Rafael, CA: Morgan &amp; Claypool Publishers.</p>
+<p class="western">Ibsen, C., &amp; J. Anstey. (2011). <i>Camel in Action. </i>Greenwich, CT: Manning.</p>
+<p class="western">W3C (N.D.) <em>Inference</em>. Consulted February 26, 2016. Available <span style="color: #000080;"><span lang="zxx"><u><a href="https://www.w3.org/standards/semanticweb/inference">https://www.w3.org/standards/semanticweb/inference</a></u></span></span></p>
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+Cossu, Stefano and David Wilcox. &#34;A little sweat goes a long way, or: Building a community-driven digital asset management system for museums.&#34; <i>MW2016: Museums and the Web 2016</i>. Published February 8, 2016. Consulted <script type="text/javascript">document.write(full_date);</script>.<br/>
+https://mw2016.museumsandtheweb.com/paper/a-little-sweat-goes-a-long-way-or-building-a-community-driven-digital-asset-management-system-for-museums/<br/><br/><hr/>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div>

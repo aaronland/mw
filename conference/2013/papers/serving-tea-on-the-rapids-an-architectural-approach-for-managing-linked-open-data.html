@@ -1,0 +1,313 @@
+<div id="primary">
+<div id="full_width_content">
+			
+
+<h1 class="entry-title">Serving Tea on the Rapids: An Architectural Approach for Managing Linked Open Data</h1>
+<br/>
+
+<a href="../../user/index8e02.html?u=dhenry">David Henry</a>, USA, <a href="../../user/index8ebd.html?u=ericthelast">Eric Brown</a>, USA<br/><br/><b>Abstract</b><br/>
+<p>Publishing Linked Open Data (LOD) would provide a number of benefits to researchers and to the community at large.  However,  LOD requires publishing with permanent identifiers and permanent reliable representations.  This kind of permanence presents a challenge on the web where technologies change at a very rapid rate.  By following a number of best practices, it is possible to limit the negative consequences of the rapidly changing web environment.  This paper proposes a web architecture that implements those best practices.</p>
+<p><b>Keywords: </b>RDF,Linked Open Data,Semantic Web, architecture, best practices</p>
+<blockquote><p>“There is nothing permanent except change.”  -Heraclitus</p>
+<p>“Everything should be made as simple as possible, but not one bit simpler.” – Albert Einstein</p></blockquote>
+<h2>1. Introduction</h2>
+<p>The Missouri History Museum is working to make its collections available as linked open data – not only allowing users to discover the richness of the Museum’s collections but also helping to create knowledge by facilitating linkages within our collections and to other linked data across the web. In addition, the Museum aims to make these resources and the linkages between them available in the foreseeable future. Maintaining this kind of permanence and stability is a considerable challenge on the web where change – even revolutionary change – is a yearly, or even monthly, occurrence. It requires an architecture that not only maintains permanent URIs to represent resources such as: 1) items in our collections; 2) people and organizations; 3) places; 4) miscellaneous topics; and 5) digital assets; but also preserves the linkages among those resources. At the same time, any architecture we implement must allow us to stay relevant on the web – developing new user interfaces that will help engage our users and build new audiences for our collections; and adopting new technologies as older technologies become obsolete. To achieve stability and permanence in an ever-changing environment, we are building an architecture based on web standards; best practices for preserving permanent URIs;  and best practices from object-oriented computing.</p>
+<h2>2. Linked Open Data</h2>
+<p>Linked Open Data (LOD) is a concept that has been defined in a variety of ways – some more useful than others. Heath and Bizer (2011) define LOD as ‘a set of best practices for publishing and connecting structured data on the Web’. This definition is broad enough to include the practice of publishing articles through a database-backed content management system or simply posting spreadsheets on a website; this would include most of the content already on the web. Such broad definitions do not capture the very exciting potential of what Tim Berners-Lee called the ‘giant global graph’ (Berners-Lee, 2007). In the context of computing, a graph is defined as a set of nodes and a set of arcs connecting those nodes (Khosrow-Pour, Mehdi, 2007). In the ‘giant global graph’ described by Tim Berners-Lee, the nodes of the graph may be any thing or concept (including people, organizations, places, and objects) identified as URIs; the arcs of the graph are meaningful relationships (such ‘creator’, ‘dependsOn’, or ‘locatedIn’) also defined as URIs. This is very different from the current web where the nodes are information resources and the arcs are simple links (all links are the same).<br/>
+Figure 1 depicts the distinction between the web as we know it today – where documents or information resources are linked – and the semantic web where anything (information resources, people, places, etc.) are interconnected by semantic links.</p>
+<p><a href="../../wp-content/uploads/2013/01/henry_fig1.png"><img loading="lazy" class="alignnone size-full wp-image-3637" alt="henry_fig1" src="../../wp-content/uploads/2013/01/henry_fig1.png" width="618" height="382" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig1.png 618w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig1-300x185.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig1-485x300.png 485w" sizes="(max-width: 618px) 100vw, 618px"/></a></p>
+<p>Figure 1. Comparison of Current Web and the Semantic Web. (from http://www.w3.org/2001/12/semweb-fin/w3csw)</p>
+<p>The following four rules help put the LOD definition within the context of a ‘giant global graph’:</p>
+<ol>
+<li>Use URIs (Uniform Resource Identifiers) as names for things.</li>
+<li>Use HTTP (HyperText Transmission Protocol) URIs so that people can look up those names.</li>
+<li>When someone looks up a URI, provide useful information.</li>
+<li>Include links to other URIs. so that they can discover more things. (<a href="http://www.w3.org/wiki/LinkedData">http://www.w3.org/wiki/LinkedData</a>)</li>
+</ol>
+<p>Using this more restrictive definition, only a tiny fraction of existing web content could be defined as LOD, but this category of web content is growing fast (<a href="http://richard.cyganiak.de/2007/10/lod/">http://richard.cyganiak.de/2007/10/lod/</a>). In addition, the Five Star rating scheme shown in Table 1 helps define the extent to which LOD helps achieve the goal of a ‘giant global graph’.</p>
+<div dir="ltr">
+<table>
+<colgroup>
+<col width="82"/>
+<col width="542"/></colgroup>
+<tbody>
+<tr>
+<td>★</td>
+<td>Available on the web (whatever format) but with an open licence, to be Open Data</td>
+</tr>
+<tr>
+<td>★★</td>
+<td>Available as machine-readable structured data (e.g. excel instead of image scan of a table)</td>
+</tr>
+<tr>
+<td>★★★</td>
+<td>as (2) plus non-proprietary format (e.g. CSV instead of excel)</td>
+</tr>
+<tr>
+<td>★★★★</td>
+<td>All the above plus, Use open standards from W3C (RDF and SPARQL) to identify things, so that people can point at your stuff</td>
+</tr>
+<tr>
+<td>★★★★★</td>
+<td>All the above, plus: Link your data to other people’s data to provide context</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 1. The Five Star Rating Scheme for Linked Open Data (<a href="http://5stardata.info/">http://5stardata.info/</a>)</p>
+<p>For the purposes of this paper and the implementation of LOD at the Missouri History Museum, we define LOD as satisfying, at least, the first three rules of LOD and achieving, at least, a four star rating as defined in the LOD rating scheme. Specifically, for our purposes LOD must meet all of the following criteria:</p>
+<ol>
+<li>Publish both structured data (machine readable) and human readable representations with an ‘open’ license (normally that means in the public domain);</li>
+<li>Publish structured data in one or more of the Resource Description Framework (RDF) serialization formats;</li>
+<li>Identify resources published RDF as HTTP accessible URIs – resources may include not only information resources, but also people, organizations, and concepts;</li>
+<li>Provide one or more SPARQL endpoints to allow querying our RDF data through a standard query interface;</li>
+</ol>
+<p>Each of these criteria will be considered in turn.</p>
+<h3>A. Publish using an ‘Open License’</h3>
+<p>Openess is an essential requirement for any linked open data; all levels of the five star rating scheme (Table 1) require that data is published with an ‘open license.’ Specifically, the Creative Commons ‘No Rights Reserved’ (or ‘CC0’) (<a href="http://creativecommons.org/about/cc0">http://creativecommons.org/about/cc0</a>) license should be used for all structured data.  The CC0 license should be included directly in the RDF – for example see: <a href="http://data.nytimes.com/N13941567618952269073.rdf">http://data.nytimes.com/N13941567618952269073.rdf</a> and embedded in the html representation of the structured data – for example: http://data.nytimes.com/N13941567618952269073.html</p>
+<h3>B. Publish Structured Data as Resource Description Framework (RDF)</h3>
+<p>RDF is “a foundation for processing metadata; it provides interoperability between applications that exchange machine-understandable information on the Web.” (W3C, 1999) At its core, RDF relies on statements about web resources, such as, “Anheuser-Busch was established in 1860.” These statements, known as triples, are created with a well-defined syntax with subject, predicate, and object, such as:</p>
+<p>&lt;<a href="http://collections.mohistory.org/resource/78543">http://collections.mohistory.org/resource/78543</a>&gt; . &lt;mhmvocab:establishedIn&gt; . “1860”</p>
+<p>Each part of a triple (subject, predicate, and object) must be a uniform resource identifier (URI) or a literal (such as “1860”). A set of interconnected triples is known as an RDF graph. For example, the statement “Established in 1860, Anheuser-Busch is a business located in St. Louis, MO” could be represented by the following RDF graph:</p>
+<p>&lt;<a href="http://collections.mohistory.org/resource/78543">http://collections.mohistory.org/resource/78543</a>&gt; . &lt;mhmvocab:establishedIn&gt; . “1860”<br/>
+&lt;<a href="http://collections.mohistory.org/resource/78543">http://collections.mohistory.org/resource/78543</a>&gt; . &lt;rdfs:label&gt; . “Anheuser-Busch”<br/>
+&lt;<a href="http://collections.mohistory.org/resource/78543">http://collections.mohistory.org/resource/78543</a>&gt; . &lt;rdf:type&gt; . &lt;mhmvocab:business&gt;<br/>
+&lt;<a href="http://collections.mohistory.org/resource/78543">http://collections.mohistory.org/resource/78543</a>&gt; . &lt;mhmvocab:locatedIn&gt; .<br/>
+&lt;<a href="http://collections.mohistory.org/resource/92142">http://collections.mohistory.org/resource/92142</a>&gt;<br/>
+&lt;<a href="http://collections.mohistory.org/resource/78543">http://collections.mohistory.org/resource/</a>92142&gt; . &lt;rdfs:label&gt; . “St. Louis, MO”</p>
+<p>Figure 2 is a visual representation of this same RDF graph.<br/>
+<a href="../../wp-content/uploads/2013/01/henry_fig2.jpg"><img loading="lazy" class="alignnone size-full wp-image-3638" alt="henry_fig2" src="../../wp-content/uploads/2013/01/henry_fig2.jpg" width="960" height="720" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig2.jpg 960w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig2-300x225.jpg 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig2-400x300.jpg 400w" sizes="(max-width: 960px) 100vw, 960px"/></a></p>
+<p>Figure 2. An example of an RDF graph.</p>
+<h3>C. Identify Resources with HTTP Dereferencable URIs</h3>
+<p>The RDF standard does not require that the URIs defining subjects, predicates, and objects be HTTP dereferencable (<a href="http://www.w3.org/TR/rdf-concepts/#dfn-URI-reference">http://www.w3.org/TR/rdf-concepts/#dfn-URI-reference</a>, sec 6.4). By definition a URI can be a uniform resource name (URN), a uniform resource locator (URL), or both (<a href="http://www.w3.org/TR/uri-clarification/">http://www.w3.org/TR/uri-clarification/</a>). URNs are defined as “the subset of URI that are required to remain globally unique and persistent even when the resource ceases to exist or becomes unavailable.” (Berners-Lee, 1998).  As such, a URN need not be dereferenceable through HTTP. Examples of URNs include ISBN (International Standard Book Number), UUID (Universal Unique Identifier), DOI (Digital Object Identifier), or TEL (telephone).</p>
+<p>Given the second rule of LOD (‘Use HTTP URIs …’), we are not considering these non-dereferencable identifiers to publish LOD. We want to provide structured data that allows a researcher or an automated query system to follow meaningful (semantic) links from one document (html, or RDF) to another, thereby allowing for complex queries within a larger graph of data. This is generally known as the ‘follow your nose’ approach (<a href="http://www.w3.org/wiki/FollowYourNose">http://www.w3.org/wiki/FollowYourNose</a>). If URIs used in RDF documents are not dereferencable, an automated ‘follow your nose’ approach would not be possible.</p>
+<p>Since any identifiers in RDF statements may include more than references to information resources, we should apply HTTP dereferencable URIs to any concept used in our RDF statements – including people, organizations, places, subjects, and museum objects.</p>
+<h3>D. Provide SPARQL endpoints</h3>
+<p>SPARQL is a standard query language for RDF (<a href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a>) allowing for queries across diverse data sources stored as RDF. A standard RDF query language, such as SPARQL, is a necessary requirements for building the ‘giant global graph’. While many existing SPARQL endpoints are specific to a given repository, there are some emerging tools which allow for querying across data repositories (<a href="http://swoogle.umbc.edu/">http://swoogle.umbc.edu/</a>, <a href="http://wifo5-03.informatik.uni-mannheim.de/pubby/">http://wifo5-03.informatik.uni-mannheim.de/pubby/</a>). By providing a SPARQL endpoint to our published linked open data we have the opportunity to connect to the emerging tools and, thereby participate in the ‘giant global graph’ – to the extent it exists.</p>
+<h3>E. Why Not Five Stars?</h3>
+<p>To get a five star rating for our LOD, we would have to link our data to external data sources. While some external linking is possible and should be done, there are limited opportunities for external links that capture the rich context and granularity of our local repository. For that reason, we cannot claim a five star rating. The assumption behind a ‘giant global graph’ is that subjects, predicates, and objects are defined by the same globally unique URIs across datasets. The current semantic web, while growing, is far from reaching that goal.</p>
+<p>According to Booth (2012), the fundamental use case of the semantic web can be summarized as follows: “A semi-autonomous agent should be able to sensibly merge two RDF datasets that were authored independently, using common URIs to join related information.” Thus far, there would be very limited opportunities for merging our local datasets with any other existing datasets because there are few globally defined metadata elements that we can use to link with other datasets and globally available value vocabularies do not cover the entities we need to define from our collections. To be useful for external linking, a metadata element set should have globally unique terms (URIs) for each metadata element and there should be sufficient adoption of these URIs so that many distributed datasets use the same URIs in their triples. Examples of such metadata element sets include: SKOS (Simple Knowledge System), RDFS (RDF Schema), DC (Dublin Core), and FOAF (Friend of a Friend). But these metadata element sets cannot define the rich context of museum and archive collections – including the relationships between collected items, people, places, and subjects. Some element sets exist for a museum specific context, but these are not as well adopted as the element sets listed above. For example, we plan to define our collections using CIDOC-CRM (<a href="http://www.cidoc-crm.org/">http://www.cidoc-crm.org/</a>) from the International Council of Museums (<a href="http://icom.museum/">http://icom.museum/</a>). CIDOC-CRM is an extensible element set that allows us to capture our data within a museum specific context. Unfortunately, CIDOC-CRM has not been widely adopted and does not yet – at the time of writing this paper – have a version independent namespace (<a href="http://www.cidoc-crm.org/docs/cidoc-crm naming proposal (303-redirect)_v3.pdf">http://www.cidoc-crm.org/docs/cidoc-crm%20naming%20proposal%20%28303-redirect%29_v3.pdf</a>). We plan to link our data to CIDOC-CRM with the expectation that it will be more widely adopted in the future. Until CIDOC-CRM is more widely adopted, we cannot claim that we have achieved an LOD five star rating.</p>
+<h2>3. The Importance of Linked Open Data (LOD)</h2>
+<p>By publishing LOD we will make our collections more valuable to researchers; provide opportunities for the broader community to continually add knowledge to our collection; and, over time, help build the semantic web (or ‘giant global graph’). If we publish LOD as described above, we should be able to accomplish the following:</p>
+<ol>
+<li>Allow researchers to answer more in-depth queries about our collections. LOD would allow complex queries such as “Find all businesses in the St. Louis area established before 1920”.  This kind of query would be possible because we have identified business by unique URIs and have created statements (or assertions) about those business that include meaningful links such as ‘dateEstablished’ and ‘locatedIn’.</li>
+<li>Enable the building of more context and relationships within our collections.</li>
+<li>Allow our Museum to become a resource for building connections outside of our own collections – to provide nodes in the ‘giant global graph’..</li>
+</ol>
+<h2>4. The Challenges of Publishing ‘Permanent’ Structured Data on the Web</h2>
+<p>The Web is just over 20 years old and there’s no denying that it has had an enormous impact on society and nearly every aspect of our normal lives. The web has not only grown at an exponential rate, it also changes very rapidly – new technologies are constantly introduced while old technologies become obsolete. In large part, the tremendous growth of the web has been due to a low barrier to entry. Initially, publishing to the web was easy.  It was easy to write some basic HTML and post a web page to an internet service provider – it still is. Oftentimes, there was little thought about the permanence of those web pages – web pages simply served the immediate need to post some currently relevant information.  As a result, many links to web pages have broken over time. As the web evolved beyond simple text pages to become more interactive, we have done our best to keep up with new technologies so as not to become irrelevant in this quickly evolving medium. As a result, the intended meaning of an information resource gets lost because it can no longer be adequately rendered. To some extent, those of us working with web technologies have accepted this non-permanence and constant change as a normal cost of publishing to the web. While this constant change may have been a nuisance for working with the web as a means of posting documents and other information resources; it becomes more damaging when working with Linked Open Data (LOD).</p>
+<h3>A. Links get broken</h3>
+<p>Many of the web pages posted on the early web are no longer accessible. For example, in 1996, I posted a web page titled ‘<a href="http://www.tetranet.net/users/gaostl/guide.htm">Guide to the World Wide Web for Research and Auditing</a>’ at <a href="http://www.tetranet.net/users/gaostl/guide.htm">http://www.tetranet.net/users/gaostl/guide.htm</a>. A link to the page is still on the AuditNet site at <a href="http://www.auditnet.org/govaudit.htm">http://www.auditnet.org/govaudit.htm</a>. Of course, the link to my original web page returns a ‘404 – Not Found’ error. I have not worked for GAO (Government Accounting Office) for over 12 years and no one else has maintained the page – in fact, the ISP account we used (gaostl) was cancelled long ago. This scenario has been repeated many times. Millions of published URLs return ‘404 Not Found’ for one or more of the following reasons:</p>
+<ul>
+<li>the internet hosting provider went out of business;</li>
+<li>an account at an internet hosting provider has lapsed;</li>
+<li>a website gets reorganized so that files get moved;</li>
+</ul>
+<h3>B. Intended meaning gets lost</h3>
+<p>Similarly, URLs may not return a ‘404 Not Found’ error but they no longer render correctly so that it is no longer possible to understand the intended meaning of the information resource at that URL. Web technologies come and go and we have to adapt to maintain the permanence of our existing web resources. As an example, we are facing the likelihood that Flash will no longer be supported in the near future – even now some existing mobile devices do not support Flash. The most likely replacement for these technologies is HTML5. This means that web developers have been scrambling to convert their existing Flash-based resources to HTML5. In some cases, existing Flash resources will not be converted and, therefore, at some point in the near future they will not be rendered appropriately. There is a similar challenge both browsers and devices.  Browser compatibility has been an on-going problem – developing web content for one web browser does not guarantee that the content will render correctly in another browser.  Most recently with the rapid growth of mobile devices, web developers are converting or rewriting web content so that they render correctly in both browsers and common mobile devices.</p>
+<h3>C. Consequences for LOD</h3>
+<p>This constant change on the web can seriously damage the quality of Linked Open Data (LOD). As described above, one of our goals with LOD is to provide graphs of structured data that would allow a query system to follow meaningful (semantic) links from one RDF document to another. The glue holding this data graph together is the URI. Since URIs will be used to identify not only information resources like documents but also concepts and things such as people, organizations, places, subjects, and museum objects, we expect that, over time, many RDF statements will be added to our repository using these URIs in statements. If it is not possible to dereference the URI to get a meaningful to get a meaningful description, then the given statement is useless – it no longer has meaning and we have violated the third rule of LOD – ‘When someone looks up a URI, provide useful information.’</p>
+<h2>5.  Best Practices to Maintain the Permanence of Linked Open Data</h2>
+<p>At the very inception of the web, Tim Berners-Lee was aware of the importance of maintaining permanence in the face of constant change. In his original proposal for the web, Berners-Lee (1989) argued that “We should work toward a universal linked information system, in which generality and portability are more important than fancy graphics techniques and complex extra facilities.” (<a href="http://www.w3.org/History/1989/proposal.html">http://www.w3.org/History/1989/proposal.html</a>) Fortunately there are strategies and best practices which, if followed, can prevent many of the problems associated with the rapidly changing web environment. First, we need to follow best practices to maintain permanent URIs – to avoid broken links. Second, we need to adhere to the HTTP protocol to dereference URIs and represent things (people, organizations, places, objects, and concepts) used in LOD. Finally, we should follow best practices from object-oriented programming to develop a web architecture that allows for continual change on the web while maintaining the permanence of resources used in LOD.</p>
+<h3>A. Permanent URIs</h3>
+<p>According to Berners-Lee “It is the the duty of a Webmaster to allocate URIs which you will be able to stand by in 2 years, in 20 years, in 200 years. This needs thought, and organization, and commitment.” (<a href="http://www.w3.org/Provider/Style/URI">http://www.w3.org/Provider/Style/URI</a>)  The basic strategy to maintain URI permanence is to keep URIs opaque (<a href="http://www.w3.org/TR/webarch/#uri-opacity">http://www.w3.org/TR/webarch/#uri-opacity</a>). An opaque URI is one that includes no context about the resource being defined. Providing context in URIs is very common in the web as we know it. Examples of context in URIs include:</p>
+<ul>
+<li>referring to a specific file with it’s extension – for example <a href="http://www.example.com/about.html">http://www.example.com/about.html</a> or http://www.example.com/faq.pdf.</li>
+<li>adding date context – for example <a href="http://www.example.com/july/15/2012/henry.html">http://www.example.com/july/15/2012/henry.html</a></li>
+<li>referring to an organizational unit in the URI – for example http://www.example.com/marketing/faq.html</li>
+</ul>
+<p>All of these common practices need to be avoided to maintain permanent URIs. This means developing a coherent strategy for minting URIs and making it a long-term institutional policy.</p>
+<h3>B. Reliance on the HTTP Protocol</h3>
+<p>As discussed above, the URIs used in LOD identify anything – including people, organizations, places, concepts, objects, and information resources. Using URIs in this manner is very different from the way we have used URLs on the current web. In the early stages of the web, a URL would locate a specific file on a server (an html file, an image, a sound file etc.) As the web has evolved, URLs began pointing to scripts with arguments to retrieve a page or article. Whether referring to a file or to a script that retrieves information, the URL is pointing directly to an information resource. But, we should not point directly to an information resource when referring to a real-world entity such as a place or a person (Heath &amp; Bizer, 2011). Instead, a URI identifying a real-world entity should be redirected to an information resource describing that entity. This redirection process can be done by relying on the HTTP protocol. (<a href="http://www.w3.org/TR/cooluris/#r303gendocument">http://www.w3.org/TR/cooluris/#r303gendocument</a>). Heath and Bizer (2011) laid out a four step procedure to handle such URIs:</p>
+<ol>
+<li>“The client performs an HTTP GET request on a URI identifying a real-world object or abstract concept. If the client is a Linked Data application and would prefer an RDF/XML representation of the resource, it sends an Accept: application/rdf+xml header along with the request. HTML browsers would send an Accept: text/html header instead.</li>
+<li>The server recognizes that the URI identifies a real-world object or abstract concept. As the server can not return a representation of this resource, it answers using the HTTP 303 See Other response code and sends the client the URI of a Web document that describes the real-world object or abstract concept in the requested format.</li>
+<li>The client now performs an HTTP GET request on this URI returned by the server.</li>
+<li>The server answers with a HTTP response code 200 OK and sends the client the requested document, describing the original resource in the requested format.”</li>
+</ol>
+<p>This procedure is as stable as it is possible to be on the web because it uses the most fundamental underlying protocol on the web – the Hypertext Transfer Protocol (HTTP). So while technologies on the web change and evolve very rapidly, the underlying HTTP protocol is a constant and we should be able to rely on it as long as the web exists. Figure 3 depicts the evolution of web technologies and shows that there have been many technologies introduced and, in some cases, deprecated over the history of the web. Figure 4 shows that the HTTP protocol has been a constant through this turmoil of web technologies. Since LOD is built on the web, we are betting that the web will exist in the foreseeable future, so we can safely use the HTTP protocol as a kind of anchor in the turmoil of web technologies.<br/>
+<a href="../../wp-content/uploads/2013/01/henry_fig3.png"><img loading="lazy" class="alignnone size-full wp-image-3639" alt="henry_fig3" src="../../wp-content/uploads/2013/01/henry_fig3.png" width="1050" height="484" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig3.png 1050w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig3-300x138.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig3-1024x472.png 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig3-500x230.png 500w" sizes="(max-width: 1050px) 100vw, 1050px"/></a><br/>
+Figure 3. The Evolution of Web Technologies (http://www.evolutionoftheweb.com/#/evolution/day)</p>
+<p><a href="../../wp-content/uploads/2013/01/henry_fig4.png"><img loading="lazy" class="alignnone size-full wp-image-3640" alt="henry_fig4" src="../../wp-content/uploads/2013/01/henry_fig4.png" width="1050" height="484" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig4.png 1050w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig4-300x138.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig4-1024x472.png 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/henry_fig4-500x230.png 500w" sizes="(max-width: 1050px) 100vw, 1050px"/></a><br/>
+Figure 4 – The Constancy of the HTTP Protocol (<a href="http://www.evolutionoftheweb.com/#/evolution/day">http://www.evolutionoftheweb.com/#/evolution/day</a>)</p>
+<h3>C. Best Practices from Object-Oriented Programming</h3>
+<p>Although we should follow best practices to maintain the permanence of URIs and web representations in the Linked Open Data (LOD) that we publish, the methods that we employ (or the implementations) to meet those best practices cannot be permanent. Like browser-based web technologies, server-side technologies are also changing and evolving rapidly. Early in the web’s history, CGI (common gateway interface) scripts were written for server-side processing – Perl being the most common scripting language. Over time, there were fewer CGI and Perl implementations and more module-based implementations written in PHP, Active Server Pages (ASP), Java Server Pages, Python, Ruby and others. More recently, web developers have adopted various web development frameworks and/or content management systems written using one or more of these languages – for example, WordPress, Drupal, Ruby-on-Rails, Django, or SharePoint. The selection of a server-side technology should not be done frivolously, but there are many good reasons for changing from one server-side implementation to another. These may include:</p>
+<ul>
+<li>security considerations;</li>
+<li>technical skill-sets of developers;</li>
+<li>availability of programming libraries;</li>
+<li>integration capabilities;</li>
+<li>maintainability of code; and the</li>
+<li>portability of code.</li>
+</ul>
+<p>Since we cannot expect our server-side implementations to be permanent, we have to develop a server-side architecture that will allow us the flexibility to change the underlying implementation without affecting the permanence of the LOD we publish. Concepts from object-oriented programming can help guide the development of such an architecture – specifically, the concepts of abstraction and encapsulation.</p>
+<p>According to Booch (1994), an abstraction “focuses on the outside view of an object, and so serves to separate an object’s essential behavior from its implementation.” In the context of LOD, the ‘object’ is anything identified by a URI – including its associated information resources – and the ‘outside view’ is the HTTP protocol. Our web architecture serving LOD meets the goal of abstraction if the URI and HTTP responses remain the same no matter what underlying server-side technology is used.</p>
+<p>According to Booch (1994), encapsulation is “most often achieved through information hiding, which is the process of hiding all the secrets of an object that do not contribute to its essential characteristics; typically, the structure of an object is hidden, as well as the implementation of its methods.” The ‘secrets’ of ‘objects’ in LOD may include the server-side framework being used to return a representation; or the back-end data storage; or the server-side scripting language used. All of these ‘secrets’ of LOD ‘objects’ need to be hidden because they are subject to change at any time. This means that URIs should not include extensions such as .php, .asp, or .jsp; nor should it contain any URL arguments specific to the framework/CMS or data storage implementation.</p>
+<h2>6. A Proposed Web Architecture for Managing Linked Open Data (LOD)</h2>
+<p>The best practices discussed above suggest that publishing LOD is very different from the common practice of publishing on the current web. Publishing LOD requires more consideration than simply posting files on a web server. It requires centralized control over creating and serving URIs and web resources to maintain the permanence of our LOD. At the Missouri History Museum, we have developed an architecture that allows us to mint URIs and web resources in such a way that maintains permanence for the end user (whether a browser or an automated process) and that allows us to change the server-side implementation as technology evolves.<br/>
+<a href="../../wp-content/uploads/2013/01/henry_fig5.jpg"><img loading="lazy" class="alignnone size-full wp-image-3641" alt="henry_fig5" src="../../wp-content/uploads/2013/01/henry_fig5.jpg" width="629" height="475"/></a><br/>
+Figure 5. A proposed Architecture for LOD</p>
+<p>Figure 5 depicts our proposed architecture showing the relationship between a client’s interaction with our LOD and the server-side implementation we use to manage that interaction. On the left side of the figure are the HTTP protocol calls and responses that must remain permanent. On the right side of the figure are the components of our server-side implementation; unlike the HTTP calls and responses, these components are changeable. By ‘hiding’ our implementation behind standard HTTP calls and responses, we allow the possibility to change the server-side implementation without changing the client interactions. This proposed architecture depends on the following components:</p>
+<ul>
+<li>A URI Minting Policy and Process;</li>
+<li>A Linked Data Resolver;</li>
+<li>A Resource Manager;</li>
+<li>Resource Type Classes; and</li>
+<li>Data storage/retrieval tools.</li>
+</ul>
+<p>Each of these components will be considered in turn.</p>
+<h3>A. A URI Minting Policy and Process</h3>
+<p>As Tim Berners-Lee suggests, maintaining a permanent URI takes “thought, organization, and commitment” (<a href="http://www.w3.org/Provider/Style/URI">http://www.w3.org/Provider/Style/URI</a>). At the Missouri History Museum, we will be assigning URIs to a variety of resources including collected items such as museum objects, archives, and photos; real world entities such as people, places, and organizations; as well as information resources such as images, video, sound, and documents. We decided to create a new subdomain as the base for our URIs – collections.mohistory.org. To remove any context in our URIs, we decided to define every resource as ‘resource’ – all numbered using the same numbering sequence. For example, a chair in our collection may have the URI:<br/>
+<a href="http://collections.mohistory.org/resource/1234">http://collections.mohistory.org/resource/1234</a><br/>
+The next web resource we create may be a place (such as ‘Forest Park’), and it would receive the next resource number in the sequence, for example:<br/>
+<a href="http://collections.mohistory.org/resource/1235">http://collections.mohistory.org/resource/1235</a><br/>
+These URIs are opaque because there is nothing related to the resource type, date created, title, or the organizational unit managing the resource.</p>
+<h3>B. A Linked Data Resolver</h3>
+<p>An HTTP GET request for one of our web resource URIs would first get processed by an Apache URL Rewriting rule (<a href="http://httpd.apache.org/docs/2.2/rewrite/">http://httpd.apache.org/docs/2.2/rewrite/</a>).  Since a resource URI without an extension may be an identifier for a real-world entity, the URL Rewrite Rule would direct any resource URI without an extension (for example, <a href="http://collections.mohistory.org/resource/1234">http://collections.mohistory.org/resource/1234</a>)  to the Linked Data Resolver.  The Linked Data Resolver is a relatively simple, lightweight script that has only three functions: 1) parse the mime type from the Accept header of the request; 2) set the HTTP response code to ‘303 See Other’; and 2) sets the Location URL to the requested URI plus the extension associated with the appropriate mime-type (for example ‘Location: <a href="http://collections.mohistory.org/resource/1234.rdf">http://collections.mohistory.org/resource/1234.rdf</a>’).  This Linked Data Resolver script is kept intentionally lightweight to improve the speed of the 303 redirect process.</p>
+<h3>C. A Resource Manager</h3>
+<p>A resource URI can be minted from any number of different data sources ( for example, a collections management system, a digital asset management system, a library system). When data records are mapped from a local data source to the resource manager, a new resource record is created with the following pieces of information:</p>
+<ul>
+<li>a source namespace identified by mhmvocab:sourceNS;</li>
+<li>a local ID in the source namespace identified by mhmvocab:localSourceID; and</li>
+<li>a date when the URI was minted identified by mhmvocab:dateURIMinted;</li>
+<li>a type identified by rdf:type.</li>
+</ul>
+<p>The source namespace is associated with a mapping class so that the local record – associated with the given local ID – can be mapped to the central RDF repository (this mapping process is beyond the scope of this paper). Likewise the resource type (rdf:type) is associated with a PHP class to handle requests for the given resource type. The resource type identifier is itself a permanent URI, as such the resource type URI needs to minted before any resource URIs of that type are minted. In addition the resource type URI can be put within a hierarchy of resource types to allow for a higher degree of granularity, but the associated PHP classes need not have the same type hierarchy (for example, the resource type ‘rocking chair’ may be a subtype of ‘chair’ which is a subtype of ‘furniture’ which is a subtype of ‘3D object’, but there may be only a PHP class associated with the resource type ‘3D object’). All resource URIs with extensions identify information resources as opposed to real-world entities; as such, a URL rewrite rule should redirected those requests to the Resource Manager, which is a custom Drupal module. The Resource Manager module loads the resource record using the resource number appended to the URI (Note that if there is no record for the given resource number, an ‘HTTP 404 Not Found’ error would be returned).  Next, the resource type class (PHP class) associated with the resource type is instantiated with the resource record. The Resource Manager gets the requested data from the resource type class and returns that data to the client with an ‘HTTP 200 OK’ response.</p>
+<h3>D. Resource Type Classes</h3>
+<p>The resource type class is a PHP class with methods to handle requests, manage access rights, return the appropriate data, and any number of additional functions specific to the given resource type. Since the resource type class is part of a larger resource type hierarchy, it is possible to add very specific resource type methods while inheriting more generic methods from parent classes. For example, if we created a resource type class for a written letter, it might have specific methods related to the addressee and/or the return address that would not be available in the parent resource type class – parent. The parent class (or other classes above it in the hierarchy) may have more generic methods that handle functions such as connecting to a data source, checking access rights, or converting from one character set to another. By placing resource type classes within this kind of hierarchy, it makes it possible to change generic methods – such as data connections – higher in the hierarchy without affecting any of the classes inheriting those methods. This allows us to quickly respond to changing technologies and requirements.</p>
+<h3>E. Data Storage and Retrieval Tools</h3>
+<p>The architecture we are proposing has three different data storage and retrieval tools:</p>
+<ol>
+<li>A resource database implemented in Mysql (<a href="http://dev.mysql.com/">http://dev.mysql.com/</a>). The resource database contains a record for each resource URI we manage and it handles the resource numbering sequence using Mysql auto-increment (<a href="http://dev.mysql.com/doc/refman/5.0/en/example-auto-increment.html">http://dev.mysql.com/doc/refman/5.0/en/example-auto-increment.html</a>).  Since these functions are not unique to Mysql, this component could easily be swapped out with any number of databases without affecting the rest of the architecture’s functionality.</li>
+<li>An RDF repository implemented using Sesame (<a href="http://www.aduna-software.com/technology/sesame">http://www.aduna-software.com/technology/sesame</a>).  We use Sesame to store and retrieve RDF triples (subject, predicate, object).  Sesame provides a SPARQL endpoint which we can make available to the public; any internal interaction with the RDF repository is done through a SPARQL endpoint.  Since we rely on SPARQL for all interactions with the RDF repository, there is the possibility of changing the RDF repository to another implementation besides Sesame without changing any other part of the architecture. There are several alternatives to Sesame that can handle managing RDF triples with SPARQL (<a href="http://en.wikipedia.org/wiki/Triplestore">http://en.wikipedia.org/wiki/Triplestore</a>).</li>
+<li>An indexing tool implemented with SOLR (<a href="http://lucene.apache.org/solr/">http://lucene.apache.org/solr/</a>).  SOLR is a general purpose indexing tool that gives us much faster querying than Sesame.  For that reason, we use it for any data calls made from resource type classes.  The SOLR index is regularly updated from the RDF repository so that it reflects the most current triples stored in Sesame.  At this point, SOLR is our least flexible component; there is not a standard interface (like SQL, or SPARQL), so there would be no replacement for it that would not mean changing some other component.  However, since we are using SOLR to augment the capabilities of our triple store (Sesame), there may be a component available in the future that can replace both Sesame and SOLR – in other words, a triple store that performs as well as SOLR.and that is still accessible through SPARQL.</li>
+</ol>
+<h2>7. Future Work</h2>
+<p>The architecture proposed here represents an attempt to follow best practices related to LOD to the best of our abilities; however, there are some remaining issues that are not as yet addressed by any clearly defined best practices. First, as discussed above, opportunities to link to externally defined URIs will remain limited until globally defined metadata element sets and value vocabularies relevant to library, museum, and archive data are more readily adopted and made available with a version independent namespaces. Second, making progress towards a ‘giant global graph’ will require some further definition and/or standardization of URI definitions.</p>
+<p>Until there are globally defined metadata element sets with URIs that can be shared among multiple datasets, the best that we can do is use existing datasets in our own namespace, with our own unique URIs for each element. For example, we are using the CIDOC-CRM element set to capture RDF statements relevant for museum data, but since there is not yet a set of globally defined URIs for CIDOC-CRM elements, we have to define our own URIs for each element – for example (<a href="http://collections.mohistory.org/vocab/crm/P44_has_condition">http://collections.mohistory.org/vocab/crm/P44_has_condition</a>).  Once there are globally defined URIs for CIDOC-CRM elements, we will be able to align those URIs with the elements we have defined in our own namespace. This alignment can be achieved using the OWL and SKOS ontologies (Morshed et. al., 2011).</p>
+<p>We have a similar problem finding globally defined value vocabularies that can be used to link our dataset to externally defined datasets. While a number of value vocabularies exist, these vocabularies cannot capture the detail found in our collections. Some of the existing value vocabularies and their limitations relative to our collections are listed below:</p>
+<ul>
+<li>DBPedia (<a href="http://dbpedia.org/">http://dbpedia.org</a>).  DBPedia is a generic value vocabulary with more than 3 million records extracted from Wikipedia. These records include references to people, places, concepts, and many other ‘things.’ While this dataset is large and continually growing, it often does not have records relevant to our collection, particularly those which are historical. For example, there is a DBPedia record for the Anheuser-Busch brewery in St. Louis (<a href="http://dbpedia.org/page/Anheuser-Busch">http://dbpedia.org/page/Anheuser-Busch</a>), but not for the Southern Hotel which existed in St. Louis from about 1866 to 1912.</li>
+<li>Library of Congress Subject Headings (<a href="http://id.loc.gov/authorities/subjects.html">http://id.loc.gov/authorities/subjects.html</a>).  This includes all of the subject headings managed by the Library of Congress since 1898, but many subjects relevant to our collections are not included. For example, there is a subject for the “Missouri–History–Civil War, 1861-1865” (<a href="http://id.loc.gov/authorities/subjects/sh85086225">http://id.loc.gov/authorities/subjects/sh85086225</a>), but nothing related to the St. Louis World’s Fair which is a subject relevant to thousands of items in our collections.</li>
+<li>Library of Congress Name Authority File (<a href="http://id.loc.gov/authorities/names.html">http://id.loc.gov/authorities/names.html</a>). Like other name authority sources, such as the Virtual International Authority File (<a href="http://viaf.org/">http://viaf.org/</a>), this value vocabulary includes names related to the authorship of published works. Therefore, it includes names such as ‘Charles Lindbergh’, but not other important names from our collections – such as one of the mayors of St. Louis: ‘Henry Overstolz’.</li>
+<li>Geonames (<a href="http://www.geonames.org/">http://www.geonames.org/</a>). This value vocabulary contains over ten million geographical place names. For our collections, it may be useful for current place names – such as ‘Central West End’ (a current St. Louis neighborhood), but not for historic place names – such as ‘Mill Creek’ (a St. Louis neighborhood that was demolished in the 1950s to make way for Interstate 64).</li>
+</ul>
+<p>Given the limitations of these external value vocabularies, we can only align a portion of our dataset to these vocabularies. We can continually review the external vocabularies to find new opportunities to align our own vocabularies, but, in some cases, we may be the only source for many locally relevant terms.</p>
+<p>The limitations related to both metadata elements and value vocabularies can be addressed, in part, by minting URIs for both metadata elements and values. But there remains a problem in determining what that minted URI actually identifies. In other words, a URI identifies a resource, but how do we define that resource? Rule three of the four rules of LOD states: “When someone looks up a URI, provide useful information.” (<a href="http://www.w3.org/wiki/LinkedData">http://www.w3.org/wiki/LinkedData</a>). As discussed above, this is one of the rules required for creating a ‘giant global graph.’ But the meaning of ‘useful information’ is not clear. Is it useful for a human reader or for an automated process? This issue of URI resource identity has been debated for over a decade in the field of the semantic web (Booth, 2012) and, as yet, there is no clear resolution to the problem. The recent proposal for a URI Definition Discovery Protocol (<a href="http://www.w3.org/wiki/UriDefinitionDiscoveryProtocol">http://www.w3.org/wiki/UriDefinitionDiscoveryProtocol</a>) seems promising, but it is still in draft form. We will track this and similar proposals to determine whether we need to amend our process to accommodate new recommendations. Until there is a clear recommendation, we will provide whatever data we can to describe our resources in a meaningful way.</p>
+<h2>8. Conclusions</h2>
+<p>Linked Open Data (LOD) has great potential to benefit researchers using our collections and the general public in building a web of data using our collections. But, there are considerable challenges publishing LOD in the quickly changing environment of the web.  Some best practices exist to help us maintain permanence for LOD in the web environment. We have proposed a web architecture that follows these best practices, but there remain some issues that are not addressed by any best practices. For these remaining issues, we will closely follow the current research and adopt new best practices as necessary.</p>
+<h2>References</h2>
+<p>Apache – Apache mod_rewrite<br/>
+<a href="http://httpd.apache.org/docs/2.2/rewrite/">http://httpd.apache.org/docs/2.2/rewrite/</a></p>
+<p>Ayers, Danny Talis &amp; Völkel, Max (2007) – Cool URIs for the Semantic Web<br/>
+last updated December 3, 2008. consulted January 3, 2013<br/>
+<a href="http://www.w3.org/TR/cooluris/#r303gendocument">http://www.w3.org/TR/cooluris/#r303gendocument</a></p>
+<p>Berners-Lee, Tim (1989) – Information Management: A Proposal<br/>
+Consulted January 3, 2013<br/>
+<a href="http://www.w3.org/History/1989/proposal.html">http://www.w3.org/History/1989/proposal.html</a></p>
+<p>Berners-Lee, Tim (1998) – Uniform Resource Identifiers (URI): Generic Syntax<br/>
+Consulted January 3, 2013<br/>
+<a href="http://www.ietf.org/rfc/rfc2396.txt">http://www.ietf.org/rfc/rfc2396.txt</a></p>
+<p>Berners-Lee, Tim – Cool URIs don’t change<br/>
+Consulted January 3, 2013<br/>
+<a href="http://www.w3.org/Provider/Style/URI">http://www.w3.org/Provider/Style/URI</a></p>
+<p>Berners-Lee, Tim (2007), Giant Global Graph<br/>
+Consulted January 3, 2013<br/>
+<a href="http://dig.csail.mit.edu/breadcrumbs/node/215">http://dig.csail.mit.edu/breadcrumbs/node/215</a></p>
+<p>Booch, Grady. (1994) Object-oriented analysis and design with applications. 2nd ed.<br/>
+Boston: Addison-Wesley</p>
+<p>Booth, David. (2012) – “Framing the URI Resource Identity Problem: The Fundamental Use Case of the Semantic Web” (draft) Consulted January 30, 2013.<br/>
+<a href="http://dbooth.org/2012/fyn/Booth-fyn.pdf">http://dbooth.org/2012/fyn/Booth-fyn.pdf</a></p>
+<p>Creative Commons – About CC0 – “No Rights Reserved”<br/>
+Consulted January 3, 2013<br/>
+<a href="http://creativecommons.org/about/cc0">http://creativecommons.org/about/cc0</a></p>
+<p>Cyganiak, Richard and Jentzsch, Anja (2007) – Linking Open Data cloud diagram<br/>
+last updated September 19, 2011. Consulted January 3, 2013<br/>
+<a href="http://lod-cloud.net/">http://lod-cloud.net</a><br/>
+Hausenblas, Michael (2012) – 5 star Open Data<br/>
+last updated April 3, 2012, Consulted January 3, 2013<br/>
+<a href="http://5stardata.info/">http://5stardata.info/</a></p>
+<p>Heath, Tom &amp; Bizer, Christian. (2011). Linked Data: Evolving the Web into a Global Data Space (1st edition). Synthesis Lectures on the Semantic Web: Theory and Technology, 1:1, 1-136. Morgan &amp; Claypool.<br/>
+<a href="http://linkeddatabook.com/editions/1.0/#htoc12">http://linkeddatabook.com/editions/1.0/#htoc12</a></p>
+<p>Heath and Bizer. (2011).  Linked Data – The Story So Far<br/>
+Consulted January 29, 2013<br/>
+<a href="http://tomheath.com/papers/bizer-heath-berners-lee-ijswis-linked-data.pdf">http://tomheath.com/papers/bizer-heath-berners-lee-ijswis-linked-data.pdf, p. 1</a></p>
+<p>ICOM – CIDOC-CRM URIs NAMESPACE PROPOSAL (using 303-redirect mechanism)<br/>
+Consulted January 3, 2013<br/>
+<a href="http://www.cidoc-crm.org/docs/cidoc-crm naming proposal (303-redirect)_v3.pdf">http://www.cidoc-crm.org/docs/cidoc-crm%20naming%20proposal%20%28303-redirect%29_v3.pdf</a></p>
+<p>Jacobs, Ian W3C (2002) – Architecture of the World Wide Web, Volume One<br/>
+last updated December 15, 2004. consulted January 3, 2013<br/>
+<a href="http://www.w3.org/TR/webarch/#uri-opacity">http://www.w3.org/TR/webarch/#uri-opacity</a></p>
+<p>Khosrow-Pour, Mehdi. (2007). Dictionary of Information Science and Technology  (2 Volumes)<br/>
+IGI Global</p>
+<p>Morshed, Ashan, et. al.  (2011) – “Evaluating approaches to automatically match thesauri from different domains for Linked Open Data”  Consulted January 30, 2013.<br/>
+<a href="https://www.comp.glam.ac.uk/pages/research/hypermedia/nkos/nkos2011/abstracts/Morshed_etal.pdf">https://www.comp.glam.ac.uk/pages/research/hypermedia/nkos/nkos2011/abstracts/Morshed_etal.pdf</a></p>
+<p>W3C (1999) – Resource Description Framework (RDF) Model and Syntax Specification<br/>
+last updated February 10, 2004. Consulted January 3, 2013<br/>
+<a href="http://www.w3.org/TR/1999/REC-rdf-syntax-19990222/">http://www.w3.org/TR/1999/REC-rdf-syntax-19990222/</a></p>
+<p>W3C (2001) – URIs, URLs, and URNs: Clarifications and Recommendations 1.0<br/>
+last updated September 21, 2001. Consulted January 3, 2013<br/>
+<a href="http://www.w3.org/TR/uri-clarification/">http://www.w3.org/TR/uri-clarification/</a></p>
+<p>W3C (2003) – FollowYourNose<br/>
+last updated August 25, 2007. Consulted January 3, 2013<br/>
+<a href="http://www.w3.org/wiki/FollowYourNose">http://www.w3.org/wiki/FollowYourNose</a></p>
+<p>W3C (2004) – SPARQL Query Language for RDF<br/>
+last updated January 15, 2008. Consulted January 3, 2013<br/>
+<a href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a></p>
+<p>W3C (2004) – Resource Description Framework (RDF): Concepts and Abstract Syntax<br/>
+last updated February 10, 2004. Consulted January 3, 2013<br/>
+<a href="http://www.w3.org/TR/rdf-concepts/#dfn-URI-reference">http://www.w3.org/TR/rdf-concepts/#dfn-URI-reference</a></p>
+<p>W3C (2007) – LinkedData<br/>
+last updated July 7, 2012. Consulted January 3, 2013<br/>
+<a href="http://www.w3.org/wiki/LinkedData">http://www.w3.org/wiki/LinkedData</a></p>
+
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+D. Henry and E. Brown, Serving Tea on the Rapids: An Architectural Approach for Managing Linked Open Data. In <i>Museums and the Web 2013</i>, N. Proctor &amp; R. Cherry (eds). Silver Spring, MD: Museums and the Web. Published January 31, 2013. Consulted <script type="text/javascript">document.write(full_date);</script> <!-- April 23, 2022 -->.<br/>
+https://mw2013.museumsandtheweb.com/paper/serving-tea-on-the-rapids-an-architectural-approach-for-managing-linked-open-data/<br/><br/><hr/>
+<!-- 
+<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js'></script>
+<script type="text/javascript">
+var tz = jstz.determine();
+tz.name();
+</script>
+
+
+<script type="text/javascript">document.write(tz.name()); 
+</script>UTCApril 23, 2022-->
+
+	<div id="comments">
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="../../wp-login6855.html?redirect_to=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fserving-tea-on-the-rapids-an-architectural-approach-for-managing-linked-open-data%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+</div><!-- #content -->
+</div>

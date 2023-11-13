@@ -1,0 +1,219 @@
+<div id="primary">
+<div id="full_width_content">
+			
+
+<h1 class="entry-title">Mo’ Pixels Mo’ Problems: Moving Toward a Resolution Independent Web</h1>
+<br/>
+
+<a href="../../user/index8469.html?u=mgipson">Matt Gipson</a>, USA, <a href="../../user/indexa82b.html?u=rtroyer">Rita Troyer</a>, USA<br/><br/><b>Abstract</b><br/>
+<p>Since the introduction of high pixel density displays, the classic notion of the pixel, as well as the concept of a standard dpi, are fading. Web designers are no longer constrained to fixed-width web elements. With the evolution of modern display devices, designers are now responsible for thinking beyond layout and must also consider the impact of resolution. This paper will focus on various tools and techniques web designers can use to achieve resolution independence. Topics will include the pros and cons of delivery methods, resolution independent design alternatives, common responsive design techniques and more.</p>
+<p><b>Keywords: </b>retina, resolution, web, design, pixel, responsive</p>
+<h2><span style="color: #000000; font-weight: bold;">1. Introduction and History</span></h2>
+<p>More than half of U.S. laptop owners also own a smartphone, and nearly a quarter of them own a tablet as well. (Mitchell, 2012) Users are now interacting with our content on an ecosystem of screens. Digital products and services are expected to function coherently across devices, and their features to be optimized for the wide array of devices they may be accessed on. In order to accommodate a synchronous user experience in a device shifting world, we as designers, must prepare our designs in a fluid and focused manner. Cross-platform interactions should complement each other and work in tandem with one another in order to synchronize, and at times, extend a user experience.</p>
+<p>The rapidly changing technology market requires designers to remain agile in their thinking and process. Mobile devices with higher pixels per inch (PPIs) than ever before continue to multiply amongst our users. Before we make hasty decisions on the direction of our websites, we must first identify problems and opportunities, and then decide on the best way forward.</p>
+<p>The problem with immediately jumping on the high pixel density display bandwagon is that we don’t want to make vast assumptions about our users’ device performance capabilities. How do we serve different images across different devices and contexts while using the same HTML tag? The two key factors in determining a successful approach to a resolution independent design are performance and audience.</p>
+<h2>2. The Pixel</h2>
+<p>With the advent of high pixel density displays, the pixel itself is now a relative unit. Pixel ratios can now be quantified as a pixel ratio of 1 for standard resolution devices or a pixel ratio of 2 for high pixel density devices.</p>
+<blockquote>
+<p dir="ltr">A device pixel (or physical pixel) is the tiniest physical unit in a display.</p>
+<p dir="ltr">Screen density refers to the number of device pixels on a physical surface. It is often measured in pixels per inch (PPI). Apple has coined the marketing term “Retina” for its double-density displays, claiming that the human eye can no longer distinguish individual pixels on the screen from a “natural” viewing distance. (Lemeden, 2012)</p>
+</blockquote>
+<p>What types of devices fall into the high pixel density display device category? iPhone 4/4S, iPhone 5, iPad (3rd &amp; 4th generation), iPod touch (4th &amp; 5th generation), MacBook Pro 13”, 15” to name a few; however, it’s not just Apple creating these products, Google, HTC, Samsung, and Sony are also tapping into high pixel density display devices.</p>
+<p>Device pixel density tests and information (Edwards, 2012):</p>
+<div dir="ltr">
+<table>
+<colgroup>
+<col width="*"/>
+<col width="*"/>
+<col width="*"/>
+<col width="*"/></colgroup>
+<tbody>
+<tr>
+<td>Devices with -webkit-min-device-pixel-ratio: 1.0</td>
+<td>Devices with -webkit-min-device-pixel-ratio: 1.3</td>
+<td>Devices with -webkit-min-device-pixel-ratio: 1.5</td>
+<td>Devices with -webkit-min-device-pixel-ratio: 2.0</td>
+</tr>
+<tr>
+<td>All non-Retina Macs<br/>
+All non-Retina iOS devices<br/>
+Acer Iconia A500<br/>
+Samsung Galaxy Tab 10.1<br/>
+Samsung Galaxy S</td>
+<td>Google Nexus 7</td>
+<td>Google Nexus S<br/>
+Samsung Galaxy S II<br/>
+HTC Desire<br/>
+HTC Incredible S<br/>
+HTC Velocity<br/>
+HTC Sensation</td>
+<td>iPhone 4<br/>
+iPhone 4S<br/>
+iPhone 5<br/>
+iPad (3rd generation)<br/>
+iPad 4<br/>
+All Macs with Retina displays<br/>
+Google Galaxy Nexus<br/>
+Google Nexus 4<br/>
+Google Nexus 10<br/>
+Samsung Galaxy S III<br/>
+Samsung Galaxy Note II<br/>
+Sony Xperia S<br/>
+HTC One X</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Three of the top five smartphones during quarter three of 2012 in the United States were high pixel density display devices (NPD Group, 2012). Each of those three devices were Apple products, which currently hold 31% of the US smartphone market share. As more users move to these high pixel density devices it paves the way for a new wave in design standards.</p>
+<blockquote>
+<p dir="ltr">Pixels, whether in terms of device real estate or device density, should be treated as an enhancement or feature that some browsers have and others do not. Build a strong baseline of support, then optimize as necessary (Rupert, 2012).</p>
+</blockquote>
+<h3>Use</h3>
+<p>Museums are beginning to use technologies to expand their offerings, grow and diversify their audiences, and bring technology into the act of creating art itself. Technology usage in the museum space changes the efforts needed to keep up timely and well designed content that is easily accessible on our visitors’ devices.</p>
+<p>As John Allsop stated in his design manifesto, “The Dao of Web Design:”</p>
+<blockquote>
+<p dir="ltr">Firstly, think about what your pages do, not what they look like. Let your design flow from the services which they will provide to your users, rather than from some overarching idea of what you want pages to look like. Let form follow function, rather than trying to take a particular design and make it “work.” (Allsopp, 2000)</p>
+</blockquote>
+<p>There are several factors to consider when designing a retina optimized website or application, namely audience and performance.</p>
+<p>If the majority of your website’s visitors are browsing your site with a Windows desktop browser, you might not want to spend the time devising a high pixel density interface design. Standard resolution images are still an optimal solution in many cases.</p>
+<p>Website performance is another consideration. Slower page load time results in an increase in page abandonment. People access the web on a wide array of mobile devices and still expect a web-browsing experience that is comparable to what they experience on a desktop.</p>
+<blockquote>
+<p dir="ltr">Designing adaptable pages is designing accessible pages. (Allsopp, 2000)</p>
+</blockquote>
+<p>Above all, it is most important to make digital web experiences that are accessible to all users.</p>
+<h3>Implementation</h3>
+<p>Below, we’ll discuss a maximum quality, minimum effort approach to various methods of achieving websites and applications that cater to high pixel density displays.</p>
+<h4>Designing With Code (CSS)</h4>
+<p>Because of varying device resolutions, a pixel on one platform does not always translate to a pixel on another; however, when used properly, CSS enables designers to suggest the appearance of a page, not to control the appearance of a page.</p>
+<p>A CSS pixel is an abstract unit that browsers read to precisely and consistently draw content on Web pages. On standard density displays, 1 CSS pixel corresponds to 1 device pixel. On a high pixel density display, the resulting shape has four times more pixels.</p>
+<p>CSS is also the means by which we can control page elements for fluid screen sizes. Say you’d like for a header to be larger than the body text on all display devices. With CSS, you can specify an overall font size as a percentage of the font size of the parent element. We can make headings and other elements stand out by specifying that headings of level 1 should be 20% larger than the body text, level 2 should be 15% larger, etc. This allows for headings to scale proportionally regardless of the users device size and display type.</p>
+<h4>Responsive Design / Flexible Design Foundations</h4>
+<p>Rather than tailoring specific and therefore disconnected designs to each web device, we can treat them as facets of an overall seamless experience. Responsive design uses CSS media queries to target specific device sizes. The responsive design framework enables us to move away from the fixed-width web layouts we used for desktop-only websites and move toward a framework that allows users to access the same site across a variety of devices.</p>
+<blockquote>
+<p dir="ltr">The web is responsive on its own—by default. It’s us that’s been breaking it all these years by placing content in fixed-width containers. (Hume, 2011)</p>
+</blockquote>
+<p>A popular fixed-width grid dimension used is 960 pixels wide based on the notion 1024 pixels covered the majority of audience displays. Though the grid concept remains the same, the notion of having a fixed-width is quickly diminishing. Web designers are instead opting to use flexible design foundations to implement a tailored user experience.</p>
+<h3>High Resolution Imagery</h3>
+<p>Including images with double the pixel density means images need four times the pixels they would in a standard resolution image. It’s important to think twice when using higher resolution images because they can negatively impact performance. Is there a sensible compromise or rule of thumb to apply throughout your interface? Retina images are great for a beautiful, sharp experience, but often cause slow download speeds. In most cases, speed should take precedence over aesthetics, especially on devices with small amounts of memory and slower connection speeds.</p>
+<p>Adding media queries in your CSS stylesheets is a great way to determine when you should serve higher resolution images.<br/>
+Example media query for “Retina” or “2x:”</p>
+<p><code>@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {<br/>
+/* Retina-specific stuff here */<br/>
+}</code></p>
+<p>Media queries make it possible to target a variety of specific aspect ratios.<br/>
+Example media query targeting a wide range of device aspect ratios with vendor specific prefixes:</p>
+<p><code>@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),<br/>
+only screen and (-moz-min-device-pixel-ratio: 1.5),<br/>
+only screen and (-o-min-device-pixel-ratio: 3/2),<br/>
+only screen and (min-device-pixel-ratio: 1.5) {<br/>
+/* High pixel density stuff here */<br/>
+}</code></p>
+<p>Though minor, a drawback to consider is the possibility of ending up with a lot of CSS definitions to maintain. Even denser displays would require yet another media query. As browsers continue to mature and the specification for device-pixel-ratio is completed, vendor prefixes will no longer be required.</p>
+<h4>JavaScript</h4>
+<p>Another popular solution for optimizing digital projects is with the use of JavaScript. The good thing about using JavaScript, is that it is more or less automated. One JavaScript library that eases the development of a site with retina images is Retina.js. The main requirement is that higher resolution images are created and named in the same capacity as standard resolution images. JavaScript will check each image on the page and detect whether or not a high resolution version exists. If a high resolution variant exists, the script will swap in the image.</p>
+<p>Here’s how Retina.js works:</p>
+<ol>
+<li>Create an additional version of a graphic saved with a filename ending in @2x.Standard resolution graphic:<br/>
+my-image.png<br/>
+Double resolution graphic:<br/>
+my-image@2x.png</li>
+<li>Include the script on your page.</li>
+</ol>
+<p>A drawback of using this method is that JavaScript must check each image on the page. Depending on server load and site traffic, this may negatively impact website performance.</p>
+<h4>Scalable Vector Graphics (SVG)</h4>
+<p>SVG images are resolution independent, lightweight, and infinitely scalable graphics. Compared to raster-based graphics, SVG is the most future proof file type. SVG images are an XML-based vector image format for two-dimensional graphics that support interactivity and animation. SVG graphics are supported across all modern web browsers. SVG is also a much smaller file type than its bitmap counterparts.</p>
+<div id="attachment_3957" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/01/gipson.fig1_.jpg"><img aria-describedby="caption-attachment-3957" loading="lazy" class="size-large wp-image-3957" alt="Figure 1: Scaled up version of Raster vs. scaled up version of Vector" src="../../wp-content/uploads/2013/01/gipson.fig1_-910x1024.jpg" width="584" height="657" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig1_-910x1024.jpg 910w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig1_-266x300.jpg 266w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig1_.jpg 1358w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-3957" class="wp-caption-text">Figure 1: Scaled up version of Raster vs. scaled up version of Vector</p></div>
+<p>Though SVG images may be hand-coded, most designers prefer using a visual editor such as Adobe Illustrator to create these images. Adobe Illustrator now comes with a full set of SVG exporting options for web.</p>
+<h4>Text Rendering / Web Fonts</h4>
+<p>Web fonts are another resolution-independent web design tool that can be used to maximize a user’s experience on high pixel density displays. Retina displays provide an extremely legible environment for web typography. Web fonts that include pictograms are an excellent option for presenting sets of resolution independent icons. Techniques like @font-face provide a multi-device typography solution. When targeting browsers that may not support web typography, browsers will gracefully degrade to a standard text rendering.</p>
+<h2>3. Case Studies</h2>
+<h3>ArtBabble – Launched December 4, 2012</h3>
+<div id="attachment_3958" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/01/gipson.fig2_.jpg"><img aria-describedby="caption-attachment-3958" loading="lazy" class="size-large wp-image-3958" alt="Figure 2: ArtBabble design examples" src="../../wp-content/uploads/2013/01/gipson.fig2_-1024x700.jpg" width="584" height="399" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig2_-1024x700.jpg 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig2_-300x205.jpg 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig2_-438x300.jpg 438w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig2_.jpg 1978w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-3958" class="wp-caption-text">Figure 2: ArtBabble design examples</p></div>
+<p>ArtBabble was conceived and built by the Indianapolis Museum of art (IMA) as an art video website intended to showcase art video content in a high quality format from a variety of sources and perspectives. On December 4, 2012, the IMA launched a redesign of the site with almost 3,000 art-related videos and 54 partners.</p>
+<p>ArtBabble was optimized for high pixel density displays because our analytics showed that our top three mobile traffic sources were the iPad, iPhone, and iPod. Our analytics also showed that our traffic was coming from a wide variety of devices and screen sizes, therefore we chose to use a responsive theme. During implementation, we incorporated the use of web type, icon fonts, and media queries to ensure a fluid experience across the site.</p>
+<p>With ArtBabble, there were two main approaches to making the site retina optimized. First, the simple, clean design enabled the use of mainly CSS and little to no graphic elements on the site. This allowed for quick load times within the interface and for the video content to take precedence.</p>
+<p>Because there were few graphic elements (simple icons, web typography) used in the interface, we chose to always serve high pixel density graphics and to scale them down only on standard resolution displays; however, poster images were kept at a standard resolution. If we were serving a lot of graphics and getting much more traffic, we might revisit this approach.</p>
+<h3>IMAmuseum.org – Launching February 2013</h3>
+<div id="attachment_3959" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/01/gipson.fig3_.jpg"><img aria-describedby="caption-attachment-3959" loading="lazy" class="size-large wp-image-3959" alt="Figure 3: IMA design examples" src="../../wp-content/uploads/2013/01/gipson.fig3_-1024x700.jpg" width="584" height="399" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig3_-1024x700.jpg 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig3_-300x205.jpg 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig3_-438x300.jpg 438w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig3_.jpg 1978w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-3959" class="wp-caption-text">Figure 3: IMA design examples</p></div>
+<p>Figure 3: IMA design examples</p>
+<p>The IMA’s web team is working on an extensive website refresh. Areas of focus include an updated information architecture, interface design, and content adjustments. Due to the increase in mobile traffic to the website, the refreshed site will be fully responsive in order to deliver a seamless experience across devices.</p>
+<p>The site is being optimized for high pixel density displays through the use of SVGs, high resolution imagery, CSS and Javascript, and web typography. The IMA Lab’s approach to technical implementation of the above are as follows:</p>
+<ul>
+<li>SVGs will be delivered via CSS as background images</li>
+<li>Image cache settings will be enabled on large images of great importance. On smaller thumbnail images and images that aren’t as important, we will leave them at their standard pixel density.</li>
+<li>Finally, Javascript will be queued on page load to detect the pixel density of a user’s device.</li>
+</ul>
+<h3>AIC LaunchPad – Launched October 28, 2012</h3>
+<div id="attachment_3960" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/01/gipson.fig4_.jpg"><img aria-describedby="caption-attachment-3960" loading="lazy" class="size-large wp-image-3960" alt="Figure 4: LaunchPad design examples" src="../../wp-content/uploads/2013/01/gipson.fig4_-1024x700.jpg" width="584" height="399" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig4_-1024x700.jpg 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig4_-300x205.jpg 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig4_-438x300.jpg 438w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/gipson.fig4_.jpg 1978w" sizes="(max-width: 584px) 100vw, 584px"/></a><p id="caption-attachment-3960" class="wp-caption-text">Figure 4: LaunchPad design examples</p></div>
+<p>The Art Institute of Chicago hired the IMA Lab to design and develop an in-gallery interactive application installed on iPads in the European Decorative Arts Galleries as well as the Ancient, Roman, and Byzantine Art Galleries. There were several obvious reasons our team made the decision to use high pixel density graphics throughout the web app.</p>
+<p>The project’s goal was to engage museum visitors and give them the opportunity to further explore objects surrounding them. The app is filled with full screen imagery and rich content. Because the web app was being installed on “retina” iPad’s in the galleries, we knew that the device would be capable of supporting high pixel density user interface elements and imagery. For the more graphical views within the app we had to remove retina images because they became too memory intensive and were causing the app to crash. The entire process was a game of give and take. In the end, we used retina interface elements everywhere and retina images only when they were adding to the overall user experience.</p>
+<h2>4. Future</h2>
+<p>The web is undergoing many major shifts and attaining complete resolution independence will be a long journey. There are no absolutes and until there is a standardized methodology, we must move forward and continue to provide the best experience possible to our users. According to projected device growth from 2010-2015, we will only continue to see more growth in the devices that offer high pixel density displays. (Sigler, 2012) As a web design community, we must continue to make strides toward building our websites to be as resolution independent as possible in order to move toward a more device agnostic future.</p>
+<h2>References</h2>
+<p>Allsopp, John (April 07, 2000) A Dao of Web Design. Consulted January 31, 2013.<br/>
+<a href="http://alistapart.com/article/dao">http://alistapart.com/article/dao</a></p>
+<p>Cant, Edward (July 02, 2010) Optimizing for High Pixel Density Displays. Consulted January 31, 2013.<br/>
+<a href="http://menacingcloud.com/?c=highPixelDensityDisplays">http://menacingcloud.com/?c=highPixelDensityDisplays</a></p>
+<p>Edwards, Marc (2012) Device Pixel Density Tests. Consulted January 31, 2013.<br/>
+<a href="http://bjango.com/articles/min-device-pixel-ratio/">http://bjango.com/articles/min-device-pixel-ratio/</a></p>
+<p>Group, NPD (November 15th, 2012) The NPD Group: Lower Prices and Larger Selection Boos Pre-Paid Mobile Phone Carriers. Consulted January 31, 2013.<br/>
+<a href="https://www.npd.com/wps/portal/npd/us/news/press-releases/the-npd-group-lower-prices-and-larger-selection-boost-pre-paid-mobile-phone-carriers/">https://www.npd.com/wps/portal/npd/us/news/press-releases/the-npd-group-lower-prices-and-larger-selection-boost-pre-paid-mobile-phone-carriers/</a></p>
+<p>Hume, Andy (July 07, 2011) Responsive by Default. Consulted January 31, 2013.<br/>
+<a href="http://blog.andyhume.net/responsive-by-default/">http://blog.andyhume.net/responsive-by-default/</a></p>
+<p>Lemeden, Reda (April 20th, 2012) Towards a Retina Web. Consulted January 31, 2013.<br/>
+<a href="http://coding.smashingmagazine.com/2012/08/20/towards-retina-web/">http://coding.smashingmagazine.com/2012/08/20/towards-retina-web/</a></p>
+<p>Mitchell, Amy &amp; Rosenstiel, Tom &amp; Christian, Leah (2012) Mobile Devices and News Consumption: Some Good Signs for Journalism. Consulted January 31, 2013.<br/>
+<a href="http://stateofthemedia.org/2012/mobile-devices-and-news-consumption-some-good-signs-for-journalism/">http://stateofthemedia.org/2012/mobile-devices-and-news-consumption-some-good-signs-for-journalism/</a></p>
+<p>Rupert, Dave (September 25th, 2012) Mo’ Pixels Mo’ Problems. Consulted January 31, 2013.<br/>
+<a href="http://alistapart.com/article/mo-pixels-mo-problems">http://alistapart.com/article/mo-pixels-mo-problems</a></p>
+
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+M. Gipson and R. Troyer, Mo’ Pixels Mo’ Problems: Moving Toward a Resolution Independent Web. In <i>Museums and the Web 2013</i>, N. Proctor &amp; R. Cherry (eds). Silver Spring, MD: Museums and the Web. Published February 1, 2013. Consulted <script type="text/javascript">document.write(full_date);</script> <!-- April 23, 2022 -->.<br/>
+https://mw2013.museumsandtheweb.com/paper/mo-pixels-mo-problems-moving-toward-a-resolution-independent-web/<br/><br/><hr/>
+<!-- 
+<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js'></script>
+<script type="text/javascript">
+var tz = jstz.determine();
+tz.name();
+</script>
+
+
+<script type="text/javascript">document.write(tz.name()); 
+</script>UTCApril 23, 2022-->
+
+	<div id="comments">
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="../../wp-logindef6.html?redirect_to=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fmo-pixels-mo-problems-moving-toward-a-resolution-independent-web%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+</div><!-- #content -->
+</div>

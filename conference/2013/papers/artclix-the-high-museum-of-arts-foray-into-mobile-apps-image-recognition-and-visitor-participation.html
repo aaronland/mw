@@ -1,0 +1,281 @@
+<div id="primary">
+<div id="full_width_content">
+			
+
+<h1 class="entry-title">ArtClix: The High Museum of Art’s foray into mobile apps, image recognition, and visitor participation</h1>
+<br/>
+
+<a href="../../user/index8c08.html?u=bwyman">Bruce Wyman</a>, USA, <a href="../../user/index0554.html?u=julia.forbes@high.org">Julia Forbes</a>, USA<br/><br/><b>Abstract</b><br/>
+<p>Mobile apps are the natural evolution of the traditional audio tour, enabling visitors to self-guide around the galleries of museums. Rich content is at the heart of most museum experiences, but this pattern of engagement follows the traditional one-way communication model of museums, with the visitor a passive participant in their pursuit of understanding. In 2011 the High Museum of Art, working with Second Story Interactive Studios, set a goal of social engagement with their visitors, looking to create an app that was not only informative, but also made visitors a fundamental part of the experience. Leveraging natural user behavior and incorporating image recognition, the mobile app has been a huge success for the museum. In this paper, we present ArtClix as a case study for effective social engagement by the museum through novel uses of technology. We share the initial conceptual work in developing the application, the technical hurdles encountered along the way, and the resulting evaluation work across multiple exhibits.</p>
+<p><b>Keywords: </b>mobile, image recognition, engagement, social, audio, exhibits</p>
+<h2>1. Introduction</h2>
+<p>The High Museum of Art is the leading art museum in the southeastern United States. Located in Midtown Atlanta’s arts and business district, the High has more than 13,000 works of art in its permanent collection. The Museum has an extensive anthology of 19th- and 20th-century American art; significant holdings of European paintings and decorative art; a growing collection of African American art; and burgeoning collections of modern and contemporary art, photography and African art. The High is also dedicated to supporting and collecting works by Southern artists and is distinguished as the only major museum in North America to have a curatorial department specifically devoted to the field of folk and self-taught art. Since 1996’s Rings exhibitions mounted during the Olympics, the High’s focus has been on major special exhibitions and partnerships with world class museums, bringing great art to the southeastern United States.</p>
+<p>The High Museum of Art has no internal technology staff and aside from past projects in collaboration with other museums, there has been is no pervasive sense of technology in the museum. With most major exhibits, audio tours are available at an additional cost, and their development had been undertaken with Antenna Audio as part of a long-term contract. The High’s four year partnership with MoMA inspired the staff to focus on a younger demographic and to explore possible alternative scenarios for digital interpretation. The High decided to continue with their existing audio tour contract because of the high quality results, the familiarity of process, and the ability to serve large numbers of visitors and school children. But the Museum wanted to try something new in addition. Other audio and mobile companies were also coming into age at this point in time and while there were a cacophony of choices, there was not yet a clear standout in the emerging crowd.</p>
+<p>To help with the decision process, in the summer of 2010 the High asked a handful of experts in the field to review current technologies and the capabilities of the museum. Their input ultimately led to an approach that would engage the museum not only as the executive producer of content, but also directly in the creative process. The decision to take up this more active role entailed a handful of new requirements: the creation of a mobile publishing infrastructure with ease of use in content creation and maintenance by staff, reusability of the platform, and ability to leverage the devices supplied by the visiting in public. With these requirements forming the foundation of any future effort, a proposal offered by Second Story Interactive Studios (where one of the authors was currently employed at the time) was accepted to build what eventually became ArtClix.</p>
+<h2>2. Concept</h2>
+<h3>Interpretive Strategy Goals</h3>
+<p>As the team began to consider its ambitions against what was technically feasible, we determined a handful of basic interpretive goals that guided our thinking about the overall experience. As we reviewed and brainstormed features, it became easy to decide whether suggested ideas were core to the experience based on these early guidelines. We had a vantage point from which to say “no.”</p>
+<ul>
+<li>Create an experience that allows visitors to collect and share works of art.</li>
+<li>Encourage conversations about the exhibit artwork between visitors and the High Museum of Art.</li>
+<li>Intrigue and engage younger audiences.</li>
+<li>Make use of social media and increase the profile of the High Museum of Art.</li>
+</ul>
+<p>It’s worth noting that the interpretive goals for the project were beyond the scope of the app itself. While the development cost was comparable to a typical audio tour and equipment leasing (at the time), the goals of the project were broader. The use of technology at the the High has been minimal to date and was not considered a core strength of the museum. Further, ArtClix was seen as fitting into a much broader view of digital transformation and strategy at the museum, including social media outreach, public perception of visitor outreach. Perhaps most importantly, ArtClix supported the evolving conversation about digital use at a senior level within the museum and with trustees and donors. Any significant technology effort needs to look not only at the inherent costs of the project, but also the larger benefit to the organization and how it advances the strategic goals of the organization.</p>
+<h3>Leveraging Existing Behavior</h3>
+<p>As we considered pathways into the content, we observed that the usual form of interaction was to provide a visitor either a keypad or a scrolling list for object selection. The next natural step in simplifying this interaction would take advantage of position detection but those technologies are still in their infancy and global positioning (which is a great solution and well supported) has significantly reduced accuracy inside the museum. Determined to add a “touch of magic” to the visitor experience and have an app that worked on behalf of the visitor, we decided to use image processing and object recognition (also know as ‘computer vision’) to select artworks in a gallery.</p>
+<p>The premise is simple from the visitor’s perspective and allowed us to leverage the natural behaviors of visitors in the museum. One of the most common forms of interaction at many museums — despite the best copyright policies in action — is visitors photographing works of art. Going one step further, they share those photographs in a variety of ways with friends, family, and colleagues via Flickr, Facebook, Twitter, email, and other similar services. With this in mind, the entire premise of interaction with the app could revolve around a natural interaction of the visitor — one that they already demonstrated that they knew and desired — rather than having to teach new behaviors. The simple act of encouraging visitors to take pictures and share them with friends gave us an easy gateway to object selection and triggering for audio and other content delivery.</p>
+<h3>Intelligent Design</h3>
+<p>While adding a little dose of magic through technology is an admirable goal, we also endeavored to make the experience intelligent, automatically configuring the app based on the kind of device that the visitor would bring with them. There are three modes of possible interaction: using photographs, using a keypad, and using a scrollable list. Using a combination of GPS location and device querying, different default interactions are presented to the visitor:</p>
+<div dir="ltr">
+<table>
+<colgroup>
+<col width="195"/>
+<col width="105"/>
+<col width="91"/>
+<col width="84"/></colgroup>
+<tbody>
+<tr>
+<td>Location &amp; Capability</td>
+<td>
+<p dir="ltr">Camera</p>
+</td>
+<td>
+<p dir="ltr">Keypad</p>
+</td>
+<td>
+<p dir="ltr">List</p>
+</td>
+</tr>
+<tr>
+<td>At museum, has camera</td>
+<td>
+<p dir="ltr">default</p>
+</td>
+<td>
+<p dir="ltr">available</p>
+</td>
+<td>
+<p dir="ltr">available</p>
+</td>
+</tr>
+<tr>
+<td>At museum, no camera</td>
+<td>
+<p dir="ltr">unavailable</p>
+</td>
+<td>
+<p dir="ltr">default</p>
+</td>
+<td>
+<p dir="ltr">available</p>
+</td>
+</tr>
+<tr>
+<td>outside of museum</td>
+<td>
+<p dir="ltr">unavailable</p>
+</td>
+<td>
+<p dir="ltr">available</p>
+</td>
+<td>
+<p dir="ltr">default</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 1: Default interaction modes of app based on location &amp; device capability</p>
+<p>The camera interaction was the preferred mode and how we anticipated most visitors interacting with ArtClix. The Keypad interface mimicked a traditional audio tour and the museum had a small supply of iPod Touches available for visitors to check out. All of the objects with content through ArtClix had an icon and keypad number for easy reference. The scrollable list was imagined as the best default for visitors outside of the museum without any ready access to the label information.</p>
+<h3>Community and Gamification</h3>
+<p>In the original concept, we endeavored to add some basic feedback mechanisms that allowed visitors to feel that they were part of a larger community. Where we encouraged visitors to share their images with friends, we also allowed visitors to opt in and share their personal photographs in the form of digital postcards that could be sent to a community stream. While the community stream is a central feature of the app, it was also imagined that this same content could be shown within the museum to help increase awareness of the experience. Further, any visitor can comment on the artworks shown in response to other visitor comments or in response to museum-sourced content.</p>
+<p>Early iterations of the concept design also suggested adding badging. As visitors would interact with both the exhibit and the app, they would be awarded badges for select activities. For example, after having taken five photographs in the exhibit, or after listening to ten audio stops, or commenting five times, the user would be publicly awarded a badge which would appear in the community stream and next to the visitor’s name anywhere their content appeared. This idea was eventually dismissed in order to focus more specifically on the community stream.</p>
+<h3>Final App Architecture</h3>
+<p>In the final concept, we designed the app so that any single experience was only a tap or two away from the visitor. Our goal was to keep the overall feel of the experience as simple as possible while anticipating appropriate interactions for the visitor.<br/>
+<img loading="lazy" alt="" src="https://lh4.googleusercontent.com/Ze-h6zku0eW4zbnqAG78L1AixO13MjumK6H_pxbjLCt06a2usTSYofDQSeDwqZN475XbBVPo3Ok86our7JXyOQKI-H5ugy_rw68KvFAoeolT8Qn910ouaL_5bpTs" width="600px;" height="372px;"/><br/>
+Figure 1: Wireframe model of final app architecture</p>
+<h2>3. Development</h2>
+<h3>Platform Selection</h3>
+<p>When ArtClix was originally being planned, smartphones were still in their infancy and it was unclear if there would be a dominant platform. In an effort to minimize the overall development effort, and to avoid developing a codebase for each different platform, we aimed for a hybrid approach, leveraging HTML5 and webviews for most of the content display, and PhoneGap to access the hardware on each platform. At the time, PhoneGap was the most reliable cross-platform framework although in development, it became clear that the more one customized PhoneGap, the harder it was to debug and have run smoothly.</p>
+<p>While the iOS implementation was fairly straightforward, Android proved difficult. Early in the project, reference Android devices were chosen as a minimum standard but these proved insufficient due to inconsistency in vendor implementation. For example, we wanted to use the built-in camera software for picture taking, but assumptions made for memory handling and web interactions varied from device to device. Ultimately, it was necessary to write custom plug-ins for some functionality.</p>
+<p>Further, there were multiple points in which Android debugging consumed all of the project’s resources, which could have been better spent in feature development. Varying screensizes and dimensions required small interface changes rather than consistency and inconsistent Android versioning further fragmented the platform. In hindsight, native applications or choosing to develop for iOS only may have been more efficient although this project persevered in its cross-platform approach.</p>
+<h3>Image Processing</h3>
+<p>Image processing is a difficult problem and our approach to including it was to find a 3rd party service with an available API such that images could be passed from the app to an external server and a simple object identifier passed back to the software. These services require content creators to build up an image database from a collection of images and the server then applies different algorithms to accommodate variations in angle, lighting, and perspective to match the known objects in the database. Flat, two-dimensional objects are easier to detect, although some systems have moderate success with intricate three-dimensional objects. Also, smooth, glossy materials are harder to recognize that textured pr patterned surfaces. Typically, these services require both an initial setup fee and a per image processing cost.</p>
+<p>The initial implementation used a system that had been well demonstrated and was gaining initial traction in the real estate market — take a photograph of a property to return its realtor’s listing — a concept not very different from what we were trying to do. Also making this service compelling was the ability to create database objects by “scanning” artworks with a phone’s camera. This approach was simple and straightforward and would be easy for museum staff to complete during short show installation windows.</p>
+<p>However, while early testing of the software was promising and integration fairly straightforward, the first round of real gallery testing about halfway through the project was disappointing. Where we’d seen around 95% success rate, in the galleries it was closer to 25% which was an unacceptably high failure rate. Despite variations in capture technique and tweaks to the recognition algorithms, we undertook the difficult decision to remove the feature from experience and to re-architect an approach that didn’t rely on the camera for object detection.</p>
+<p>While insanely frustrating at the time, this decision was a good one and forced us to reconsider the user experience, resulting in a final version that was more streamlined and accessible. At the same time, we undertook a fairly broad review of all existing image recognition technologies, talking with Google (to see if Google Goggles could be adopted), &lt;<a href="http://www.google.com/mobile/goggles/#text">http://www.google.com/mobile/goggles/#text</a>&gt;, Digimarc &lt;<a href="http://www.digimarc.com/">http://www.digimarc.com/</a>&gt;, IQ Engines &lt;<a href="https://www.iqengines.com/">https://www.iqengines.com/</a>&gt;, Idée &lt;<a href="http://ideeinc.com/">http://ideeinc.com/</a>&gt;, Kooaba &lt;<a href="http://www.kooaba.com/en/home">http://www.kooaba.com/en/home</a>&gt;, Picliq &lt;<a href="http://www2.picitup.com/picliq">http://www2.picitup.com/picliq</a>&gt;, and Vayar &lt;<a href="http://www.vayar.com/">http://www.vayar.com/</a>&gt;. There were a few essential requirements that formed our decision matrix: cost (moving from a free service), reliability, and ease of integration.<br/>
+To test potential services, we created a series of internal test objects designed to test both the routine functionality and the more fringe use cases of each service. Based on our initial review, three companies, IQ Engines, Kooaba, and Idée were the best fit for our needs. Given that this field rapidly evolves and algorithms constantly improve, any future use would require new evaluation of each of the services. All three services worked well for flat, 2D objects and could have been essentially interchangable. The trickier 3D objects, combined with poor user technique (simulating the real life experience and capabilities of visitors) drew a finer distinction of capability:</p>
+<div dir="ltr">
+<table>
+<colgroup>
+<col width="118"/>
+<col width="118"/>
+<col width="107"/>
+<col width="132"/></colgroup>
+<tbody>
+<tr>
+<td>Company</td>
+<td>
+<p dir="ltr">Good Series</p>
+</td>
+<td>
+<p dir="ltr">Poor Series</p>
+</td>
+<td>
+<p dir="ltr">Combined Rate</p>
+</td>
+</tr>
+<tr>
+<td>IQ Engines</td>
+<td>
+<p dir="ltr">100%</p>
+</td>
+<td>
+<p dir="ltr">50%</p>
+</td>
+<td>
+<p dir="ltr">62%</p>
+</td>
+</tr>
+<tr>
+<td>Kooaba</td>
+<td>
+<p dir="ltr">100%</p>
+</td>
+<td>
+<p dir="ltr">69%</p>
+</td>
+<td>
+<p dir="ltr">76%</p>
+</td>
+</tr>
+<tr>
+<td>Idée</td>
+<td>
+<p dir="ltr">100%</p>
+</td>
+<td>
+<p dir="ltr">94%</p>
+</td>
+<td>
+<p dir="ltr">95%</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table 2: Comparative success rates of informal image recognition testing</p>
+<p>Further discussions with each company to improve the testing techniques, database object collection, and eventual pricing discussion resulted in using Idée’s PixMatch service. This decision was a result of our unique circumstances and all three companies had great customer service and worked diligently with us to offer the best results possible. All three are worthy of consideration in future projects.</p>
+<h3>Additional Development Details</h3>
+<p>Audio compression ended up being an unexpectedly thorny issue. An early design constraint that we had mandated for ourselves was to keep the size of the app, including all of the included assets under 20 MB, the download limit over a cellular network at the time of development (it has since been raised to 50 MB). Because we wanted the app to be as responsive as possible, both audio and images of artworks were included and embedded in the app. Finding the right balance of audio compression that preserved the quality of the audio vs. file size vs. engineering a streaming audio solution required repeated effort and trial. There was no single magic bullet and the end result was a mix of solutions.</p>
+<p>The community section of the application, where visitors can leave comments in response to artworks and each other also required multiple iterations and in the end result may be the least successful part of the experience. The original design intent had been to simply to leverage an existing commenting platform such as Facebook commenting into the app, but the walled garden of services prevented easy integration. Further, while it was easy to view comments and the overall community stream, the functionality was slightly buried and there was no direct way for visitors to stay engaged with any commenting other than returning to the app, finding a past comment, and then following the discussion thread to its conclusion. While the custom built back-end Content Management System allowed for scheduled comments from museum staff to ensure future content, the system never resulted in a rich forum of discussion as originally hoped. In retrospect, commenting was a secondary goal of the experience and any future redesign should more carefully leverage and expose the comments of others to the surface of the app. That’s not to say that visitors haven’t made use of the commenting system — they clearly have. Our goal would simply be to have an even higher rate of participation.</p>
+<p>The one other area that required careful navigation during the development cycle was copyright. Museum staff were diligent in acquiring the rights for objects in the show to be also represented digitally either online or in the ArtClix app. Having an early concept package and a click-through demo of the early mockups of the app helped demonstrate the intent of the experience to copyright holders and with some minor additional negotiation, all the rights were able to be secured with a single exception. For artworks that don’t have secured rights, the app won’t identify the artwork and images can’t be shared through the app.</p>
+<h2>4. Deployment</h2>
+<p>ArtClix was launched in the Fall of 2011 as part of the MoMA exhibition Picasso to Warhol: Fourteen Modern Masters. The Museum offered a traditional audio guide with approximately 25 adult stops and 15 children’s stops, which included numbers placed on the wall next appropriate objects. We had decided that ArtClix would have three ways for visitors to access content: via their camera, via a list, and via a keypad. This meant we needed ArtClix numbers as well. The keypad and its required numbers are one of the biggest challenges of the app design. This is the only area in which we have found disappointment or confusion with visitors. This will be addressed in more detail in the future lessons section.</p>
+<p>The other challenge of the deployment was the need for detection images for each of 117 works of art. This must be done with objects <em>in situ</em> and lit, so it is a time consuming element in the last few days of installation. In order for the photo recognition to work, we had to film each of the works in the exhibition. After much trial and error in both tools and technique, we filmed each object in the show following instructions from Idée Inc with the video camera from an iPhone 4. For optimum results, the team at Idée Inc and High Museum staff found it was best to make several short films (1 – 2 minutes) of each object. The goal is to film the object from all the angles and distances that you would expect a visitor to photograph the object from. This is a wide range of distances, heights/angles and vantage points. Now that we have done it three times now we are much more efficient.<br/>
+Overall the launch and its use in that first exhibition over a six month time frame was extremely successful and well received. We are extremely pleased with the backend of software. The Museum can easily switch over the app to a new exhibition without any additional expertise needed. This means that we have now used the app in four different exhibits.</p>
+<h2>5. Results / Future Lessons</h2>
+<p>One of the goals we established for the initial launch in Picasso to Warhol  was that 10% of smartphone users would make use of ArtClix. Based on national averages indicating that 25% of the population are smartphone users, our number crunching indicates that 17 % of final visitor number of 337,000 made use of ArtClix. At the close of the Picasso to Warhol exhibition ArtClix had been downloaded 14,546 times. Now, 18 month later we are at approximately 20,000 downloads.</p>
+<ul>
+<li>Are the keypad and id number necessary? In the end we would have been wiser to just use the “magical” camera and the list to deliver content. The id labels in gallery are cumbersome and confusing when used in conjunction with an audio tour.</li>
+<li>Do visitors want to talk to each other? Now that we have used the app for 18 months, we realize that what visitors want is the chance to share their opinion, and those opinions are terrific and interesting for the most part. They don’t seem to want or find it comfortable to comment on one another.</li>
+<li>Visitors love audio: We should work to have more audio on the app. Visitors comment to us about how much they love the audio, even short clips with quick information is valued and enjoyed.</li>
+<li>All objects are better than just a few: We have tried using the app where every object in a show is available and one’s where we have selected a small subset. What we learned is that the app is more regularly used and we get more comments when every object is on the app. So while it is more time-consuming on the back end, it is a better visitor experience.</li>
+</ul>
+<h3>Commenting / Community</h3>
+<p>Despite some difficulties in implementation, when visitors have engaged with the community content, it’s been used very well. Over 50% of visitors use the section for its intended purpose, responding to comments about the art on display in the gallery. The next largest group of comments were those related to postcards that were sent by users and were more personal in nature. These two kinds of engagement are commingled in the user experience and serve as rich fodder for future interaction, with visitors being a living part of the broader exhibit experience.</p>
+<p>Examples include:</p>
+<p><strong>Simple Responses:</strong></p>
+<ol>
+<li>Andy Warhol’s “Self-Portrait” Cool!</li>
+<li>Henri Matisse’s “Goldfish and Sculpture” I like this one.</li>
+<li>Jackson Pollock’s “Number 1A, 1948” #1A</li>
+</ol>
+<p><strong>Reflections:</strong></p>
+<ol>
+<li>Joan Miro’s “Painting”: The description of this painting says that Miró was trying to create a sense of serenity, and I think that was definitely acconplished. It really pulled me in, and the earthly tones in the background are just so pleasing to the eye. I could just look at this for hours, studying every stroke and how he was able to evoke emotion in me, when I am usually not a huge admirer of art.</li>
+<li>Picasso’s “Girl Before Mirror”: This was painted towards the end of their relationship. Note how pleasant she looks in the mirror (her inner self seen by Picasso) vs. pretty face seen in the real world.</li>
+<li>Matisse’s “Dance (I)”: An astoundingly beautiful painting, especially in person. The most interesting portion is the moment where the two women’s hands are disconnected. There, the paint becomes rough and smothered and the skin on the knee between the hands is darker than the rest of that woman’s body. It raises the question: why did Matisse originally paint these hands together then change his mind? Have the women just let go – or are they about to connect?</li>
+</ol>
+<p><strong>Personal or Irrelevant:</strong></p>
+<ol>
+<li>Wish you were here with me.</li>
+<li>Waffles</li>
+<li>Hey girls. Happy 21st birthday</li>
+<li>Thought you would like this…luv sweetie!!</li>
+<li>At the High.</li>
+</ol>
+<p><strong> Experience at the High:</strong></p>
+<ol>
+<li>Really loved the Matisse portion of the exhibit.</li>
+<li>As an elementary art teacher walking thru the exhibit, it felt like all of my lesson plans had come to life in one place! So much great work.</li>
+<li>This is a great art museum! Wonderfully superb paintings and sculptures.</li>
+<li>I think this app is brilliant! Every museum should have one.</li>
+</ol>
+<p>One area of disappointment for the museum was that users did not comment on each other’s comments. We had hoped that visitors would engage with one another and museum staff, but after 18 month of use its clear that this behavior is not interesting to visitors.</p>
+<h3>One App to Rule Them All</h3>
+<p>After using  ArtClix in conjunction with an audio tour twice now we have decided that due to the double numbering system necessary, audio tour visitors feel they are missing something and can become frustrated even though in most cases they are not smartphone users. So in future we plan to choose either ArtClix or an audio tour but not both. If we can afford to update ArtClix and eliminate the keypad we would use both tools as the audiences are different. Some simple evaluation we conducted after “Picasso to Warhol” indicates that the majority of users access content via the camera function first followed next by the list.</p>
+<h3>All or Nothing</h3>
+<p>Over the course of using ArtClix for multiple exhibitions, we’ve varied the number of artworks represented in the app. We’ve witnessed a direct correlation between the level of participation by visitors and the number of objects available for recognition: the fewer the artworks, the less participation. Aside from the obvious conclusion that if you don’t have anything for people to interact with, they won’t keep trying, this finding speaks more to the expectations of visitors. Visitors don’t expect a partial approach to content; the implicit expectation is that the museum has provided deep and detailed content across all forms of content delivery, digital or not.</p>
+<p>We have experimented with how many works of art in the exhibition are included in the app. We had the least success when we have not included every work of art. It seems with ArtClix it is all or nothing.</p>
+<h3>Content Metadata Standards</h3>
+<p>When ArtClix was originally being designed, standards being developed for interactive experiences on handhelds were still in their early stages. Our non-linear and serendipitous approach to content selection and experience wasn’t supported in early iterations of the TourML standard now in somewhat popular use. This would be a target for future back-end development.</p>
+<h3>Keys to Success</h3>
+<p>We’ve been pleased with ArtClix and consider it to be a success at the High Museum of Art. There were a handful of factors that were important in the design and development process that deserve a quick mention:</p>
+<ul>
+<li>Simple and Easy to use CMS: The CMS in use for ArtClix is a custom-designed framework developed by Second Story exclusively tailored for this project. The upside is that it’s very focused, was built with future use and needs in mind, and allows museum staff to update, change, and moderate exhibits, objects, and content as needed.</li>
+<li>Field Testing is Essential: It should go without saying, but field testing always reveals problems that aren’t realized in design and prototyping. Our goal had been to get to working software as early as possible in development, which gave us the opportunity to engineer around the image recognition problems in advance of the app launch.</li>
+<li>Identify Metrics for Advocacy: Early on, the team identified how to quantify and qualify success with metrics beyond basic downloads and user counts. If our real goals were around community, engagement, and sharing, we shared that information as a path to deeper insight around the use of the app with visitors to the High. This has been important to moving the conversation about technology use with senior management, trustees, and donors from one of “if” to “how.”</li>
+</ul>
+
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+B. Wyman and J. Forbes, ArtClix: The High Museum of Art’s foray into mobile apps, image recognition, and visitor participation. In <i>Museums and the Web 2013</i>, N. Proctor &amp; R. Cherry (eds). Silver Spring, MD: Museums and the Web. Published March 4, 2013. Consulted <script type="text/javascript">document.write(full_date);</script> <!-- April 23, 2022 -->.<br/>
+https://mw2013.museumsandtheweb.com/paper/artclix-the-high-museum-of-arts-foray-into-mobile-apps-image-recognition-and-visitor-participation/<br/><br/><hr/>
+<!-- 
+<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js'></script>
+<script type="text/javascript">
+var tz = jstz.determine();
+tz.name();
+</script>
+
+
+<script type="text/javascript">document.write(tz.name()); 
+</script>UTCApril 23, 2022-->
+
+	<div id="comments">
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="../../wp-login2bd1.html?redirect_to=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fartclix-the-high-museum-of-arts-foray-into-mobile-apps-image-recognition-and-visitor-participation%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+</div><!-- #content -->
+</div>

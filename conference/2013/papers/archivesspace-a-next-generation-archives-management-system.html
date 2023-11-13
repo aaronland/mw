@@ -1,0 +1,289 @@
+<div id="primary">
+<div id="full_width_content">
+			
+
+<h1 class="entry-title">ArchivesSpace: A Next-Generation Archives Management System</h1>
+<br/>
+
+<a href="../../user/indexb5a9.html?u=anarchivist">Mark A. Matienzo</a>, USA, <a href="../../user/indexc6d6.html?u=kkott">Katherine Kott</a>, USA<br/><br/><b>Abstract</b><br/>
+<p>This paper introduces ArchivesSpace, an open source software application for archivists. The technical platform is described, as well as the development and testing processes used in the project. Governance and sustainability plans for ArchivesSpace are also discussed. The presenters have worked in close collaboration with the software development team and LYRASIS, which will be the organizational home for the ArchivesSpace upon the conclusion of the grant funding cycle.</p>
+<p><b>Keywords: </b>archives, collection management, open source, agile development, sustainability</p>
+<h2><span style="color: #000000;font-weight: bold">1. Introduction</span></h2>
+<p>ArchivesSpace (<a href="http://www.archivesspace.org/">http://www.archivesspace.org/</a>) builds on the foundation established by Archivists’ Toolkit (AT) and Archon to support management and accessibility to collections of archival material (Prom, et al, 2007; Westbrook, et al, 2007). ArchivesSpace originated as a project partnership between the New York University Libraries (NYU), University of California San Diego Libraries (UCSD), and the University of Illinois Urbana-Champaign Libraries (UIUC). The Andrew W. Mellon Foundation has provided generous support for ArchivesSpace. The purpose of the project is to develop a next-generation open source archives management system to address technical limitations of AT and Archon, including scalability and extensibility. In addition, a unified product should encourage a wider rate of adoption than has been feasible with the two complementary products. Building a strong user base is essential for any open source project, but to succeed in the small archival market, AT, and by logical extension any product aimed at the archives management and access market, would need to be the “dominating force” (Schaefer, 2010).</p>
+<p>ArchivesSpace is designed to fill a gap that was recognized by both AT and Archon. The projects needed an “organizational home” – a home that had resources to sustain the product and programs, foster future development, and provide support, documentation, and training after the grant-funded part of the project ended. LYRASIS (<a href="http://www.lyrasis.org/">http://www.lyrasis.org/</a>), the largest membership organization serving libraries and information professionals in the United States, will become the organizational home for ArchivesSpace. Known for its “local touch,” LYRASIS is well positioned to foster collaboration and cooperation to sustain ArchivesSpace through a membership model that includes involvement in governance and setting priorities for development (LYRASIS to Serve as Base for ArchivesSpace, 2012).</p>
+<h2>First-generation archives management systems</h2>
+<p>The ArchivesSpace project is best seen as a successor to “first-generation” open source archives management systems, which include Archivists’ Toolkit and Archon. Archivists’ Toolkit was a resulting product of a collaboration among the Five Colleges, Inc. Libraries, the New York University Libraries, and the University of California, San Diego Libraries. The project originated as a direct result of the “Archivists’ Workbench” white paper (Chandler, Landis, &amp; Westbrook, 2001), which envisioned the development of a suite of open source tools to integrate archival description, metadata encoding, and digital object management, and to increase efficiency in archival practice. This white paper served as the basis for two meetings sponsored by the Digital Library Federation. These meetings articulated the specific need for the tool suite by the archival profession and developed a draft of functional requirements for a database-backed application for archives management.</p>
+<p>Archivists’ Toolkit was funded in two phases by the Andrew W. Mellon Foundation and was released under the Educational Community License version 1.0. Phase 1 ran from June 2004 to December 2006 and culminated in the release of Archivists’ Toolkit version 1.0. Phase 2, which delivered AT version 2.0, launched in early 2007 and concluded in October 2009, with occasional maintenance releases since then to address bugs and other critical issues with the application. Throughout both phases, several core values guided the project’s implementation and marketing. The project made a firm commitment to an application with low technical and financial barriers to implementation. To lower the barriers to implementation further, the project worked in conjunction with the Society of American Archivists to develop two regularly offered workshops to train archivists in the use of the software. The application also provides strong implementations of archival and library metadata standards, including Describing Archives: A Content Standard (DACS), MARCXML, Encoded Archival Description (EAD), the Metadata Object Description Schema (MODS), and the Metadata Encoding and Transmission Standard (METS). From the standpoint of archival management, the project also committed to providing flexibility in workflow and integration of data and processes for archival functions that were previously managed in “silos”: accessioning, location and inventory management, description, and authority control (Westbrook, 2009a; Schaefer, 2010).</p>
+<p>Following the release of Archivists’ Toolkit 1.1 in 2007, the project worked with Ithaka (<a href="http://www.ithaka.org/">http://www.ithaka.org/</a>), a non-profit consulting group, to develop a business model and related recommendations focused on sustaining the project. Ithaka’s recommendations focused on three major areas: increasing the user base for Archivists’ Toolkit; either identifying an “incubator” organization or identifying other means for ongoing support, and providing maintenance necessary to sustain the application (Schaefer, 2010). The Archivists’ Toolkit project targeted the former through increased user support, the training efforts mentioned previously, and by emphasizing the application’s role in achieving strong compliance with archival standards.</p>
+<p>While the Ithaka report recommended finding an organizational home and identifying sources of income to assist with support and sustainability, the project was not able to achieve these goals. Since a host institution was not identified, and coupled with lack of robust community engagement due to a number of factors identified by Schaefer (2010), the burden of AT support fell to the original project partners. While both the business plan and the AT project envisioned a community-based sustainability model for AT products and services such as development, documentation, testing, and requirements, the project team was not able to activate an adequate level of support in the community. Despite the creation of an Archivists’ Toolkit User Group Roundtable in the Society of American Archivists, Schaefer (2010) suggests that the largest source of these issues is that the project did not create a transparent, participatory environment for the project, nor did it adequately consider how to transition the governance of the project to the community.</p>
+<p>Archon, the other immediate predecessor to the ArchivesSpace project, was developed by the University of Illinois Urbana-Champaign to address similar, albeit distinct, concerns. Christopher J. Prom, one of the two leads on the Archon project, was also a participant in both of the Archivists’ Workbench meetings (Westbrook, 2009a). Prom also undertook significant research that identified barriers related to encoded, online-accessible archival description, including tools, delivery, interoperability, and usability (Prom, 2002a; Prom, 2002b; Prom, 2004; Prom, 2010).</p>
+<p>The Archon project began in the fall of 2004 as a pilot project investigating the feasibility of developing software to assist with encoding and providing access to archival description and authority control data, using “a web-based tool that put fundamental archival principles into practice yet could be used by those lacking a detailed knowledge of archival descriptive standards” (Prom, et al., 2007). It bears certain similarities to web-driven content management systems such as WordPress or Drupal, including an integrated staff-facing authoring interface and public-facing search and discovery interface.</p>
+<p>Initially, Archon grew from a research project. The two project leads (Prom and Scott W. Schwartz) developed an internal grant proposal requesting support from a University of Illinois Library innovation fund to investigate the feasibility of developing a wholly web-driven archival descriptive and access platform (Prom &amp; Schwartz, 2004). Initial development was undertaken in the summer of 2005, and, after a year-long period of development, Archon version 1.0 was released in August 2006 under a research-focused, non-commercial license developed with the assistance of the Office of Technology Management at the University of Illinois (Archon, 2006). Archon versions 2.1 (April 2008) and later were released under the Illinois/NCSA Open Source License, and the most recent version (3.21 rev-1) was released in April 2012. The Archon project team was awarded the Mellon Award for Technology Collaboration in December 2008.</p>
+<p>As with the AT, the Archon project also struggled with issues of sustainability. The project principals also hoped to engage external partners to further develop the product (Prom, et al., 2007). As more users have adopted Archon for their local use, UIUC has found it difficult to meet user expectations for support. For example, documentation has become a community-based activity (<a href="http://www.archon.org/manual/">http://www.archon.org/manual/</a>). Even so, garnering the level of community engagement needed to produce robust documentation through volunteer effort can be a challenge, as indicated by the request for “fresh reinforcements” to revive stalled Archon documentation efforts made to the SAA Archivists’ Toolkit/Archon Roundtable Discussion List (Griffin, 2012). Maintaining the Archon code (i.e. fixing bugs, meeting new functional demands, and refactoring the application in light of new backend technologies) provides even greater challenges.</p>
+<h2>2. ArchivesSpace as a project: identifying and establishing requirements</h2>
+<p>The ArchivesSpace project began in September 2009 with an Andrew W. Mellon Foundation-funded planning grant that investigated the integration of Archivists’ Toolkit and Archon. The planning grant focused on four tracks:</p>
+<ul>
+<li>technical planning,</li>
+<li>governance and sustainability planning,</li>
+<li>interface and data model analysis,</li>
+<li>and maintenance of AT and Archon until a unified system is introduced.</li>
+</ul>
+<p>The first two of these tracks were among the primary factors driving the development of ArchivesSpace as a “next-generation” project. Each of the two projects was developed using different paradigms and frameworks, with Archivists’ Toolkit built as a “thick-client,” desktop-based application written in Java, and Archon as a browser-based PHP web application. Both applications also faced issues with scalability, as implementers with larger collections or amounts of descriptive data experienced critical performance issues in production deployments. At the same time, Archon’s legacy as an application well-suited for small institution required that any successor application must “scale down” as well, supporting single-user and small deployments without significant barriers. Each of these two applications had also their functional strengths. Archon’s strengths include the relative simplicity of its web-based staff user interface, as well as its provision of an online search, discovery, and access mechanism covering both archival descriptive records and digital collections. Although these features were intended to address barriers to access for small archives (Schwartz, et al., 2008), the tool has also been adopted by large research and academic archives, particularly those that lack access to a dedicated platform for indexing and making accessible EAD or other XML outputs.</p>
+<p>By comparison, Archivists’ Toolkit intentionally focused on building an application tightly coupled to metadata content and structure standards, and on making “back-office” workflows of archivists more efficient. The strong focus on metadata standards was intended “to ‘softly force’ adoption of and adherence [to them] … thereby assuring interoperability” (Westbrook, et al., 2007). In fact, while providing the means to export EAD, HTML, and PDF versions of finding aids, Archivists’ Toolkit deliberately did not address online access directly (Westbrook, 2009a). Despite these differences, the two applications nonetheless have significant areas of functional overlap, and as such the ArchivesSpace planning and development processes have had to determine the best way to address the incorporation of features from them (Matienzo, 2010).</p>
+<p>Initial functional and technical analysis began in October 2009 with planning grant staff developing a draft set of high-level requirements that were shared with the archives community for comment (Westbrook, 2009b). Although the Archon project had originally intended to establish its own sustainability plan and new areas of functionality as part of the activities funded by the Mellon Award for Technology Collaboration, they collaborated closely with staff from the Archivists’ Toolkit project during this period (Prom, Schwartz, &amp; Sorensen, 2010). A series of webinars and surveys were held in December 2009 to allow for more in-depth, participatory community feedback, and a final set of high-level requirements, prioritized using feedback received from the community, was published in January 2010.</p>
+<p>That spring, the planning grant staff developed initial drafts of functional specifications that addressed the areas of functionality to be merged into the successor for the two applications, as well as new requirements identified through the community feedback process. Further requirements were written and finalized by the end of 2010. The planning grant project held a technical planning meeting in June 2010 with a group of over 20 technologists, developers, and IT managers from the archives, library, and higher education sectors. The discussion at this meeting focused on a series of candidate technologies, architectural decisions, and integration and licensing concerns, and a report with potential recommendations was provided to the attendees, the Andrew W. Mellon Foundation, and the larger archival community (Matienzo, 2010).</p>
+<p>Sustainability, another major factor behind the ArchivesSpace project, was an issue faced by both the Archon and ArchivesSpace project. During the planning grant period for ArchivesSpace, a steering group identified sustainability and governance models to be used as candidates for the future project and product, and developed criteria used to identify potential candidates for the new project’s organizational home.</p>
+<p>In June 2011, the Andrew W. Mellon Foundation awarded the project partners funds to implement the plan with a focus on two remaining tracks:</p>
+<ul>
+<li>development of a new, unified system, and</li>
+<li>integration of the current AT and Archon installations to the new system.</li>
+</ul>
+<h3>Staffing the project</h3>
+<p>The development and migration project for ArchivesSpace called for selecting an outside vendor for software development; therefore the first order of business was to finalize the functional requirements that had been developed in the planning process, and to select a vendor through an RFP process. On a parallel track, efforts to identify and select an organizational home begun during the planning process were intensified.</p>
+<p>The University Librarians, Carol Mandel, Paula Kaufman, and Brian Schottlaender at the partner institutions, are Principal Investigators for the project. David Millman (NYU), Beth Sandore Namachchivaya (UIUC), and Luc Declerck (UCSD) serve as the Steering Group. The Steering Group has primary responsibility for making policy level recommendations, and for insuring a successful transition to the organizational home.</p>
+<p>Two contractors from outside the partner institutions manage the remaining aspects of the project. Katherine Kott coordinates project schedule and activities as Development Manager. As Technical Architect, Mark Matienzo played a critical role in vendor selection and serves as Product Manager in the Agile development process the team is using for software development. As an archivist himself, Matienzo is also a credible link to the archival community. Assisting Mark in this role are members of the Stakeholders’ Group (originally named the Technical Team), Brad Westbrook, Christopher Prom, Scott Schwartz, and Kyle Rimkus.</p>
+<p>Joseph Pawletko (NYU), Senior Software Developer, provides deep technical expertise as a member of the Stakeholder Group and leads the Migration Team, which is developing tools to support data migration from AT and Archon to ArchivesSpace. Brian Tingle and Adrian Turner from the California Digital Library, also members of the Stakeholder Group, are leading ArchivesSpace testing and quality assurance activities. While Tingle is focused on unit and integration testing, Turner is coordinating end user testing of the ArchivesSpace application.</p>
+<p>In September 2011 the ArchivesSpace Team issued a request for proposals through NYU from software development vendors interested in collaborating with the ArchivesSpace Team to create the ArchivesSpace product. Through a lengthy and thorough competitive process, the team selected Hudson Molonglo Pty. Ltd. (HM) as the ArchivesSpace development partner. HM is an information technology consulting firm with staff in both the U.S. and Australia. Members of the HM Team, James Bullen, Brian Hoffman, Payten Giles, and Mark Triggs bring deep experience with digital library and archival management systems to the project.</p>
+<h3>Software development process</h3>
+<p>In parallel to the vendor selection process, the Technical Team completed a review of the functional specification for the software and drafted a data model. In July 2012, HM began software development using agile Scrum as a development methodology. In an agile methodology, development focuses on early delivery of a minimum viable product, on delivering functionality based on “user stories”, and on frequent software releases. A Product Owner for the ArchivesSpace project, Mark Matienzo negotiates development priorities for each “sprint” with the development team, based on importance of functionality to the end user. The ArchivesSpace project is divided into seven two-month development cycles or releases. Within each cycle, there are approximately four sprints.</p>
+<p><a href="../../wp-content/uploads/2013/01/matienzo.fig1_1.png"><img class=" wp-image-3841  alignnone" alt="Figure 1: ArchivesSpace Development Cycles" src="../../wp-content/uploads/2013/01/matienzo.fig1_1-300x235.png"/></a></p>
+<p>The ArchivesSpace Teams use a variety of tools to track the project and share progress with the community. The project team uses Basecamp for team collaboration and overall project tracking. User stories are logged and prioritized through Pivotal Tracker. General information is shared with the community through the ArchivesSpace website and the ArchivesSpace Google group. The development team shares the open source code through a Github repository. HM runs a development instance of the code, and the California Digital Library runs a test instance and an instance dedicated to user testing. At the end of the grant funded project, LYRASIS will become responsible for production level code distribution. In addition, LYRASIS plans to offer hosted instances of ArchivesSpace.</p>
+<p>At the close of the grant funded development project, the ArchivesSpace Team will also provide both technical and end user documentation to LYRASIS for the ArchivesSpace product. HM is responsible for producing technical documentation. In December, 2012, Laurel Tueling, an experienced technical writer, joined the ArchivesSpace Team. Laurel is responsible for generating end-user documentation. The Stakeholder Group is responsible for reviewing the documentation to insure it will meet the needs of the archives community.</p>
+<h2>3. ArchivesSpace as a product: developing the next-generation archives management system</h2>
+<h3>Mission, goals, and scope</h3>
+<p>Since July 2012, much of the project’s activity has focused on the development of ArchivesSpace as an open source software product aimed to meet the needs of archivists and to build on the successes of its predecessor applications. Like Archivists’ Toolkit, it aims to provide a complete, end-to-end “back-office” application for archival management, supporting core operations of archives and special collections libraries such as accessioning, deaccessioning, arrangement and description, location management, name and subject authority control, and metadata management for digital objects. Like Archon, it aims to provide a robust access mechanism for archival description and digital objects with a configurable interface. In addition, the technical planning and functional analysis processes during the planning grant established the need for improved integration mechanisms, better extensibility, and improved scalability.</p>
+<p>As part of the planning process for using an agile software development methodology, the project developed a product vision statement intended to remind both stakeholders and developers of the overall purpose of the project to help set development priorities. The product vision statement for ArchivesSpace is as follows:</p>
+<blockquote class="BlockQuote"><p>A best of breed, open source archives management system, supporting core archival functions and standards that can both scale up and scale down; that is flexible, efficient, and easy to use, maintain, and administer; that is extensible and can interoperate easily with other applications and systems; with a healthy ecosystem of users, developers, and partners dedicated to sustaining the product in the open source environment.</p></blockquote>
+<p>Each point in the product vision statement can be further expanded into a more detailed set of principles and preferences for the emergent product. First, the application must be compelling to both users of existing applications like Archon and Archivists’ Toolkit, as well as those archivists and institutions without an existing archives management or access system in place. The application must be more than just an incremental improvement over current applications and be recognized as a leader in its class. Archival institutions range in size in terms of both staff and size of collections. Because of this variability, the application must be able to scale down to single-user deployments and scale up to large, multi-tenant and enterprise installations, and must work equally well for collections regardless of extent or level of arrangement. The application should be not only be a joy to use, but also straightforward to maintain and administer regardless of institutional size or setting. It must be configurable to allow a variety of institutions to be able to adapt it to their needs and allow for customization of the public and staff user interfaces. The application should be easily deployable on multiple platforms and operating systems. In terms of extensibility, ArchivesSpace must be extensible using a straightforward plugin architecture and have well-defined and well-documented APIs to allow for the development of new and improved functionality. APIs and service endpoints of the application should also be designed to allow for integration with other systems and software with a minimum of programming complexity. Finally, the application must keep all of its potential communities in mind throughout its lifecycle and focus on features that provide value and meet their needs across them as much as possible. The sustainability of the application depends on a governance structure within which users, developers, and service providers can participate.</p>
+<h3>Architecture</h3>
+<p>The software is built as decoupled backend and frontend applications that communicate over a REST (Representational State Transfer) application programming interface. The backend application, written in JRuby using the Sinatra framework, sits on top of a relational database (either Apache Derby or MySQL) for data persistence and uses Apache Solr as a search and indexing application. The two frontend applications (the staff-facing “back-office” application and the public discovery interface) are written as JRuby applications using Ruby on Rails, and use the Twitter Bootstrap framework to provide consistent user interface elements.</p>
+<div id="attachment_3842" style="width: 310px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/01/matienzo.fig2_.png"><img aria-describedby="caption-attachment-3842" loading="lazy" class="size-medium wp-image-3842" alt="Figure 2: ArchivesSpace technical architecture" src="../../wp-content/uploads/2013/01/matienzo.fig2_-300x235.png" width="300" height="235" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/matienzo.fig2_-300x235.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/matienzo.fig2_-381x300.png 381w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/matienzo.fig2_.png 1018w" sizes="(max-width: 300px) 100vw, 300px"/></a><p id="caption-attachment-3842" class="wp-caption-text">Figure 2: ArchivesSpace technical architecture</p></div>
+<p>Throughout the development period, the project has done much to ensure that the development is done in a transparent fashion, using publicly viewable version control repositories (<a href="https://github.com/archivesspace/archivesspace">https://github.com/archivesspace/archivesspace</a>), bug trackers, and user story management tools (<a href="https://www.pivotaltracker.com/projects/386247">https://www.pivotaltracker.com/projects/386247</a>). We have also focused on engaging with our potential user community by having open user testing and welcoming feedback both privately and through our public Google Group. Hudson Molonglo has made a strong commitment to providing a robust technical testing plan for the application by using test-driven development and continuous integration environments (Jenkins and Travis-CI). Thus far, the team at HM has been able to provide over 94% test coverage throughout the development timeline.</p>
+<h3>ArchivesSpace as a program: sustainability and governance</h3>
+<p>The ArchivesSpace project planning team invested significant time and attention to governance and sustainability with a mandate to identify an organizational home for ArchivesSpace. Selection of an organizational home would allow ArchivesSpace to overcome some of the obstacles to sustainability AT experienced, such as the lack of a framework for user contributions Schaefer (2010) raised. The vehicle for providing such a framework would be a robust membership and governance structure. Over time, this structure would produce revenue for product support, and provide a clear process for the community to participate in an enhancement process as well as contribute to product development. Based on business modeling from the 2008 Ithaka report referenced by Schaefer, as well as data from surveys and interviews with archivists, administrators, and organizations engaged in supporting open source products, the planning team settled on membership access to a support structure as the best way to sustain the ArchivesSpace product and community.</p>
+<p>In April 2012, NYU announced that LYRASIS had been selected as the organizational home for ArchivesSpace. By June, the ArchivesSpace Steering Group and Robin Dale of LYRASIS had crafted a transition timeline, outlining the transfer of responsibility for software development and operational support as well as community engagement, from the ArchivesSpace Team to LYRASIS.</p>
+<p>Operating costs to support ArchivesSpace are estimated to be $360,000 per year. Although membership uptake is hard to predict – information about number of downloads is available for AT and Archon, but there is no good way to determine, for open source software, how many of those downloads translate into active and engaged users – current projections indicate that membership revenues could cover costs by 2016. Membership fees will be levied on a sliding scale, based on institutional size. The formula for ArchivesSpace was derived from the JSTOR and ARTstor classification systems, with some adjustment to recognize that ArchivesSpace will have fewer membership categories. ArchivesSpace will also offer annually renewable sponsorship opportunities for $15,000. To boost both community engagement and revenue during the project transition, ArchivesSpace will offer charter memberships until the end of May 2013.</p>
+<h3>Membership Fee Structure</h3>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="162">
+<p class="TableHeader"><strong>ArchivesSpace Category</strong></p>
+</td>
+<td valign="top" width="162">
+<p class="TableHeader"><strong>ARTstor/JSTOR Category</strong></p>
+<p> </p></td>
+<td valign="top" width="162">
+<p class="TableHeader"><strong>Membership Fee</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="162">
+<p class="TableText">Very Small</p>
+</td>
+<td valign="top" width="162">
+<p class="TableText">Very small; Community colleges medium, small, very small</p>
+</td>
+<td valign="top" width="162">
+<p class="TableText">$300</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="162">
+<p class="TableText">Small</p>
+</td>
+<td valign="top" width="162">
+<p class="TableText">Small; Community Colleges Very Large &amp; Large</p>
+</td>
+<td valign="top" width="162">
+<p class="TableText">$1,000</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="162">
+<p class="TableText">Medium</p>
+</td>
+<td valign="top" width="162">
+<p class="TableText">Medium I &amp; II</p>
+</td>
+<td valign="top" width="162">
+<p class="TableText">$3,000</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="162">
+<p class="TableText">Large</p>
+</td>
+<td valign="top" width="162">
+<p class="TableText">Large</p>
+</td>
+<td valign="top" width="162">
+<p class="TableText">$5,000</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="162">
+<p class="TableText">Very Large</p>
+</td>
+<td valign="top" width="162">
+<p class="TableText">Very Large I &amp; II</p>
+</td>
+<td valign="top" width="162">
+<p class="TableText">$7,500</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoCaption">Table 1: Fee structure for academic institutions. The ArchivesSpace classification system for institutions of higher education is based on the widely used JSTOR and ARTstor classification systems.</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="156">
+<p class="TableHeader"><strong>ArchivesSpace Category</strong></p>
+</td>
+<td valign="top" width="156">
+<p class="TableHeader"><strong>Total FTE</strong></p>
+</td>
+<td valign="top" width="156">
+<p class="TableHeader"><strong>Membership Fee</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="156">
+<p class="TableText">Very Small</p>
+</td>
+<td valign="top" width="156">
+<p class="TableText">0-20</p>
+</td>
+<td valign="top" width="156">
+<p class="TableText">$300</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="156">
+<p class="TableText">Small</p>
+</td>
+<td valign="top" width="156">
+<p class="TableText">21-60</p>
+</td>
+<td valign="top" width="156">
+<p class="TableText">$1,000</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="156">
+<p class="TableText">Medium</p>
+</td>
+<td valign="top" width="156">
+<p class="TableText">61-120</p>
+</td>
+<td valign="top" width="156">
+<p class="TableText">$3,000</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="156">
+<p class="TableText">Large</p>
+</td>
+<td valign="top" width="156">
+<p class="TableText">121-160</p>
+</td>
+<td valign="top" width="156">$5,000</td>
+</tr>
+<tr>
+<td valign="top" width="156">
+<p class="TableText">Very large</p>
+</td>
+<td valign="top" width="156">
+<p class="TableText">&gt; 160</p>
+</td>
+<td valign="top" width="156">
+<p class="TableText">$7,500</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoCaption">Table 2: Fee structure for free-standing, non-academic archives. The ArchivesSpace classification system for free-standing archives or archives within non-academic institutions mirrors the ARTstor museum subscription pricing categories.</p>
+<h3>Governance structure</h3>
+<p>ArchivesSpace will be governed by its members through a cluster of nested groups that will be supported by a LYRASIS ArchivesSpace Program Manager and a LYRASIS ArchivesSpace Developer to be hired in 2013. The governance structure will consist of the ArchivesSpace Board of Trustees, Users Advisory Council, and Technical Advisory Council as outlined below.</p>
+<p><strong>The ArchivesSpace Board of Trustees:</strong> Advise LYRASIS on the ongoing development and support of ArchivesSpace, through the review and prioritization of the software development, technical infrastructure and user support roadmaps, and to meet the needs of a broad and diverse spectrum of archival institutions in a balanced and equitable manner.</p>
+<p><strong>The Users Advisory Council:</strong> Identify, receive, discuss and vote on ideas for software enhancements. Represent archives communities and other relevant professional groups, and advise the ArchivesSpace Program Manager and other governance groups on the design and delivery of services, such as help desk processes, technical support, documentation, training, migration, hosting, etc.</p>
+<p><strong>The Technical Advisory Council:</strong> Review functional enhancements and priorities identified by the Users Advisory Council and provide overall technical guidance to the ArchivesSpace Program Manager and Developer. Help communicate development needs to the community development forum. Designate code committers and release managers based on nominations from the community and evidence of quality code. Develop guidelines for review and testing of all external code contributions. Review external code contributions to the code base.</p>
+<p>Charter members will be recruited during the first and second quarters of 2013, and the governance structure will be implemented soon thereafter, in preparation for the handoff of ArchivesSpace from the project partners to LYRASIS and ArchivesSpace members to further develop and sustain.</p>
+<h2>4. Conclusion</h2>
+<p>ArchivesSpace is well on the way to becoming both a next-generation open source archives management system and a sustainable community for ongoing development and support of the ArchivesSpace application. Lessons learned from the predecessor projects, AT and Archon, have been critical to ArchivesSpace’s success thus far. The time and effort invested in identifying LYRASIS as the organizational home for ArchivesSpace is the first step in creating a sustainable future for ArchivesSpace. The organizational home as well as the planned membership and governance infrastructure go a long way towards addressing some of the community engagement problems with AT Schaefer (2010) described. In addition, the membership model will provide resources for ongoing support and development, addressing the dilemma UIUC faced, as Prom et al. (2007) described, when they invited other organizations to join the Archon community, but found themselves unable to keep up with support requests.</p>
+<p>The ArchivesSpace Team has been pleased with several other aspects of the project. In particular outsourcing development to a small, nimble development group with significant experience in library and archives software development, using an agile Scrum development process, and engaging end users in testing the ArchivesSpace product early in the process have all worked well.</p>
+<p>The advantage of outsourcing development is that, unlike the AT and Archon projects and other similar grant funded software development projects, the developers have had no competing priorities. In addition, the development contract requires on-time delivery. Therefore the risk of project delays is reduced. Early release of a minimum viable product and frequent updates through the agile development process has enabled a high level of user engagement as the software is developed.</p>
+<p>We anticipate a smooth transition from the grant funded project to ongoing support for the ArchivesSpace product and community by LYRASIS in the summer of 2013. The key to a successful transition and sustainability is community engagement. Get involved by becoming an ArchivesSpace member to influence future development and to be eligible for ArchivesSpace services and support.</p>
+<h2>Acknowledgements</h2>
+<p class="AcknowledgementsText">The authors would like to acknowledge the generous support of The Andrew W. Mellon Foundation for funding ArchivesSpace. We also extend many thanks to members of the ArchivesSpace project who read and commented on this paper. We are especially grateful to Brad Westbrook, Chris Prom, Scott Schwartz, and Laurel Tueling.</p>
+<h2>References</h2>
+<p class="ReferencesText">Archon: the simple archival information system. Archon license, version 2.02 and earlier (n. d.). Consulted January 20, 2013. Available at: <a href="http://www.archon.org/licenseold.php">http://www.archon.org/licenseold.php</a></p>
+<p class="ReferencesText">AT/Archon Integrated Application: hi-level functional requirements (2010). January 21, 2010. Consulted January 15, 2013. Available at: <a href="http://www.archivesspace.org/wp-content/uploads/2011/08/AT-Archon-HiLevel-Reqs-FINAL-20101271.pdf">http://www.archivesspace.org/wp-content/uploads/2011/08/AT-Archon-HiLevel-Reqs-FINAL-20101271.pdf</a></p>
+<p class="ReferencesText">Chandler, R., Landis, B., &amp; Westbrook, B. (2001). Archivists Workbench: White Paper. November 1, 2001 Consulted January 15, 2013. Available at: <a href="http://archiviststoolkit.org/sites/default/files/Archivists Workbench Whitepaper.pdf">http://archiviststoolkit.org/sites/default/files/Archivists%20Workbench%20Whitepaper.pdf</a></p>
+<p class="ReferencesText">Griffin, S. (2012, Dec. 5). Archon documentation project. Message posted to <a href="mailto:atart@forums.archivists.org">atart@forums.archivists.org</a>.</p>
+<p class="ReferencesText">LYRASIS to serve as base for ArchivesSpace. (2012). <i>NYU News. </i>April 18, 2012. Consulted January 9, 2013. Available at: <a href="http://www.nyu.edu/about/news-publications/news/2012/04/18/lyrasis-to-serve-as-base-for-archivesspace.html">http://www.nyu.edu/about/news-publications/news/2012/04/18/lyrasis-to-serve-as-base-for-archivesspace.html</a></p>
+<p class="ReferencesText">Matienzo, M. (2010). ArchivesSpace technical design meeting: summary report on technical architecture. July 30, 2010. Consulted January 15, 2013. Available at: <a href="http://www.archivesspace.org/wp-content/uploads/2011/08/ArchivesSpace_Technical_Architecture_Report-FINAL-07302010.pdf">http://www.archivesspace.org/wp-content/uploads/2011/08/ArchivesSpace_Technical_Architecture_Report-FINAL-07302010.pdf</a></p>
+<p class="ReferencesText">Prom, C., Schwartz, S., &amp; Sorensen, P. (2010). Archon MATC award interim report (Public). January 31, 2010. Consulted January 20, 2013. Available at: <a href="http://www.archon.org/MATC-InterimReport-public.pdf">http://www.archon.org/MATC-InterimReport-public.pdf</a></p>
+<p class="ReferencesText">Prom, C. J. (2002a). “The EAD Cookbook: a survey and usability study”. <i>American archivist</i>, <i>65</i>(2), 257-275.</p>
+<p class="ReferencesText">Prom, C. J. (2002b). “Does EAD play well with other metadata standards?”. <i>Journal of archival organization</i>, <i>1,</i> 52-72.</p>
+<p class="ReferencesText">Prom, C. J. (2004). “User interactions with electronic finding aids in a controlled setting”. <i>American archivist</i>, <i>67</i>(2), 234-268.</p>
+<p class="ReferencesText">Prom, C. J. (2010). “Optimum access? Processing in college and university archives”. <i>American archivist, 73</i>, 146-174.</p>
+<p class="ReferencesText">Prom, C. J., &amp; Schwartz, S. W. (2004). A unified, standards-compliant system for describing archives and manuscript collections. Consulted January 15, 2013. Available at: <a href="http://www.archon.org/ICRGrant2004.pdf">http://www.archon.org/ICRGrant2004.pdf</a></p>
+<p class="ReferencesText">Prom, C. J., et al. (2007). “A unified platform for archival description and access.” <i>JCDL ‘07: Proceedings of the 7th ACM/IEEE-CS joint conference on digital libraries, </i>157-166.</p>
+<p class="ReferencesText">Schaefer, S. (2010). “Challenges in sustainable open source: A case study”. <i>Code4lib journal, 9</i>. March 22, 201. Consulted January 20, 2013. Available at: <a href="http://journal.code4lib.org/articles/2493">http://journal.code4lib.org/articles/2493</a></p>
+<p class="ReferencesText">Schwartz, S. W., et al.. (2008). “Archon: facilitating global access to collections in small archives”. <i>World Library and Information Congress: 74th IFLA general conference and council.</i> August 10-14, 2008, Québec, Canada. Consulted January 15, 2013. Available at: <a href="http://archive.ifla.org/IV/ifla74/papers/159-Schwartz_Prom_Fox_Sorensen-en.pdf">http://archive.ifla.org/IV/ifla74/papers/159-Schwartz_Prom_Fox_Sorensen-en.pdf</a></p>
+<p class="ReferencesText">Westbrook, B. (2009a). “Intro to the Archivists’ Toolkit”. September 17, 2009. <i>ArchivesNext</i>. Consulted January 20, 2013. Available at: <a href="http://www.archivesnext.com/?p=370">http://www.archivesnext.com/?p=370</a></p>
+<p class="ReferencesText">Westbrook, B. (2009b). “Starting the AT / Archon integration project”. October 5, 2009. <i>Archivists’ Toolkit. </i>Consulted January 18, 2013. Available at: <a href="http://archiviststoolkit.org/node/136">http://archiviststoolkit.org/node/136</a></p>
+<p class="ReferencesText">Westbrook, B. D., et al. (2007). “The Archivists’ Toolkit: another step toward streamlined archival processing”. <i>Journal of Archival Organization, 4</i>(1-2), 229-253.</p>
+
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+M. Matienzo and K. Kott, ArchivesSpace: A Next-Generation Archives Management System. In <i>Museums and the Web 2013</i>, N. Proctor &amp; R. Cherry (eds). Silver Spring, MD: Museums and the Web. Published January 31, 2013. Consulted <script type="text/javascript">document.write(full_date);</script> <!-- April 23, 2022 -->.<br/>
+https://mw2013.museumsandtheweb.com/paper/archivesspace-a-next-generation-archives-management-system/<br/><br/><hr/>
+<!-- 
+<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js'></script>
+<script type="text/javascript">
+var tz = jstz.determine();
+tz.name();
+</script>
+
+
+<script type="text/javascript">document.write(tz.name()); 
+</script>UTCApril 23, 2022-->
+
+	<div id="comments">
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="../../wp-loginfad8.html?redirect_to=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Farchivesspace-a-next-generation-archives-management-system%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+</div><!-- #content -->
+</div>

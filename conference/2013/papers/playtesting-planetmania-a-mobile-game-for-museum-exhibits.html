@@ -1,0 +1,278 @@
+<div id="primary">
+<div id="full_width_content">
+			
+
+<h1 class="entry-title">Playtesting PlanetMania:  A Mobile Game for Museum Exhibits</h1>
+<br/>
+
+<a href="../../user/index0b02.html?u=davidschaller">David Schaller</a>, USA, <a href="../../user/index9c23.html?u=Flaggb">Barbara Flagg</a>, USA <br/><br/><b>Abstract</b><br/>
+<p>PlanetMania is an iOS and Android mobile game designed to be played with the Maryland Science Center&#39;s new Life Beyond Earth exhibit. Intended for preteens, the card-based gameplay expands upon exhibit content and encourages interaction with the physical exhibit. Through extensive paper prototyping and iterative development, the project team revised and simplified  the game content and interactivity, striving for intuitive game rules, age-appropriate scientific content, and engaging game play and learning outcomes — all in a museum environment where players have plenty of distractions.</p>
+<p><b>Keywords: </b>game, museum, exhibit, mobile, astronomy, astrobiology, evaluation</p>
+<p style="text-align: left" align="center">by David T. Schaller and Barbara Flagg</p>
+<p style="text-align: left" align="center">Museums have sought to incorporate handheld devices since the 1990s, but until recently, these efforts have focused on pure interpretation and didactic content (Dowden &amp; Sayre, 2007; Filippini-Fanton &amp; Bowen, 2008; Petrie &amp; Tallon, 2010; Burnette et. al., 2011). Only in the past few years have game-based projects emerged, such as the “Tate Trumps” mobile game from Tate Modern. This approach holds much promise, for games are inherently engaging, motivating, and meaningful experiences (Schaller 2011a, 2011b). However, because games require the museum visitor to also become a player in the game-world, they create significant design challenges to ensure a satisfying experience that enhances rather than distracts from the museum visit.</p>
+<p>To tackle this challenge, a team gathered at the Maryland Science Center (MSC) in January 2012. The group consisted of MSC’s Principal Investigator Jim O’Leary, a consultant and project leader (Dr. Eliene Augenbraun, MP Axle, Inc.), MSC development and implementation staff (Karen Battee and Alex Nance), and the authors of this paper: a learning game designer (Schaller) and an independent evaluator (Flagg). Supported by a grant from the National Science Foundation, the team’s goal was to design and produce a mobile game, eventually named <i>PlanetMania</i>, to be played by visitors at a museum exhibit about astrobiology, which was also in development at that time. The project had originated in 2004, when it focused on bringing Augenbraun’s short videos about current science research into the museum, to be displayed on large screens and small handheld devices. Over time, guided by Flagg’s formative evalutions, other research (Hsi, 2003), and the proliferation of smartphones, the project evolved into a mobile game. In contrast to a tour format, a mobile game would appeal to children (a large portion of MSC visitors) and could help them engage with the text and images of the Astrobiology exhibit (Klopfer et al., 2005).</p>
+<p>This paper offers an inside look at the <i>PlanetMania </i>game development, from the initial goals and concept development through the delights and frustrations of playtesting and formative evaluation to the final release and results of an in-depth summative evaluation. While this paper discusses the efforts of the entire team, all opinions and views are those of the authors. The game itself is available for iOS and Android devices from the <i>Life Beyond Earth </i>web page (http://www.mdsci.org/exhibits/life-beyond.html).</p>
+<h2>1. A Slate of Constraints</h2>
+<blockquote>
+<p style="text-align: center" align="center">Design depends largely on constraints.<br/>
+-Charles Eames</p>
+</blockquote>
+<p><i>PlanetMania</i>’s constraints included those common to any museum project — audience and content — along with several additional constraints of platform and environment that did much to shape the final product.</p>
+<p><strong>Subject Matter: </strong>Astrobiology in general, and in particular the three main messages, shared with the <i>Life Beyond Earth </i>exhibit:</p>
+<ul>
+<li>Scientists are looking for indicators of life beyond Earth using several scientific methods.</li>
+<li>By looking at extreme life on Earth we hypothesize about life in our solar system and beyond.</li>
+<li>The field of astrobiology is in its infancy with much yet to be discovered.</li>
+</ul>
+<p>This subject has a powerful appeal by connecting to innate human wonder, “Are we alone in the Universe?” However, any scientific understanding of it must be based on some knowledge of the planets, the solar system, and the scale of the galaxy, which is often wanting in our young target audience.</p>
+<p><strong>Audience:</strong><b> </b>Museum visitors between the ages of eight and twelve, visiting either with their family or school group. This audience, particularly the lower end of the age range, makes up a large portion of MSC’s visitation, but it put a significant constraint on the complexity and sophistication of the game content.</p>
+<p><strong>Deployment Technology:</strong><b> </b>Mobile devices, specifically those running iOS (iPhone, iPod Touch, and iPad) and Android operating systems. This dual-platform deployment (and our budget) meant we had to build the game in HTML and “package” it with PhoneGap, thus limiting potential interactivity to what we could produce in HTML.</p>
+<p><strong>Game Platform:</strong> A content management system (CMS) housing all game content, so the game could be instantly updated as exhibit components changed over time. Furthermore, with the CMS, museum staff could create new versions of the game for other exhibits. This placed substantial constraints on gameplay and presentation, since we had to design a generic game format that operated independently of game content.</p>
+<p><strong>Exhibit Environment:</strong> MSC’s <i>Life Beyond Earth</i> exhibit, which was being designed concurrently. This perhaps was the greatest constraint, for the game had to enhance and expand upon the exhibit content, while repeatedly redirecting the visitor’s attention back to the exhibit. If we created a game that kept players glued to the screen—normally a sign of success—we would have failed.</p>
+<h2>The Answer is in the Cards</h2>
+<p>Given these constraints, we had to relinquish what is typically a major goal for learning games: tight integration of gameplay and content. When gameplay and content are separated, essentially operating on different planes in the game, players can easily ignore the content and instead concentrate only on the game components that are relevant to successful actions and choices.</p>
+<p>And indeed, the design team quickly set aside some promising ideas for game-exhibit connections, since they would not be re-usable with other exhibits. Instead, we developed a game concept that emulated the scientific method using interchangeable scientific content:</p>
+<blockquote><p>The game focuses on a question at the frontiers of science, to which no one knows the answer. For the astrobiology version, it might be “Is there life on other planets?” The game models the process of scientific investigation and can host a wide range of topics. Players choose a hypothesis, then collect “evidence cards” as they explore the exhibits. When players have collected seven cards, they are prompted to support their hypothesis, choosing the best four cards that make a strong case for it.  Players then submit this “hand” of cards to earn Astrobucks and a coupon to the museum store. (Draft design document, January 2012)</p></blockquote>
+<p>A card game format accommodated all of our constraints:</p>
+<ul>
+<li>Subject matter: Astronomy is highly visual, so text and images can convey a great deal of information.</li>
+<li>Audience: Children are generally familiar with card games, easing the learning curve.</li>
+<li>Technology platform: Card-based gameplay can easily be created in HTML.</li>
+<li>CMS-based game platform: Cards can serve as a generic template for server-based content.</li>
+<li>Exhibit environment: Cards can be “collected” using keycodes embedded in exhibit panels, thus drawing players’ attention to the exhibit’s different areas.</li>
+</ul>
+<p>This format had one other benefit, which proved to be equally essential: It was quite easy and inexpensive to playtest with children using paper card mockups.</p>
+<h2>2. Test, Revise, and Repeat</h2>
+<p style="text-align: center" align="center">“Testing leads to failure, and failure leads to understanding.”</p>
+<p style="text-align: center" align="center">                                                                                                         -Burt Rutan</p>
+<p>After further development, we began playtesting the game with children. Over four rounds of testing, we revised and refined both content and interactivity, all before writing a line of HTML. Then we tested again after formative evaluation of a digital prototype. For these sessions, initially conducted by project leader Augenbraun and subsequently by Schaller, we brought several dozen paper Evidence Cards (Figure 1) to an elementary school to test with students during or after school. To administer the game, we acted as the computer, showing each game interface, dealing cards, and responding to player actions with minimal explanation or interference. These playtesting sessions revealed a significant problem with the game: the connection between the content and the gameplay.</p>
+<p><a href="../../wp-content/uploads/2013/01/schaller.fig1_..png"><img loading="lazy" class="size-medium wp-image-3859 aligncenter" alt="schaller.fig1." src="../../wp-content/uploads/2013/01/schaller.fig1_.-300x95.png" width="300" height="95" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig1_.-300x95.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig1_.-500x159.png 500w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig1_..png 1024w" sizes="(max-width: 300px) 100vw, 300px"/></a></p>
+<p align="center"><strong>Figure 1: Early Designs for Evidence Cards</strong></p>
+<p>On its own, the core gameplay worked pretty well. Children quickly understood the basic mechanics: collecting cards, employing wild cards, and combining cards for power-ups (to unlock a more valuable card) and to form “cases” (four cards to support an hypothesis). They did stumble on several secondary aspects that were intended to make the game more interesting over multiple rounds, so these required revision. Our foremost requirement was a set of game rules that required minimal instruction, particularly since players’ attention would be split among the game and the exhibit and typical museum distractions.<b> </b></p>
+<p>Nor was the content, on its own, a serious problem. Before we began designing <i>PlanetMania</i>, front-end evaluation for the exhibit project had found that a majority of both youth and adults “were familiar with the fact that exoplanets had been found outside the solar system, but most were not familiar with the research techniques or evidence for this.” (Russell, 2011)</p>
+<p>Guided by the exhibit front-end analysis, project leader Augenbraun drafted card content about exoplanets, extremophiles on Earth, and the ingredients of life. During playtesting, we found that most card content was new to children, but they generally could make some sense of it, especially when they could connect it to prior knowledge. The problem arose not from their imperfect grasp of the content, which was probably typical for a science museum exhibit, but from what we asked children to do with it. The game required them not merely to understand the card content, but to <i>do</i> something with that knowledge: to decide whether or not the card supported the hypothesis (see Figure 2). Children made valiant attempts, but often their rationales were vague, uncertain, or even whimsical. Given their unfamiliarity with our science content, this task was simply beyond the cognitive ability of most 8-10 year olds, at least within our chosen game format.</p>
+<p><a href="../../wp-content/uploads/2013/01/schaller.fig2_.png"><img loading="lazy" class="size-medium wp-image-3860 aligncenter" alt="schaller.fig2" src="../../wp-content/uploads/2013/01/schaller.fig2_-300x199.png" width="300" height="199" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig2_-300x199.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig2_-450x300.png 450w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig2_.png 956w" sizes="(max-width: 300px) 100vw, 300px"/></a></p>
+<p align="center"><strong>Figure 2: Make Your Case game interface</strong></p>
+<p>And not only them. The project team often struggled to articulate whether a card should or should not support each hypothesis. If <i>we</i> couldn’t decide, with our deeper knowledge of the subject and the game, how could we expect a fourth-grader to succeed at that task?</p>
+<p>So the problem was not purely with either the content or the gameplay. It was at the <i>intersection</i> of the two. Children could make rough sense of the card content, and they had no problem with the basic gameplay. But applying their nascent understanding of the card content in the context of the game rules proved too difficult for most children. Ironically, we had managed to create a game that required that players understand the content in order to play the game well — and that turned out to be the central problem with the game design.</p>
+<p>That, at least, was how we interpreted the playtesting results, but since the actual <i>Life Beyond Earth</i> exhibit was still in development, playtests were conducted in a vacuum of sorts, absent the atmosphere of exhibit panels and interactives. Thus, some of our conclusions were tentative at best, for we had to rely on the game cards to convey all astronomical content. The final game would, to some unknown extent, share this burden with the surrounding exhibitry— but to what extent this would aid children’s comprehension, we simply did not know.</p>
+<p>Nonetheless, we had to address these issues before building a pilot version of the game for formative evaluation. So we simplified both the content and the gameplay, hoping that, with a lighter cognitive load, childen could devote more attention to the evidence and the hypothesis. We then built the game in HTML to be tested in the museum. Unfortunately, “in the museum” did not mean “in the exhibit,” which was still in production. Instead, 19 children between 8 and 12 years of age played the game on iPod Touches in MSC’s <i>Space Link</i> gallery, as a substitution for the exhibit.</p>
+<h2>3. Piloting in <span style="text-decoration: line-through">the</span> an Exhibit</h2>
+<blockquote>
+<p style="text-align: center"> A pilot who doesn’t have any fear probably isn’t flying his plane to its maximum.</p>
+<p style="text-align: right">– Jon McBride</p>
+</blockquote>
+<p>This pilot version of the game would also be our first test of the card-collecting mechanic, since it required the exhibit environment. To collect cards, players must find three-digit keycodes (posted at strategic spots around the exhibit) and type them into the game. They draw two cards, then receive a multiple-choice quiz question about astrobiology (Figure 3). They must choose the correct answer (found in the nearby exhibit text) to earn a third card. We added this step to strengthen the game’s connection to the exhibit. Players repeat this process until they have seven cards in their hand. Then they begin powering-up and making cases to support the current hypothesis.</p>
+<p><a href="../../wp-content/uploads/2013/01/schaller.fig3_.png"><img loading="lazy" class="aligncenter size-medium wp-image-3861" alt="schaller.fig3" src="../../wp-content/uploads/2013/01/schaller.fig3_-300x161.png" width="300" height="161" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig3_-300x161.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig3_-500x268.png 500w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig3_.png 1006w" sizes="(max-width: 300px) 100vw, 300px"/></a></p>
+<p align="center"><strong>Figure 3: Pilot Game Quiz Question (Answer is in the Exhibit)</strong></p>
+<p>Formative evaluation found that the game appealed to children, with a 4.1 rating on a 5-point Likert scale (all formative citations are Flagg, 2012). Girls indicated greater sustained interest than boys over several rounds, perhaps due to the text-centric nature of the game (Chudowsky &amp; Chudowsky, 2010). The majority of children identified the card-collecting task as the “most fun” aspect of the game. As one said: <i>“Getting the cards and seeing all the different planets and answering the questions, you had to work and think.”</i> Also popular were Astrobucks, which players earn to unlock and upgrade for a coupon to the museum store. Nearly half of the children said that was the “most fun.” However, one-third of children criticized the reading load: <i>“It’s more like reading a textbook than playing a game. It’s not too much fun.”</i></p>
+<p>The evaluation identified problems that minor revisions could fix; however, it also found that the game wasn’t especially educational. While two-thirds of players could report something interesting they learned, even players who appeared to understand the game had trouble choosing Evidence Cards that supported the hypothesis. For example:</p>
+<p><i>“I’m not sure what I’m supposed to do.”</i></p>
+<p>Researcher suggests reading directions.</p>
+<p><i>“It doesn’t make sense.” </i></p>
+<p>Researcher: “What is an hypothesis?”</p>
+<p><i>“Hypothesis is a guess. The hypothesis is there are lots of planets in the universe.” </i></p>
+<p>Researcher asks: “What is evidence?”</p>
+<p><i>“Proof?” </i></p>
+<p>Researcher: “Choose cards that help prove there are lots of planets in the universe.”</p>
+<p>The player chooses 2 Exoplanet Zoo cards and 2 Ingredients of Life cards.</p>
+<p>Researcher: “Will those cards support the hypothesis?”</p>
+<p><i>“Probably.” </i></p>
+<p>Yet when her hand was scored, this player was still not sure why the Exoplanet Zoo cards, which describe specific exoplanets, supported the hypothesis and the Ingredients of Life cards did not.</p>
+<p>Why did players have such trouble with this task in the pilot version, despite our revisions after earlier rounds of playtesting? We had two suspects:</p>
+<ul>
+<li>This task became more difficult when we moved from paper to digital cards, and in the process added smaller versions of the cards, which were necessary given the small size of phone screens. Each card appeared full-size when first collected, then shrank to a mini-card as it slid into the card array. Players tap each mini-card to enlarge and review it — and with seven cards onscreen, this became a more cumbersome process than holding paper cards. This may have interfered with players’ ability to scan and compare the card content in relation to the hypothesis.</li>
+<li>The exhibit environment likely distracted players from the game. This was to be expected, but ultimately we hoped it would be balanced by the presence of relevant exhibit content. However, because the evaluation was conducted in the <i>SpaceLink</i> exhibit rather than <i>Life Beyond Earth</i>, there was no related exhibit content to support the game content.</li>
+</ul>
+<p>So, with less than two months before the exhibit opening, we drastically simplified the game design: reducing the number of card types, eliminating wild cards and power-ups, and dropping one set of cards completely. To bolster players’ understanding of the “statement” (formerly the “hypothesis”), we rewrote the quiz questions so they also served to introduce the statement. And we completely redesigned the core tasks in the game. In the pilot version of the game, players collect eight cards and then choose the four cards that best support the hypothesis (Figure 2). In the revised game (Figure 4), players collect five cards, and upon collecting each card, make two decisions: 1) whether it matches the statement and then 2) whether to keep it in their two-card hand or drop it.</p>
+<p><a href="../../wp-content/uploads/2013/01/schaller.fig4_.png"><img loading="lazy" class="aligncenter size-medium wp-image-3862" alt="schaller.fig4" src="../../wp-content/uploads/2013/01/schaller.fig4_-300x97.png" width="300" height="97" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig4_-300x97.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig4_-500x163.png 500w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig4_.png 1024w" sizes="(max-width: 300px) 100vw, 300px"/></a></p>
+<p align="center"><strong>Figure 4: Revised Game with Two-Part Task</strong></p>
+<p>Finally, and most crucially, instead of requiring players to infer the relationship between cards and the hypothesis, we established a simple, obvious, one-to-one match between card topic and the statement (formerly “hypothesis”). This made the matching task (e.g. “Does this Evidence Card match the statement?”) much easier for children, both in terms of understanding the task at hand and the most likely correct answer.</p>
+<p>In all, these revisions created a much simpler game, but that was also a gamble: the matching task was now so simple that players might easily make their decision based only on keywords or card design, ignoring the scientific content on each card. However, one last session of paper prototyping with schoolchildren gave us reason for hope. With six weeks left before the exhibit opened, we rapidly revised the graphic designs, recoded the game in HTML, and built the content management system that would house all the game’s card content. Adding to the excitement was one final round of tweaks, ten days before launch, based on several insightful comments by a colleague who brought a fresh perspective to the game.</p>
+<h2>4. The Game Meets the Exhibit</h2>
+<blockquote>
+<p align="center">However beautiful the strategy, you should occasionally look at the results.</p>
+<p>                                                                     -Winston Churchill</p></blockquote>
+<p>The game was released on the Google and Apple app stores in early November 2012. Signs near the entrances to <i>Life Beyond Earth</i> encourage visitors to download the game to their mobile phone (using free wi-fi signal) and play it as they explore the exhibit. After each round, their Astrobucks are added to their museum store coupon, which they can show (on their mobile device) to the store cashier to obtain their discount. However, usage to date has been modest as the museum experiments with the most effective methods of promoting the game.</p>
+<p>Summative evaluation — in the actual <i>Life Beyond Earth</i> exhibit — was done a week after the exhibit opened (Flagg &amp; Holland, 2013). Since budget limitations prevented the inclusion of a control group, the evaluation was a pre-post quasi-experimental study in which a sample of 24 9-11 year olds were interviewed prior to and after experiencing the game and exhibit as well as observed during their exposure to both. Due to the voluntary nature of subject recruitment, 75% were girls, and 29% were African- and Asian-Americans. With parental consent, each child was provided with an iPod Touch and instructed to “explore the exhibit as much as you want and use the game as much as you want and when you are done, we’ll talk about your experience.”</p>
+<h3>Do Children Play the Game?</h3>
+<p>Players most often completed four rounds of the game while in the exhibit, and two-thirds stayed in the exhibit for the 20 minutes allowed (Figure 5) — though as invited visitors, they were likely to spend more time in an exhibit than an average visitor.</p>
+<p><a href="../../wp-content/uploads/2013/01/schaller.fig5_.jpg"><img loading="lazy" class="aligncenter size-medium wp-image-3863" alt="schaller.fig5" src="../../wp-content/uploads/2013/01/schaller.fig5_-300x246.jpg" width="300" height="246" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig5_-300x246.jpg 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig5_-1024x843.jpg 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig5_-364x300.jpg 364w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig5_.jpg 1341w" sizes="(max-width: 300px) 100vw, 300px"/></a></p>
+<p align="center"><strong>Figure 5: Rounds Played with PlanetMania Game</strong></p>
+<p>Players displayed a wide range of behaviors that fell into five patterns, defined by number of rounds played, scores, and interaction with the exhibit. A plurality (38%) of players drew on the exhibit to play the game but also explored the touchables and videos beyond what the game required, and 17% skimmed the exhibit with much less game-exhibit interaction.  Some players (17%) focused only on the game, ignoring the exhibit; whereas others (13%) focused on the exhibit and ignored the game. Finally, 13% did not engage with the exhibit or the game.</p>
+<p>A common concern about game apps in a museum setting is that young visitors will become immersed in the game and miss the museum exhibits themselves. <i>PlanetMania’s </i>design encouraged interaction with the <i>Life Beyond Earth </i>exhibit via its multiple-choice quiz format. The distribution of keycodes and game questions across the exhibit’s physical space exposed users to most of the exhibit content. Three-quarters of our players interacted physically with one to six of the seven components, as indicated in Figure 6. Girls tended to interact physically with more hands-on components than boys, although our male sample is very small.</p>
+<p align="center"><a href="../../wp-content/uploads/2013/01/schaller.fig6_.jpg"><img loading="lazy" class="aligncenter size-medium wp-image-3864" alt="schaller.fig6" src="../../wp-content/uploads/2013/01/schaller.fig6_-300x186.jpg" width="300" height="186" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig6_-300x186.jpg 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig6_-1024x635.jpg 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig6_-483x300.jpg 483w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/01/schaller.fig6_.jpg 1475w" sizes="(max-width: 300px) 100vw, 300px"/></a></p>
+<p align="center"><strong>Figure 6: Frequency of Hands-on Exhibit Components Touched</strong></p>
+<h3>Is the Game Appealing?</h3>
+<p>Half of the players liked the game “a lot” and about half liked it “somewhat.” The game’s most appealing features were the card game activity and answering quiz questions:</p>
+<ul>
+<li>38% liked the cards and the card game activity. “<i>I liked how there was different cards. It was like a real game instead of all scientific facts to make it boring.”</i></li>
+<li>29% enjoyed the quiz questions. <i>“I got to explore and find things and answer the questions. They’re pretty tricky but I got most of them right.”</i></li>
+<li>29% felt they had fun learning. <i>“It was fun. It turned into a fun card game. You could have fun learning things at the same time. How it would quiz you hard and make you think hard and learn more things.”</i></li>
+<li>21% liked the concept of Astrobucks for a store coupon.<i> “I liked how you could get the Astrobucks. I didn’t know if you could buy stuff with them. I liked that I could get a coupon to the science center.”</i></li>
+<li>17% appreciated the game’s connection to the exhibit. <i>“It connects to the exhibit. You could look at the exhibit and look at the game and answer some questions.”</i></li>
+<li>However, 20% of players criticized the repetitious nature of the card game. <i>“It would keep giving me cards. I just got a little tired with it. If you’re not completely into card games, it got a little annoying when it was just cards.”</i></li>
+</ul>
+<h3>Did the Gameplay Work?</h3>
+<p>The summative evaluation gave us our first look at the game in action in its proper environment, where we could finally see how the much-revised gameplay worked. And to no one’s surprise, despite children’s generally positive responses to the game, two-thirds of players reported difficulty at some point in playing the game. Most of these were usability issues—finding keycodes, finding answers to the multiple choice questions, and interpreting game rules or instructions—which had a noticeable effect on player’s experience. We are currently making minor modifications to address these issues. We are also reducing each hand from five to four cards to increase the game pace and decrease repetition.</p>
+<p>Of these usability issues, one was of special concern: those players who did not understand a core task in the game –deciding whether each new card did or did not match the Statement — usually reported that this matching task was ‘hard’ (29%). In contrast, the majority of players understood that task and felt that it’s difficulty was ‘just right’ (58%) or ‘easy” (13%). Even so, a good number of players were unable to describe coherently their own matching process. Those who <i>could</i> reflect on their thinking revealed that the task is appropriate for this age group:</p>
+<p><i>“I’d be looking at the picture and reading the statements and seeing if they are both alike and similar in a way. I was looking for key words in there and see if they match up.”</i></p>
+<p>“’<i>Life</i> <i>as we know it’ had a caterpillar picture and animals need the right kind of food, and that matched with the statement. It’s a challenge but you can’t learn unless you advance. Hard but a good challenge.”</i></p>
+<p>A good game encourages players to develop winning strategies as their understanding of the game rules increases, and a few players (17%) did report that they changed how they played the game; for example:</p>
+<p>“<i>I think I paid more attention to what the statement was and relating it to what the card was. I was thinking about it a little more.”</i></p>
+<p>However, these players’ scoring trends did not differ from other players. This may be due to the strong element of chance in the game. Players always have a 33% chance of drawing a card that matches the statement, and that may overshadow the impact of more skillful playing, especially with just 3-5 rounds of card play.</p>
+<h3>Did the Game Enhance the Visit Experience?</h3>
+<p>Two-thirds of players felt using the game helped them enjoy the exhibit more: “<i>You could do something a little more fun using the exhibit instead of just walking around reading and feeling. And you could learn and memorize the stuff you learned.” </i></p>
+<p>Another four (17%) were ambivalent, and four more, including three boys, felt that using the game did not contribute to their enjoyment of the exhibit. This group did not particularly like the card game aspect of the game: “<i>It kept on showing cards and it wouldn’t go on until I dropped the cards a second time. I wish after one or two cards, it would let me do something else.”</i><b></b></p>
+<p>Almost all (88%) thought that using the <i>PlanetMania </i>game helped them learn more from the exhibit than without the game:</p>
+<p><i>“I know I learned a lot. I think the game kind of helped me go straight to questions so I would remember it. I tend to learn more when I’m asked questions.” </i></p>
+<p><i>“[I learned] more, in an entertaining way, because it asked you questions about the exhibit so it caused you to read more instead of just looking at the pictures and not really getting it.”</i></p>
+<p>Without a study that includes an exhibit-only control group, we cannot conclude that the game experience made a significant difference in visitors’ learning outcomes, but our pre/post interviews reveal that almost all of the participants acquired some new or more sophisticated understanding about astrobiology. Moreover, children frequently specified the game as the source of their new knowledge. Table 1 shows players’ increase in knowledge on six questions related to exhibit and game content. Almost all (96%) participants acquired knowledge related to at least one interview question, 46% to two questions, and 13% of the participants demonstrated new knowledge for three of the six questions.</p>
+<p> </p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="198"><b>Open-ended questions before and after exposure to game and exhibit</b></td>
+<td valign="top" width="117">
+<p align="center"><b>Players with prior knowledge beforehand</b></p>
+</td>
+<td valign="top" width="122">
+<p align="center"><b>Players who acquired new knowledge from game and exhibit</b></p>
+</td>
+</tr>
+<tr>
+<td width="198">Why do scientists think there might be life beyond earth?</td>
+<td width="117">
+<p align="center">38%</p>
+</td>
+<td width="122">
+<p align="center">17%</p>
+</td>
+</tr>
+<tr>
+<td width="198">Describe some ways that astronomers can detect planets around stars other than our sun.</td>
+<td width="117">
+<p align="center">42%</p>
+</td>
+<td width="122">
+<p align="center">33%</p>
+</td>
+</tr>
+<tr>
+<td width="198">What do scientists look for when searching for life on other planets?</td>
+<td width="117">
+<p align="center">58%</p>
+</td>
+<td width="122">
+<p align="center">38%</p>
+</td>
+</tr>
+<tr>
+<td width="198">What kind of life do scientists think we might find on another planet?</td>
+<td width="117">
+<p align="center">13%</p>
+</td>
+<td width="122">
+<p align="center">33%</p>
+</td>
+</tr>
+<tr>
+<td width="198">What things do you think life needs to survive on other planets?</td>
+<td width="117">
+<p align="center">100%</p>
+</td>
+<td width="122">
+<p align="center">0%</p>
+</td>
+</tr>
+<tr>
+<td width="198">What are some extreme or strange places or environments on earth where you think life can be found?</td>
+<td width="117">
+<p align="center">54%</p>
+</td>
+<td width="122">
+<p align="center">38%</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 1. Percent of Participants with Knowledge Prior to Game/Exhibit Exposure and Knowledge Acquired from Game/Exhibit Exposure</strong></p>
+<p>For example, here are common answers when asked what scientists look for when searching for extraterrestrial life:</p>
+<ul>
+<li>Prior knowledge:  <i>Water. Aliens. Atoms. Buildings.</i></li>
+<li>New knowledge:<i> Liquid. Types of food sources that they might have. Microscopic life.</i></li>
+</ul>
+<p>One additional measure helps us assess the value added by the game to both participants and the science center itself: how many players use their Astrobuck coupon in the museum store. Nationwide, on average, only 20% of science center visitors make a purchase at the museum store (Museum Store Association, 2009), but 75% of families participating in the <em>PlanetMania</em> evaluation made store purchases using their coupons.  (One parent later exclaimed to a researcher that her son purchased a microscope because he had learned that scientists focus their search on microscopic life.) Those purchases averaged about $19 per family, which is is about average for purchases at the MSC store (J. O’Leary, personal communication, January 31, 2013). Also, commercial free-to-play games typically “monetize” their game with in-app purchases for new levels and abilities. Currently, that revenue is in the range of $9.99 to $19.99 (Pratt, n.d.). By either metric, the MSC store — and game players — clearly benefit from the <i>PlanetMania</i> coupon incentive.</p>
+<h2>5. A Platform to Build On?</h2>
+<p>The interactive quiz and card game format of <i>PlanetMania </i>successfully met its goal to make the <i>Life Beyond Earth </i>exhibit more accessible, engaging, and understandable for upper elementary school visitors. Perhaps most notably, the game struck a good balance, as most players successfully split their attention between the game and the exhibit. This was a combination of luck and design, since we could not test this feature until the game was released. In retrospect, we learned less from paper prototyping than we realized at the time, due to the differences between the paper mockups and the digital game, along with the absence of the exhibit environment. This forced more drastic revisions after formative testing of the pilot game on iPod Touch, blunting the cost advantages of paper prototyping. In the future, we might move to digital earlier in the process and construct simple mockups of key exhibit panels to test the game in a more authentic environment. Revisions to the digital game are likely inevitable, so it’s better to discover those sooner than later.</p>
+<p>While the game was well-received, its reliance on text content and repetitive gameplay may limit its appeal. Of course, those elements are also what allow the core game platform to be repurposed for entirely different exhibits, simply by populating the game with different card content and questions. Were these design trade-offs worth it? How easily could we repopulate it with new content on another topic — and would the gameplay work as well? The only way to truly answer these questions, of course, is to try it with another exhibit.</p>
+<h2>Acknowledgements</h2>
+<p>This material is based on work supported by the National Science Foundation under Grant No. 0940833.  Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.</p>
+<p>Many thanks to the project team for an exciting and rewarding experience, as well as Dr. Ilona Holland (Harvard University), who assisted with the summative evaluation. We also appreciate comments and suggestions to improve this paper from Susan Edwards, Carole Flores, Kate Haley Goldman, Dr. Laura Martin, Susan Nagel, and Steve Boyd-Smith. Special thanks to Scott Sayre, E.D., for suggesting significant improvements to the game design. And final thanks to all the children who provided frank and most helpful feedback!</p>
+<h2>References</h2>
+<p>Burnette, A., R. Cherry, N. Proctor, and P. Samis. (2011). “Getting On (not under) the Mobile 2.0 Bus: Emerging issues in the mobile business model.” In J. Trant and D. Bearman (Eds). <i>Museums and the Web 2011: Proceedings</i>. Toronto: Archives &amp; Museum Informatics. Also available at <a href="http://conference.archimuse.com/mw2011/papers/getting_on_not_under_the_mobile_20_bus">http://conference.archimuse.com/mw2011/papers/getting_on_not_under_the_mobile_20_bus</a>. Consulted January 26, 2013</p>
+<p align="left">Chudowsky, N., and V. Chudowsky. (2010). S<i>tate Test Score Trends Through 2007-08, Part 5: Are There Differences in Achievement Between Boys and Girls? </i>Center on Education Policy. Available http://www.cep-dc.org/displayDocument.cfm?DocumentID=322. Consulted January 29, 2013</p>
+<p align="left">Dowden, R., and S. Sayre. (2007). “The Whole World in Their Hands: The Promise and Peril of Visitor-Provided Mobile Devices.” In H. Din and P. Hecht (eds).  <i>The Digital Museum: A Think Guid</i><i>e.</i> Washington, D.C.: American Association of Museums.</p>
+<p>Filippini-Fantoni, S., and J. P. Bowen. (2008). “Mobile Multimedea: Reflections from Ten Years of Practice.” In L. Tallon’s (ed). <i>Digital Technologies and the Museum Experience: Handheld Guides and Other Media. </i>Plymouth: Altamira Press.</p>
+<p>Flagg, B. (August 13 2012). “Formative Evaluation of <i>PlanetMania</i> Phone App.” Research Report No. 12-010. Bellport, NY: Multimedia Research.</p>
+<p>Flagg, B. and I. Holland. (January 21 2013). “Summative Evaluation of <i>PlanetMania </i>Mobile App in Maryland Science Center’s <i>Life Beyond Earth </i>Exhibit.” Research Report No. 13-001. Bellport, NY: Multimedia Research. Available <a href="http://informalscience.org/evaluation/show/680">http://informalscience.org/evaluation/show/680</a>. Consulted January 29, 2013</p>
+<p>Hsi, S. (2003). “A study of user experiences mediated by nomadic web content in a museum.” <i>Journal of Computer Assisted Learning </i>19, 308-319.</p>
+<p>Klopfer, E., J. Perry, K. Squire, M. Jan, and C. Steinkuehler. (2005). “Mystery at the museum: a collaborative game for museum education.” In <i>Proceedings of the 2005 conference on Computer support for collaborative learning: learning 2005: the next 10 years!</i> (CSCL ’05). International Society of the Learning Sciences 316-320.<i></i></p>
+<p>Koster, R. (2007). “<a href="http://www.raphkoster.com/2007/01/17/using-nwn-for-basic-learning-skills/">Using NWN for basic learning skills</a>.” Last updated  January 17, 2007. Consulted on January 26, 2013. Available  <a href="http://www.raphkoster.com/2007/01/17/using-nwn-for-basic-learning-skills/">http://www.raphkoster.com/2007/01/17/using-nwn-for-basic-learning-skills/</a>. Consulted January 27, 2013</p>
+<p>Museum Store Association. (2009). <i>2009 MSA Retail Industry Report.</i></p>
+<p>Petrie, M. and L. Tallon. (2010). “The Iphone Effect? Comparing Visitors’ and Museum Professionals’ Evolving Expectations of Mobile Interpretation Tools.” In J. Trant and D. Bearman (eds). <i>Museums and the Web 2010: Proceedings</i>. Toronto: Archives &amp; Museum Informatics. Also available at <a href="http://www.archimuse.com/mw2010/papers/petrie/petrie.html">http://www.archimuse.com/mw2010/papers/petrie/petrie.html</a>. Consulted January 28, 2013</p>
+<p>Pratt, Ythan. n.d. “<a href="http://blog.w3i.com/2013/01/10/the-best-way-to-monetize-your-freemium-game-is/">The best way to monetize your freemium game is…</a>” Consulted on January 26, 2013. Available <a href="http://blog.w3i.com/2013/01/10/the-best-way-to-monetize-your-freemium-game-is/">http://blog.w3i.com/2013/01/10/the-best-way-to-monetize-your-freemium-game-is/</a>. Consulted January 27, 2013</p>
+<p>Russell, R.L. (January 2011). “Front-End Evaluation: Maryland Science Center Exhibition on Exoplanets and Astrobiology.” Washington, DC: Informal Learning Solutions.</p>
+<p>Schaller, D.T. (2011a). “From Knowledge to Narrative – to Systems? Games, Rules and Meaning-making.” In J. Trant and D. Bearman (eds). <i>Museums and the Web 2011: Proceedings</i>. Toronto: Archives &amp; Museum Informatics. Also available at http://conference.archimuse.com/mw2011/papers/from_knowledge_to_narrative_to_systems. Consulted January 28, 2013</p>
+<p>Schaller D.T. (2011b). “The Meaning Makes It Fun: Game-based learning for museums.” <i>Journal of Museum Education, </i>36(3).</p>
+
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+D. Schaller and B. Flagg, Playtesting PlanetMania:  A Mobile Game for Museum Exhibits. In <i>Museums and the Web 2013</i>, N. Proctor &amp; R. Cherry (eds). Silver Spring, MD: Museums and the Web. Published January 31, 2013. Consulted <script type="text/javascript">document.write(full_date);</script> <!-- April 23, 2022 -->.<br/>
+https://mw2013.museumsandtheweb.com/paper/playtesting-planetmania-a-mobile-game-for-museum-exhibits/<br/><br/><hr/>
+<!-- 
+<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js'></script>
+<script type="text/javascript">
+var tz = jstz.determine();
+tz.name();
+</script>
+
+
+<script type="text/javascript">document.write(tz.name()); 
+</script>UTCApril 23, 2022-->
+
+	<div id="comments">
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="../../wp-loginf92e.html?redirect_to=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fplaytesting-planetmania-a-mobile-game-for-museum-exhibits%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+</div><!-- #content -->
+</div>

@@ -1,0 +1,82 @@
+<div id="primary">
+<div id="content" role="main">
+<article id="post-1342" class="post-1342 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">Yale Center for British Art’s Reformation to Restoration project: Applying IIIF Mirador technology to support digital scholarly collaboration and research</h1>
+<p><a target="_blank" href="http://www.museumsandtheweb.com/member/edgartdata/">Emmanuelle Delmas-Glass</a>, Yale Center for British Art, USA</p><h2>Abstract</h2>
+Cultural heritage institutions have been digitizing their collections for many years, and while publishing digital assets and metadata online has had a positive impact to make them relevant in our connected world, digital collaboration between scholars has remained a difficult proposition. A main obstacle to efficient and scalable image-based research has been the lack of interoperability between image silos, and it is not a stretch to think that this might have hindered the progress of scholarship.
+Recognizing this obstacle, the International Image Interoperability Framework (IIIF) provides uniform access to a network of distributed image repositories. The development of the technology and the various image viewing and serving software is community based, and the Yale Center for British Art is leading the way in terms of evolving both to support the requirements of scholarly research for museums.
+The presentation will look at the benefits of the IIIF standard and how it supports the institutional mission of generating the highest-quality research data, especially conservation data.<p></p>
+<p><b>Keywords:</b> IIIF, interoperability, image, research, conservation, annotation</p>
+<h2>1. Introduction</h2>
+<p>Cultural heritage institutions have been digitizing their collections for many years, and while publishing digital assets and metadata online has had a positive impact to make them relevant in our connected world, digital collaboration between scholars has remained a difficult proposition. A main obstacle to efficient and scalable image-based research has been the lack of interoperability between image silos, which has a damaging effect on the development of scholarship. Recognizing this obstacle, the International Image Interoperability Framework (IIIF) provides uniform access to a network of distributed image repositories (<a href="http://iiif.io/">http://iiif.io/</a>).</p>
+<h2>2. Application programming interfaces</h2>
+<p>The IIIF consists of four application programming interfaces (APIs). The Image and Presentation APIs are in their second major revision, while the Search and Authentication APIs are under review by the community prior to their initial release. Each API addresses a specific set of functionality required for effective image interoperability. The Image API provides a method for requesting from a server a whole or partial image, with transformations of scale, rotation, and color quality applied (Figure 1). This API effectively meets the needs of pan/zoom image viewers, such as those constructed using the OpenSeadragon or IIPMooviewer Javascript libraries.</p>
+<div id="attachment_1338" style="width: 310px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2016/01/Delmas-Glass_figure-1.png.png" rel="attachment wp-att-1338"><img aria-describedby="caption-attachment-1338" loading="lazy" class="size-medium wp-image-1338" src="../../wp-content/uploads/2016/01/Delmas-Glass_figure-1.png-300x169.png" alt="Figure 1: IIIF Image API" width="300" height="169" srcset="https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-1.png-300x169.png 300w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-1.png-768x432.png 768w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-1.png-1024x576.png 1024w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-1.png-500x281.png 500w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-1.png.png 1280w" sizes="(max-width: 300px) 100vw, 300px"/></a><p id="caption-attachment-1338" class="wp-caption-text">Figure 1: IIIF Image API</p></div>
+<p>The Presentation API exposes information about the images associated with a cultural heritage object, including the sequences in which the images of the object should be viewed and descriptive metadata that a software client may expose to a user. This API relies heavily on the Shared Canvas and Open Annotation data models.</p>
+<p>The candidate Authentication API specifies how a data provider can serve access-controlled IIIF content, including images, and direct users to institutional login services. Finally, the Search API provides a method for searching annotations that are associated with an object or image, such as machine-generated OCR of text or notes added by a scholar during research. Taken together, these APIs provide a model for client-server interaction that can be used by image-viewing and annotation tools such as Mirador and the Universal Viewer, as well as platforms such as ResearchSpace and ConservationSpace.</p>
+<h2>3. Yale Center for British Art research project</h2>
+<p>The development of the technology and the various image-viewing and serving software is community based, and the Yale Center for British Art (YCBA) is leading the way in terms of evolving both in order to support the requirements of scholarly research for museums. This paper will focus on an ongoing research project between the YCBA and the National Portrait Gallery, London, to discuss the benefits of the IIIF protocol.</p>
+<p>The YCBA is undertaking an in-depth research project on the twenty-nine easel paintings that date from around 1560 to 1630 and comprise the earliest part of the Center’s collection. An important aspect of this research is the question of authorship, which is complicated by the fact that few artists at this time signed their work and is problematized further by the distinct lack of supporting documentary records from the period. To overcome these difficulties, the project team uses a combination of traditional art-historical methods and connoisseurship with the latest in analytical techniques from conservation science. The project investigators—Jessica David, associate conservator of Paintings, and Edward Town, postdoctoral research associate—rely heavily on the collation, organization, and comparison of visual material from a variety of collections, both public and private. In doing so, they have brought together a large number of photographs in normal light, X-ray, and infrared, as well as photomicrographs and cross-sections of paint samples (Figure 2).</p>
+<div id="attachment_1339" style="width: 310px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2016/01/Delmas-Glass_figure-2.png.png" rel="attachment wp-att-1339"><img aria-describedby="caption-attachment-1339" loading="lazy" class="size-medium wp-image-1339" src="../../wp-content/uploads/2016/01/Delmas-Glass_figure-2.png-300x169.png" alt="figure 2:comparison of conservation images in Mirador" width="300" height="169" srcset="https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-2.png-300x169.png 300w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-2.png-768x432.png 768w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-2.png-1024x576.png 1024w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-2.png-500x281.png 500w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-2.png.png 1280w" sizes="(max-width: 300px) 100vw, 300px"/></a><p id="caption-attachment-1339" class="wp-caption-text">Figure 2: comparison of conservation images in Mirador</p></div>
+<p>The Mirador image-viewer software has the potential to provide a sophisticated working environment where these conservation images can be brought together. With these images at their disposal, the project team will be well placed to reconsider long-standing attributions and, on occasion, propose new attributions based on careful consideration and comparison to other works by the same artist.</p>
+<p>The YCBA is in the unique position to be able to leverage its digital resources to the fullest due to its generous implementation of Yale University’s Open Access Policy (http://ydc2.yale.edu/open-access-collections). Under these terms, the YCBA makes high resolution images of works in the public domain freely available without further application, authorization, or fees due to the museum or to Yale, including for commercial purposes.</p>
+<h2>4. Technology supporting access to collections</h2>
+<p>Additionally, the YCBA is committed to using technology to make its collections as accessible as possible, and we publish our collections data to the Web in both human (http://britishart.yale.edu/collections/search) and machine readable formats (http://britishart.yale.edu/collections/using-collections/technology/linked-open-data). In order to expose the highest-quality research data possible, we organize our dataset with a Linked Data ontology called the CIDOC-Conceptual Reference Model, which has been specifically designed to semantically integrate datasets from multiple institutions (Figure 3).</p>
+<div id="attachment_1340" style="width: 310px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2016/01/Delmas-Glass_figure-3.png.png" rel="attachment wp-att-1340"><img aria-describedby="caption-attachment-1340" loading="lazy" class="size-medium wp-image-1340" src="../../wp-content/uploads/2016/01/Delmas-Glass_figure-3.png-300x169.png" alt="figure 3: Yale Center for British Art’s Semantic endpoint" width="300" height="169" srcset="https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-3.png-300x169.png 300w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-3.png-768x432.png 768w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-3.png-1024x576.png 1024w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-3.png-500x281.png 500w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-3.png.png 1280w" sizes="(max-width: 300px) 100vw, 300px"/></a><p id="caption-attachment-1340" class="wp-caption-text">Figure 3: Yale Center for British Art’s Semantic endpoint</p></div>
+<p>The YCBA is planning on working with IIIF developers to map the RDF statements generated within the Mirador workspace with our main collections RDF dataset.</p>
+<h2>5. IIIF and annotations</h2>
+<p>IIIF and Mirador have proven to be efficient tools to enable an appropriate, flexible research space for our researchers. For example, images from multiple repositories can be arranged and manipulated in an online workspace whose URL can be saved and shared via email. Once images are brought into Mirador’s digital workspace, researchers can highlight specific areas by drawing directly on the images and annotate them (Figure 4).</p>
+<div id="attachment_1341" style="width: 310px" class="wp-caption aligncenter"><a href="../../wp-content/uploads/2016/01/Delmas-Glass_figure-4.png.png" rel="attachment wp-att-1341"><img aria-describedby="caption-attachment-1341" loading="lazy" class="size-medium wp-image-1341" src="../../wp-content/uploads/2016/01/Delmas-Glass_figure-4.png-300x169.png" alt="figure 4: Annotation in Mirador" width="300" height="169" srcset="https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-4.png-300x169.png 300w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-4.png-768x432.png 768w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-4.png-1024x576.png 1024w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-4.png-500x281.png 500w, https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/Delmas-Glass_figure-4.png.png 1280w" sizes="(max-width: 300px) 100vw, 300px"/></a><p id="caption-attachment-1341" class="wp-caption-text">Figure 4: annotation in Mirador</p></div>
+<p>The annotation functionality is an efficient way for researchers to bring forth their arguments and document their reasoning while consulting the image-based evidences that they have brought together. Being able to record their evolving reasoning in the digital space is important for scholars, because it is a crucial element of how scholarship is tested. Annotations could also be used to reference bibliographic citations.</p>
+<p>While there are many annotation systems, the value added of IIIF is that it is supported by two data models that adopt the principles of Linked Open Data and the Architecture of the World Wide Web: SharedCanvas (http://iiif.io/model/shared-canvas/1.0/index.html) and Open Annotation (<a href="http://iiif.io/api/annex/openannotation/index.html">http://iiif.io/api/annex/openannotation/index.html</a>).</p>
+<h2>6. Institutional digital strategy</h2>
+<p>Both IIIF and the Mirador image viewer meet the high requirements of our institutional digital strategy. In terms of open access policy, IIIF not only supports interoperability between image repositories and breaks down the barriers between image databases/silos, but also leverages our open-access resources. It is an international protocol actively cultivated by a community of developers and subject experts. IIIF works with a variety of image viewers, and, in compliance with the YCBA’s dedication to Open Source resources, Mirador has been selected by the museum. Additionally, IIIF’s adoption of Linked Open Data principles makes it perfectly suited to the museum’s digital strategy. Indeed, Linked Open Data has become a cornerstone of our digital strategy to correctly represent for the semantic Web environment the knowledge diligently crafted by our scholars. In particular, the Shared Canvas data model used to describe IIIF manifests is leveraged in a JSON-based format compatible with RDF. The same way Linked Open Data is not a data project but rather a good knowledge management tool for the whole institution, the museum considers IIIF a best practice for the reuse of digital assets.</p>
+<h2>7. Conclusion</h2>
+<p>To conclude, the YCBA considers IIIF to be a great complement to its panoply of tools supporting digital collaborative scholarship. Particularly, IIIF allows for easy creative and scholarly reuse of our open-access assets and thus contributes to the study of British art worldwide. With the goal to support its further development and adoption, the museum is thrilled to be a core founding member of the newly created IIIF Consortium (<a href="http://iiif.io/news/2015/06/17/iiif-consortium/">http://iiif.io/news/2015/06/17/iiif-consortium/</a>).</p>
+<hr/>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br/> 
+
+Delmas-Glass, Emmanuelle. &#34;Yale Center for British Art’s Reformation to Restoration project: Applying IIIF Mirador technology to support digital scholarly collaboration and research.&#34; <i>MW2016: Museums and the Web 2016</i>. Published January 30, 2016. Consulted <script type="text/javascript">document.write(full_date);</script>.<br/>
+https://mw2016.museumsandtheweb.com/paper/yale-center-for-british-arts-reformation-to-restoration-project-applying-iiif-mirador-technology-to-support-digital-scholarly-collaboration-and-research/<br/><br/><hr/>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div>
