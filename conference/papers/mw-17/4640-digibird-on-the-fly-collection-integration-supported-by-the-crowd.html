@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw17.mwconf.org/paper/digibird-on-the-fly-collection-integration-supported-by-the-crowd/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 22:06:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>DigiBird: On the fly collection integration supported by the crowd &#8211; MW17: Museums and the Web 2017</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; DigiBird: On the fly collection integration supported by the crowd Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw17.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login3822.css?ver=1604077128' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-twentysixteen/style3ce7.css?ver=20201208' media='all' />
+<style id='twentysixteen-style-inline-css'>
+
+		/* Custom Link Color */
+		.menu-toggle:hover,
+		.menu-toggle:focus,
+		a,
+		.main-navigation a:hover,
+		.main-navigation a:focus,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.social-navigation a:hover:before,
+		.social-navigation a:focus:before,
+		.post-navigation a:hover .post-title,
+		.post-navigation a:focus .post-title,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.site-branding .site-title a:hover,
+		.site-branding .site-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-footer a:hover,
+		.entry-footer a:focus,
+		.comment-metadata a:hover,
+		.comment-metadata a:focus,
+		.pingback .comment-edit-link:hover,
+		.pingback .comment-edit-link:focus,
+		.comment-reply-link,
+		.comment-reply-link:hover,
+		.comment-reply-link:focus,
+		.required,
+		.site-info a:hover,
+		.site-info a:focus {
+			color: #e55747;
+		}
+
+		mark,
+		ins,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.widget_calendar tbody a,
+		.page-links a:hover,
+		.page-links a:focus {
+			background-color: #e55747;
+		}
+
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
+		textarea:focus,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.menu-toggle:hover,
+		.menu-toggle:focus {
+			border-color: #e55747;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation li:hover > a,
+			.main-navigation li.focus > a {
+				color: #e55747;
+			}
+		}
+	
+</style>
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src='https://mw17.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index5d09.html?p=704' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embedb6d8.json?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fdigibird-on-the-fly-collection-integration-supported-by-the-crowd%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed6173?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fdigibird-on-the-fly-collection-integration-supported-by-the-crowd%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-twentysixteen/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-704 wp-custom-logo wp-embed-responsive">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+					<div class="site-branding">
+						<a href="../../index.html" class="custom-logo-link" rel="home"><img width="240" height="240" src="../../wp-content/uploads/2017/02/cropped-mw-final.png" class="custom-logo" alt="MW17: Museums and the Web 2017" /></a>					</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p> MW17: Museums and the Web 2017 <span>Cleveland Ohio - April 19-22</span></p>
+								<form class="search-form" role="search" method="get" action="#">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-1-container"><ul id="menu-menu-1" class="primary-menu"><li id="menu-item-3074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3074"><a href="https://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-88"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580"><a href="../../local-information-and-accommodation/index.html">Local Information and Accommodation</a></li>
+	<li id="menu-item-1917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1917"><a href="../../faqs/index.html">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-172"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-475"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-108"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="../../call-for-proposals/index.html">Call for Proposals</a></li>
+	<li id="menu-item-494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-135"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-1689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1689"><a href="../../advertising/index.html">Advertising</a></li>
+</ul>
+</li>
+<li id="menu-item-573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-573"><a href="../../program/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-2972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2972"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-3023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3023"><a href="../../select-session-slides/index.html">Presentations</a></li>
+	<li id="menu-item-1760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1760"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2968"><a href="../../glami-winners/index.html">GLAMi Winners</a></li>
+		<li id="menu-item-2963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2963"><a href="../../glami-nominees/index.html">GLAMi Nominees</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2894"><a href="../../mwx/index.html">MWX 2017</a></li>
+	<li id="menu-item-1252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1252"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="../../committees/index.html">Committees</a></li>
+</ul>
+</li>
+<li>
+    <form role='search' method='get' class='search-form' action='http://mw17.mwconf.org/'>
+	<label>
+	<span class='screen-reader-text'>Search for:</span>
+	<input type='search' class='search-field' placeholder='Search &hellip;' value='' name='s' />
+	</label>
+	<button type='submit' class='search-submit'>
+	<span class='screen-reader-text'>Search</span></button>
+	</form>    
+	</li></ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+	
+<section id="page-hero">
+	<div class="background"> </div>
+</section>
+<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];
+    jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw17.mwconf.org/wp-content/themes/mw-twentysixteen/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-704" class="post-704 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">DigiBird: On the fly collection integration supported by the crowd</h1>
+
+<p><a target="_blank" href="http://www.museumsandtheweb.com/member/rasvaan/">Chris Dijkshoorn</a>, Vrije Universiteit Amsterdam, the Netherlands, <a target="_blank" href="http://www.museumsandtheweb.com/member/bucurcristina1/">Cristina-Iulia Bucur</a>, Vrije Universiteit Amsterdam, The Netherlands, <a target="_blank" href="http://www.museumsandtheweb.com/member/mbrinkerink/">Maarten Brinkerink</a>, Netherlands Institute for Sound and Vision, The Netherlands, <a target="_blank" href="http://www.museumsandtheweb.com/member/Sander Pieterse/">Sander Pieterse</a>, Naturalis Biodiversity Center, The Netherlands, <a target="_blank" href="http://www.museumsandtheweb.com/member/l.m.aroyo@vu.nl/">Lora Aroyo</a>, Vrije Universiteit Amsterdam, The Netherlands</p>
+<h2>Abstract</h2>
+Online cultural heritage collections often contain complementary objects, which makes integration between heterogeneous collections a worthwhile effort. In order to do so, objects have to be adequately described. Crowdsourcing in cultural heritage is evolving to be an approach to collect annotations at scale, but faces challenges regarding sustainability and structured use of results in the context of existing collections. The DigiBird project integrates four distinct nature-related collections and serves as a hub for crowdsourcing systems that extend collection data. An Application Program Interface (API) is built on top of the DigiBird pipeline, enabling institutions to embed integrated results in their online collections.</p>
+<p><b>Keywords:</b> collection integration, crowdsourcing, engagement strategies, cross-institutional collaboration</p>
+<h2>Introduction</h2>
+<p>Collection objects from different cultural heritage institutions, when shown together, can strengthen the message conveyed individually. Traditionally this has been achieved by curating exhibitions. But the increase of available cultural heritage data sets a premise for collaborations that do not require physically moving the objects. Deciding on the right objects to show requires the metadata of collection objects to be adequate and interoperable. Describing collections objects is, however, a time consuming and costly process. Crowdsourcing is evolving to be a valuable approach for cultural heritage institutions to collect metadata and engage their audience. Since the seminal Steve.Museum project (Chun et al., 2006), ample best practices have been developed in the field of crowdsourcing in the cultural heritage domain (Oomen &amp; Aroyo, 2011); however, current crowdsourcing initiatives face four challenges:</p>
+<ol>
+<li>Crowdsourcing initiatives are typically undertaken in isolation of other institutions and collection annotation processes;</li>
+<li>Crowdsourcing initiatives typically take a long time to collect the necessary annotation data;</li>
+<li>Crowdsourcing initiatives demand continuous promotional effort to maintain a steady user participation level;</li>
+<li>It is challenging for institutions to provide a structured process to incorporate the results of different crowdsourcing initiatives into their existing collection infrastructure.</li>
+</ol>
+<p>In this paper, we present the results of experimenting with the DigiBird (<a href="http://www.digibird.org/">http://www.digibird.org/</a>) infrastructure that reinforces crowdsourcing initiatives and integrates four distinct nature-related collections by linking their crowdsourcing results. Two of these crowdsourcing platforms gather media: 1) Xeno-canto enables bird enthusiasts to collect and describe bird sounds; and 2) the Dutch Species Register allows nature enthusiasts to upload images of animals encountered in the Netherlands. The other two projects gather metadata for existing media collections: 1) the Accurator, a crowdsourcing platform used by the Rijksmuseum Amsterdam enables birdwatchers to add bird annotations to artworks; and 2) the Waisda? video labeling game from the Netherlands Institute of Sound and Vision allows people interested in a certain subject or domain (e.g. nature) to annotate videos related to their subject or theme of interest. The way we addressed the four crowdsourcing challenges in relation to these various collections is outlined below.</p>
+<p>To tackle the first challenge concerning the isolation of the crowdsourcing initiatives, we created the <em>DigiBird pipeline,</em> which connects the abovementioned Dutch nature crowdsourcing projects, starting with birds as a proof of concept. DigiBird ingests, integrates and outputs data from several systems. A central request to DigiBird is transformed into separate requests, which are delegated to the underlying systems. Obtained results from the systems are combined and returned: the data is integrated by transforming it into one representation, which can be output in different formats. Harmonizing data from a multitude of systems that adhere to different standards proved to be one of the most challenging tasks of the project.</p>
+<p>The second challenge, regarding the long duration of crowdsourcing data collection, was tackled by setting up centralized monitoring for the integrated systems. Since most crowdsourcing projects rely on voluntary contributions, the time it takes to collect sufficient data is unpredictable. Hence insights into the progress of the crowdsourcing process are of great value. The DigiBird pipeline supports sending queries that retrieve aggregated statistics, such as the number of contributors and contributions. This information is shown on a <em>DigiBird monitoring dashboard</em>, tailored to each platform and updated with real-time information.</p>
+<p>To address the third challenge, relating to the necessary continuous promotional effort of the crowdsourcing initiatives, we incorporated mechanics that trigger participants with challenging crowdsourcing tasks. We approached this by setting up crowdsourcing campaigns revolving around specific domains, and inviting people to contribute by organizing events (Jongma &amp; Dijkshoorn, 2016). Promoting crowdsourcing initiatives is essential for keeping contributors involved. At a later stage, data collected by the DigiBird pipeline can serve as input for continuously and automatically generating crowdsourcing tasks that incentivize contributors to keep sharing their knowledge. The <em>DigiBird hub </em>now serves as an overview of the systems, showing completed tasks.</p>
+<p>In response to the final challenge with regard to the incorporation of crowdsourcing results into existing collections, we built the <em>DigiBird API </em>(Application Program Interface) on top of the DigiBird pipeline, which can be used by heritage institutions to embed the results of the combined crowdsourcing efforts into their online collections. The DigiBird API is already used by Naturalis Biodiversity Center to embed results on one of their sites, the Dutch Species Register.</p>
+<h2>Origin of the DigiBird project</h2>
+<p>Crowdsourcing projects tend to be undertaken in isolation. This was well illustrated during the panel discussion &#8220;Bridging the Natural Divide: Crowd-curation of Cultural Expressions Inspired by Nature&#8221; held at MCN2014 (Brinkerink et al., 2014). Four crowdsourcing projects from the Netherlands were presented, and each organization had developed its own system. While the initiatives all took different approaches to involving the crowd, they had one topic in common: nature. It became apparent that despite the different approaches, the collections are complementary and the profile of the user groups targeted for crowdsourcing showed considerable overlap. This sparked the idea of a collaboration that extended beyond one conference panel, in which the participating institutions could explore how the different projects could strengthen one another by integrating the results. Thus DigiBird hatched.</p>
+<p>There are two dimensions in which the abovementioned crowdsourcing projects show big differences: media modality and the type of contribution by the crowd. Table 1 provides an overview of the collections and systems, mapped to these two dimensions. DigiBird includes media of three different modalities: sounds, images, and videos. Since artworks are often not images themselves, merely represented this way online, we split the artworks from images in the overview table. In the type of contributions we distinguish how crowdsourcing is used. Some collections exist of media objects contributed by the crowd, making it a crowdsourced collection. Other systems are used to extend the metadata of existing collections. In the remainder of this section we will discuss the individual collections and crowdsourcing methods in more depth.</p>
+<table>
+<tbody>
+<tr>
+<td><em>Type</em></td>
+<td><strong>Sounds</strong></td>
+<td><strong>Artworks</strong></td>
+<td><strong>Images</strong></td>
+<td><strong>Videos</strong></td>
+</tr>
+<tr>
+<td><strong>Collections</strong></td>
+<td></td>
+<td>Rijksmuseum Amsterdam</td>
+<td></td>
+<td>Sound and Vision</td>
+</tr>
+<tr>
+<td><strong>Crowdsourced collections</strong></td>
+<td>Xeno-canto</td>
+<td></td>
+<td>Dutch Species Register</td>
+<td>Stichting Natuurbeelden</td>
+</tr>
+<tr>
+<td><strong>Crowdsourced metadata</strong></td>
+<td></td>
+<td>Accurator</td>
+<td></td>
+<td>Waisda?</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1: type of media provided by systems in addition to the crowdsourcing systems that are used to either gather collection objects or metadata describing existing objects</p>
+<p>The Dutch Species Register (<a href="http://www.nederlandsesoorten.nl/content/english">http://www.nederlandsesoorten.nl/</a>) is a thesaurus of all multicellular species observed in the Netherlands since 1758. The register is hosted by Naturalis Biodiversity Center (<a href="http://www.naturalis.nl/en/">http://www.naturalis.nl/</a>) and as of January 2017 it includes 43,306 species, of which 9,644 have a corresponding image. These images are taken by amateur photographers, who upload them to the online platform. Once the images are uploaded, the depicted species and quality are validated by a group of experts coordinated by Naturalis. The register includes many images of birds, thereby making it a valuable addition to the DigiBird project. Through DigiBird, Naturalis is able to link this crowdsourced collection to both their own natural history collection and to similarly-themed cultural heritage collections from other institutions, to enrich the user experience and provide context.</p>
+<p>Xeno-canto (<a href="http://www.xeno-canto.org/">http://www.xeno-canto.org/</a>) is a foundation that aims to popularize bird sounds and recordings. An online community uploads and co-curates sounds, contributing to the goal to collect the complete sound guide of the birds of the world. As of January 2017, a total of 9,691 species have been recorded, covering over 90 percent of all described bird species known to exist. The foundation welcomes all sorts of (re)use of their bird sound collection, and they are always looking for enthusiastic people to further annotate the collection. The DigiBird project offers opportunities on both fronts.</p>
+<p>The foundation Natuurbeelden (<a href="http://www.natuurbeelden.nl/">http://www.natuurbeelden.nl/</a>) maintains a collection of nature videos from the Netherlands, hence the Dutch name which translates to &#8220;images from nature.&#8221; The videos are shot by professional filmmakers and contributed to the collection of the foundation in a raw and uncut format. The collection of the foundation is preserved and made available by the Netherlands Institute for Sound and Vision. Sound and Vision is also involved in the development of Waisda?, which is an online system that allows its users to annotate audiovisual archive material in the form of a game with a purpose (Gligorov et al., 2013). The goal of the game is to reach a consensus between players while they tag elements in videos. Tags are scored higher if an entry is confirmed by another player, or the tag matches a term from a controlled vocabulary. Loading the Natuurbeelden collection in Waisda? allows collecting additional metadata for the videos. The collected metadata and the DigiBird project helps Sound and Vision to explore the possibilities to take specific subject matter from their vast collection and connect them to relevant niches and other collections from other institutions.</p>
+<p>The Rijksmuseum Amsterdam (<a href="https://www.rijksmuseum.nl/">https://www.rijksmuseum.nl/</a>) collection includes over one million objects, providing an overview of Dutch art and history from the Middle Ages onwards. As of March 2016, 207,441 of these artworks have been digitized and made available online (Dijkshoorn et al., 2017). The museum realized that not all subject matter could be adequately described by its staff, since at times expert knowledge is required. Therefore, the crowdsourcing system Accurator was developed, in a collaboration of cultural heritage institutions and universities, who joined forces in the SEALINCMedia project (<a href="https://sealincmedia.wordpress.com/">https://sealincmedia.wordpress.com/</a>), which is part of the COMMIT/ program (<a href="http://commit-nl.nl/">http://commit-nl.nl</a>). Accurator supports experts from the crowd to annotate images using structured vocabularies (Jongma &amp; Dijkshoorn, 2016). Involvement of niche groups with a certain area of expertise is actively sought out by organizing campaigns with events tailored to the topic. Birds are one of these topics, and a birdwatching event was organized within the museum, making the crowdsourced data and Rijksmuseum collection a great addition to the DigiBird project.</p>
+<p>The SEALINCMedia project was a research project that lasted for four years, focussing on getting crowdsourcing as a reliable, robust and effective method suitable for cultural heritage organizations. During these years, four PhD projects investigated different aspects of crowdsourcing: expert finding, trust, task recommendation, and interfacing. It was important to implement and deploy these methods as part of the heritage infrastructure and therefore the COMMIT/ program supported the DigiBird project as a valorization effort. The project ran for six months, during which two researchers from the Vrije Universiteit Amsterdam regularly worked at the participating cultural heritage institutions. In the remainder of this paper we discuss the results of this effort, starting with the DigiBird pipeline.</p>
+<h2>The DigiBird pipeline</h2>
+<p>It takes time to collect annotation data through crowdsourcing, and since most crowdsourcing projects rely on voluntary contributions, there is always a dependency on people willing to invest their knowledge and time. Within DigiBird we set three goals to reduce the time needed to obtain meaningful results from crowdsourcing efforts and make the crowdsourcing process more insightful and dynamic: 1) harmonization of complementary collection objects; 2) instantaneous availability of crowd contributions; and 3) the ability to monitor multiple systems in one dashboard. To achieve these goals we created a pipeline that ingests, integrates, and outputs data. A detailed overview of the architecture of the DigiBird pipeline (<a href="https://github.com/rasvaan/digibird_api">https://github.com/rasvaan/digibird_api</a>) is given in figure 1. In this section we discuss the design rationale of the pipeline, focussing on request interpretation, data retrieval, data integration, and data output.</p>
+<figure style="width: 460px" class="wp-caption alignnone"><img loading="lazy" src="http://chrisdijkshoorn.nl/wp-content/uploads/dijkshoorn.fig1_.png" alt="architecture" width="460" height="655" /><figcaption class="wp-caption-text">Figure 1: architecture of the DigiBird pipeline. The pipeline ingests, integrates and outputs data obtained from collections and crowdsourcing initiatives</figcaption></figure>
+<h3>Request interpretation and formulation using structured vocabularies</h3>
+<p>Concepts from structured vocabularies can be of great value in determining what sort of request is made to the DigiBird pipeline and thereafter allows for correctly forwarding this request to the underlying system, through their respective APIs. This functionality is part of the <em>request interpretation module</em>, which disambiguates requests using the IOC World Bird List (<a href="http://www.worldbirdnames.org/">http://www.worldbirdnames.org</a>). This structured vocabulary includes almost 34,000 concepts, with corresponding scientific names and labels in 23 different languages. A request can either be formulated as a common species name (e.g. &#8220;Eurasian Magpie&#8221;) or a scientific name (e.g. <em>Pica pica</em>). This input is matched with a concept in the vocabulary with its corresponding identifier. Now, as the intent of the request is known, new requests have to be formulated that can be delegated to the underlying systems.</p>
+<table>
+<tbody>
+<tr>
+<td><strong>Source system</strong></td>
+<td>Stichting<br />
+Natuurbeelden</td>
+<td>Xeno-canto</td>
+<td>Rijksmuseum</td>
+<td>Accurator</td>
+</tr>
+<tr>
+<td><strong>Type of endpoint</strong></td>
+<td>API</td>
+<td>API</td>
+<td>SPARQL</td>
+<td>SPARQL</td>
+</tr>
+<tr>
+<td><strong>Method</strong></td>
+<td>Text search</td>
+<td>Concept search</td>
+<td>Text query</td>
+<td>Concept query</td>
+</tr>
+<tr>
+<td><strong>Query content</strong></td>
+<td>Ekster</td>
+<td>Pica pica</td>
+<td>Ekster</td>
+<td>ioc:Pica_pica</td>
+</tr>
+<tr>
+<td><strong>Response format</strong></td>
+<td>JSON</td>
+<td>JSON</td>
+<td>SPARQL result list</td>
+<td>SPARQL result list</td>
+</tr>
+<tr>
+<td><strong>Metadata integration</strong></td>
+<td>&#8211;<br />
+===<br />
+&#8211;</td>
+<td>rec<br />
+===<br />
+dc:creator</td>
+<td>creator<br />
+===<br />
+dc:creator</td>
+<td>creator<br />
+===<br />
+dc:creator</td>
+</tr>
+</tbody>
+</table>
+<p>Table 2: Overview of how data is obtained from four of the systems regarding the concept &#8220;Eurasian Magpie.&#8221;. For each institution, the supported methods of data retrieval have to be considered. The integration row refers to mapping the creator of the object to the internal data model.</p>
+<p>For every system, a different request has to be formulated, either in the form of a list of parameters or in the form of a query. The main source of knowledge regarding which parameters and queries can be used is the documentation of endpoints. Writing adequate documentation is a key aspect for institutions if they want developers from outside their institution to be able to work with the exposed data. In our experience, there is a lot of variation in the completeness and ease of accessing documentation, making the retrieval of data harder than it should be. Table 2 provides an overview of how four of the systems provide access to their data, whereby differences have an impact on request formulation, data retrieval and data integration.</p>
+<h2>Data retrieval</h2>
+<p>An approach regularly used to obtain data for collection integration and aggregation is to download dumps of underlying databases, convert data into one format and load this in a new database (Schreiber et al., 2006; Matsumura et al., 2012; Isaac &amp; Haslhofer, 2013). This is a justifiable choice for stable datasets, since changes will not be missed. Another advantage of this approach is that the availability of data does not depend on other systems. However, the data used within the DigiBird project comes from dynamic systems, as a continuous stream of crowd contributions alters and extends the datasets. Since one of our goals is to make crowd contributions instantaneously available, we have to directly access underlying systems to be able to incorporate updated content immediately.</p>
+<p>Relevant for data retrieval are the differences in types of endpoints and supported methods for matching objects to request. A common approach is to provide an Application Program Interface (API), which specifies a set of actions that an application can undertake to interact with data. The API providing access to the metadata of Stichting Natuurbeelden does not include scientific names and is formulated in Dutch. This means that we have to rely on &#8220;text search&#8221; of descriptions in combination with the Dutch label of the concept, in this case &#8220;Ekster&#8221; for &#8220;Eurasian Magpie.&#8221; Xeno-canto also uses an API (<a href="http://www.xeno-canto.org/article/153">http://www.xeno-canto.org/article/153</a>) to provide access to their data, but supports parameters stating the genus and species. These two parameters allow us to search for scientific names that are present in the metadata of collection objects. This allows for far more specific retrieval of objects related to the user query, as now we can for example directly query for <em>Pica pica</em>.</p>
+<p>The Rijksmuseum and Accurator provide access to data using a public query endpoint that supports SPARQL queries (<a href="https://datahub.io/dataset/rijksmuseum/">https://datahub.io/dataset/rijksmuseum/</a>). Although the query endpoints and underlying data models are similar, there is still a difference in how queries can be formulated. The Rijksmuseum artworks are not linked to concepts from the IOC vocabulary. To retrieve relevant artworks from the collection we use a text query that selects objects that include the common name in their description. This method is prone to ambiguity issues, since some of the names of birds also refer to other types of concepts in descriptions. For example, the Dutch name for the &#8220;Great Bustard&#8221; is &#8220;grote trap,&#8221; which translates to &#8220;big staircase,&#8221; thus when performing a query for such a bird, one might retrieve objects related to staircases. Within Accurator, the artworks are linked to concepts from the vocabulary, allowing a completely different concept query. This way, a user can search directly for objects annotated with the concepts originating from the structured vocabulary. In Accurator we can, for example, query for the concept with the URI http://purl.org/vocab/ioc/species-pica_pica, which refers to the &#8220;Eurasian Magpie.&#8221; These two different types of queries have a big impact on performance, as querying for concepts is faster than the text queries.</p>
+<h3>Data integration</h3>
+<p>To achieve the goal of integrating complementary results, we convert the data retrieved from institutions into one internal data model. This entails dealing with the different metadata formats: not all collections use standardized metadata schemas, and even the ones that do might use different standards. An alternative choice would be to directly transmit the obtained data without converting it, leaving the problem at the side of the party requesting the data. This would be inconsistent with our goal to create harmonized data and restrains us from outputting the results in different serializations. We therefore chose to convert the obtained data to a standardized data model. For every collection we have to analyze which elements we are representing and how we can model these elements correctly. We outline our rationale for using elements of the Europeana Data Model (<a href="http://pro.europeana.eu/edm-documentation">http://pro.europeana.eu/edm-documentation</a>) as our data model.</p>
+<p>The Rijksmuseum has data about artworks that we want to include in our results. Basic metadata includes the title and creator of a work, for example the painting <em>The Contemplative Magpie</em>, created by Melchior d&#8217;Hondecoeter around the year 1678. These three pieces of information can be modelled using the properties <em>dcterms:title</em>, <em>dcterms:creator,</em> and <em>dcterms:created</em> from the Dublin Core Metadata Initiative (<a href="http://dublincore.org/">http://dublincore.org/</a>). This information would be sufficient if we would only be interested in the real world object. However, we also want to communicate information about an image of this artwork. This image has different metadata, <em>dcterms:creator,</em> which corresponds to the photographer who took the image and <em>dcterms:created</em> to the date the image was taken. The Europeana Data Model uses properties and classes based upon the Object Reuse and Exchange data model (<a href="https://www.openarchives.org/ore/">https://www.openarchives.org/ore/</a>) to make a distinction between a real world object and its digital representation. An aggregation object connects the metadata of the cultural heritage object using the property <em>edm:aggregatedCHO</em> and its digital representation using the property <em>edm:hasView</em>. The Rijksmuseum collection is the most conventional online cultural heritage collection that we use in the DigiBird systemm and modeling the other collections brings new modeling challenges.</p>
+<p>Xeno-canto collects recordings of bird sounds, which leads us to ask the conceptual question: <em>is the primary entity the sound or is it the recording of the sound?</em> The sound itself is not persistent, it occurred at a certain point in time and space, which we can describe as an event. The creator of the sound is the bird and the recording is a representation of possibly multiple bird sounds. Additionally, consider as an example the analogy of a still life of a vase containing flowers. Is this a representation of a flower created by the painter, making the flower the cultural heritage object, or is the still life the cultural heritage object with the flower as subject? For the DigiBird system we consider the recording the primary entity. This makes the recordist the creator and allows us to still capture metadata about the time and place the sound was recorded, while the bird is the subject of the recording. A particular view of the recording is the sound file hosted by Xeno-canto.</p>
+<p>The Dutch Species Register documents all species in the Netherlands and includes images of specimens. The register is structured according to the biology taxonomy. A modelling choice would be to consider a species to be the primary entity, making images of the species views. This choice however leads to overgeneralization, since the images are taken at a specific point in time and space, while they show specimens of the species. If we would take the species as primary entity, its creator and creation date would be hard to pinpoint. For the DigiBird system, we instead chose the image to be our primary entity and we can record the metadata of the image.</p>
+<h3>Data output</h3>
+<p>The data outputted by the DigiBird pipeline can be divided into three categories: objects, annotations, and aggregate information. The discussed pipeline as described up to now concerned the retrieval and integration of objects. Annotations are retrieved in a similar fashion and extend object data. An annotation is structured according to the Web Annotation Model (<a href="https://www.w3.org/TR/annotation-model/">https://www.w3.org/TR/annotation-model/</a>) and includes information regarding its creator and its creation date. The annotations are sorted by creation date and can be limited by providing a date range.</p>
+<p>For the monitoring of progress of crowdsourcing systems, we are interested in a different level of the data: aggregate information regarding number of objects, contributions, and contributors. The pipeline to obtain this information is similar to obtaining objects. For the systems with a public endpoint, it is possible to write a count query obtaining the aforementioned information. For the systems offering an API, separate requests have to be available for obtaining this information. Some of the systems already supported requests for aggregate information, but for others this had to be created.</p>
+<p>The outputted format of the data is determined by the type of request. Three options can be used for formatting the data: requesting it as RDF, HTML or as a JSON reply. If someone browses to a DigiBird URL and provides the name of a species (e.g. http://www.digibird.org/species?genus=pica&amp;species=pica), objects related to that species are returned. If a developer requests the same species, but adds in the accept header that this should be in a different format, the DigiBird system supports this. It is possible to output the internal representation of data into different formats. In the next section we discuss examples of using the data.</p>
+<h2>Using crowd contributions and integrated results</h2>
+<p>For cultural heritage institutions, it is often a hurdle to incorporate the results of crowdsourcing projects into the institution’s existing digital infrastructure. There are two main reasons for this. Firstly, crowdsourcing projects tend to be short-lived; they run for a limited time, with limited resources, often in a research or &#8220;pilot&#8221; context. Secondly, they are often hosted on specialized platforms that are not directly connected to the core infrastructure of the institution. Examples of specialized crowdsourcing platforms born and used in the heritage sector include Many Hands (Noordegraaf et al., 2014), Zooniverse (<a href="https://www.zooniverse.org/">https://www.zooniverse.org</a>), Steve.Museum, but also the Accurator and Waisda? platforms used in DigiBird. After a crowdsourcing project ends, the question often arises as how to integrate or connect the results—tags, annotations, user-generated multimedia, etc.—into the collection management systems and online collection portals.</p>
+<figure style="width: 1058px" class="wp-caption alignnone"><img loading="lazy" src="http://chrisdijkshoorn.nl/wp-content/uploads/dijkshoorn.fig2_.png" alt="search interface" width="1058" height="949" /><figcaption class="wp-caption-text">Figure 2: screenshot of the search results page of DigiBird, showing results for the query &#8220;Eurasian Sparrowhawk&#8221; from different institutions</figcaption></figure>
+<p>To overcome this challenge for the crowdsourcing platforms of DigiBird, we chose to connect these platforms by building an API on top of the DigiBird pipeline (<a href="https://github.com/rasvaan/digibird_api">https://github.com/rasvaan/digibird_api</a>). This API can be used by heritage institutions to embed the results of the combined crowdsourcing project results directly into their online collections. This way, institutions can connect the results of their own crowdsourcing projects to their online collections in one platform (e.g. connect Waisda? results to Natuurbeelden or Accurator results to the Rijksmuseum collection). Moreover, institutions can embed relevant results from other crowdsourcing projects in their own online collection portals as well, causing real-time cross-pollination of projects otherwise undertaken in isolation.</p>
+<figure style="width: 1058px" class="wp-caption alignnone"><img loading="lazy" src="http://chrisdijkshoorn.nl/wp-content/uploads/dijkshoorn.fig3_.png" alt="annotation wall" width="1058" height="925" /><figcaption class="wp-caption-text">Figure 3: screenshot of the annotation wall of DigiBird, providing a real time overview of crowdsourcing results</figcaption></figure>
+<p>To showcase the functionality of the DigiBird pipeline we build a demonstrator (<a href="http://www.digibird.org/">http://www.digibird.org</a>) with an annotation wall and species search interface (<a href="https://github.com/rasvaan/digibird_client">https://github.com/rasvaan/digibird_client</a>). Figure 2 shows a screenshot of the search interface where a user can enter a bird species, which is autocompleted with resources from the IOC World Bird List. Results obtained from the participating institutions are shown side by side, providing the user an overview of different types of media available from different sources regarding their search query. Results are shown the moment they are available, illustrating time differences in retrieving information between the systems. For example, the artworks from the Rijksmuseum often take over a minute to be displayed, due to the slow text query. Figure 3 depicts the annotation wall, which shows a real time overview of crowd contributions. At the moment a contributor adds an annotation in Accurator (<a href="http://annotate.accurator.nl/">http://annotate.accurator.nl/</a>) or tags a video in Waisda? (<a href="http://waisda.beeldengeluid.nl/">http://waisda.beeldengeluid.nl</a>), this is immediately displayed on the annotation wall.</p>
+<figure style="width: 1058px" class="wp-caption alignnone"><img loading="lazy" src="http://chrisdijkshoorn.nl/wp-content/uploads/dijkshoorn.fig4_.png" alt="species register" width="1058" height="943" /><figcaption class="wp-caption-text">Figure 4: screenshot of the European Goldfinch page of the Dutch Species Register, with embedded sounds from Xeno-canto</figcaption></figure>
+<p>As an example of a use case of the DigiBird API by a cultural heritage institution, the API is used by Naturalis Biodiversity Center to embed crowdsourced bird sounds from the Xeno-canto project on bird species information pages of their Dutch Species Register. An example of this is shown in figure 4. The benefits are bidirectional: Xeno-canto and their contributors have their user-generated content automatically show up in a relevant external portal (causing more exposure and opportunities for feedback) and the Dutch Species Register gets fed relevant external content to automatically enrich its species information pages. Following this example, Naturalis Biodiversity Center could just as well embed crowd-identified bird videos from the Stichting Natuurbeelden on the Dutch Species Register, or Rijksmuseum could enrich the viewing experience of their bird artworks with sounds of the depicted species from Xeno-canto. With each extra platform connected to the DigiBird pipeline, the list of possible cross-references between crowdsourcing initiatives to be explored grows. On top of that, the opportunities for generation of relevant crowdsourcing tasks to expose to potential contributors also grows, adding to the exposure and promotions of such crowdsourcing endeavors.</p>
+<h2>Discussion and future work</h2>
+<p>Cultural heritage institutions can benefit greatly from collaborations with other institutions as well as with the public. Considering the current tendency of institutions to publish collection data on the Web, online collaborations might seem an easy feat to accomplish. While DigiBird manages to integrate four collections extended with crowdsourced data, during the course of the project we had to overcome hurdles regarding data retrieval, linking of objects, and data completeness.</p>
+<p>Data retrieval and integration is hampered by the diversity of data publishing methods. Within this project we use APIs as well as public query endpoints. All of them provide access to cultural heritage data, although each one takes a different approach regarding accepted requests and formulated responses. This lack of standardization makes integrating collections from multiple sources a cumbersome task and underlines the importance of documentation. By requesting data from APIs, we had to adhere to the limits set by the programmers implementing the API. Uncommon requests had to be tailor made or were simply unavailable. The two query endpoints provided a higher level of flexibility, since they allow the formulation of custom requests. However, compared to the APIs, this comes at the cost of overall performance with respect to responsiveness.</p>
+<p>The creation of links between objects is required to provide integrated access to objects from different collections. There are two main approaches for achieving this: by creating direct links between objects or by linking objects to a vocabulary shared by multiple collections. The former approach requires the labor intensive process of creating explicit links between objects every time a new collection is considered. In DigiBird, we take the latter approach and we base the integration on a list of bird names, which serves as the &#8220;glue&#8221; between the collections. Although initiatives such as the Getty Vocabularies (Baca &amp; Gill, 2015) improve the availability of concepts to link to, not all topics will have such a clear cut choice of a suitable vocabulary available.</p>
+<p>Crowdsourcing is evolving to be a valuable approach for cultural heritage institutions to collect data. The DigiBird project is a hub for four distinct crowdsourcing projects. Not undertaking these projects in isolation allows the sharing of resources and provides insights regarding the time needed to collect data. The DigiBird API directly outputs data obtained from the different crowdsourcing projects. As a result, institutions can decide to use data in an early stage of the crowdsourcing process. While this makes it more difficult to ensure a sufficient level of quality, it contributes to a sense of progress and gratification of the crowd contributing to the projects. This DigiBird API is currently used by the Dutch Species Register, embedding content from other sources on the website.</p>
+<p>In the future, DigiBird can contribute to the challenge of addressing the promotional effort required to successfully run a crowdsourcing campaign. Based on available data, an assessment can be made of the completeness of metadata. If the metadata of an object is deemed incomplete, a tailored crowdsourcing task could be formulated. Sharing these tasks through an API would allow institutions to embed crowdsourcing tasks on their websites in a similar fashion as collection objects. Thereby moving beyond collaborations on the level of collection items towards engaging audiences in an integrated crowdsourcing approach.</p>
+<h2>Acknowledgements</h2>
+<p>DigiBird is a multidisciplinary effort and would not have been possible without the help of the following enthusiastic crowd: From Naturalis Biodiversity Center we would like to thank Maarten Heerlien for his help in getting this project started and Maarten Schermer for integrating the DigiBird API into the Dutch Species Register. We thank Jonathon Jongsma for his work on the Xeno-canto API and from the Rijksmuseum we would like to thank Saskia Scheltjens and Lizzy Jongma. We thank Laurens Rietveld from Triply for his enthusiasm and Javascript skills. Special thanks goes out to the people from Netherlands Institute of Sound and Vision, who kindly hosted the project team and where Jaap Blom and Danny Sedney helped us out with technical support and Saskia Arentsen helped us access the Natuurbeelden collection. This publication was supported by the Dutch national program COMMIT/.</p>
+<h2>References</h2>
+<p>Baca, M. &amp; M. Gill. (2015). &#8220;Encoding multilingual knowledge systems in the digital age: the Getty vocabularies.&#8221; <em>Knowledge Organization 42(4),</em> 232-43.</p>
+<p>Brinkerink, M., C. Dijkshoorn, H. Hövelmann, S. Pieterse, &amp; M. Heerlien. (2014). &#8220;Bridging the natural divide: Crowd-curation of cultural expressions inspired by nature.&#8221; <em>Panel presentation MCN2014, Open Data/Participation Track.</em> Consulted January 12, 2017. Available <a href="https://www.youtube.com/watch?v=kU3dd3Kyi3o">https://www.youtube.com/watch?v=kU3dd3Kyi3o</a></p>
+<p>Chun, S., R. Cherry, D. Hiwiller, J. Trant, &amp; B. Wyman. (2006). &#8220;Steve.museum: an ongoing experiment in social tagging, folksonomy, and museums.&#8221; In J. Trant &amp; D. Bearman (eds.). <em>Museums and the Web 2006: Proceedings.</em> Toronto: Archives &amp; Museum Informatics, 2006. Published March 1, 2006. Consulted January 12, 2017. Available <a href="http://www.archimuse.com/mw2006/papers/wyman/wyman.html">http://www.archimuse.com/mw2006/papers/wyman/wyman.html</a></p>
+<p>Dijkshoorn, C., L. Jongma, L. Aroyo, J. Van Ossenbruggen, G. Schreiber, W. ter Weele, &amp; J. Wielemaker. (2017 in press). &#8220;The Rijksmuseum collection as Linked Data.&#8221; <em>Semantic Web Journal.</em> Consulted January 12, 2017. Available <a href="http://www.semantic-web-journal.net/content/rijksmuseum-collection-linked-data-2">http://www.semantic-web-journal.net/content/rijksmuseum-collection-linked-data-2</a></p>
+<p>Gligorov, R., M. Hildebrand, J. Ossenbruggen, L. Aroyo, &amp; G. Schreiber. (2013). &#8220;An evaluation of labelling-game data for video retrieval.&#8221; In P. Serdyukov, P. Braslavski, S. Kuznetsov, J. Kamps, S. Rüger, E. Agichtein, I. Segalovich, &amp; E. Yilmaz (eds.).  <em>Advances in Information Retrieval.</em> Berlin: Lecture Notes in Computer Science. 50-61.</p>
+<p>Isaac, A. &amp; B. Haslhofer. (2013). &#8220;Europeana Linked Open Data &#8211; data.europeana.eu&#8221;. <em>Semantic Web Journal 4(3),</em> 291-97. Consulted January 12, 2017. Available <a href="http://www.semantic-web-journal.net/content/europeana-linked-open-data-–-dataeuropeanaeu">http://www.semantic-web-journal.net/content/europeana-linked-open-data-–-dataeuropeanaeu</a></p>
+<p>Jongma, L. &amp; C. Dijkshoorn. (2016). &#8220;Accurator: Enriching collections with expert knowledge from the crowd.&#8221; <em>MW16: Museums and the Web 2016.</em> Published February 7, 2016. Consulted January 12, 2017. <a href="http://mw2016.museumsandtheweb.com/paper/accurator-enriching-collections-with-expert-knowledge-from-the-crowd/">http://mw2016.museumsandtheweb.com/paper/accurator-enriching-collections-with-expert-knowledge-from-the-crowd/</a></p>
+<p>Matsumura, F., I. Kobayashi, F. Kato, T. Kamura, I. Ohmukai, &amp; H. Takeda. (2012). &#8220;Producing and consuming Linked Open Data on art with a local community.&#8221; In J. Sequeda, A. Harth &amp; O. Hartig (eds.). <em>Proceedings of the third international workshop on consuming Linked Data.</em> Boston: CEUR Workshop Proceedings. Consulted January 12, 2017. Available <a href="http://ceur-ws.org/Vol-905/MatsumuraEtAl_COLD2012.pdf">http://ceur-ws.org/Vol-905/MatsumuraEtAl_COLD2012.pdf</a></p>
+<p>Noordegraaf, J., A. Bartholomew &amp; A. Eveleigh. &#8220;Modeling Crowdsourcing for Cultural Heritage.&#8221; <em>MW2014: Museums and the Web 2014</em>. Published February 17, 2014. Consulted January 13, 2017. <a href="http://mw2014.museumsandtheweb.com/paper/modeling-crowdsourcing-for-cultural-heritage/">http://mw2014.museumsandtheweb.com/paper/modeling-crowdsourcing-for-cultural-heritage/</a></p>
+<p>Oomen, J. &amp; L. Aroyo. (2011). &#8220;Crowdsourcing in the cultural heritage domain: opportunities and challenges.&#8221; In M. Foth, J. Kjeldskov &amp; J. Paay (eds.). <em>Proceedings of the fifth international conference on communities and technologies.</em> New York: ACM Press. 138-49.</p>
+<p>Schreiber, G., A. Amin, M. Van Assem, V. De Boer, L. Hardman, M. Hildebrand, L. Hollink, Z. Huang, J. van Kersen, M. de Niet, B. Omelayenko, J. van Ossenbruggen, R. Siebes, J. Taekema, J. Wielemaker, &amp; B. Wielinga. (2006). &#8220;Multimedian e-culture demonstrator.&#8221; In I. Cruz, S. Decker, D. Allemang, C. Preist, D. Schwabe, P. Mika, M. Uschold &amp; L. Aroyo (eds.). <em>Proceedings of the fifth international semantic web conference.</em> Athens: Lecture Notes in Computer Science. 951-58.</p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+Dijkshoorn, Chris, Cristina-Iulia Bucur, Maarten Brinkerink, Sander Pieterse and Lora Aroyo. "DigiBird: On the fly collection integration supported by the crowd." <i>MW17: MW 2017</i>. Published January 14, 2017. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw17.mwconf.org/paper/digibird-on-the-fly-collection-integration-supported-by-the-crowd/<br /><br /><hr>
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h2><p class="must-log-in">You must be <a href="../../wp-logind64f.html?redirect_to=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fdigibird-on-the-fly-collection-integration-supported-by-the-crowd%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- .comments-area -->
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="text-7" class="widget widget_text">			<div class="textwidget"><h2 class="widget-title">Community Conveners</h2>
+<p><a title="Wezit" href="https://wezit.io/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/wezit-250-75.jpg" alt="Wezit" /></a><br />
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a></p>
+<h2 id="gold-sponsor" class="widget-title">Platinum Sponsor</h2>
+<p><a title="Microsoft" href="http://aka.ms/museweb" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/Microsoft-250-75.jpg" alt="Microsoft" /></a><br />
+<!-- <a title="Izi Travel" href="http://www.izi.travel" target="_blank" rel="noopener"><img src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/izi-250-75.jpg" alt="Izi Travel" class="sponsor-img sponsor-top" /></a> --></p>
+<h2 id="gold-sponsor" class="widget-title">Gold Sponsor</h2>
+<p><a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a></p>
+<h2 id="bronze-sponsor" class="widget-title">Bronze Sponsors</h2>
+<p><a title="MailChimp" href="https://mailchimp.com/resources/guides/mailchimp-for-nonprofits/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a><br />
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/netx-250-75.gif" alt="Netx" /></a><br />
+<a title="PatronTech" href="http://patrontechnology.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/patron-250-75.jpg" alt="PatronTech" /></a></p>
+<h2 id="conference-sponsor" class="widget-title">Conference Sponsors</h2>
+<p><a title="CMA" href="http://clevelandart.org/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/cma-250-75.jpg" alt="CMA" /></a><br />
+<a title="Rock &amp; Roll" href="http://www.rockhall.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/rrhf-250-75.jpg" alt="Rock &amp; Roll" /></a></p>
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+</body>
+
+<!-- Mirrored from mw17.mwconf.org/paper/digibird-on-the-fly-collection-integration-supported-by-the-crowd/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 22:06:36 GMT -->
+</html>

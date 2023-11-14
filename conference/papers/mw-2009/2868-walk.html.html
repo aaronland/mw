@@ -1,0 +1,710 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2009-papers.dwt" codeOutsideHTMLIsLocked="true" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2009/papers/walk/walk.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:57:31 GMT -->
+<head>
+<!-- InstanceBeginEditable name="HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2009: Paper: Walk, P., Software as a Service and Open APIs</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2009: Proceedings" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="Keywords" -->
+<meta name="Keywords" content=", paper, research, MW2009, conference, museum, museums and the web, mw, matw, museums &amp; the web, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online, world wide web, www, web site, website, museum web site, museum website, howto,  conferences, professional papers, peer-reviewed, peer reviewed, peer review, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="Description" -->
+<meta name="Description" content="Museums and the Web 2009: the international conference for culture and heritage on-line" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2009" />
+<!-- InstanceEndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<!-- InstanceBeginEditable name="charset" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="../../css/mw2009.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/papers.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/mw2009-noNews.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+</head>
+<body>
+<div id="container">
+  <div id="header" onclick="location.href='../../index.html';" style="cursor:pointer;"> </div>
+  <!--htdig_noindex-->
+  <div id="top-nav">
+    <ul id="top-nav-list">
+      <li><a href="../../register/index.html">Register</a></li>
+      <li><a href="../../dates/index.html">Key Dates</a></li>
+      <li><a href="../../sescal/index.html">Schedule</a></li>
+      <li><a href="../../local/index.html">Local Info</a></li>
+    </ul>
+    <!--/htdig_noindex-->
+  </div>
+  <div id="header-photo"> 
+	 <!-- InstanceBeginEditable name="header-photo" --> <img src="../../images/rotate/header-1.jpg"  height="132" width="229" alt="MW-photo" />
+	 <!-- InstanceEndEditable --></div>
+<div id="print-title">
+	<h1>Museums and the Web 2009: the international conference for culture and heritage on-line</h1>
+	<h2>produced by Archives &amp; Museum Informatics</h2>
+	<h3>site at http://www.archimuse.com/mw2009/</h3>	 
+</div> 
+ <div id="date"> <a href="../../sescal/index.html">April 15-18, 2009</a><br />
+    <a href="../../local/index.html">Indianapolis, Indiana, USA</a> </div>
+  <div id="title">
+    <h1> 
+		<!-- InstanceBeginEditable name="PageTitle" --> 
+
+		Software
+    as a Service and Open APIs<!-- InstanceEndEditable --> </h1>
+  </div>
+  <!--htdig_noindex-->
+  <div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+  <h3 class="Author"><a href="../../bios/au_440016873.html">Paul Walk</a>,
+      UKOLN, University of Bath, UK</h3>
+    <h3 class="AbstractTitle">Abstract</h3>
+    <p class="AbstractText">What are
+    the potential benefits which Open APIs and Software as a Service (SaaS) seek to
+    provide? What about the associated risks in moving from an environment in which
+    software is installed and managed either locally or by a hosting agency with
+    formal contractual agreements to a environment in which there may be no formal
+    agreements, the services may be hosted in different countries and governed by
+    different legal frameworks? And at a time of global economic uncertainties, is
+    it sensible to be seeking to make use of Open APIs and SaaS?</p>
+  <p class="AbstractText">This
+    paper attempts to outline some of the important characteristics of and issues
+    surrounding what are becoming known as &lsquo;cloud services&rsquo;. A related workshop at <i>Museums and the Web 2009</i> will explore
+    strategies for exploiting the benefits of and managing the risks associated
+    with these services.</p>
+  <p class="keywords">Keywords:
+    open APIs, SaaS service, infrastructure, cloud services</p>
+		<!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+
+  
+    <h2>Introduction</h2>
+      <p class="" align="left" style='
+text-align:left'>While SaaS
+        and Open APIs are not necessarily intrinsically connected, they have much in
+        common and are two important aspects of what we might call <i>cloud services</i>. All of these newly fashionable concepts are
+        currently subject to a degree of marketing hype, with service providers and
+        pundits alike jockeying to introduce variations on these themes. Some examples
+        would include, <i>platform as a service
+          (PaaS), data as a service (DaaS), infrastructure as a service (IaaS), cloud
+          computing, cloud storage</i> and so on. The extent of this proliferation can be
+        seen in Peter Laird&rsquo;s Cloudmap.&nbsp; It
+        is worth visiting his accompanying blog post (Laird 2008) for more information
+      and links to all of the services mentioned on the map. </p>
+      <p class="caption"><a name="fig1" id="fig1"></a><a href="walk-fig1.html"><img src="walk.fig1-w.png" alt="figure 1" width="500" height="455" /></a></p>
+      <p class="caption">Fig 1: Peter Laird&rsquo;s&nbsp; &lsquo;Cloud Map&rsquo; <a href="../http://saaslink.googlepages.com/Laird_CloudMap_Sept2008.png">http://saaslink.googlepages.com/Laird_CloudMap_Sept2008.png</a></p>
+      <p>Inevitably,
+        this does involve a certain amount of re-selling of old ideas. Nonetheless, the
+        increasing viability of the Web to offer a platform for service development and
+      delivery cannot be ignored.</p>
+      <p>An
+        important difference is revealed in the fact that the functionality offered by
+        many SaaS services can be subject to frequent change. Although not true of all
+        SaaS, the perpetual beta approach (which I examine in a later section) is
+        increasingly used to deliver a steady stream of improvements and new features.
+        This can be contrasted with APIs which, by their very nature, are not changed
+        frequently or, indeed, lightly. In fact, as we shall see, there are systems
+      which already depend on the availability and <i>predictability</i> of APIs on the Web.</p>
+      <h2>Software As A Service</h2>
+      <p><i>Software as a Service</i> (SaaS) is not a new idea. The
+        notion of the <i>Application Programming
+          Interface</i> (API) is, arguably, even older. Yet these two terms have sprung
+        into, if not the mainstream, then at least increasingly common and widespread
+        usage. A third term, <i>The Cloud</i>, is
+        frequently used in the same contexts and, as a concept, may serve to unite
+      them.</p>
+      <p>In its
+        simplest sense, SaaS describes a software delivery model. Rather than
+        delivering the software in a packaged form for the user to install and run locally,
+        the vendor deploys the software on a controlled platform, and the user accesses
+        its functionality remotely via a network connection.&nbsp; In the typical case the vendor deploys and maintains a
+        single instance of the software which is accessed by many users, an
+      architecture which is known as <i>multitenancy</i>. </p>
+      <p>In the
+        currently fashionable sense of SaaS, some generalities are made more specific.
+        For example, the network is the Internet and, furthermore, in the great
+        majority of cases implies the Web. The contemporary usage of SaaS frequently,
+        but certainly not always, implies that the user is armed with nothing more than
+        a standard desktop-based Web-browser, although in the last year particularly
+        this implication has been challenged more frequently with increasing interest
+        in the idea of the rich-Internet-application (RIA) and the new generation of
+        rich mobile software found on such devices as Apple&rsquo;s iPhone and phones running
+      Google&rsquo;s Android operating system.</p>
+      <p>Some
+        notable examples of contemporary SaaS providers include SalesForce.com (<a
+href="../http://www.salesforce.com/">http://www.salesforce.com</a>), which offers a comprehensive
+        suite of &lsquo;customer-relationship-management&rsquo; tools, and Google, which offers a
+        set of set of collaborative productivity tools called Google Docs
+      (<a href="../http://docs.google.com/">http://docs.google.com/</a>).</p>
+      <h2>Application Programming
+      Interfaces And The &lsquo;Open API&rsquo;</h2>
+      <p>The
+        concept of the API has its origins in the development of <i>modular</i> programming environments and languages. Modularity of
+        programming environments has allowed developers to exploit the concept of <i>encapsulation</i>, where a computer program
+        is divided into self-contained modules each handling a discrete function, or
+        set of functions. Such modules are often described with the <i>black box</i> metaphor, indicating that they
+        can operate while being opaque to the system which uses them. The essential
+        characteristic of such modules is that they explicitly define their allowed <i>inputs</i> and their possible <i>outputs</i>. If you understand what kind of
+        data (if any) you can feed into the module, and what kind of data (if any) you
+        expect to get back, then you should be able to use the module with confidence,
+        without needing to understand how it works internally. This opaque boundary
+        between the internal workings of the module and the system or agent which seeks
+        to use it, together with any mechanism or documentation which aid the
+        understanding and exploitation of the module, is what constitutes the
+        application programming interface or API. As the development of this approach
+        to software development has matured, the use of encapsulation and
+        well-described, predictable interfaces has been extended to the development of <i>components</i> distributed across a network,
+        and hence to the concept of the Service Oriented Architecture (SOA), which
+        describes how <i>services</i> can be invoked
+      and exploited via documented interfaces.</p>
+      <p>In recent
+        years the Web has come to be recognised more as a platform upon which
+        applications can be developed, driving much of the development behind the &lsquo;Web
+        2.0&rdquo; phenomenon. From a traditional programming point of view the Web, when
+        compared to a local operating system, is a relatively limited platform for
+        developing software, yet its ubiquity, scale, proven resilience and <i>openness</i> are very attractive features.
+        The notion of the API has been adopted as an integral part of the Web 2.0
+        paradigm, underpinning especially the fashion for a type of point-to-point
+        service integration known as the <i>mashup</i>.
+        Because the Web essentially constrains much of the interaction between servers,
+        clients and users through its reliance on open standards and protocols, a large
+        part of what might be considered part of the API is pre-determined. To give the
+        obvious example, the great majority of services which expose an API on the Web
+        will expect it to be accessed via the HTTP protocol. The maturity and ubiquity
+        of HTTP allows the average Web API to be primarily concerned with the naming of
+        resources or functions, and the format and structure of data. In the world of
+        Web 2.0 mashups, the great majority of APIs give access to data-centric
+        services. It would appear, on the face of it, that there is a resonance with
+        Museums which typically have structured data, or metadata, which is is of
+      interest to others.</p>
+      <p>The term <i>open API</i>, while gaining some currency,
+        might be considered a fairly poor one. APIs are, essentially, open by
+        definition &ndash; we might better call them &lsquo;Web APIs&rsquo;. However, the use of &lsquo;open&rsquo;
+        in the Web context emphasises the point that the Web service in question offers
+        some functionality which can be directly exploited by remote, third-party
+        software. In most cases it implies that the data entities underlying the Web
+      site can be accessed as structured data suitable for use in another system.</p>
+      <p>Some good
+        examples of Open APIs of this sort on the Web include the API to Flickr
+        (<a href="../http://www.flickr.com/services/api/">http://www.flickr.com/services/api/</a>) and that of Twitter (<a
+href="../http://apiwiki.twitter.com/">http://apiwiki.twitter.com</a>). Both of these are popular Web 2.0
+        services, each with a well documented API which is freely available for
+      non-commercial use.</p>
+      <h2>The Case For Using SaaS</h2>
+      <h3>Core and chore services</h3>
+      <p>Harrison
+        (2008) used the terms <i>core</i> and <i>chore</i> to differentiate between types of
+        IT services managed within an organisation &ndash; a university in his case. Core
+        activities or services are those which are part of the business <i>focus</i> of the organisation. Core services
+        are where the organisation puts most of its creative energy and are often
+        related to those areas in which the organisation competes with others. In a
+        museum context, IT services related to the curation of collections, marketing,
+        and event management might be examples of core services. Chore services, on the
+        other hand, are those which the organisation is simply obliged to provide.&nbsp; Many examples of this kind of IT
+        service are common to most organisations; examples include payroll and finance
+        systems, Web hosting, and the provision of &lsquo;office&rsquo; tools to staff. Generally,
+        the organisation&rsquo;s priority in the provision of chore services is to seek to
+        improve efficiency and reduce cost. In terms of budget and resource allocation,
+        the organisation typically wants to invest more in core services, and
+      correspondingly less in chore services.</p>
+      <h3>Outsourcing IT, and paying for what you use</h3>
+      <p>The SaaS
+        model of software deployment and service delivery introduces a new opportunity
+        for the organisation to out-source core services. SaaS and core services might
+        fit naturally together because the service provider gains from delivering
+        services to the widest possible user-base, while the service consumer is
+      happier to outsource those services which are not its business focus. </p>
+      <p>The
+        removal of the need for users to deploy, secure, upgrade and maintain complex
+        systems on their own infrastructure can be a significant benefit. Beyond this,
+        even the <i>possibility</i> of using
+        powerful and &lsquo;expensive&rsquo; software may be something which an SaaS model can
+        provide to cash-strapped organisations which might otherwise not be able to
+        afford such software in a more traditional packaged form. A significant
+        difference between purchasing &lsquo;off-the-shelf&rsquo; software and SaaS is that the
+        latter introduces the possibility of a &lsquo;pay-as-you-go&rsquo; model of payment:
+        essentially, software can be <i>leased</i> instead of paid for as a straightforward purchase. In terms of budget planning,
+        the reduced need for up-front investment in infrastructure (servers and more
+        powerful PCs) coupled with the lack of a single large payment for software
+        means that the cost of some IT services is no longer classed as capital
+        expenditure, but becomes part of the organisation&rsquo;s operational costs. This can
+      have an impact in simplifying financial planning for the organisation.</p>
+      <h3>Perpetual beta</h3>
+      <p>The
+        concept of the &lsquo;perpetual beta&rsquo; level of service has become almost synonymous
+        with Web 2.0 services, and is an aspect of much of contemporary SaaS. With this
+        usage, the meaning of &lsquo;beta&rsquo; has shifted slightly. When applied to traditional
+        packaged software it means that the software is unfinished and still being
+        developed &ndash; that it still contains bugs but that it is stable enough to use to
+        some extent. Such software would tend to be released, at no cost, to a limited
+        group of users with the expectation that they will find and report problems
+        with it to the supplier. The use of beta in the context of Web-based SaaS
+        implies that the software is subject to continuous change and improvement. A
+        certain degree of stability is expected and implied, but the service provider
+      might reserve the right to add or remove features.</p>
+      <p>The
+        ability of SaaS to operate in a perpetual beta mode has ushered in a new model
+        of software upgrade. Rather than the periodic deployment of <i>patches</i> and new versions of software -
+        occasioning an often disruptive process of upgrading local systems &ndash; the SaaS
+        model allows for the software to be updated with little or no disruption to the
+        user. This also means that updates can be applied more frequently. If a problem
+      is uncovered in the software, it can be fixed <i>in situ</i> &ndash; and all users gain the benefit of this fix.</p>
+      <h3>Infrastructure as a Service</h3>
+      <p>Many of what
+        we might characterise as chore services in IT provision relate to
+        infrastructure, including such services as data storage and Web service
+        hosting. In the last 2-3 years a new form of SaaS has emerged offering
+        infrastructural, rather than user-facing, services, which are becoming known as
+        IaaS. Probably the most prominent vendor of IaaS and one of the first to offer
+        such services is Amazon. Amazon offers a number of infrastructure services -
+        prominent among these are its remote data storage service, S3, and its remote
+        server deployment service, EC2. The S3 service allows the user to store and
+        make available data on Amazon&rsquo;s infrastructure. For example, a museum can elect
+        to store digital photographs of its collections on this service. These are then
+        made available in a standard way through the Web. The museum pays for this
+        service in a very simple variable cost model, paying only for the storage space
+        and the bandwidth it uses. If it needs more space for a new collection, this
+        can be made available immediately. Amazon provides a highly resilient service,
+      and additionally offers options for backing up data.</p>
+      <p>While the
+        procurement of storage technology is not especially expensive at the outset,
+        its maintenance can be costly, and it will need frequent replacement as well
+        as, inevitably, expansion. With the use of a service such as S3, this upgrading
+        becomes significantly easier to deal with as much of the management burden is
+        adopted by the service provider. S3 has proven its reliability as an
+        infrastructure service and now underpins a number of very popular Web 2.0
+      services.</p>
+      <p>With the
+        subsequent introduction of its EC2 service, Amazon rounded out its offering by
+        providing the platform to deploy software as well as data. EC2 allows the user
+        to forsake &nbsp;local hardware
+        (especially servers), and to deploy software on one or more <i>virtual servers</i> running on Amazon&rsquo;s
+        infrastructure. There are a number of immediate potential benefits to this
+        arrangement. The payment model for this service is very simple and <i>linear</i> according to use, so what can be
+        a considerable capital expenditure (buying, configuring, maintaining and
+        upgrading servers) can become a simple, recurring, operational cost. When more
+        capacity is need, the service can be <i>scaled-out</i> (adding more virtual servers) easily and rapidly. Similarly, capacity can be
+        reduced, perhaps when a service is retired, resulting in an immediate
+        cost-reduction. EC2 is built upon S3, so the two services complement each other
+      well.</p>
+      <p>In the
+        UK, museums are often obliged to rely on the provision of IT services and
+        resources by local government authorities. This level of infrastructure is
+        rarely large enough to exploit the sorts of economies of scale available to
+        Amazon, and it lacks the levels of control and flexibility which come from
+        dedicated, local deployment. The potential benefits to be realised by utilising
+        infrastructure &lsquo;in the cloud&rsquo; will undoubtedly become increasingly interesting
+      and attractive to museum management.</p>
+      <h2>The Case for Providing
+      Open APIs</h2>
+      <h3>&ldquo;The coolest thing to do with your data will be thought of by someone else.&rdquo;</h3>
+      <p>This
+        statement, attributed to Rufus Pollack (Walk 2008/07/23), is a provocative
+        challenge to the established approach to data management. Until recently the
+        effort involved in making data available to interested third-parties could be
+        considerable as, unless the raw data was packaged up in some way and delivered,
+        it would have to be processed and delivered through an application. In this
+        sense, even a simple Web site is an application constituting some simple
+        functionality (navigation, search etc.) built upon data. Without the
+        expectation of some sort of return on this investment, the cost can be
+        prohibitive. Applications, like Web sites, must be designed according to
+        specific requirements or their value is considerably reduced; this means that
+        those requirements need to be understood in advance. Different users may have
+        different requirements and so a trade-off between general usefulness and
+      specific utility is inevitable.</p>
+      <p>However,
+        recent interest in making data available on the Web in a structured and open
+        way introduces the possibility of a new way of thinking. Rather than trying to
+        predict every possible use of your data, and building, or more likely <i>failing</i> to build, applications and
+        services to facilitate this, an alternative approach is to accept that it is
+        entirely possible some other party might find an interesting use for your data
+        &ndash; even one which has never occurred to you. In terms of technical difficulty,
+        the barrier to exposing data on the Web in such a way that it can be used by
+        others is being lowered steadily. The widespread adoption of a few standard
+        technologies, such as XML and JSON, for encoding and exchanging data, together
+        with the ubiquitous HTTP, has played an important role in accelerating the development
+        of software to process data described in this fashion. The mashup phenomenon is
+      largely founded on these three technologies.</p>
+      <p>A recent
+        attempt to accelerate the development of this approach in the museums sector
+        can be seen in <i>hoard.it</i> (<a href="../http://feeds.boxuk.com/museums/">http://feeds.boxuk.com/museums/</a>),
+        a Web service which extracts collection data from museums&rsquo; Web sites using a
+        process known as &lsquo;screen-scraping&rsquo;. Screen-scraping is an approach which
+        attempts to extract semantics from (often loosely) structured Web pages.
+        Crucially, the use of such a technique implies a lack of commitment by those
+        managing the source Web page to maintaining the page in such a way that the
+        screen-scraping approach will continue to work into the future. While
+        screen-scraping can be effective, it is also time-consuming to develop and <i>brittle</i> in the sense that this approach
+      can be broken by a simple change to the source Web page.</p>
+      <p>There is,
+        therefore, a case to be made for designing Web services around APIs, with a
+        view to exposing those APIs so that others may build more services.
+        Notwithstanding the local value of designing a system using the principles of
+        encapsulation afforded by APIs, there is also the potential benefit arising
+        from a third-party&rsquo;s use of these APIs. Another, more business-oriented way of
+        looking at it is to view this approach as a &lsquo;loss leader&rsquo; &ndash; an investment which
+        creates the conditions for possible future return on that investment. For a
+        museum, that &lsquo;return&rsquo; might be a partnership with another cultural-heritage
+        organisation, or an exciting combination of its collections data with some
+        other data-source, creating value for all. It might simply be more exposure for
+        its data, increasing awareness of the value of the museum&rsquo;s collections. The
+      creators of hoard.it express this idea thus:</p>
+      <p class="BlockQuote">The
+        aim is that by syndicating your content out in a re-usable manner, whilst still
+        retaining information about its source, an increasing number of third-party
+        applications can be built on this data, each addressing specific user needs. As
+        these applications become widely used, they drive traffic to your site that you
+        otherwise wouldn't have received: &quot;Not everyone who should be looking at
+        collections data knows that they should be looking at collections data&quot;.
+      (Ellis, M 2008)</p>
+      <h2>Risks and Issues</h2>
+      <p>Neither a
+        move to reliance on SaaS solutions nor the opening up of data through Web APIs is
+        without risks. In both cases, most issues arise from a real, or perceived, loss
+      of immediate control.</p>
+      <h3>Increased dependance on the software supplier</h3>
+      <p>When
+        purchasing software of any kind, it makes sense to make some appraisal of the
+        supplier as software needs to be supported. Such dependance on a supplier
+        carries a risk. For many years, one approach to mitigating this risk has been
+        to use open-source-software (OSS). Especially when software was backed by a
+        healthy development community, the risk of sudden loss of support of OSS is
+        considerably less than it is with closed, proprietary software. However, a move
+        to the SaaS model generally means a step back to using closed, proprietary
+        software. It is interesting to note that, as reported by Johnson (2008), GNU
+        creator and Free Software Foundation founder Richard Stallman considers &lsquo;cloud
+        computing&rsquo; to be &ldquo;simply a trap aimed at forcing more people to buy into
+      locked, proprietary systems that would cost them more and more over time&rdquo;.</p>
+      <p>With
+        SaaS, there is a real risk of the software,s being suddenly withdrawn. This can
+        happen for two reasons: the supplier decides to stop providing the software, or
+        the supplier itself stops trading. While the size of the supplier can be a
+        factor in deciding its stability as a business, it appears to be no indicator
+        of its likelihood to maintain particular services. Google is clearly a very
+        large company, yet it has recently announced the end of a handful of its
+        services, including <i>Jaiku, Google Video</i> and <i>Google Notebook</i> (Needleman, 2009),
+        as it rationalises its portfolio. Customers of these services will be given a
+        period of notice in which to consider their options and, if possible, extract
+        their data so that they can import it into an alternative system. Such a
+        migration of data, assuming it is even possible, can be costly and
+      time-consuming. </p>
+      <h3>Service level agreements</h3>
+      <p>The
+        service level agreement (SLA) is an arrangement which gives reassurance about
+        the level of service being offered, and a route for redress should this level
+        not be met. SLAs are frequently encountered in the case of remote Web-hosting,
+        with hosting companies offering quantified assurances of &lsquo;99.9%&rsquo; availability
+        of your data. Such SLAs can be reasonably effective in providing a mechanism
+        for risk management when using remote services. However, in the case of data
+        hosting, and especially archiving, such quantified guarantees are less
+        effective. After all, who would be reassured to be told that &ldquo;we guarantee not
+        to lose 99.9% of your data &ndash; we might lose the odd byte or two but we&rsquo;ll
+      compensate you for that if it happens&rdquo;?</p>
+      <h3>Data privacy</h3>
+      <p>In cases
+        where data is not &lsquo;public&rsquo; or open access, remote hosting introduces risks
+        associated with entrusting sensitive data with third parties. Aside from the
+        question of the degree to which a consumer can trust an SaaS provider, the
+        variety in international law around data privacy is an important factor. As a
+        specific example, in the United States the <i>Patriot
+          Act</i> gives the US Government the right, under certain conditions, to access
+        data held by private businesses. If an organisation based in the UK uses a
+        remote data storage service provided in the US, then its data is subject to the
+        Patriot Act. Recognising that there are genuine concerns about this, Amazon, a
+        US company, has opened data-centres in other countries, including some in the
+        European Union. Customers of the S3 data-storage service can now choose where,
+        in a geographical sense, they want their data to be stored &ndash; effectively
+      selecting the jurisdiction which will apply to it.</p>
+      <h3>Distributed services &ndash; chaining responsibilities</h3>
+      <p>Lamport
+        (1987) said, &ldquo;A distributed system is one in which the failure of a computer
+      you didn't even know existed can render your own computer unusable.&rdquo;</p>
+      <p>Bearing
+        in mind that this statement was made several years before the Web was even
+        established, Steve (2006), in a post about Google&rsquo;s sudden removal of its SOAP
+        API to its search engine, proposed updating it to, &ldquo;You know you have a
+        distributed system, when a company you didn't know you had a relationship
+      [with] changes their business plan and your application stops working&rdquo;.</p>
+      <p>As we
+        have identified, there are risks associated with even the relatively simple
+        SaaS relationship of consumer and service-supplier. However, as the viability
+        of using remote services and data is increasingly recognised, we can expect to
+        see such relationships become more complex and, crucially, to involve <i>more parties</i>. If it is not a trivial
+        task to establish a relationship of trust between supplier and consumer, how
+        difficult will it become if the supplier is also a consumer of a second
+        supplier, and so on? Those percentage-based SLAs start to become very difficult
+        to calculate once there is a chain of dependency. There are signs of this issue
+        already starting to affect services on the Web. On the 15th February, 2008,
+        Amazon&rsquo;s various infrastructure services suffered major problems resulting in
+        them being off-line for a period. One service which uses S3 is Twitter, a
+        Web-based communications tool growing in popularity.&nbsp; Twitter was therefore adversely affected by the problems
+        with S3. However, there is already an ecosystem of tools and services which add
+        value to the Twitter service. Stone (2007) claims that the Twitter API has in
+        order of magnitude more traffic than Twitter&rsquo;s own Web site. So a very
+        significant number of people using a multitude of mainly unrelated tools and
+      services were affected by the problems with S3.</p>
+      <p>It is an
+        article of faith that <i>all</i> software
+        systems will fail at some point. No one system should be singled out just
+        because it has not maintained perfect reliability. But an increasingly
+        distributed system like this clearly requires new models of risk assessment and
+      management.</p>
+      <h3>Being open &ndash; managing usage</h3>
+      <p>An
+        obvious risk with providing open APIs to data services is the possibility of
+        increased demand for those services. Predicting future demand, with a view to
+        planning capital investment in new hardware, for example, is difficult if a
+        strategy of &lsquo;open up and see what happens&rsquo; is adopted. The supplier of data
+        through open APIs also needs to know something about who is using the data and
+        for what purpose. In the case of a museum, it may well need to justify the
+        expense of maintaining such data services. A popular approach to managing this
+        issue with Web 2.0 services is to issue an API &lsquo;key&rsquo; to prospective users. This
+        has the effect of establishing a more explicit relationship between supplier
+        and consumer, and allows the supplier to manage usage and load on the system.
+        In the event of some sort of abuse of the service, an API key can be rescinded.
+      Strategies of throttling bandwidth usage of APIs are common also.</p>
+      <h3>Recession</h3>
+      <p>While we
+        have already briefly covered the risk of reliance on a supplier (and the
+        suppliers it depends on too) for services, we should note that the risk of
+        suppliers disappearing suddenly is increased in a time of global economic
+        recession. In August 2008, just as the current recession was starting to look
+      like a certainty, I suggested that:</p>
+      <p class="BlockQuote">...the vast majority of Web 2.0 companies are a
+        fraction of the size of Google. As it is, many Web 2.0 services appear to exist
+        with no visible means of support, other than venture capital. I imagine that
+        venture capital can become harder to find in a period of economic down-turn.
+        Much Web 2.0 service delivery is supported through an advertising model,
+        relying on a revenue stream coming from a small percentage of advertisements
+        &lsquo;clicked&rsquo; on. Again, perhaps people are less likely to respond to
+      advertisements in a recession&hellip;.? (Walk 2008/08/17)</p>
+      <p>Recession
+        will affect museums like any other organisation or business. It may be that
+        budgetary pressures force the issue &ndash; that such risks are worth taking for the
+        potential costs saved. This in turn may help to preserve certain SaaS suppliers
+        from business failure. Massie (2009) suggests that &ldquo;SaaS vendors cannot be
+        considered &lsquo;recession-proof&rsquo;.&nbsp; Perhaps &lsquo;recession-resistant&rsquo; would be more
+        accurate&rdquo;, pointing out that SaaS suppliers are vulnerable to a sudden loss of
+      customers in a way that packaged software vendors are not.</p>
+      <h2>Why This Is Only the
+      Beginning</h2>
+      <p>Clearly, over
+        the last several years there has been an explosion of Web-based functionality,
+        loosely characterised as Web 2.0. Initially operating at the veneer of
+        dedicated user-interfaces, Web 2.0 has increasingly come to depend on open
+        APIs. These APIs are allowing a <i>convergence</i> between the Web, the users and the many different devices they might use. A
+        quick check on Apple&rsquo;s iTunes application store reveals more than thirty iPhone
+      applications which make some use of the Twitter API.</p>
+      <p>The new
+        Web-based SaaS model needs time to mature, and it will be fascinating to
+        observe how SaaS and Web APIs develop over the next few years. If these models
+        survive the expected economic climate, then it may well provide the crucible
+      from which they emerge thoroughly tested and stronger than before.</p>
+      <p>We have
+      been in a similar situation before:</p>
+      <p class="BlockQuote">Once we got past the recession at the end of the <a
+href="../http://en.wikipedia.org/wiki/Dot-com_bubble">dot-com bubble</a> in the first
+        years of this century, the notion of an open-source operating system had
+        reached a level of sufficient maturity for it to enter the mainstream. Web 2.0
+        services and SaaS as a viable, mainstream approach will likely reach similar
+      levels of maturity in time. (Walk 2008/08/17)</p>
+      <h2>References</h2>
+      <p class="ReferencesText">Ellis,
+        M. and D. Zambonini (2008). FAQ for Hoardit. Consulted 2009/01/30.&nbsp; Available
+      <a href="../http://hoardit.pbwiki.com/Frequently+Asked+Questions+(FAQs)">http://hoardit.pbwiki.com/Frequently+Asked+Questions+(FAQs)</a></p>
+      <p class="ReferencesText">Johnson,
+        B. (2008). Cloud computing is a trap, warns GNU founder Richard Stallman.
+      Consulted 2009/01/30.&nbsp; Available <a href="../http://www.guardian.co.uk/technology/2008/sep/29/cloud.computing.richard.stallman">http://www.guardian.co.uk/technology/2008/sep/29/cloud.computing.richard.stallman</a></p>
+      <p class="ReferencesText">Laird,
+        P.(2008). Visual Map of the Cloud Computing/SaaS/PaaS Markets: September 2008
+      Update. Consulted 2009/01/30.&nbsp; Available <a
+href="../http://peterlaird.blogspot.com/2008/09/visual-map-of-cloud-computingsaaspaas.html">http://peterlaird.blogspot.com/2008/09/visual-map-of-cloud-computingsaaspaas.html</a></p>
+      <p class="ReferencesText">Lamport,
+      L. (1987). Email. Consulted 30/01/2008. Available <a href="../http://research.microsoft.com/en-us/um/people/lamport/pubs/distributed-system.txt">http://research.microsoft.com/en-us/um/people/lamport/pubs/distributed-system.txt</a></p>
+      <p class="ReferencesText">Massie,
+        P. (2009). Is SaaS Recession-Proof? Consulted 2009/01/30.&nbsp; Available
+      <a href="../http://www.glgroup.com/News/Is-SaaS-Recession-Proof--31558.html">http://www.glgroup.com/News/Is-SaaS-Recession-Proof--31558.html</a></p>
+      <p class="ReferencesText">Miller,
+        P. (2008). XTech Day 3 &ndash; Rufus Pollock and Jo Walsh talk about &lsquo;Atomisation and
+        Open Data&rsquo;. Nodalities blog. Consulted 2009/01/30.&nbsp; Available
+      <a href="../http://blogs.talis.com/nodalities/2007/05/xtech_day_3_rufus_pollock_and_.php">http://blogs.talis.com/nodalities/2007/05/xtech_day_3_rufus_pollock_and_.php</a></p>
+      <p class="ReferencesText">Needleman,
+        R. (2009). Google killing Jaiku, Dodgeball, Notebook, other projects. Consulted
+        January 20, 2009.&nbsp; Available
+      <a href="../http://news.cnet.com/8301-17939_109-10143245-2.html?tag=mncol;txt">http://news.cnet.com/8301-17939_109-10143245-2.html?tag=mncol;txt</a></p>
+      <p class="ReferencesText">Steve
+      (2006). No model, just view. Consulted January 20, 2009.&nbsp; Available http://www.1060.org/blogxter/entry?publicid=303B91C59A56BB10798BB9739CE80131</p>
+      <p class="ReferencesText">Stone,
+        B. (2007). Interview with Biz Stone, Co-Founder Twitter. Consulted January 20,
+        2009.&nbsp; Available
+      <a href="../http://readwritetalk.com/2007/09/05/biz-stone-co-founder-twitter/">http://readwritetalk.com/2007/09/05/biz-stone-co-founder-twitter/</a></p>
+      <p class="ReferencesText">Walk, P.
+        (2008/07/23). &ldquo;The coolest thing to do with your data will be thought of by
+        someone else&rdquo;. Paul Walk&rsquo;s Blog. Consulted 2008/01/30.&nbsp; Available
+      <a href="../http://blog.paulwalk.net/2007/07/23/&amp;ldquo;the-coolest-thing-to-do-with-your-data-will-be-thought-of-by-someone-else&amp;rdquo;/">http://blog.paulwalk.net/2007/07/23/&ldquo;the-coolest-thing-to-do-with-your-data-will-be-thought-of-by-someone-else&rdquo;/</a></p>
+      <p class="ReferencesText">Walk.
+        P. (2008/08/17) &ldquo;Did Google just make me look like an idiot?&rdquo;. Paul Walk&rsquo;s Blog.
+        Consulted 2008/01/30.&nbsp; Available
+      <a href="../http://blog.paulwalk.net/2008/08/17/did-google-just-make-me-look-like-an-idiot/">http://blog.paulwalk.net/2008/08/17/did-google-just-make-me-look-like-an-idiot/</a></p>
+    <!-- InstanceEndEditable --> </div>
+  			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->Walk, P., Software as a Service and Open APIs<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2009: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2009/papers/<!-- #BeginEditable "URL" -->walk/walk.html
+	  <!-- #EndEditable --></p>
+	</div>
+</div>
+  <!--htdig_noindex-->
+  
+  <div id="sidebar">
+    <div id="side-nav">
+      <ul id="side-nav-list">
+        <li id="workshops"><a href="../../workshops/index.html" class="menu">Workshops</a></li><li id="sessions"><a href="../../sessions/index.html" class="menu">Sessions</a></li><li id="speakers"><a href="../../speakers/index.html" class="menu">Speakers</a></li><li id="interactions"><a href="../../interact/index.html" class="menu">Interactions</a></li><li id="demonstrations"><a href="../../demos/index.html" class="menu">Demonstrations</a></li><li id="events"><a href="../../events/index.html" class="menu">Events</a></li><li id="exhibits"><a href="../../exhibit/index.html" class="menu">Exhibits</a></li><li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li><li id="pc"><a href="../../thanks/index.html" class="menu">Committees</a></li><li  id="community"><a href="../http://conference.archimuse.com/" class="menu">Community On-line</a></li>
+      </ul>
+    </div>
+    <div id="search-site">
+<form method="get" id="searchform" action="http://wp.museumsandtheweb.com/">
+<input type="text" class="field" name="s" id="s" placeholder="Search">
+<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+</form>
+    </div>
+        <div id="addthis">
+    <!-- AddThis Button BEGIN -->
+	<script type="text/javascript">var addthis_pub="archimuse";</script>
+	<script type="text/javascript">var addthis_brand = "archimuse";</script>
+	<script type="text/javascript">var addthis_options = 'twitter, facebook, linkedin, delicious, email, digg, favorites, more';</script>
+	<a href="../http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="../../../external.gif?link=http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" alt="Share"/></a><script type="text/javascript" src="../http://s7.addthis.com/js/200/addthis_widget.js"></script><!-- AddThis Button END -->
+</div>
+    
+    <div id="sidebar-links">
+      <ul id="sidebar-links-list">
+        <li><a href="../../../index.html" class="produced-by">produced by<br />
+          <img src="../../images/sidelogo.png" width="144" height="37" alt="AMI logo" /></a></li>
+        <li><a href="../../../index.html">Join our mailing list</a></li>
+        <li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+          <img src="../../images/search.gif" alt="search" width="24" height="25" border="0" /></a></li>
+      </ul>
+    </div>
+    <div id="sidebar-acknowledge">
+
+      <div id="sponsor">
+</div>
+    </div>
+   <!--/htdig_noindex-->
+  </div>
+  <div id="footer">
+    <div id="last-updated"> last updated: <!-- #BeginDate format:Am1a -->October 27, 2010 4:57 PM<!-- #EndDate -->
+      <br />
+[analytics code]<br />
+<div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+    </div>
+    <!--htdig_noindex-->
+    <div id="footer-content">
+      <p>Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E
+        2P3 Canada<br />
+        Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2009";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2008 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				  </script>
+        <br />
+        Copyright &copy; 2009 &ndash; Archives &amp; Museum Informatics &ndash; All
+        rights reserved.<br />
+      </p>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2009/papers/walk/walk.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:57:32 GMT -->
+</html>

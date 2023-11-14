@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2007-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/ossenbruggen/ossenbruggen.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:28:39 GMT -->
+<head>
+<!-- #BeginEditable "HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2007: Papers: Ossenbruggen, J.,
+et al., Searching and Annotating Virtual Heritage Collections with Semantic-Web
+Techniques</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2007" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Keywords" -->
+<meta name="Keywords" content="Semantic Web, multiple thesauri, semantic search, search paradigms, large virtual collections, scalability, articles, papers, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Description" -->
+<meta name="Description" content="Museums and the Web 2007: the international conference for culture and heritage on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2007" />
+<!-- #EndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="../../css/mw2007.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="../../css/mw2007-noNews.css" type="text/css"  media="print, screen" />
+	<link rel="stylesheet" href="../../css/papers.css" type="text/css"  media="print, screen" />
+
+<!-- InstanceBeginEditable name="ImageRotateScript" -->
+
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="PageScript" -->
+
+<!-- InstanceEndEditable -->
+</head>
+<body  onload="initImgRotation()">
+	<div id="container">
+		<div id="header" onclick="location.href='../index.html';" style="cursor:pointer;">
+		</div>
+		<div id="top-nav">
+			<ul id="top-nav-list">
+				<li><a href="../../register/index.html">Register</a></li>
+				<li><a href="../../dates/index.html">Key Dates</a></li>
+				<li><a href="../../sescal/index.html">Schedule</a></li>
+				<li><a href="../../local/index.html">Local Info</a></li>
+			</ul>
+		</div>
+		<div id="header-photo">
+			<a href="../../images/credits.html">
+			<!-- InstanceBeginEditable name="header-photo" -->
+			<img src="ossenbruggen.fig5-t.jpg" alt="MW-photo" width="229"  height="132" />
+			<!-- InstanceEndEditable -->	
+			</a>
+		</div>
+		<div id="date">
+			April 11-14, 2007<br />
+			San Francisco, California
+		</div>
+		<div  id="title">
+			<h1> 
+				<!-- InstanceBeginEditable name="PageTitle" -->Searching and Annotating Virtual Heritage Collections with Semantic-Web Techniques<!-- InstanceEndEditable -->
+   			</h1>
+		</div>
+		<div id="main-content">
+		  <div id="callout">          </div>
+		  <div id="intro-paragraph">
+				<!-- #BeginEditable "IntroParagraph" -->
+				<h2 class="Author">Jacco van Ossenbruggen, Alia Amin, Lynda Hardman, and
+				  Michiel Hildebrand, CWI Amsterdam; Mark van Assem, Borys Omelayenko, Guus
+				  Schreiber, and Anna Tordai, Vrije Universiteit, Amsterdam; Victor de Boer,
+				  Bob Wielinga, and Jan Wielemaker, Universiteit van Amsterdam; Marco de
+				  Niet and Jos Taekema, Digital Heritage Netherlands DEN, The Hague; Marie-France
+				  van Orsouw and Annemiek Teesing, Dutch Institute for Cultural Heritage
+				  ICN, Amsterdam, The Netherlands</h2>
+				<h3 class="AbstractTitle">Abstract</h3>
+				<p class="abstractText">This paper describes ongoing work of a project aimed
+				  at exploiting Semantic Web techniques to support searching and annotating
+				  large cross-institutional digital-heritage collections. The project demonstrator
+				  contains multiple collections and multiple vocabularies. The architecture
+				  is fully based on Web standards. We show novel search and presentation
+				  techniques which make use of interoperability between the collections and
+				  between the vocabularies. </p>
+				<p class="keywords">Keywords: Semantic Web, multiple thesauri, semantic search,
+				  search paradigms, large virtual collections, scalability</p>
+		  <!-- #EndEditable -->		  </div>
+				<!-- #BeginEditable "BodyText" -->
+
+
+
+
+<div class="Section1">
+
+  <h2>1. Introduction</h2>
+  <p>The main objective of the MultimediaN E-Culture project is
+to demonstrate how novel Semantic Web and presentation technologies can be
+deployed to provide better indexing and search support within large virtual
+collections of cultural-heritage resources. The architecture is fully based on
+open Web standards, in particular XML, SVG, RDF/OWL and SPARQL. One basic
+hypothesis underlying this work is that the use of explicit background
+knowledge in the form of ontologies/vocabularies/thesauri is in particular
+useful in information retrieval in knowledge-rich domains such as cultural
+heritage.&nbsp; This paper gives some details about the internals of the demonstrator.
+The on-line version of the demonstrator can be found at:
+<a href="../http://e-culture.multimedian.nl/demo/search" target="_blank">http://e-culture.multimedian.nl/demo/search</a>.</p>
+
+  <p>Readers are encouraged to first take a look at the
+demonstrator before reading on. As a teaser we have included a short
+description of basic search facilities in the next section. We suggest you
+consult the tutorial (linked from the on-line demo page) which provides a
+sample walk-through of the search functionality. The current version of the
+demonstrator runs under Firefox 2.0. It runs also under other browsers, but
+users may experience some problems with the SVG support. We expect these SVG
+problems to be solved in all main browsers in the near future. As a project we
+are committed to Web standards (such as SVG) and are not willing to digress to
+(and spend time on) special-purpose solutions. </p>
+
+<p>Please note that this is a product of an ongoing project.
+Visitors should expect the demonstrator to change. The project has a duration
+of 4 years and is at the time of writing 18 months underway. We are incorporating
+more collections and vocabularies and are also extending the annotation,
+search, and presentation functionalities. </p>
+
+<p >This demonstrator won the Semantic Web Challenge
+(<a href="../http://challenge.semanticweb.org/" target="_blank">http://challenge.semanticweb.org</a>) at last year&rsquo;s International Semantic Web Conference,
+held in November 2006 in Athens, Georgia. This paper is a revised version of
+the description of this Challenge contribution. </p>
+
+<h2>2. A Peek at the Demonstrator</h2>
+<p >Figure 1 shows a query for &ldquo;Art Nouveau&rdquo;. This query will
+retrieve images that are related to Art Nouveau in some way. The results shown
+in the figure are &ldquo;created by an artist with a matching style''. So, these
+images are paintings by artists who have painted in the Art-Nouveau style, but
+the style is not part of the metadata of the image itself. This may retrieve
+some paintings which are not really Art Nouveau, but it is a reasonable
+strategy if there are no (or only few) images directly annotated with Art
+Nouveau. We view the use of such indirect semantic links as a potential for
+semantic search (for more details on path search in the demonstrator, see
+Section @@todo-path-search). </p>
+
+<p >The lower part of the figure shows a listing of painters who
+are known to have worked in the Art-Nouveau style. The time line indicates
+years in which they have created art works (you can click on them to get
+information). </p>
+
+<p class=caption><a name="Fig1" id="Fig1"></a><a href="ossenbruggen-fig1.html"><img src="ossenbruggen.fig1.thumb.jpg" alt="Fig 1: Results of query for &ldquo;Art Nouveau&rdquo;" width="400" height="300" border="0" /></a> </p>
+
+<p class=caption>Fig 1: Results of query for &ldquo;Art Nouveau&rdquo;</p>
+
+<p class=caption><a name="Fig2" id="Fig2"></a><a href="ossenbruggen-fig2.html"><img src="ossenbruggen.fig2.thumb.jpg" alt="Fig 2: Information about the indexing term &ldquo;Gold&rdquo;, showing also images that are related to &ldquo;Gold&rdquo;" width="400" height="216" border="0" /></a> </p>
+
+<p class=caption>Fig 2: Information about the indexing term &ldquo;Gold&rdquo;, showing
+also images that are related to &ldquo;Gold&rdquo;</p>
+
+<p >Images have annotations in which terms from various thesauri
+are used. Figure 2 shows the information a user gets when selecting such an
+indexing term, here &ldquo;Gold&rdquo; material from the Art &amp; Architecture Thesaurus.
+We also show images that have been annotated with this indexing term (or
+semantically related terms). </p>
+
+<p >Figure 3 shows a snapshot of the facet browser. Here we have
+opted to look for &ldquo;Paris&rdquo; as a &ldquo;depicted place&rdquo;, i.e. art works with Paris as
+subject. As we see, the demonstrator also finds artworks about Montparnasse and
+Montmartre, as the THN thesaurus indicates that these are part of Paris. We can
+use the TGN hierarchy to navigate to higher or lower parts in the hierarchy,
+e.g. to France. This browser would then show all art works with (some part of)
+France as subject. We can also cross-index it with other facets, e.g. all works
+of an expressionist style showing Paris. </p>
+
+<p class=caption><a name="Fig3" id="Fig3"></a><a href="ossenbruggen-fig3.html"><img src="ossenbruggen.fig3.thumb.jpg" alt="Fig 3: Facet browser snapshot, showing art works depicting &ldquo;Paris&rdquo;" width="400" height="330" border="0" /></a> </p>
+
+<p class=caption>Fig 3: Facet browser snapshot, showing art works depicting
+&ldquo;Paris&rdquo;</p>
+
+<p >These are some basic search and presentation functions. The
+reader is referred to the on-line demo for information about more search
+options, such as time-based ones. We also have an experimental search function
+for finding the semantic relations between two URIs,
+e.g. for posing the question &rdquo;How are Van Gogh and Gauguin related?'' In fact,
+this leads to a whole avenue of new search possibilities and related issues
+with respect to which semantic paths are most relevant, and which we hope to
+explore in more detail in the coming years. </p>
+
+<h2>3. Technical Architecture</h2>
+<p >The foundation of the demo is formed by SWI-Prolog and its
+(Semantic) Web libraries (for detailed information, see Wielemaker 2003, 2005).
+SPARQL-based access is a recent feature. The technical architecture of the
+demonstrator is depicted in Figure 4. The &ldquo;Application Logic&rdquo; module defines
+searching and clustering algorithms using Prolog as query language, returning
+the results as Prolog Herbrand terms. The &ldquo;Presentation Generation&rdquo; module
+generates Web documents from the raw answers represented as Herbrand terms. </p>
+
+<p class=caption><img src="ossenbruggen.fig4.thumb.jpg" alt="Fig 4: Technical architecture of the demonstrator" width="400" height="230" /></p>
+
+<p class=caption>Fig 4: Technical architecture of the demonstrator (<a href="ossenbruggen.fig4.pdf">PDF</a>) </p>
+
+<p >From the user perspective, the architecture provides&nbsp; </p>
+<ol>
+<li>
+annotation facilities for Web resources representing images, and&nbsp; </li>
+
+<li>
+search and presentation/visualization facilities for finding images. </li>
+</ol>
+<h2>4. Vocabularies and Collection Data</h2>
+<h3>4.1 Vocabularies</h3>
+<p >Currently, the demonstrator hosts four thesauri, namely the
+three Getty vocabularies (<a href="../http://www.getty.edu/research/conducting_research/vocabularies/" target="_blank">http://www.getty.edu/research/conducting_research/vocabularies/</a>),
+i.e., the Art &amp; Architecture Thesaurus (AAT), the Union List of Artists
+Names (ULAN) and the Thesaurus of Geographical Names (TGN), as well as the
+lexical resource WordNet, version 2.0. The Getty thesauri were converted from
+their original XML format into an RDF/OWL representation using the conversion
+methods principles as formulated by van Assem <em>et al.</em> (2004). The RDF/OWL
+version of the data models is available on-line (see <a href="../http://e-culture.multimedian.nl/resources/" target="_blank">http://e-culture.multimedian.nl/resources/</a>).
+The Getty thesauri are licensed. The project has acquired licenses for the
+thesauri. People using the demonstrator do not have access to the full thesauri
+sources, but can use them to annotate and/or search the collections. </p>
+
+<p >The RDF/OWL conversion of WordNet is documented in a
+publication of the W3C Semantic Web Best Practices and Deployment Working Group
+(van Assem, 2006). It is an instructive example of the issues involved in this
+conversion process, in particular the recipes for publishing RDF vocabularies
+(Miles et al., 2006).</p>
+
+<p >The architecture is independent of the particular thesauri
+being used. We are currently in the process of adding the Dutch version of AAT,
+amongst others, to support a multi-lingual interface. Integration of other
+(multi-lingual) thesauri is planned.</p>
+
+<p >Using multiple vocabularies is a baseline principle of our
+approach. It also raises the issue of alignment between the vocabularies.
+Basically, semantic interoperability will increase when semantic links between
+vocabularies are added. Within the Getty vocabularies, one set of links is
+systematically maintained: places in ULAN (e.g., place of birth of an artist)
+refer to terms in TGN. Within the project we are adding additional sets of
+links. One example is links between art styles in AAT (e.g. &quot;Impressionism'')
+and artists in ULAN (e.g., &ldquo;Monet&rdquo;). De Boer (2006) has worked on deriving
+these semi-automatically from texts on art history. </p>
+
+<p >Finding semantic links between thesauri is part of the
+overall research efforts in ontology alignment: see, for example, the Ontology
+Alignment Evaluation Initiative (<a href="../http://oaei.ontologymatching.org/" target="_blank">http://oaei.ontologymatching.org/</a>). This is
+still a hard topic on its own, and the project intends to rely mainly on
+specialized efforts in this area to provide methods and techniques for semantic
+interoperability of vocabularies. On such efforts in the Dutch context is the
+STITCH project (<a href="../http://www.cs.vu.nl/stitch" target="_blank">http://www.cs.vu.nl/stitch</a>).</p>
+
+<h3>4.2 Annotation Template</h3>
+<p >For annotation and search purposes, the tool provides the
+user with a description template derived from the VRA 3.0 Core Categories
+(Visual Research Association, 2000). The VRA template is defined as a
+specialization of the Dublin Core set of metadata elements, tailored to the
+needs of art images. The VRA Core Categories follow the &ldquo;dumb-down&rdquo; principle;
+i.e., a tool can interpret the VRA data elements as Dublin Core data elements.
+An unofficial OWL specification of the VRA elements, including links to Dublin
+Core, can be found at <a href="../http://e-culture.multimedian.nl/resources/" target="_blank">http://e-culture.multimedian.nl/resources/</a> .</p>
+
+<h3>4.3 Collection Data And Metadata</h3>
+<p >In principle, every Web resource with a URL can
+be included and annotated in the virtual collection of our demonstrator. As a
+test set of data we have included three Web collections: </p>
+<ul>
+<li>
+The Artchive collection (<a href="../http://www.artchive.com/" target="_blank">http://www.artchive.com/</a>) contains
+around 4,000 images of paintings, mainly from the 19th and 20th century.</li>
+
+<li>
+The ARIA collection (<a href="../http://rijksmuseum.nl/aria/" target="_blank">http://rijksmuseum.nl/aria/</a>) of the
+Rijksmuseum in Amsterdam contains images of some 750 master pieces.</li>
+
+<li>
+The RMV collection (<a href="../http://www.rmv.nl/" target="_blank">http://www.rmv.nl</a>) of the &ldquo;Rijksmuseum voor
+Volkenkunde&rdquo; (State Museum for Ethnology) in Leiden describes about 80,000
+images of ethnographic objects that belong to various cultures worldwide. </li>
+</ul>
+<p >For the Artchive items, we have used a parsing technique to
+transform the existing textual annotation into a semantic annotation; i.e.
+matching strings from the text to concepts from the various thesauri. </p>
+
+<p >The metadata that accompanies the Artchive collection
+consists of a short file holding textual values for title, creator, dimensions,
+material, year of creation, location and comments. Unfortunately the descriptor
+name is not specified with the value, and not all descriptions have the same
+values in the same order. We used a grammar to parse and canonize the date of
+creation and dimension fields. Author and material are matched to ULAN and AAT
+using a syntactic distance measure and selecting the best match. </p>
+
+<p >For example, a famous painting of Matisse depicting his wife
+has the following textual annotation in Artchive:</p>
+
+<p class="BlockQuote">MATISSE, Henri<br />
+Green Stripe (Madame Matisse)<br />
+1905<br />
+Oil and tempera on canvas<br />
+15 7/8 x 12 7/8 in.<br />
+Royal Museum of Fine Arts, Copenhagen</p>
+
+<p >The resulting semantic annotation is shown in Figure 5. The
+&ldquo;Style/period&rdquo; property is not included in the original annotation text, but
+can be derived from the artist-style links present in the background knowledge.
+</p>
+
+<p class=caption><a name="Fig5" id="Fig5"></a><a href="ossenbruggen-fig5.html"><img src="ossenbruggen.fig5.thumb.jpg" alt="Fig 5: Metadata about the sample Matisse painting. The VRA properties are shown on the left; their values on the right. The values are prepended with the name space of the vocabulary that&nbsp;provides the term. For example, &ldquo;ulan:Matisse, Henri;&rdquo; refers to the ULAN entry for Henri Matisse." width="400" height="226" border="0" /></a></p>
+
+<p class=caption>Fig 5: Metadata about the sample Matisse painting. The VRA
+properties are shown on the left; their values on the right. The values are
+prepended with the name space of the vocabulary that&nbsp; provides the term.
+For example, &ldquo;ulan:Matisse, Henri;&rdquo; refers to the ULAN entry for Henri Matisse.</p>
+
+<p >For the other collections, we used similar strategies for
+enriching the original metadata with semantic categories. Adding a collection
+thus involves some information-extraction work on the metadata. In addition,
+the demonstrator supplies a manual-annotation interface which can be used to
+annotate any image on the Web.</p>
+
+<h2>5. Distributed Vs. Centralized Collection
+  Data</h2>
+<p >The architecture is constructed to support multiple
+distributed image collections. Data (i.e. images) must have an external URI (we
+keep local copies, but that's only for caching). Ideally, we would like to get
+the original metadata also from external sources using standard protocols such
+as OAI (<a href="../http://www.openarchives.org/" target="_blank">http://www.openarchives.org/</a>). In practice however, we encountered
+several problems with the quality of metadata retrieved via OAI, so for the
+moment we still depend on the local copy of the original metadata.</p>
+
+<p >Metadata extensions are also stored locally. In the future
+we hope to feed these back to the collection owners. </p>
+
+<p >Vocabularies form a separate problem. The Getty vocabularies
+are licensed, so we cannot publish the full vocabulary as is. However, the
+information in the Getty vocabularies is freely accessible through the Getty
+online facilities; see, for example, <a
+href="../http://www.getty.edu/research/conducting_research/vocabularies/aat/" target="_blank">http://www.getty.edu/research/conducting_research/vocabularies/aat/</a>
+for access to the AAT.</p>
+
+<p >We hope that these vocabularies will become publicly
+available. In the meantime, our demonstrator allows you to browse the
+vocabularies as a semantic structure and search for images semantically related
+to a vocabulary item (see Figure 2 for an example of the concept &ldquo;Gold&rdquo; from
+AAT). An RDF/OWL version of WordNet has recently been published (see above). We
+will move within the next months to this version (the same version as we are
+now using but with a different base URI). </p>
+
+<h2>6. Keyword Search With Semantic Clustering</h2>
+<p >One of the goals of the demonstrator is to provide users
+with a familiar and simple keyword search, but still allow them to benefit from
+all background knowledge from the underlying thesauri and taxonomies. The
+underlying search algorithm consists of several steps that can be summarized as
+follows. </p>
+<ol>
+<li>
+First, it checks all RDF literals in the repository for matches on the
+given keyword.</li>
+
+<li>
+Second, from each match, it traverses the RDF graph until a resource of
+interest is found: we refer to this as a &quot;target resource&quot;. </li>
+
+<li>
+Finally, based on the paths from the matching literals to their target
+resources, the results are clustered.</li>
+</ol>
+<p >To improve performance in finding the RDF literals that form
+the starting points, the RDF database maintains a btree index of words
+appearing in literals to the full literal, as well as a Porter-stem and
+metaphone (sounds-like) index to words. Based on these indexes, the set of
+literals can be searched efficiently on any logical combination of word,
+prefix, by-stem and by-sound matches (see
+  <a href="../http://www.swi-prolog.org/packages/semweb.html#sec:3.8" target="_blank">http://www.swi-prolog.org/packages/semweb.html#sec:3.8</a>).</p>
+
+<p >In the second step, which resources are considered of
+interest is currently determined by their type. The default settings return
+only resources of type artwork (&ldquo;vra:Work&rdquo;), but this can be overridden by the
+user. To avoid a combinatorial explosion of the search space, a number of
+measures had to be taken. Graph traversal is done in one direction only: always
+from the object in the triple to the corresponding subject. Only for properties
+with an explicit owl:inverseOf
+relation is the graph also traversed in the other direction. While this
+theoretically allows the algorithm to miss out many relevant results, in practice
+we found that this is hardly an issue. In addition to the direction, the search
+space is kept under control by setting a threshold. Starting with the score of
+the literal match, this score is multiplied by the weight assigned to the
+property being traversed (all properties have been assigned a (default) weight
+between 0 and 1), and the search stops when the score falls under the given
+threshold. This approach not only improves the efficiency of the search, but
+also allows filtering out results with paths that are too long (which tend to
+be semantically so far apart that users do not consider them relevant anymore).
+By setting the weights to non-default values, the search can also be fine tuned
+to a particular application domain.</p>
+
+<p >In the final step, all results are clustered based on the
+path between the matching literal and the target result. When the paths are
+considered on the instance level, this leads to many different clusters with
+similar content. We found that clustering the paths on the schema level
+provides more meaningful results. For example, searching on keyword &quot;fauve''
+matches works from Fauve painters Matisse and Derain. On the instance level,
+this results in different paths: </p>
+
+<p class="code">dc:creator -&gt; ulan:Derain -&gt; glink:hasStyle -&gt; aat:fauve
+-&gt; rdfs:label -&gt; &quot;Fauve&quot;&nbsp; </p>
+
+<p class="code">dc:creator -&gt; ulan:Matisse -&gt; glink:hasStyle -&gt;
+aat:fauve -&gt; rdfs:label -&gt; &quot;Fauve&quot;</p>
+
+<p >while on the schema level, this becomes a single path:</p>
+
+<p class="code">dc:creator -&gt; ulan:Person -&gt; glink:hasStyle -&gt;
+aat:Concept -&gt; rdfs:label -&gt; &quot;Fauve&quot;</p>
+
+<p >The paths are translated to English headers that mark the
+start of each cluster, and this already gives users an indication of why the
+results match their keyword. The path given above results in the cluster title,
+&ldquo;Works created by an artist with matching AAT style''. To explain the exact
+semantic relation between the result and the keyword searched on, the instance
+level path is displayed when hovering over a resulting image.</p>
+
+<h2>7. Vocabulary And Metadata Statistics</h2>
+<p >Table 1 shows the number of triples that are part of the vocabularies
+and metadata currently being used by the demonstrator. The table has three
+parts: </p>
+<ol>
+<li>
+the schemas (e.g. the RDF/OWL schema for WordNet defining notions
+such as &ldquo;SynSet&rdquo;), </li>
+
+<li>
+the vocabulary entries and their relationships, and </li>
+
+<li>
+the collection metadata. </li>
+</ol>
+<p >In total, these constitute a triple set of roughly 9,000,000
+triples. We plan to extend this continuously as more collections (and
+corresponding vocabularies) are being added. </p>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+ <tr>
+  <th>
+  Document</th>
+  <th>
+  Sources</th>
+  <th>
+  #triples</th>
+ </tr>
+ <tr>
+  <td colspan="3">
+  Schemas</td>
+ </tr>
+ <tr>
+  <td>
+  RDFS./OWL</td>
+  <td>
+  2</td>
+  <td>
+  358</td>
+ </tr>
+ <tr>
+  <td>
+  Annotation</td>
+  <td>
+  6</td>
+  <td>
+  769</td>
+ </tr>
+ <tr>
+  <td>
+  Vocabularies</td>
+  <td>
+  8</td>
+  <td>
+  1,225</td>
+ </tr>
+ <tr>
+  <td>
+  Collections</td>
+  <td>
+  1</td>
+  <td>
+  29,889</td>
+ </tr>
+ <tr>
+  <th colspan="3">
+  Vocabularies</th>
+ </tr>
+ <tr>
+  <td>
+  TGN</td>
+  <td>
+  4</td>
+  <td>
+  425,517</td>
+ </tr>
+ <tr>
+  <td>
+  ULAN</td>
+  <td>
+  1</td>
+  <td>
+  1,896,936</td>
+ </tr>
+ <tr>
+  <td>
+  AAT</td>
+  <td>
+  1</td>
+  <td>
+  249,162</td>
+ </tr>
+ <tr>
+  <td>
+  WordNet</td>
+  <td>
+  18</td>
+  <td>
+  2,579,206</td>
+ </tr>
+ <tr>
+  <th colspan="3">
+  Collections</th>
+ </tr>
+ <tr>
+  <td>
+  Artchive</td>
+  <td>
+  4</td>
+  <td>
+  74,414</td>
+ </tr>
+ <tr>
+  <td>
+  Rijksmuseum</td>
+  <td>
+  1</td>
+  <td>
+  27,933</td>
+ </tr>
+ <tr>
+  <td>
+  RVM</td>
+  <td>
+  1</td>
+  <td>
+  3,662,257</td>
+ </tr>
+</table>
+
+<p class=caption>Table 1: Number of triples for the different sources of vocabularies
+and collection metadata</p>
+
+<h2>Acknowledgements</h2>
+
+<p class="AcknowedgementsText">The E-Culture project is an application subproject
+within the context of the MultimediaN (&quot;Multimedia Netherlands'',
+  <a href="../http://www.multimedian.nl/" target="_blank">http://www.multimedian.nl</a>) project funded by the Dutch BSIK Programme.</p>
+
+<h1>References</h1>
+
+<p class="ReferencesText">de Boer, V., M. van Someren and B. Wielinga (2006).
+&ldquo;Extracting instances of relations from web documents using redundancy&rdquo;. In: <em>Proc.</em>
+<em>Third European Semantic Web Conference (ESWC'06)</em>, Budva, Montenegro.
+<a href="../http://staff.science.uva.nl/~vdeboer/publications/eswc06paper.pdf" target="_blank">http://staff.science.uva.nl/~vdeboer/publications/eswc06paper.pdf</a>.</p>
+
+<p class="ReferencesText">Miles, A., T. Baker and R. Swick (2006). Best practice
+recipes for publishing RDF vocabularies. Working draft, W3C Semantic Web Best
+Practices and Deployment Working Group.
+  <a href="../http://www.w3.org/TR/2006/WD-swbp-vocab-pub-20060314/" target="_blank">http://www.w3.org/TR/2006/WD-swbp-vocab-pub-20060314/</a>.</p>
+
+<p class="ReferencesText">van Assem, M., M. Menken, G. Schreiber, J. Wielemaker,
+and B. Wielinga (2004). &ldquo;A method for converting thesauri to RDF/OWL&rdquo;. In
+McLlraith, S.A., D. Plexousakis, and F. van Harmelen (Eds.) <em>Proc. Third Int.
+Semantic Web Conference ISWC 2004</em>. Hiroshima, Japan. Volume 3298 of LNCS.,
+Berlin/Heidelberg, Springer Verlag, pp. 17-31</p>
+
+<p class="ReferencesText">van Assem, M., A. Gamgemi and G. Schreiber (2006).
+&ldquo;Conversion of WordNet to a standard RDF/OWL representation&rdquo;. In: <em>Proc.
+LREC 2006</em>. <a href="../http://www.cs.vu.nl/~guus/papers/Assem06a.pdf" target="_blank">http://www.cs.vu.nl/~guus/papers/Assem06a.pdf</a></p>
+
+<p class="ReferencesText">Visual Resources Association Standards Committee
+(2000). <em>VRA Core Categories, Version 3.0.</em> Technical report, Visual
+Resources Association. <a href="../http://www.vraweb.org/resources/datastandards/vracore3/index.html" target="_blank">http://www.vraweb.org/resources/datastandards/vracore3/index.html</a></p>
+
+<p class="ReferencesText">Wielemaker, J., G. Schreiber, B.J. Wielinga (2003).
+&ldquo;Prolog-based infrastructure for RDF: performance and scalability&rdquo;. In Fensel,
+D., K. Sycara and J. Mylopoulos (Eds.) <em>The Semantic Web - Proceedings
+ISWC'03</em>. Sanibel Island, Florida. Volume 2870 of Lecture Notes in Computer
+Science. Berlin/Heidelberg, Springer Verlag, pp. 644-658.</p>
+
+<p class="ReferencesText">Wielemaker, J., G. Schreiber, B. Wielinga. &ldquo;Using
+triples for implementation: the Triple20 ontology-manipulation tool&rdquo;. In Gil,
+Y., E. Motta, R. Benjamins and M. Musen (Eds.) <em>The Semantic Web - ISWC 2005:
+4th International Semantic Web Conference</em>. Galway, Ireland, November 6-10,
+2005. Volume 3729 of Lecture Notes in Computer Science., Springer-Verlag, pp.
+773-785.</p>
+</div>
+
+                <!-- #EndEditable -->
+				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Ossenbruggen,
+		      J., et al., Searching and Annotating Virtual Heritage Collections
+		      with Semantic-Web Techniques<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2007: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics, published March 1, 2007  Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+http://www.archimuse.com/mw2007/papers/<!-- #BeginEditable "URL" -->ossenbruggen/ossenbruggen.html
+		  <!-- #EndEditable --></p>
+				<p class="references"><em><!-- InstanceBeginEditable name="Editorial Note" -->Editorial Note<!-- InstanceEndEditable --></em> </p>
+	  </div>
+<div id="sidebar">
+			<div id="side-nav">
+				<ul id="side-nav-list">
+					    <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+						<li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+						<li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+						<li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+						<li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+						<li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+						<li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+						<li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+				</ul>
+			</div>
+			<div id="search-site">
+				<form method="post" action="../http://search.archimuse.com/cgi-bin/htsearch">
+					<input type="hidden" name="format" value="builtin-long" />
+					<input type="hidden" name="method" value="and" />
+					<input type="hidden" name="config" value="htdig-mw2007" />
+					<input type="hidden" name="restrict" value="" />
+					<input type="hidden" name="exclude" value="" />
+					<input type="text" size="20" name="words" value="" id="searchmw" />
+					<input type="image" src="../../images/searchmw2007.gif" id="searchbox" name="search" />
+				</form>
+			</div>
+				<div id="sidebar-links">
+				<ul id="sidebar-links-list">
+					<li><a href="../../../index.html" class="produced-by">produced by<br />
+					    <img src="../../images/sidelogo.gif" width="144" height="37" alt="AMI logo" /></a></li>
+					<li><a href="../../../index.html">Join our mailing list</a></li>
+					<li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+					<img src="../../../external.gif?link=http://www.archimuse.com/ami.images/search.gif" alt="search" width="24" height="25" /></a></li>
+				</ul>
+		  </div>
+		</div>
+		<div id="footer">
+		  <div id="last-updated">
+          published: April 11, 2007<br />
+			last updated:<!-- #BeginDate format:Am1a -->October 28, 2010 12:23 PM<!-- #EndDate -->
+		        <div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+		  </div>
+			<div id="footer-content">
+				Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E 2P3 Canada<br />
+				Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+				
+				<script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2007";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2007 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				</script>	
+
+		<br />
+				Copyright &copy; 2006 - Archives &amp; Museum Informatics - All rights reserved.<br />
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/ossenbruggen/ossenbruggen.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:28:42 GMT -->
+</html>
+					

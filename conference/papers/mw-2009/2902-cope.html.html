@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2009-papers.dwt" codeOutsideHTMLIsLocked="true" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2009/papers/cope/cope.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:56:35 GMT -->
+<head>
+<!-- InstanceBeginEditable name="HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2009: Paper: Cope, A.S., The Interpretation of Bias (and the Bias of Interpretation)</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2009: Proceedings" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="Keywords" -->
+<meta name="Keywords" content=", paper, research, MW2009, conference, museum, museums and the web, mw, matw, museums &amp; the web, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online, world wide web, www, web site, website, museum web site, museum website, howto,  conferences, professional papers, peer-reviewed, peer reviewed, peer review, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="Description" -->
+<meta name="Description" content="Museums and the Web 2009: the international conference for culture and heritage on-line" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2009" />
+<!-- InstanceEndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<!-- InstanceBeginEditable name="charset" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="../../css/mw2009.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/papers.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/mw2009-noNews.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+</head>
+<body>
+<div id="container">
+  <div id="header" onclick="location.href='../../index.html';" style="cursor:pointer;"> </div>
+  <!--htdig_noindex-->
+  <div id="top-nav">
+    <ul id="top-nav-list">
+      <li><a href="../../register/index.html">Register</a></li>
+      <li><a href="../../dates/index.html">Key Dates</a></li>
+      <li><a href="../../sescal/index.html">Schedule</a></li>
+      <li><a href="../../local/index.html">Local Info</a></li>
+    </ul>
+    <!--/htdig_noindex-->
+  </div>
+  <div id="header-photo"> 
+	 <!-- InstanceBeginEditable name="header-photo" --> <img src="../../images/rotate/header-1.jpg"  height="132" width="229" alt="MW-photo" /> <!-- InstanceEndEditable --></div>
+<div id="print-title">
+	<h1>Museums and the Web 2009: the international conference for culture and heritage on-line</h1>
+	<h2>produced by Archives &amp; Museum Informatics</h2>
+	<h3>site at http://www.archimuse.com/mw2009/</h3>	 
+</div> 
+ <div id="date"> <a href="../../sescal/index.html">April 15-18, 2009</a><br />
+    <a href="../../local/index.html">Indianapolis, Indiana, USA</a> </div>
+  <div id="title">
+    <h1> 
+		<!-- InstanceBeginEditable name="PageTitle" --> The Interpretation of Bias (and the Bias of Interpretation) <!-- InstanceEndEditable --> </h1>
+  </div>
+  <!--htdig_noindex-->
+  <div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" -->
+		  <h2 class="Author">Aaron
+		  Straup Cope, Flickr</h2>
+	    <p class="URL"><a
+href="../http://www.flickr.com/">http://www.flickr.com</a></p>
+		<h3 class="AbstractTitle">Abstract</h3>
+		<p class="AbstractText">This
+		  is a story about Flickr, a popular online photo-sharing Web site, and some of
+		  the lessons learned by allowing users to add their photos to a map.</p>
+<!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+      <h2>This Is A Story About Naming Things</h2>
+      <p class="BlockQuote">A map is, in its primary
+        conception, a conventionalized picture of the Earth's pattern as seen from
+        above. <span class="BlockQuoteAuthor">(Erwin Raisz)</span></p>
+      <p class="BlockQuote">Every map is someone's way of
+        getting you to look at the world his or her way. <span class="BlockQuoteAuthor">(Lucy Fellows)</span></p>
+      <p><b>Geocoding </b>is the act of converting a named place or address into machine readable coordinates, typically a latitude and longitude
+        using the Mercator projection. This is Raisz' &quot;conventionalized
+        pattern&quot;.</p>
+      <p><b>Reverse-geocoding</b> is the act of taking a latitude and longitude and
+        converting it back in to a named place. This is Lucy Fellows' getting you to
+        &quot;look at the world her way&quot;.</p>
+      <p><b>Geotagging</b> is the act of assigning geographic metadata to a photograph. As location
+        information is increasingly stored in databases as a first-class data type, the
+        way dates are, the phrase &quot;geotagging&quot; might now be considered a
+        misleading. The term evolved at a time when few systems allowed users to index
+        geographic data explicitly and so, taking matters into their own hands, they
+        simply used existing tagging infrastructures to store, query and retrieve
+        location information using ad hoc techniques. And the name stuck.</p>
+      <p>When users geotag photos on Flickr they, typically, first
+        geocode an address to locate the place they want to say a photo was taken ,and Flickr then revers- geocodes that point in order
+        to display the name of the place the photo was taken in. Geocoding is the art
+        of inferring meaning from a multiplicity of written forms, but it is costly to
+        perform and not a particularly efficient way to store and retrieve documents,
+        photos in Flickr&rsquo;s case, that have been geo-referenced, particularly when the
+        initial geocoding may have been incorrect or used only to begin a more
+        fine-grained positioning.</p>
+      <p>  Which
+        means: This is a story about naming things.</p>
+      <p>It is easy to get caught up in the rhetoric of the digital
+        revolution and believe in what I think of as the illusion of addressability.
+        Everything is just ones and zeroes and can therefore can be given a unique
+        identifier, goes the argument. The IPv6 standard, for example, supports 2x128 possible
+        IP addresses, leading many to claim every object created and every human born
+        will be issued their own identifier and, in turn, the world will finally be
+        connected in a seamless Web devoid of ambiguity. Unfortunately, the only
+        &quot;people&quot; who relate to the world this way are robots.</p>
+      <p>Once upon a time, I worked at a small Internet service
+        provider where we all shared the responsibility of fielding technical support
+        calls. One day I answered the phone and was asked to explain
+        to a person only just beginning to use the Web why the
+        &quot;whitehouse.com&quot; Web site was full of porn. This was a
+        reasonable question, since most people were unaware that domain names are
+        simply conversational short-cuts for the numeric
+        addresses that actually identify sites on the Internet. I also explained that
+        same &quot;name&quot; may exist in multiple domain spaces, none of which needed
+        to know anything about the other, and that the actual United States government Web
+        site was located at whitehouse .gov.</p>
+      <p>As it happens, the whitehouse .com Web
+        site is no longer a porn site; &nbsp;instead it is a news and information portal, but that
+        only serves to illustrate the still-fugitive nature of &quot;named
+        places&quot;, even on the Web. That transience is further reflected in the
+        commercial nature of the Internet which requires that ownership of a domain
+        name be renewed at a yearly cost, and failure to do so is all it takes for
+        another interested party to claim &ldquo;your&rdquo; name.</p>
+      <p>The problem is not that both whitehouse .com and whitehouse .gov have different IP
+        addresses. The problem is that all names are shortcuts for interlocking and
+        constantly evolving sets of ideas, assumptions and relationships that computer
+        science struggles, and generally fails, to keep pace with. The same issues
+        manifest themselves in daily life as the association of French Champagne
+        producers, straddling both sides of the debate over globalization and the
+        politics of identity and terroir, take out full page advertisements in U.S.
+        magazines (New Yorker 20090119 pg. 7) decrying the use of the name &quot;Champagne&quot; by wines
+        produced in California.</p>
+      <p>Long before the Internet exploded into everyone's lives we
+        were collecting photos in shoeboxes and writing dates and place names on the
+        back of each image; fussing over the time it took to do but eventually
+        regretting the decision not to. Place is history, and names are a reflection of
+        the experiences we share with close relations, the larger community and even
+        our own past. For all its ambiguity and shifting meaning, the name we give a
+        place is the air that a representation of that place breathes.</p>
+      <p>Geocoding a name, when someone searches for, or geotags, a
+        photo, is only one-half of the problem. It allows you
+        to fix a photo to a map, but how then do you connect that spot to memory and
+        the history of the event?</p>
+      <h2>How Does It Work?</h2>
+      <p class="BlockQuote">We need to understand the difference between location and place.
+        Computers and mobiles are very good at location, but we describe where we are as
+        place, where culture meets location.&nbsp; <span class="BlockQuoteAuthor">(Matt Jones)</span></p>
+      <p>Flickr works with a large database of places, historical and
+        contemporary, called GeoPlanet. Every place is assigned a unique identifier
+        called a Where On Earth (WOE) ID and contains information about its ancestors,
+        children, sibling and neighbouring places. For scaling and performance reasons
+        we opted to store only pointers to individual WOE IDs in the Flickr database
+        itself. This meant that we had to boil the ocean a little in order to trim the
+        number of possible members in any given location hierarchy. Eventually we
+        settled on the following:</p>
+      <ul>
+        <li> Neighbourhoods</li>
+        <li> Localities</li>
+        <li> Counties
+          (optional)</li>
+        <li> Regions</li>
+        <li> Countries</li>
+        <li> Continents</li>
+      </ul>
+      <p>It is worth noting that this is only one possible hierarchy,
+        and some of the choices we've made were due solely to the mechanics of
+        operating a site as large as Flickr. If only as an exercise, a critic might
+        argue that our model is biased towards a philosophy of liberal economic
+        governance and traditional capitalist land ownership. Although it would be
+        wrong to ascribe that much motive to our actions (we simply started the geo
+        project with an existing data source that had been originally developed for use
+        by government agencies and worked with what we had), it is interesting to
+        consider the possible facets, still present, in an otherwise seemingly rigid
+        hierarchy.</p>
+      <p>A simple example is to contrast the way that Flickr and
+        FireEagle (a Web application for collecting and sharing personal locative
+        information) handle &quot;localities&quot; since the two sites share an almost
+        exact hierarchy of places. Flickr treats anything with neighbourhoods as a
+        locality, so in our model Duncans Mills, CA (pop. 84) and Mexico City (pop.
+        19M) are assumed to be the same &quot;type&quot; of place. FireEagle does not.
+        If you authorize a third-party application to access information about your
+        whereabouts at a city level, there is an expectation, assuming that you share
+        an expectation that cities are &quot;big&quot;, that your actual location will
+        be suitably obfuscated (or &quot;fuzzed&quot;), and in a town of 84 people
+        there's not a lot of room to get fuzzy in.</p>
+      <p>With all that in mind, when a Flickr user drops a photo on the
+        map:</p>
+      <ul>
+        <li> We calculate a search radius based on the
+          map's zoom level, which is mapped to its corresponding place type in the Flickr
+          hierarchy.</li>
+        <li> We query GeoPlanet for all the places of
+          that type (say, neighbourhoods) that intersect the query radius.</li>
+        <li> We filter the list to only those places
+          whose bounding box overlaps the center point, factoring in a degree of allowable
+          fuzziness. If the center point falls outside a bounding box by a hundred meters,
+          then it's usually still worth considering.</li>
+        <li> We then iterate over the second list
+          measuring both the distance of the center point to the logical and political
+          center point of each bounding box.</li>
+        <li> As a rule, the bounding box with the
+          shortest distance wins, but the process is often messier and involves testing
+          whether one bounding box is contained by another or whether a particular
+          administrative relationship (the town where mail is typically delivered in the
+          case of very small places) against the geographic reality.</li>
+        <li> If
+          none of those tests succeed in finding a suitable location, we determine the
+          parent of the place type we've just tested and try again until we&rsquo;ve exhausted
+          all the possible place types in our hierarchy. Once we have established a
+          &quot;root&quot; location we then query for its ancestors and store each along
+          with its WOE ID in the Flickr database.</li>
+      </ul>
+      <p>For example, if you've tried to geotag a photo in the woods of
+        Siberia and we can't find a matching town, we should at least be able to tell
+        you the photo was taken in Siberia or, failing that, Russia. Sometimes, though,
+        after all of that work we still choose to display the wrong place.</p>
+      <h2>Synthetic Telepathy</h2>
+      <p class="BlockQuote">Location is an 80/20 problem where the 20 really matters. <span class="BlockQuoteAuthor">(Aaron Straup Cope)</span></p>
+      <p>Until recently we've only ever been able to work with bounding
+        boxes, a limiting function of the available data from our provider. Despite
+        that, we have been surprisingly successful at mapping location to place even in
+        the case of neighbourhoods. But there have always been mistakes, and no one is
+        very tolerant of mistakes about &quot;place&quot;. Never mind so-called
+        disputed places (Kashmir, the West Bank, Cyprus, etc.): all neighbourhoods are
+        &quot;disputed&quot; around the edges. This is often true of localities, as well.
+        Our experience, reverse geocoding photos at Flickr, has been that there are few
+        better ways to pick a fight than to tell someone what neighbourhood they are in
+        and being wrong.</p>
+      <p>The problem of course is that even if we mapped every
+        combination of latitudes and longitudes, multiplied by an infinite number of
+        decimal points, to a single place, people still wouldn't agree on the answer.
+        In the same way that a point is really just a very small bounding box, a single
+        point is also a flattening of the history of that place and, ultimately, there
+        is only so much human subtlety you can, literally, codify in to a computer
+        program.</p>
+      <p>Instead of simply trying to keep pace with all of human
+        history and prejudice as a series of cascading if/else statements, what if we
+        laid our cards (the named places that we think a pair of latitude and longitude
+        coordinates might be) on the table, and when we are wrong, give people the
+        chance to tell us what they meant and to learn from that? What if the next time
+        you geotagged a photo, we compared where we think that place is against the
+        places that you've told us are nearby? If not you, then your
+        contacts? What if every single person on Flickr points out that a
+        neighbourhood, or town, is just plain wrong?</p>
+      <p>By adding a relatively small change to the site, allowing
+        people to indicate that the place we had associated with a location was
+        incorrect and allowing them to choose from a list of available options, we were
+        able to better reflect their understanding of the
+        world and begin to map facts on the ground rather than from on high. In
+        the first week alone, we received one hundred thousand corrections! Depending on your point of view, this is either a
+        testament to community-driven data, and so-called neo-geography, or proof that
+        everything we've done to date was broken and wrong.</p>
+      <h2>The Shape of Observation</h2>
+      <p class="BlockQuote">&quot;We should be mapping information that in some ways has
+        been historically unmappable because it is 1) not valued or is 2) actively seen
+        as threatening or is 3) simply too hard to map using traditional tools.&quot;
+        <span class="BlockQuoteAuthor">(Anselm Hook)</span></p>
+      <p>I tell these stories because as of this writing Flickr has
+        over 100 million geotagged photos, each of which has up to six unique place
+        (WOE) IDs associated with it. Over time we've wondered: if we plotted all the
+        geotagged photos associated with a particular WOE ID, would we have enough data
+        to generate a mainly accurate contour of that place? Not a perfect
+        representation, perhaps, but something more fine-grained than a bounding box.
+        It turns out we can, effectively rendering the contour of all the points
+        associated with a place into a recognizable shape, using software we developed
+        called Clustr.</p>
+      <p>Clustr is a thin wrapper around the open source Computational
+        Geometry Algorithms Library (CGAL) and uses a technique called &quot;alpha
+        shapes&quot; to calculate the shape formed by a set of points:</p>
+      <p class="BlockQuote">Imagine a huge mass of ice-cream making up the space ... and containing the points as &quot;hard&quot; chocolate
+        pieces. Using one of those sphere-formed ice-cream spoons we carve out all
+        parts of the ice-cream block we can reach without bumping into chocolate
+        pieces, thereby even carving out holes in the inside (eg. parts not reachable
+        by simply moving the spoon from the outside). We will eventually end up with a (not necessarily convex) object bounded by caps, arcs and
+        points. If we now straighten all &quot;round&quot; faces to triangles and line
+        segments, we have an intuitive description of what is called the alpha shape.... <span class="BlockQuoteAuthor">(Tran Kai Frank Da, Mariette
+        Yvinec)</span></p>
+      <p>&nbsp;The
+        results have been stunning, and while we can draw a near perfect outline of the
+        United States or France or Texas using no other geographic information than the
+        locations associated with photos, many, if not most, of the shapes we create
+        look a little weird. Possibly even &ldquo;wrong&rdquo;. This is
+        both okay and to be expected for a few reasons:</p>
+      <ul>
+        <li> Sometimes we just don&rsquo;t have enough
+          geotagged photos in a spot to make it is possible to create a shape. Even if we
+          do have enough points to create a shape there aren&rsquo;t&nbsp; enough to create a&nbsp; shape that you&rsquo;d recognize as the place
+          where you live. We chose&nbsp; to publish those shapes anyway because it shows both
+          what we know and don&rsquo;t know about a place, and it encourages users to help us
+          fix mistakes.</li>
+        <li> We did a bad job
+          reverse-geocoding photos for a particular spot and they&rsquo;ve ended up
+          associated with the wrong place. We&rsquo;ve learned quite a lot about how to do a
+          better job of it in the two and a half years we&rsquo;ve been doing this, but human
+          awareness is fickle and does not always lend itself to being formalized.</li>
+        <li> Sometimes, the data we have for trying to
+          work out what&rsquo;s going on is just bad or out of date, and we rely on users
+          pointing out what is obvious to them but novel and unexpected to us.</li>
+        <li> We are not very sophisticated yet in how
+          we assign the size of the alpha variable when we generate shapes. As far as we
+          can tell, no one else has done this sort of thing so as with reverse-geocoding,
+          we are learning as we go. For example, with the exception of continents and
+          countries, we boil all other places down to a single contiguous shape. We do
+          this by slowly cranking up the size of the ice cream scoop; this in turn can
+          lead to a loss of fidelity. There is a lot left to learn.</li>
+      </ul>
+      <p>Does the &quot;shape&quot; of Florida, or of Italy, include
+        the waters that lie between the mainland and the surrounding islands? It&rsquo;s not
+        usually the way we imagine the territory that a place occupies, but the warping
+        of the coast of Massachusetts by people taking, and geotagging, photos while on
+        whale-watching boats is not an entirely inaccurate depiction of place either.
+        On the other hand, including the ocean between California and Hawaii as &quot;part
+        of&quot; the United States would be kind of dumb.</p>
+      <h2>&quot;Donut Holes&quot;</h2>
+      <p class="BlockQuote">They do not detail locations in space but histories of
+        movement that constitute place. <span class="BlockQuoteAuthor">(Rob Kitchin, Chris Perkins)</span></p>
+      <p>More recently, while generating visualizations of these place
+        shapes, we've noticed some interesting patterns. If we draw the shape of the
+        city of Paris and then, on top of that, draw the shapes of all the city's child
+        neighbourhoods, we see a richer and subtler definition of its boundaries.</p>
+      <p>The first outline maps roughly to the extremities of the RER,
+        the commuter train that services Paris and the surrounding suburbs. This is a
+        fairly accurate representation of the &ldquo;greater metropolitan&rdquo; area of Paris,
+        reflected in both popular folklore and government administrivia as more and
+        more people shift from rural to urban living. The rest, taken as a whole,
+        follows closer to the shape of the old city gates that most people think of
+        when asked to imagine Paris. Which one is right? Both, obviously!</p>
+      <p>Cities long ago stopped being defined by the walls that
+        surround(ed) them. There is probably no better place in the world to see this
+        than Barcelona which first burst out of its Old City with the construction of
+        the Eixample at the end of the 19th century, and then again, after the wars of
+        the 20th century, pushed further out towards the hills and rivers that surround
+        it.</p>
+      <p>There are lots of reasons to criticize urban sprawl as a
+        phenomenon, but sprawl, too, is still made of people who over time inherit,
+        share and shape the history and geography they live in. Whether it&rsquo;s Paris, Los
+        Angeles, William Gibson&rsquo;s dystopic &ldquo;Boston-Atlanta Metropolitan Axis&rdquo; (BAMA) or
+        the San Francisco &ldquo;Bay Area,&rdquo; they all encompass wildly different communities whose
+        inhabitants, in spite of the grievances harboured towards one another, often
+        feel as much of a connection to the larger whole as they do to whatever
+        neighbourhood, suburb or village they spend their days and nights in.</p>
+      <p>That&rsquo;s one reason it&rsquo;s so interesting to look at the shape of
+        cities and see how they spill out beyond the boundaries of traditional maps and
+        travel guides. In the example above, the shape for Paris completely engulfs the
+        commune of Orly, 20 kilometers to the South of central Paris: this &nbsp;makes a
+        certain amount of sense. It also contains Orly airport which isn&rsquo;t that notable except that Flickr treats airports as though they were
+        cities in their own right; the realities of contemporary travel mean that
+        airports have evolved from being simple gateways to capital-P places with their
+        own culture, norms and gravity. So, now you have cities contained within cities
+        which most people would tell you are just neighbourhoods.</p>
+      <p>As of this writing, we&rsquo;ve finished rendering the third batch
+        of shapes for the corpus of places in the Flickr database and looking ahead are
+        wondering whether we should also be rendering shapes based on the
+        &ldquo;relationship&rdquo; of one place to another. Rendering the shape of the child places
+        for a city or a country would allow you to see a city&rsquo;s &ldquo;center&rdquo; but also
+        provide a way to filter out parts of a shape with low Earthiness (aka water)
+        quotient, typically countries.</p>
+      <p>The issue is not to prevent, or correct, shapes that provide a
+        false view, because I don&rsquo;t think they do. Schuyler Erle, developer of the
+        Clustr application, observed while we were getting all this stuff to work in
+        the first place and testing the neighbourhoods that border the San Francisco
+        Bay that they are really &ldquo;the shapes of people looking at the city&rdquo;. They are each different, but the same.</p>
+      <p>But maybe we should also map the neighbourhoods that aren&rsquo;t considered the immediate children of a city but which overlap its boundaries.
+        What if you could call an API method to return the list or the shape of a
+        place&rsquo;s &ldquo;cousins&rdquo;? What could that tell us about a place?</p>
+      <h2>Communities of Authority</h2>
+      <p class="BlockQuote">The &ldquo;long here&rdquo; that Flickr represents back to me is
+        becoming only more fascinating and precious as geolocation starts to help me
+        understand how I identify and relate to place. The fact that Flickr&rsquo;s mapping
+        is now starting to relate location to me the best it can in human place terms
+        is fascinating ... but where it falls down it falls down gracefully, inviting
+        corrections and perhaps starting conversation &nbsp;<span class="BlockQuoteAuthor">(Matt Jones)</span></p>
+      <p>We could have released these shapes before the corrections
+        project, but then it would have been little more than a closed cycle, where our
+        misinterpretations of place were relayed back to our data provider and so on.
+        By giving users the ability to signal their interpretation of place, we not
+        only break the feedback loop, but also provide a way for those corrections to
+        be fed back in to Flickr's reverse-geocoding engine to better geotag photos in
+        the future: we use the wisdom of the community to give shape and nuance, and
+        voice, to the authority of the dataset that we are working from.</p>
+      <p>As with any visualization of aggregate data, there are likely
+        to be areas of contention. One of the reasons we&rsquo;re excited to make the data,
+        via the Flickr Application Programming Interface (API), available is that much
+        of it simply isn&rsquo;t available anywhere under a non-commercial license, and the
+        users and the developer community who make up Flickr have a gift for building
+        magic on top of the API so we&rsquo;re doubly-excited to see what people do with it.</p>
+      <p>Clustr, the software used to generate shapes, was released
+        under an open source software license and is designed to work with any set of
+        latitudinal and longitudinal derived points. In the future we hope to add a
+        feature to assign an abstract weighting to any individual point to affect how it
+        is interpreted by the application. For Flickr, this weighting might be whether
+        or not its associated photo was corrected or whether the
+        location was offered as a suggestion by another user. Another limiting
+        agent might be whether a photo was geotagged by a user who could be considered
+        a resident of that place, rather than a tourist or visitor. </p>
+      <p>But more than that, we hope other projects will start to map
+        the shape of their projects and share them with the wider community.</p>
+      <h2>History Boxes</h2>
+      <p class="BlockQuote">The
+        (Minnesota Historical) Society has the largest collection in the universe of
+        Minnesota fiction and many of these books create thinly veiled places based on the
+        author's experience with an authentic local place. <span class="BlockQuoteAuthor">(Patrick
+        Coleman)</span></p>
+      <p>What are the shapes of user-defined places? The first place
+        you kissed your spouse? Napoleon's march in, and then back out, of Russia? Your daily commute? Does the shape of New York City's
+        &quot;ground zero&quot; extend beyond the city blocks excavated after the World
+        Trade Center towers fell, to the places that people ran to, or to the vantage
+        point from which a person saw events unfold?</p>
+      <p>The Massachusetts Institute of Technology's SENSEable Cities
+        project has been researching and visualizing the movement of tourists in
+        Barcelona through the photos they've posted to Flickr, since 2007. What would
+        it mean, not simply to plot those photos as a cloud of isolated events, but to
+        give them shape, and meaning, as entirely new neighbourhoods or temporary
+        cities in time, like Black Rock City which seems to emerge fully-formed out of
+        the Nevada desert for the annual Burning Man event, only to disappear and
+        &quot;leave no trace&quot; (except, as it happens for a lot of geotagged
+        photos) ten days later?</p>
+      <p>Stamen Design's Oakland Crimespotting is an interactive map
+        for visualizing and understanding crimes in the city of Oakland. By filtering
+        incident reports by date and type, a viewer is able to see both the shape of
+        criminal behaviour in the city and also the shape the city's response to it;
+        for example, the seemingly clockwork intervals between no activity in a
+        neighbourhood followed by nearly block-to-block reports of prostitution
+        arrests. What is the shape of the history unseen in a place?</p>
+      <p>&quot;Over 9, 000 Londoners lost their lives to V2 rocket
+        strikes in World War 2,&quot; writes Tom Taylor, creator of the
+        rocketstrikes.iamnear.net Web site. &quot;Below are the five ... rocket strike
+        locations&quot; nearest to Westminster. Financial institutions and lenders may
+        want to pattern the world with spending habits and agency, but I'd like to use
+        the same tools to see the pattern of nearby. We all have friends who've sat in
+        the same seat on the same airplane flying back and forth between destinations,
+        only to have a third friend, years later with the aid of the Internet and a
+        GPS-enabled device, see a photo of that seat and realize they are sitting only
+        meters away. Not on the same plane, but in the same physical space that both
+        planes occupied and the same place, the same anti-space, that anyone seated on
+        a plane waiting to taxi from the terminal to the runway inhabits.</p>
+      <p> You
+        are here, so say all the maps.</p>
+      <h1>The Hammock of Interpretation</h1>
+      <p>Place is history, and if the Internet is even half the
+        &quot;architecture of participation&quot; that its supporter claim, then maybe
+        history need no longer be written by the victors alone. Given the chance, what
+        are the dinner-time, war-time and drunken
+        kitchen-party stories that the places we have known would tell?</p>
+      <p> What
+        would they name?</p>
+      <h2>References</h2>
+      <h3 class="Sub-heading">For Quotations </h3>
+      <p class="ReferencesText">(Raisz, Fellows)<a
+href="../http://cyberbadger.blogspot.com/2008/11/map-studies-manifesto-complete.html"> http://cyberbadger.blogspot.com/2008/11/map-studies-manifesto-complete.html</a></p>
+      <p class="ReferencesText">(Jones) <a
+href="../http://www.guardian.co.uk/media/pda/2009/jan/30/mobilephones-startups">http://www.guardian.co.uk/media/pda/2009/jan/30/mobilephones-startups</a></p>
+      <p class="ReferencesText">(Cope) <a
+href="../http://www.aaronland.info/weblog/2008/07/27/invisible/#corrections">http://www.aaronland.info/weblog/2008/07/27/invisible/#corrections</a> </p>
+      <p class="ReferencesText">(Hook) <a
+href="../http://lists.burri.to/pipermail/geowanking/2008-September/005594.html">http://lists.burri.to/pipermail/geowanking/2008-September/005594.html</a> </p>
+      <p class="ReferencesText">(Da, Yvinec) <a
+href="../http://www.cgal.org/Manual/3.2/doc_html/cgal_manual/Alpha_shapes_3/Chapter_main.html">http://www.cgal.org/Manual/3.2/doc_html/cgal_manual/Alpha_shapes_3/Chapter_main.html</a> </p>
+      <p class="ReferencesText">(Kitchin, Perkins) <a
+href="../http://cyberbadger.blogspot.com/2008/11/map-studies-manifesto-complete.html">http://cyberbadger.blogspot.com/2008/11/map-studies-manifesto-complete.html</a> </p>
+      <p class="ReferencesText"> (Jones) <a
+href="../http://magicalnihilism.wordpress.com/2008/10/11/bionic-noticing-on-irving-street/">http://www.magicalnihilism.wordpress.com/2008/10/11/bionic-noticing-on-irving-street/</a></p>
+      <p class="ReferencesText">(Coleman) <a
+href="../http://www.placeography.org/index.php/Project:Pseudonymous_Minnesota">http://www.placeography.org/index.php/Project:Pseudonymous_Minnesota</a> </p>
+      <h3 class="BodyBullet"><b>Sources</b></h3>
+      <p class="ReferencesText"><a href="../http://www.flickr.com/">http://www.flickr.com/</a></p>
+      <p class="ReferencesText"><a href="../http://www.aaronland.info/weblog/2008/07/27/invisible/#corrections">http://www.aaronland.info/weblog/2008/07/27/invisible/#corrections</a></p>
+      <p class="ReferencesText"><a href="../http://code.flickr.com/blog/2008/08/08/location-keeping-it-real-on-the-streets-yo/">http://code.flickr.com/blog/2008/08/08/location-keeping-it-real-on-the-streets-yo/</a></p>
+      <p class="ReferencesText"><a
+href="../http://code.flickr.com/blog/2008/10/30/the-shape-of-alpha/">http://code.flickr.com/blog/2008/10/30/the-shape-of-alpha/</a></p>
+      <p class="ReferencesText"><a
+href="../http://code.flickr.com/blog/2009/01/12/living-in-the-donut-hole/">http://code.flickr.com/blog/2009/01/12/living-in-the-donut-hole/</a> </p>
+      <p class="ReferencesText"><a
+href="../http://www.flickr.com/services/api/flickr.places.getInfo.html">http://www.flickr.com/services/api/flickr.places.getInfo.html</a></p>
+      <p class="ReferencesText"><a
+href="../http://www.flickr.com/services/api/flickr.places.getShapeHistory.html">http://www.flickr.com/services/api/flickr.places.getShapeHistory.html</a></p>
+      <p class="ReferencesText"><a href="../http://code.flickr.com/svn/trunk/clustr/">http://code.flickr.com/svn/trunk/clustr/</a></p>
+      <p class="ReferencesText"><a href="../http://www.cgal.org/">http://www.cgal.org</a>/</p>
+      <p class="ReferencesText"><a href="../http://senseable.mit.edu/">http://senseable.mit.edu</a>/</p>
+      <p class="ReferencesText"><a href="../http://oakland.crimespotting.org/">http://oakland.crimespotting.org/</a></p>
+      <p class="ReferencesText"><a href="../http://rocketstrikes.iamnear.net/?q=w1a+1aa">http://rocketstrikes.iamnear.net/?q=w1a+1aa</a></p>
+      <p class="ReferencesText"><a href="../http://www.fireeagle.com/">http://www.fireeagle.com</a></p>
+      <p class="ReferencesText"><a href="../http://www.fireeagle.com/">http://developer.yahoo.com/geo/</a></p>
+      <p class="ReferencesText"><a href="../http://en.wikipedia.org/wiki/The_Sprawl">http://en.wikipedia.org/wiki/The_Sprawl</a></p>
+      <p class="ReferencesText"><a href="../http://en.wikipedia.org/wiki/Schuyler_Erle">http://en.wikipedia.org/wiki/Schuyler_Erle</a></p>
+      <p class="ReferencesText"><a href="../http://www.jgballard.com/airports.htm">http://www.jgballard.com/airports.htm</a></p>
+      <p class="ReferencesText"><a
+href="../http://www.aaronland.info/weblog/2008/07/27/invisible/">http://www.aaronland.info/Weblog/2008/07/27/invisible/#historybox</a>&nbsp; </p>
+      <!-- InstanceEndEditable --> </div>
+  			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->Cope, A.S.,  The Interpretation of Bias (and the Bias of Interpretation) <!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2009: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2009/papers/<!-- #BeginEditable "URL" -->cope/cope.html <!-- #EndEditable --></p>
+	</div>
+</div>
+  <!--htdig_noindex-->
+  
+  <div id="sidebar">
+    <div id="side-nav">
+      <ul id="side-nav-list">
+        <li id="workshops"><a href="../../workshops/index.html" class="menu">Workshops</a></li><li id="sessions"><a href="../../sessions/index.html" class="menu">Sessions</a></li><li id="speakers"><a href="../../speakers/index.html" class="menu">Speakers</a></li><li id="interactions"><a href="../../interact/index.html" class="menu">Interactions</a></li><li id="demonstrations"><a href="../../demos/index.html" class="menu">Demonstrations</a></li><li id="events"><a href="../../events/index.html" class="menu">Events</a></li><li id="exhibits"><a href="../../exhibit/index.html" class="menu">Exhibits</a></li><li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li><li id="pc"><a href="../../thanks/index.html" class="menu">Committees</a></li><li  id="community"><a href="../http://conference.archimuse.com/" class="menu">Community On-line</a></li>
+      </ul>
+    </div>
+    <div id="search-site">
+<form method="get" id="searchform" action="http://wp.museumsandtheweb.com/">
+<input type="text" class="field" name="s" id="s" placeholder="Search">
+<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+</form>
+    </div>
+        <div id="addthis">
+    <!-- AddThis Button BEGIN -->
+	<script type="text/javascript">var addthis_pub="archimuse";</script>
+	<script type="text/javascript">var addthis_brand = "archimuse";</script>
+	<script type="text/javascript">var addthis_options = 'twitter, facebook, linkedin, delicious, email, digg, favorites, more';</script>
+	<a href="../http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="../../../external.gif?link=http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" alt="Share"/></a><script type="text/javascript" src="../http://s7.addthis.com/js/200/addthis_widget.js"></script><!-- AddThis Button END -->
+</div>
+    
+    <div id="sidebar-links">
+      <ul id="sidebar-links-list">
+        <li><a href="../../../index.html" class="produced-by">produced by<br />
+          <img src="../../images/sidelogo.png" width="144" height="37" alt="AMI logo" /></a></li>
+        <li><a href="../../../index.html">Join our mailing list</a></li>
+        <li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+          <img src="../../images/search.gif" alt="search" width="24" height="25" border="0" /></a></li>
+      </ul>
+    </div>
+    <div id="sidebar-acknowledge">
+
+      <div id="sponsor">
+</div>
+    </div>
+   <!--/htdig_noindex-->
+  </div>
+  <div id="footer">
+    <div id="last-updated"> last updated: <!-- #BeginDate format:Am1a -->October 27, 2010 4:57 PM<!-- #EndDate -->
+      <br />
+[analytics code]<br />
+<div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+    </div>
+    <!--htdig_noindex-->
+    <div id="footer-content">
+      <p>Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E
+        2P3 Canada<br />
+        Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2009";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2008 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				  </script>
+        <br />
+        Copyright &copy; 2009 &ndash; Archives &amp; Museum Informatics &ndash; All
+        rights reserved.<br />
+      </p>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2009/papers/cope/cope.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:56:35 GMT -->
+</html>

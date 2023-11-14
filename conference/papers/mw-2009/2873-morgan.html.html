@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2009-papers.dwt" codeOutsideHTMLIsLocked="true" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2009/papers/morgan/morgan.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:57:47 GMT -->
+<head>
+<!-- InstanceBeginEditable name="HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2009: Paper: Morgan, R., What is Your Museum Good at, and How Do You Build an API for It?</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2009: Proceedings" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="Keywords" -->
+<meta name="Keywords" content="APIs, technical, services, communities, advocacy, value-add, paper, research, MW2009, conference, museum, museums and the web, mw, matw, museums &amp; the web, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online, world wide web, www, web site, website, museum web site, museum website, howto,  conferences, professional papers, peer-reviewed, peer reviewed, peer review, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="Description" -->
+<meta name="Description" content="Museums and the Web 2009: the international conference for culture and heritage on-line" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2009" />
+<!-- InstanceEndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<!-- InstanceBeginEditable name="charset" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="../../css/mw2009.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/papers.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/mw2009-noNews.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+</head>
+<body>
+<div id="container">
+  <div id="header" onclick="location.href='../../index.html';" style="cursor:pointer;"> </div>
+  <!--htdig_noindex-->
+  <div id="top-nav">
+    <ul id="top-nav-list">
+      <li><a href="../../register/index.html">Register</a></li>
+      <li><a href="../../dates/index.html">Key Dates</a></li>
+      <li><a href="../../sescal/index.html">Schedule</a></li>
+      <li><a href="../../local/index.html">Local Info</a></li>
+    </ul>
+    <!--/htdig_noindex-->
+  </div>
+  <div id="header-photo"> 
+	 <!-- InstanceBeginEditable name="header-photo" --> <img src="../../images/rotate/header-1.jpg"  height="132" width="229" alt="MW-photo" />
+	 <!-- InstanceEndEditable --></div>
+<div id="print-title">
+	<h1>Museums and the Web 2009: the international conference for culture and heritage on-line</h1>
+	<h2>produced by Archives &amp; Museum Informatics</h2>
+	<h3>site at http://www.archimuse.com/mw2009/</h3>	 
+</div> 
+ <div id="date"> <a href="../../sescal/index.html">April 15-18, 2009</a><br />
+    <a href="../../local/index.html">Indianapolis, Indiana, USA</a> </div>
+  <div id="title">
+    <h1> 
+		<!-- InstanceBeginEditable name="PageTitle" --> 
+
+		<span class="PaperTitle">What is Your Museum Good at, and How Do You Build an API
+    for It?</span><!-- InstanceEndEditable --> </h1>
+  </div>
+  <!--htdig_noindex-->
+  <div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+        <h2 class="PaperTitle"><a href="../../bios/au_105011443.html">Richard Morgan</a>, Victoria and Albert Museum, London, UK</h2>
+        <h3 class="AbstractTitle">Abstract</h3>
+        <p class="AbstractText">There has been an encouraging surge of interest in the
+    museums sector in opening up museum data and building APIs on museum
+    collections databases. However, a museum's collections are not the only and
+    sometimes not even the most interesting service which a museum provides.
+    Events, communities, shopping, learning and interpretation are all areas where
+    museums have lively and engaging offerings. These areas typically have a Web
+    presence, and therefore the possibility exists to build an API or make use of
+    an existing API to open up that offering. </p>
+  <p class="AbstractText">Furthermore, as museum collections&rsquo; content becomes more
+    readily accessible on the Web, museums need to focus more and more on their
+    value-add, the expertise and authority which they bring to the interpretation
+    of their own collections and those of others.</p>
+  <p class="AbstractText">Keywords: APIs, technical, services, communities,
+    advocacy, value-add</p>
+		<!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+
+  
+    <h2>Introduction</h2>
+      <p>The very fact that it is now relatively easy to build a
+        simple API for a museum's Web offer means that museums need to consider
+        seriously what value-add they bring to their collections in order to stay
+      relevant in the digital arena.</p>
+      <p>This paper describes an approach taken by the Victoria and
+        Albert Museum (V&amp;A) to developing a simple API not only for
+      collections-based material but also for the rest of the museum.</p>
+      <p>This paper is given in conjunction with a workshop at the
+        Museums and the Web Conference 2009. The paper focuses on the technical
+        approach to API building (&ldquo;How do you build an API for it?&rdquo;) while the workshop
+        is concerned with what sort of API a museum should be building in the first
+        place (&ldquo;What is your museum good at?&rdquo;). The aim here is to present the steps
+        and decisions taken by the V&amp;A in the course of developing a suite of APIs
+        such that others can replicate those steps and assess whether the decisions
+        taken would be appropriate or not for their own environment. In the workshop
+        context, the aim is to explore further what sorts of services a museum could
+      offer beyond the obvious making available of collections information. </p>
+      <h2>Web Application Frameworks</h2>
+      <p>The V&amp;A has an in-house development team of two and
+        routinely hires digital agencies to assist with certain projects. The
+        development of an API is not a project with a clear start and end, but is more
+        an approach to the development of any digital project. A technical solution was
+        required, one which avoided excessive amounts of unmaintainable bespoke code
+        and vendor lock-in to a third party. With many other projects to be delivered,
+        the V&amp;A also needed a solution which allowed rapid application development
+        so that progress could be made quickly but not necessarily within a single,
+      allotted period of time.</p>
+      <p>The V&amp;A is the lead partner in the National Museums
+        Online Learning Project (NMOLP) and was able to benefit from the knowledge
+        gained in that project's initial phases. Makewell (2008) indicated that the
+        approach of setting up OAI harvesting of museum collections had been rejected
+        after attempts to do so had led nowhere. As a result we also needed a solution
+        which allowed us to decouple the rapid development of an API from the slower
+      development of our internal systems.</p>
+      <p>The V&amp;A found the right balance between structure and
+        flexibility in a group of recently matured Web application frameworks, and the
+      museum now uses Symfony, Drupal and Django for all Web development projects.</p>
+      <p>Of these, Django, which is written in the python
+        programming language, was considered the most effective for delivering an API
+        because it was the easiest to scale and, using python, facilitated robust but
+        rapid coding. The python language and Django framework are easy to learn and
+      most appropriate to a small development team.</p>
+      <p>Django is also used by Google's AppEngine, and the
+        AppEngine provides a way of experimenting with the approach described below if
+      hardware infrastructure is not available.</p>
+      <p>The choice of Django was essentially a commitment to
+        maintaining a standardized way of doing things rather than a standardized way
+        of managing data and protocols. Given the evident difficulties in setting up
+        services such as OAI and SRU / SRW, it was decided that although such services
+        represented the ideal way of accessing our content, it was better to adopt an
+        approach which delivered something quickly but with a view to slotting in those
+      services later. </p>
+      <p>Technical readers are referred here to the excellent
+        Django tutorial which describes how to set up a simple Django Web application.
+        In this paper I will outline the steps we took to develop this application,
+      without going into the details of the code.</p>
+      <h3>Getting Started</h3>
+      <p>We began by using Django to write a very simple Web
+        application which serves up what we might term a &ldquo;museum resource&rdquo; but what is,
+      in effect, a page from a museum Web site.</p>
+      <p>The first step is to define a <b>model</b> for a <b>museum resource</b>.
+      This is at simplest a list of fields and, initially, might require only <b>title</b>, <b>url</b> and <b>summary</b> fields.</p>
+      <p>The second step is to define a <b>view</b> which returns a machine-readable version of a resource. We
+        also define a view which returns a subset of all the resources in our
+        application, also in a machine-readable format, which will likely include
+        simple search logic. A <b>view</b> is at its
+        simplest a template which indicates how fields should be displayed in a page
+        served up by our Web application. For humans, a view might tell the application
+        to put a title in bold; for machines, a view might tell the application to put
+      the title in a particular XML element.</p>
+      <p>Finally, we define a url pattern which will allow someone
+        to construct a URL to pass parameters to our Web application and, hopefully,
+      get a result.</p>
+      <p>Now we can enter a few records into this system. One of
+        Django's great benefits is an excellent out-of-the-box administration interface
+        which allowed for easy data entry. Using this interface we can fill out a few
+      records in the system and we have created a very simple API.</p>
+      <p>We can create a URL which returns a record in
+        machine-readable format if we know, say, the identifier of the record. We can
+        also create a URL which returns multiple records if we, say, pass a search term
+      in the URL.</p>
+      <p>This API is not very exciting. We will need more than a
+      few records and a more sophisticated model in order to do something special.</p>
+      <h3>Crawling, parsing, mining</h3>
+      <p>The next stage is to get as many records as possible into
+        the system. In practice this means two things &ndash; crawling your museum Web site
+      and then extracting information from the data provided.</p>
+      <p>Crawling our own Web site seemed at first to be a rather
+        coarse method of obtaining the data, but proved on every occasion to be the
+        quickest way of progressing. As indicated before, we consistently adopted the
+        approach of taking the line of least resistance. To gather collections records,
+        we started by crawling our own Web site. Since then we have been able to
+        replace this with using an XML export from our collections system. We are still
+        not able to use OAI harvesting to collect the records, but our application is
+        leaving the door open in the expectation that this will be possible in the
+      future.</p>
+      <p>The same principle was applied elsewhere on the Web site.
+        Initially it was easier to crawl HTML pages about museum events from our Web site
+        than it was to access more structured information from our internal bookings
+      and events system.</p>
+      <p>The desired basic output from the crawling process is a
+        set of HTML files. In some cases these files were accessible directly from a Web
+        server file system and we were able to copy them; in other cases it was
+        necessary to use a tool to crawl the files. The task is easily accomplished
+        with some python code,but a tool such as httrack can also be used effectively.
+        Crawling a Web site is not difficult but is time-consuming since it is polite
+        to wait a few seconds between each request so as not to put excessive load on
+      the server.</p>
+      <p>Once a suitable number of HTML files has been collected,
+        the task is to extract information from these files. At the V&amp;A we used
+        python for this task and, in particular, the BeautifulSoup library: it 
+        provides a set of useful ways of pulling out information from raw HTML pages.
+        The technical reader is again referred to the documentation for BeautifulSoup
+      in order to explore the exact process involved.</p>
+      <p>Django has an effective API such that records in the stem
+        can be manipulated programmatically from python modules and, indeed, from the
+        python command line interpreter. This made it easy to batch the processes that
+        will now be described simply iteratively fetching a record, performing the
+        processes on it and then returning it to the django application in its enriched
+      form.</p>
+      <p>For collections records, the HTML display was largely
+        consistent, and it was straightforward to design a set of rules in order to
+        pull out structured information. For example, a standard page for a museum
+        collections record is likely to contain names and values of fields in a
+        relatively predictable way. In this case, it is easy to identify a pattern
+        where a label is in bold, followed by a colon, and then has the value for a
+      particular field.</p>
+      <p>For events information, we had only the unstructured HTML
+        to work with, though it is worth remarking at this point that microformats
+        provide an albeit imperfect method of embedding some structured information
+        about events within an HTML page. This sort of structured data was not
+        available on the V&amp;A Web site, and the vast majority of pages which were
+      not collections records were unstructured.</p>
+      <p>We therefore needed to look at ways of extracting
+        structured information from these pages. Two obvious methods were clearly too
+        time-consuming in the short term, though both worth exploring in the long-term:
+        internal editorial enrichment of the metadata for these resources, and
+      user-generated tagging.</p>
+      <p>Therefore the V&amp;A chose initially to use a variety of
+        text mining techniques and services in order to enrich the unstructured content
+        on the Web site. These services included OpenCalais, Yahoo term extractor,
+      WorldCat and a number of geocoding services. </p>
+      <p>As well as external services, we also used the python
+        natural language toolkit (NLTK) in order to perform some internal text mining
+        analysis on our content. In each case the broad aim was to extract from the
+        unstructured text the words that were most useful in determining the content of
+      the page. The aim, in effect, was to automate tagging of content by keyword.</p>
+      <p>The production of tags allows and required two refinements
+        to the django API Web application. First we needed to extend our model. Rather
+        than extend the existing model at this stage, we chose to create a new model
+        for <b>tags</b> and then set up a way of
+        associating our museum resources with given tags. The advantages of this
+        approach were that we would have a better method in the future for determining
+        which tags were duplicates and that we would be able to extend our very basic <b>museum resource</b> model to encompass
+        specialised types such as events, activities and collections records if we
+      chose.</p>
+      <p>Text from the HTML files was fired off to the services
+        involved and we pumped the results into our new tags model. In some cases we
+        were able to do this several times. For example, place names returned by the
+        text extraction services could then be sent to multiple geocoding services and
+        the results compared in order to build up a confident picture of the location a
+      particular page was associated with.</p>
+      <p>With all the API information in the system, the final
+        stage was to create a new <b>view</b> which
+        brought back museum resources by tag. We then created a machine-readable
+        version of this view and a url pattern which allowed us to send RESTful urls to
+        our Web application which contained a tag name and have museum resources
+        returned to us. This API is better but is still not all that exciting, and, in
+        practice, not necessarily better than a Google search of our site. The next
+      stage was to get our API doing something useful.</p>
+      <h3>Making our API more useful</h3>
+      <p>We paused at this stage to analyze the results of the text
+        mining activity. The first task for making the categories as useful as possible
+        was to attempt to normalize them so that a single term such as &ldquo;Scotland&rdquo; can
+        bring back items tagged as &ldquo;Scots&rdquo;, &ldquo;Scot&rdquo;, &ldquo;Scottish&rdquo; and so on. As an initial
+        stage, it was not too time consuming to do some of this mapping &ldquo;by hand,&rdquo; but
+        a lot of progress can also be made with stemming tools such as those available
+      from the NLTK.</p>
+      <p>The aim here was to do the best job possible at clustering
+        resources around terms returned from the text mining processes and, in some
+        cases, internal taxonomies. The normalization process represents a big step
+        forward in how useful our API Web application can be. Rather than resources
+        being brought back by the rather woolly string matching process of search, we
+        can build more concrete relationships indicating, say, that the &ldquo;Paris&rdquo; that a
+        certain painting comes from is one and the same &ldquo;Paris&rdquo; that a fashion designer
+      presenting a fashion event at the museum comes from.</p>
+      <p>This allowed us to build two refined <b>views</b> in our application. One shows all the tags which are
+        associated with a particular resource; the other shows all the resources
+        associated with a particular tag. Our API now presented an effective way of
+        navigating through the V&amp;A's on-line resources and we were quickly able to
+        build some prototype applications for humans to allow visitors to view objects
+      on a map and browse around objects by clicking on tags.</p>
+      <p>By looking at the most common terms we could also get a
+        quick visual indication as to what our museum is actually about, according to
+      the text mining services used to create the museum resource tags.</p>
+      <p>The clustering of museum resources around these tags
+      indicates three things:</p>
+      <ol>
+        <li>The most common terms give some indication of what a
+          museum has actually been doing on the Web.</li>
+        <li>The common terms which stand out give an interesting
+          indication of how museum practice might differ from museum policy.</li>
+        <li>The not-so-common terms which stand out can indicate
+          areas where the museum has objects and content that might be interesting in a
+          way not previously thought of.</li>
+      </ol>
+      <h3>Adding a social media and user-generated content component</h3>
+      <p>The model of a basic resource which has tagging associated
+        with it is very familiar to any user of Flickr or YouTube. Users of Twitter are
+      familiar with the not unrelated concept of hashtags.</p>
+      <p>Since the same sort of model is being used in our simple
+        Django Web application, it is not difficult to extend this model also to take
+        in social media activities which have some potential relationship to the
+        content we are modeling. There are two ways in which this can be achieved.
+        Where a museum already has a presence on Flickr, Twitter or YouTube perhaps
+        through a set of groups or tags, it is possible to crawl that information and
+        combine it with our API application which until now has been based just on
+      internal museum content.</p>
+      <p>Using APIs provided by these sites, we can obtain a subset
+        of the information that we believe to be relevant to us and add it to our pot
+        of Web resources in order to gather additional data, additional tags, and to
+        nuance our idea of what our museum is about by factoring in the behaviour of an
+        engaged subset of the general public. For example, people may be contributing
+        photographs in Flickr to a particular V&amp;A group. The textual content
+        associated with these photographs may be an excellent set of resources to hold
+      information about in our API.</p>
+      <p>Furthermore, we can enrich our content by encouraging the
+        use of hashtags and machine tags with a view to being able to access these
+        social media resources without having to rely so heavily on the text mining and
+        normalization techniques in order to gather this data. For example, we might
+        encourage visitors who take a photograph of a museum object to &ldquo;machine tag&rdquo; it
+        with that object number, or we might encourage visitors who attend a particular
+      event to tweet about it using a hashtag for that particular event.</p>
+      <p>With either approach, we can now extend our API
+        application to deliver not only &ldquo;traditional&rdquo; internal museum resources by tag,
+      but also resources relating to the museum on social media sites.</p>
+      <p>Many of the social media sites have an API which allows a
+        certain visitor interaction such as submitting a video programmatically. Many
+        museum sites also have some facility for users to contribute content, and the
+      V&amp;A has had particular success with these. </p>
+      <h3>The Next Stage</h3>
+      <p>The next stage in expanding our suite of APIs is to leave
+        the simple &ldquo;information providing&rdquo; API application we have developed to one
+      side and to consider how to deliver an API for our own Web site interactions.</p>
+      <p>Many of the V&amp;A's initial Web 2.0 activities were
+        initially built using bespoke code which became increasingly difficult to
+        maintain. We therefore considered a number of options for developing these
+        activities in a more standardized way and settled on Drupal as a framework
+        which provided useful out-of-the-box features for user management, community
+      management and submissions by visitors.</p>
+      <p>Drupal is perhaps best described as a PHP, content
+        management framework. It does not have the elegance or robustness of Django nor
+        is it as easy to learn the technical niceties of it. However, it has a lot of
+        out-of-the-box features; the V&amp;A is confident it can hire third party
+        developers to work with it;and, after a certain amount of exposure, we have
+        been able to devise a set of guidelines for Drupal module development which
+      will keep our bespoke modules in a maintainable state.</p>
+      <p>Drupal has good core functionality to consume remote data
+        in the form of RSS, and it is relatively easy to write extension modules to
+        consume serialized php objects for more bespoke purposes. But our focus here is
+      more on its capacity for service provision rather than service consumption.</p>
+      <p>A particularly attractive contributed drupal module is the <b>services</b> module which provides a
+        core methodology for exposing drupal interactions via services such as XML-RPC.
+        The Drupal Services module provides a framework (via the concept of Drupal
+        &ldquo;hooks&rdquo;) so that bespoke Drupal modules can expose a similar API in a
+      predictable way.</p>
+      <p>The advantage of this approach is that any custom
+        interaction designed as being particularly appropriate for a museum's content
+        can instantly be made available as an API, allowing it to appear in Facebook
+      applications, Google gadgets and the like.</p>
+      <p>With this methodology in mind, the V&amp;A is now looking
+        to deliver new and updated user-generated content activities with this model.
+        Given an application which allows a user to tell a story about an object, we
+        can now embed that functionality on any page we choose that has an object on it,
+        and we can take not only our content but also our opportunities for
+      participation beyond the V&amp;A Web site.</p>
+      <p>We now have a Django application holding enriched,
+        structured data which can be made available via an API; we have at our disposal
+        the APIs of any social media site where our visitors are actively participating
+        with our data; finally, we have an API for allowing people to participate in
+        particular user interactions which the museum can design. However, the final
+        stage is perhaps to look at what API the museum can produce for its core,
+      academic expertise.</p>
+      <h2>What is Your Museum Actually Good At?</h2>
+      <p>The APIs we have discussed so far can be done by anyone.
+        Anyone with sufficient technical expertise can crawl the content from a museum Web
+        site and mine the unstructured text. Anyone can set up a simple Web interaction
+        and offer an API for people to use it. But there are some areas where a museum
+        has exceptional expertise and authority in terms of understanding objects and
+        providing interpretation. The question is: if you have some content, what can
+      the V&amp;A tell you about it? And can it provide an API for that service?</p>
+      <p>For the purposes of this paper, I will finish by focusing
+        on a very simple example, the use of our continually-developing text-mined
+        corpus of data which visitor content can be compared and contrasted against and
+      then categorized by the V&amp;A.</p>
+      <p>The process of text categorization is fairly
+        straightforward and is supported by the NLTK. The simplest method is, for any
+        piece of text, to compare the words of most statistical significance in that
+        text to the words of most statistical significance across a set of texts which
+        have already been categorized. The output is an indication as to which of these
+      predefined categories the new piece of text is most likely to belong to.</p>
+      <p>The final step in the development of our Web application
+        is to set up a form which allows visitors to submit text. The contents of the
+        form submission can then be passed to our categorizer and a set of likely
+        categories can be returned. In this way we have created a very simple service
+        which indicates whether a piece of text outside the context of the museum's own
+        texts would be a good fit. In essence, the V&amp;A can have a service which
+      tells you how &ldquo;V&amp;A&rdquo; a particular text is.</p>
+      <p>Furthermore, assuming we have a number of categories in
+        place, this service can indicate which particular area of the museum the
+        incoming text fits best with. Finally, we can return from the museum pieces of
+      content which seem most relevant to a particular piece of text.</p>
+      <h2>Conclusion</h2>
+      <p>In following the steps taken by the V&amp;A in creating a
+        light-weight API, we have moved through three phases. We started by looking at
+        how to build a light-weight application to serve a simple, machine-readable
+        version of content produced around the V&amp;A. We then looked at the
+        opportunities for user contributions and more sophisticated interactions
+        provided by the V&amp;A which can be presented as APIs using the Drupal
+        services module. Finally, we took a first step at looking at how the V&amp;A
+        might set up a service of its own similar to, say, OpenCalais, and what that
+      service might look like.</p>
+      <p>The result is a suite of simple, light-weight APIs which
+        have scope for further rapid, iterative and flexible development and which are
+        decoupled from the issues such as standards, vendor lock-in and complexity
+        which accompany attempts to drive APIs directly from back-office collections
+      management systems.</p>
+      <h2>References</h2>
+      <p class="ReferencesText">Makewell, Terry (2008).  The National Museums Online
+        Learning Project Federated Collections Search: Searching Across Museum And
+        Gallery Collections In An Integrated Fashion.  In D. Bearman &amp; J. Trant
+        (eds.) Museums and the Web 08 Proceedings. CD ROM. Archives &amp; Museum
+      Informatics, 2008. Available: <a href="../http://www.archimuse.com/mw2008/papers/makewell/makewell.html">http://www.archimuse.com/mw2008/papers/makewell/makewell.html</a></p>
+<!-- InstanceEndEditable --> </div>
+  			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Morgan, R., What is Your Museum Good at, and How Do You Build an API for It?<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2009: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2009/papers/<!-- #BeginEditable "URL" -->morgan/morgan.html
+				 <!-- #EndEditable --></p>
+	</div>
+</div>
+  <!--htdig_noindex-->
+  
+  <div id="sidebar">
+    <div id="side-nav">
+      <ul id="side-nav-list">
+        <li id="workshops"><a href="../../workshops/index.html" class="menu">Workshops</a></li><li id="sessions"><a href="../../sessions/index.html" class="menu">Sessions</a></li><li id="speakers"><a href="../../speakers/index.html" class="menu">Speakers</a></li><li id="interactions"><a href="../../interact/index.html" class="menu">Interactions</a></li><li id="demonstrations"><a href="../../demos/index.html" class="menu">Demonstrations</a></li><li id="events"><a href="../../events/index.html" class="menu">Events</a></li><li id="exhibits"><a href="../../exhibit/index.html" class="menu">Exhibits</a></li><li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li><li id="pc"><a href="../../thanks/index.html" class="menu">Committees</a></li><li  id="community"><a href="../http://conference.archimuse.com/" class="menu">Community On-line</a></li>
+      </ul>
+    </div>
+    <div id="search-site">
+<form method="get" id="searchform" action="http://wp.museumsandtheweb.com/">
+<input type="text" class="field" name="s" id="s" placeholder="Search">
+<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+</form>
+    </div>
+        <div id="addthis">
+    <!-- AddThis Button BEGIN -->
+	<script type="text/javascript">var addthis_pub="archimuse";</script>
+	<script type="text/javascript">var addthis_brand = "archimuse";</script>
+	<script type="text/javascript">var addthis_options = 'twitter, facebook, linkedin, delicious, email, digg, favorites, more';</script>
+	<a href="../http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="../../../external.gif?link=http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" alt="Share"/></a><script type="text/javascript" src="../http://s7.addthis.com/js/200/addthis_widget.js"></script><!-- AddThis Button END -->
+</div>
+    
+    <div id="sidebar-links">
+      <ul id="sidebar-links-list">
+        <li><a href="../../../index.html" class="produced-by">produced by<br />
+          <img src="../../images/sidelogo.png" width="144" height="37" alt="AMI logo" /></a></li>
+        <li><a href="../../../index.html">Join our mailing list</a></li>
+        <li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+          <img src="../../images/search.gif" alt="search" width="24" height="25" border="0" /></a></li>
+      </ul>
+    </div>
+    <div id="sidebar-acknowledge">
+
+      <div id="sponsor">
+</div>
+    </div>
+   <!--/htdig_noindex-->
+  </div>
+  <div id="footer">
+    <div id="last-updated"> last updated: <!-- #BeginDate format:Am1a -->October 27, 2010 4:57 PM<!-- #EndDate -->
+      <br />
+[analytics code]<br />
+<div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+    </div>
+    <!--htdig_noindex-->
+    <div id="footer-content">
+      <p>Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E
+        2P3 Canada<br />
+        Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2009";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2008 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				  </script>
+        <br />
+        Copyright &copy; 2009 &ndash; Archives &amp; Museum Informatics &ndash; All
+        rights reserved.<br />
+      </p>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2009/papers/morgan/morgan.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:57:47 GMT -->
+</html>

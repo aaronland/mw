@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw17.mwconf.org/paper/staying-safe-cybersecurity-in-modern-museums-internal-external-and-hidden-threats-with-a-focus-on-cryptography-to-maintain-data-security/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:58:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Staying safe: cybersecurity in modern museums &#8211; MW17: Museums and the Web 2017</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Staying safe: cybersecurity in modern museums Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw17.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login3822.css?ver=1604077128' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-twentysixteen/style3ce7.css?ver=20201208' media='all' />
+<style id='twentysixteen-style-inline-css'>
+
+		/* Custom Link Color */
+		.menu-toggle:hover,
+		.menu-toggle:focus,
+		a,
+		.main-navigation a:hover,
+		.main-navigation a:focus,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.social-navigation a:hover:before,
+		.social-navigation a:focus:before,
+		.post-navigation a:hover .post-title,
+		.post-navigation a:focus .post-title,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.site-branding .site-title a:hover,
+		.site-branding .site-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-footer a:hover,
+		.entry-footer a:focus,
+		.comment-metadata a:hover,
+		.comment-metadata a:focus,
+		.pingback .comment-edit-link:hover,
+		.pingback .comment-edit-link:focus,
+		.comment-reply-link,
+		.comment-reply-link:hover,
+		.comment-reply-link:focus,
+		.required,
+		.site-info a:hover,
+		.site-info a:focus {
+			color: #e55747;
+		}
+
+		mark,
+		ins,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.widget_calendar tbody a,
+		.page-links a:hover,
+		.page-links a:focus {
+			background-color: #e55747;
+		}
+
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
+		textarea:focus,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.menu-toggle:hover,
+		.menu-toggle:focus {
+			border-color: #e55747;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation li:hover > a,
+			.main-navigation li.focus > a {
+				color: #e55747;
+			}
+		}
+	
+</style>
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src='https://mw17.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index7c89.html?p=730' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed202f.json?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fstaying-safe-cybersecurity-in-modern-museums-internal-external-and-hidden-threats-with-a-focus-on-cryptography-to-maintain-data-security%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embeda9f3?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fstaying-safe-cybersecurity-in-modern-museums-internal-external-and-hidden-threats-with-a-focus-on-cryptography-to-maintain-data-security%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-twentysixteen/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-730 wp-custom-logo wp-embed-responsive">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+					<div class="site-branding">
+						<a href="../../index.html" class="custom-logo-link" rel="home"><img width="240" height="240" src="../../wp-content/uploads/2017/02/cropped-mw-final.png" class="custom-logo" alt="MW17: Museums and the Web 2017" /></a>					</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p> MW17: Museums and the Web 2017 <span>Cleveland Ohio - April 19-22</span></p>
+								<form class="search-form" role="search" method="get" action="#">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-1-container"><ul id="menu-menu-1" class="primary-menu"><li id="menu-item-3074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3074"><a href="https://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-88"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580"><a href="../../local-information-and-accommodation/index.html">Local Information and Accommodation</a></li>
+	<li id="menu-item-1917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1917"><a href="../../faqs/index.html">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-172"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-475"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-108"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="../../call-for-proposals/index.html">Call for Proposals</a></li>
+	<li id="menu-item-494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-135"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-1689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1689"><a href="../../advertising/index.html">Advertising</a></li>
+</ul>
+</li>
+<li id="menu-item-573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-573"><a href="../../program/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-2972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2972"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-3023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3023"><a href="../../select-session-slides/index.html">Presentations</a></li>
+	<li id="menu-item-1760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1760"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2968"><a href="../../glami-winners/index.html">GLAMi Winners</a></li>
+		<li id="menu-item-2963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2963"><a href="../../glami-nominees/index.html">GLAMi Nominees</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2894"><a href="../../mwx/index.html">MWX 2017</a></li>
+	<li id="menu-item-1252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1252"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="../../committees/index.html">Committees</a></li>
+</ul>
+</li>
+<li>
+    <form role='search' method='get' class='search-form' action='http://mw17.mwconf.org/'>
+	<label>
+	<span class='screen-reader-text'>Search for:</span>
+	<input type='search' class='search-field' placeholder='Search &hellip;' value='' name='s' />
+	</label>
+	<button type='submit' class='search-submit'>
+	<span class='screen-reader-text'>Search</span></button>
+	</form>    
+	</li></ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+	
+<section id="page-hero">
+	<div class="background"> </div>
+</section>
+<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];
+    jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw17.mwconf.org/wp-content/themes/mw-twentysixteen/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-730" class="post-730 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">Staying safe: cybersecurity in modern museums</h1>
+
+<p><a target="_blank" href="http://www.museumsandtheweb.com/member/wendypryor/">Wendy Pryor</a>, Museums Victoria, Australia</p>
+<h2>Abstract</h2>
+Museums are in the thick of data security: selling tickets and products online, collecting and updating members’ details, sending e-newsletters, recording donations, granting staff access to collection cataloging software, or negotiating agreements with commercial partners. A basic understanding of cyber threats, with a toolkit to combat them, is critical for maintaining cybersecurity.
+
+Cybersecurity refers to preventative methods used to protect the confidentiality, integrity, and availability of data. Part one of our paper describes threats and approaches to protecting information, intellectual property, and the computer network itself from external, internal, and hidden cyber threats. An effective cybersecurity approach should include network firewalls and gateways, anti-malware, user access management and authentication controls, backup management, business continuity and disaster recovery planning, patch management, and software updates. These will be bolstered by staff education. Supported by your executive, the cybersecurity strategy will align with your museum’s business goals and risk appetite.
+
+Part two focusses on cryptography (writing and solving codes) to emphasize that information security is a perennial problem. Historically, the potential rewards for breaking codes and deciphering messages are obvious: outsmarting enemies, exposing diplomatic secrets, or unravelling plots. Four examples (Ceasar Cipher, Mary Queen of Scots Cipher, Polybius Square Cipher, Enigma machine) demonstrate the escalating complexity of cryptography since classical times. Modern cryptography exists at the intersection of mathematics, computer science, and electrical engineering. Current applications of cryptography include ATM cards, computer passwords, electronic commerce, digital rights management and copyright—all of which are relevant to museums.</p>
+<p><b>Keywords:</b> Cryptography, cryptology, cipher, security, encryption, data</p>
+<h2>Introduction to cybersecurity</h2>
+<p>Museums are in the thick of cybersecurity. Whether selling tickets and products online, collecting and updating members’ details, sending e-newsletters, recording donors and their donations, granting staff access to collection cataloguing software or corporate finance systems, or negotiating agreements with commercial partners, a basic understanding of cybersecurity, with a toolkit to match, is critical for staying safe. Put simply, the more data a museum collects about its visitors and stakeholders, and the more sensitive that data is, the greater its attractiveness to cyber criminals.</p>
+<p>Cybersecurity refers to preventative methods used to protect information from being stolen, compromised, or attacked. An understanding of potential information threats is needed in order to develop strategies for prevention. In a museum dependent on data and information, cybersecurity is not just an Information and Communications Technology (ICT) issue, but a business issue as well—an issue linking organizational objectives to risk appetite, to security priorities. The creation of a pragmatic and fit-for-purpose cybersecurity strategy depends on a common language and fruitful exchange between technologists and museum leaders. This paper is a beginning.</p>
+<p>The first part describes threats and approaches to protecting information, data, intellectual property and the computer network itself from external, internal, and hidden cyberthreats. This is not modern scare-mongering: information security is a perennial problem. The second part uses examples of cryptography (writing and solving codes) to illustrate historical and contemporary approaches to information security, with a nod to the future of cybersecurity.</p>
+<h3>Importance of cybersecurity</h3>
+<p>We care about cybersecurity because we care about our data. When our data is compromised our reputation is at stake. A recent report by Deloitte (2015, 3) noted that 73% of consumers would reconsider using a company if it failed to keep their data safe.</p>
+<p>October 2016 was Cyber Security Awareness Month in the UK. According to Morgan (2016) October was quiet in terms of data breaches and cyberattacks; only about 140 million records are known to have been leaked during that month! Morgan’s blog includes these alarming headlines, with hyperlinks to more detail, from around the world:</p>
+<ul>
+<li>&#8220;Hacker grabs over 58 million customer records from data storage firm&#8221; (US)</li>
+<li>&#8220;IES users’ data leaked due to &#8216;inadequate’ security measures&#8221; PDPC (Singapore)</li>
+<li>&#8220;Information of 13,000 Baystate patients possibly compromised due to &#8216;phishing'&#8221; (US)</li>
+<li>&#8220;Laptop with crucial CMO data stolen&#8221; (India)</li>
+<li>&#8220;Nurse suspended after snooping though 64 patients records&#8221; (New Zealand)</li>
+<li>&#8220;Rainbow Children’s Clinic notifies 33,368 patients of ransomware attack&#8221; (US)</li>
+<li>&#8220;Event Organizer Suffers Data Breach After Hacker Steals Mailing Lists&#8221; (Australia)</li>
+<li>&#8220;Province says it might have sent tax documents to wrong addresses&#8221; (Canada)</li>
+<li>&#8220;Private student information mistakenly posted online by Surrey School Board&#8221; (Canada)</li>
+<li>&#8220;96,000 public servants in new data breach&#8221; (Australia)</li>
+</ul>
+<p>Healthcare and finance businesses are often targeted by cyberattacks due to the highly sensitive nature of their data. Closer to our world of museums, a recent data breach investigations report (Verizon, 2016, 4) noted 2,707 data security incidents in the entertainment industry (which includes museums) for 2015. This comprised 18 small, one large and 2,688 of unknown scale. A Google search revealed a report by Northrup (2015) of a zoo and museum gift shop operator confirming details of a payment data breach.</p>
+<h2>Part 1: Threats and approaches to cybersecurity</h2>
+<p>Protecting information, data, intellectual property and the network itself from cyber threats is the ultimate goal of an affective cybersecurity strategy. Threats fall into three categories: external, internal, and hidden.</p>
+<h3>External threats to cybersecurity and approaches to prevention</h3>
+<p>Building up defenses to secure an organization’s digital boundaries reduces the chance of unauthorized access from outside. Two such defenses are firewalls and gateways.</p>
+<p>A <em>firewall </em>is a network security device that monitors and controls incoming and outgoing network traffic flows between an untrusted zone (such as the Internet) and a trusted zone (such as an organization’s network). The firewall acts as a filter in the network; all communication flows through it, and traffic is admitted or rejected according to a set of defined security rules. Firewalls can be implemented in hardware, software, or a combination of both.</p>
+<p>A <em>gateway </em>is a device that joins together two different networks, for example, an internal network with the Internet. A router is an example of a gateway device; it decides where information is sent based on its computer (IP) address. A gateway therefore provides entry into different networks so we can send e-mail, read Web pages, and transact online.</p>
+<p>Boundary firewalls and gateways provide a basic level of protection by monitoring network traffic and identifying and blocking unwanted and potentially harmful information, but they don’t necessarily protect against malicious software (malware). For example, an attacker might send an infected PDF as an email attachment to a user inside your network. The user opens the PDF, gets infected, and malware is installed on their computer.</p>
+<p>Malware is software that was created for the purpose of doing something sinister to your computer or network. Using malware, cyber criminals operate remotely. There are many different types of malware, often named for the way they attack your computer. Below are some examples of insidious horrors.</p>
+<table>
+<tbody>
+<tr>
+<td width="117"><strong>Type of malware</strong></td>
+<td width="202"><strong>Aim</strong></td>
+<td width="282"><strong>Technique</strong></td>
+</tr>
+<tr>
+<td width="117">Virus</td>
+<td width="202">To gain access to, steal, modify and/or corrupt information and files from a targeted computer system</td>
+<td width="282">A small piece of software program that can replicate itself and spread from one computer to another by attaching itself to a computer file</td>
+</tr>
+<tr>
+<td width="117">Worm</td>
+<td width="202">To damage networks and possibly deliver payloads which allow remote control of the infected computer</td>
+<td width="282">Worms are self-replicating and do not require a program to attach themselves to. They seek vulnerabilities in operating systems and report back to the worm author when weaknesses are discovered.</td>
+</tr>
+<tr>
+<td width="117">Spyware/Adware</td>
+<td width="202">To take control of your computer and/or to collect personal information without your knowledge</td>
+<td width="282">By opening attachments, clicking links or downloading infected software, spyware/adware is installed on your computer.</td>
+</tr>
+<tr>
+<td width="117">Trojan</td>
+<td width="202">To create a &#8220;backdoor&#8221; on your computer by which information can be stolen and damage caused</td>
+<td width="282">A software program appears to perform one function (for example, virus removal) but actually acts as something else</td>
+</tr>
+<tr>
+<td width="117">Distributed denial-of-service (DDoS)</td>
+<td width="202">To overwhelm and disable a target system by sending a torrent of fake traffic, thereby denying service to legitimate users</td>
+<td width="282">Multiple compromised systems, which are often infected with a Trojan, are used to target a single system causing a Denial of Service (DoS) attack.</td>
+</tr>
+<tr>
+<td width="117">Ransomware</td>
+<td width="202">To encrypt data on a computer or network and then demand a ransom payment to decrypt or not publish it</td>
+<td width="282">Installs covertly on a victim’s computer and executes a cryptovirology attack that causes denial-of-access. Typically carried out using a Trojan that has a payload disguised as a legitimate file</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1: types of malware, with aims and techniques</p>
+<p>Anti-malware is a piece of software that you knowingly install on your computer with the purpose of protecting your system from malware infiltration and infection. Anti-malware programs are able to do this in three ways: they detect malware on your computer, safely remove it, and clean up any of the damage to the computer that the malware may have caused. Anti-malware software can be installed on an individual computer, gateway server or dedicated network appliance, or purchased as a cloud subscription service.</p>
+<p>Technology alone is inadequate to counteract malware threats. Staff members are your human firewall. In order to function in this critical role they need awareness training so they can spot a suspicious email or unusual computer behavior. Staff should know how to report such an event and how to stop an infection from spreading.</p>
+<h3><strong>Internal threats to cybersecurity and approaches to prevention</strong></h3>
+<p>Behind the carefully constructed defenses described above, insider threat is noted by Verizon (2016, 35) as one of the main causes of data breaches–either malicious or unintentional. Careless or disgruntled staff can leak information or provide access to external parties without the organization knowing. This risk can be mitigated by ensuring that computers and network devices are configured so that they provide only the services required for a particular role. Examples of threats and controls follow.</p>
+<p><strong>User access management</strong> relates to the process of managing user access to applications and data, including how access is approved, revoked and periodically reviewed to ensure it is aligned with staff roles and responsibilities. Special consideration should be given to the role and privileges of &#8216;super users&#8217; who may have the ability to create other users. Weaknesses in user access management controls may result in system and data access being awarded to staff for whom it is not necessary, thus jeopardising integrity and confidentiality of ICT systems and data.</p>
+<p><strong>Authentication controls</strong> assist in determining whether a user attempting to access a system is who they claim to be. Authentication is commonly performed through the use of passwords of defined complexity with regular cycles for change. In more tightly managed environments, two-factor authentication combines something the user knows (such as a password) with something the user has (such as a security token). Weaknesses in authentication controls may increase the risk of breaches in the confidentiality, integrity, and availability of systems and data.</p>
+<p><strong>Backup management</strong> refers to copying and archiving computer data so it may be used to restore the original after a data loss event or to recover data from an earlier time. Managing backups requires a balance between accessibility, security, and cost. <strong>Business continuity planning</strong> details the response strategy of an organization in order to continue operations and minimize the impact in the event of a disaster. It will normally include a section on ICT. <strong>ICT disaster recovery planning </strong>describes a process to assist in the recovery of an organisation&#8217;s ICT infrastructure in the event of a disaster.</p>
+<p>The development of policies and procedures for user access management and authentication controls, aligned with organisational values and risk appetite, will assist in the management of internal threats. Developing plans and strategies for backup management, business continuity and ICT disaster recovery will increase the ability of an organisation to recover its critical systems and transactions in a complete and timely manner in the event of a breach.</p>
+<h3><strong>Hidden</strong><strong> threats to cybersecurity and approaches to prevention</strong></h3>
+<p>Hidden threats may lurk in trusted software. Technical vulnerabilities, once discovered and shared publicly, can be exploited by cyber criminals; keeping software updated is an excellent prevention strategy.</p>
+<p><strong>Patch management</strong> applies to regularly applying patches to reduce the risk of unauthorised access to systems and data, thus enhancing the overall security profile of the ICT infrastructure. A patch is an additional piece of software released by vendors to fix security vulnerabilities or operational issues.</p>
+<p><strong>Ongoing/continuous vendor support </strong>is normally only available for current software. End-of-life describes ICT software or an application that a vendor intends to stop marketing or supporting. Vendors typically notify their customers in advance when such support arrangements will cease, to enable a smooth transition to current software. Committing to current software ensures that the vendor will continue to provide patches and other support.</p>
+<h3><strong>Cybersecurity strategy</strong></h3>
+<p>To protect the confidentiality, integrity, and availability of data, an affective cybersecurity strategy should include network firewalls and gateways, anti-malware, an approach to user access management and authentication controls, backup management, business continuity and disaster recovery planning, patch management, and software updates. These will be bolstered by staff education. Supported by your executive, the cybersecurity strategy will align with your museum’s business goals and risk appetite.</p>
+<h2><strong>Part 2: Cryptography and its application to data security</strong></h2>
+<p>For thousands of years, kings, queens, and generals have relied on efficient communication in order to govern their countries and command their armies. All have been aware of the consequences of their messages falling into the wrong hands, revealing precious secrets to rival nations and betraying vital information to opposing forces. The threat of enemy interception motivated the development of techniques for disguising a message so that only the intended recipient could read it (Singhe, 2000, ix). Cryptography is picturesquely explained in the following way:</p>
+<p style="padding-left: 30px;">Derived from the Greek word <em>kryptos</em>, meaning ‘hidden.’ The aim of cryptography is not to hide the existence of a message, but rather to hide its meaning, a process known as <em>encryption</em>. To render the message unintelligible, it is scrambled according to a particular protocol which is agreed beforehand between the sender and intended recipient. Thus the recipient can reverse the scrambling protocol and make the message comprehensible. The advantage of the cryptography is that if the enemy intercepts an encrypted message, then the message is unreadable. Without knowing the scrambling protocol, the enemy should find it difficult, if not impossible, to recreate the original message from the encrypted text. (Singhe, 2000, 6.)</p>
+<p>Here is the same explanation using the specialized vocabulary of cryptography. The original message is called the <strong>plaintext</strong>. The transformed message is called the <strong>ciphertext</strong>, and the process of creating the ciphertext (using an <strong>encryption algorithm </strong>or <strong>cipher </strong>with some built-in flexibility, known as the <strong>key</strong>) is <strong>encryption</strong>. The process of getting the original message back is called <strong>decryption</strong>, using a <strong>decryption algorithm</strong>. Thus one <strong>decrypts</strong> the ciphertext. To pass an encrypted message from one person to another, it is first necessary that both parties have the key for the cipher, so that the sender may encrypt it and the receiver may decrypt it.</p>
+<p>The potential rewards for breaking codes and deciphering messages are obvious: outsmarting enemies, exposing diplomatic secrets, or unravelling plots. The history of encryption is as follows:</p>
+<p style="padding-left: 30px;"> &#8230;the history of the &#8220;contest of wits&#8221; between encryption developers and encryption code breakers. Each time a new encryption algorithm is created, it has been decrypted, and that in turn has led to the creation of a new encryption algorithm, and cycles of algorithm creation and decryption have been repeated to this day&#8230; (Thawte, 2013, 3.)</p>
+<p>One contemporary and four historical examples demonstrate the escalating complexity of cryptography:</p>
+<h3><strong>Ceasar cipher</strong></h3>
+<p>Ceasar cipher is a type of simple substitution cipher in which each letter in the original plaintext is &#8220;shifted&#8221; a certain number of places down the alphabet. For example, with a shift of one, A would be replaced by B, B would become C, and so on. The method is named after <strong>Julius Caesar</strong>, who apparently used it to communicate with his generals.</p>
+<table>
+<tbody>
+<tr>
+<td width="77"><strong>Plaintext</strong></td>
+<td width="422">defend your data at all costs</td>
+</tr>
+<tr>
+<td width="77"><strong>Ciphertext</strong></td>
+<td width="422">efgfoe zpvs ebub bu bmm dptut</td>
+</tr>
+<tr>
+<td width="77"><strong>Key</strong></td>
+<td width="422">Number of characters (in this case 1) to shift the cipher alphabet</td>
+</tr>
+</tbody>
+</table>
+<p>Table 2: example of the use of the Ceasar ciper (Lyons, 2012)</p>
+<h3><strong>Mary Queen of Scots cipher</strong></h3>
+<p>The Babington Plot of 1586 was a plan to assassinate Queen Elizabeth I of England and put Mary, Queen of Scots on the English throne. Mary&#8217;s messages were captured by Elizabeth&#8217;s spies and they were cracked by her chief codebreaker. Mary was put on trial and the deciphered messages were used as evidence of her treachery. She was found guilty and executed in 1587.</p>
+<p>The cipher that Mary used included a cipher alphabet, with substitutions for each letter from A to Z. The cipher also contained some code symbols for the most common words, and some more sophisticated symbols. This mixture of codes and ciphers, known as a nomenclator cipher, made decrypting the cipher more difficult—but not difficult enough to keep Mary safe. The codes were listed in a code book, which was the key to the cipher. The code book was in the possession of both senders and recipients.</p>
+<figure id="attachment_739" aria-describedby="caption-attachment-739" style="width: 632px" class="wp-caption aligncenter"><img loading="lazy" class="size-full wp-image-739" src="../../wp-content/uploads/2017/01/pryor.fig1_.gif" alt="Cipher used by Mary Queen of Scots" width="632" height="358" /><figcaption id="caption-attachment-739" class="wp-caption-text">Figure 1: cipher of Mary Queen of Scots (Singh. n.d)</figcaption></figure>
+<h3><strong>Polybius Square Cipher</strong></h3>
+<p>The Polybius Square is an ancient Greek invention, discovered by a scholar named Polybius, which can be used to translate letters into numbers. In order to fit the 26 letters of the alphabet into the 25 spots created by the table, the letters i and j are usually combined.</p>
+<figure id="attachment_745" aria-describedby="caption-attachment-745" style="width: 167px" class="wp-caption aligncenter"><img loading="lazy" class="size-full wp-image-745" src="../../wp-content/uploads/2017/01/pryor.fig2_.jpg" alt="The Standard Polybius Square for English" width="167" height="169" /><figcaption id="caption-attachment-745" class="wp-caption-text">Figure 2: the Standard Polybius Square for English (Rodriguez-Clark, 2013)</figcaption></figure>
+<p>Using the Square, each letter is replaced with the two numbers that represent its position in the grid. In the example above, the number from the vertical axis precedes the number on the horizontal axis, so D becomes 14, E becomes 15 etc. A worked example follows.</p>
+<table>
+<tbody>
+<tr>
+<td width="83"><strong>Plaintext</strong></td>
+<td width="397">defend your data at all costs</td>
+</tr>
+<tr>
+<td width="83"><strong>Ciphertext</strong></td>
+<td width="397">141521153314 54344542 14114411 1144 113131 1334434443</td>
+</tr>
+</tbody>
+</table>
+<p>Table 3: example of the use of the Polybius Square Cipher (Rodriguez-Clark, 2013)</p>
+<p>Introducing the idea of a key to the Polybius Square adds to its complexity. This is achieved by reordering the alphabet before putting it in the grid. The letters of the keyword are added first, ignoring any repeat. So using a keyword <strong>polybius</strong> produces the mixed square below.</p>
+<figure id="attachment_741" aria-describedby="caption-attachment-741" style="width: 154px" class="wp-caption aligncenter"><img loading="lazy" class="size-full wp-image-741" src="../../wp-content/uploads/2017/01/pryor.fig3_.jpg" alt="The Mixed Polybius Square using the keyword Polybius" width="154" height="156" /><figcaption id="caption-attachment-741" class="wp-caption-text">Figure 3: The Mixed Polybius Square using the keyword Polybius (Rodriguez-Clark, 2013)</figcaption></figure>
+<p>Decryption is straightforward provided the receiver of the message understands the basic form of the square and the keyword. Rodriguez-Clark (2013) notes also that the Polybius Square has been used for signalling with flags across long distances and as a &#8220;knock code&#8221; for prisoners to send messages to each other by knocking on the wall; it was used successfully in this way by American prisoners of war in the Vietnam War to talk to each other without detection.</p>
+<h3>Cracking the substitution cipher</h3>
+<p>Cracking substitution ciphers, like the examples above, marked the birth of cryptanalysis or code breaking. The key realisation was that if a message is enciphered so that every letter is substituted for a different letter (or symbol), then the new letter will take on all the attributes of the old letter, including how frequently it occurs.</p>
+<p>In cryptanalysis, <strong>frequency analysis</strong> is the study of the frequency of letters or groups of letters in a ciphertext. According to Wikipedia (2016), frequency analysis is based on the fact that, in any given stretch of written language, certain letters and combinations of letters occur with varying frequencies. This characteristic distribution of letters is roughly the same for almost all samples of that language. For instance, given a slab of English language, E, T, A and O are the most common, while Z, Q and X are rare. Likewise, TH, ER, ON, and AN are the most common pairs of letters, and SS, EE, TT, and FF are the most common repeats.</p>
+<figure id="attachment_742" aria-describedby="caption-attachment-742" style="width: 340px" class="wp-caption aligncenter"><img loading="lazy" class="size-full wp-image-742" src="../../wp-content/uploads/2017/01/pryor.fig4_.png" alt="Typical distribution of letters in English language" width="340" height="272" /><figcaption id="caption-attachment-742" class="wp-caption-text">Figure 4: typical distribution of letters in English language (Wikipedia, 2016)</figcaption></figure>
+<p>Thus an approach to using frequency analysis for code breaking might entail counting the letters in the ciphertext and substituting the most common English letter, substituting the most common English pairs for the most common pairs in the ciphertext and so on—tentatively making and testing assumptions begins to unravel the message. Each painstaking revelation leads to greater clarity as more and more letters are patiently revealed. Perhaps unsurprisingly, during the Second World War some codebreakers were recruited based on their ability to solve crossword puzzles speedily.</p>
+<h3><strong>Mechanical era ciphers: The Enigma machine</strong></h3>
+<p>Mechanical ciphers developed around the Second World War relied on sophisticated gearing mechanisms to encipher text. The most famous example of a mechanical cipher was the Enigma, used by the Germans. The Enigma machine is similar to a complex type writer. All Germans had the same Enigma machine and the initial wheel configuration (the key) of the machine was communicated to all the teams. When a letter was pressed on the machine, a cipher letter lit up on the screen. Complexity was added when the wheel rotated after a certain number of letters, so that the cipher kept on changing. There could be many millions of possible configurations, thus deciphering Enigma was a monumental challenge.</p>
+<figure id="attachment_769" aria-describedby="caption-attachment-769" style="width: 360px" class="wp-caption aligncenter"><img loading="lazy" class="size-full wp-image-769" src="../../wp-content/uploads/2017/01/pryor.fig5_.jpg" alt="Enigma Machine at the Imperial War Museum, London" width="360" height="480" /><figcaption id="caption-attachment-769" class="wp-caption-text">Figure 5: Enigma Machine at the Imperial War Museum, London. Photographer: Karsten Sperling (Wikipedia, 2017)</figcaption></figure>
+<p>Alan Turing, a Cambridge University mathematician, was instrumental in inventing an electromechanical machine that could find settings for the Enigma machine and unlock the German messages. The information acquired by decrypting the messages encrypted by Enigma was an important source of information for the Allies until the end of the war. This engrossing and now popular codebreaking story shows that, although mechanical ciphers are invariably more secure than their earlier counterparts, they could still be broken by sufficient application of skill, resources, and motivation.</p>
+<h3><strong>Limitation of traditional cryptography</strong></h3>
+<p>In the traditional use of cryptography to protect communications, it is necessary that both the originator and the recipient(s) have common knowledge of the cryptographic process (the algorithm) and that both share a secret common piece of information (the cryptographic key). Such a scheme, in which both communicating parties must share a key, is called <strong>symmetric cryptography</strong><em>.</em> Its primary weakness is the operational disadvantage of requiring a safe method of distributing keys to all relevant parties.</p>
+<h3><strong>Cryptography in the age of the internet</strong></h3>
+<p>To address the limitations of symmetric cryptography, a scheme called <strong>asymmetric cryptography</strong> (or public-key cryptosystem), was developed in the mid-1970s. Each participant actually has two keys: public and private. The public key is published, is freely available to anyone, and is used for encryption. The private key is held in secrecy by the user and is used for decryption. Using asymmetrical keys (public and private) means that communications can be encrypted without delivering a key in advance.</p>
+<p>The asymmetric cryptography system is based on number theory and <strong>prime numbers</strong>. A prime number is only evenly divisible by 1 and itself (examples are 2, 3, 5, 7, 11, 13, 17). A common practice is to use a ridiculously large <strong>semi-prime number</strong> (that is, the result of multiplying two prime numbers) as the number securing the encryption. In order to break the encryption it is necessary to find the two or more prime numbers that were multiplied together to result in the original semi-prime number. This works because modern computers can relatively easily generate a very, very large semi-prime number. However, if that number is large enough, computers might take days, months or years to work out which primes, when multiplied together, created the original semi-prime number. The security of the system therefore relies on the current limitations of modern computers which are unable to deduce the prime numbers in a reasonable time frame.</p>
+<p>Hyper Text Transfer Protocol Secure (HTTPS) is an example of asymmetric cryptography. HTTPS is the secure version of HTTP, the protocol over which data is sent between your browser and the website that you are connected to, and is used to protect confidential online transactions like banking and purchasing. HTTPS means all communications between your browser and the website are encrypted with a secure protocol using an asymmetric Public Key Infrastructure (PKI) system with public and private keys to encrypt information. Anything encrypted with the public key can only be decrypted by the private key and vice-versa.</p>
+<p>According to Comodo (2017), in the case of a website, the private key remains securely ensconced on the Web server. But the public key is distributed to anybody who needs to decrypt information that was encrypted with the private key. When you request an HTTPS connection to a webpage, the website will initially send its SSL certificate to your browser. This certificate contains the public key needed to begin the secure session. Based on this initial exchange your browser and the website then initiate the &#8220;SSL handshake.&#8221; The SSL handshake involves the generation of shared secrets to establish a uniquely secure connection between you and the website. A padlock icon in the browser address bar denotes an HTTPS connection.</p>
+<h3><strong>Current uses of cryptography</strong></h3>
+<p>Applications of cryptography have gone beyond its historical roots as secret writing. Today, cryptography serves as a powerful tool in support of cybersecurity. Dam &amp; Lim (1996, 54-55) note that cryptography provides many useful capabilities:</p>
+<ul>
+<li><strong>Confidentiality</strong> is the characteristic that information is protected from being viewed in transit during communications and/or when stored in an information system. With cryptographically provided confidentiality, encrypted information can fall into the hands of someone not authorised to view it without being compromised.</li>
+<li><strong>Authentication</strong> is cryptographically based assurance that an asserted identity is valid for a given person (or computer system). With such assurance, it is difficult for an unauthorised party to impersonate an authorised one.</li>
+<li><strong>Integrity check</strong> is cryptographically based assurance that a message or computer file has not been tampered with or altered. With such assurance, it is difficult for an unauthorised party to alter data.</li>
+<li><strong>Digital signature</strong> is cryptographically based assurance that a message or file was sent or created by a given person. A digital signature cryptographically binds the identity of a person with the contents of the message or file, thus providing <strong>nonrepudiation;</strong> the inability to deny the authenticity of the message or file.</li>
+<li><strong>Digital date/time stamp</strong> is cryptographically based assurance that a message or file was sent or created at a given date and time. Generally, such assurance is provided by an authoritative organization that appends a date/time stamp and digitally signs the message or file.</li>
+</ul>
+<p>Other modern uses of cryptography are as follows:</p>
+<ul>
+<li><strong>Digital rights management</strong>: Cryptography is central to digital rights management, a group of techniques for technologically controlling use of copyrighted material, implemented and deployed to benefit copyright holders.</li>
+<li><strong>Data transfer</strong>: Encryption is also used to protect data in transit, for example data being transferred via networks (e.g. the Internet, e-commerce), mobile telephones, wireless microphones, Bluetooth devices and automatic teller machines.</li>
+</ul>
+<p>The high level of confidence in the success of modern asymmetric cryptography for data protection indicates that the code makers are winning—for now. However, public-key algorithms can potentially be broken by a sufficiently large quantum computer.</p>
+<h3><strong>Future of cryptography: quantum computing</strong></h3>
+<p>As explained by Bonsor &amp; Strickland (2000), quantum computers, harnessing the power of atoms and molecules to perform memory and processing tasks, have the potential to perform calculations significantly faster than any silicon-based computer. Unlike current computers which manipulate bits that exist in one of two states (0 or 1), quantum computers aren&#8217;t limited to two states; they encode information as quantum bits, or <strong>qubits</strong>, which can exist in superposition. Because a quantum computer can contain these multiple states simultaneously, it has the potential to be millions of times more powerful than today&#8217;s most powerful supercomputers.</p>
+<p>Given the history of cryptography, quantum computing means that code breakers may gain the upper hand—but not for long. As the need for secret messages is unlikely to diminish, quantum computing will herald another escalation in the battle of wits between the code makers and code breakers.</p>
+<h2><strong>Conclusion</strong></h2>
+<p>Modern cryptography exists at the intersection of mathematics, computer science, and electrical engineering. Applications of cryptography include ATM cards, computer passwords, electronic commerce, digital rights management, and copyright—all of which are relevant to museums. Cryptography is a technology that can play an important role in addressing certain types of information vulnerability, although it is not sufficient to deal with all threats to information security. An understanding of potential cyber threats is critical to developing strategies for prevention applied across the ICT infrastructure. Every staff member has a role to play in protecting the confidentiality, integrity, and availability of their museum’s data.</p>
+<h2><strong>References</strong></h2>
+<p>Bonsor, K. &amp; J. Strickland. (2000). &#8220;How Quantum Computers Work.&#8221; <em>HowStuffWorks.com</em>. Consulted January 9, 2017. Available  <a href="http://computer.howstuffworks.com/quantum-computer.htm">http://computer.howstuffworks.com/quantum-computer.htm</a></p>
+<p>Comodo. (2017). <em>What is HTTPS?</em> Consulted January 9, 2017. Available <a href="https://www.instantssl.com/ssl-certificate-products/https.html">https://www.instantssl.com/ssl-certificate-products/https.html</a></p>
+<p>Dam, K. W., &amp; H.S. Lim (eds.) (1996). <em>Cryptography’s role in securing the information society</em>. Washington, D.C.: National Academies Press. Consulted January 25, 2017. Available <a href="https://www.nap.edu/read/5131/chapter/1">https://www.nap.edu/read/5131/chapter/1</a></p>
+<p>Deloitte. (2015). “Consumer data under attack: The growing threat of cyber crime.” <em>Deloitte Consumer Review</em>. Consulted December 28, 2016. Available <a href="https://www2.deloitte.com/content/dam/Deloitte/uk/Documents/consumer-business/deloitte-uk-consumer-review-nov-2015.pdf">https://www2.deloitte.com/content/dam/Deloitte/uk/Documents/consumer-business/deloitte-uk-consumer-review-nov-2015.pdf</a></p>
+<p>Lyons, J. (2012). “Caesar Cipher.” <em>Practical Cryptography website</em>. Consulted January 6, 2017. Available <a href="http://practicalcryptography.com/ciphers/caesar-cipher/">http://practicalcryptography.com/ciphers/caesar-cipher/</a></p>
+<p>Morgan, L. (2016). “List of data breaches and cyber attacks in October 2016 – 142, 160,000 records leaked.” <em>IT Governance</em>. Last updated October 27, 2016. Consulted January 6, 2017. Available <a href="http://www.itgovernance.co.uk/blog/list-of-data-breaches-and-cyber-attacks-in-october-2016-142160000-records-leaked/">http://www.itgovernance.co.uk/blog/list-of-data-breaches-and-cyber-attacks-in-october-2016-142160000-records-leaked/</a></p>
+<p>Northrup, L. (2015). “Zoo And Museum Gift Shop Operator Confirms Details Of Payment Data Breach.” <em>Consumerist website</em>. Last updated October 15, 2015. Consulted January 6, 2017. Available <a href="https://consumerist.com/2015/10/15/zoo-and-museum-gift-shop-operator-confirms-payment-data-breach/">https://consumerist.com/2015/10/15/zoo-and-museum-gift-shop-operator-confirms-payment-data-breach/</a></p>
+<p>Rodriguez-Clark, D. (2013). “Polybius Square.” <em>Crypto Corner website</em>. Consulted January 7, 2017. Available <a href="http://crypto.interactive-maths.com/polybius-square.html">http://crypto.interactive-maths.com/polybius-square.html</a></p>
+<p>Singh, S. (n.d.). “Mary Queen of Scots.” <em>The Black Chamber website.</em> Consulted January 6, 2017. Available <a href="http://simonsingh.net/The_Black_Chamber/maryqueenofscots.html">http://simonsingh.net/The_Black_Chamber/maryqueenofscots.html</a></p>
+<p>Singh, S. (2000). <em>The code book</em>. London: Fourth Estate.</p>
+<p>Thawte, Inc. (2013). <em>History of Cryptography: An easy to understand history of cryptography</em>. Consulted December 28, 2016. Available <a href="http://digcert.com/docs/thawte/history-cryptography.pdf">http://digcert.com/docs/thawte/history-cryptography.pdf</a></p>
+<p>Wikipedia. (2016). <em>Frequency analysis</em>. Last modified December 9, 2016, at 19:51. Consulted January 9, 2017. Available <a href="https://en.wikipedia.org/wiki/Frequency_analysis">https://en.wikipedia.org/wiki/Frequency_analysis</a></p>
+<p>Wikipedia. (2017). <em>Enigma machine</em>. Last modified January 4, 2017, at 02:27. Consulted January 9, 2017. Available <a href="https://en.wikipedia.org/wiki/Enigma_machine">https://en.wikipedia.org/wiki/Enigma_machine</a></p>
+<p>Verizon. (2016). <em>2016 Data Breach Investigations Report: 89% of breaches had a financial or espionage motive</em>. Consulted January 9, 2017. Available <a href="http://www.verizonenterprise.com/verizon-insights-lab/dbir/2016/">http://www.verizonenterprise.com/verizon-insights-lab/dbir/2016/</a></p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+Pryor, Wendy. "Staying safe: cybersecurity in modern museums." <i>MW17: MW 2017</i>. Published January 23, 2017. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw17.mwconf.org/paper/staying-safe-cybersecurity-in-modern-museums-internal-external-and-hidden-threats-with-a-focus-on-cryptography-to-maintain-data-security/<br /><br /><hr>
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h2><p class="must-log-in">You must be <a href="../../wp-loginbfb0.html?redirect_to=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fstaying-safe-cybersecurity-in-modern-museums-internal-external-and-hidden-threats-with-a-focus-on-cryptography-to-maintain-data-security%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- .comments-area -->
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="text-7" class="widget widget_text">			<div class="textwidget"><h2 class="widget-title">Community Conveners</h2>
+<p><a title="Wezit" href="https://wezit.io/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/wezit-250-75.jpg" alt="Wezit" /></a><br />
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a></p>
+<h2 id="gold-sponsor" class="widget-title">Platinum Sponsor</h2>
+<p><a title="Microsoft" href="http://aka.ms/museweb" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/Microsoft-250-75.jpg" alt="Microsoft" /></a><br />
+<!-- <a title="Izi Travel" href="http://www.izi.travel" target="_blank" rel="noopener"><img src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/izi-250-75.jpg" alt="Izi Travel" class="sponsor-img sponsor-top" /></a> --></p>
+<h2 id="gold-sponsor" class="widget-title">Gold Sponsor</h2>
+<p><a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a></p>
+<h2 id="bronze-sponsor" class="widget-title">Bronze Sponsors</h2>
+<p><a title="MailChimp" href="https://mailchimp.com/resources/guides/mailchimp-for-nonprofits/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a><br />
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/netx-250-75.gif" alt="Netx" /></a><br />
+<a title="PatronTech" href="http://patrontechnology.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/patron-250-75.jpg" alt="PatronTech" /></a></p>
+<h2 id="conference-sponsor" class="widget-title">Conference Sponsors</h2>
+<p><a title="CMA" href="http://clevelandart.org/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/cma-250-75.jpg" alt="CMA" /></a><br />
+<a title="Rock &amp; Roll" href="http://www.rockhall.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/rrhf-250-75.jpg" alt="Rock &amp; Roll" /></a></p>
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+</body>
+
+<!-- Mirrored from mw17.mwconf.org/paper/staying-safe-cybersecurity-in-modern-museums-internal-external-and-hidden-threats-with-a-focus-on-cryptography-to-maintain-data-security/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:59:18 GMT -->
+</html>

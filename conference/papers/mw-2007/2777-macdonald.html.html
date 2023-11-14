@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2007-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/macdonald/macdonald.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:28:59 GMT -->
+<head>
+<!-- #BeginEditable "HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2007: Papers: MacDonald,
+D., et al., Science Mobilized: Bringing Up-To-The-Minute Headlines Into The Museum
+and Back Out Again: The Times Square of Science and Technology</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2007" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Keywords" -->
+<meta name="Keywords" content="RSS, multi-display, SMS, MMS, Fair use, content filtering , articles, papers, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Description" -->
+<meta name="Description" content="Museums and the Web 2007: the international conference for culture and heritage on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2007" />
+<!-- #EndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="../../css/mw2007.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="../../css/mw2007-noNews.css" type="text/css"  media="print, screen" />
+	<link rel="stylesheet" href="../../css/papers.css" type="text/css"  media="print, screen" />
+
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+</head>
+<body  onload="initImgRotation()">
+	<div id="container">
+		<div id="header" onclick="location.href='../index.html';" style="cursor:pointer;">
+		</div>
+		<div id="top-nav">
+			<ul id="top-nav-list">
+				<li><a href="../../register/index.html">Register</a></li>
+				<li><a href="../../dates/index.html">Key Dates</a></li>
+				<li><a href="../../sescal/index.html">Schedule</a></li>
+				<li><a href="../../local/index.html">Local Info</a></li>
+			</ul>
+		</div>
+		<div id="header-photo">
+			<a href="../../images/credits.html">
+			<!-- InstanceBeginEditable name="header-photo" --> <img src="../../images/rotate/header-pic.jpg" alt="MW-photo" name="img1" width="229"  height="132" id="img1" /> <!-- InstanceEndEditable -->	
+			</a>
+		</div>
+		<div id="date">
+			April 11-14, 2007<br />
+			San Francisco, California
+		</div>
+		<div  id="title">
+			<h1> 
+				<!-- InstanceBeginEditable name="PageTitle" --> <span class="title-longer">Science
+        Mobilized: Bringing Up-To-The-Minute Headlines Into The Museum and Back
+        Out Again:
+      &quot;The Times Square of Science and Technology&quot;</span> <!-- InstanceEndEditable -->
+   			</h1>
+		</div>
+		<div id="main-content">
+		  <div id="callout">          </div>
+		  <div id="intro-paragraph">
+				<!-- #BeginEditable "IntroParagraph" -->
+      <h2 class="Author">Dale W. MacDonald, and Scott L. Minneman, Onomy Labs,
+        Inc.,; Wayne J. Labar, Liberty Science Center; Anne M. Balsamo, University
+        of Southern California; and Jon Winet, University of Iowa, USA</h2>
+      <h3 class="AbstractTitle">Abstract</h3>
+      <p class="AbstractText"><em>The Times Square of Science and Technology</em> (<em>T2ST</em>)
+        is a permanent installation going into the atrium of the Liberty Science
+        Center in Jersey City, New Jersey. <em>T2ST</em> is an evocative environmentally-scaled
+        artwork designed to convey the notion that science and technology is
+        exciting, dynamic and current. To that end, Onomy Labs, working with
+        Anne Balsamo (University of Southern California Institute for Multimedia
+        Literacy), Jon Winet (University of Iowa Experimental Writing Wing) and
+        John Randolph (Randolph Designs) are creating a large-scale interactive
+        mobile that includes three thematically-relevant floating shapes and
+        other dynamic displays that visitors will interact with from the different
+        levels of the building structure. </p>
+      <p class="AbstractText">The <em>T2ST</em> design includes twenty-seven
+        active surfaces that display information from RSS feeds from trusted
+        science and technology sources on the Web. In this way, <em>T2ST</em> provides
+        an automatic and evergreen source of science and technology news, much
+        as Times Square does for the topics of financial news, current events,
+        and advertising. The installation demonstrates a new way to bring Web-based
+        content not only into the public area of the museum but also out again
+        via SMS and MMS subscriptions of thematically relevant content. To facilitate
+        such an operation, Onomy Labs developed a suite of tools for directing
+        automated searches of the Web and to manage input from staff and members
+        of the public. This paper describes the architecture and preliminary
+        use of this suite of tools in using the Web as an evergreen information
+        source live and in color on the museum floor and in visitors&rsquo; hands.</p>
+      <p class="keywords">Keywords: RSS, multi-display, SMS, MMS, Fair use, content
+        filtering </p>
+      <!-- #EndEditable -->		  </div>
+				<!-- #BeginEditable "BodyText" -->
+    <h1>Introduction</h1>
+    <p>Interactive exhibits in museum settings tend to be fairly small-scale,
+      typically aimed at individuals or very small groups. In science and technology
+      centers, where interactive exhibits are common, such exhibits serve as
+      the destination spots of thematically organized environments. Some museums
+      have the space and the resources for grander gestures, but these often
+      focus on inert historical artifacts or aesthetically compelling large sculptures.
+      Some of these pieces are educational and visually evocative, such as the
+      Hoberman Sphere at Liberty Science Center. What many museums and science/technology
+      centers are interested in developing now are environmental scale installations
+      that are responsive to individual user&rsquo;s actions.</p>
+    <p>Hand held devices have been making inroads into museum settings over the
+      past decade. Early efforts concentrated on the use and deployment of audio
+      and electronic tour guides; much of the use of hand held devices in museum
+      settings still focuses on the guided tour function. The authors of this
+      paper have been exploring the use of coming hand held devices as interface
+      mechanisms for large-scale interactives. This shift from the use of specialized
+      hand held devices (mp3 players and headphones for the purposes of guided
+      tours) to devices that visitors have access to before, during, and after
+      their time at the museum seems a promising vector of interactivity design.&nbsp; Finding
+      ways to use the everyday technologies that people carry with them &lsquo;on
+      the move&rsquo; - such as cell phones, PDAs, iPods, and digital cameras
+      - is an interesting opportunity for the museum to make connections to the
+      technological environments and literacies that visitors bring with them.</p>
+    <p>One of the biggest challenges in all museums, and particularly science
+      and technology centers, is keeping exhibits fresh and informed of current
+      events and scientific developments. The need for evergreen content is widely
+      recognized as a key factor in the rate and interval of return visits -
+      museum visitors don&rsquo;t want to return and see all the same stuff.
+      Presenting and explaining events in the dynamically changing fields that
+      comprise contemporary science and technology is one of the pillars of the
+      educational mission of these cultural institutions; every conference of
+      museum professionals includes sessions on how to explain contemporary technological
+      developments that are showing up in the newspapers and magazine headlines
+      (for example, human genomics, nanotechnology, biomimicry, to name a few
+      of the most current topics of fascination). Creating new exhibits to address
+      these topics requires considerable resources of design staff, outside expertise,
+      and research, bringing in traveling shows for this purpose requires money
+      &ndash; all are often in short supply for museums.</p>
+    <h1>Call and Response</h1>
+    <p>In the spring of 2005, Liberty Science Center put out a call for proposals
+      for a large-scale exhibit to occupy the atrium of their expanded and remodeled
+      facility in Jersey City, New Jersey. The call was multi-faceted; its central
+      design provocation was an invitation to &ldquo;reinvent Times Square for
+      the circulation of science and technology news.&rdquo;&nbsp; The museum
+      appreciated the way that the many screens of Times Square display the news
+      of the day and statistics of the world (stock quotes, weather descriptions)
+      in a seemingly unmediated form. The RFP called for proposals for the development
+      of a piece that would convey that science wasn&rsquo;t a staid and static
+      field, but rather an exciting and dynamic topic, full of excitement and
+      day-to-day developments. </p>
+    <p><em>Science Mobilized</em>, a large-scale piece proposed by Onomy Labs,
+      Inc., was selected as the installation for the newly renovated atrium at
+      Liberty Science Center. In ways that will be described over the following
+      pages, <em>Science Mobilized</em> took on the challenge of gathering evergreen
+      content, leveraging visitors&rsquo; hand held devices, and allowing visitors
+      to interact with this large-scale piece in enjoyable and meaningful ways. <em>Science
+      Mobilized</em> did not take the obvious path of putting a cartoon of New
+      York City urbanism into a museum across the Hudson, but rather mused about
+      how Times Square might appear were it <em>designed</em> as a communications
+      tool, rather than simply being an accretion of large displays in a public
+      space. <em>Science Mobilized</em> is an artful, tech-savvy approach to
+      a complex suite of problems.</p>
+    <p>The current name of <em>Science Mobilized</em> is now<strong> </strong><em>T2ST:
+        The Times Square of Science and Technology</em>. It will premiere in
+        July 2007 in the Breakthroughs atrium in the Liberty Science Center.
+        The piece takes New York&rsquo;s Times Square as an inspiration and prototype,
+        but goes steps further in various directions. The real Times Square is
+        an accretion of display surfaces that came about by historical accident;
+        the information display servers were never designed to form a coherent
+        whole. In fact, as it is now, the various display surfaces compete with
+        one another for viewer attention. <em>T2ST</em> takes a different approach:
+        it is designed to employ multiple display surfaces for the presentation
+        of different kinds of information. <em>T2ST</em> consists of 25 dynamic
+        content surfaces arrayed around the 40-foot cube of the atrium. Throughout
+        the day, each screen will be showing video, images, and/or text of current
+        events in science and technology. The various display surfaces are orchestrated
+        to work together to produce a visually dense but meaningful information
+        space. <em>T2ST</em> speculates about how Times Square might look if
+        it <em>had </em>been designed as an interactive information source for
+        the public. Despite the jumble of information surfaces, Times Square
+        evokes a sense of wonder and awe. This is the impact that <em>T2ST</em> aims
+        to recreate. </p>
+    <p>The most dominant feature of T2ST is a mobile, like those found above
+      a baby's crib, but scaled up to fill a large atrium. The mobile is comprised
+      of three large translucent plastic shapes, about 10 feet on a side, inspired
+      by the museum themes of Environment, Health and Invention. Several video
+      projectors embedded in each shape project images and video on to the surfaces,
+      giving the shapes an engaging and dynamic appearance for the museum visitors
+      who view the piece from the balconies of the atrium. </p>
+    <p>The three shapes and their counterweights are connected to each other
+      through cables and pulleys; in this way the mobile addresses all 3 floors
+      of the atrium. The system is motorized and the shapes slowly rise and fall
+      throughout the day. The shapes thus have the side-to-side dynamic of a
+      traditional mobile <em>and</em> the up-down dynamics of the cable system.
+      Each shape and its counterweight are statically balanced so that the mobile
+      is completely safe in the event of a power failure. For bulb replacement
+      and any other service, the shapes can be lowered near to the floor and
+      an access panel removed. </p>
+    <p>The counterweights in the mobile are two LED &lsquo;zipper&rsquo; signs,
+      mounted back-to-back, showing textual information on current science developments.
+      These signs, highly reminiscent of Times Square stock quote tickers, will
+      display content germane to the theme of their corresponding shape.</p>
+    <p>On the spandrels of the atrium are two other types of display. A set of &lsquo;text
+      sprays&rsquo; is&nbsp; projected on the periphery of the atrium, and emerges
+      from and disappears into the corners of the concrete balconies of the space.
+      Traversing along two spandrels are two additional zipper signs, each on
+      a motorized cart. These signs can be thought of as &lsquo;reading&rsquo; information
+      that is invisibly inscribed on the spandrels themselves. As the zipper
+      moves along a spandrel, sometimes under visitor control, it reveals hidden
+      statistics like the falling number of acres of rain forest or the rising
+      global human population.</p>
+    <p>The content shown in <em>T2ST</em> will include images, text and video
+      from a wide variety of Internet RSS feeds about science and technology.
+      Onomy Labs has created spider processes that gather material automatically
+      from trusted sources, cataloguing it, storing it locally, and queuing it
+      for display on the different information sources of the <em>T2ST</em> installation.
+      The automating of the information gathering, cataloguing and display&nbsp; removes
+      the necessity of having a full-time staff member devoted to content retrieval
+      and management. A digital &lsquo;master scheduler&rsquo; application coordinates
+      the daily programming of the installation; the day&rsquo;s program can
+      be manually over-ridden in the case of breaking news, or for the presentation
+      of specially designed content that might be produced for a special museum
+      event. The foundation of the information display system is a set of services
+      for acquiring Web-based content. But the information sources still need
+      to be routinely monitored by a museum staff member, not only for the purposes
+      of the verification of reliability, but also for the purposes of accountability
+      and citation. For this reason, the &lsquo;master scheduler&rsquo; application
+      also includes notification and approval mechanisms for staff. It will also
+      produce a history of what&rsquo;s been displayed on various surfaces during
+      any time period. This will enable the museum to adequately document the
+      sources of the displayed information, so as to comply with Fair Use standards
+      and information audits.</p>
+    <p>Museum staff, visitors, artists and students are invited to add new RSS
+      subscriptions and pointers to interesting breaking news sources. The museum
+      staff direct the overall functioning of the mobile, both when it is in
+      its &lsquo;evergreen mode,&rsquo; and when it is deployed for the display
+      of specialized content. Some provision has been made for considerable public
+      input. For example, the Liberty Science Center will collaborate with different
+      Universities that have curriculum in new media authoring. Select classes
+      of students will be invited to create specialized content for <em>T2ST</em>.
+      The opportunity to author for this interactive, environmentally-scaled
+      installation will serve several educational objectives. </p>
+    <ol>
+      <li> It will allow students to explore different how different modalities
+        of presentation within the atrium map onto different kinds of information.
+        For example: students will be asked to think about the relationship between
+        the information presented on a vertical zipper sign and the information
+        presented on a video feed that is displayed on various surfaces of the
+        mobile shapes. Understanding the relationship between information and
+        the form of display is often difficult for students when they design
+        for desktop displays: these display environments have been thoroughly
+        naturalized, with the result that students fail to see the connection
+        between form and content and the way in which this connection too must
+        be designed in a meaningful way. </li>
+      <li>Kiosks where visitors are presented with opportunities to influence
+        the <em>T2ST</em> presentation in the atrium will permit a second mode
+        of interaction between members of the public and the <em>T2ST</em> installation.
+        These inputs will offer visitors the opportunity to contribute suggestions
+        for future T2ST topics, or will present an opinion or interest poll about
+        current debates in science and technology where the results of the poll
+        are displayed on one of the surfaces. This type of input is part of the
+        museum's <em>Science Now Science Everywhere (SNSE)</em> system that enables
+        visitors to link to exhibits using their personal cell phones. In addition,
+        the <em>SNSE</em> system enables visitors to take away custom RSS feeds
+        and news reports on their cell phones and PDAs. This extends visitors&rsquo; engagement
+        with the installation and sets the stage for the development of more
+        elaborate participation in &lsquo;citizen science projects.&rsquo; </li>
+    </ol>
+    <h1>Challenges</h1>
+    <p>With respect to the planning and design of the <em>T2ST</em>, Liberty
+      Science Center had to make several key decisions in preparation for opening
+      its operation - both in terms of the physical structure and in terms of
+      enabling connections to visitors&rsquo; cell phones. These decisions focused
+      on content management and issues involved in ensuring equal access to information
+      via cell phone. The science center acknowledges that the determinations
+      described here will, in fact, be tested when the <em>T2ST</em> becomes
+      operational. Certainly, some adjustment will be required as real world
+      situations take shape.</p>
+    <h2>Embodying Policies</h2>
+    <p>The initial content for <em>T2ST</em> is drawn from seed sites found by
+      Onomy Labs from a set of topics provided by the museum. Those sites were
+      approved by the museum, both to make certain that the content was a good
+      match and to determine that the site was trustworthy. Initially no automated
+      filtering of incoming content is in place, though provision has been made
+      to use the filters being applied to Internet-connected kiosks on the museum
+      floor. Approval for all feeds rests with museum staff, and this will continue
+      to be the case as the more challenging issue of approving visitor-submitted
+      feeds becomes part of the game.</p>
+    <p>The <em>T2ST </em>piece is critical to another science center initiative.
+      Liberty Science Center has launched a project called <em>The Exhibit Commons</em>,
+      which aims to allow visitors to submit content and even programs to the
+      science center&rsquo;s exhibits. In our case, this will take the form of
+      allowing <em>T2ST</em> to accept links to content supplied by the public,
+      and also allowing&nbsp; the public to program the piece for critiques on
+      science and society in the news. These submissions, via cell phone, kiosk
+      entries and Web visitors, are first checked against a database of previously
+      proffered sites, and then passed on in a daily digest to museum staff.</p>
+    <h2>Rights Management</h2>
+    <p>From the very beginning, the science center saw this art piece as a commentary
+      on the pervasiveness of news and data - one focused on the areas of science
+      and technology. Creating this social commentary within an art piece falls
+      within the Fair Use application of content. To aid this effort, the science
+      center created a document outlining the purpose and intent of the piece.
+      As a result, the first step taken has been to obtain rights from creators
+      or to use content that is issued under the Creative Commons system. The
+      science center and the programmers have worked to select sources and presentation
+      styles that&nbsp; follow Fair Use rights and guidelines. This includes
+      such considerations as limiting the amount of information presented, controlling
+      the amount of &lsquo;air time&rsquo; any individual piece will be assigned,
+      and providing adequate attribution to the material&rsquo;s source. As the
+      piece evolves through additional visitor contributions via the Exhibit
+      Commons, the issues of rights and fair use management will require the
+      science center to maintain a watchful eye.</p>
+    <p>Several approaches were taken to support this watchful eye. First, a set
+      of opportunities for viewers to check the provenance of displayed items
+      was provided. These include inclusion of source logos on all image and
+      video displays: a presentation of recent items at the research station
+      is available where users can peruse the items in their syndicated form
+      as supplied, and subscribers to the T2ST aggregations can bring up items
+      on their phones or computers in a similar way, and see the source materials
+      in their initial context (i.e., T2ST actually drives additional eyes to
+      the source sites). Second, at the time of accepting a new feed or other
+      site to the scavenger, staff are required to point the database at a URL
+      of the feed or Web site's published usage document as well as staff's interpretation
+      of Liberty Science Center's rights. Third, T2ST will track the use of each
+      segment of collected content, so an audit trail could be provided to any
+      concerned source. </p>
+    <h2>Content Management</h2>
+    <p>Currently, the content management area that has required the most consideration
+      and foresight for the science center is operations. The greatest concern
+      has been the large amount of information that will pass through the <em>T2ST</em> installation.
+      A first issue that needed to be addressed was how to ensure that science
+      center staff would not be required to constantly manage content sources.
+      Therefore, as part of this project, a content management scheduling system
+      was created. This will be used for determining sources of daily content
+      scheduling, hopefully minimizing the danger of presenting content that
+      does not meet the aim of the experience. With this system in place, Liberty
+      Science Center will experiment with the amount of staff eyeball review
+      that will be required for the piece. This will also allow the science center
+      to refine its collection of trusted sources and its&nbsp; process for approving
+      visitor submissions.</p>
+    <p>Presentation in the atrium is the bedrock of this whole project. The default
+      repeating query for all displays is &ldquo;show the latest 10 items for
+      my theme weighted by the current suggested categories.&rdquo; To modify
+      this (for instance, to show cross-themed items about space simultaneously),
+      museum staff are presented with a Tivo-like interface which allows them
+      to specify queries which get played out for a given period of time for
+      given displays. </p>
+    <p>Accepted RSS feeds are cached in a relational database to allow for a
+      variety of queries to be made on the aggregate content. All feeds are tagged
+      with both a theme (the themes of the museum as of deployment time are environment,
+      health and invention) and a category such as &ldquo;space,&rdquo; &ldquo;global,&rdquo; or &ldquo;virus.&rdquo; Fed
+      items are time-stamped so that queries of the form &ldquo;items about space
+      in theme invention received in the last 12 hours&rdquo; can be made. In
+      addition, full text search is available both to the display devices and
+      also to museum staff to determine whether new categories should be added.</p>
+    <p>A major challenge in running T2ST largely unattended is the loose standardization
+      available to RSS syndicators. Heuristics are built into the system to deal
+      with most of the variations, and a facility for adding new rules to the
+      heuristics is available to refine the system's capabilities. A related
+      issue is finding imagery related to feeds of sufficient resolution to be
+      displayed on the floating shapes. This required developing a number of
+      heuristic-driven methods of exploring articles looking for appropriate
+      imagery. For both of these subsystems, e-mail is used to alert museum staff
+      of anomalous results.</p>
+    <p>Video content presented several challenges. The first is that the design
+      of the system is really built around a notion of &lsquo;silent radio,&rsquo; so
+      video content either needs to stand alone on its visual qualities or needs
+      to come with closed captioning that can be either&nbsp; displayed directly
+      on the video screens or allowed to play out on physically proximal LED
+      sign. The second is that moving-image content is not yet widely distributed
+      via RSS, so for initial deployment, video aggregation and selection remain
+      fairly manual. We believe that videos coming via RSS will become more common
+      as time progresses.</p>
+    <p>In addition to the screens installed in the atrium at the museum, we are
+      allowing visitors to subscribe to various themes/categories as a way of
+      continuing to receive <em>T2ST</em>-aggregated content via their cell phones.
+      Given the current tariff situation with cell phone service providers (per-
+      message charges are typical), users are given various throttling options
+      for these feeds. Over time we expect to gather statistics and other insights
+      which will allow us to try things like &lsquo;most exciting item of the
+      day.&rsquo;</p>
+    <h2>Cell Phone Usage</h2>
+    <p><em>T2ST</em> is an essential part of the <em>Science Now, Science Everywhere</em> (SNSE)
+      project underway at Liberty Science Center. This experience will provide
+      opportunities for visitors to interact with and receive content both inside
+      and outside of the science center&rsquo;s physical structure by using their
+      cell phones. The science center took on this project as a way of extending
+      the museum&rsquo;s visitor experience by creatively leveraging the increasing
+      use of cell phones among the general public.&nbsp; </p>
+    <p>Cell phone users have three types of interactions with <em>T2ST.</em> Visitors
+      can add keywords to influence topic selection for presentation on the displays.
+      Visitors can also answer various polls, particularly the <em>Question of
+      the Day</em> posed by museum staff. Finally, visitors can opt to receive
+      aggregated feeds from the museum for a period of time after they depart
+      the facility.</p>
+    <p>An essential aspect of presenting content through devices such as cell
+      phones is the public&rsquo;s accessibility to content. How can the museum
+      ensure equal access to the content of an interactive when all visitors
+      may not have a cell phone? As part of the preparation for the project,
+      the science center looked at the current state of cell phone use, and,
+      more importantly,&nbsp; cell phone availability to and usage by the members
+      of the public who attend the science center. Through this research the
+      staff learned that: </p>
+    <ol>
+      <li>84% of our audience aged 13 -17 owned a cell phone, and 100% those
+        aged 18 to 24.</li>
+      <li>20% of cell phone users have access to SMS, and 16% use it.</li>
+    </ol>
+    <p>Although cell phone penetration was quite high, the SMS familiarity and
+      comfort was considerably less. Based on these results, the museum staff
+      desired an approach to broaden access to the content and interactives accessible
+      through cell phones. To address this, the <em>T2ST</em> installation includes
+      three physical kiosks that allow visitor to participate as though they
+      had a cell phone. Moreover, elements of these interactives will also be
+      found on the Web, allowing users even further away from the science center
+      to interact with <em>T2ST</em>.</p>
+    <p>In addition, Liberty Science Center is partnering with Verizon Wireless
+      to provide loaner phones for those who wish to use a cell phone during
+      their visit. These will be &lsquo;locked&rsquo; phones that only allow
+      interaction with the SNSE application at the science center.</p>
+    <h1>Conclusion</h1>
+    <p>The <em>T2ST</em> interactive is part of the Liberty Science Center&rsquo;s
+      overall plan to develop innovative modes of interactivity using common
+      communication devices. The approached developed by Onomy Labs provides
+      evergreen exhibit content in a way that doesn&rsquo;t rely on the participation
+      of a specific staff member or exhibit management team. The objective was
+      to leverage the vast amount of interesting science and technology information
+      that is already available on the Web, but in a way that doesn&rsquo;t require
+      a great deal of editorial supervision on the part of the museum staff.&nbsp; This
+      provides an innovative use of the Web that doesn&rsquo;t rely on home-
+      or school-based Web-providers and doesn&rsquo;t relegate the rich Web resources
+      to the Museum&rsquo;s Web portal.</p>
+    <h4>Acknowledgements</h4>
+    <p><span class="AcknowedgementsText">This material is based upon work supported
+        by the National Science Foundation</span>.</p>
+				<!-- #EndEditable -->
+				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> MacDonald,
+        D., et al., Science Mobilized: Bringing Up-To-The-Minute Headlines Into
+        The Museum and Back Out Again: &quot;The Times Square of Science
+        and Technology&quot;<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2007: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics, published March 1, 2007  Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+http://www.archimuse.com/mw2007/papers/<!-- #BeginEditable "URL" -->macdonald/macdonald.html<br />
+		    <br />
+		    NOTE: Acknowledgements updated at the request of the authors.
+<!-- #EndEditable --></p>
+				<p class="references"><em><!-- InstanceBeginEditable name="Editorial Note" -->Editorial Note<!-- InstanceEndEditable --></em> </p>
+	  </div>
+<div id="sidebar">
+			<div id="side-nav">
+				<ul id="side-nav-list">
+					    <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+						<li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+						<li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+						<li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+						<li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+						<li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+						<li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+						<li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+				</ul>
+			</div>
+			<div id="search-site">
+				<form method="post" action="../http://search.archimuse.com/cgi-bin/htsearch">
+					<input type="hidden" name="format" value="builtin-long" />
+					<input type="hidden" name="method" value="and" />
+					<input type="hidden" name="config" value="htdig-mw2007" />
+					<input type="hidden" name="restrict" value="" />
+					<input type="hidden" name="exclude" value="" />
+					<input type="text" size="20" name="words" value="" id="searchmw" />
+					<input type="image" src="../../images/searchmw2007.gif" id="searchbox" name="search" />
+				</form>
+			</div>
+				<div id="sidebar-links">
+				<ul id="sidebar-links-list">
+					<li><a href="../../../index.html" class="produced-by">produced by<br />
+					    <img src="../../images/sidelogo.gif" width="144" height="37" alt="AMI logo" /></a></li>
+					<li><a href="../../../index.html">Join our mailing list</a></li>
+					<li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+					<img src="../../../external.gif?link=http://www.archimuse.com/ami.images/search.gif" alt="search" width="24" height="25" /></a></li>
+				</ul>
+		  </div>
+		</div>
+		<div id="footer">
+		  <div id="last-updated">
+          published: April 11, 2007<br />
+			last updated:<!-- #BeginDate format:Am1a -->October 28, 2010 12:23 PM<!-- #EndDate -->
+		        <div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+		  </div>
+			<div id="footer-content">
+				Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E 2P3 Canada<br />
+				Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+				
+				<script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2007";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2007 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				</script>	
+
+		<br />
+				Copyright &copy; 2006 - Archives &amp; Museum Informatics - All rights reserved.<br />
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/macdonald/macdonald.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:28:59 GMT -->
+</html>
+					

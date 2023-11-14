@@ -1,0 +1,2233 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/schweibenz/schweibenz.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:49:16 GMT -->
+<head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>Evaluating the Usability of a Museum Web SiteAbstract</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onLoad="MM_preloadImages('../../nav/mw2001_nav_registeron.gif','#943398414283');MM_preloadImages('../../nav/mw2001_nav_workshopson.gif','#943398455733');MM_preloadImages('../../nav/mw2001_nav_sessionson.gif','#943398500450');MM_preloadImages('../../nav/mw2001_nav_speakerson.gif','#943398534416');MM_preloadImages('../../nav/mw2001_nav_demoson.gif','#943398577050');MM_preloadImages('../../nav/mw2001_nav_exhibiton.gif','#943398612066');MM_preloadImages('../../nav/mw2001_nav_eventson.gif','#943398640266');MM_preloadImages('../../nav/mw2001_nav_beston.gif','#943398663166');MM_preloadImages('../../nav/mw2001_nav_keydateson.gif','#943398701050');MM_preloadImages('../../nav/mw2001_nav_seattleon.gif','#943398731383');MM_preloadImages('../../nav/mw2001_nav_sponsoron.gif','#943398934733')">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.register','document.register','../../nav/mw2001_nav_registeron.gif','#943398414283')"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"></a> 
+        <br>
+        <a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.workshops','document.workshops','../../nav/mw2001_nav_workshopson.gif','#943398455733')"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"></a> 
+        <br>
+        <a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sessions','document.sessions','../../nav/mw2001_nav_sessionson.gif','#943398500450')"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"></a> 
+        <br>
+        <a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.speakers','document.speakers','../../nav/mw2001_nav_speakerson.gif','#943398534416')"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"></a> 
+        <br>
+        <a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.interact','document.interact','../../nav/mw2001_nav_interacton.gif','#943398534416')"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"></a> 
+        <br>
+        <a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.demos','document.demos','../../nav/mw2001_nav_demoson.gif','#943398577050')"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"></a> 
+        <br>
+        <a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.exhibits','document.exhibits','../../nav/mw2001_nav_exhibiton.gif','#943398612066')"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"></a> 
+        <br>
+        <a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.events','document.events','../../nav/mw2001_nav_eventson.gif','#943398640266')"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"></a> 
+        <br>
+        <a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.best','document.best','../../nav/mw2001_nav_beston.gif','#943398663166')"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"></a> 
+        <br>
+        <a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.dates','document.dates','../../nav/mw2001_nav_keydateson.gif','#943398701050')"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"></a> 
+        <br>
+        <a href="../../seattle/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.seattle','document.seattle','../../nav/mw2001_nav_seattleon.gif','#943398731383')"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"></a> 
+        <br>
+        <a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sponsor','document.sponsor','../../nav/mw2001_nav_sponsoron.gif','#943398934733')"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"></a> 
+        <br>
+        <br>
+        <br>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"></a> 
+        <br>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br>
+        158 Lee Avenue<br>
+        Toronto, Ontario<br>
+        M4E 2P3 Canada<br>
+        info@ archimuse.com<br>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br>
+            A&MI</font></a> </span></td>
+        </tr>
+      </table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class='verysmall'>Published: March 15, 2001.<br>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated:&nbsp;"+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"><br>
+      <!-- #BeginEditable "Body" --> 
+
+      <p class=PaperTitle>Evaluating the Usability of a Museum Web Site</p>
+
+      <p class=Author>Ilse Harms and Werner Schweibenz, University of Saarland, 
+
+        Saarbr&uuml;cken, Germany</p>
+
+      <p class=AbstractTitle>Abstract</p>
+
+      <p class=AbstractText>The paper presents a research project conducted by 
+
+        the Department of Information Science in cooperation with the Saarland 
+
+        Museum, the art museum of the Federal State of Saarland, Germany. The 
+
+        study had two aims. The first was to evaluate some methods of usability 
+
+        engineering for the Web, and the second was to evaluate the usability 
+
+        of the Saarland Museum's Web site and improve it. The applied usability 
+
+        engineering methods were an expert-judgment-focused evaluation using heuristic 
+
+        evaluation with the <i>Heuristics for Web Communication</i> and a user-focused 
+
+        evaluation conducting a laboratory test with actual users and the thinking-aloud 
+
+        method. The combination of heuristic evaluation and laboratory testing 
+
+        provided interesting results. The heuristic evaluation detected a vast 
+
+        number of usability problems. The laboratory test confirmed most of these 
+
+        findings as usability problems and added some usability problems that 
+
+        experts did not discover because actual users often have a different perspective. 
+
+        The evaluation led to a re-design of the Web site.</p>
+
+      <p class=AbstractText>Keywords: Usabilty engineering, Web site usability, 
+
+        heuristic evaluation, user friendly museum Web pages, evaluation of museum 
+
+        Web sites</p>
+
+      <h1>1. Usability Engineering for Museum Web Sites</h1>
+
+      <p class=normal>The World Wide Web offers museums the possibility to disseminate 
+
+        information about their collections to a world wide public. Therefore, 
+
+        one can state that &quot;museums are in the communi­cation business&quot; 
+
+        (Silverstone 1988: 231) and that there are interesting parallels between 
+
+        museums and the mass media (Schweibenz 1998: 187). When attributing communicative 
+
+        and interactive functions to a museum Web site, it is especially important 
+
+        to keep in mind the users and their needs for easy interaction. Therefore 
+
+        it is essential that &quot;the Web is a domain which must be instantly 
+
+        usable&quot; (Rajani &amp; Rosenberg 1999). This statement evokes the 
+
+        question of what usability means for museum Web sites. According to Garzotto, 
+
+        Matera &amp; Paolini (1998), usability is &quot;the visitor's ability 
+
+        to use these sites and to access their content in the most effective way. 
+
+        As a consequence, it has become compelling to provide both quality criteria 
+
+        that WWW sites must satisfy in order to be usable, and systematic methods 
+
+        for evaluating such criteria.&quot; Therefore Web usability and Web usability 
+
+        engineering methods have become an important issue (Garzotto, Matera &amp; 
+
+        Paolini 1998, Teather 1999, Cleary 2000). </p>
+
+      <p class=normal>The usability of Web sites can be tested and improved in 
+
+        a process which is called usability engineering. According to Kr&ouml;mker 
+
+        (1999: 25), usability engineering is a set of methods to design user-friendly 
+
+        products and enhance the quality of the product. The methods of usability 
+
+        engineering can be categorized in expert-focused and user-focused methods. 
+
+        Expert-focused methods like heuristic evaluation and user-focused evaluation 
+
+        methods like laboratory testing with actual users can be used in combination 
+
+        (Nielsen, 1997a: 1543). Undisputedly, the com­bination of heuristic evaluation 
+
+        and laboratory testing achieves the greatest value from each method (Kantner 
+
+        &amp; Rosenbaum 1997: 160; Nielsen, 1993: 225). Therefore, the Department 
+
+        of Information Science at the University of Saarland, Germany, developed 
+
+        a usability engineering process (Harms &amp; Schweibenz, 2000: 19-20) 
+
+        and tested it in a usability study evaluating a museum Web site. This 
+
+        paper presents the experiences from the study which was conducted with 
+
+        an expert-judgment-focused evaluation using heuristic evaluation based 
+
+        on the <i>Heuristics for Web Communi­cation</i> and a user-focused evaluation 
+
+        using laboratory tests with actual users and the thinking-aloud method. 
+
+      </p>
+
+      <h1>2. A Survey of Methods for Usability Engineering</h1>
+
+      <p class=normal>The methods of usability engineering can be categorized 
+
+        into expert-focused and user-focused methods. Among the expert-focused 
+
+        methods are several vari­ations of heuristic evaluation. According to 
+
+        Nielsen (1997a: 1543) &quot;heu­ristic evaluation is a way of finding 
+
+        usability problems in a design by con­trasting it with a list of established 
+
+        usability principles&quot;. The established usability principles are listed 
+
+        in guidelines or checklists like Keevil's <i>Usabi­lity Index</i> (Keevil, 
+
+        1998) or Molich &amp; Nielsen's nine principles for human-computer dialogue 
+
+        (Molich &amp; Nielsen, 1990) or the <i>Heuristics for Web Com­munication</i>. 
+
+        In the evaluation process, experts compare the product with these guidelines 
+
+        and judge the compliance of the interface with recog­nized usability problems. 
+
+        The advantage of expert-focused evaluation is that it is a relatively 
+
+        simple and fast process. A com­paratively small num­ber of five evaluators 
+
+        can find some 75 per cent of the usability problems of a product in a 
+
+        relatively short time (for details see Levi &amp; Conrad, 1996). The disadvantages 
+
+        are that experts have to do the evaluation and that ex­perts cannot ignore 
+
+        their own knowledge of the subject, i.e. they cannot &quot;step back behind 
+
+        what they already know.&quot; So they will always be surro­gate users, 
+
+        i.e. expert evaluators who emulate users. </p>
+
+      <p class=normal>In contrast to expert-focused methods, user-focused methods 
+
+        rely on actual users to test the usability of a product. This process 
+
+        is called user testing, and according to Nielsen (1997a: 1543) it &quot;is 
+
+        the most fundamental usability method and is in some sense irreplaceable, 
+
+        since it pro­vides direct information about how people use computers and 
+
+        what their exact problems are with the concrete inter­face being tested.&quot; 
+
+        There are various methods for user testing. One of the most popular and 
+
+        most ef­fective methods is the laboratory test with the thinking aloud 
+
+        method (Niel­sen 1993: 195) which was used in our case study. The advantage 
+
+        of user-focused evaluation is that the tests supply a huge amount of qualitative 
+
+        data that show how actual users handle the product. The disadvantages 
+
+        are that the tests take place in a laboratory situation and that a lot 
+
+        of equipment and coordination is necessary to conduct the test, making 
+
+        it labor-intensive. </p>
+
+      <h1>3. Description of the Usability Study </h1>
+
+      <h2>3. 1 The Process</h2>
+
+      <p class=normal>In cooperation with the Saar­land Museum - Stiftung Saar­ländischer 
+
+        Kultur­besitz, the art museum of the fe­deral state of Saarland, the Department 
+
+        of Information Science at the University of Saar­land evaluated the museum's 
+
+        Web site (<a href="http://www.saarlandmuseum.de/" target="new">http://www.saarlandmuseum.de</a>). 
+
+        The site is a graphically designed Web site of the third generation (Siegel, 
+
+        1997) and went online in summer 1999. The evaluation project was carried 
+
+        out by sixteen graduate students who had received training in usability 
+
+        engineering in a research class, and two lecturers as coordinators. The 
+
+        study had two aims. The first aim was to evaluate some evaluation methods, 
+
+        especially the <i>Heuristics for Web Com­munication</i>; the second was 
+
+        to improve the usability of the Web site of the Saarland Museum. Therefore 
+
+        we decided to use a com­bination of heuristic evaluation and user testing 
+
+        as suggested in the research literature. Figure 1 illustrates the process. 
+
+      </p>
+
+      <p class=MsoCaption><a name="fig1"></a><a href="schweibenzfig1.html"><img src="schweibenz.fig1_thumb.jpg" width="394" height="272" alt="Figure 1: The evaluation process of the usability study" border="0"></a></p>
+
+      <p class=MsoCaption>Figure 1: The evaluation process of the usability study</p>
+
+      <h2>3.2 Heuristic Evaluation With the Heuristics for Web Communication</h2>
+
+      <p class=normal>The first step was an heuristic evaluation. As mentioned 
+
+        above, there is a multi­tude of heuristics. Heuristics can be specific 
+
+        for a certain domain or generally applicable. They can be design-oriented 
+
+        or evaluation-oriented or both. They can be based on research or on experience 
+
+        of practitioners. There­fore, heuristics vary in extent and quality. In 
+
+        our case study we used the <i>Heuristics for Web Communication</i>, developed 
+
+        by the faculty of the Departments of Technical Communication of the University 
+
+        of Washington, Seattle, and the University of Twente, the Netherlands. 
+
+        The heuristics are based on research findings in technical writing and 
+
+        cognitive psychology and were evaluated in a workshop with 40 parti­cipants, 
+
+        both students and lecturers of technical communication, and professional 
+
+        Web developers from various Web design com­panies in the Seattle area. 
+
+        The heuristics were revised according to the feed­back of the participants 
+
+        of the workshop and the Web developers and were published in a special 
+
+        issue of the Journal of Technical Communi­cation in August 2000.</p>
+
+      <p class=normal>The <i>Heuristics for Web Communication</i> consist of five 
+
+        different heu­ristics. The five heuristics deal with all important aspects 
+
+        of Web sites: displaying in­for­mation, navigation, text comprehension, 
+
+        role playing (i.e. author-reader relationship), and data collection for 
+
+        analyzing interaction. The con­tent of the heuristics ca<span class="normal">n 
+
+        be summed up as follows:</span></p>
+
+      <p class=normal><span class="normal">The heuristic <i>Displaying information 
+
+        on the Web</i> consists of guidelines for visuals, e.g. </span></p>
+
+      <ul>
+
+        <li> <span class="normal">how to design and arrange display elements,</span></span></li>
+
+        <li> <span class="normal">how to ensure that text is readable</span></span></li>
+
+        <li> <span class="normal">how to use pictures, illustrations, icons and 
+
+          motion.</span></span></li>
+
+      </ul>
+
+      <p class=normal><span class="normal">The <i>Heuristic for Web Navigation</i> 
+
+        deals with hypertext theory and offers guidelines for navigation and orientation, 
+
+        e.g. </span></p>
+
+      <ul>
+
+        <li> <span class="normal">how to design orientation information on each 
+
+          page,</span></span></li>
+
+        <li> <span class="normal">how to coordinate navigation devices,</span></span></li>
+
+        <li> <span class="normal">how to design site-level orientation information. 
+
+          </span></span></li>
+
+      </ul>
+
+      <p class=normal><span class="normal">The heuristic <i>Text Comprehension 
+
+        and the Web: Heuristics for Writing Understandable Web Pages</i> focuses 
+
+        on text comprehension and issues of text quality, e.g.</span></p>
+
+      <ul>
+
+        <li> <span class="normal">how to select, design, and organize content, 
+
+          </span></span></li>
+
+        <li> <span class="normal">what style to use,</span></span></li>
+
+        <li> <span class="normal">what makes Web pages credible and trustworthy.</span></span></li>
+
+      </ul>
+
+      <p class=normal><span class="normal">The heuristic <i>Role Playing on the 
+
+        Web</i> dis­cusses the typical rhetorical roles of the implied author 
+
+        and reader of the Web pages and their rhetorical roles, e.g. </span></p>
+
+      <ul>
+
+        <li> <span class="normal">how rhetoric is used to describe author roles 
+
+          and reader roles, and</span></span></li>
+
+        <li> <span class="normal">what kind of relationship exists between author 
+
+          roles and reader roles.</span></span></li>
+
+      </ul>
+
+      <p class=normal><span class="normal">The heuristics <i>Web Data Collection 
+
+        for Analyzing and Interacting with Your Users</i> focuses on analyzing 
+
+        the audience of a Web site and building a relationship either between 
+
+        you and your users or among the users themselves, using for example</span></p>
+
+      <ul>
+
+        <li> <span class="normal">server log data for analyzing the use of Web 
+
+          pages and their audience, and </span></span></li>
+
+        <li> <span class="normal">means to build a relationship and create a sense 
+
+          of community with the audience.</span></span></li>
+
+      </ul>
+
+      <p class=normal><span class="normal">The four content-oriented heuristics 
+
+        (the heuristics on <i>Web Data Collection </i>was not applied due to access 
+
+        restrictions to log files) were applied according to Kantner &amp; Rosenbaum 
+
+        (1997: 155). The gra­duate stu</span>dents, who had received an introduction 
+
+        to the heuristics, worked in teams of four. Each team conducted an evaluation 
+
+        of the same selected number of pages from the chosen Web site. In a two-hour 
+
+        session of individual evaluation, the team members applied one of the 
+
+        four heuristics to the Web site. During the evaluation process they took 
+
+        notes of usability problems according to the various points listed in 
+
+        the heu­ristics. Then the team members gathered and discussed their findings. 
+
+        The usability problems detected in the heuristic evaluation were graded 
+
+        in a severity rating according to Nielsen (1997b) by each team. The rating 
+
+        ranged from 0 (no usability problem) to 4 (usability catastrophe) (cf. 
+
+        Table 1) and was con­ducted with respect to the frequency and persistence 
+
+        of the problems and the impact they have on users. At the end of the evaluation, 
+
+        the four teams presented their findings in a plenary meeting. The evaluation 
+
+        process took about five hours. </p>
+
+      <p class=MsoCaption>Table 1: Severity rating according to Nielsen</p>
+
+      <table border=1 cellspacing=0 cellpadding=0 align="center">
+
+        <tr> 
+
+          <td width=18 valign=top class="Normal"> 
+
+            <p>0</p>
+
+          </td>
+
+          <td width=276 valign=top class="Normal"> 
+
+            <p>I don't agree that this is a usability problem at all </p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=18 valign=top class="Normal"> 
+
+            <p>1</p>
+
+          </td>
+
+          <td width=276 valign=top class="Normal"> 
+
+            <p>Cosmetic problem only: need not be fixed unless extra time is available 
+
+              on project</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=18 valign=top class="Normal"> 
+
+            <p>2</p>
+
+          </td>
+
+          <td width=276 valign=top class="Normal"> 
+
+            <p>Minor usability problem: fixing this should be given low priority</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=18 valign=top class="Normal"> 
+
+            <p>3</p>
+
+          </td>
+
+          <td width=276 valign=top class="Normal"> 
+
+            <p>Major usability problem: important to fix, so should be given high 
+
+              priority</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=18 valign=top class="Normal"> 
+
+            <p>4</p>
+
+          </td>
+
+          <td width=276 valign=top class="Normal"> 
+
+            <p>Usability catastrophe: imperative to fix this before product can 
+
+              be released</p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <p class=normal>The most frequent usability problems were navigational and 
+
+        orientation problems as described in the <i>Heuristic for Web Navigation</i>, 
+
+        followed by general design problems as named in the heuristic <i>Displaying 
+
+        information on the Web</i>. After the rating the two lecturers collected 
+
+        the written findings of the team members and compiled a list of all usability 
+
+        prob­lems for a re-design of the Web site. The findings were also used 
+
+        to design tasks for a user test in the laboratory.</p>
+
+      <h2>3.3 User Testing in the Usability Laboratory With The Thinking Aloud 
+
+        Method </h2>
+
+      <p class=normal>The next step of the evaluation was a user test in the usability 
+
+        laboratory. Figure 2 shows a sketch of the laboratory in which the tests 
+
+        took place. </p>
+
+      <p class=MsoCaption><a name="fig2"></a><a href="schweibenzfig2.html"><img src="schweibenz.fig2_thumb.jpg" width="400" height="300" border="0" alt="Figure 2: A sketch of the usability lab"></a></p>
+
+      <p class=MsoCaption>Figure 2: A sketch of the usability lab</p>
+
+      <p class=normal>In the lab, real users have to work on tasks while thinking 
+
+        aloud, i.e. they verbalize their thoughts and comment on their actions 
+
+        while they handle the computer. This &quot;allows a very direct understanding 
+
+        of what parts of the dialogue cause the most problems&quot; (Nielsen 1993: 
+
+        195). During the test, users work on standardized test tasks and are supervised 
+
+        by a test manager. The tests are recorded on video by a technical assistant 
+
+        who operates two video cameras. One of the cameras is focused on the face 
+
+        and hands of the participant, the other one on the computer screen. The 
+
+        recordings of the two cameras are blended together on one screen and recorded 
+
+        on video. In order to catch the details of interaction, a digital screencam 
+
+        records the actions on the screen. In a labor-intensive process, the findings 
+
+        of the tests are transcribed and categorized. </p>
+
+      <p class=normal>As we evaluated an art museum Web site, recruiting partici­pants 
+
+        with an interest in art was suggested. Therefore we asked students of 
+
+        the Arts and Science department and art teachers to participate in our 
+
+        experiments. The teachers were cho­sen to increase the average age. The 
+
+        number of participants was decided ac­cording to Virzi (1992: 468), who 
+
+        suggests at least 15 participants. In our study, 17 users participated. 
+
+        Five of them were teachers; 12 were stu­dents of the Arts and Science 
+
+        department. Seven participants were male, ten female. The youngest user 
+
+        was 19, the oldest 48, the average age being 27. </p>
+
+      <p class=normal>It takes some time and effort to design the test task scenario 
+
+        for the user test of a large informa­tional Web site (cf. Kantner &amp; 
+
+        Rosenbaum 1997: 154). The test tasks should be as representative as possible 
+
+        of the use to which the system will be put in the field and at the same 
+
+        time small enough to be completed in a reasonable time frame, but not 
+
+        so small as to be trivial (Nielsen 1993: 185f). The test scenario, which 
+
+        had been discussed with the client of our case study, consisted of nine 
+
+        tasks that represented potential usability problems. Table 2 shows a selection 
+
+        of the potential problems and the test tasks.</p>
+
+      <p class=MsoCaption>Table 2: A selection from the test tasks of the user 
+
+        tests</p>
+
+      <table border=1 cellspacing=0 cellpadding=0 align="center">
+
+        <tr> 
+
+          <td width=258 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p><b>Potential Usability Problem</b></p>
+
+          </td>
+
+          <td width=234 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p><b>Selection of the test tasks (abbreviated) </b></p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=258 valign=top class="Normal"> 
+
+            <p>Links are hidden in graphical design (images).</p>
+
+          </td>
+
+          <td width=234 valign=top class="Normal"> 
+
+            <p>1) Go from the splash screen to the core page. </p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=258 valign=top class="Normal"> 
+
+            <p>Insufficiently linked information, the exhibition is not linked 
+
+              to the opening hours.</p>
+
+          </td>
+
+          <td width=234 valign=top class="Normal"> 
+
+            <p>3) Look for the opening hours of a future exhibition. </p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=258 valign=top class="Normal"> 
+
+            <p>Insufficiently linked information, the exhibition is not linked 
+
+              to the service section where tours are offered.</p>
+
+          </td>
+
+          <td width=234 valign=top class="Normal"> 
+
+            <p>4) Look for guided tours to the current exhibition.</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=258 valign=top class="Normal"> 
+
+            <p>All pages are titled the same. There are no individual title-tags 
+
+              on the different pages. </p>
+
+          </td>
+
+          <td width=234 valign=top class="Normal"> 
+
+            <p>7) Use bookmarks to go back to certain page.</p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <p class=normal>The user tests revealed that all assumed problems were usability 
+
+        problems for test users. The findings were grouped into several categories, 
+
+        e.g. prob­lems handling the splash screen (task 1), insufficient use of 
+
+        links bet­ween re­lated information (tasks 3 and 4) etc., and illustrated 
+
+        by lively quotes taken from the test protocols. For example, after finishing 
+
+        task 1 a partici­pant stated: &quot;The first screen only shows a headline, 
+
+        a picture and an ad­dress but no link. (break) I click on the picture. 
+
+        It works!&quot; Another remarked: &quot;As an Internet beginner I honestly 
+
+        have a problem to get to the next page. I'm a little helpless because 
+
+        I prefer big arrows and buttons that say 'next page.' But I made it.&quot; 
+
+        While struggling with task 4, the patience of a participant snapped and 
+
+        he said: &quot;Now I would try to get in touch with someone and write 
+
+        an email, if they offer a guided tour, because all the searching takes 
+
+        far too long.&quot; Trying to use the bookmarks in task 7, a parti­ci­pant 
+
+        said: &quot;Usually I would use the bookmarks. (clicks on bookmarks) Well, 
+
+        now I see that all the bookmarks have the same name.&quot; Another partici­pant 
+
+        used sarcasm: &quot;That's really funny, because I have five book­marks 
+
+        all named Saarland Museum Saarbr&uuml;cken. That helps a lot. Great! (laughs).&quot; 
+
+      </p>
+
+      <p class=normal>Quotes like these make usability problems come alive and 
+
+        show the reactions of actual users in real situations. From our experience, 
+
+        these reactions are much more convincing than dry statements of experts 
+
+        no matter how profound these statements might be and no matter on what 
+
+        kind of theory they are based. </p>
+
+      <p class=normal>The test time and performance of the users was influenced 
+
+        by their com­puter literacy, measured by data collected in a questionnaire. 
+
+        The average test time was about 20 minutes and corresponds with the expected 
+
+        test time derived from three pre-tests. The duration of the test shows 
+
+        some connection between the computer literacy level and the amount of 
+
+        time needed to com­plete the tasks. The shortest test of 14 minutes was 
+
+        conducted with a user who had used the Web for two years or longer and 
+
+        several times a week. The longest test of 30 minutes was conducted with 
+
+        a participant with little computer literacy. Further analysis did not 
+
+        seem necessary to us because the duration of a test is also influenced 
+
+        by other factors like interest in the subject and the medium and the method 
+
+        of thinking aloud. </p>
+
+      <h1>4. Practical Experiences With the Different Methods </h1>
+
+      <p class=normal>In our case study the theoretical foundations of the heuristic 
+
+        evaluation were the <i>Heuristics for Web Communication</i>. At the time 
+
+        of our evalu­ation, these heuristics were brand new. Only a little practical 
+
+        ex­perience existed in applying these heuristics. Therefore we thought 
+
+        it useful to contrast the <i>Heuristics for Web Com­muni­cation</i> with 
+
+        another heuristic evaluation tool, Keevil's <i>Usability Index</i>. According 
+
+        to Keevil (1998: 271), the usability index is a &quot;measure, expressed 
+
+        as a per cent, of how closely the features of a Web site match generally 
+
+        accepted usability guidelines.&quot; The Usability Index con<span class="normal">sists 
+
+        of five categories (Keevil 1998: 273): </span></p>
+
+      <ul>
+
+        <li> <span class="normal">Finding the information: Can you find the information 
+
+          you want?</span></span></li>
+
+        <li> <span class="normal">Understanding the information: After you find 
+
+          the information, can you understand it?</span></span></li>
+
+        <li> <span class="normal">Supporting user tasks: Does the information 
+
+          help you perform a task?</span></span></li>
+
+        <li> <span class="normal">Evaluating the technical accuracy: Is the technical 
+
+          information complete?</span></span></li>
+
+        <li> <span class="normal">Presenting the information: Does the information 
+
+          look like a quality product?</span></span></li>
+
+      </ul>
+
+      <p class=normal><span class="normal">Judging from the 203 questions, Keevil's 
+
+        <i>Usability Index</i> seems focused on commercial Web sites. But it seemed 
+
+        adequate to use it for the Web site of a cultural heritage in­sti­tution, 
+
+        because Keevil (1998: 275) points out that the <i></i></span><i>Usabi­lity 
+
+        Index</i> is generally applicable: &quot;Information Developers can use 
+
+        the check­list to measure how easy it is to find, understand, and use 
+
+        infor­ma­tion displayed on a Web site.&quot; </p>
+
+      <p class=normal>In our case study, fifteen students (one of the sixteen 
+
+        didn't hand in the index) used the <i>Usability Index</i> to evaluate 
+
+        the Web site of the Saarland Museum. The following table (Table 3) shows 
+
+        the results with the categories 'N/A' (not applicable), 'Yes', 'No', the 
+
+        sum and the usability in percent, which is calculated from the total number 
+
+        of 'Yes' answers divided by the total numbers of 'Yes' and 'No' answers.</p>
+
+      <p class=MsoCaption>Table 3: Results of Keevil's Usability Index for the 
+
+        Saarland Museum Web site</p>
+
+      <table border=1 cellspacing=0 cellpadding=0 align="center">
+
+        <tr> 
+
+          <td width=114 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p><b>Usability Index</b></p>
+
+          </td>
+
+          <td width=47 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center><b>N/A</b></p>
+
+          </td>
+
+          <td width=44 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center><b>Yes</b></p>
+
+          </td>
+
+          <td width=41 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center><b>No</b></p>
+
+          </td>
+
+          <td width=50 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center><b>Sum</b></p>
+
+          </td>
+
+          <td width=80 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center><b>Usability <br>
+
+              in percent</b></p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 1</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>96</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>57</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>47</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>200</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>55 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 2</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>134</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>19</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>47</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>200</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>29 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 3</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>71</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>67</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>62</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>200</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>52 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 4</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>71</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>67</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>62</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>200</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>52 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 5</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>81</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>51</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>68</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>200</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>43 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 6</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>62</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>69</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>69</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>200</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>50 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 7</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>96</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>48</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>53</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>197</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>48 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 8</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>64</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>61</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>74</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>199</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>45 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 9</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>77</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>60</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>62</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>199</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>49 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 10</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>77</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>60</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>62</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>199</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>49 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 11</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>77</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>60</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>62</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>199</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>49 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 12</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>81</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>61</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>58</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>200</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>51 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 13</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>66</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>57</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>53</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>176</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>52 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 14</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>69</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>53</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>81</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>203</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>40 %</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=114 valign=top class="Normal"> 
+
+            <p><b>Evaluator 15</b></p>
+
+          </td>
+
+          <td width=47 valign=top class="Normal"> 
+
+            <p align=center>88</p>
+
+          </td>
+
+          <td width=44 valign=top class="Normal"> 
+
+            <p align=center>40</p>
+
+          </td>
+
+          <td width=41 valign=top class="Normal"> 
+
+            <p align=center>72</p>
+
+          </td>
+
+          <td width=50 valign=top class="Normal"> 
+
+            <p align=center>200</p>
+
+          </td>
+
+          <td width=80 valign=top class="Normal"> 
+
+            <p align=center>36 %</p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <p class=normal>Table 3 shows a wide range of usability for the Saarland 
+
+        Museum expressed in per cent. The results reached from 29% to 55%, the 
+
+        arithmetic mean being 47%. The deviation in the per­centage of usability 
+
+        is re­markable. It is due to the bias of the evaluators in interpreting 
+
+        the questions. One reason is that certain sets of questions from the <i>Usability 
+
+        Index</i> did not fit for the Web site under evaluation. In this case, 
+
+        some evaluators chose to vote for 'N/A', while others voted for 'No'. 
+
+        This explains the big dif­ferences between the 'N/A' votes and the 'No' 
+
+        votes and in the overall usability because the usability is calculated 
+
+        from the total number of yes answers divided by the total numbers of yes 
+
+        and no answers. Another rea­son is that the checklist, like every checklist, 
+
+        is open to inter­pretation. Keevil (1998: 275) was aware of this problem 
+
+        and tried to reduce it by only allowing the answers 'N/A', 'Yes', and 
+
+        'No'. But still, there is consi­derable room for interpretation. Apart 
+
+        from the prob­lem of interpretation, the <i>Usability Index</i> has another 
+
+        disadvantage. It gives a number in per cent that indicates the usability 
+
+        and some hints on usability problems that can be de­rived from the 203 
+
+        questions, but it hardly identifies concrete usability problems.</p>
+
+      <p class=normal>The identification of concrete usability problems and suggestions 
+
+        on how to im­prove usability are the practical advantages of the <i>Heuristics 
+
+        for Web Com­munication</i>. The heuristics are not simply checklists that 
+
+        can be ans­wered by 'N/A', 'Yes', and 'No'. They are guidelines designed 
+
+        as state­ments and questions that guide the evaluator to identify concrete 
+
+        usability prob­lems by asking guiding questions like, &quot;Can you decipher 
+
+        all of the elements in the display easily? If not, consider making them 
+
+        larger,&quot; or &quot;Which of the organization's values should be emphasized?&quot; 
+
+        or giving hints like, &quot;Make sure the most important links appear 
+
+        high enough on the page to be visible without scrolling, regardless of 
+
+        the resolution of the user's monitor. When pages must scroll, provide 
+
+        visual cues to encourage users to scroll down to links that are below 
+
+        the scroll line.&quot; By contrasting these established usability principles 
+
+        with the Web site under evaluation, the evaluator or information designer 
+
+        can decide if usability prob­lems exist, what kind they are, and how they 
+
+        can be removed. This is the big advantage of the heuristics.</p>
+
+      <p class=normal>The disadvantage of the <i>Heuristics for Web Communication</i> 
+
+        is that they are very detailed and complicated compared with general heuristics 
+
+        like the ones of Molich &amp; Nielsen. Molich &amp; Nielsen suggest nine 
+
+        basic items of usability (Molich &amp; Nielsen 1990: 338) (Table 4).</p>
+
+      <p class=MsoCaption>Table 4: Molich &amp; Nielsen's nine basic items of 
+
+        usability </p>
+
+      <table border=1 cellspacing=0 cellpadding=0 align="center">
+
+        <tr> 
+
+          <td width=28 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center>1</p>
+
+          </td>
+
+          <td width=201 valign=top class="Normal"> 
+
+            <p>Use simple and natural language</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=28 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center>2</p>
+
+          </td>
+
+          <td width=201 valign=top class="Normal"> 
+
+            <p>Speak the user's language</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=28 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center>3</p>
+
+          </td>
+
+          <td width=201 valign=top class="Normal"> 
+
+            <p>Minimize the user's memory load</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=28 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center>4</p>
+
+          </td>
+
+          <td width=201 valign=top class="Normal"> 
+
+            <p>Be consistent</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=28 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center>5</p>
+
+          </td>
+
+          <td width=201 valign=top class="Normal"> 
+
+            <p>Provide feedback</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=28 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center>6</p>
+
+          </td>
+
+          <td width=201 valign=top class="Normal"> 
+
+            <p>Provide clearly marked exits</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=28 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center>7</p>
+
+          </td>
+
+          <td width=201 valign=top class="Normal"> 
+
+            <p>Provide shortcuts</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=28 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center>8</p>
+
+          </td>
+
+          <td width=201 valign=top class="Normal"> 
+
+            <p>Provide helpful error messages</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=28 valign=top bgcolor="#E5E5E5" class="Normal"> 
+
+            <p align=center>9</p>
+
+          </td>
+
+          <td width=201 valign=top class="Normal"> 
+
+            <p>Prevent errors </p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <p class=MsoCaption>&nbsp;</p>
+
+      <p class=normal>Although it is possible to do a successful evaluation with 
+
+        these nine basic items of usability, evaluators might need more guidance 
+
+        in the evaluation process, as is of­fered by the <i>Heuristics for Web 
+
+        Communi­cation</i>. These heuristics sup­port the evaluators by providing 
+
+        a structured &quot;guided tour&quot; for the evaluation process that takes 
+
+        into account both the big picture and important de­tails. They help the 
+
+        evaluators to consider all substantial usability issues and to focus on 
+
+        the important points. More­over they generate a profound impression of 
+
+        the overall quality of a Web site. This makes the <i>Heuristics for Web 
+
+        Communi­cation</i> a valuable tool for Web usability engineering. </p>
+
+      <p class=normal>The four content-oriented heuristics (the fifth heuristic 
+
+        was not applied due to access restric­tions to log files) are very different 
+
+        as far as their ease of application and the level of back­ground knowledge 
+
+        are concerned. We found that the heuristic <i>Displaying information on 
+
+        the Web</i>, the <i>Heuristic for Web Navigation</i>, and the heuristic 
+
+        <i>Text Comprehension and the Web</i> can be success­fully applied if 
+
+        the evaluators have an average level of know­ledge in information design 
+
+        and Web design. The evaluators in our case study, all graduate students 
+
+        of information science, had no difficulties in applying them. The heuristic 
+
+        <i>Role Playing on the Web</i> requires some special knowledge of hypertext 
+
+        theory as it is based on the quite compli­cated author-reader relationship 
+
+        in hypertext (Michalak &amp; Coney 1993). Al­though it is very interesting 
+
+        and provides promising results, the evaluators in our case study had some 
+
+        difficulties in applying it. </p>
+
+      <p class=normal>As expected from the research literature (Nielsen 1992: 
+
+        378f), the heu­ristics detected a great num­ber of so-called minor usability 
+
+        problems- no disad­vantage at all because user testing is not an adequate 
+
+        means to identify such minor problems. Minor problems were, for example, 
+
+        inconsistent use of link colors, no text messages for graphic links, complicated 
+
+        senten­ces, deficits in page structure and organization, lack of informative 
+
+        titles, meaningless animation, flaws in the author-reader relationship, 
+
+        etc. Although real usability problems, such minor prob­lems are not observable 
+
+        in user testing, because average users do not realize that these kinds 
+
+        of deficiencies cause problems because they lack the back­ground knowledge 
+
+        in information design and Web design. </p>
+
+      <p class=normal>The user tests in the usability lab were very labor-intensive 
+
+        for several rea­sons: the technical equipment had to be arranged, the 
+
+        test scenario had to be designed and tested, participants had to be recruited, 
+
+        and tests had to be con­ducted with two experimenters who had to be present 
+
+        all the time to super­vise the participants and the technical equipment. 
+
+        The analysis and evalu­ation of the test data was also time-consuming 
+
+        because the data had to be transcribed and categorized. The big advantage 
+
+        of this method was that the recordings, especially the screencam files, 
+
+        showed cursor movements that help to identify problems in navigation and 
+
+        orientation. This is especially help­ful when discussing the findings 
+
+        and suggestions for the redesign with the client. A simplified method 
+
+        of thinking aloud testing, in which the experimenters simply take notes 
+
+        of their observations, is less labor-intensive than videotaping and transcribing 
+
+        the tests. But from our ex­peri­ence, it is difficult for one or two experimenters 
+
+        to follow the course of the test and take notes at the same time if the 
+
+        test consists of more than some basic functions. Therefore video taping 
+
+        or screencam recording is essential. An alternative to transcribing whole 
+
+        test sessions would be to transcribe only the most important sequences 
+
+        of a test. </p>
+
+      <p class=normal>An important point we noticed when comparing answers in 
+
+        the question­naires with courses of the tests is that answers about the 
+
+        test experience are often not very reliable. The answers about the satisfaction 
+
+        with the Web site often did not correspond with the actual experience 
+
+        of the participants who were observed during the test. For example, several 
+
+        participants stated that they had no problems with navigation and orientation 
+
+        although they had had serious problems during the test. The reasons for 
+
+        this gap between behaviour and statements cannot be discussed here. From 
+
+        our experience it is important to remark that a questionnaire alone cannot 
+
+        provide reliable results. This is not new but con­firms the phenomenon 
+
+        that impressions of their own behaviour and the behaviour in the situation 
+
+        of social reality show a certain deviation. Despite this fact, from our 
+
+        experience questionnaires or interviews are necessary to give the participants 
+
+        the opportunity to comment on the course of the test. Test users appreciate 
+
+        this opportunity, and the results can be used to derive additional information 
+
+        about the acceptance of the Web site. </p>
+
+      <h1>5. Conclusion</h1>
+
+      <p class=normal>The evaluation method used in usability engineering depends 
+
+        on the subject that is evaluated and the goals of the evaluation. Although 
+
+        the combination of heuristic evaluation and user testing provides good 
+
+        results, it is costly as far as time and resources are concerned. With 
+
+        respect to the cost-benefit ration, in many cases the heuristic evaluation 
+
+        is sufficient to detect a reasonable number of minor and major usability 
+
+        problems. </p>
+
+      <p class=normal>In our case study, the <i>Heuristics for Web Communication</i> 
+
+        proved to be applicable tools for heuristic evaluation. The heuristics 
+
+        support a structured evaluation and help both to find and to solve usability 
+
+        problems. In contrast to checklists, they give the evaluators some scope 
+
+        for interpretation while offering guidance at the same time. The drawback 
+
+        of the heuristics is that they cannot be successfully applied by novice 
+
+        evaluators. The evaluators need some back­ground knowledge in Web design 
+
+        and evaluation. The heuristics were help­ful in pointing out critical 
+
+        points in the Web site that were evaluated in the user test. Compared 
+
+        to user testing, the heuristic evaluation was less labor-intensive. Nevertheless, 
+
+        user testing is a very valuable tool for usability engineering because 
+
+        actual users give an impression of how the Web site will be used in practice. 
+
+        Moreover, actual users might have problems with features that experts 
+
+        do not realize are problematic. The focus on the actual users and the 
+
+        vivid and expressive statements they give justifies the much higher expense 
+
+        in certain cases. From our experience, the combination of both heuristic 
+
+        evaluation with the <i>Heuristics for Web Communication</i> and user testing 
+
+        with thinking aloud is a very useful method of usability engineering. 
+
+      </p>
+
+      <h1>References</h1>
+
+      <p class=ReferencesText>Cleary, Y. (2000): An Examination of the Impact 
+
+        of Subjective Cultural Issues on the Usability of a Localized Web Site 
+
+        - The Louvre Museum Web Site. In: <i>Museums and the Web 2000: Conference 
+
+        Proceedings.</i> CD&#8209;ROM documenting the Forth International Conference 
+
+        held in Minneapolis, April 17&#8209;19, 2000. Pittsburgh, PA: Archives 
+
+        &amp; Museum Informatics. </p>
+
+      <p class=ReferencesText>Garzotto, F. / Matera, M. / Paolini, P. (1998): 
+
+        To Use or Not to Use? Evaluating Usability of Museum Web Sites. In: <i>Museums 
+
+        and the Web 1998: Conference Proceedings.</i> CD&#8209;ROM documenting 
+
+        the Second International Conference held in Toronto, Ontario, Canada, 
+
+        April 21&#8209;25, 1998. Pittsburgh, PA: Archives &amp; Museum Informatics. 
+
+      </p>
+
+      <p class=ReferencesText>Heuristics for Web Communication. Special Issue 
+
+        of the <i>Journal of Technical Communication</i>, 47 (3) August 2000. 
+
+      </p>
+
+      <p class=ReferencesText>Harms, I. / Schweibenz, W. (2000): Usability Engineering 
+
+        Methods for the Web. Results From a Usability Study. In: <span
+
+lang=DE>Informationskompetenz - Basiskompetenz in der Information­sge­sellschaft. 
+
+        Proceedings des 7. Internationalen Symposiums f&uuml;r Informationswissenschaft 
+
+        (ISI 2000) Dieburg 8.-10. November 2000. Hrsg. von G. Knorz und R. Kuhlen. 
+
+        (Schriften zur Information­swissen­schaft 38). Konstanz: UKV. </span>17-30.</p>
+
+      <p class=ReferencesText>Kantner, L. / Rosenbaum, S. (1997): Usability Studies 
+
+        of WWW Sites: Heuristic Evaluation vs. Laboratory Testing. In: <i>Proceedings 
+
+        of the 15<sup>th</sup> International Conference on Computer Documentation 
+
+        SIGDOC '97: Crossroads in Communication</i>. 19-22 October 1997, Snowbird, 
+
+        UT. New York, NY: ACM Press. 153-160.</p>
+
+      <p class=ReferencesText>Keevil, B. (1998): Measuring the Usability Index 
+
+        of Your Web Site. In: <i>Proceedings of the ComputerHumanInteraction CHI 
+
+        '98 Conference</i>, April 18-23 1998, Los Angeles, CA. New York, NY: ACM 
+
+        Press. 271-277. Also available online: Internet, URL <a href="http://www3.sympatico.ca/bkeevil/sigdoc98/index.html.">http://www3.sympatico.ca/bkeevil/sigdoc98/index.html. 
+
+        </a> Version: 09/98. Consulted: 12/06/00.</p>
+
+      <p class=ReferencesText><span lang=DE>Kr&ouml;mker, H. (1999): Die Welt 
+
+        der Benutzerfreundlichkeit. [</span>The World of Userfriendliness.<span lang=DE>] 
+
+        In: Hennig, J. / Tjarks-Sobhani, M. (Hrsg.): <i>Verständlichkeit und Nutzungsfreundlichkeit 
+
+        von technischer Dokumentation.</i> (tekom Schriften zur technischen Kommunikation 
+
+        Bd. 1) L&uuml;beck: Schmidt-R&ouml;mhild.</span> 22-33.</p>
+
+      <p class=ReferencesText>Levi, M. D. / Conrad, F. G. (1996): A Heuristic 
+
+        Evaluation of a World Wide Web Prototype. In: <i>interactions</i>, 07/1996: 
+
+        51-61.</p>
+
+      <p class=ReferencesText>Michalak, S. / Coney, M. (1993): Hypertext and the 
+
+        Author/Reader Dialogue. In: <i>Proceedings of Hypertext '93</i>, November 
+
+        14-18 1993, Seattle, WA. New York, NY: ACM. 174-182.</p>
+
+      <p class=ReferencesText>Molich, R. / Nielsen, J. (1990): Improving A Human-computer 
+
+        Dialogue. In: <i>Communications of the ACM</i>, 33 (3) 1990: 338-348.</p>
+
+      <p class=ReferencesText>Nielsen, J. (1993): <i>Usability Engineering</i>. 
+
+        Boston: Academic Press.</p>
+
+      <p class=ReferencesText>Nielsen, J. (1997a): Usability Testing. In: Salvendy, 
+
+        G. (ed.): <i>Handbook of Human Factors and Ergonomics.</i> 2<sup>nd</sup> 
+
+        edition. New York, NY: John Wiley &amp; Sons. 1543-1568.</p>
+
+      <p class=ReferencesText>Nielsen, J. (1997b): Severity Ratings for Usability 
+
+        Problems. Internet, URL <a href="http://www.useit.com/papers/heuristic/severityrating.html" target="new">http://www.useit.com/papers/heuristic/severityrating.html</a>. 
+
+        Version: 01/11/99. Consulted: 12/06/00.</p>
+
+      <p class=ReferencesText>Rajani, R. / Rosenberg, D. (1999): Usable?...Or 
+
+        not?...Factors Affecting the Usability of Web Sites. In: <i>CMC Computer-Mediated 
+
+        Communication Magazine.</i> Internet, URL <a href="http://www.december.com/cmc/mag/1999/jan/rakros.html" target="new">http://www.december.com/cmc/mag/1999/jan/rakros.html</a>. 
+
+        Version: 01/99. Consulted: 12/06/00.</p>
+
+      <p class=ReferencesText>Siegel, D. (1997): <i>Creating Killer Web Sites. 
+
+        The Art of Third-generation Site Design.</i> Indianapolis, IN: Hayden. 
+
+      </p>
+
+      <p class=ReferencesText>Silverstone, R. (1988): Museums and the Media: A 
+
+        Theoretical and Methodological Exploration. In: <i>International Journal 
+
+        of Museum Management and Curatorship</i>, Vol. 7, No. 3, 1988: 231-241. 
+
+      </p>
+
+      <p class=ReferencesText>Schweibenz, W. (1998): The &quot;Virtual Museum&quot;: 
+
+        New Perspectives For Museums to Present Objects and Information Using 
+
+        the Internet as a Knowledge Base and Communication System. In: <i>Knowledge 
+
+        Management und Kom­muni­kationssysteme. Workflow Management, Multimedia, 
+
+        Knowledge Transfer.</i> Proceedings des 6. Internationalen Symposiums 
+
+        f&uuml;r Information­swissen­schaft (ISI '98) Prag, 3.-7. November 1998. 
+
+        Hrsg. von H. H. Zimmermann und V. Schramm, V. (Schriften zur Informationswissenschaft 
+
+        34). Konstanz: UKV. 185-200. Also available online: Internet, URL <br>
+
+        <a href="http://www.phil.uni-sb.de/fr/infowiss/projekte/virtualmuseum/virtual_museum_ISI98.htm" target="new">http://www.phil.uni-sb.de/fr/infowiss/projekte/virtualmuseum/virtual_museum_ISI98.htm</a>. 
+
+        Version: 11/05/98. Consulted: 12/06/00.</p>
+
+      <p class=ReferencesText>Teather, L. / Wilhelm, K. (1999): &quot;Web Musing&quot;: 
+
+        Evaluating Museums on the Web from Learning Theory to Methodology. In: 
+
+        <i>Museums and the Web 1999: Conference Proceedings. </i>CD&#8209;ROM 
+
+        documenting the Third International Conference held in New Orleans, LA, 
+
+        March 11&#8209;14, 1999. Pittsburgh, PA: Archives &amp; Museum Informatics. 
+
+      </p>
+
+      <p class=ReferencesText>Virzi, R. A. (1992): Refining the Test Phase of 
+
+        Usability Evaluation: How Many Subjects Is Enough? In: <i>Human Factors</i>, 
+
+        34 (4) 1992: 457-468.</p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/schweibenz/schweibenz.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:49:16 GMT -->
+</html>

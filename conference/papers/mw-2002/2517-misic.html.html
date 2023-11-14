@@ -1,0 +1,552 @@
+<html><!-- #BeginTemplate "/Templates/mw2002-papers.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2002/papers/misic/misic.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:47:57 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" -->
+
+	<title>MW2002: Papers: Digital Representation and Compression of William Blake's Hand-Colored Engravings</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=en">
+
+	<meta name="DC.Format" content="text/html">
+
+	<meta name="DC.language" content="ISO 8859-1">
+
+	<meta name="DC.Title" content="Digital Representation and Compression of William Blake's Hand-Colored Engravings">
+
+	<meta name="htDig.keywords" content="image representation, Mixed Raster Content, William Blake,
+
+colored engravings">
+
+	<meta name="keywords" content="image representation, Mixed Raster Content, William Blake,
+
+colored engravings">
+
+	<meta name="DC.Subject" content="image representation, Mixed Raster Content, William Blake,
+
+colored engravings">
+
+	<meta name="description" content="This paper demonstrates and discusses the application of Mixed Raster Content (MRC) compression scheme to digital reproductions of William Blake's hand-colored etchings and engravings.  Although Blake is our focus, much of what we have to say and show can be extrapolated to the graphic arts more generally.  MRC, for example, has the potential to transform the way we study and represent different states of an engraved plate, and consequently could help retool the genre of the catalogue raisonne for the digital age.  More broadly, it is our feeling that the image processing advances presented here will be of interest to humanists working in a variety of image-intensive areas and disciplines, ranging from art history to conservation science to editorial theory.  Although we want to underscore the versatility of the technology, the paper takes a case study approach, considering the achievement of MRC within the history of Blake reproduction and editing.   
+
+  
+
+Originally developed by Xerox Corporation as a compression scheme to efficiently combine different compression requirements for text and image content in scanned digital documents, MRC is for the first time being deployed to the compression of non-compound documents.  Unlike the first installment of the technology, which was a response to composite text and image data, the version of MRC being developed by the co-author is designed with the inherent compositeness of colored prints and other graphic media in mind.  The documents we are dealing with, then, are still 'compound' in the broader, non-technical sense of the term, but the semiological analysis is performed entirely at the level of the image, exclusive of a consideration of text.    
+
+  
+
+Used in conjunction with the new JPEG 2000 compression standard, MRC enables not only image compression but also the accurate discrimination of printed intaglio lines from finishing work in colored prints, paving the way for separate processing of each.  Whereas other compression models treat the formal content of an image as invariant, MRC is sensitive to the heterogeneous character of the pictorial composition as a whole.  By treating printed (engraved and/or etched) lines separately from colored image layers, MRC minimizes image degradation and the inevitable loss of information.  The result is superior raster imagery: digital facsimiles that show exceptional fidelity to their prototypes, as a comparison between an original scan of one of Blake's commercial print illustrations and its MRC reconstruction makes evident.  Because applied segmentation can essentially lift the color overlay of an impression, it additionally provides the student of Blake the unique opportunity to recreate the underlying copperplate image and model the artist's coloring process.  
+
+  
+
+A visual demonstration of MRC can be found at (<A target=_new href='../../../_misicv/CTLTR/CTLTR.PPT'>http://henry.ee.rochester.edu:8080/~misicv/CTLTR/CTLTR.PPT</a>) .  
+
+">
+
+	<meta name="DC.Description" content="This paper demonstrates and discusses the application of Mixed Raster Content (MRC) compression scheme to digital reproductions of William Blake's hand-colored etchings and engravings.  Although Blake is our focus, much of what we have to say and show can be extrapolated to the graphic arts more generally.  MRC, for example, has the potential to transform the way we study and represent different states of an engraved plate, and consequently could help retool the genre of the catalogue raisonne for the digital age.  More broadly, it is our feeling that the image processing advances presented here will be of interest to humanists working in a variety of image-intensive areas and disciplines, ranging from art history to conservation science to editorial theory.  Although we want to underscore the versatility of the technology, the paper takes a case study approach, considering the achievement of MRC within the history of Blake reproduction and editing.   
+
+  
+
+Originally developed by Xerox Corporation as a compression scheme to efficiently combine different compression requirements for text and image content in scanned digital documents, MRC is for the first time being deployed to the compression of non-compound documents.  Unlike the first installment of the technology, which was a response to composite text and image data, the version of MRC being developed by the co-author is designed with the inherent compositeness of colored prints and other graphic media in mind.  The documents we are dealing with, then, are still 'compound' in the broader, non-technical sense of the term, but the semiological analysis is performed entirely at the level of the image, exclusive of a consideration of text.    
+
+  
+
+Used in conjunction with the new JPEG 2000 compression standard, MRC enables not only image compression but also the accurate discrimination of printed intaglio lines from finishing work in colored prints, paving the way for separate processing of each.  Whereas other compression models treat the formal content of an image as invariant, MRC is sensitive to the heterogeneous character of the pictorial composition as a whole.  By treating printed (engraved and/or etched) lines separately from colored image layers, MRC minimizes image degradation and the inevitable loss of information.  The result is superior raster imagery: digital facsimiles that show exceptional fidelity to their prototypes, as a comparison between an original scan of one of Blake's commercial print illustrations and its MRC reconstruction makes evident.  Because applied segmentation can essentially lift the color overlay of an impression, it additionally provides the student of Blake the unique opportunity to recreate the underlying copperplate image and model the artist's coloring process.  
+
+  
+
+A visual demonstration of MRC can be found at (<A target=_new href='../../../_misicv/CTLTR/CTLTR.PPT'>http://henry.ee.rochester.edu:8080/~misicv/CTLTR/CTLTR.PPT</a>) .  
+
+">
+
+	<meta name="DC.Publisher" content="Archives & Museum Informatics">
+
+	<meta name="DC.Creator" content="Kraus, Kari">
+
+	<meta name="DC.Creator" content="Misic, Vladimir"><!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="><!-- #BeginEditable "script" --><!-- #EndEditable -->
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link rel="stylesheet" href="../../Library/mw2002-paper.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" background="../../images/mw2002.bg.gif" text="#000000" link="#003399" vlink="#660000" onLoad="MM_preloadImages('../../images/register_on.gif','../../images/workshops_on.gif','../../images/sessions_on.gif','../../images/speakers_on.gif','../../images/interact_on.gif','../../images/demos_on.gif','../../images/exhibit_on.gif','../../images/events_on.gif','../../images/best_on.gif','../../images/dates_on.gif','../../images/boston_on.gif','../../images/sponsors_on.gif')">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tr> 
+    <td width="145" align="LEFT" valign="TOP"> 
+      <p><a href="../../index.html"><img src="../../images/mw.gif" width="112" height="155" border="0" alt="/mw/"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('register','','../../images/register_on.gif',1)"><img name="register" border="0" src="../../images/register_off.gif" width="114" height="18" alt="Register"></a><a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('workshops','','../../images/workshops_on.gif',1)"><img name="workshops" border="0" src="../../images/workshops_off.gif" width="114" height="18" alt="Workshops"></a><a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sessions','','../../images/sessions_on.gif',1)"><img name="sessions" border="0" src="../../images/sessions_off.gif" width="114" height="18" alt="Sessions"></a><a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('speakers','','../../images/speakers_on.gif',1)"><img name="speakers" border="0" src="../../images/speakers_off.gif" width="114" height="18" alt="Speakers"></a><a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('interactions','','../../images/interact_on.gif',1)"><img name="interactions" border="0" src="../../images/interact_off.gif" width="114" height="18" alt="Interactions"></a><a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('demonstrations','','../../images/demos_on.gif',1)"><img name="demonstrations" border="0" src="../../images/demos_off.gif" width="114" height="18" alt="Demonstrations"></a><a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('exhibits','','../../images/exhibit_on.gif',1)"><img name="exhibits" border="0" src="../../images/exhibit_off.gif" width="114" height="18" alt="Exhibits"></a><a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('events','','../../images/events_on.gif',1)"><img name="events" border="0" src="../../images/events_off.gif" width="114" height="18" alt="Events"></a><a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('best','','../../images/best_on.gif',1)"><img name="best" border="0" src="../../images/best_off.gif" width="114" height="18" alt="Best of the Web"></a><a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dates','','../../images/dates_on.gif',1)"><img name="dates" border="0" src="../../images/dates_off.gif" width="114" height="18" alt="Key Dates"></a><a href="../../boston/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('boston','','../../images/boston_on.gif',1)"><img name="boston" border="0" src="../../images/boston_off.gif" width="114" height="18" alt="Boston"></a><a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sponsors','','../../images/sponsors_on.gif',1)"><img name="sponsors" border="0" src="../../images/sponsors_off.gif" width="114" height="18" alt="Sponsors"></a><br>
+        <br>
+        <a href="../http://www.archimuse.com/" target="_top"><img src="../../images/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"></a> 
+        <br>
+        <span class="small">Archives &amp; Museum Informatics<br>
+        158 Lee Avenue<br>
+        Toronto, Ontario<br>
+        M4E 2P3 Canada</span></p>
+      <p class="small">info @ archimuse.com<br>
+        <a href="../http://www.archimuse.com/" style="text-decoration: underline">www.archimuse.com</a></p>
+      <table width="74">
+        <tr> 
+          <td> <a href="../http://search.museumsandtheweb.com/search" target="_top"> <img src="../../images/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+          </td>
+          <td valign="MIDDLE"> <a href="../http://search.museumsandtheweb.com/search" style="text-decoration: underline"> 
+            <span class="verysmall">Search<br></span></a> </td>
+        </tr>
+      </table>
+      <p><font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="small">Join 
+        our <a href="../http://search.museumsandtheweb.com/mailinglist/" style="text-decoration: underline"> 
+        Mailing List</a>. <br>
+        <a href="../http://search.museumsandtheweb.com/terms-of-use-privacy/" style="text-decoration: underline"> 
+        Privacy</a>.</span></font> </p>
+       <p><font SIZE='-2' class='verysmall'>published: April, 2002 </font>
+        <!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"analytics scripts updated:&nbsp;"+document.lastModified);
+
+// -->
+      </p>
+   <p><font face="Arial, Helvetica, sans-serif" class="small">© Archives & Museum Informatics, 2002.</font><br>
+  <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Att
+   ribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>      </p>
+    </td>
+    <td width="455" align="LEFT" valign="TOP" class="normal">
+      <p><a href="../../speakers/index.html"><img src="../../images/papers.gif" width="390" height="55" border="0" alt="MW2002: Papers"></a></p>
+     <!-- #BeginEditable "Body of Page" --> 
+
+      <p class=PaperTitle><b>Digital Representation and Compression of William 
+
+        Blake&#146;s Hand-Colored Engravings</b></p>
+
+      <p class=Author><b>Vladimir Misic, Kari Kraus<sup>, </sup>University of 
+
+        Rochester, NY, USA</b></p>
+
+      <p class=AbstractTitle><b>Abstract</b></p>
+
+      <p class=AbstractText>This paper demonstrates and discusses the application 
+
+        of Mixed Raster Content (MRC) compression scheme to digital reproductions 
+
+        of William Blake&#146;s hand-colored etchings and engravings.  Although 
+
+        Blake is our focus, much of what we have to say and show can be extrapolated 
+
+        to cover the graphic arts more generally.  MRC, for example, has the potential 
+
+        to transform the way we study and represent different states of an engraved 
+
+        plate, and consequently could help retool the genre of the catalogue raisonne 
+
+        for the digital age.  More broadly, it is our feeling that the image processing 
+
+        advances presented here will be of interest to humanists working in a 
+
+        variety of image-intensive areas and disciplines, ranging from art history 
+
+        to conservation science to editorial theory.  Although we want to underscore 
+
+        the versatility of the technology, the paper takes a case study approach, 
+
+        considering the achievement of MRC within the history of Blake reproduction 
+
+        and editing. </p>
+
+      <p class=AbstractText>Keywords: image representation, Mixed Raster Content, 
+
+        William Blake, colored engravings</p>
+
+      <h1><b>Historical Background and Editorial Significance</b></h1>
+
+      <p class=MsoBodyText>Like other etchings and engravings of his day, many 
+
+        of Blake&#146;s commercial and artistic prints are analyzable into discrete 
+
+        media, each of which corresponds to a different stage of the production 
+
+        process.  An impression from an early copy of <i><span>Songs of Innocence and of Experience</span></i>, for example, has its 
+
+        genesis in a copperplate; assuming we are looking at an original, the 
+
+        image we encounter on paper comprises lines printed from the relief-etched 
+
+        metal, overlaid by tints and pen-and-ink work.  Because we tend to view 
+
+        the end result as an artistic and indissoluble whole, these different 
+
+        layers of codes&#151;mixed-method etched and engraved lines, large tonal 
+
+        areas, and ink applied with pen or brush to reinforce the composition 
+
+        or add detail&#151;can often be difficult for the naked eye to detect, 
+
+        especially if one is consulting a photomechanical reproduction.</p>
+
+      <p class=MsoBodyText>In the context of a thumbnail typology of Blake reproductions, 
+
+        MRC may be described as an algorithmic solution to analyzing, compressing, 
+
+        and representing the formal layers of Blake&#146;s etchings and engravings.  
+
+        The complex problem of accurately segmenting the image&#151;until now 
+
+        a technological challenge confronted primarily by hand facsimilists of 
+
+        Blake&#151;is for the first time being taken up by digital facsimilists, 
+
+        pointing to shared goals and a new convergence of interests among those 
+
+        working with competing models of reproduction.   </p>
+
+      <p class=MsoBodyText>The achievement of MRC can be evaluated to some extent 
+
+        by considering the lengths previous Blake editors have had to go to reconstruct 
+
+        the artist&#146;s graphic experiments on metal.  Most of Blake&#146;s 
+
+        copperplates are now untraceable, said to have been sold as scrap metal 
+
+        in the second half of the nineteenth century by a servant of an unnamed 
+
+        gentleman&#151;this according to scuttlebutt.  Among the etched illuminated 
+
+        books, only a small copper fragment from <i><span>America</span></i> (1793) has survived.  Some of the 
+
+        commercial engravings have fared slightly better: the single large plate 
+
+        for <i><span>The Canterbury Pilgrims</span></i> (1810) is extant, 
+
+        as are the 22 plates for the <i><span>Illustrations of the Book of Job</span></i> (c. 1825) 
+
+        and the seven unfinished plates for Dante&#146;s <i><span>Inferno</span></i> (1827). </p>
+
+      <p class=MsoBodyText>Lacking the opportunity to pull posthumous impressions 
+
+        from Blake&#146;s original copperplates, modern editors have sought to 
+
+        conjecturally restore the underlying image, sometimes relying on scientifically 
+
+        sound methods to do so, other times putting their faith in smoke and mirrors. 
+
+        These conjectures are nothing if not the product of great industry; over 
+
+        time they&#146;ve involved the creation of monochrome washes to speculatively 
+
+        define form; monochrome printing from photographs of colored impressions; 
+
+        consultation of uncolored copies of Blake&#146;s etchings; examination 
+
+        of embossed impressions, whose raised designs are a function of the relief-etched 
+
+        plate having been subjected to unusual printing pressure; and the use 
+
+        of electrotypes of an older set made from Blake&#146;s original plates 
+
+        prior to their historical vanishing act.  There is a striking editorial 
+
+        tale lurking in the diversity of this list, which encapsulates more than 
+
+        a century&#146;s worth of efforts to restore Blake&#146;s copplerplate 
+
+        outlines.  Into this imaginative mix arrives MRC, bringing the latest 
+
+        signal processing advances to bear on a historical endeavor.</p>
+
+      <h1><b>How MRC Works </b></h1>
+
+      <p class=MsoBodyText>Documents in the WBA capture Blake&#146;s combination 
+
+        of engraving/etching and coloring of picture and text.  In the technical 
+
+        idiom these documents would be described as compound images, a common 
+
+        form of document representation.  Because compound images contain both 
+
+        text and continuous-tone images, they are difficult to compress efficiently 
+
+        (the human visual system works differently for text and pictures) by any 
+
+        of the common compression methods.  For that reason, MRC uses a multi-layered 
+
+        imaging model and applies multiple compression algorithms to compress 
+
+        these layers.  Compared to traditional compression schemes (JPEG, GIF, 
+
+        TIFF, etc.), MRC enables more flexibility in adjusting to the given document 
+
+        type, resulting in better quality of the reproduced images and text&#151;measured 
+
+        as document distortion after decompression.</p>
+
+      <p class=MsoBodyText>Without hard mathematics, MRC can be described as: 
+
+        Image = BackgroundLayer * ForegroundLayer, where the symbol * denotes 
+
+        inter-layer interaction.</p>
+
+      <p class=MsoBodyText>Applied to the WBA&#146;s documents (see Fig. 1), MRC, 
+
+        as previously stated, entails the separation not of image and text, but 
+
+        of etched (Fig. 2) and colored (Fig. 3) parts of the image and the individual 
+
+        compression of each.  The image is then recreated using the MRC imaging 
+
+        model (Fig. 4).  You might say that MRC mimics the sequence of the original 
+
+        imaging process: printing the etched lines first, Blake or someone else 
+
+        later painted the colored layer over them.</p>
+
+      <p class=MsoCaption><b><i><img src="misic.fig1.gif" width="400" height="400" alt="Figure 1.&nbsp; Original scan from transparency of engraving for Stedman&#146;s __Narrative_"><br>
+
+        <a name="fig1"></a>Figure 1.  Original scan from transparency of engraving 
+
+        for Stedman&#146;s __Narrative_.<br>
+
+        </i></b></p>
+
+      <p class=MsoCaption><b><i><img src="misic.fig2.gif" width="400" height="400" alt="Figure 2.&nbsp; Foreground layer -- extracted intaglio lines from Fig. 1."><br>
+
+        <a name="fig2"></a>Figure 2.  Foreground layer -- extracted intaglio lines 
+
+        from Fig. 1.<br>
+
+        </i></b></p>
+
+      <p class=MsoCaption><b><i><img src="misic.fig3.gif" width="400" height="400" alt="Figure 3.&nbsp; Background layer -- extracted coloring layer from Fig. 1."><br>
+
+        <a name="fig3"></a>Figure 3.  Background layer -- extracted coloring layer 
+
+        from Fig. 1.<br>
+
+        </i></b></p>
+
+      <p class=MsoCaption><b><i><img src="misic.fig4.gif" width="400" height="400" alt="Figure 4.&nbsp; MRC compressed image from Fig. 1 compression ratio 40:1 (compressed file is 40 times smaller than original file)."><br>
+
+        <a name="fig4"></a>Figure 4.  MRC compressed image from Fig. 1 compression 
+
+        ratio 40:1 (compressed file is 40 times smaller than original file).<br>
+
+        </i></b></p>
+
+      <p class=MsoBodyText>One can see the dramatic difference when comparing 
+
+        the quality of compression achieved by MRC against that of other standard 
+
+        compression formats, at the enlarged scale (zoomed image).  The JPEG compressed 
+
+        images show blocking effects (smearing and discoloring) while both JPEG 
+
+        and JPEG2000 compressed images completely drop engraved lines in some 
+
+        areas.  At the same time modified MRC preserves (but somewhat smears) 
+
+        the lines in the same image areas where other algorithms fail (Fig. 5).<br>
+
+      </p>
+
+      <p class=MsoCaption><b><i><img src="misic.fig5.gif" width="400" height="400" alt="Figure 5.&nbsp; Clockwise from top left: original, JPEG, JPEG2000, and MRC.&nbsp; Images are compressed at 40:1 compression ratio."><br>
+
+        <a name="fig5"></a>Figure 5.  Clockwise from top left: original, JPEG, 
+
+        JPEG2000, and MRC.  Images are compressed at 40:1 compression ratio.</i></b></p>
+
+      <h1><b>Conclusion</b></h1>
+
+      <p class=MsoBodyText>Originally developed by Xerox Corporation as a compression 
+
+        scheme to efficiently combine different compression requirements for text 
+
+        and image content in scanned digital documents, MRC is for the first time 
+
+        being deployed to the compression of non-compound documents.  Unlike the 
+
+        first installment of the technology, which was a response to composite 
+
+        text and image data, the version of MRC being presented here is designed 
+
+        with the inherent compositeness of colored prints and other graphic media 
+
+        in mind.  The documents we are dealing with, then, are still &#147;compound&#148; 
+
+        in the broader, non-technical sense of the term, but the semiological 
+
+        analysis is performed entirely at the level of the image, exclusive of 
+
+        a consideration of text.  </p>
+
+      <p class=MsoBodyText>Used in conjunction with the new JPEG 2000 compression 
+
+        standard, MRC enables not only image compression but also the accurate 
+
+        discrimination of printed intaglio lines from finishing work in colored 
+
+        prints, paving the way for separate processing of each.  Whereas other 
+
+        compression models treat the formal content of an image as invariant, 
+
+        MRC is sensitive to the heterogeneous character of the pictorial composition 
+
+        as a whole.  By treating printed (engraved and/or etched) lines separately 
+
+        from colored image layers, MRC minimizes image degradation and the inevitable 
+
+        loss of information.  The result is superior raster imagery: digital facsimiles 
+
+        that show exceptional fidelity to their prototypes, as a comparison between 
+
+        an original scan of one of Blake&#146;s commercial print illustrations 
+
+        and its MRC reconstruction makes evident.  Because applied segmentation 
+
+        can essentially lift the color overlay of an impression, it additionally 
+
+        provides the student of Blake the unique opportunity to recreate the underlying 
+
+        copperplate image and model the artist&#146;s coloring process.  </p>
+
+      <h1><b>Workshop presentation preview</b></h1>
+
+      <p class=MsoBodyText>From a visual standpoint, the presentation will unfold 
+
+        with (first) a brief look at pre-digital efforts to split Blake&#146;s 
+
+        tones/colors from his edges/lines.  Using a detail from a plate engraved 
+
+        by Blake after a design by John Stedman for the latter&#146;s Narrative 
+
+        of a Five Years&#146; Expedition, Against the Revolted Negroes of Surinam 
+
+        (1806), we will then compare the quality of compression achieved by MRC 
+
+        against that of other standard compression formats.  The examples will 
+
+        show the advantages of MRC when used cooperatively with wavelet compression.  
+
+        We will close with some speculations about what a next-generation version 
+
+        of MRC might be able to do: an ambitious agenda would include extending 
+
+        the ability of MRC to automatically or semi-automatically distinguish 
+
+        etched from engraved lines or detect intaglio lines in an impression that 
+
+        has been color-printed from the plate&#146;s surfaces. </p>
+
+      <p class=MsoBodyText>We also encourage the reviewer to visit Misic&#146;s 
+
+        PowerPoint slide show at the URL found in the bibliography below.</p>
+
+      <h1><b>References</b></h1>
+
+      <p class=ReferencesText>Eaves M. (2002), Essick R., and Viscomi J., eds.  
+
+        <i><span>The William Blake Archive</span></i>.  <a href="../http://www.blakearchive.org/" target="_blank">http://www.blakearchive.org</a>.</p>
+
+      <p class=ReferencesText>Misic V. (2002).  Segmentation and Compression of 
+
+        Blake Archive Images, Last updated Nov. 2001.  <a
+
+href="../../../_misicv/CTLTR/CTLTR.PPT" target="_blank">http://henry.ee.rochester.edu:8080/~misicv/CTLTR/CTLTR.PPT</a>.</p>
+
+      <p class=ReferencesText>de Queiroz, R. (1999), Buckley R., and Xu M.  Mixed 
+
+        Raster Content (MRC) Model for Compound Image Compression,  <i><span>Proeedings. 
+
+        EI&#146;99, VCIP, SPIE</span></i> Vol. 3653.  1106-1117.</p>
+
+      <p class=ReferencesText>Draft recommendation T.44 (May 1997).  Mixed Raster 
+
+        Content (MRC).  ITU-T Study Group 8, Question 5. </p>
+
+      <p class=ReferencesText>Essick R. (1985) Rev. of the Manchester Etching 
+
+        Workshop&#146;s facsimiles of <i><span>Songs of Innocence</span></i> and <i><span>Songs 
+
+        of Experience,</span></i> <i><span>Blake/An Illustrated Quarterly</span></i> 19: 39-51.  
+
+      </p>
+
+      <p class=ReferencesText>Keynes G. (1971), Blake&#146;s Copper-Plates, <i><span>Blake 
+
+        Studies: Essays on His Life and Work</span></i>.  2<sup>nd</sup>. ed.  
+
+        Oxford: Clarendon P, 122-129.</p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2002/papers/misic/misic.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:02 GMT -->
+</html>

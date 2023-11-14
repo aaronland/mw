@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mw2013.museumsandtheweb.com/paper/using-open-source-tools-to-expose-ycba-collection-data-in-the-lido-schema-for-oai-pmh-harvesting-2/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:51:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Using Open Source tools to expose YCBA collection data in the LIDO schema for OAI-PMH harvesting | MW2013: Museums and the Web 2013</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/twentyeleven/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mw2013.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MW2013: Museums and the Web 2013 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW2013: Museums and the Web 2013 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW2013: Museums and the Web 2013 &raquo; Using Open Source tools to expose YCBA collection data in the LIDO schema for OAI-PMH harvesting Comments Feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw2013.museumsandtheweb.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexe9c9.html?p=3345' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed10f2.json?url=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fusing-open-source-tools-to-expose-ycba-collection-data-in-the-lido-schema-for-oai-pmh-harvesting-2%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embedd171?url=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fusing-open-source-tools-to-expose-ycba-collection-data-in-the-lido-schema-for-oai-pmh-harvesting-2%2F&amp;format=xml" />
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #850000; }
+</style>
+	</head>
+
+<body class="paper-template-default single single-paper postid-3345 custom-background two-column right-sidebar">
+<div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="../../index.html" title="MW2013: Museums and the Web 2013" rel="home">MW2013: Museums and the Web 2013</a></span></h1>
+				<h2 id="site-description">The annual conference of Museums and the Web | April 17-20, 2013 | Portland, OR, USA</h2>
+			</hgroup>
+
+						<a href="../../index.html">
+									<img src="../../wp-content/uploads/2012/09/portland_strip.jpg" width="1000" height="288" alt="" />
+							</a>
+			
+								<form method="get" id="searchform" action="https://mw2013.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content" title="Skip to primary content">Skip to primary content</a></div>
+				<div class="skip-link"><a class="assistive-text" href="#secondary" title="Skip to secondary content">Skip to secondary content</a></div>
+								<div class="menu-mw2013-menu-container"><ul id="menu-mw2013-menu" class="menu"><li id="menu-item-238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-238"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-603" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-603"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+	<li id="menu-item-6483" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6483"><a href="http://www.museumsandtheweb.com/conferences/">Conferences</a></li>
+</ul>
+</li>
+<li id="menu-item-2524" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2524"><a href="../../news/index.html">News</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-262"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-2357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2357"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243"><a href="../../local-information/index.html">Local Information</a></li>
+	<li id="menu-item-242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-242"><a href="../../call-for-proposals/index.html">Call for Proposals</a>
+	<ul class="sub-menu">
+		<li id="menu-item-508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-508"><a href="../../call-for-proposals/guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+		<li id="menu-item-509" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-509"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+		<li id="menu-item-510" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-510"><a href="../../submit-proposal/index.html">Submit Proposal</a></li>
+		<li id="menu-item-2574" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2574"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+		<li id="menu-item-5875" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5875"><a href="../../call-for-proposals/presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	</ul>
+</li>
+	<li id="menu-item-714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-714"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+	<li id="menu-item-3146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3146"><a href="../../exhibitor-rates/index.html">Sponsorship</a></li>
+</ul>
+</li>
+<li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-526"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-3196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3196"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-527"><a href="../../exhibiting/exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a href="../../registration/exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-1935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1935"><a href="../../guidelines-for-advertisers/index.html">Guidelines for Advertisers</a></li>
+</ul>
+</li>
+<li id="menu-item-689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-689"><a href="../../conference/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-4186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4186"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><a href="../../sessions/index.html">Sessions</a></li>
+	<li id="menu-item-697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697"><a href="../../workshops/index.html">Workshops</a></li>
+	<li id="menu-item-6745" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6745"><a href="../../introducing-mwx2013-new-exhibition-program-for-museums-and-the-web/index.html">MWX</a></li>
+	<li id="menu-item-3220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3220"><a href="../../best-of-the-web/index.html">Best of the Web</a>
+	<ul class="sub-menu">
+		<li id="menu-item-6424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6424"><a href="../../best-of-the-web-winners/index.html">Best of the Web Winners</a></li>
+		<li id="menu-item-3221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3221"><a href="../../best-of-the-web-criteria/index.html">Best of the Web Criteria</a></li>
+		<li id="menu-item-3228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3228"><a href="../../best-of-the-web-nominees/index.html">Best of the Web Nominees</a></li>
+	</ul>
+</li>
+	<li id="menu-item-701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-701"><a href="../../demonstrations/index.html">Demonstrations</a></li>
+	<li id="menu-item-6255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6255"><a href="../../salons/index.html">Salons</a></li>
+	<li id="menu-item-528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-528"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-702"><a href="../../sponsors/index.html">Sponsors</a></li>
+	<li id="menu-item-6478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6478"><a href="../../papers/index.html">Papers</a></li>
+	<li id="menu-item-719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-719"><a href="../../proceedings/index.html">Proceedings</a></li>
+</ul>
+</li>
+<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-730"><a href="../../people/index.html">People</a>
+<ul class="sub-menu">
+	<li id="menu-item-731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731"><a href="../../speakers-authors/index.html">Speakers &#038; Authors</a></li>
+	<li id="menu-item-732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-732"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-257"><a href="../../program-committee/index.html">Program Committee</a></li>
+	<li id="menu-item-3135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3135"><a href="../../bow-committee/index.html">BoW Committee</a></li>
+</ul>
+</li>
+<li id="menu-item-6564" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6564"><a href="http://www.museumsandtheweb.com/publication-order/">Publications</a></li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<style type="text/css">
+#full_width_content {
+	margin-left: 76px;
+	margin-right: 76px;
+}
+
+h2, h3, h4 {
+	font-weight: bold;
+}
+</style>
+
+<div id="primary">
+<div id="full_width_content">
+			
+
+<h1 class="entry-title">Using Open Source tools to expose YCBA collection data in the LIDO schema for OAI-PMH harvesting</h1>
+<br />
+
+<a href="../../user/indexac9b.html?u=stick">David Parsell</a>, USA<br /><br /><b>Abstract</b><br />
+<p>Exposing collection data for harvesting is challenging for cultural institutions, more so when the “standard” data schema is in transition during the project. The Yale Center for British Art (YCBA) encountered this challenge as it worked towards exposing collection data in the CDWA Lite schema using the OCLC Museum Data Exchange (MDE), open source tools. Concurrent with the YCBA project, CDWA Lite was superseded by the LIDO schema, offering the YCBA opportunity to use the more robust LIDO schema, and the challenge to find appropriate software. Identifying an absence of LIDO tools, the YCBA choose to extend the MDE project CDWA Lite tools to support the LIDO schema, and in the process developed efficient software for exposing data in the LIDO schema. This paper is a digital road trip documenting the YCBA project from the collection cataloging decisions to using the YCBA developed 2nd generation MDE tools to expose collection data in the LIDO schema.</p>
+<p><b>Keywords: </b>Keywords CDWA Lite, LIDO, open source, Museum Data Exchange, OCLC, OAI-PMH, Cogapp, MDE, ICOM, CIDOC</p>
+<h3></h3>
+<h2 style="text-align: left;"><strong style="text-align: left;">1. Background</strong></h2>
+<h3 style="text-align: left;">Introduction to the Yale Center for British Art</h3>
+<p>The Yale Center for British Art (YCBA) located at Yale University, positions itself as a public museum and a university research institute. Delmas-Glass (2012) found that “the YCBA holds the largest and most comprehensive collection of British art outside the United Kingdom, presenting the development of British art and culture from the Elizabethan period to the present day”. The YCBA collections consist of approximately 50,000 objects, 30,000 rare books and manuscripts and 30,000 reference library materials. Delmas-Glass (2012) stated that “the collections provide an exceptional resource for understanding British art.”</p>
+<p>The YCBA art collections are cataloged in the Gallery Systems collections management system (TMS) and the YCBA library materials are cataloged in the Yale University Library ORBIS system. The complexity of storing the YCBA collections in two different data bases is addressed by using the OAI-PMH protocol to harvest the YCBA collections for the cross collections repository and subsequently the YCBA searchable on-line collection. The data is harvested nightly, indexed and delivered through the Apache Solr search platform when queried from the Cross Collection Discovery (CCD) website or the searchable collection on the YCBA website.</p>
+<p>The YCBA online collections catalog is sourced from the same database as the CCD, but the YCBA collections interface displays a richer data set than the CCD interface through the proprietary design focused on just the YCBA collections, while the CCD interface is generalized to accommodate the diverse Yale collections. “The YCBA’s on-line collections catalogue (Delmas-Glass, 2012) is a single search box where, for the first time in the history of the museum, one can search across all the museum’s collections; works of art, rare books, manuscripts and reference library materials.”</p>
+<p>By 2009 the YCBA had committed to a number of collection distribution objectives:</p>
+<ul>
+<li>Mounting a searchable on-line collection on the YCBA website;</li>
+<li>Contributing to the searchable on-line Yale database aggregating collection data from Yale cultural institutions; and</li>
+<li>Exposing the collection to harvesters outside the university community.</li>
+</ul>
+<p>Yet the YCBA did not have the tools in place to meet these goals.</p>
+<p>Empowered with the classic cultural institution mandate of great expectations but little manpower and funding, the YCBA sought open source solutions, eventually choosing tools available from OCLC (Online Computer Library Center) Research (http://www.oclc.org). This decision, prompted by the low entry barrier and the necessity for an expedited solution, began an interesting journey that is still underway over two years after the YCBA first exposed the collection with OCLC tools.</p>
+<p>Before we can discuss the data export software, we will review the collection cataloging procedures and the XML data schemas to establish the foundation for developing the project and the export tools.</p>
+<h3>Introduction to CDWA and CDWA Lite schema</h3>
+<p>As the standard data exchange schema in use at the beginning of the YCBA project, as well as the schema supported by the Museum Data Exchange tools, the CDWA (Categories for the Description of Works of Art) framework was an easy choice for the YCBA. CDWA met the YCBA’s data export needs and provided a reasonably robust data schema as stated by Baca and Harpring (2009):</p>
+<blockquote><p>Categories for the Description of Works of Art (CDWA) describes the content of art databases by articulating a conceptual framework for describing and accessing information about works of art, architecture, other material culture, groups and collections of works, and related images.</p></blockquote>
+<p>CDWA includes 532 categories and subcategories. A small subset of the categories are considered core data since they represent the minimum information necessary to identify and describe a work. These core data categories comprise the XML data schema called CDWA Lite. (Baca 2009)<strong> </strong>Detailed descriptions of CDWA and CDWA Lite can be found at <a href="http://www.getty.edu/research/publications/electronic_publications/cdwa/index.html">http://www.getty.edu/research/publications/electronic_publications/cdwa/index.html</a></p>
+<h3>Introduction to the LIDO schema</h3>
+<p>The Lightweight Information Describing Objects (LIDO) schema combines the CDWA and the European museumdat schemas. LIDO was introduced November 2010 and supersedes the CDWA and museumdat schemas. It is aligned with the SPECTRUM collections management standard and is an event‐oriented approach compliant with the CIDOC CRM (Conceptual Reference Model of the International Committee for Documentation). The event-oriented approach of CIDOC-CRM allows the format of LIDO to be generalized for use with extensive object data that identifies what events an object experienced in its lifetime, such as provenance, framing, history, publication, conservation history.</p>
+<p>LIDO embraces the same data sharing objectives as CDWA, but offers a much more robust schema to facilitate sharing much more complex event-driven data. “The strength of LIDO (ICOM-CIDOC Working Group Data Harvesting and Interchange, 2010) lies in its ability to support the full range of descriptive information about museum objects. It can be used for all kinds of objects, e.g. art, architecture, cultural history, history of technology, and natural history.” This and a more detailed description of LIDO can be found at: <a href="http://network.icom.museum/cidoc/working-groups/data-harvesting-and-interchange/what-is-lido/">http://network.icom.museum/cidoc/working-groups/data-harvesting-and-interchange/what-is-lido/</a></p>
+<p>LIDO is a flexible schema that is compliant with CRM, supports URL addressing and allows resource description framework (RDF) modeling of collections data. The YCBA hopes that eventually linked data will solve a number of issues such as harmonized vocabularies and establishing a platform for British Art scholarship that uses the network environment as the database.</p>
+<h3>Introduction to the Museum Data Exchange</h3>
+<p>The Museum Data Exchange Project (MDE) funded by The Andrew W. Mellon Foundation, empowered nine museums and OCLC Research to create tools for data sharing, analysis and aggregation. The project (Waibel, LeVan and Washburn, 2010) “established infrastructure for standards-based metadata exchange for the museum community and modeled data sharing behavior among participating institutions.”</p>
+<p>The MDE project produced two tools; COBOAT, the main tool, extracts data out of collection management systems and generates xml documents in the CDWA Lite schema that are delivered to the Open Archives Initiatives&#8217; OAICatMuseum data base on the OAI-PMH (<a href="http://www.openarchives.org/pmh/">Open Archives Initiative Protocol for Metadata Harvesting</a>) server. The default COBOAT configuration for this process is set up for Gallery Systems TMS, but the configuration can be adjusted to work with other collection management systems. The periphial tool, OAICatMuseum, sits on the OAI-PMH server data base and exposes the data to harvesters through the OAI-PMH protocol.</p>
+<p>As explained by Waibel, LeVan and Washburn (2010), the complete CDWA Lite data sharing strategy comprises:</p>
+<ul>
+<li>A data structure (CDWA) expressed in a data format (CDWA Lite XML)</li>
+<li>A data content standard (Cataloging Cultural Objects-CCO)</li>
+<li>A data transfer mechanism (Open Archives Initiative Protocol for Metadata Harvesting-OAI-PMH)</li>
+</ul>
+<p>The MDE project objective is to lower the entry level barrier for data sharing by providing free tools to create and share CDWA Lite XML documents. This strategy is exactly what attracted the YCBA to the CDWA Lite schema and MDE. Essentially, with little expertise and investment, the YCBA could expose collection data for harvesting in the standard data exchange schema in use in 2009.</p>
+<h2>2. The YCBA&#8217;s MDE Solution Design</h2>
+<h3>YCBA concerns regarding the Museum Data Exchange Tools.</h3>
+<p>Initially, the YCBA harbored reservations about using the OCLC tools. While the OAI-PMH protocol enjoys wide acceptance at cultural institutions, there had been little interest in COBOAT once the MDE project was completed. Also, concurrent with the 2010 YCBA efforts to expose data in the CDWA Lite schema, the cultural community was moving towards replacing CDWA Lite with the more robust LIDO schema, raising YCBA concerns that COBOAT might not be the long term solution it sought.</p>
+<p>Fortunately, the YCBA made an excellent decision in basing its solution on the OCLC resources. COBOAT turned out to be a very efficient and flexible tool that easily managed exposing data in the CDWA Lite schema and allowed the YCBA to extend COBOAT far beyond its original capabilities in order to support the LIDO schema. The beauty of open source software is building on existing tools to produce a solution that meets your own needs and can be shared with the community for the greater good. This is exactly what the YBCA did by extending the MDE tools to support the LIDO schema after LIDO superseded the CDWA Lite schema; essentially producing 2nd generation MDE project tools.</p>
+<h3>Getting the YCBA project started</h3>
+<p>In 2009, the YCBA wished to expose collection data in the CDWA Lite schema, the accepted standard in use at the time. Optimally, the YCBA prefers to use open source tools, and to that purpose turned to the OCLC Mellon-funded Museum Data Exchange project that had built an open source data export tool based on the proprietary COBOAT software. Both the CDWA Lite and the LIDO schema versions of COBOAT and OAICatMuseum are “open source” software available on the OCLC website.</p>
+<p>A caveat in the YCBA “open source” software strategy is the fact that COBOAT is proprietary software as described in the <i>Museum Data Exchange Project – Installation and Configuration Manual v.009</i>.</p>
+<blockquote><p>COBOAT is a metadata publishing tool developed by <a href="http://www.cogapp.com/home/">Cognitive Applications Inc.</a> (Cogapp) that transfers information between databases (such as collections management systems) and different formats, but it is not an open source tool. OCLC commissioned Cogapp to extend COBOAT to enable the extraction of collection data in the <a href="http://www.getty.edu/research/conducting_research/standards/cdwa/cdwalite.html">CDWA Lite</a> schema and to make COBOAT available under a fee-free license for the purposes of publishing a CDWA Lite repository of collections information from museums using TMS. (Rubinstein, Rudge and Norris, 2008)</p></blockquote>
+<p>Fortunately, the MDE project ensured that COBOAT would be free to all cultural institutions wishing to use the MDE tools. The only requirements are that cultural institutions must request a license by email from Cogapp, and COBOAT needs the license file installed in a sub-folder to be fully functional. When the YCBA extended COBOAT to support the LIDO schema, COBOAT drifted outside the terms of the original Cogapp MDE license; however, when requested by the YCBA, Cogapp generously agreed to extend the free MDE COBOAT license to include exporting collection data in the LIDO schema.</p>
+<p>The YCBA began using the MDE tools in 2010, with the objective of exposing collection data in the CDWA Lite schema, but when the more robust LIDO schema superseded CDWA Lite, the YCBA reengineered the project to focus on the LIDO schema.<br />
+Without open source tools available for exposing data in the LIDO schema, and in light of the positive YCBA CDWA Lite experience with COBOAT and OAICatMuseum, the obvious upgrade path was to explore extending COBOAT and OAICatMuseum to support the LIDO schema. Fortunately, the remarkable flexibility of COBOAT allowed a successful extension to the LIDO schema. In 2011, the YCBA extended COBOAT and OAICatMuseum to allow generating LIDO schema XML records and exposing them for harvesting using the Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH).</p>
+<h3>YCBA checklist for cataloging and exposing collection data with COBOAT and OAICatMuseum</h3>
+<p>Following are the areas that need to be addressed when planning to expose collection data.</p>
+<ol>
+<li>Identify and document project objectives.</li>
+<li>Review and document website data presentation objectives to identify cataloging needs.</li>
+<li>Review collection data to determine what cataloging needs to be done.</li>
+<li>Initiate cataloging projects to prepare the collection for export and website display.</li>
+<li>Create a document linking collection data fields to the XML document fields.</li>
+<li>Create a sample XML document, and using a tool such as Oxygen, validate the XML schema.</li>
+<li>Install and test the tools to be used for data export and exposure for harvesting.</li>
+<li>Write and test the needed scripts.</li>
+<li>Document the installation and modification to the tools.</li>
+<li>Extensively test the system before exposing production collection data.</li>
+</ol>
+<h3>YCBA project objectives</h3>
+<p>By 2009, the YCBA had committed to three collection distribution objectives, but did not have the tools in place to meet the commitments, which are:</p>
+<ol>
+<li>Building on-line collection search functionality on the YCBA website.</li>
+<li>Exposing the collection to a Yale University central searchable data base fed by all of Yale’s data providers, which includes three museums, the library system and others. Yale University sought to build a single-search portal for Yale University collections.</li>
+<li>Exposing the collection for harvesting by aggregators outside of Yale.</li>
+</ol>
+<p>To expedite a solution to meet the three objectives, the YCBA focused on exposing the collection data for harvesting by the Yale University cross collection database (CCD). Once the harvesting software was in place, the YCBA on-line searchable collection would be designed to retrieve data from the CCD. Eventually, exposing the data for harvesting would be expanded to include harvesters outside Yale University. Figure 1 illustrates the Yale Cross Collection database harvesting design.</p>
+<p><strong><a href="parsell-fig1/index.html" rel="attachment wp-att-3381"><img loading="lazy" style="width: 622px; height: 328px;" alt="parsell.fig1" src="../../wp-content/uploads/2013/01/parsell.fig1_-300x197.png" width="300" height="197" /></a></strong></p>
+<h3>Cataloging the collection database prior to exposing the collection</h3>
+<p>Before a cultural institution can begin exposing data, there has to be sufficient collection data to expose, which is not as simple as it sounds. Basic tombstone data in a collection management system is not enough for an interesting website and does not present well in a searchable on-line collection without robust supporting data to enhance the tombstone data and facilitate searching.</p>
+<p>The first step to cataloging the collection for export is identifying what data you want to expose and how you want to present it (in this case, a searchable collection on a website). Once the goals have been determined, cataloging projects can be implemented to catalog the appropriate data. As stated by Delmas-Glass (2011), “cataloging guidelines need to be set for creating sharable metadata, which is Human understandable and can be processed by a Machine, is useful and usable to services outside of its local context and is quality metadata.”</p>
+<p>For the YCBA, creating shareable metadata meant defining metadata standards, the metadata schema, the data content standard, and the data content values (controlled vocabularies). Since the CDWA was the standard schema and supported by the MDE tools, the YCBA selected a core subset of CDWA as the metadata schema, and the Cataloging Cultural Objects standard (CCO) for the data content standard. The CCO lists clear guidelines for selecting, ordering, and formatting data values. (Baca 2006) The benefits of the YCBA application of the standards was described by Delmas-Glass (2011) as “designing the collection database to be standard compliant allowed the YCBA to make use of the whole suite of standards for cultural institutions; the CDWA Lite schema and the OAI-PMH protocol.”</p>
+<p>Additionally, the YCBA identified data facets to display in its searchable collection (a step towards thinking about data as data rather than data as display). Initially, the YCBA was limited by the CDWA Lite schema, but still found interesting intersections between the art collection metadata and the library metadata for the facets. On a cautionary note, the multiple data layers generated by the facets required the YCBA to carefully select the fields indexed as facets. The YCBA undertook the following cataloging projects in preparation for exposing the collection data:</p>
+<p><strong>Constituents</strong></p>
+<ol>
+<li>Alternate names</li>
+<li>Text entries (useful fields for including additional data that does not fit into the standard database fields)</li>
+<li>Life roles</li>
+<li>Place of activity (geographic locations with GIS data)</li>
+<li>Keywords linked to the AAT, ULAN, TGN</li>
+</ol>
+<p><strong>Objects</strong></p>
+<ol>
+<li>Work type</li>
+<li>Dimensions</li>
+<li>Copyright</li>
+<li>Text entries (useful fields for including additional data that does not fit into the standard database fields)</li>
+<li>Provenance</li>
+<li>Linked images</li>
+<li>Geographic locations with GIS data</li>
+<li>Keywords linked to the AAT, ULAN, TGN</li>
+</ol>
+<p><strong>Other</strong></p>
+<ol>
+<li>Bibliographic data</li>
+<li>Exhibition data</li>
+</ol>
+<h3>Linking the YCBA collection to the XML data schemas</h3>
+<p>In conjunction with designing the cataloging projects, the linking between the collection database fields and the XML export fields is documented in a detailed mapping document and a model XML document. Figure 2 is the mapping document linking the collection database fields to the CDWA Lite and LIDO schema fields.</p>
+<p><a href="parsell-fig2/index.html" rel="attachment wp-att-3382"><img loading="lazy" style="width: 612px; height: 327px;" alt="parsell.fig2" src="../../wp-content/uploads/2013/01/parsell.fig2_-300x205.png" width="300" height="205" /></a></p>
+<p>Figure 3 shows the sample LIDO schema XML document verified in Oxygen, the only software that the YCBA purchased for this project. Oxygen is a valuable tool for verifying your XML schema against the appropriate schema website.</p>
+<p><strong><a href="../../wp-content/uploads/2013/01/parsell.fig3_.png"><img loading="lazy" style="width: 604px; height: 315px;" alt="parsell.fig3" src="../../wp-content/uploads/2013/01/parsell.fig3_-300x178.png" width="300" height="178" /></a></strong></p>
+<p>Figure 4 is an illustration of the MDE tools and the supporting software required to expose collection data. This diagram illustrates the data flow from the collection database to exposure for harvesting.</p>
+<p><a href="parsell-fig4/index.html" rel="attachment wp-att-3384"><img loading="lazy" style="width: 610px; height: 326px;" alt="parsell.fig4" src="../../wp-content/uploads/2013/01/parsell.fig4_-300x153.png" width="300" height="153" /></a></p>
+<p>COBOAT and OAICatMuseum need the following open source software to support the data export and harvesting. All of them can be downloaded from the web.</p>
+<ol>
+<li>MySQL database software which COBOAT uses to send the XML documents to the OAICatMuseum db for harvesting.</li>
+<li>MySQL workbench: a GUI interface which expedites reviewing the XML documents in MySQL.</li>
+<li>Apache Tomcat to enable harvesting from the OAICatMuseum db.</li>
+<li>A good text editor for writing the COBOAT scripts. Notepad++ was used for this project.</li>
+<li>Software to validate the XML schema. Oxygen was used, which must be purchased.</li>
+<li>COBOAT and OAICatMuseum are downloaded from the OCLC.org website. The downloads include comprehensive manuals providing excellent guidance for the installation, coding and operation of the software.</li>
+</ol>
+<p>COBOAT and OAICatMuseum together perform only one task: extracting data from a collection management system, organizing the data in XML documents and exposing them for harvesting. COBOAT does 80% of the work &#8220;as a scriptable tool for the automation of data migration and conversion tasks.&#8221; (Rubinstein, Rudge, Norris, 2008) It exports the data from the database, generates XML records from the data and delivers the XML records to the MySQL OAICatMuseum database where the XML records are exposed to harvesters.</p>
+<p>One of the beauties of COBOAT is its use of scripts to allow quick changes and re-testing instead of the much more time-consuming procedures required with fully compiled software.</p>
+<blockquote><p>The concept for COBOAT is to centralize all the code that knows how to retrieve data from or build data to various databases, scan images etc; configured by simple scripts which as much as possible contain only the details specific to a given installation; and which where possible hide the details of individual database systems or connections, so that if these change, only minimal alterations are required to the scripts”. (Rubinstein, Rudge, Norris, 2008)</p></blockquote>
+<p>COBOAT works on either the Mac or Windows platform and uses a small footprint single folder with all of the supporting files and configuration scripts residing in sub-folders.</p>
+<p>The YCBA COBOAT and OAICatMuseum implementation uses two servers as diagramed in Figure 5:</p>
+<ol>
+<li> Database server for the collection.</li>
+<li>OAI-PMH harvesting server exposing the collection.</li>
+</ol>
+<p><a href="parsell-fig5/index.html" rel="attachment wp-att-3385"><img loading="lazy" style="width: 601px; height: 316px;" alt="parsell.fig5" src="../../wp-content/uploads/2013/01/parsell.fig5_-300x116.png" width="300" height="116" /></a></p>
+<h2>3. The YCBA Implementation of COBOAT and OAICatMuseum</h2>
+<p>COBOAT and OAICatMuseum can be set up in a number of different configurations. The YBCA used a two server configuration based on security concerns. To avoid intrusions in the production TMS database, COBOAT was installed on the TMS production server while OAICatMuseum and the MySQL database were installed on a second dedicated harvesting server.</p>
+<p>Following are other possible server/ workstation configurations, each with performance ramifications.</p>
+<ol>
+<li>COBOAT and OAICatMuseum resident on the collection database server, which compromises the collection database when the server is exposed to harvesters.</li>
+<li>COBOAT installed on a workstation with the collection database on a server. This is the slowest configuration based on the network traffic generated and the lower powered workstation. Also, it requires a workstation with considerable hard drive space to store the exported data and XML documents.</li>
+<li>COBOAT and OAICatMuseum installed on a workstation. This is a bare bones low cost solution that will be very slow due to the network traffic between the workstation and the database, and the limited workstation power. This configuration requires even more hard drive space to accommodate the data export and the second copy of the XML documents in the MySQL database.</li>
+</ol>
+<h3>Detailed technical guide to installing and scripting COBOAT and OAICatMuseum</h3>
+<p><a href="../../wp-content/uploads/2013/01/parsell.fig6_.png"><img loading="lazy" style="width: 621px; height: 343px;" alt="parsell.fig6" src="../../wp-content/uploads/2013/01/parsell.fig6_-300x200.png" width="300" height="200" /></a></p>
+<p>Figure 6 illustrates the main COBOAT folder and the sub-folders.</p>
+<p>The COBOAT executable (CB186.exe), dlls and a copy of the log file reside in the root or top folder. The three customizable scripts needed to run COBOAT are located in a museum specific subfolder under the CONFIG folder, I. E. YCBA-LIDO. COBOAT ignores folder names in () when building the COBOAT menu. The COBOAT license must be placed in the active museum specific script folder.</p>
+<p>The three customizable scripts used by COBOAT each perform a specialized task.</p>
+<ol>
+<li>The TMSretrieve script exports data from the CMS and stores it in text files in preparation for building the XML documents. YCBA chose to write the export queries in Transact-SQL, but there is the option of using other languages such as $smarty and php. We put all pre-processing logic in this script for simplicity.</li>
+<li>The 1st_pass script takes the data from the text files and sets it up in memory arrays in preparation for building the XML documents. This script can also be used to modify/ filter the extracted data, but for simplicity YCBA chose to put all of the data pre-processing logic in the TMSretrieve script.</li>
+<li>The 2nd_pass script is the XML document template used by COBOAT to generate the XML documents. COBOAT does not validate schemas, so any schema and elements can be used. We used Oxygen to validate the template.</li>
+</ol>
+<p>The LIDObuildMySQL.cbcs script is also in the active museum specific folder. It is the configuration file for COBOAT processing. We made a few changes to this file to adjust the munge processing for LIDO as will be discussed later. Other folders include:</p>
+<ul>
+<li>The CORE folder contains the compiled COBOAT munger.</li>
+<li>The EXTERNALS folder contains COBOAT dlls.</li>
+<li>The REPORTS folder contains error reports listing missing data in the generated XML documents. The reports are useful to review the missing data by data type. ObjectIDs are listed in the reports, allowing the identification of objects requiring further cataloging.</li>
+</ul>
+<p>Drilling down in the Service folder in figure 7 reveals the subfolders where all of the processed data is stored.</p>
+<p><a href="parsell-fig7/index.html" rel="attachment wp-att-3387"><img loading="lazy" style="width: 611px; height: 356px;" alt="parsell.fig7" src="../../wp-content/uploads/2013/01/parsell.fig7_-300x188.png" width="300" height="188" /></a></p>
+<ul>
+<li>The SERVICE folder has a number of sub-folders for storing the data files generated during COBOAT processing.</li>
+<li>The BUILDRES folder maintains a copy of the latest log file also found in the root COBOAT folder.</li>
+<li>The METADATA folder contains a file with only two fields; checksum and last build date. The fields are used to track XML document changes. COBOAT only sends a new XML document to OAICatMuseum if the checksum changes, indicating that the object record data changed.</li>
+<li>The OUTPUTDB folder contains a copy of the XML documents sent to the main MySQL table, as well as the supporting data stored in the other MySQL tables in the OAICatMuseum database.</li>
+<li>The OUTPUTFILES folder contains sample XML documents and data arrays that can be generated when testing the XML template. These are very useful for finding errors before generating all of the XML documents. Objects can be selected for review during testing by entering the appropriate objectIDs in the “Generate file samples” menu text file.</li>
+<li>The SOURCEDATA folderTMS folder contains the text files exported from TMS by the “TMSretreive” script. This folder also contains text files from other sources to be used in the XML munge, i.e. the YCBA includes a data file with pointers to the object records in the YCBA searchable on-line collection.</li>
+</ul>
+<p>NOTE: the YCBA does not use COBOAT to extract image files from TMS although this is possible. Please refer to the COBOAT documentation.</p>
+<p>Figure 8 is a detailed look at the source data folder and the data files extracted from the collection database.</p>
+<p><a href="../../wp-content/uploads/2013/01/parsell.fig8_.png"><img loading="lazy" style="width: 598px; height: 329px;" alt="parsell.fig8" src="../../wp-content/uploads/2013/01/parsell.fig8_-300x204.png" width="300" height="204" /></a></p>
+<h3>Extending the CDWA Lite schema to the LIDO schema</h3>
+<p>COBOAT was written to create XML documents in the CDWA Lite schema, but the software has proven to be easily adapted to creating XML documents in the LIDO schema.<br />
+However, LIDO did introduce complications that required OAICatMuseum modification so that a LIDO header would be attached to each LIDO XML document instead of the default CDWA Lite header. OCLC made the modification to OAICatMuseum and has released v1.1 on the OCLC website. The new version allows the exposure of data with either the CDWA Lite or LIDO headers. The choice is controlled in the OAICatMuseum configuration file discussed later.</p>
+<h3>COBOAT WINDOWS/ SQL SERVER SETUP</h3>
+<p>COBOAT has a small footprint which includes the executable and a few support files in subfolders. Most of the COBOAT space requirements are devoted to the COBOAT generated data files and XML documents, which may rule out a workstation in favor of using a server with sufficient disk space. The total YCBA production COBOAT software and data storage is approx. 300mb.</p>
+<p>COBOAT does have a few restrictions:</p>
+<ul>
+<li>COBOAT has a compiled program that reads the exported data and generates the data in XML documents (munge function). The compiled program cannot be changed without contracting with Cogapp.</li>
+<li>If the XML documents are going to be exposed and harvested using OAICatMuseum, each XML document will only display either a CDWA Lite or LIDO header depending on the OAICatMuseum configuration.</li>
+<li>Running COBOAT manually on a Windows server requires access to the server via “remote desktop”. COBOAT can be set up to run automatically on the server using Windows “Task Scheduler”. COBOAT can be run manually from a workstation via a mapped drive to the server, but this method dramatically increases the processing time (7min to 33min for just TMSretreive).</li>
+</ul>
+<p>The YCBA uses Windows server (2008r2), with SQL server (2008r2), supporting the TMS database, and Windows XP on the TMS workstations. The COBOAT setup parameters will change depending on the operating system and collection management database used by other institutions.</p>
+<p>COBOAT connects to the TMS database with an ODBC connector. “tms4coboat” is the recommended name, but any name can be used as long as the ODBC name in the COBOAT script matches. N.B. you need to use the 32 bit ODBC manager on the Windows server to set up the ODBC connection, not the 64 bit ODBC manager. C:windowssyswow64odbcad32.exe.</p>
+<p>When programmatically probing a SQL server database, a SQL server login with SQL server authentication is required to get past SQL Server, forcing a password change every time COBOAT tries to connect to TMS with a Windows authenticated login. Use SQL server to create the SQL login and password. Remember, SQL server will only allow a SQL login to programmatically probe SQL server.<br />
+On the YCBA DEV server installation, the following SQL script is run daily by the SQL agent to reset the COBOAT SQL login password. Replace ‘SQLlogin’ with your SQL login ID and ‘password’ with your designated password:</p>
+<blockquote><p>exec sp_change_users_login &#8216;auto_fix&#8217;, &#8216;SQLlogin&#8217;, NULL, &#8216;password&#8217;</p></blockquote>
+<p>A MySQL login and password is required to allow COBOAT to connect to MySQL to refresh the OAICatMuseum database with the latest set of XML documents. The login is set up in MySQL using Workbench and rights are granted to the OAICatMuseum database that will store the XML documents.</p>
+<h3>Incremental export to OAICatMuseum</h3>
+<p>By default, COBOAT performs an incremental export of the XML documents to OAICatMuseum. COBOAT always extracts and processes the complete TMS data set as defined in the TMSretrieve script, but overwriting the existing XML document and delivery to OAICatMuseum is controlled by the checksum history file in the METADATA folder.</p>
+<p>When COBOAT builds the XML documents, it compares the new document checksums to the stored checksums from the previous XML document. If the checksums are the same for the same objectID, COBOAT sends the stored older XML document with the previous build date to OAICatMuseum. If the checksums are different, COBOAT sends the new XML document with the new build date to OAICatMuseum and overwrites the older XML document, checksum and date in the METADATA and OUTPUTDB directories.</p>
+<p>Harvesters can do an incremental retrieval by adjusting their retrieval software to harvest within a date range or they can ignore the date range function and perform a full harvest.<br />
+When testing, there are two workarounds to guarantee sending all of the XML documents to the OAICatMuseum db. One is to delete the checksum history file named cdwaliteCache.txt in the METADATA folder. The second is to delete the OCM_metadata_record.txt file in the Outputdb folder. Both will force COBOAT to rebuild the file and send all of the new XML documents to the OAICatMuseum db.</p>
+<h3>Deleting released records from external databases</h3>
+<p>The delete functionality is designed to identify records that harvesters should remove from their external databases when the data provider has decided to remove the record from circulation. COBOAT and OAICatMuseum initially did not have the delete functionality. Working with the YCBA, Cogapp and OCLC modified their respective software and implemented the delete functionality in April, 2011.</p>
+<p>To delete a released record, the data provider enters the object record into a TMS “deleted records” object package. COBOAT reads the “deleted records” array during the munge function and sends the “deleted” objectID and a blank XML record to OAICatMuseum. The blank record is harvested and eventually overwrites the object record in the harvesters’ database, effectively deleting the withdrawn object record. The blank deleted records need to be continuously exposed by COBOAT to ensure deleting the records from all external databases.</p>
+<h3>COBOAT/ OAICatMuseum changes needed to support the LIDO schema</h3>
+<p>While the CDWA Lite schema worked very well with the default COBOAT settings, a number of COBOAT processing parameters needed to be changed to adapt COBOAT to the much richer LIDO schema and larger XML document. During the CDWA Lite phase of the project, the only CDWA Lite change needed was modifications to COBOAT and OAICatMuseum to activate the “XML document delete functionality.”</p>
+<p>However, once COBOAT was extended to generate LIDO schema XML documents, a number of parameter changes were required to accommodate the much larger and more complex LIDO XML document. The average CDWA Lite document size = 7 – 9 kb. The average LIDO document size = 26 – 38 kb. The much larger LIDO XML documents forced changing the processing parameters from the default:</p>
+<blockquote><p>chunkrows=&#8221;100&#8243; chunkinput=&#8221;10000&#8243;<br />
+to<br />
+chunkrows=&#8221;10&#8243; chunkinput=&#8221;10&#8243;.</p></blockquote>
+<p>On the production TMS server, no speed difference between using 10 or 100, but the smaller dev server only works when set to 10. The processing changes had the added benefit of processing the data much faster. Processing the original LIDO documents with the default COBOAT parameters took almost 120 minutes total. Changing the above parameters to accommodate larger LIDO XML documents dropped the processing time to approximately 12 minutes.</p>
+<p>COBOAT production processing is done on a dual CPU VM with 4 GB memory and a gigabit network while the dev server is a single CPU VM with 2 GB memory. The parameter changes were made in the LidoBuildMySQL.cbcs file. A MySQL timeout error message prompted the processing parameters changes.</p>
+<p>Eventually, as the YCBA continued to include additional data in the LIDO schema, COBOAT stopped working with an error message stating that the XML document was too big to be inserted in the MySQL db. This problem was resolved by changing the field type from text to longtext to accommodate the very large LIDO XML documents. The parameter is in the LidoBuildMySQL.cbcs file.</p>
+<blockquote><p>Text field size = 64k bytes, longtext field size = 4gb bytes.</p></blockquote>
+<p>We had to adjust COBOAT to process Latin-1 data during the munge process. The COBOAT documentation states that the UTF-8 conversion would be handled by OAICatMuseum, which was fine initially, but as large fields of text were included in the XML documents, random blocks of text would cause errors.</p>
+<p>We turned on the UTF-8 conversion prior to the munge process to handle the errors caused by the characters in large text fields. OAICatMuseum still does the UTF-8 conversion, but it is too late in the process to handle the errors encountered. This is the setting in the buildmysql.cbcs file:</p>
+<blockquote><p>convertcharset from=&#8221;entities&#8221; to=&#8221;utf8&#8243;</p></blockquote>
+<p>Unlimited size text fields are a problem for COBOAT, which could not process them during the TMSretreive function. The problem was solved by using a field type conversion in the TMSretreive script. Following is an example of the conversion code:</p>
+<blockquote><p>convert (varchar(8000),textentries.TextEntry) as Lettering</p></blockquote>
+<p>The large field size specified in the conversion is not a problem as long as the field is defined with a set size.</p>
+<h3>TMS 2010 upgrade to TMS 2012 with Unicode fields</h3>
+<p>In Fall 2012, TMS was upgraded to the 2012 version which converted all of the database text and varchar fields to nvarchar Unicode fields. While beneficial for TMS, the change caused severe problems for COBOAT, which could not correctly export Unicode data from SQL server. Instead of the expected data in text and varchar fields, only the first byte of each field’s data was exported.</p>
+<p>Searching on the web revealed this to be a known problem with SQL server 2008. SQL server stores the Unicode data as UTF-16. SQL server 2008 doesn’t have the correct collation to convert the Unicode fields to text when exporting SQL Unicode data to txt files.<br />
+The only solution found so far is to convert every text and nvarchar field in the TMSretreive script that extracts the collection data from the SQL database and saves it in txt files.<br />
+Following is a code sample. The varchar size can be less than 8000, which is the maximum size allowed.</p>
+<blockquote><p>convert (varchar(8000),textentries.TextEntry) as Lettering</p></blockquote>
+<p>Although a tedious solution, it does work correctly and was implemented by YCBA prior to the TMS 2012upgrade.</p>
+<p>Additional problems from the TMS 2012 upgrade include the reduced TMS response to user activities. Increasing the production server memory from 4 to 8gb has helped considerably. Queries and reports are being reviewed to identify ones that will benefit from rewriting to increase response times.</p>
+<h3>OAICatMuseum implementation</h3>
+<p>A little more complicated than COBOAT, OAICatMuseum requires the installation of and support from the “open source” software Apache Tomcat and the MySQL database with the GUI interface Workbench. MySQL and Tomcat must be installed before OAICatMuseum is installed. After Tomcat is running, the OAICatMuseum war file is dropped in the Tomcat WebApps folder and expanded as displayed in figure 9.</p>
+<p><a href="parsell-fig9/index.html" rel="attachment wp-att-3389"><img loading="lazy" style="width: 626px; height: 262px;" alt="parsell.fig9" src="../../wp-content/uploads/2013/01/parsell.fig9_-300x103.png" width="300" height="103" /></a></p>
+<p>Use the open source MYSQL “Workbench” for a GUI interface to the OAICatMuseum database. Workbench is similar to the SQL Server Management Studio interface.</p>
+<p>The OAI-PMH website <a href="http://www.openarchives.org/pmh/">http://www.openarchives.org/pmh/</a>  (2/27/13) describes the Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) as &#8220;a low-barrier mechanism for repository interoperability. <i>Data Providers</i> are repositories that expose structured metadata via OAI-PMH. <i>Service Providers</i> then make OAI-PMH service requests to harvest that metadata. OAI-PMH is a set of six verbs or services that are invoked within HTTP.”</p>
+<h3>Running COBOAT<strong><br />
+</strong></h3>
+<p><a href="parsell-fig10/index.html" rel="attachment wp-att-3390"><img loading="lazy" style="width: 597px; height: 263px;" alt="parsell.fig10" src="../../wp-content/uploads/2013/01/parsell.fig10-300x124.png" width="300" height="124" /></a></p>
+<p>The COBOAT executable is CB186.exe and is located in the COBOAT directory. The COBOAT menu displayed in figure 10 above is built from user scripts that call the various COBOAT modules. The scripts and the COBOAT menu are easily customized. The COBOAT executable can be run manually or automatically with the Windows Task Scheduler.</p>
+<p>A log file is created each time COBOAT is run. Run errors will be noted in the log file, but not always the cause of the error. It is important to frequently test each script during the coding phase to find errors. The COBOAT log file and the test XML documents and array files are good for debugging COBOAT errors. Copies of the log file can be found in the COBOAT folder and a few of the data folders under the Service folder.</p>
+<p>Use MySQL workbench to review the XML documents and supporting tables in the OAICatMuseum database. Use Internet Explorer, Chrome or Firefox to review the XML documents from OAICatMuseum. You can harvest one or a series of XML documents using the OAI-PMH protocol. Following is the URL for harvesting one XML document where the ObjectID = 4908. This URL is specific to the YCBA harvesting server setup and should be all one line in your browser without spaces.</p>
+<blockquote><p>http://bac6-dev.its.yale.edu/oaicatmuseum/OAIHandler?verb=GetRecord&amp;identifier=oai:tms.ycba.yale.edu:4908&amp;metadataPrefix=lido</p></blockquote>
+<p><strong>References</strong></p>
+<p>The OCLC Museum Data Exchange project can be found at <a href="http://www.oclc.org/research/activities/coboat/default.htm">http://www.oclc.org/research/activities/coboat/default.htm</a></p>
+<p>COBOAT can be found at http://www.oclc.org/research/activities/coboat.html</p>
+<p>OAICatMuseum can be found at http://www.oclc.org/research/activities/oaicatmuseum.html</p>
+<p>Questions, concerns or comments; please contact David Parsell at david.parsell@yale.edu</p>
+<p>Baca (2009). Baca, Murtha and Patricia Harpring Editors, <em>Categories for the Description of Works of Art</em>, revised 9 June 2009 by Patricia Harpring  http://www.getty.edu/research/publications/electronic_publications/cdwa/introduction.html Consulted January 17, 2013.</p>
+<p>Baca (2006). Baca, Murtha, Patricia Harpring, Elisa Lanzi, Linda McRae and Ann Whiteside. <em>Cataloging Cultural Objects, A Guide to describing Cultural Works and Their Images.</em> Chicago: American Library Association, 2006</p>
+<p>Delmas-Glass (2011). Delmas-Glass, Emmanuelle. Metadata Strategies for a Cross Collection On-line Catalogue. 2011</p>
+<p>Delmas-Glass (2012). Delmas-Glass, Emmanuelle. Using open source tools to expose cross collection data in the LIDO schema. 2012</p>
+<p>LeVan (2010). LeVan, Ralph, Gunter Waibel and Bruce Washburn. Museum Data Exchange: Learning how to Share, 2010</p>
+<p>Norris (2008). Norris, Stephen, Ben Rubinstein and Eleanor Rudge. Museum Data Exchange Project – Installation and Configuration Manual v.009. October 2008</p>
+<p>The Open Archives Initiative Protocol for Metadata Harvesting, Protocol Version 2.0 of 2002-06-14, Document Version 2008-12-07T20:42:00Z, http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm</p>
+<p>What is LIDO, http://network.icom.museum/cidoc/working-groups/data-harvesting-and-interchange/what-is-lido/</p>
+
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+D. Parsell, Using Open Source tools to expose YCBA collection data in the LIDO schema for OAI-PMH harvesting. In <i>Museums and the Web 2013</i>, N. Proctor & R. Cherry (eds). Silver Spring, MD: Museums and the Web. Published January 26, 2013. Consulted <script type="text/javascript">document.write(full_date);</script> <!-- April 23, 2022 -->.<br />
+https://mw2013.museumsandtheweb.com/paper/using-open-source-tools-to-expose-ycba-collection-data-in-the-lido-schema-for-oai-pmh-harvesting-2/<br /><br /><hr>
+<!-- 
+<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js'></script>
+<script type="text/javascript">
+var tz = jstz.determine();
+tz.name();
+</script>
+
+
+<script type="text/javascript">document.write(tz.name()); 
+</script>UTCApril 23, 2022-->
+
+	<div id="comments">
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="../../wp-loginbfc9.html?redirect_to=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fusing-open-source-tools-to-expose-ycba-collection-data-in-the-lido-schema-for-oai-pmh-harvesting-2%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+</div><!-- #content -->
+</div><!-- #primary -->
+
+
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-2" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br>
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-3" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br>
+703 Dale Drive<br>
+Silver Spring MD 20910 USA<br>
+info@museumsandtheweb.com</div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+			<div id="site-generator">
+								<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mw2013.museumsandtheweb.com/paper/using-open-source-tools-to-expose-ycba-collection-data-in-the-lido-schema-for-oai-pmh-harvesting-2/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:52:26 GMT -->
+</html>

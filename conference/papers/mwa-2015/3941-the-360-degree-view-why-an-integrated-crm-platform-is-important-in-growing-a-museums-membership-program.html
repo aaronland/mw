@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/the-360-degree-view-why-an-integrated-crm-platform-is-important-in-growing-a-museums-membership-program/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:52:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>The 360-degree view: Why an integrated CRM platform is important in growing a museum&#8217;s membership program | MWA2015: Museums and the Web Asia 2015</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/mw-theme/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mwa2015.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/wp-emoji.js?ver=5.6","twemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/twemoji.js?ver=5.6"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='../../wp-content/themes/twentyeleven/blockscb8b.css?ver=20190102' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index7b0e.html?p=649' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embedd939.json?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fthe-360-degree-view-why-an-integrated-crm-platform-is-important-in-growing-a-museums-membership-program%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embedf9dc?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fthe-360-degree-view-why-an-integrated-crm-platform-is-important-in-growing-a-museums-membership-program%2F&amp;format=xml" />
+</head>
+
+<body class="paper-template-default single single-paper postid-649 wp-embed-responsive single-author two-column right-sidebar">
+<div id="page" class="hfeed">
+
+<style type="text/css">
+branding.img { height: auto; display: block; width: 100%; }
+#image  { position:relative;z-index:10;  }
+#text   { position:absolute; z-index:100; }
+#site-description { font-weight: normal; color: #fff; margin: 0 20px 20px 0;}
+#site-title a { color: #fff; }
+#site-title { margin-right: 20px; }
+</style>
+
+<header id="branding" role="banner">
+<hgroup>
+	<div id="text">
+<h1 id="site-title"><span><a href="../../index.html" rel="home">MWA2015: Museums and the Web Asia 2015</a></span></h1>
+<h2 id="site-description">The conference of Museums and the Web in Asia | October 5-8 | Melbourne, Australia</h2>
+	</div>
+</hgroup>
+
+			
+<div id="image"><a href="../../index.html"><img src="../../wp-content/uploads/2014/10/Melbourne-MWA2015.jpg" width="1000" height="250" alt="Museums and the Web Asia 2015" /></a></div>
+			
+			
+										
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-10"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="../../local-info/index.html">Local Info</a></li>
+	<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+	<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-16"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="../../exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="../../advertising-guildlines/index.html">Advertising Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="../../attending/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="../../workshop-program/index.html">Workshops</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../hobart-deep-dive/index.html">Hobart Deep Dive</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="../../attendees/index.html">Attendees</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<div id="primary">
+<div id="content" role="main">
+<article id="post-649" class="post-649 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">The 360-degree view: Why an integrated CRM platform is important in growing a museum&#8217;s membership program</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/diana_pan@moma.org/">Diana Pan</a>, The Museum of Modern Art, USA</p>
+<h2>Abstract</h2>
+In 2011, the Museum of Modern Art (MoMA) in New York implemented a cloud-based customer relationship management (CRM) solution, Salesforce, to help manage and track its vast member and donor population, past and present. Since its initial implementation, additional data from other Museum systems have been integrated into the CRM platform, such as a member’s retail purchase history, e-commerce online activity, and visitation history, thereby enabling the Museum to have a 360-degree view of every Museum member and donor. This view represents a holistic and multichannel perspective of a member’s lifetime online and on-site journey through all of the Museum’s offerings. This integrated CRM platform has enabled the Museum to provide more-informed customer service, retain and grow its member and donor population, increase engagement with its donors, and enhance its lobby operations through the use of mobile technologies. 
+
+In the summer of 2014, the Museum launched a new mobile application utilizing the integrated CRM data, with a goal of optimizing the member and visitor experience in the Museum lobby. This application has transformed the operations in the Museum’s lobby and beyond, offering new possibilities for membership renewals and conversions.
+
+This paper and the subsequent presentation look at the technology and business challenges in implementing an integrated CRM platform. We will look at both the concepts and ideas that led to the Museum’s successes, and also those that did not produce the expected results. We will review upcoming plans for further changes to the CRM platform, such as tighter integration with the Museum’s MoMA.org website and simplifying the Museum's outreach for traveling exhibitions. Finally, we will describe how the Museum has moved a core operational system from a costly and cumbersome internal application to a scalable cloud-based solution, enabling more agile development and easier integration with current technologies.</p>
+<p><b>Keywords:</b> CRM, 360-degree view of the customer, membership, members, customer data integration</p>
+<h2>1. Introduction and background</h2>
+<p>Before the existence of Google and social networks; before smartphones, tablets, and PDAs; before the Pentium processor or the Apple Macintosh; perhaps around the time of the very first IBM PC, came the first version of the New York Museum of Modern Art&#8217;s (MoMA) own customer relationship management (CRM) application. Very early on in MoMA’s membership program, the Museum realized the value of managing its member and donor base in a systematic and centralized manner. MoMA’s first CRM application utilized IBM’s System 38 servers. In the early 1990s, it was migrated to the then state-of-the-art AS/400, with many custom programs. Over time, however, this system became bloated, with numerous features added on over the years and force-fitted onto an increasingly outdated platform. Users lacked proper training and found the “green screens” too difficult to use. Important data, such as research profiles of potential donors, could not be entered through the AS/400. Users began to apply workarounds through the use of spreadsheets. Information entered in the AS/400 was regularly exported and merged with data captured in spreadsheets. Spreadsheets were not connected with a centralized database, so information was not being shared, synchronized, and analyzed consistently. Critical data and processes were tied to spreadsheets, thus putting the business at great risk, as spreadsheets could crash and cause permanent data loss. It became extremely time consuming simply to identify the most current data set. Any integration of member and donor information back to other areas of the Museum, such as its retail business, was complex, as there wasn’t a holistic view of the member or donor. Customer service processes were hampered because of issues with data accuracy, and marketing and cultivation of new donors took significantly more time and caused unnecessary confusion, with donors sometimes receiving multiple fundraising appeals.</p>
+<p>By 2011, MoMA was ripe for change and ready to replace its more than thirty-year-old system. The landscape of CRM solutions had had more than a decade to evolve and was at its peak. In 2010, Forrester reported eighteen players in the CRM space. By 2015, this number has dropped to nine, though the leaders have remained about the same. The convergence and maturity of many newish technologies made it possible for the Museum to contemplate a cloud-based solution with an open architecture allowing for ease of integration with other systems and a robust real-time reporting tool. Salesforce.com, a leader in cloud computing, had been one of the first companies to offer an enterprise application accessible through a Web browser. Its cloud-based CRM product already had more than ten years to develop and stabilize, and was selected for MoMA as it prepared itself for a next-generation CRM solution.</p>
+<h2>2. Goals</h2>
+<h3>Business goals</h3>
+<p>The initial goals of the new CRM platform were simple, but sweeping, and focused primarily on its fundraising possibilities:</p>
+<ul>
+<li>Increase contact management to support the membership program and fundraising efforts</li>
+<li>Create a 360-degree view of the member and donor</li>
+<li>Increase membership and development revenue</li>
+</ul>
+<p>The goal of a 360-degree view would be achieved through integration of data into the CRM platform from many different Museum channels, such as a member’s visitation history or e-commerce activity. This would give us a more holistic view of a donor’s activity, allowing one to view data on an individual or in aggregate form, such as:</p>
+<ul>
+<li>Detailed view of giving history (e.g., lifetime giving, largest gift, year-to-date giving, first transaction amount)</li>
+<li>Effectiveness of marketing campaign and tracking donations by campaign</li>
+<li>View of relationships among donors</li>
+<li>Special events ticket purchases</li>
+<li>Participation in MoMA educational programs</li>
+<li>MoMA and MoMA PS1 visitation history</li>
+<li>Retail transactions (both on site and online)</li>
+<li>Individual and aggregate personal preferences and interests</li>
+<li>Gifts and loans of art made to the Museum</li>
+</ul>
+<p>An integrated CRM platform would also enable increased transparency among internal MoMA departments on cultivation of donors or prospects. Collaboration between departments on marketing campaigns, and tracking the effectiveness of those campaigns, would become possible.</p>
+<p>As benefits began to manifest after the initial rollout of the CRM platform in 2011, it became clear that a subsequent goal would be to expand its use beyond MoMA’s membership and fundraising programs. Specifically, the CRM platform would integrate every person who transacted with the Museum from any channel. A philosophy that every person <em>could</em> become a donor or lifetime member of the Museum was adopted. The CRM platform would help enable this by, for example, integrating an online momastore.org shopper as a prospect. Through integration of their information into the CRM platform, one would be able to see their shopping history and patterns, along with their Museum visitation history. This would allow the Museum to create targeted marketing campaigns specific toward converting them to a member. Once a member, they would be tracked through our membership renewal program and, depending on their donation activity, could be funneled through other fundraising campaigns. Such holistic tracking would not have been possible without an integrated CRM platform.</p>
+<p>In April 2010, Apple’s first version of the iPad became generally available. As MoMA’s CRM platform stabilized in 2011, the seemingly widespread adoption of this new type of tablet became apparent. MoMA’s own laptops used in the Museum lobby to support on-site membership conversions were reaching their end of life. It was realized immediately that this was another opportunity driven by convergence of many technology factors all packaged within the iPad, such as longer battery life, constant connection to the Internet, lightweight enough to support true mobility, and fast user adoption driven by the popularity of the iPod and the iPhone. Salesforce’s open architecture also made it possible for the Museum to contemplate development of a custom iOS mobile application with a Salesforce back end. It became clear that the next goal for MoMA was to replace the old laptops with a mobile point-of-sales device that communicated directly with the new Salesforce CRM platform. True mobility would allow the Museum to increase or shrink, as needed, the number of devices that supported membership conversion within the Museum and offered new possibilities for membership conversion and donor cultivation outside of the Museum premises.</p>
+<h3>Technology goals</h3>
+<p>While selection of a new CRM platform was critically important to the Museum’s business, of equal importance was the ability to adequately support this new technology and leverage its capabilities fully. It was also important to MoMA that this new technology platform align with MoMA’s own IT cloud strategy. A number of technology goals were established:</p>
+<ol>
+<li>Improved availability, reliability, performance, and scalability. By selecting a cloud solution, the business no longer needed to rely on MoMA’s internal network and servers and could utilize the services of a hosted environment requiring Internet access only. While this is a shared multi-tenant environment, the established controls, restrictions, and SLAs ensured a high level of reliability and performance, with organized, planned outage periods.</li>
+</ol>
+<ol start="2">
+<li>Lower cost of ownership. A cloud solution also eliminates the need for internal MoMA hardware and everything associated with it, such as regular service, maintenance, patches, and upgrades for both hardware and the operating system.</li>
+</ol>
+<ol start="3">
+<li>Improved time to market to support industry changes and standards. A well-managed and well-supported cloud application will always be one step ahead in implementing industry changes, such as support of new standards for PCI or security or integration of new technologies that become mainstream, such as Web 2.0 and support for mobile devices.</li>
+</ol>
+<ol start="4">
+<li>Open architecture for ease of integration and customizations. During the more than thirty years of MoMA’s membership program, many applications to support the Museum’s other businesses evolved within MoMA’s IT ecosystem, almost all of which had some integration to the membership system. This included the online website moma.org and the e-commerce website momastore.org, the retail systems (such as the point-of-sales application used by the retail business), homegrown customer service tools, and the ticketing systems. A minimal integration would include a basic read-only lookup of a member during, for example, a ticket purchase. More complex integrations involved purchase of memberships in support of new memberships, renewals, or gift memberships. While the Museum had multiple channels for entry, it had not solved the omni-channel problem for customer experience. Sometimes, a purchase of a new membership in the store on 53rd Street required that a member wait twenty-four to forty-eight hours before using the membership information online, as the new data was not synchronized in real time across multiple Museum systems. The customer service team was also made less efficient as it often had to access multiple systems to determine the most current state of a membership. As the Museum began implementing a new CRM platform, it became clear that the CRM solution needed to have an open architecture that would enable us to build different integration options (e.g., support batch processing for non-critical data, but also support an API call for processing critical data updates in near real time).</li>
+</ol>
+<ol start="5">
+<li>Evolved community and a developer network. One of the biggest challenges of a homegrown application is ongoing support. Because MoMA’s legacy membership system evolved over decades, the number of people who could adequately support all of the custom code could be counted on the fingers of one hand. As MoMA looked to implement a new CRM platform, an important element in the new solution was an established developer network, which would allow for easier sharing of ideas and faster resolution of issues.</li>
+</ol>
+<ol start="6">
+<li>Centralized data repository. A centralized data repository that also has a user-friendly and flexible front end and a robust reporting tool would eliminate the need for users to export and modify the data in spreadsheets. This would help preserve the integrity of the data, and such repository would be the authoritative source without question. This would prevent all of the issues associated with multiple users having different versions of the same data locally in spreadsheets.</li>
+</ol>
+<h2>3. Implementation</h2>
+<p>How does one approach the replacement of a thirty-year-old system? It’s a daunting task—not just because there is new technology and business processes that all of the staff will need to learn, but also because the decisions of what to migrate, what to discard, and what to change require significant planning and a focused team to outline a feasible plan that could span multiple years. In this section, we will describe MoMA’s overall approach, the teams involved, the technical solution, and the implementation challenges that occurred along the way.</p>
+<h3>Approach</h3>
+<p>With any large project, one technique for managing risk is to divide the project into smaller, more manageable releases. MoMA approached this by first identifying all of the consumers of the membership and donation data. This included internal staff users, external visitors, and system interfaces. Once these were identified, it became possible to structure a phased implementation and rollout process that focused primarily on each set of users.</p>
+<table style="height: 198px;" width="748">
+<tbody>
+<tr>
+<td width="66"><strong>Release</strong></td>
+<td width="565"><strong>Data consumer</strong></td>
+</tr>
+<tr>
+<td width="66">1</td>
+<td width="565">Back-office users and customer service</td>
+</tr>
+<tr>
+<td width="66">2</td>
+<td width="565">Automated processes such as the bank lockbox; integration of other member data such as retail history, visitation history, education course history, gifts, and loans of art; consumers who perform read-only data lookup (e.g., member verification only)</td>
+</tr>
+<tr>
+<td width="66">3</td>
+<td width="565">On-site membership and donation sales, mobile sales</td>
+</tr>
+<tr>
+<td width="66">4</td>
+<td width="565">Website integration from moma.org and momastore.org</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1: implementation approach based on multiple releases</p>
+<p>Because Release 1 represented Version 1 on the new platform, the scope of this release had to be carefully managed. With a focus on who the initial Release 1 users would be, the team was able to write requirements documents specific to the bare minimum that would allow this first set of users to be 85 percent transitioned onto the new CRM platform, and with very little need to access the legacy AS/400 application.</p>
+<p>In addition to the needs of this first group of users, the second major aspect of Release 1 was the migration of thirty years&#8217; worth of membership and donor data. The value of MoMA’s membership system is in its data, so a separate track was identified for Release 1 to map the old data structure to the new, and a migration approach through use of an intermediary database was established. In addition, a migration strategy for many of the externally managed spreadsheets by different MoMA business users was established so they would be merged into the new CRM platform as well.</p>
+<p>The final major aspect of the Release 1 implementation was that, in approaching the project in releases, it became clear that until the completion of all releases, there will be a period, possibly spanning years, where the legacy AS/400 application and the new Salesforce platform must coexist, both running in parallel, each servicing a different set of users. Eventually, all users will move to the new platform, but until then, the AS/400 legacy system and the new Salesforce platform would need to be kept synchronized.</p>
+<p>The completion of Release 1 paved the way for the subsequent releases. Each release brought another major set of end users on to the new CRM platform. At the time of this writing, the only users that still point to the legacy AS/400 application are a subset of online website features. These will be migrated in the spring of 2016 as part of a broader website redesign effort.</p>
+<h3>Team structure</h3>
+<p>Once the decision to go to Salesforce was made, it was determined that the project must be led jointly by a member of the MoMA business team from the Membership and Development department and a member of the technical/IT team. Joint leadership ensured equal partnership between MoMA internal teams. The IT owner would ensure that the application was built properly, and the business owner would champion the adoption of the new platform with the end users. Leadership from within MoMA also helped keep all external consulting parties in check.</p>
+<p>The next step was to determine the composition and structure of the implementation team. MoMA’s technical team did not have the skill set to take on the new technologies of the CRM platform. As a result, a US-based consulting group was engaged to perform almost the entire initial release. The project phases were identified with key owners:</p>
+<table style="height: 356px;" width="1049">
+<tbody>
+<tr>
+<td width="126"><strong>Project phase</strong></td>
+<td width="505"><strong>Team(s)</strong></td>
+</tr>
+<tr>
+<td width="126">Project leadership</td>
+<td width="505">Jointly led by a senior MoMA business analyst and MoMA technical architect/lead.</td>
+</tr>
+<tr>
+<td width="126">Planning and requirements</td>
+<td width="505">Led by MoMA business analyst, with guidance from Salesforce subject-matter expert.</td>
+</tr>
+<tr>
+<td width="126">Technical design</td>
+<td width="505">Led by implementation consulting group, with MoMA technical team minimally involved.</td>
+</tr>
+<tr>
+<td width="126">Development</td>
+<td width="505">Led by implementation consulting group.</td>
+</tr>
+<tr>
+<td width="126">System testing</td>
+<td width="505">Jointly led by implementation consulting group and MoMA technical team. System testing allowed the MoMA team time to knowledge transfer.</td>
+</tr>
+<tr>
+<td width="126">User acceptance testing (UAT)</td>
+<td width="505">Led by MoMA business analyst and MoMA business users.</td>
+</tr>
+<tr>
+<td width="126">Launch sequence</td>
+<td width="505">Led by implementation consulting group.</td>
+</tr>
+<tr>
+<td width="126">Post-production support</td>
+<td width="505">Jointly led by MoMA business analyst and MoMA IT lead for prioritization of issues. Implementation done by the consulting group.</td>
+</tr>
+</tbody>
+</table>
+<p>Table 2: project team structure for Release 1</p>
+<p>In the team structure outlined above, the internal MoMA team members accounted for about 30 percent of the total resources and tasks for this initial release. Their primary role, because they lacked the CRM platform expertise and also still needed to support the existing production environment, was limited to knowledge transfer during the requirements. Eventually, the MoMA team, augmented with team members from an offshore development company, took over the development of all subsequent releases.</p>
+<h3>The solution</h3>
+<p>The technical solution for the new CRM platform comprised several layers. At its lowest level was the base Salesforce application, on top of which customizations specific to MoMA were made, and several managed packages were then layered on top to support specific and additional functionality. Access to the data and functionality in Salesforce was enabled through a flexible integration layer made up of custom REST API Web services, use of a middleware product called IBM CastIron, and direct data access through Salesforce’s own query language of SOQL and SOSL (for search across large datasets). This solution is shown below.</p>
+<p><a href="../../wp-content/uploads/2015/07/pan.fig1_.png"><img loading="lazy" class="alignnone size-full wp-image-659" src="../../wp-content/uploads/2015/07/pan.fig1_.png" alt="pan.fig1" width="720" height="540" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig1_.png 720w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig1_-300x225.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig1_-400x300.png 400w" sizes="(max-width: 720px) 100vw, 720px" /></a></p>
+<p>Figure 1: high-level solution architecture</p>
+<p>A robust Web service API layer was essential to the flexibility of the solution, allowing any external source to communicate and access MoMA’s membership data in a standard and secure manner. This API layer was the foundation of the solution, from which other releases of the project were leveraged, such as during the development of the mobile point-of-sales solution and other integration efforts.</p>
+<h2>4. Implementation lessons learned</h2>
+<p>This section outlines some lessons learned from the initial CRM platform implementation and subsequent releases. While these represent both successes and challenges that were experienced during the CRM integration, most of the concepts apply to any major new system implementation.</p>
+<table style="height: 1367px;" width="1035">
+<tbody>
+<tr>
+<td width="96"><strong>Phase</strong></td>
+<td width="535"><strong>Lessons learned</strong></td>
+</tr>
+<tr>
+<td width="96">Planning</td>
+<td width="535">
+<ul>
+<li>Acknowledge that Version 1 will be the most difficult one. Keep scope to the bare minimum.</li>
+<li>If you are planning a migration from an old system, acknowledge that there may be a short period where both old and new systems must run simultaneously.</li>
+<li>Prioritize requirements based on user needs: how do we get as many people onto the new system as quickly as possible?</li>
+<li>If you are planning a migration, think early on about what data to keep, what to discard, and what needs cleansing.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="96">Design</td>
+<td width="535">
+<ul>
+<li>IT and Business teams must work closely on all data mapping and data definition sessions.</li>
+<li>Think about reporting early on; this will help drive the data design sessions.</li>
+<li>Think about roles early on (who has access to which data and how).</li>
+<li>Identify external data sources early on and plan a phased integration approach. Look for middleware products that are tried and true (don&#8217;t reinvent the wheel; there are a lot of good tools out there). Build a reusable integration layer (e.g., Web service layer for common integrations from different systems).</li>
+<li>Look for developer community application exchanges for pre-built packages before investing in significant customization efforts.</li>
+<li>If data needs to be migrated, outsource the data migration script development because these are usually one-time throwaway works. Keep in-house staff for development on the new platform so they grow and learn the new toolset.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="96">Development</td>
+<td width="535">
+<ul>
+<li>IT and Business teams should meet every day to discuss design issues that surface during development.</li>
+<li>Scope should be revisited and reconfirmed every day.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="96">Testing</td>
+<td width="535">
+<ul>
+<li>IT and Business teams should meet every day to review design changes or enhancements that surface during testing.</li>
+<li>Enforce a code freeze period to allow for the new system to have a period of stability during testing.</li>
+<li>Allocate enough time for user acceptance testing. This will help with overall adoption.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="96">Training</td>
+<td width="535">
+<ul>
+<li>Provide organized training sessions, customized to your business. Include training that is specific to the user and role type. Adequate training is essential towards successful adoption.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="96">Production rollout</td>
+<td width="535">
+<ul>
+<li>As the QA testing effort finishes, start work early on with the production rollout task checklist. Be detailed with each task rollout and owner.</li>
+<li>If possible, perform a dry run of the checklist in a full sandbox environment. For Version 1 releases, this may be necessary for many reasons, such as to determine how long each task will take. Some data migrations may take many hours, requiring the old production system to be frozen while migration occurs.</li>
+<li>Make sure to have a clear rollback plan if rollout is a (gasp!) failure.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="96">Post-production</td>
+<td width="535">
+<ul>
+<li>Allocate time in the schedule, money, and resources for post-production support.</li>
+<li>Acknowledge that the post-production support period for Version 1 may require 75 percent of the team, which means it will be difficult to start new work immediately after release.</li>
+<li>The rate of incoming issues after release may seem overwhelming at times. IT and Business teams should meet every day to prioritize issues that should get fixed.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="96">Ongoing</td>
+<td width="535">
+<ul>
+<li>There is light at the end of the tunnel! Plan very regular incremental releases, to both fix issues and roll out additional features. This gives users more confidence in the new application.</li>
+<li>After the initial training, plan subsequent training sessions. Train the users to train each other so the task is shared between many people.</li>
+<li>As Version 1 stabilizes, look toward the planning of the subsequent major phases. Ensure that the prioritization of those phases still makes sense, and approach them as major projects to keep up the momentum and keep the team focused.</li>
+<li>If Phase 1 included a significant data migration effort, accept that data cleansing will be an ongoing effort for potentially <em>years</em> to come.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Table 3: implementation &#8211; lessons learned</p>
+<h3>Results and outcome: The 360-degree view</h3>
+<p>The Museum of Modern Art has multiple ways in which individuals may interact with the institution, from visiting the Museum to joining a membership program to purchasing items from the MoMA retail stores. Prior to our CRM platform implementation, this analysis for our visitors and donors was disjointed and based on only one dimension to drive business strategy.</p>
+<h3>Membership and retail improvements</h3>
+<p>After implementing an integrated CRM platform, the Museum was able to look holistically at members and donors to more accurately gauge their interaction. Certain business questions that spanned data silos could now be answered. For instance, what days are most profitable to run sales specifically for members? What is the optimal number of days for such sale periods? This requires detailed retail shopping data as well as member information. The following describes some important results found after using the data in the new CRM system.</p>
+<p>An analysis of member shopping information revealed the last day of the sales, driven primarily by e-mail marketing, account for the largest spike in sales. This also revealed the effectiveness of the e-mail marketing campaign on the final days of the sale, reinforcing click-through rate data. In addition, sale periods of varying lengths were analyzed: one day , three days, five days, ten days, and eleven days. It was determined that one- and five-day sale periods drive the most additional sales based on average revenue per day, compared to average revenue on a non-sale day. One-day sales generally result in more than four times the revenue of an average non-sale day, and each day of a five-day sale period yield almost two times the revenue of the average non-sale day. Using these results, the Museum adjusted some of the planned member sale periods to either one- or five-day sale periods to maximize average revenue per day.</p>
+<p><a href="../../wp-content/uploads/2015/07/pan.fig2_.png"><img loading="lazy" class="alignnone wp-image-654" src="../../wp-content/uploads/2015/07/pan.fig2_.png" alt="pan.fig2" width="700" height="615" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig2_.png 700w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig2_-300x264.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig2_-341x300.png 341w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<p>Figure 2: member shopping sales: analysis of optimal length of sale periods</p>
+<h3>Channel shopping</h3>
+<p>The Museum runs a main retail location within the Museum, smaller bookstore also within the Museum, design store across the street from the Museum, and location in the SoHo neighborhood of New York. Members can also make purchases online at momastore.org or by calling a toll-free hotline. The latter two shopping channels are collectively referred to as the “direct” channel. This multichannel shopping opportunity poses the question of where members are shopping. How should the Museum most effectively market special member shopping sale periods for each channel?</p>
+<p><a href="../../wp-content/uploads/2015/07/pan.fig3_.png"><img loading="lazy" class="alignnone wp-image-655" src="../../wp-content/uploads/2015/07/pan.fig3_.png" alt="pan.fig3" width="701" height="521" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig3_.png 1035w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig3_-300x223.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig3_-1024x761.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig3_-404x300.png 404w" sizes="(max-width: 701px) 100vw, 701px" /></a></p>
+<p>Figure 3: member shopping patterns based on channel</p>
+<p>An assumption may be that members tend to visit the Museum regularly, and seeing items in person would naturally lead to more impulse shopping and a higher rate of sales versus members who shop online and through calling in orders. However, a channel analysis reveals that members tend to spend more dollars per year via the direct channel than in-person shopping at the stores. Further, the price of the average item via direct is roughly 75 percent higher than the average item purchased in stores.</p>
+<p>Seeing these results, it is clear that in order to increase revenue, the Museum must emphasize sales online or over the phone—the direct channels. Also, as previously shown, the largest spike in sales is on the last day of the sale. So by shifting the sales to end on Mondays, members will more likely shop on Mondays rather than on Sundays, the previous last sale day, when they would be shopping in person in stores.</p>
+<p>Combining these data silos created not just a wide view of members and donors, but also an in-depth view for other departments within the Museum. For instance, the retail department may see a membership discount was applied. However, their understanding of whether that member lives locally, is a high-level donor, is a long time member, or visits the museum weekly was opaque. Likewise, the membership team had basic access to retail systems, and it was difficult to tie this data back to specific members. While they may have reports on total member shopping, they were unable to segment specific members, such as currently lapsed members, who were high online retail purchasers. With an in-depth view of both data silos, the membership team is able to create targeted campaigns for members to renew where the membership discount on retail items would exceed the cost of a membership purchase, thereby paying for itself. For example, if a lapsed member purchased a $1,000 retail item and had also been a member of the Museum, he would have received a 10 percent discount of $100. The cost of an individual membership is $85, making this advantageous. The membership and retail departments can now run reports and create specific marketing campaigns targeting such retail purchasers, thereby increasing the Museum’s membership conversion.</p>
+<h3>Interdepartmental communication improvements</h3>
+<p>It has been shown how an integrated CRM solution can give the Museum a more holistic view of its visitors, thereby offering visitors a better experience and increasing the Museum’s overall revenue. But it is equally important to note how a singular system of record promotes cross-departmental communication and collaboration. In the previous examples, membership and retail were discussed as areas of opportunity due to cross-pollination. The overlap among these groups, though, may be less than other combined datasets such as membership and development. Prior to the new system, departments had their own databases and spreadsheets and could edit the data and contact their lists as they needed. This required little interaction between departments. Now that an individual’s record contains both membership and development donations, groups are forced to work closely together when pulling lists and editing a specific record.</p>
+<p>Furthermore, the call center and lobby front desk now utilize the same system so that they can make comments and view the same important information about members and donors as needed. The 360-degree view in Salesforce has become a platform between groups to convey information regarding individuals or organizations. It functions as the one system of record in which all departments reference and communicate key information.</p>
+<h3>New opportunities: Mobile membership lobby application</h3>
+<p>A cloud-based central repository with readily available REST APIs for easier systems integration opens up possibilities for accessing this information through custom external sources. Currently, MoMA’s main lobby consists of a ticketing desk, membership desk, and information desk for miscellaneous ticketing requests. Each desk had been capable only of serving specific needs and selling certain tickets because of limitations of the applications on the workstation at each desk. A visitor waiting in line for tickets, who then wishes to purchase a membership, must then exit the queue and wait in a different queue rather than being helped immediately. It was not uncommon for a visitor to wait in several lines before all transactions were completed. This situation was less than ideal, especially for membership sales, which should be given priority service. Further, the Museum is currently undergoing a major multiyear building expansion project. Introducing a new solution in the lobby today to address some operational inefficiencies must also consider what the lobby could look like tomorrow.</p>
+<p>In July 2014, MoMA introduced an iOS-based mobile point-of-sales application, built on top of Salesforce, to support membership sales. This allowed for a solution that would work at any current desk, any future layout of the lobby, and also outside of the Museum’s 53rd Street location, as the solution was completely mobile.</p>
+<p><a href="../../wp-content/uploads/2015/07/pan.fig4_.png"><img loading="lazy" class="alignnone wp-image-663" src="../../wp-content/uploads/2015/07/pan.fig4_-1024x768.png" alt="pan.fig4" width="650" height="488" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig4_-1024x768.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig4_-300x225.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig4_-400x300.png 400w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig4_.png 2048w" sizes="(max-width: 650px) 100vw, 650px" /></a></p>
+<p>Figure 4: MoMA membership lobby application – Home page</p>
+<p>This solution communicates in real time to Salesforce and leverages key Salesforce base functionality (e.g., fast searches, account lookups, account modifications) so memberships being purchased on the mobile application could be used immediately in any other channel, without the delays of data synchronization.</p>
+<p><a href="../../wp-content/uploads/2015/07/pan.fig5_.png"><img loading="lazy" class="alignnone wp-image-662" src="../../wp-content/uploads/2015/07/pan.fig5_-1024x768.png" alt="pan.fig5" width="650" height="487" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig5_-1024x768.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig5_-300x225.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig5_-400x300.png 400w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig5_.png 2048w" sizes="(max-width: 650px) 100vw, 650px" /></a></p>
+<p>Figure 5: MoMA membership lobby application – Sample shopping cart page</p>
+<p>Visitors at the Museum can now be helped at any desk, improving overall customer service. This also resulted in dramatic improvements in membership conversion for on-site visitors and helped the Museum reach all-time peak numbers for active membership counts during the 2014 holiday season. During busy days when queues were especially long, it had been daunting to wait in another line just to become a member. In an A/B test of old system versus the new mobile device executed over several months, the new mobile system significantly outperformed the old, with many more memberships sold through the mobile application at peak hours compared to what was sold using the old system. Lastly, the mobile devices are easily scalable to deploy multiple registers and even staff to work the lines.</p>
+<p><a href="../../wp-content/uploads/2015/07/pan.fig6_.png"><img loading="lazy" class="alignnone wp-image-652" src="../../wp-content/uploads/2015/07/pan.fig6_.png" alt="pan.fig6" width="651" height="446" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig6_.png 910w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig6_-300x206.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig6_-438x300.png 438w" sizes="(max-width: 651px) 100vw, 651px" /></a></p>
+<p>Figure 6: MoMA membership lobby application – A/B testing results of the new system vs. the old</p>
+<p>Interestingly, the mobile device, which allowed different departments access to previously disparate functionality and data (i.e., ticketing, membership, corporate membership, staff ticketing), has led to organizational changes as well. Previously, the lobby staff was organized into those who sold memberships only, those who sold general admissions tickets only, and those who supported other miscellaneous ticketing functions. These roles were completely independent and required their own specific staffing needs. Through the mobile applications, all lobby staff is now able to access all lobby functions equally. An agent who previously sold only general admissions tickets can now also sell memberships, thereby improving a staff member’s knowledge of the Museum’s programs and providing better service to the visitor. While there are still some minor skillset differences required per location, staffing can be much more fluid, enabling the lobby to transition into any state, ready for any change with the building expansion project.</p>
+<h2>5. Challenges</h2>
+<p>While there were several successes over the multiyear project, many parts did not yield the expected results or required several revisions.</p>
+<h3>Adoption and legacy system</h3>
+<p>User adoption tends to be a topic of discussion in terms of technology project success. While member and donor data was indeed entered into the new integrated CRM system, it was also true that users did not have much of a choice, making perceived adoption high in certain aspects. However, five years after launch, the legacy system has not been disabled yet, as some channels still write to it first, requiring that data to be synchronized with Salesforce. The legacy system is still referred to at times when there are integration issues. Many business users have two monitors at their desk: one for the new CRM platform and one for the legacy system. It has been tougher and a longer road to kill off the legacy database than anticipated. As there are many channels that integrated into it, it requires each department to buy into updating their system to point to the new Salesforce environment. Doing so may be a project of varying difficulty, and sometimes changes will have to be done only when it can be aligned with another project initiative. For instance, moma.org still points to the legacy system, which is then synchronized with Salesforce. In the spring of 2016, moma.org plans to redesign the member area of the site, offering new features for members and donors to manage their accounts. Integration with the new CRM platform will also be a part of this project, but in the meantime the legacy system must be kept synchronized until the completion of this project.</p>
+<p>While many channels are being integrated into the CRM platform, some channels have had low adoption rates among other departments. For instance, gifts and loans of art has been integrated from the Museum&#8217;s collection system, giving users a view of members or donors who have also donated a piece of artwork to the Museum. Initially, this was thought to be useful information when prospecting for new campaigns or for event invite lists. However, this data has rarely been used for any significant prospecting, nor has there been any major improvement to event lists. Moving forward, it may be beneficial to create mock-up reports of siloed data to see if this would improve any current processes. For instance, would an event invite list based off of those who have gifted art to the Museum be more effective and relevant than an event list based off of exhibition funding and previous invite lists? Comparing the two lists and perhaps experimenting with campaigns may yield more information on whether it makes sense to integrate such systems. It is important to note that both implementing and maintaining these integrations requires significant work. It is therefore vital to only pull in data that makes sense, otherwise project costs and ongoing expenses will balloon. Also, giving new users access to massive amounts of data will inundate them and make the system seem daunting and difficult to use. This will affect long-term adoption, overall effectiveness of the enterprise system, and overall budget for ongoing operations.</p>
+<p>Another example of failed user adoption was MoMA’s pledges functionality, built into the CRM platform. When a donor makes a pledge for x amount of dollars over y amount of years in writing, this is currently tracked in spreadsheets and in the general ledger. To have a full view of a donor&#8217;s giving past and potential, pledges are critical. Customizations in the CRM platform were made to follow business rules for when payments came in above or below the pledged amount and how to handle subsequent installments. However, as a result of staffing changes in the Museum’s development department, and changes in priority of other projects, the pledge portion of the Salesforce project was shelved even though all technical work was complete. This illustrates that having the key business people available is as critical as completing the technical aspect of a project. A beautifully architected technical solution is a failure if no one uses it.</p>
+<h3>Feature experimentation</h3>
+<p>With the implementation of the mobile application for membership sales, the team experimented with new business processes. Not all experiments were successful.</p>
+<p>One such experiment was an attempt to address long transaction times when selling memberships. Long transaction times lead to a long queue at the membership desk, which could, in turn, discourage visitors from becoming a member. The membership sales process, even at its simplest, requires the agent to ask many questions and enter many details about the visitor—from name, address, phone, e-mail address, membership category, and account preferences—before actually even transacting. This can be a tedious data-entry process and further complicated because of a high percentage of non-English-speaking visitors. In order to keep transaction times to a minimum, every step needed to process a membership was analyzed when building the new iPad membership point-of-sale.</p>
+<p><a href="../../wp-content/uploads/2015/07/pan.fig7_.png"><img loading="lazy" class="alignnone wp-image-664" src="../../wp-content/uploads/2015/07/pan.fig7_-1024x768.png" alt="pan.fig7" width="650" height="487" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig7_-1024x768.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig7_-300x225.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig7_-400x300.png 400w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/pan.fig7_.png 2048w" sizes="(max-width: 650px) 100vw, 650px" /></a></p>
+<p>Figure 7: MoMA membership lobby application – Address auto-complete function</p>
+<p>The old process required a member to fill out a paper form with their name and address. A membership sales associate would then key in this information into the old system. To improve this process, the new iPad application would allow the new member to key in their information themselves and, using the Google Places address auto-completion, allowed for addresses to be found faster and keyed in only once. This worked well in testing; however, once this was rolled out, many members had difficulty typing in their information. Visitors were also not accustomed to simply typing their address partially and seeing a drop-down list of different addresses to select. The agent also had to instruct the visitor to just type their address, which became very confusing. Some users entered only their street or city information, resulting in addresses not found or incomplete data getting saved. This process was eventually rolled back, so new members now still write their information onto a paper form and then a sales associate keys this into the new application. More in-depth user testing and experimentation will be needed to refine this process in the future.</p>
+<h3>Other challenges</h3>
+<p>While the CRM project was generally seen as a major success, there were challenges throughout every phase. Many challenges were typical project management issues regarding budgets, staffing, and scope creep. Working in the non-profit sector, factors can become even more acute. With limited staff and budget, functionality is often cut. This can lead to delivery of a system with less functionality than the legacy system, which can cause user resentment. This was experienced often throughout the project when features such as a bulk membership upload tool were cut due to budget and timelines. The end users received a system that was initially more difficult to use than the previous system. Only after subsequent releases did the new system eventually reach parity.</p>
+<p>Another challenge was maintaining production while simultaneously implementing major new features. The business is constantly changing and needing updates, and certain requests from business users require technical assistance or super-user assistance. To handle this, a few measures were taken. First, during implementation of the membership lobby application project, a number of development environments were created. These environments were undergoing considerable change as major updates were being made, so they could not be reliably used for production support. As a result, a separate track of production support environments were created and used exclusively for making isolated production updates. Maintaining multiple environments increased the overall maintenance effort, requiring regular merging and refreshes of both environments throughout the project. Second, when staffing, one must not assume employees will be 100 percent available on the project. Production support must be taken into account. Some IT staff was allocated at only 50 percent, while others at 90 percent. Lastly, business users were made aware of the major project being implemented and that update requests would be slower than usual and only small and critical updates were made. Setting expectations with the business teams was critical.</p>
+<p>Another challenge experienced with a 360-degree view and an integrated platform, is the need for constant data cleansing. With data coming in from so many channels, dirty data and duplicate data will make its way into the system. Data, such as addresses, may be clean coming from one channel where it is scrubbed using Google Maps; however, it may contain bad data from mailing lists that have been uploaded. Further, different channels may view “clean data” differently. For instance, Google Maps may insert “United States” for the country field. However, for direct mail, the Museum may want country to be blank whenever it is “United States,” as it does not look ideal to include country when mailing domestically. Business rules must be set up when importing data or using ETL tools; however, with various departments using the system, this can easily get out of hand. Regular monitoring and cleansing is required.</p>
+<h2>6. Conclusion</h2>
+<p>The biggest challenge has been realizing organization-wide projects such as this are Sisyphean efforts. There is not an end date where the project is complete and everyone walks away. Constant vigilance is required as technologies are constantly evolving and the business is constantly changing. Technologies will become outdated or unsupported. New business endeavors will be taken. Business rules that were set in stone that would supposedly never change have a funny way of changing once an enterprise system is built to enforce these rules. New staff will join the organization with fresh ideas that challenge the current ways of doing business. The best ways to mitigate these changes are to build systems that are highly configurable with little information and even business rules being hard-coded.</p>
+<p>Despite the challenges encountered, the CRM platform implementation has proved to be a successful project, albeit a very long one. It has allowed the Museum to better understand its constituents and hence offer them better experiences and services. Now that all of the Museum’s data is in a central cloud-based repository, one of the next steps is to feed this into a sophisticated analytics tool such as Tableau. A pilot program has already begun with a few power users. Also, a critical next step involves more training for general staff to help them to better analyze the data available to them. While many employees may know data that pertains to their department or job role well, they may be unaware of what information other departments track that is available in the CRM platform. Making sure employees are aware of this will be an ongoing effort as staff turns over.</p>
+<p>As the Museum looks ahead, there is still much to accomplish. It is important to approach future projects with the same critical eye used when viewing art. With RFIDs, location beacons, wearables, improved facial recognition software, and a host of other emerging technologies, there are a lot of possibilities to gather even more data. One must gauge new technologies to see if they have the potential to make substantive improvements in the business and determine which will be useful in the long term and which will just be a flash in the pan. There is the overused adage of “a picture is worth a thousand words.” A 360-degree view of a member or donor is selecting which thousand words and creating an accurate picture that is worthy.</p>
+<h2>Acknowledgements</h2>
+<p>This paper represents the immense contributions and collaborative work over five years of several MoMA teams, including many individuals, past and present, of the Membership, Development, Marketing, Information Technology, Digital Media, Retail, Finance, Accounting, and Internal Audit departments. This paper also acknowledges the contributions made by the Appirio and Mindtree teams, who were essential to both the initial implementation and all of the subsequent releases of the CRM platform.</p>
+<h2><strong>References</strong></h2>
+<p>Leggett, K. (2015). “The Forrester Wave™: CRM Suites For Large Organizations, Q1 2015.” <em>Forrester: Kate Leggett’s Blog.</em> March 26, 2015. Available http://blogs.forrester.com/kate_leggett/15-03-26-the_forrester_wave_crm_suites_for_large_organizations_q1_2015</p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+. "The 360-degree view: Why an integrated CRM platform is important in growing a museum&#8217;s membership program." <i>MWA2015: Museums and the Web Asia 2015</i>. Published August 21, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mwa2015.museumsandtheweb.com/paper/the-360-degree-view-why-an-integrated-crm-platform-is-important-in-growing-a-museums-membership-program/<br /><br /><hr>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://mwa2015.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><hr>
+<h3 class="widget-title">Global sponsor</h3>
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a>
+
+<h3 class="widget-title">Platinum sponsor</h3>
+<a title="MailChimp" href="http://nonprofits.mailchimp.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a>
+
+<h3 class="widget-title">Gold sponsor</h3>
+<a title="AARNet" href="http://www.aarnet.edu.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/AARNet-250-75.jpg" alt="AARNet" /></a>
+
+<h3 class="widget-title">Silver sponsors</h3>
+<a title="CV" href="http://www.creative.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CV-250-75.jpg" alt="CV" /></a>
+<a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<h3 class="widget-title">Bronze sponsors</h3>
+<a title="Ruckus" href="http://www.ruckuswireless.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/ruckus-250-75.jpg" alt="Ruckus" /></a>
+
+<a title="CoM" href="http://www.melbourne.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CoM-250-75.jpg" alt="CoM" /></a>
+
+<a title="Lumicom" href="http://lumicom.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/lumicom-250-75.jpg" alt="CoM" /></a>
+
+<a title="Tomizone" href="http://tomizone.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/tomizone-250-75.jpg" alt="Tomizone" /></a>
+
+<h3 class="widget-title">Partner</h3>
+<a title="MV" href="http://museumvictoria.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/mv-250-100.jpg" alt="MV" /></a>
+
+<div style="text-align:right;"><a href="../../sponsorship-opportunities/index.html">become a sponsor</a></div>
+<hr></div>
+		</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/search?q=%40museweb+OR+%23museweb+OR+%23mwa2015" data-widget-id="519731970960400384">Tweets about "@museweb OR #museweb OR #mwa2015"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br />
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-5" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br />
+703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info@museumsandtheweb.com</p></div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+
+			
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/the-360-degree-view-why-an-integrated-crm-platform-is-important-in-growing-a-museums-membership-program/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:52:40 GMT -->
+</html>

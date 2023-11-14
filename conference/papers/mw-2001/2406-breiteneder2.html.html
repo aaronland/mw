@@ -1,0 +1,1883 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/breiteneder/breiteneder2.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:59 GMT -->
+<head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>A Re-usable Software Framework for Authoring and Managing Web Exhibitions</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onLoad="MM_preloadImages('../../nav/mw2001_nav_registeron.gif','#943398414283');MM_preloadImages('../../nav/mw2001_nav_workshopson.gif','#943398455733');MM_preloadImages('../../nav/mw2001_nav_sessionson.gif','#943398500450');MM_preloadImages('../../nav/mw2001_nav_speakerson.gif','#943398534416');MM_preloadImages('../../nav/mw2001_nav_demoson.gif','#943398577050');MM_preloadImages('../../nav/mw2001_nav_exhibiton.gif','#943398612066');MM_preloadImages('../../nav/mw2001_nav_eventson.gif','#943398640266');MM_preloadImages('../../nav/mw2001_nav_beston.gif','#943398663166');MM_preloadImages('../../nav/mw2001_nav_keydateson.gif','#943398701050');MM_preloadImages('../../nav/mw2001_nav_seattleon.gif','#943398731383');MM_preloadImages('../../nav/mw2001_nav_sponsoron.gif','#943398934733')">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.register','document.register','../../nav/mw2001_nav_registeron.gif','#943398414283')"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"></a> 
+        <br>
+        <a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.workshops','document.workshops','../../nav/mw2001_nav_workshopson.gif','#943398455733')"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"></a> 
+        <br>
+        <a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sessions','document.sessions','../../nav/mw2001_nav_sessionson.gif','#943398500450')"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"></a> 
+        <br>
+        <a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.speakers','document.speakers','../../nav/mw2001_nav_speakerson.gif','#943398534416')"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"></a> 
+        <br>
+        <a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.interact','document.interact','../../nav/mw2001_nav_interacton.gif','#943398534416')"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"></a> 
+        <br>
+        <a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.demos','document.demos','../../nav/mw2001_nav_demoson.gif','#943398577050')"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"></a> 
+        <br>
+        <a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.exhibits','document.exhibits','../../nav/mw2001_nav_exhibiton.gif','#943398612066')"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"></a> 
+        <br>
+        <a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.events','document.events','../../nav/mw2001_nav_eventson.gif','#943398640266')"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"></a> 
+        <br>
+        <a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.best','document.best','../../nav/mw2001_nav_beston.gif','#943398663166')"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"></a> 
+        <br>
+        <a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.dates','document.dates','../../nav/mw2001_nav_keydateson.gif','#943398701050')"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"></a> 
+        <br>
+        <a href="../../seattle/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.seattle','document.seattle','../../nav/mw2001_nav_seattleon.gif','#943398731383')"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"></a> 
+        <br>
+        <a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sponsor','document.sponsor','../../nav/mw2001_nav_sponsoron.gif','#943398934733')"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"></a> 
+        <br>
+        <br>
+        <br>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"></a> 
+        <br>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br>
+        158 Lee Avenue<br>
+        Toronto, Ontario<br>
+        M4E 2P3 Canada<br>
+        info@ archimuse.com<br>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br>
+            A&MI</font></a> </span></td>
+        </tr>
+      </table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class='verysmall'>Published: March 15, 2001.<br>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated:&nbsp;"+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"><br>
+      <!-- #BeginEditable "Body" --> 
+
+      <p class=PaperTitle><span lang=EN-GB>A Re-usable Software Framework for 
+
+        Authoring and Managing Web Exhibitions</span></p>
+
+      <p class=Author><span lang=EN-GB>Christian Breiteneder<sup>, </sup>Hubert 
+
+        Platzer<sup>, </sup></span>Vienna University of Technology, <span lang=EN-GB>Martin 
+
+        Hitz, Un</span>iversity of Klagenfurt, Austria</p>
+
+      <p class=AbstractTitle><span lang=EN-GB>Abstract</span></p>
+
+      <p class=AbstractText><span lang=EN-GB>In the course of a Web development 
+
+        project for the <i>Museum f&uuml;r V&ouml;lkerkunde</i> in Vienna, ViEx, a reuse 
+
+        framework supporting authoring and managing hypermedia exhibitions, has 
+
+        been developed. The framework consists of three major components: a relational 
+
+        content database, a corresponding browser based editing interface, and 
+
+        a Web page generator which creates the final Web exhibition. Strict separation 
+
+        of content, structure and layout information promises ease of maintenance, 
+
+        especially in the context of multiple versions of the same exhibition 
+
+        to cope with different presentation languages and client platform dependencies.</span></p>
+
+      <p class=AbstractText>Keywords: software re-use, exhibit database, authoring 
+
+        tool, virtual exhibition</p>
+
+      <h1><span lang=EN-GB>Introduction</span></h1>
+
+      <p class=normal>Authoring and managing a hypermedia exhibition is a tedious 
+
+        and time-consuming task requiring a set of skills not readily available 
+
+        in a museum context. In order to liberate curators and exhibition designers 
+
+        from the computer-centric tasks as much as possible and to reduce the 
+
+        resources spent for every new virtual exhibition, we developed ViEx ("virtual 
+
+        exhibition"), a software framework intended to introduce systematic reuse 
+
+        into the domain of Web based exhibitions.</p>
+
+      <p class=normal>The framework is based on building blocks that cover all 
+
+        structural parts of a Web document, e.g. title, various paragraph types, 
+
+        special character types, as for example, proper names and foreign words 
+
+        and media types like videos, panoramas or images. Some of these types 
+
+        are complex objects themselves, since they consist of a set of more atomic 
+
+        entities. Layout information is available in form of templates that may 
+
+        be nested to define a more complex page.</p>
+
+      <p class=normal>All building blocks and their instances are stored in a 
+
+        relational database, and pages may be rendered dynamically according to 
+
+        their content and layout definition. In addition, the framework comprises 
+
+        modules allowing for the evaluation of user satisfaction and behaviour, 
+
+        like, for example, guest book and a comprehensive statistics module and 
+
+        a special navigation module allowing for the pictorial representation 
+
+        and arrangement of users' favorite pages.</p>
+
+      <p class=normal>ViEx has been developed and tested within the project of 
+
+        a virtual exhibition on Bhutan (<a href="http://www.bhutan.at/" target="new">http://www.bhutan.at</a>). 
+
+        In principle it has been designed to be platform independent. The current 
+
+        server is running under Solaris and utilizes PHP and Oracle8i. The reusability 
+
+        of the framework is currently being tested in the context of a site for 
+
+        Archaeology@Austria.</p>
+
+      <p class=normal>The remainder of this paper is organized as follows: In 
+
+        the following section, goals and motivation for the development of the 
+
+        framework are discussed. In Section 3, the framework itself is presented. 
+
+        Section 4 puts the framework development into the perspective of the project 
+
+        history and discusses some advantages and drawbacks of the approach taken. 
+
+        Finally, in Section 5, our current work related to ViEx is briefly described.</p>
+
+      <h1>Goals and Motivation</h1>
+
+      <p class=normal>Creating an exhibition web site for a museum is a major 
+
+        software development undertaking which may easily go beyond the resources 
+
+        and capabilities of a small or medium-sized museum. For example, the virtual 
+
+        exhibition project, Bhutan -- Fortress of the Gods, (<a href="http://www.bhutan.at/" target="new">http://www.bhutan.at</a>, 
+
+        Breiteneder et al., 2001) which gave rise to the development framework 
+
+        presented in this paper involved a set of project specific roles. From 
+
+        the category of staff and the number of physical people assigned to each 
+
+        role (stretched to varying degrees), we can easily conclude that - at 
+
+        least as of today - such a project falls outside the main competence and 
+
+        self-image of a museum.</p>
+
+      <p class=MsoCaption>Table 1: Staffing overview for <a href="http://www.bhutan.at/" target="new">http://www.bhutan.at</a></p>
+
+      <table border=1 cellspacing=0 cellpadding=0 align="center">
+
+        <tr> 
+
+          <td width=239 valign=top bgcolor="#B2B2B2" class="Normal"> 
+
+            <p class=Tabellenkopf>Role in Project</p>
+
+          </td>
+
+          <td width=126 valign=top bgcolor="#B2B2B2" class="Normal"> 
+
+            <p class=Tabellenkopf>Category</p>
+
+          </td>
+
+          <td width=24 valign=top bgcolor="#B2B2B2" class="Normal"> 
+
+            <p class=Tabellenkopf>#</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Project management</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Development team</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>1</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Text authoring</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Museum</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>2</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Content advisor</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Museum</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>1</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Quality assurance</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Museum</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>1</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Translation</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Translators</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>4</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Screen design</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Designer</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>1</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Page editing</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Museum</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>1 </p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Picture editing </p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Designer + Museum </p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>2</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Video editing</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Development team</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>1</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>3D modeling</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Development team</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>1</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Panorama modeling</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Development team</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>1</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Software design</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Development team</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>3</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Software implementation</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Development team</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>5</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Test (functionality, usability)</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Development team</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>5</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=239 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>System administration (development site)</p>
+
+          </td>
+
+          <td width=126 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Development team</p>
+
+          </td>
+
+          <td width=24 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>1</p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <p class=MsoCaption>&nbsp;</p>
+
+      <p class=normal>Outsourcing as the obvious solution to the problem of lack 
+
+        of human resources complicates communication during the development phase 
+
+        and impedes ongoing content maintenance after the development phase, as 
+
+        most maintenance requests will have to be directed to the development 
+
+        team which - as a (not unlikely) worst case scenario - may not even exist 
+
+        as such anymore.</p>
+
+      <p class=normal>In this situation, employing a reuse framework such as ViEx 
+
+        (presented in the next section) may result in the following advantages:</p>
+
+      <ul>
+
+        <li> <span class="normal">It enables the museum-based project team together 
+
+          with the art designer to elaborate a complete specification of the exhibition 
+
+          site within the framework provided. This avoids the need for continuous 
+
+          feedback from the development team, thus eliminating significant portions 
+
+          of the communication overhead and focusing the development team on its 
+
+          main task, namely implementing the site according to the specifications 
+
+          provided.</span></span></li>
+
+        <li> <span class="normal">It shifts development work to a higher level 
+
+          of abstraction: instead of "coding" Web pages in HTML, the main tasks 
+
+          consist of editing and structuring content liberated from layout questions.</span></span></li>
+
+        <li> <span class="normal">It supports content maintenance in the post-development 
+
+          phase, i.e., it enables museum staff to consistently modify the exhibition 
+
+          without the need to resort to the development team.</span></span></li>
+
+        <li> <span class="normal">It simplifies the software development portion 
+
+          of the project due to "pre-fabricated" built-in features which can be 
+
+          used as-is and need not be implemented from scratch (concept reuse). 
+
+          For instance, the interplay between images, pop-up legends, and zoom-windows 
+
+          for higher resolution versions of an image is generated by the framework.</span></span></li>
+
+        <li> <span class="normal">It allows systematic reuse of content building 
+
+          blocks in different contexts within the same virtual exhibition (data 
+
+          reuse). Moreover, export interfaces can easily be established in order 
+
+          to reuse content material outside the project (e.g., consider XML exports).</span></span></li>
+
+        <li> <span class="normal">By all the above, it saves development time 
+
+          and costs.</span></span></li>
+
+      </ul>
+
+      <p class=normal>The main benefit, however, will be the fact that a framework 
+
+        enforces well-structured and consistent building blocks for the Web presentation. 
+
+        Considering again size and complexity of the project team as sketched 
+
+        in Table 1, any site composed of individual, more or less "hand made Web 
+
+        pages is nearly guaranteed to end up in complete chaos with the typical 
+
+        symptoms of inconsistent hyperlinks, aberrations of page layout etc. The 
+
+        corresponding maintenance overhead - in this case arising already during 
+
+        the development phase - will consume essential project resources. From 
+
+        the authors' experience, such effects are likely to affect even mid-sized 
+
+        projects of about 20 to 50 Web pages.</p>
+
+      <p class=normal>The advantages discussed above will be especially beneficial 
+
+        in the case of <i>temporary </i>virtual exhibitions where high start-up 
+
+        costs may challenge the feasibility of the entire project.</p>
+
+      <p class=normal>In the specific case of a database-supported framework like 
+
+        ViEx, the existence of an object database containing descriptions and 
+
+        media files for all exhibits needed in the exhibition under construction 
+
+        would constitute an important additional asset, as a significant portion 
+
+        of editorial work could be settled by a straightforward export-import 
+
+        script pre-loading the framework's project database.</p>
+
+      <h1>ViEx -- A Framework for Virtual Exhibitions</h1>
+
+      <p class=normal>The ViEx framework consists of three major components: a 
+
+        content management system, its underlying content database, and a set 
+
+        of layout templates. In addition, a parser was also implemented to support 
+
+        the transition between the older file system based framework ViEx<sup>FS</sup> 
+
+        (cf. Section 4) to the current framework operating on a relational database, 
+
+        by transforming Web page files into sets of corresponding database entries. 
+
+        This auxiliary component may also be considered a "feature" of ViEx because 
+
+        it can be seen as an alternative input channel into the content database.</p>
+
+      <p class=normal>This section describes the ViEx framework in some detail. 
+
+        We begin with a brief summary of the features of a ViEx-based exhibition 
+
+        and present the main components of ViEx in subsequent subsections.</p>
+
+      <h1>Supported Features</h1>
+
+      <p class=normal>Any software framework designed for reusability will be 
+
+        more effective, the better its application domain is understood and the 
+
+        more specific the framework fits its application domain (cf. standard 
+
+        literature on software reuse, e.g. Biggerstaff &amp; Perlis, 1989). Thus, 
+
+        when employing such a framework, the trade-off between generic applicability 
+
+        and reuse potential must be carefully considered. To this end, it is important 
+
+        to briefly summarize the features of a virtual exhibition realized on 
+
+        the basis of ViEx. For a more in-depth treatment see Bhutan - A Virtual 
+
+        Exhibition <a href="http://www.bhutan.at/" target="new">http://www.bhutan.at</a>.(Breiteneder 
+
+        et al. (2001).</p>
+
+      <p class=normal>The content of a ViEx exhibition is organized in a layout-independent 
+
+        manner. Building blocks may be <i>pages </i>(content aggregates consisting 
+
+        of other building blocks), <i>pictures</i> with descriptive information, 
+
+        <i>video</i>, <i>audio</i>, <i>text</i> (individual text and standard 
+
+        text building blocks), <i>glossary entries </i>(currently two categories: 
+
+        foreign words and proper names), <i>script building blocks </i>(e.g., 
+
+        fader texts), and <i>panoramas</i> (possibly linked to descriptive information). 
+
+        Table 2 summarizes major attributes assigned to these building blocks. 
+
+        For all text-based information, the respective language is another attribute 
+
+        stored in the database (not shown in Table 2).</p>
+
+      <p class=MsoCaption><a name="TAB_BUILDINGBLOCKS">Table 2</a>: Content building 
+
+        blocks and their major attributes</p>
+
+      <table border=1 cellspacing=0 cellpadding=0 align="center">
+
+        <tr> 
+
+          <td
+
+  width=10 class="Normal" bgcolor="#CCCCCC">&nbsp;</td>
+
+          <td width=80 colspan=2 valign=top class="Normal" bgcolor="#CCCCCC">Content 
+
+            Building Block</td>
+
+          <td width=216 colspan=2 valign=top class="Normal" bgcolor="#CCCCCC">Attributes</td>
+
+        </tr>
+
+        <tr> 
+
+          <td
+
+  width=10 class="Normal">&nbsp; </td>
+
+          <td width=80 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Page</p>
+
+          </td>
+
+          <td width=216 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>type of page (chapter, subchapter...), template, 
+
+              window title, document title, color code, ...</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td
+
+  width=10 class="Normal">&nbsp; </td>
+
+          <td width=80 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Picture</p>
+
+          </td>
+
+          <td width=216 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Image URL, zoom image URL, title, legend, display 
+
+              size</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td
+
+  width=10 class="Normal">&nbsp; </td>
+
+          <td width=80 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Video, Audio, Panorama</p>
+
+          </td>
+
+          <td width=216 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>URL, title, legend, plug-in, size, quality...</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td
+
+  width=10 class="Normal">&nbsp; </td>
+
+          <td width=80 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Text</p>
+
+          </td>
+
+          <td width=216 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>type (i.e., style class like header, paragraph...), 
+
+              content</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td
+
+  width=10 class="Normal">&nbsp; </td>
+
+          <td width=80 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Glossary entry</p>
+
+          </td>
+
+          <td width=216 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>text, category, short description ("tool tip"), 
+
+              long description (glossary page)</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td
+
+  width=10 class="Normal">&nbsp; </td>
+
+          <td width=80 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>Script building block </p>
+
+          </td>
+
+          <td width=216 colspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>text</p>
+
+          </td>
+
+        </tr>
+
+        <tr height=0> 
+
+          <td width=10 class="Normal"></td>
+
+          <td width=70 class="Normal"></td>
+
+          <td width=10 class="Normal"></td>
+
+          <td width=206 class="Normal"></td>
+
+          <td width=10 class="Normal"></td>
+
+        </tr>
+
+      </table>
+
+      <p class=MsoCaption>&nbsp;</p>
+
+      <p class=normal>As navigation mechanisms, ViEx supports manually defined 
+
+        <i>ad hoc hyperlinks</i>, systematic <i>hierarchic links</i> (path to 
+
+        the current page, children emanating from the current page etc.) for navigating 
+
+        through the exhibition according to the underlying book metaphor, <i>local 
+
+        links </i>to navigate within a page, a <i>site map</i> containing thumbnails 
+
+        of the upper levels of the hierarchy, a <i>hierarchy browser</i> (available 
+
+        in three flavors: pull-down-menus, table of contents, tree controls), 
+
+        a <i>search facility</i>, an <i>exhibit index</i>, <i>pop-up windows</i> 
+
+        displaying descriptive information linked to pictures, and <i>zoom windows 
+
+        </i>displaying pictures at a higher resolution. In addition, there are 
+
+        two different tour concepts available: a <i>slide show</i> consisting 
+
+        of a predefined sequence of pictures with legends which are continuously 
+
+        presented (fading over each other), and a <i>guided tour</i> taking a 
+
+        sequential path through the exhibition, briefly explaining its different 
+
+        parts. Last but not least, registered users get access to a feature called 
+
+        <i>lookmarks</i> enabling them to create their own <i>catalog</i> of the 
+
+        exhibition by distributing thumbnails of pages of interest in a three 
+
+        dimensional space and grouping them according to subjective organizing 
+
+        principles. (The three dimensional arrangement and the visual cues based 
+
+        on thumbnails are deemed to provide a much better recognition / retrieval 
+
+        rate compared to ordinary bookmarking.)</p>
+
+      <p class=normal>The book metaphor mentioned above serves as the major structuring 
+
+        mechanism in ViEx. Its strict hierarchic structure is deemed to reduce 
+
+        the likelihood for a visitor to the virtual exhibition to get "lost in 
+
+        hyperspace", especially since visitors are assumed to be able to relatively 
+
+        quickly construct a mental model of the Web presentation due to their 
+
+        acquaintance with exhibition catalogues and the like.</p>
+
+      <p class=MsoCaption><a href="breiteneder2fig1.html"><img src="Breiteneder2.fig1.thumb.gif" width="354" height="306" border="0" alt="Fig.1: Relationships between ViEx web pages (in UML)"></a><br>
+
+        <a name="fig1">Fig.1</a>: Relationships between ViEx web pages (in UML)</p>
+
+      <p class=normal>The six (at most -- note the cardinalities indicated 
+
+        by * in the UML diagram in Fig.1 ) hierarchy levels represent the main 
+
+        information-bearing content pages. Besides them, a few other, secondary 
+
+        variants of the abstract concept "web page" exist for rather technical 
+
+        purposes.</p>
+
+      <p class=normal>ViEx supports multiple coexisting versions of the same exhibition. 
+
+        Specifically, three ver<span class="normal">sioning dimensions can be 
+
+        distinguished:</span></p>
+
+      <ul>
+
+        <li> <span class="normal">Static vs. dynamic pages: During the presentation 
+
+          design phase, pages generated on demand are usually preferred to static 
+
+          pages, because changes in the "look &amp; feel" of the site are immediately 
+
+          made visible on all available pages for persons working on the design 
+
+          prototype. When the design has stabilized, one may want to switch to 
+
+          static pages either for performance reasons or in order to prepare an 
+
+          off-line version of the exhibition on CD-ROM. Dynamic ViEx pages are 
+
+          coded in PHP.</span></span></li>
+
+        <li> <span class="normal">Different technological levels: Taking into 
+
+          account the diversity of client platforms now in use and their mutual 
+
+          incompatibilities, it is necessary to customize a Web presentation to 
+
+          several levels of browser technology. As a minimum requirement, a "high 
+
+          tech" version with contemporary ("cool") features and a 'low tech" 
+
+          version suited to old or low-end browsers should be provided.</span></span></li>
+
+        <li> <span class="normal">Language of presentation.</span></span></li>
+
+      </ul>
+
+      <h1>Content Database</h1>
+
+      <p class=normal>The content database is implemented using a relational database 
+
+        management system and contains both the <i>content</i> and <i>structure</i> 
+
+        of the virtual exhibition, but excludes low-level layout information. 
+
+        This separation represents a standard design goal for complex Web sites, 
+
+        because it guarantees consistent presentation of the content throughout 
+
+        the whole Web site. The database oriented approach of ViEx pushes this 
+
+        design goal to an extreme: As no low-level formatting information can 
+
+        be entered into the content database, the separation of content and layout 
+
+        follows as a consequence.</p>
+
+      <p class=normal>The data model underlying the content database is given 
+
+        as a UML<span class="normal"> diagram in Fig. 2 . As can be seen from 
+
+        Fig. 2 the core concept of the content database is the abstract entity 
+
+        <i>building block </i>which represents a unit of information to be presented 
+
+        and manipulated as a whole. The specialization hierarchy emanating from 
+
+        class<i>BuildingBlock</i> distinguishes between atomic entities and complex 
+
+        entities represented by containers consisting of other building blocks. 
+
+        Atomic entities may be:</span></p>
+
+      <ul>
+
+        <li> <span class="normal">homogeneous portions of text (with no intermingled 
+
+          markup) in various paragraph types and optional special character distinction 
+
+          (e.g. for proper names and foreign words),</span></span></li>
+
+        <li> <span class="normal">pictures consisting of a small image, a caption, 
+
+          a more detailed description and a reference to a larger copy</span></span></li>
+
+        <li> <span class="normal">other media like videos and panoramas treated 
+
+          in a similar way (not shown in the figure), and</span></span></li>
+
+        <li> <span class="normal">various kinds of hyperlinks.</span></span></li>
+
+      </ul>
+
+      <p class=normal><span class="normal">A content page is associated with an 
+
+        externally stored layout template divided into so-called "slots" (class 
+
+        <i>Content</i> in Fig. 2 ) which are to be filled by building blocks. 
+
+        Slots may in turn be subdivided into "subslots", where the layout of each 
+
+        subslot is again defined by a layout template. The hierarchy specified 
+
+        in Fig.1 is resolved as a rec</span>ursive parent-child relationship between 
+
+        <i>content page </i>entities. For each content page, some layout information 
+
+        in the form of attribute-value pairs (such as color schemes or main titles) 
+
+        can be specified and is propagated down the page hierarchy by the page 
+
+        generator (hence the class name <i>InheritanceData</i>). Thus, every page 
+
+        in the hierarchy takes this information from higher level pages, but it 
+
+        can also be assigned corresponding data of its own which overrides the 
+
+        "inherited" default.</p>
+
+      <p class=MsoCaption><a href="breiteneder2fig2.html"><img src="Breiteneder2.fig2.thumb.gif" width="420" height="464" border="0" alt="Fig. 2: Data model of the content database (in UML with database key designators in brackets)"></a><br>
+
+        <a name="fig2">Fig. 2</a>: Data model of the content database (in UML 
+
+        with database key designators in brackets)</p>
+
+      <p class=normal>When the exhibition is generated from the content da<span class="normal">tabase, 
+
+        the resulting page format is determined by</span></p>
+
+      <ul>
+
+        <li> <span class="normal">the position within the page hierarchy at which 
+
+          the page resides which affects the inheritance mechanism explained before 
+
+          and the generation of structural navigation links,</span></span></li>
+
+        <li> <span class="normal">the layout template assigned to the page,</span></span></li>
+
+        <li> <span class="normal"> templates possibly assigned to the slots of 
+
+          the template,</span></span></li>
+
+        <li> <span class="normal">a cascading style sheet (which is dynamically 
+
+          selected depending on the client's platform),</span></span></li>
+
+        <li> <span class="normal">the formatting strategy encoded into the generator 
+
+          for each type of building block,</span></span></li>
+
+        <li> <span class="normal">as well as additional layout information assigned 
+
+          to selected building blocks (class <i>BuildingBlockExtras</i>).</span></span></li>
+
+      </ul>
+
+      <p class=normal>Front end (input and editing interface) and back end (pagegenerator) 
+
+        of the content database together form the content management system described 
+
+        at the end of this section.</p>
+
+      <h1>Layout Templates</h1>
+
+      <p class=normal>Layout templates reside in the file system (outside the 
+
+        content database) and define the principal layout of each type of page. 
+
+        Changing a layout template modifies the look &amp; feel of the exhibition 
+
+        without modifying its content and logical structure.</p>
+
+      <p class=normal>Templates are "stub pages" with fixed HTML, includes etc. 
+
+        combined with special markups designating slots to be filled from the 
+
+        content database. The syntax of these markups is</p>
+
+      <p class=normal><i>&lt;!-- #BeginEditable "SlotId" --&gt;</i></p>
+
+      <p class=normal>and is taken from MacroMedia Dreamweaver in order to allow 
+
+        employing Dreamweaver as a comfortable template editor. The generator 
+
+        replaces this markup with the building blocks selected from the database 
+
+        via slot identification <i>SlotId</i> and the identification of the page 
+
+        under construction.</p>
+
+      <p class=normal>Besides the content oriented slots mentioned, there are 
+
+        also so-called "technical slots" with predefined semantics which are used 
+
+        to designate the position of standard page elements like headings and 
+
+        navigation blocks within the page.</p>
+
+      <p class=normal>For instance, a typical template taken from <a href="http://www.bhutan.at/" target="new">http://www.bhutan.at</a> 
+
+        contains the following slots:</p>
+
+      <p class=normal>a)     Technical slots</p>
+
+      <ul>
+
+        <li> <span class="normal"><i>Page title</i>: The browser's window 
+
+          title. Content explicitly given in the content database.</span></span></li>
+
+        <li> <span class="normal"><i>Page meta-information</i>: HTML meta information 
+
+          (invisible). Content explicitly given.</span></span></li>
+
+        <li> <span class="normal"><i>Script</i>: Includes client side scripting 
+
+          files (e.g., JavaScript) with functions taking care of CSS selection 
+
+          according to the client platform, window management, and pop-up handling. 
+
+          Content generated.</span></span></li>
+
+        <li> <span class="normal"><i>Document title</i>: Text or image. Content 
+
+          explicitly given.</span></span></li>
+
+        <li> <span class="normal"><i>Color scheme</i>: Color code or image. Content 
+
+          explicitly given or inherited from ancestor pages.</span></span></li>
+
+        <li> <span class="normal"><i>Path</i>: Navigation element consisting of 
+
+          titles of all ancestor pages. Content implicitly given (taken from ancestor 
+
+          pages).</span></span></li>
+
+        <li> <span class="normal"><i>Navigation</i> ("nav", cf. the table below): 
+
+          One of two possible types of hierarchical navigation menu depending 
+
+          on the type of page. Content implicitly given.</span></span></li>
+
+        <li> <span class="normal"><i>Pop ups</i>: Place holder for pop-ups used 
+
+          as image legends. Must be last element in the template. Content generated.</span></span></li>
+
+      </ul>
+
+      <p class=ab><span class="normal">b) True content slots: The standard layout 
+
+        for "Bhutan -- Fortress of the Gods" is based on the following HTML 
+
+        table (with slot names):</span></p>
+
+      <p class=MsoCaption>Table 3</p>
+
+      <table border=1 cellspacing=0 cellpadding=0 align="center">
+
+        <tr> 
+
+          <td width=68 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row1-left</p>
+
+          </td>
+
+          <td width=52 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row1-center</p>
+
+          </td>
+
+          <td width=69 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row1-right</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=189 colspan=3 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row1</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=68 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row2-left</p>
+
+          </td>
+
+          <td width=52 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row2-center</p>
+
+          </td>
+
+          <td width=69 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row2-right</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=189 colspan=3 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row2</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=68 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row3-left</p>
+
+          </td>
+
+          <td width=52 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row3-center</p>
+
+          </td>
+
+          <td width=69 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row3-right</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=189 colspan=3 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row3</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=68 rowspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row4-left</p>
+
+          </td>
+
+          <td width=52 rowspan=2 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row4-center</p>
+
+          </td>
+
+          <td width=69 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>row4-right</p>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width=69 valign=top class="Normal"> 
+
+            <p class=Tabellenkrper>nav</p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <p class=MsoCaption>&nbsp;</p>
+
+      <p class=normal>All these slots may be assigned simple text building blocks, 
+
+        containers holding nested building blocks, or subslots with corresponding 
+
+        subtemplates. This latter feature enhances the range of application of 
+
+        a template: Instead of designing completely new templates, many variations 
+
+        can be incorporated into one and the same template by means of the subtemplate 
+
+        concept.</p>
+
+      <p class=normal>For technical reasons, ViEx only supports one level of subtemplates; 
+
+        i.e., subtemplates nested within subtemplates are not possible. However, 
+
+        for the virtual exhibition "Bhutan --Fortress of the Gods" this restriction 
+
+        did not impose any undue design limitations.</p>
+
+      <p class=normal>It should be noted that all content which depends on the 
+
+        page type only, i.e., which is identical for all pages using the same 
+
+        template, might also be kept in the template itself (and not in the content 
+
+        database). However, such an approach may jeopardize important features 
+
+        of the framework such as creating a presentation in a different language 
+
+        etc.</p>
+
+      <h1>Content Management System</h1>
+
+      <p class=normal>The content management system (CMS) consists of the content 
+
+        database input and editing interfaces and the page generator. It allows 
+
+        creation, maintenance and deletion of pages. In its current version, it 
+
+        supports ODBC, Oracle's OCI and MySQL databases, thus covering all 
+
+        major production platforms.</p>
+
+      <p class=normal>The <i>database input and editing interface</i> is browser 
+
+        based and provides features to manipulate content, structure and layout 
+
+        of the web presentation under construction by modifying respective database 
+
+        contents. Fig. 3 shows a screenshot of the hierarchy editor based on tree 
+
+        controls and an editing menu. This component is used to navigate and/or 
+
+        modify the hierarchic structure of the exhibition. From here, the main 
+
+        content edit window may be reached. In Fig. 4 , building blocks 1, 2, 
+
+        and 3 of Container 11 (itself an aggregate building block of type "baui") 
+
+        of page "Infrastruktur -- Baudenkmäler" of a German web page are being 
+
+        edited. The structure of the edit window changes dynamically depending 
+
+        on the type of content edited.</p>
+
+      <p class=MsoCaption><img src="Breiteneder2.fig3.gif" width="239" height="349" alt="Fig. 3: CMS: Hierarchy editor"><br>
+
+        <a name="FIG_HIERARCHYEDITOR">Fig. 3</a>: CMS: Hierarchy editor</p>
+
+      <p class=MsoCaption> <a href="breiteneder2fig4.html"><img src="Breiteneder2.fig4.thumb.gif" width="400" height="411" border="0" alt="Fig. 4: Editing a page of Archeology@Austria"></a><br>
+
+        <a name="fig4">Fig. 4</a>: Editing a page of Archeology@Austria</p>
+
+      <p class=normal>Fig. 4 illustrates not only the look &amp; feel of the user 
+
+        interface for content entry but also the main disadvantage of the required 
+
+        pseudo-atomicity of the content database: As there is no formatting allowed<i> 
+
+        within </i>text building blocks, the granularity of text building blocks 
+
+        is somewhat smaller than mere re-use considerations would require. For 
+
+        instance, as text portion "<i>Bauperiode 2</i>" is used as a hyperlink 
+
+        to page titled "<i>Das Bad des Auxiliarkastells von Carnuntum</i>", it 
+
+        must be entered as a separate building block (no. 2), although from a 
+
+        semantic perspective, building blocks 1, 2, and 3 together form a logical 
+
+        unit (i.e., a paragraph).</p>
+
+      <p class=normal>As mentioned before, it is possible to associate some layout 
+
+        information will different types of building blocks which will be taken 
+
+        into consideration by the page generator. The corresponding CMS module 
+
+        (style editor) is shown in Fig. 5 .</p>
+
+      <p class=MsoCaption><a href="breiteneder2fig5.html"><img src="Breiteneder2.fig5.thumb.gif" width="400" height="206" border="0" alt="Fig. 5: Editing styles associated with building block types"></a><br>
+
+        <a name="fig5">Fig. 5</a>: Editing styles associated with building block 
+
+        types</p>
+
+      <p class=normal>Columns "tag" and "vars" define the HTML element to be generated 
+
+        for building blocks of type "type". "vars" contains variable references 
+
+        ("$1", "$2", etc.) which are to be substituted by corresponding database 
+
+        attributes listed in column "db-vars". These attributes are found elsewhere 
+
+        in the database. (Column "pos" is relevant for nested blocks only.)</p>
+
+      <p class=normal>Last but not least, a preview window allows the user to 
+
+        immediately see the outcome of the page generator run (Fig. 6 ). In such 
+
+        a window, special icons offer links back to specific edit windows (edit 
+
+        picture, edit container, edit text building block, edit styles, edit template 
+
+        slot. Cf. the bracketed icons in Fig. 6 -- clicking on the one with 
+
+        the tool tip displayed would open the picture editing window to modify 
+
+        the presentation parameters of the image of Guru Rinpoche).</p>
+
+      <p class=MsoCaption> <a href="breiteneder2fig6.html"><img src="Breiteneder2.fig6.thumb.gif" width="400" height="265" border="0" alt="Fig. 6: Preview of generator run"></a><br>
+
+        <a name="fig6">Fig. 6</a>: Preview of generator run</p>
+
+      <p class=normal>The <i>page generator</i> represents the back end of the 
+
+        content management system, producing dynamic Web pages (a static version 
+
+        can be generated on demand in a post-processing step) according to the 
+
+        formatting rules given earlier. It is responsible for a homogeneous treatment 
+
+        of the different kinds of building blocks (e.g., generating the code necessary 
+
+        for the interplay between images, captions, corresponding pop-up legends 
+
+        and zoomwindows), and consistent navigation scheme, both within a page 
+
+        and within the web site (for deep hierarchies, managing the complex navigation 
+
+        menus is in itself a nontrivial task which is hard to accomplish manually, 
+
+        especially when the structure of the hierarchy is changed).</p>
+
+      <p class=normal>The generator is also capable of creating different versions 
+
+        of an exhibition as discussed in Section 3. For example, "Bhutan -- 
+
+        Fortress of the Gods" (<a href="http://www.bhutan.at/" target="new">http://www.bhutan.at</a>) 
+
+        exists in German and English, both in a "high tech" and "low tech" variant.</p>
+
+      <h1>Project History and Reflection</h1>
+
+      <p class=normal>The project which gave rise to the development of the framework 
+
+        presented in this paper begun as a research project to explore different 
+
+        approaches to virtual exhibitions, funded by the Austrian Federal Ministryof 
+
+        Education, Science and Culture (Breiteneder et al., 2000). However, as 
+
+        a by product, a production release of a virtual variant of a well-known 
+
+        and internationally successful exhibition of the Austrian <i>Museum f&uuml;r 
+
+        V&ouml;lkerkunde</i> on Bhutan had to be developed. In this situation, the 
+
+        project partners opted for a dual approach: A conventional development 
+
+        track based on manually created dynamic Web pages was chosen in parallel 
+
+        to the development of the more advanced database based infrastructure 
+
+        presented in this paper (ViEx<sup>DB</sup> or ViEx, for short). The first 
+
+        track was needed to guarantee a working product, while the second track 
+
+        was aimed towards a reuse environment for future virtual exhibitions.</p>
+
+      <p class=normal>During the development of the Web site along the conventional 
+
+        track, strong emphasis was laid on a well structured project and software 
+
+        design suited for a mid-sized project. Thus, after a short exploration 
+
+        phase, a set of tools (PHP3 as scripting language, homesite and BBedit 
+
+        as web editors, m4 as macro processor to introduce parametric text substitution 
+
+        etc.) to be employed alongside with corresponding strict coding and naming 
+
+        conventions were established, and the file system based version ViEx<sup>FS</sup> 
+
+        of the framework was born. When its design had matured so far that a successful 
+
+        completion of the development project could be foreseen, all structural 
+
+        decisions made were frozen and the database oriented approach was started 
+
+        in parallel. From the modeling decision made thus far, the database scheme 
+
+        was deduced and the page generator was developed. Meanwhile, conventional 
+
+        development of the web site was progressing within the ViEx<sup>FS</sup> 
+
+        framework, so that a content transfer tool was needed to initialize the 
+
+        database content from the web pages in ViEx<sup>FS</sup>. The development 
+
+        and employment of a respective page analysis tool helped to verify and 
+
+        optimize the database model and also pointed out some inconsistencies 
+
+        within ViEx<sup>FS</sup> which were corrected on the fly. Then, the editing 
+
+        front end was implemented as a working prototype, and finally the whole 
+
+        Web site was loaded into the database version of ViEx and manually polished. 
+
+        From this dual development experience, we are now able to contrast the 
+
+        two approaches taken.</p>
+
+      <p class=normal>In the file-system based version of the development framework, 
+
+        each building block was realized as a file in directory tree with strict 
+
+        localizing and naming conventions. The unit of work was defined as editing 
+
+        such a source file which usually took place on a client followed by some 
+
+        kind of data transfer (e.g., ftp) to the web server. With a Web-based 
+
+        editing interface, some edits could also be done directly on the Web server. 
+
+        Thus, a maximum of content creation flexibility was achieved, and all 
+
+        file system tools available on the server (under Unix) could be used (e.g., 
+
+        access right configuration, global search and replace etc.). In particular, 
+
+        pages systematically generated via PHP3 and m4 could easily be combined 
+
+        with some hand crafted individual pages where necessary. Also, authoring 
+
+        and configuration management activities could evolve with the complexity 
+
+        of the web site under construction.</p>
+
+      <p class=normal>The disadvantage was that many interfaces had to be mastered 
+
+        by the editing staff and that there was no real control whether all conventions 
+
+        established by the project team were observed (as the main portion of 
+
+        the content editing work was done by a single person with sufficient self-discipline, 
+
+        this aspect did not create a lot of problems in our project). Moreover, 
+
+        data transfer from the client workstation to the web server was not secured.</p>
+
+      <p class=normal>In the database version of the framework, content was moved 
+
+        from individual files into tables of a relational database system. The 
+
+        corresponding conce<span class="normal">ptual model guaranteed clear separation 
+
+        of content, structure and layout. There is only one editing interface 
+
+        (cf. the previous section). Modest use of relational features allows the 
+
+        employment of a wide range of DBMS from mySQL to Oracle 8. As the editing 
+
+        interface is somewhat more formal than for ViEx<sup>FS</sup>, there were 
+
+        fewer accidental changes of content. On the minus side, there is the higher 
+
+        complexity of the editing task (due to the atomic nature of data), even 
+
+        though content editing performance seems to constitute a critical success 
+
+        factor for such a project. We also had to realize that late modifications 
+
+        of the underlying conceptual model cost a relatively great deal of work 
+
+        (an experience which seems counter-intuitive to classical arguments in 
+
+        favor of database technology). Thus, the database-oriented approach seems 
+
+        to be especially promising if:</span></p>
+
+      <ul>
+
+        <li> <span class="normal">the structure of the planned exhibition is compatible 
+
+          to the framework, i.e., it can be mapped onto the conceptual model of 
+
+          the framework,</span></span></li>
+
+        <li> <span class="normal">the exhibition project exceeds a certain complexity 
+
+          which allows amortization of setup costs (installing and getting acquainted 
+
+          with the tools, etc.),</span></span></li>
+
+        <li> <span class="normal">all tools are already well-defined and ready 
+
+          for duty at the beginning of the project,</span></span></li>
+
+        <li> <span class="normal">an exhibit database exists which may be linked 
+
+          to the content database presented here.</span></span></li>
+
+      </ul>
+
+      <h1>Conclusions and Ongoing Work</h1>
+
+      <p class=normal>The primary project goal to develop <a href="http://www.bhutan.at/" target="new">http://www.bhutan.at</a> 
+
+        to a fully functioning Web site meeting all requirements of a production 
+
+        system has put restrictions on the development of the prototype of a reuse 
+
+        framework discussed in this paper. We will definitely need at least resources 
+
+        equal to those spent so far on its completion to be able to use it in 
+
+        full practice and in a wide variety of contexts. Since reuse of software 
+
+        can only be proven by reuse, we have meanwhile tested the framework in 
+
+        a feasibility study in the field of archaeology. Because the participating 
+
+        archaeologists had different requirements from the ones to be met for 
+
+        <a href="http://www.bhutan.at/" target="new">http://www.bhutan.at</a>, 
+
+        minor adjustments were necessary to increase the functionality available.</p>
+
+      <p class=normal>Currently, we are extending ViEx to be prepared for a much 
+
+        larger project covering all Austrian archaeological museums and sites 
+
+        in one Web portal. Since the total number of Web pages o<span class="normal">f 
+
+        this site will be a magnitude higher than for Bhutan, we first have to 
+
+        evaluate and improve the performance of ViEx for sites with more that 
+
+        1000 pages. The most important additional extensions of ViEx will cover:</span></p>
+
+      <ul>
+
+        <li> <span class="normal">support for XML,</span></span></li>
+
+        <li> <span class="normal">support for metadata (RDF and Topic Maps) in 
+
+          order to move an important step towards the <i>semantic web,</i></span></span></li>
+
+        <li> <span class="normal">support for multiple concurrent users and</span></span></li>
+
+        <li> <span class="normal">the enhancement of editing features, as for 
+
+          example the splitting of building blocks.</span></span></li>
+
+      </ul>
+
+      <p class=normal>Moreover, we want to compare available content management 
+
+        systems and to include some of the convincing additional features in our 
+
+        system.</p>
+
+      <h1>References</h1>
+
+      <p class=ReferencesText>Breiteneder, C., Hitz, M., Hon, M., &amp; Platzer, 
+
+        H. (2000). <span lang=DE>Untersuchung innovativer Hypermedia-Methoden 
+
+        zur Gestaltung virtueller Ausstellungen am Beispiel "Bhutan -- Festung 
+
+        der G&ouml;tter. <a href="http://www.bhutan.at/" target="new">http://www.bhutan.at</a></span>. 
+
+        Project report, Vienna University of Technology/ University of Klagenfurt 
+
+        / University of Vienna, October 2000.</p>
+
+      <p class=ReferencesText>Breiteneder, C., Hitz, M., Platzer, H., &amp; Stockinger, 
+
+        J. (2001). Bhutan -- A Virtual Exhibition. In D. Bearman &amp; J. 
+
+        Trant (Eds<i>.) Museums and the Web 2001 Selected Papers from an International 
+
+        Conference</i>. Pittsburgh, Archives &amp; Museum Informatics, 2001.</p>
+
+      <p class=ReferencesText>Biggerstaff, T. J. &amp; Perlis, A. J. (1989). Software 
+
+        Reusability (Vol. I: Concepts and Models, Vol. II: Applications and Experience). 
+
+        ACM Press.</p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/breiteneder/breiteneder2.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:59 GMT -->
+</html>

@@ -1,0 +1,877 @@
+<html><!-- InstanceBegin template="/Templates/mw2004-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2004/papers/hyvonen/hyvonen.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:45:41 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>Museums and the Web 2004 : Papers : Hyv&ouml;nen et al., Finnish Museums on the Semantic Web ...</title>
+<!-- #EndEditable --> 
+<meta name="keywords" content="Museums and the Web 2004, Archives &amp; Museum Informatics, museums online, on-line, cultural heritage online, museum digitization, internet, conference, symposium, workshop, meeting, international, papers, presentations, multimedia, interactive, education, exhibits, evaluation, virtual reality, digitization, information architecture, information design, interface design, digital library, digital libraries ">
+<!-- #BeginEditable "page keywords" -->
+<meta name="keywords" content="Semantic Web, MuseumFinland, XML, RDF, Interoperability">
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<!-- #BeginEditable "script" --><!-- #EndEditable --> 
+<link rel="stylesheet" href="../../../mw2003/Library/mw2003.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="../../../mw2002/images/mw2002.bg.gif" TEXT="#000000" LINK="#660099" VLINK="#000066" onLoad="MM_preloadImages('../../images/nav/register_on.gif','../../images/nav/workshops_on.gif','../../images/nav/sessions_on.gif','../../images/nav/speakers_on.gif','../../images/nav/interactions_on.gif','../../images/nav/demos_on.gif','../../images/nav/exhibits_on.gif','../../images/nav/events_on.gif','../../images/nav/best_on.gif','../../images/nav/dates_on.gif','../../images/nav/local_on.gif','../../images/nav/sponsors_on.gif')">
+<table WIDTH="600" BORDER="0" CELLSPACING="2" CELLPADDING="5">
+  <tr> 
+    <td WIDTH="145" ALIGN="LEFT" VALIGN="TOP"> 
+      <p><a href="../../index.html"><img src="../../images/mw.gif" width="112" height="155" border="0" alt="/mw/"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('register','','../../images/nav/register_on.gif',1)"><img name="register" border="0" src="../../images/nav/register_off.gif" width="112" height="18"></a><br>
+        <a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('workshops','','../../images/nav/workshops_on.gif',1)"><img name="workshops" border="0" src="../../images/nav/workshops_off.gif" width="112" height="18"></a><br>
+        <a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sessions','','../../images/nav/sessions_on.gif',1)"><img name="sessions" border="0" src="../../images/nav/sessions_off.gif" width="112" height="18"></a><br>
+        <a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('speakers','','../../images/nav/speakers_on.gif',1)"><img name="speakers" border="0" src="../../images/nav/speakers_off.gif" width="112" height="18"></a><br>
+        <a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('interactions','','../../images/nav/interactions_on.gif',1)"><img name="interactions" border="0" src="../../images/nav/interactions_off.gif" width="112" height="18"></a><br>
+        <a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('demonstrations','','../../images/nav/demos_on.gif',1)"><img name="demonstrations" border="0" src="../../images/nav/demos_off.gif" width="112" height="18"></a><br>
+        <a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('exhibits','','../../images/nav/exhibits_on.gif',1)"><img name="exhibits" border="0" src="../../images/nav/exhibits_off.gif" width="112" height="18"></a><br>
+        <a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('events','','../../images/nav/events_on.gif',1)"><img name="events" border="0" src="../../images/nav/events_off.gif" width="112" height="18"></a><br>
+        <a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('best','','../../images/nav/best_on.gif',1)"><img name="best" border="0" src="../../images/nav/best_off.gif" width="112" height="18"></a><br>
+        <a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dates','','../../images/nav/dates_on.gif',1)"><img name="dates" border="0" src="../../images/nav/dates_off.gif" width="112" height="18"></a><br>
+        <a href="../../local/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('local','','../../images/nav/local_on.gif',1)"><img name="local" border="0" src="../../images/nav/local_off.gif" width="112" height="18"></a><br>
+        <a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sponsors','','../../images/nav/sponsors_on.gif',1)"><img name="sponsors" border="0" src="../../images/nav/sponsors_off.gif" width="112" height="18"></a> 
+        <br>
+        <br>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../images/nav/nav_ami.gif" width="135" height="35" border="0" alt="A&amp;MI home"></a> 
+        <br>
+      </p>
+      <table width="81%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td align="left" valign="top"> 
+            <p align="right"><span class="verysmall">158 Lee Avenue<br>
+              Toronto Ontario<br>
+              M4E 2P3 Canada</span></p>
+            <p class="verysmall" align="right">ph: +1 416-691-2516<br>
+              fx: +1 416-352-6025</p>
+            <p align="right"><span class="verysmall">info @ archimuse.com<br>
+              <a href="http://www.archimuse.com/">www.archimuse.com</a></span></p>
+            <div align="right"> 
+              <table width="74">
+                <tr> 
+                  <td> <a href="http://search.museumsandtheweb.com/search" target="_top"> 
+                    <img src="../../images/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+                  </td>
+                  <td valign="MIDDLE"> <a href="http://search.museumsandtheweb.com/search"> 
+                    <span class="verysmall">Search<br>
+                    A&MI</span></a> </td>
+                </tr>
+              </table>
+            </div>
+            <p align="right"><font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Join 
+              our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing 
+              List</a>. <br>
+              <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</span></font></p>
+            <p align="right">&nbsp;</p>
+            <p align="right">&nbsp; </p>
+            <p align="right"><span class="verysmall">published: March 2004<br>
+analytic scripts updated:&nbsp; 
+              <!-- #BeginDate format:Am1 -->October 28, 2010<!-- #EndDate -->
+              </span></p>
+            <p align="right"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a> </p>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp; </p>
+    </td>
+    <td WIDTH="455" ALIGN="LEFT" VALIGN="TOP" class="normal"><a href="../../speakers/index.html"><img src="../../images/papers.gif" width="390" height="55" border="0" alt="Museums and the Web 2003 Papers"></a> 
+      <br>
+      <!-- #BeginEditable "Body of Page" -->
+  <p class="PaperTitle">Finnish Museums on the Semantic Web: The user’s Perspective 
+      on MuseumFinland</p>
+  <p class="Author">Eero Hyv&ouml;nen, Miikka Junnila, Suvi Kettula, Eetu 
+      M&auml;kel&auml;, Samppa Saarela, Mirva Salminen, Ahti Syreeni, Arttu Valo, and Kim 
+      Viljanen, Helsinki Institute for Information Technology (HIIT), University 
+      of Helsinki, Finland</p>
+  <p class="URL"><a href="http://museosuomi.cs.helsinki.fi/" target="_blank">http://museosuomi.cs.helsinki.fi</a></p> <p class="AbstractTitle">Abstract</p>
+   <p class="AbstractText">This paper presents a semantic portal, MuseumFinland, 
+      for publishing heterogeneous museum collections on the Semantic Web <a href="http://museosuomi.cs.helsinki.fi/" target="_blank">http://museosuomi.cs.helsinki.fi</a>. The application 
+      is presented from the viewpoints of the end-user and the museums providing 
+      the contents. By semantic Web techniques, it is possible to make collections 
+      semantically interoperable and provide museum visitors with intelligent content-based 
+      search and browsing services to the global collection base. By using the MuseumFinland 
+      approach, the museums with their semantically rich and interrelated collection 
+      content can create consolidated semantic collection portals together on the 
+      Web.</p>
+   <p class="AbstractText">Keywords: Semantic Web, MuseumFinland, XML, RDF, Interoperability</p>
+  <h1>Why Museums on the Semantic Web?</h1>
+  <p>A special characteristic of cultural collection contents 
+      is semantic richness. Collection items have a history and are related in many 
+      ways to our environment, to society, and to other collection items. For example, 
+      a chair is made of oak and leather, built in a certain style, designed by 
+      a famous designer,  manufactured by a certain company during a specific time 
+      period, used in a certain castle together with other pieces of furniture, 
+      and so on. Other collection items, locations, time periods, designers, companies 
+      etc. can be related to the chair through their properties, and implicitly 
+      constitute a complicated semantic network of associations. This semantic network 
+      is not limited to a single collection, but spans other related collections 
+      in other museums.</p>
+  <p>The Semantic Web (Berners-Lee, 2001; Fensel, 2002) is the 
+      next generation of the Web where the contents are meant not only for human 
+      readers to digest, but also for the machines to interpret. The key idea is 
+      to represent the contents of the Web by explicit metadata structures that 
+      conform to mutually agreed vocabularies, ontologies (Sowa, 2000). Semantic 
+      Web technology (<a href="http://www.w3.org/2001/SW/" target="_blank">http://www.w3.org/2001/SW/</a>) enables new possibilities when 
+      publishing museum collections on the Web (Hyv&ouml;nen, 2002):</p>
+  <ul>
+    <li><b>Intelligent applications.</b> First, intelligent applications 
+          based on the semantics of the collections can be created.</li>
+    <li><b>Collection interoperability in content.</b> Secondly, Web 
+          languages, standards, and ontologies make it possible to make heterogeneous 
+          museum collections of different kinds mutually interoperable. This enables, 
+          for instance, the creation of large inter-museum exhibitions. </li>
+  </ul>
+  <p>To realize these ideas in practice, we have developed a 
+      semantic Web portal called "MuseumFinland—Finnish Museums on the Semantic 
+      Web." This system contains an inter-museum exhibition of cultural artifacts, 
+      such as textiles, pieces of furniture, tools etc. The contents for the pilot 
+      version come from the collections of the National Museum (<a href="http://www.nba.fi/" target="_blank">http://www.nba.fi</a>),      Espoo City Museum (<a href="http://www.espoo.fi/museo/" target="_blank">http://www.espoo.fi/museo/</a>), and Lahti City Museum (<a href="http://www.lahti.fi/museot/" target="_blank">http://www.lahti.fi/museot/</a>). 
+      These museums are situated in different cities, and use three different relational 
+      database schemas, data base systems, and collection management systems (called 
+      Musketti, Escoll, and Antikvaria, respectively).</p>
+  <p>In the following we first describe the knowledge-based 
+      services of the portal from the end-user’s viewpoint. The collections form 
+      for the end-user a seamless repository of Web pages to search and browse with 
+      an ordinary Web browser. After this, we show how the heterogeneous distributed 
+      collections of the museums that participate in the system can be merged in 
+      an interoperable way. For a participating museum, the portal provides a channel 
+      to publish content easily and independently from the museum’s collection database 
+      system. In the conclusion, main results of the work are summarized, lessons 
+      learned discussed, and directions for further research outlined.</p>
+  <h1>A Semantic Search Engine</h1>
+  <p>MuseumFinland provides the end-user with two major services:</p>
+  <ul>
+    <li>A <b>semantic view-based search engine</b> that is based on 
+          underlying concepts and ontologies instead of simple keywords.</li>
+    <li>A <b>semantic recommendation system</b> by which the user can 
+          find explicit and implicit semantic associations within the global collection 
+          data, and use the associations for browsing the collections.</li>
+  </ul>
+  <p>The metadata of collection objects in a museum database 
+      is described by using named properties, such as the 15 properties of the Dublin 
+      Core standard (<a href="http://dublincore.org/" target="_blank">http://dublincore.org/</a>). The 
+      value of a property can be, for example, an integer representing the year 
+      of publication of a document or a free text description about the history 
+      of an artifact. When possible, it is beneficial to describe subject content 
+      by using <i>keywords</i> selected from controlled vocabularies or thesauri 
+      (Foskett, 1980). This keeps metadata descriptions coherent and in this way 
+      significantly eases information retrieval later.</p>
+  <p>The search engine of MuseumFinland, called Ontogator, is 
+      based on the multi-facet search paradigm (Pollitt, 1998; Hearst et al., 2002). 
+      Here the keywords or concepts used for indexing are called <i>categories</i> 
+      and are organized systematically into a set of hierarchical, orthogonal taxonomies. 
+      For example, artifact types, such as furniture, clothes, weapons etc. can 
+      be put into a taxonomy. The taxonomies are called subject <i>facets</i> or 
+      <i>views</i>. A search query in view-based search is formulated by selecting 
+      categories of interest from the different facets. For example, by selecting 
+      the category Clothing from an Artifact facet, category Cotton from a Material 
+      facet, and category 1800-1900 from a Time facet, the user can express the 
+      query for retrieving all trousers, skirts, and other clothing made of cotton 
+      in the 19<sup>th</sup> Century. Intuitively, the query is a conjunctive constraint 
+      over the facets with disjunctive constraints over the sub-categories in each 
+      facet.</p>
+  <table border="1" align="center" cellpadding="2" cellspacing="0" bordercolor="#CCCCCC">
+    <tr class="SubHeaderSmall">
+      <td width="67"><p align="right">VIEW TYPE</p></td>
+      <td width="80"><p>VIEW NAME</p></td>
+      <td width="91"><p>ONTOLOGY</p></td>
+    </tr>
+    <tr>
+      <td width="67" rowspan="2" class="SubHeaderSmaller"><p align="right">Object Views</p></td>
+      <td width="80" class="normal"><p>Artifact</p></td>
+      <td width="91" class="normal"><p>Artifacts</p></td>
+    </tr>
+    <tr>
+      <td width="80" class="normal"><p>Material</p></td>
+      <td width="91" class="normal"><p>Materials</p></td>
+    </tr>
+    <tr>
+      <td width="67" rowspan="3" class="SubHeaderSmaller"><p align="right">Creation Views</p></td>
+      <td width="80" class="normal"><p>Creator</p></td>
+      <td width="91" class="normal"><p>Actors</p></td>
+    </tr>
+    <tr>
+      <td width="80" class="normal"><p>Place of creation</p></td>
+      <td width="91" class="normal"><p>Locations</p></td>
+    </tr>
+    <tr>
+      <td width="80" class="normal"><p>Time of creation</p></td>
+      <td width="91" class="normal"><p>Times</p></td>
+    </tr>
+    <tr>
+      <td width="67" rowspan="3" class="SubHeaderSmaller"><p align="right">Usage Views</p></td>
+      <td width="80" class="normal"><p>User</p></td>
+      <td width="91" class="normal"><p>Actors</p></td>
+    </tr>
+    <tr>
+      <td width="80" class="normal"><p>Place of usage</p></td>
+      <td width="91" class="normal"><p>Locations</p></td>
+    </tr>
+    <tr>
+      <td width="80" class="normal"><p>Situation</p></td>
+      <td width="91" class="normal"><p>Events</p></td>
+    </tr>
+    <tr>
+      <td width="67" class="SubHeaderSmaller"><p align="right">Collection View</p></td>
+      <td width="80" class="normal"><p>Collection</p></td>
+      <td width="91" class="normal"><p>Collections</p></td>
+    </tr>
+  </table>
+  <p class="caption">Table 1. Orthogonal View-Facets in MuseumFinland.</p>
+  <p>MuseumFinland classifies the collection objects along 9 
+      views organized in four groups (table 1). The Object Views describe the physical 
+      aspects of the collection item (artifact type and materials). The Creation 
+      Views tell who manufactured or created the object, as well as the location 
+      and time of the creation. The Usage Views indicate the user of the object, 
+      place of use, and situations in which the object is used. Finally, the Collection 
+      View classifies the museums and collections participating in the portal.</p>
+  <table border="1" align="center" cellpadding="2" cellspacing="0" bordercolor="#CCCCCC">
+    <tr class="SubHeaderSmall">
+      <td><p>ONTOLOGY</p></td>
+      <td><p>CONTENT</p></td>
+      <td><p>CLASSES</p></td>
+      <td><p>INDIVIDUALS</p></td>
+    </tr>
+    <tr>
+      <td class="SubHeaderSmaller"><p>Artifacts</p></td>
+      <td class="normal"><p>Classes for tangible collection objects</p></td>
+      <td class="normal"><p>3227</p></td>
+      <td class="normal"><p>0</p></td>
+    </tr>
+    <tr>
+      <td class="SubHeaderSmaller"><p>Materials</p></td>
+      <td class="normal"><p>Substances that the artifacts are made of</p></td>
+      <td class="normal"><p>364</p></td>
+      <td class="normal"><p>0</p></td>
+    </tr>
+    <tr>
+      <td class="SubHeaderSmaller"><p>Actors</p></td>
+      <td class="normal"><p>Persons, companies, organizations, and other agents</p></td>
+      <td class="normal"><p>26</p></td>
+      <td class="normal"><p>1715</p></td>
+    </tr>
+    <tr>
+      <td class="SubHeaderSmaller"><p>Locations</p></td>
+      <td class="normal"><p>Continents, countries, cities, villages, farms etc.</p></td>
+      <td class="normal"><p>33</p></td>
+      <td class="normal"><p>864</p></td>
+    </tr>
+    <tr>
+      <td class="SubHeaderSmaller"><p>Times</p></td>
+      <td class="normal"><p>Eras, centuries, etc. as time intervals</p></td>
+      <td class="normal"><p>57</p></td>
+      <td class="normal"><p>0</p></td>
+    </tr>
+    <tr>
+      <td class="SubHeaderSmaller"><p>Events</p></td>
+      <td class="normal"><p>Situations, events, and processes in the society</p></td>
+      <td class="normal"><p>992</p></td>
+      <td class="normal"><p>0</p></td>
+    </tr>
+    <tr>
+      <td class="SubHeaderSmaller"><p>Collections</p></td>
+      <td class="normal"><p>Museum collections included in the system</p></td>
+      <td class="normal"><p>22</p></td>
+      <td class="normal"><p>24</p></td>
+    </tr>
+  </table>
+  <p class="caption">Table 2. User interface for view-based multi-facet search 
+      in MuseumFinland.</p>
+  <p>The views can be projected from a set of ontologies listed 
+      in the furthest right-hand  column of table 1. The contents of the ontologies 
+      and their sizes in the pilot version on-line at the moment are given in table 
+      2. The <i>Artifacts</i> ontology is a taxonomy of the tangible collection 
+      objects such as pottery, clothes, weapons, etc. All exhibits in the system 
+      belong to some class in this ontology. The <i>Materials</i> ontology is a 
+      taxonomy of the artifact materials, such as steel, silk, tree, etc. The <i>Actors</i> 
+      ontology defines classes of agents, such as persons, companies etc., and individuals 
+      as instances of these classes. The <i>Events </i>ontology include intangible 
+      happenings, situations, events, and processes that take place in the society, 
+      such as farming, feasts, sports, war, etc. <i>Locations</i> is an ontology 
+      representing areas and places on the Earth and in Finland in particular. The 
+      <i>Times</i> ontology is a taxonomy of various predefined historical periods, 
+      and the <i>Collections</i> ontology classifies the museums and collections 
+      in the portal. The Artifacts, Materials, and Events ontologies are subsets 
+      of a larger cultural ontology called MAO (6768 classes) that we created based 
+      on the Finnish cultural thesaurus MASA (Leskinen, 1997). MASA is widely used 
+      in Finnish museums for describing and classifying collection objects. It was 
+      a natural choice for the basis of a general cultural semantic Web ontology 
+      and vocabulary. The ontology and vocabulary work underlying MuseumFinland 
+      is described in more detail in Hyv&ouml;nen et al., 2004.</p>
+  <p class="caption"><a href="hyvonenFig1.html"><img src="Hyvonen.figure1-t.jpg" alt="Search Interface" width="400" height="269" border="0"></a></p>
+  <p class="caption"><a name="Fig1"></a>Figure 1. The initial search interface of MuseumFinland 
+      with its nine facets.</p>
+  <h1>The Search Interface</h1>
+  <p>Figure 1 shows the initial search interface of MuseumFinland. 
+        The nine facet hierarchies of Table 1 are shown (in Finnish), such as Artifact 
+        ("Esinetyyppi") and Material ("Materiaali"). For each facet hierarchy, the 
+        next level of sub-categories is shown as links. A query is formulated by selecting 
+        a sub-category by clicking on its name. When the user selects a category <i>c</i> in a facet <i>f</i>, the system constrains the search by leaving in the result 
+        set only such objects as are annotated in facet <i>f</i> with some sub-category 
+        of <i>c</i>. For example, figure 2 depicts the situation after selecting the 
+        sub-category Tools ("ty&ouml;v&auml;lineet") from the Artifact facet ("Esinetyyppi"). 
+        The result set is shown on the right grouped by the sub-categories of Tools, 
+        such as Textile making tools ("tekstiility&ouml;v&auml;lineet") and Tools of folk medicine 
+        ("kansanl&auml;&auml;kinn&auml;n ty&ouml;v&auml;lineet"). Hits in the different  categories are separated 
+        by horizontal bars and can be scrolled independently in each category. In 
+        this case, all categories do not fit in the screenshot. </p>
+  <p class="caption"><a href="hyvonenFig2.html"><img src="Hyvonen.figure2-t.jpg" alt="The Search Interface" width="400" height="293" border="0"></a></p>
+  <p class="caption"><a name="Fig2"></a>Figure 2. The search interface of MuseumFinland after selecting 
+      link Tools  ("ty&ouml;v&auml;lineet") in figure 1.</p>
+  <h1 class="normal">The Search Interface: Facets </h1>
+  <p>The facets are shown on the left. When answering the query, 
+        the result set for each direct sub-category in the facets seen on the screen 
+        is recomputed, and a number (<i>n</i>) is shown to the user after the category 
+        name. It tells that if the sub-category is selected next, then there will 
+        be <i>n</i> hits in the result set. For example, in figure 2, the number 643 
+        in the Collection facet on the bottom ("Kokoelma") tells that there are 643 
+        tools in the collections of the National Museum ("Kansallismuseon kokoelmat").</p>
+  <p>A selection leading to an empty result set (n=0) is removed 
+      from its facet (or alternatively disabled and shown in gray color, depending 
+      on the user’s preference). In this way, the user can be hindered from making 
+      a selection leading to an empty result set, and is guided toward selections 
+      that are likely to constrain the search appropriately. The query can be relaxed 
+      by making a new selection on a higher level of the facets or by dismissing 
+      the facet totally from the query.</p>
+  <p>In the above, the category selection was made among the 
+      direct sub-categories listed in the facets. An alternative way is to click 
+      on the link Whole facet (<i>koko luokittelu</i>) on a facet. The system then 
+      shows all possible selections in the facet with hit counts. For example, in 
+      figure 3 the user selected in the situation of figure 2 the link Whole facet 
+      of the facet Time of creation (<i>Valmistusaik</i>"). The system shows how 
+      the tools in the current result set are classified according to the Times 
+      facet. The facet is represented by a link hierarchy from which the search 
+      can be either constrained further or relaxed by clicking on a category link. 
+      For example, selecting the category 1840-1849 brings up the tools manufactured 
+      during that decade.</p>
+  <p class="caption"><a href="hyvonenFig3.html"><img src="Hyvonen.figure3-t.jpg" alt="Time Facet" width="400" height="231" border="0"></a></p>
+  <p class="caption"><a name="Fig3"></a>Figure 3. The Time facet hierarchy classifying the result 
+      set of tools in figure 2.</p>
+  <p>In this way, the user </p>
+  <ul>
+    <li>can easily formulate the query using the right categories exposed  as links, and</li>
+    <li>can get easily overviews of the database contents along different 
+          classifications in different situations.</li>
+  </ul>
+  <p>User studies (Lee et al., 2003; English et al., 2003) have 
+      recently been carried out to show that if the user does not know precisely 
+      what objects s/he is looking for, then the multi-facet search method with 
+      its browsing the shelves sensation is clearly preferred over keyword search 
+      or using only a single facet. The latter approach is commonly used for finding 
+      resources on the Web, e.g., in Yahoo and in the Open Directory Project (<a
+href="http://dmoz.org/" target="_blank">http://dmoz.org</a>).</p>
+  <p>However, if the user is capable of expressing an information 
+      need straightforwardly in terms of keywords, then a Google-like keyword search 
+      interface is usually faster and preferable. To support a word-based search, 
+      too, an additional search engine was implemented in MuseumFinland. This engine 
+      is used for two purposes at the same time:</p>
+  <ul>
+    <li>For searching categories to be used in multi-facet search</li>
+    <li>For searching collection objects with matching metadata values 
+          in the conventional way</li>
+  </ul>
+  <p>The problem of finding relevant categories in the facets 
+      is a search problem of its own when dealing with thousands of categories. 
+      The user may then type in keywords in the search text field labeled <i>Haku</i> 
+      in the left upper corner of figure 1. In response, all categories whose names 
+      match with the input keywords (substring match) are selected and shown to 
+      the user as links in the form:</p>
+  <p><i>FacetName </i>&gt; <i>category</i></p>
+  <p>For example, a search with the string "ase" gives the link 
+      set shown in figure 4.</p>
+  <p class="caption"><a href="hyvonenFig4.html"><img src="Hyvonen.figure4-t.jpg" alt="Word search" width="400" height="162" border="0"></a></p>
+  <p class="caption"><a name="Fig4"></a>Figure 4. Using the word search for finding categories.</p>
+  <p>Here the query matched the categories <i>guns</i> <i>(aseet</i> 
+      in Finnish) and <i>guns and shooting equipment</i> <i>(aseet ja ampumatarvikkeet</i>) 
+      in the facet Artifact (<i>Esinetyyppi</i>), and the category <i>acetate</i> 
+      (<i>asetaatti</i>) in the Material facet (<i>Materiaali</i>). By selecting 
+      a link, the multi-facet search can be executed. For example, by clicking on 
+      <i>aseet</i> in figure 4, the 23 guns in the RDF repository are retrieved.</p>
+  <p>When executing a word-based search, the search engine also 
+      performs a combined keyword and multi-facet search in the following way. The 
+      <i>union</i> of the found categories (cf. figure 4) is used as a query in 
+      the multi-facet search, resulting in a result set R1. In addition, a conventional 
+      keyword match search is performed for (some) property values of the objects, 
+      resulting in another result set R2. The search result shown to the user is 
+      R1 &equiv; R2. In our example, guns and shooting equipment 
+      together with objects made of acetate are retrieved.</p>
+  <p>By default, the categories shown in the search are grouped 
+      by the last selection, but the system also supports grouping based on arbitrary 
+      categories and keywords. For example, in figure 5, the results of the search 
+      of figure 2 are shown grouped by museum collection. This provides the user 
+      with a quick and intuitive view of what kind of tools there are in each collection 
+      of the participating museums.</p>
+  <p class="caption"><a href="hyvonenFig5.html"><img src="Hyvonen.figure5-t.jpg" alt="Search REsults grouped by &quot;ryhmittele kohteet" width="400" height="294" border="0"></a></p>
+  <p class="caption"><a name="Fig5"></a>Figure 5. Search results from figure 2 after selecting the 
+      link group by (ryhmittele kohteet) from the Museum Collection facet (Kokoelma).</p>
+  <h1>A Semantic Recommendation System</h1>
+  <p>At any point during a multi-facet search the user can select 
+      any hit found by clicking on its image. The corresponding collection object 
+      is then shown as a Web page, such as the one in figure 5. It depicts a special 
+      part, distaff, (<i>rukinlapa</i> in Finnish), used in a spinning wheel. The 
+      page contains the following information and links:</p>
+  <ol>
+    <li>The 
+          image(s) of the object is (are) depicted on the left.</li>
+    <li>The 
+          metadata of the object shown are in the middle on top.</li>
+    <li>All 
+          facet categories of the object are listed in the middle bottom as hierarchical 
+          link paths. A new search can be started by selecting any link from there.</li>
+    <li> A set 
+          of semantic links on the right is provided by a semantic recommendation system. </li>
+  </ol>
+  <p class="caption"><a href="hyvonenFig6.html"><img src="Hyvonen.figure6-t.jpg" alt="collection object" width="400" height="241" border="0"></a></p>
+  <p class="caption"><a name="Fig6"></a>Figure 6. Web page depicting a collection object, its metadata, 
+      facet categories, and semantic recommendation links to other collection object 
+      pages.</p>
+  <p>Semantic recommendations reveal to the end-user a most 
+      interesting aspect of the collection items: the implicit semantic relationships 
+      that relate collection data with their context and with each other. The recommendation 
+      links provide a <i>semantic browsing</i> facility to the end-user. For example, 
+      in figure 6 there are links to objects used at the same location (categorized 
+      according to the name of the common location); to objects related to similar 
+      events (e.g., objects used in spinning, and decorative objects, because distaffs 
+      are usually beautifully decorated); to objects manufactured at the same time; 
+      and so on. Since a decoratively carved distaff used to be a typical wedding 
+      gift in Finland, it is also possible to recommend links to other objects used 
+      as wedding gifts, such as wedding rings. In MuseumFinland, such associations 
+      can be exposed to the end-user as link groups whose titles and link names 
+      explain to the user the reason for the recommendation. The possibilities for 
+      creating such associations are intriguing. Of course, only links that can 
+      be inferred based on the metadata and ontologies available can be created.</p>
+  <p>Recommendations are defined in terms of flexible logical 
+      predicate rules using the methods described in Hyv&ouml;nen et al., 2003, 2004. 
+      The links can be <i>explicit</i> or <i>implicit</i>. Explicit links correspond 
+      to the RDF statements (triples) in the underlying knowledge base and are directly 
+      based on the collection domain ontologies (classes and their properties) and 
+      the actual collection data (instance data). For example, an instance of a 
+      painting may have the RDF property "creator" linking the art work to an individual 
+      artist. Implicit links can be defined in terms of explicit ones but are not 
+      present in the RDF graph. For example, if there are explicit links linking 
+      children with their mothers and fathers, then implicit links such as "grandfather" 
+      or "cousin" can be defined.</p>
+  <p>The semantic recommendation system of MuseumFinland is 
+      implemented as a logic server called <i>Ontodella</i>. This system is based 
+      on the HTTP server version of SWI-Prolog (<a
+href="http://www.swi-prolog.org/" target="_blank">http://www.swi-prolog.org</a>) (Wielemaker 
+      et al., 2003). The MuseumFinland system itself is a Cocoon-based server (<a
+href="http://www.apache.org/" target="_blank">http://cocoon.apache.org</a>) that queries with 
+      the Ontogator search engine server and Ontodella server with XML/RDF messages. 
+      It is possible to do this over HTTP.</p>
+  <p>There is also a prototype implementation of MuseumFinland 
+      that can be used with WAP 2.0 compatible mobile telephones. The current prototype 
+      recreates all functionality of the Web interface in a layout more suitable 
+      to the limited screen space of mobile devices, as seen in figure 7. When the 
+      user makes a selection for the multi-facet search, impossible category choices 
+      leading to empty results can be pruned out. This is a very useful feature 
+      for devices that have a small screen to display choices. Future work will 
+      add further mobile-specific features, most notably support for mapping the 
+      geographical location of the phone to the Location facet. This provides quick access to objects that were created, were used, or reside near the current 
+      location of the mobile user.</p>
+  <p class="caption"><a href="hyvonenFig7.html"><img src="Hyvonen.figure7-t.jpg" alt="MuseumFinland on a Nokia" width="180" height="300" border="0"></a></p>
+  <p class="caption"><a name="Fig7"></a>Figure 7. MuseumFinland search results for a search on 20th 
+      Century sporting and game items grouped by the Times facet as seen on a Nokia 
+      Series 60 browser</p>
+  <h1>Making Museum Collections Interoperable on the Web</h1>
+  <p>Museums and their collection databases are usually situated 
+      at different locations. This creates an obstacle to information retrieval 
+      for both the public and researchers. To address the problem, the Web can be 
+      used for creating a single interface and access point through which a search 
+      query can be sent to distributed local databases and the results combined 
+      into a global hit list. This <i>multi-search</i> approach, as depicted in 
+      figure 8, has been widely applied, and there are many cultural collection 
+      systems on the Web based on it, such as the portals Australian Museums On-line 
+      (<a href="http://amol.org.au/collection/collections_index.asp" target="_blank">http://amol.org.au/collection/collections_index.asp</a>) and Artefacts 
+      Canada (<a href="http://www.chin.gc.ca/" target="_blank">http://www.chin.gc.ca/</a>). </p>
+  <p class="caption"><a href="hyvonenFig8.html"><img src="Hyvonen.figure8-t.jpg" alt="Search architecture" width="400" height="330" border="0"></a></p>
+  <p class="caption"><a name="Fig8"></a>Figure 8. Multi-search architecture. The global query is 
+      answered independently at each local database.</p>
+  <p>A problem of multi-search is that by processing the query 
+      independently at each <i>local</i> database, the <i>global</i> dependencies, 
+      associations between objects in different collections, are difficult to find. 
+      Exposing such global semantic associations between collection items is one 
+      of the main goals of MuseumFinland. The system cannot therefore be based on 
+      the traditional multi-search paradigm. Instead, local collections are first 
+      consolidated into a global repository, and queries are answered based on it, 
+      as illustrated in figure 9.</p>
+  <p class="caption"><a href="hyvonenFig9.html"><img src="Hyvonen.figure9-t.jpg" alt="Information retrieval" width="400" height="317" border="0"></a></p>
+  <p class="caption"><a name="Fig9"></a>Figure 9. Information retrieval in MuseumFinland. Local 
+      database contents are first merged and the query is evaluated with respect 
+      to global interrelated data. </p>
+  <p>Museums join the system by producing collection metadata 
+      in RDF format from their databases. Figure 10 depicts the process. The database 
+      contents are first transformed into XML form. Next, the XML is transformed 
+      into the final RDF metadata form used by the portal. Below, we explain and 
+      describe these transformations briefly; a more detailed description can be 
+      found in Hyv&ouml;nen et al., 2004.</p>
+  <p class="caption"><a href="hyvonenFig10.html"><img src="Hyvonen.figure10-t.jpg" alt="Transforming databases" width="400" height="291" border="0"></a></p>
+  <p class="caption"><a name="Fig10"></a>Figure 10. Transforming databases into RDF format.</p>
+  <h2>Database to XML Transformation</h2>
+  <p>The idea of the database to XML transformation (Raatikka 
+      and Hyv&ouml;nen, 2002) is to re-represent selected database content in XML format 
+      defined by an XML Schema. It tells what (meta)data must be provided for describing 
+      collection items. The reason for using an explicit XML level here is to provide 
+      a simple, open language by which the participating museums can agree upon 
+      the syntax for representing collection data. Based on the schema, each collection 
+      item has an XML description of its own called the <i>XML card</i>. For example, 
+      the XML card representing a calendar is presented below. (The example is translated 
+      and slightly simplified from the original version in Finnish.)</p>
+  <p class="code">&lt;artifactCard created=&quot;2003-7-29 10:43:16&quot;&gt;</p>
+  <p class="code">  &lt;artifactId&gt; ECM:22461:1 &lt;/artifactId&gt;</p>
+  <p class="code">  &lt;artifactType&gt; Christmas calendar, </p>
+  <p class="code">         Finland's Scouters Assoc. &lt;/artifactType&gt;</p>
+  <p class="code">  &lt;museum&gt; Espoo City Museum &lt;/museum&gt;</p>
+  <p class="code">  &lt;material&gt; cardboard &lt;/material&gt;</p>
+  <p class="code">  &lt;keywords&gt;</p>
+  <p class="code">    &lt;keyword&gt; Christmas &lt;/keyword&gt;</p>
+  <p class="code">    &lt;keyword&gt; calendar &lt;/keyword&gt;</p>
+  <p class="code">    &lt;keyword&gt; scouts &lt;/keyword&gt;</p>
+  <p class="code">  &lt;/keywords&gt;</p>
+  <p class="code">  &lt;placeOfUsage&gt; Tapiola, Espoo &lt;/placeOfUsage&gt;</p>
+  <p class="code">  &lt;creator&gt; Ulla Vaajakoski &lt;/creator&gt;</p>
+  <p class="code">  ...</p>
+  <p class="code">  &lt;photo&gt; photos/image3451.jpg &lt;/photo&gt;</p>
+  <p class="code">&lt;/artifactCard&gt;</p>
+  <p>An XML card presents the main <i>features</i> of a collection 
+      object by sub-elements. The values of the features, such as the string Espoo 
+      City Museum in the sub-element &lt;museum&gt;, are read from the underlying 
+      database tables.</p>
+  <h2>XML to RDF Transformation</h2>
+  <p>Each XML card with its string-valued feature values is 
+      transformed into an <i>RDF card</i> with similar RDF properties, but the string 
+      values are transformed into the Uniform Resource Identifiers (URI) of the 
+      corresponding classes and individuals in the ontologies. For example, the 
+      XML card above in RDF form is:</p>
+  <p class="code">&lt;rdf:RDF
+  <p class="code">  xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;</p>
+  <p class="code">  xmlns:card=&quot;http://www.fms.fi/RDFCard#&quot;&gt;</p>
+  <p class="code"> &lt;card:RDFCard </p>
+  <p class="code">   rdf:about=&quot;http://www.fms.fi/rdfCard#card11023&quot;&gt; 
+    </p>
+  <p class="code">   card:artifactId=&quot;16851&quot;</p>
+  <p class="code">   card:artifactType-www=&quot;calendar&quot;</p>
+  <p class="code">   card:artifactType=&quot;http://www.fms.fi/artifacts#calendar&quot;    
+    </p>
+  <p class="code">   card:museum-www=&quot;Espoo City Museum&quot;</p>
+  <p class="code">   card:museum=&quot;http://www.fms.fi/agents#EspooCityMuseum&quot;</p>
+  <p class="code">   card:material-www=&quot;cardboard&quot;</p>
+  <p class="code">   card:material=&quot;http://www.fms.fi/materials#cardboard&quot;</p>
+  <p class="code">   ...</p>
+  <p class="code"> &lt;/card:RDFCard&gt;</p>
+  <p class="code">...</p>
+  <p class="code">&lt;/rdf:RDF&gt;</p>
+  <p>The features of collection items fall into two categories: 
+      <i>literal </i>features and <i>ontological</i> features. The value <i>x</i> 
+      of each feature <i>p</i> in the XML card (e.g., material value <i>cardboard</i>) 
+      is represented by the corresponding literal property <i>p</i>-www=<i>x</i> 
+      in the RDF card (e.g., material-www="cardboard"). Literal property values 
+      will be shown to the user in the user interface (cf. the metadata values in 
+      the middle on top in figure 6). In addition, each ontological feature in the 
+      XML card will be represented by an additional <i>ontological property</i> 
+      with same name in the RDF card. Its value is a URI that relates the card to 
+      the ontological RDF resource(s) in the underlying knowledge base. The classes 
+      and individuals referred to in the RDF card are defined by the set of RDFS 
+      ontologies of Table 2.</p>
+  <p>For example, the feature artifactId 
+      is literal and is not connected with the ontology resources in the above RDF 
+      card. In contrast, the ontological feature material 
+      is represented by a literal property www-material 
+      and the ontological property material 
+      that has an RDF resource (URI) as its value. This URI connects the card resource 
+      with the material ontology and through it with other resources.</p>
+  <p>Two tools have been implemented for facilitating the XML 
+      to RDF transformation: Terminator and Annomobile. Terminator is used for creating 
+      <i>term cards</i>, that essentially define a mapping between words and expressions 
+      used at the XML level and the corresponding ontological concepts (URIs). Term 
+      cards make MuseumFinland flexible with respect to variance in terminologies 
+      used at different museums and by different catalogers. The museums can keep 
+      their local terminological conventions as long as they tell the meaning (URI) 
+      of their own terms by term cards.</p>
+  <p>Given a set of term cards and ontologies, Annomobile performs 
+      XML to RDF transformation. This cannot be done fully automatically due to 
+      unknown terms and complicated descriptions encountered in the databases, and 
+      to homonymous terms. Annomobile can, however, identify such situations and 
+      point them out to a human editor who has to make the right decisions and corrections 
+      by hand. In our work, we have used the Protégé-2000 ontology editor (http://protege.stanford.edu) for editing the ontologies, 
+      term cards and RDF cards. Its user interface is simple enough to be used by 
+      museum personnel who usually do not have programming skills.</p>
+  <p>An important side effect of the XML to RDF transformation 
+      is <i>semantic enrichment</i> where new meaning is automatically added to 
+      the collection data in three ways. </p>
+  <p><b>First,</b> semantic associations between related collection 
+      item instances emerge automatically through shared resources (URIs). For example, 
+      a particular bench from  Museum A may have the same manufacturer as a footstool 
+      in Museum B: this may be an important piece of information to the user. </p>
+  <p><b>Secondly</b>, generic ontological relations defined 
+      for the classes are automatically inherited by instance data. For example, 
+      the class <strong>Ylioppilaslakit</strong> (a special student’s white cap used in Finland) 
+      has a property that relates the concept to the class <strong>Ylioppilasjuhlat</strong> (a graduation 
+      ceremony event). This means that all individuals of the class <strong>Ylioppilaslakit</strong>      will have this property as well. As a result, for each student cap, recommendation 
+      links to other objects related to graduation ceremonies can be created. The 
+      museum cataloguer does not have to provide this information as a piece of 
+      metadata for each individual cap. </p>
+  <p><b>Thirdly</b>, the knowledge base can be enriched semantically 
+      by logical rules defining expert domain knowledge concerning the exhibition. 
+      In our case, such rules have been used as a basis for the semantic recommendations.</p>
+  <h1>Discussion</h1>
+  <h2>Contributions</h2>
+  <p>This paper presents an overview of MuseumFinland from the 
+      end-user’s and museum’s viewpoints. In our work, the use of ontologies and 
+      semantic Web technologies turns out to be useful in many ways:</p>
+  <ul>
+    <li><b>Exact definitions.</b> By using ontologies, museums can define 
+          the concepts used in cataloguing in a precise, machine-understandable way.</li>
+    <li><b>Terminological interoperability.</b> The terms used in different 
+          institutions can be made mutually interoperable by mapping them onto common 
+          shared ontologies.</li>
+    <li> 
+          <b>Ontology sharing.</b> Ontologies provide means for making 
+          exact references to the external world. For example, the Locations ontology 
+          (villages, cities, countries, etc.) and the Actors ontology (persons, companies, 
+          etc.) is shared by the museums in order to make correct and interoperable 
+          references.</li>
+    <li> 
+          <b>Automatic content enrichment.</b> Ontological class definitions, 
+          rules, and consolidated metadata enrich collection data semantically.</li>
+    <li><b>Intelligent services.</b> Ontologies can be used as a basis 
+          for intelligent services to the end-user, in our case for the semantic search 
+          engine and the recommendation system.</li>
+  </ul>
+  <p>The first pilot version of MuseumFinland shows that underlying 
+      ideas presented in this paper are feasible and that the technology scales 
+      up to at least 10,000 cards and view categories. The response times for search 
+      queries have typically been under 2 seconds on an ordinary PC server.</p>
+  <h2>Related Work</h2>
+  <p>The idea of the view-based multi-facet search has been 
+      developed before ( e.g., in Pollitt, 1998; Hearst et al., 2003). The novelty 
+      of MuseumFinland lies in its capability of using RDF(S) ontologies and inference 
+      rules as the basis of search. The idea is to combine virtues of the view-based 
+      and ontology-based search paradigms (Hyv&ouml;nen et al., 2003). The multi-facet 
+      search algorithm of Ontogator itself is independent from the underlying ontologies 
+      and their semantics. The <i>semantic</i> flavor of the system is based on 
+      the Ontodella Prolog-server and its knowledge base in two ways. </p>
+  <p class=MsoBodyTextIndent><b>First,</b> the facet hierarchies for Ontogator are created by a set of logical 
+      rules that depend on the ontologies used. For example, a facet can be based 
+      on a subclass-of or a part-of property. </p>
+  <p class=MsoBodyTextIndent><b>Secondly</b>, the museum objects are associated with the facet categories by using 
+      the underlying ontological relations and inference rules.</p>
+  <p>This idea of linking collection items with semantic associations 
+      is related to Topic Maps (Pepper, 2000). However, in our case the links are 
+      not given by a topic map but are determined by logical inference using the 
+      underlying RDFS ontology and RDF metadata.</p>
+  <p> Another application of this idea of generating semantically 
+      linked static HTML sites from RDF(S) repositories is presented in Hyv&ouml;nen 
+      et al., 2003b. In the HyperMuseum (Stuer et al., 2001), collection items are 
+      also semantically linked with each other. Here linking is based on shared 
+      words in the metadata and their linguistic relationships, such as synonymy 
+      and antonymy. In contrast, our system is not based on words but on ontological 
+      references in the underlying RDF(S) knowledge base. As a result, the links 
+      can be defined freely in terms of logical rules. The idea of annotating cultural 
+      artifacts in terms of multiple ontologies has been explored, e.g., in Hollink 
+      et al., 2003. Other ontology-related approaches used for indexing cultural 
+      content include ICONCLASS (<a href="http://ww.iconclass.nl/" target="_blank">http://ww.iconclass.nl</a>) 
+      (van den Berg, 1995) and Art and Architecture Thesaurus (AAT) (<a
+href="http://www.getty.edu/research/conducting_research/vocabularies/aat/" target="_blank">http://www.getty.edu/research/ conducting_research/vocabularies/aat/</a>) 
+      (Peterson, 1994), and CIDOC CRM (<a
+href="http://cidoc.ics.forth.gr/" target="_blank">http://cidoc.ics.forth.gr/</a>) (Doerr, 
+      2003).</p>
+  <h2>Further work</h2>
+  <p>Several practical problems were encountered in transforming 
+      the database contents into RDF. Even if the XML card is syntactically well-formed, 
+      several semantic interpretation problems have to be addressed during the XML 
+      to RDF transformation. The values of the features in XML cards may be complicated 
+      expressions and come from various data field in the database. For example, 
+      value <i>assoc Christmas calendar, Finland's Scouters</i>. is not a term but 
+      a complex phrase. The same concept may be referred to with different syntactic 
+      expressions (e.g., <i>Scouters' Christmas calendar</i>) depending on the cataloguer 
+      and notational conventions used. Using standard terminology in cataloguing 
+      would help in solving this problem, but in practice this is impossible, and 
+      there will be variations in descriptions.</p>
+  <p>The XML to RDF transformation cannot be fully automated 
+      due to problems of homonymy and emergence of new terms and concepts with new 
+      collection items. To solve the problem, cataloging systems should be enhanced 
+      with ontology support. Ways of collaboration between museum content providers 
+      and portal maintenance people need to be developed in order to lift MuseumFinland 
+      from an application into a continuous publication process for the participating 
+      museums. For example, protocols for adding, modifying, and retracting RDF 
+      cards and ontology resources according to the wishes of the museums need to 
+      be developed.</p>
+  <p>More content analysis work is needed to develop a set of 
+      recommendation predicates that would be of most interest to the users. It 
+      is possible that their implementation would require changes in the ontologies 
+      and better annotated content.</p>
+  <p>In the near future we plan to extend the collections of 
+      the system with paintings and graphics from the Finnish National Gallery. 
+      We also plan to incorporate in the system a database from the National Museum 
+      describing the most valuable cultural sites in Finland. Our goal is to show 
+      that RDF can be used as the basis for making very different kind of contents 
+      semantically interoperable.</p>
+  <h2>Acknowledgements</h2>
+  <p class=AcknowedgementsText>The Espoo City Museum, National Museum, Lahti City 
+      Museum, and Finnish National Gallery made their collections available for 
+      our research. Our work is funded mainly by the National Technology Agency 
+      Tekes, Nokia, TietoEnator, the Espoo City Museum, the Foundation of the Helsinki 
+      University Museum, the National Board of Antiquities, and the Antikvaria Group 
+      consisting of some 20 Finnish museums. </p>
+  <h2>References</h2>
+  <p class=ReferencesText>Berners-Lee, T., J. Hendler &amp; O. Lassila 
+      (2001). The semantic Web. <i>Scientific American</i>, 284(5):34–43, 
+      May.</p>
+  <p class=ReferencesText>Brickley, D. &amp; R. V. Guha (2000). Resource Description 
+      Framework (RDF) Schema Specification 1.0, W3C Candidate Recommendation 2000-03-27, 
+      February. <a
+href="http://www.w3.org/TR/2000/CR-rdf-schema-20000327/" target="_blank">http://www.w3.org/TR/2000/CR-rdf-schema-20000327/</a>.</p>
+  <p class=ReferencesText>Doerr, M. (2003). The CIDOC CRM—An ontological approach 
+      to semantic interoperability of metadata. <i>AI Magazine</i> 24(3):75–92.</p>
+  <p class=ReferencesText>English, J., M. Hearst, R. Sinha, K. Swearingen &amp; 
+      K.-P. Lee (2003). Flexible search and navigation using faceted metadata. Technical 
+      report, University of Berkeley, School of Information Management and Systems.</p>
+  <p class=ReferencesText>Fensel, D., J. Hendler, H. Lieberman &amp; 
+      W. Wahlster (Eds.) (2002). <i>Weaving the Semantic Web</i>. The MIT 
+      Press.</p>
+  <p class=ReferencesText>Foskett, D. (1980). Thesaurus. In <i>Encyclopaedia of 
+      Library and Information Science</i>, Volume 30, 416–462. Marcel Dekker, New 
+      York.</p>
+  <p class=ReferencesText>Hearst, M., A. Elliott, J. English, R. Sinha, K. Swearingen 
+    &amp; K.-P. Lee (2002). Finding the flow in Web site search. <i>CACM</i>, 
+      45(9):42–49.</p>
+  <p class=ReferencesText>Hollink, L., A. Th. Schereiber, J. Wielemaker &amp; 
+      B.J. Wielinga (2003). Semantic annotations of image collections. In <i>Proceedings 
+      of KCAP'03</i>, Florida, October.</p>
+  <p class=ReferencesText>Hyv&ouml;nen, E., S. Kettula, V. Raatikka, 
+      S. Saarela &amp; K. Viljanen (2002). Semantic interoperability on the 
+      Web. Case Finnish Museums On-line. In (Hyv&ouml;nen &amp; Klemettinen), 41–53. 
+      <a href="http://www.hiit.fi/publications/" target="_blank">http://www.hiit.fi/publications/</a>.</p>
+  <p class=ReferencesText>Hyv&ouml;nen, E., &amp; M. Klemettinen (Eds.) (2002). Towards 
+      the semantic Web and Web services. <i>Proceedings of the XML Finland 2002 
+      Conference</i>. HIIT Publications 2002-03. Helsinki Institute for Information 
+      Technology (HIIT), Helsinki, Finland. <a
+href="http://www.hiit.fi/publications/" target="_blank">http://www.hiit.fi/publications/</a>.</p>
+  <p class=ReferencesText>Hyv&ouml;nen, E., A. Styrman, and S. Saarela (2002). Ontology-based 
+      image retrieval. In (Hyv&ouml;nen &amp; Klemettinen, 2002), 15–27. <a href="http://www.hiit.fi/publications/" target="_blank">http://www.hiit.fi/publications/</a>.</p>
+  <p class="ReferencesText">Hyv&ouml;nen, E., S. Saarela &amp; K. Viljanen 
+        (2003a). Ontogator: combining view- and ontology-based search with 
+        semantic browsing. In <i>Proceedings of the XML Finland 2003 Conference</i>. 
+      <a href="http://www.cs.helsinki.fi/u/eahyvone/publications/xmlfinland2003/yomXMLFinland2003.pdf" target="_blank">http://www.cs.helsinki.fi/u/eahyvone/publications/xmlfinland2003/yomXMLFinland2003.pdf</a>.      </p>
+  <p class="ReferencesText">Hyv&ouml;nen, E., A. Valo, K. Viljanen &amp; M. Holi (2003b). Publishing semantic Web content as semantically linked 
+        HTML pages. In <i>Proceedings of XML Finland 2003 Conference</i>. <a href="http://www.cs.helsinki.fi/u/eahyvone/publications/xmlfinland2003/swehg_article_xmlfi2003.pdf" target="_blank">http://www.cs.helsinki.fi/u/eahyvone/publications/xmlfinland2003/swehg_article_xmlfi2003.pdf</a>. </p>
+  <p class=ReferencesText>Hyv&ouml;nen, E., M. Salminen, S. Kettula &amp; M. Junnila (2004). A Content Creation Process for the Semantic Web. 
+      Forthcoming paper. <a href="http://www.cs.helsinki.fi/u/eahyvone/publications/contentCreation.pdf" target="_blank">http://www.cs.helsinki.fi/u/eahyvone/publications/contentCreation.pdf</a></p>
+  <p class=ReferencesText>Lassila, O. &amp; R. R. Swick (Eds.) (1999). Resource 
+      description framework (RDF): Model and syntax specification. Technical report, 
+      W3C, February. W3C Recommendation 1999-02-22, <a href="http://www.w3.org/TR/REC-rdf-syntax/" target="_blank">http://www.w3.org/TR/REC-rdf-syntax/</a>.</p>
+  <p class=ReferencesText>Lee, K.-P., K. Swearingen, K. Li &amp; M. Hearst (2003). 
+      Faceted metadata for image search and browsing. <i>Proceedings 
+      of CHI 2003</i>, April 5-10, Fort Lauderdale, USA. Association for 
+      Computing Machinery (ACM), USA.</p>
+  <p class=ReferencesText>Leskinen, R. L. (Ed.) (1997). <i>Museoalan asiasanasto</i>. 
+      Museovirasto, Helsinki, Finland.</p>
+  <p class=ReferencesText>Pepper, S. (2000). The TAO of Topic Maps. In <i>Proceedings 
+      of XML Europe 2000</i>, Paris, France. <a href="http://www.ontopia.net/topicmaps/materials/rdf.html" target="_blank">http://www.ontopia.net/topicmaps/materials/rdf.html</a>.</p>
+  <p class="ReferencesText">Peterson, T. (1994). Introduction to the Art and Architecture 
+        Thesaurus. <a href="http://www.getty.edu/research/conducting_research/vocabularies/aat/" target="_blank">http://www.getty.edu/research/conducting_research/vocabularies/aat/</a>.
+      </p>
+  <p class=ReferencesText>Pollitt, A. S. (1998). The key 
+      role of classification and indexing in view-based searching. Technical report, 
+      University of Huddersfield, UK. <a href="http://www.ifla.org/IV/ifla63/63polst.pdf" target="_blank">http://www.ifla.org/IV/ifla63/63polst.pdf</a>.</p>
+  <p class=ReferencesText>Raatikka, V. &amp; E. Hyv&ouml;nen (2002). 
+      Ontology-based semantic metadata validation. In (Hyv&ouml;nen &amp; Klemettinen, 
+      2002), 28–40, 2002.</p>
+  <p class=ReferencesText>Sihvo, P. (Ed.) (1996). <i>Kulttuuriaineiston luokitus. 
+      Outline of cultural materials</i>. Museovirasto, Helsinki, Finland.</p>
+  <p class=ReferencesText>Sowa, J. (2000). <i>Knowledge Representation. Logical, 
+      Philosophical, and Computational Foundations</i>. Brooks/Cole.</p>
+  <p class=ReferencesText>Stuer, P., R. Meersman &amp; S. De Bruyne 
+      (2001). The HyperMuseum theme generator system: Ontology-based internet 
+      support for active use of digital museum data for teaching and presentations. 
+      In Bearman, D. &amp; J. Trant (Eds.), <i>Museums and the Web 2001: Selected 
+      Papers</i>. Archives &amp; Museum Informatics. <a href="http://www.archimuse.com/mw2001/papers/stuer/stuer.html" target="_blank">http://www.archimuse.com/mw2001/papers/stuer/stuer.html</a>.</p>
+  <p class=ReferencesText>van den Berg, J. (1995). Subject retrieval in pictorial 
+      information systems. In <i>Proceedings of the 18th International Congress 
+      of Historical Sciences</i>, Montreal, Canada, 21–29. <a href="http://www.iconclass.nl/texts/history05.html" target="_blank">http://www.iconclass.nl/texts/history05.html</a>.</p>
+  <p class="ReferencesText">Wielemaker, J., A. Th. Schereiber &amp; B. J. Wielinga (2003). Prolog-based infrastructure for RDF: performance 
+        and scalability. In <i>Proceedings ISWC'03</i>, Florida. Springer–Verlag, 
+        Berlin, October.</p>
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+
+<p class="smallPurple">&nbsp;</p>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2004/papers/hyvonen/hyvonen.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:45:53 GMT -->
+</html>

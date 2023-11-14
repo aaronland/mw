@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2006-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2006/papers/edson/edson.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:37:09 GMT -->
+<head>
+	<!-- InstanceBeginEditable name="HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2006: Papers: Edson, Data Access Strategy</title>
+<!-- InstanceEndEditable -->
+	<!-- InstanceBeginEditable name="metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2006" />
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Keywords" -->
+<meta name="Keywords" content="data, metadata, datbase, web, strategy, integration, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Description" -->
+<meta name="Description" content="Museums and the Web 2006: the international conference for culture and heritage on-line" />
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2005" />
+<!-- InstanceEndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="../../css/mw2006.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+
+<!-- TEMPLATE CHANGE HISTORY -->	
+<!-- Updated Thursday October 6th 2005 by Peter Flaschner -->
+<!-- jt - 051006 - 4:47 - directory for images changed to absolute reference + fixed rotate script -->
+<!-- jt - 051101 - 5:00 pm - online registration and bow update -->
+<!-- jt - image rotate script has to be outside of editable region to be updated in all pages -->
+<!-- jt - 051201 - added editable region around imageRotate to enable customization of rotated images on specific pages; added editable region around first image to enable customization; moved css files to own directory -->
+<!-- jt - 060104 - print.css relinked -->
+
+<!-- InstanceBeginEditable name="ImageRotateScript" -->
+<!-- no rotating images in papers -->
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="PageScript" -->
+<link rel="stylesheet" href="../../css/mw2006-inside.css" type="text/css" />
+<link rel="stylesheet" href="../../css/papers.css" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+<body  onload="initImgRotation()">
+	<div id="container">
+		<div id="header" onclick="location.href='../index.html';" style="cursor:pointer;">
+		</div>
+		<div id="top-nav">
+			<ul id="top-nav-list">
+				<li><a href="../../register/index.html">Register</a></li>
+				<li><a href="../../dates/index.html">Key Dates</a></li>
+				<li><a href="../../sescal/index.html">Schedule</a></li>
+				<li><a href="../../local/index.html">Local Info</a></li>
+			</ul>
+		</div>
+		<div id="header-photo">
+			<!-- InstanceBeginEditable name="header-photo" -->
+   <a href="../../images/credits.html"><img src="../../images/rotate/header-pic.jpg"  alt="MW-photo" /></a>
+		<!-- InstanceEndEditable -->	
+		</div>
+		<div id="date">
+			March 22-25, 2006<br />
+			Albuquerque, New Mexico
+		</div>
+		<div  id="title">
+			<h1> 
+				<!-- InstanceBeginEditable name="PageTitle" -->
+				<a href="../../speakers/index.html">Papers:</a> Data Access Strategy
+				<!-- InstanceEndEditable -->
+   			</h1>
+		</div>
+		<div id="main-content">
+			<div id="callout">
+ 	     	 </div>
+			<div id="papers">	 
+		  		<div id="intro-paragraph">
+					<!-- InstanceBeginEditable name="IntroParagraph" -->
+    		
+	<h3>Michael Edson, Smithsonian American Art Museum, USA</h3>
+	<p><a href="http://www.americanart.si.edu/" target="_blank">http://www.americanart.si.edu</a></p>
+	<div id="abstract">
+		<h5>Abstract</h5>
+		<p>Data complexity is the bane of museum Web development. Too much data, complex business rules, ambiguous ownership, multiple platforms, poor documentation, and inadequate funding force many museums to step away from information access projects just at the moment when they are beginning to have enough information to make integration useful. A data strategy focused on reducing complexity in executive, technological, and data-centric domains can provide a stable platform for the development of Web sites, kiosks, and handheld computer guides and can help organizations realize the full value of their information.</p>
+	<p id="keyword"><strong>Keywords</strong>: data, metadata, database, web, strategy,
+	  integration</p>
+	</div>
+	
+
+  				<!-- InstanceEndEditable -->
+		  		</div>
+				<!-- InstanceBeginEditable name="BodyText" --> 
+<h2>Introduction</h2>
+	<p>This paper is about using data. There has been a lot written about distributed
+	  search, federated search, metadata, z39.50, and other ways of facilitating
+	  access to digital information. But while these subjects are enormously important,
+	  they don&rsquo;t deal with the foundational challenges we face in using and nurturing
+	  museum data over time; namely, how to build a stable, ongoing program of data-centric
+	  Web sites and applications when your museum has a large number of data sources,
+	  complex business rules, numerous owners and stewards, multiple platforms, and
+	  everything &ndash; servers, platforms, vendors, standards, business processes, and
+	  staff &ndash; is in a constant state of change.</p>
+	<p>Most of our museums have spent part of the last 30 years building and buying applications to make and manage data, and many of us have spent part of the last 10 years trying to leverage that information for use on the Web, often making new data stores in the process. Unfortunately for us now, most of these efforts resulted in stovepipes  &ndash; isolated islands of code and information  &ndash; each with its own maintenance nuances, data structures, documentation (if you&rsquo;re lucky), and resident experts (again, if you&rsquo;re lucky). When the need came for integration, the result tended to be another stovepipe, often with brittle, difficult to maintain code and a related and equally brittle set of new business rules.</p>
+	<p>For a long time management and the public were oblivious to this problem. As long as the next on-line exhibition got produced, everyone was happy. But competition for visitors and prestige, the earnest desire to make compelling tools for the public, and the need to manage behind-the-scenes business information have created the expectation that museums will be able to do the same amazing things with data that Amazon and Google can. </p>
+	<ul>
+		<li>Why can&rsquo;t the public search all of our collections on-line?</li>
+		<li>Why can&rsquo;t a tool written for one on-line exhibition be reused on another?</li>
+		<li>Why can&rsquo;t our new handheld guide have access to all the movies from our Web site?</li>
+		<li>Why can&rsquo;t museum members renew their memberships on-line?</li>
+		<li>Why can&rsquo;t management analyze who is and isn&rsquo;t buying tickets on-line and coming to public programs?</li>
+		<li>Why can&rsquo;t we track trends and visitation across all of our electronic venues, including Web sites, kiosks, handhelds, phone tours, and podcasts? </li>
+	</ul>
+	<p>Individually, these challenges are all solvable using familiar development paradigms: throw some money and resources at them for a few years and you&rsquo;ll have a solution. But start adding them up and the astute, the wary, and the previously burned will fear the onset of unmanageable complexity, diminishing returns, and a maintenance nightmare that no Web or Information Technology (IT) manager wants to live with. Because of this many museums are forced to step away from important information access projects just at the moment when they are beginning to have enough information to make integration necessary and useful.</p>
+	<p>What&rsquo;s generally missing in this scenario is a comprehensive framework for addressing the technology, human resources, and business-management factors that feed organizational data complexity. This paper explores how to identify these factors, their relevance to museum Web and information-management projects, and how to mitigate them through the development of a data strategy so important projects can move forward and be sustained over time.</p>
+	<h2>Why a Data Strategy</h2>
+	<p>SAAM began its exploration of data strategy with a high-level study of our reopening
+	  requirements. In the spring of 2004 SAAM worked with Ironworks Consulting (Richmond
+	  Virginia), using their Enterprise Assessment and Solution Modeling (EASM) process
+	  to understand the dimensions of our vision and capabilities and lay out a high-level
+	  road map and budget for moving forward. The cornerstone of this process was a
+	  series of 19 workshops with museum staff and other partners in which we unearthed
+	  and documented &ldquo;as-is&rdquo; technologies, staffing, business processes,
+	  and the overall state of the museum&rsquo;s data landscape. The team analyzed
+	  SAAM&rsquo;s information technology Creative Brief, and 21 business &ldquo;use
+	  cases&rdquo; that described what we wanted the public to be able to do on our
+	  Web sites, handhelds, and kiosks when we reopened. (More on use cases can be found
+	  in Writing Effective Use Cases (Cockburn, 2000). Creative Briefs, sometimes called
+	  Design Briefs, are widely used in marketing, product design, and Web development.
+	  A good overall treatment can be found in Creating the Perfect Design Brief: How
+	  to Manage Design for Strategic Advantage (Phillips, 2004) and through various
+	  on-line resources.)</p>
+	<p>The EASM process highlighted a number of opportunities and problems. To frame it as a classic good-news bad-news story, the good news was that we were sitting on a treasure-trove of underutilized art-information that could become the kernel of exciting public content. The bad news was that SAAM&rsquo;s data resided in 19 on-line exhibitions and 29 separate databases containing almost a million records and over 30,000 images. Information lived in a variety of systems and formats, was managed by a variety of departments, was tied together with a variety of applications. There were varying levels of knowledge about what the data actually contained and where it came from. Business rules  &ndash; the management rules and procedures governing how information could be used and how it could change  &ndash; were often undocumented and were frequently taken for granted. </p>
+	<p>To be fair, we found many of the information resources, particularly those at the core of collections management, to be carefully and professionally managed, but the creative opportunity of reopening forced SAAM to consider all of its information resources as a singularity. What we found both excited us and made us realize how much complexity we had to deal with.</p>
+	<p>For example, SAAM manages two artwork databases that should be integrated for public access. The Inventory of American Painting and Sculpture (http://americanart.si.edu/search/search_data.cfm) references over 360,000 works of art in public and private collections. SAAM&rsquo;s permanent collection database (http://americanart.si.edu/search/search_artworks.cfm) references over 34,000 objects, in The Museum System (TMS). Both TMS and the Inventory are treasured SAAM assets representing countless of hours of staff time and millions of dollars of investment to date, and both TMS and the Inventory are available on-line, but we force the public to search and use the systems separately: the two resources are not integrated, federated, or consolidated. SAAM would like to provide a combined search for these two databases and develop software tools (like a myCollection scrapbook or an &ldquo;artwork near you&rdquo; page that visualized how objects relate to a given geographic location) that work seamlessly on top of both resources, but tying these two sets of data together as a standalone project with our traditional development and management approach is fraught with risk. It could be done and done well, but odds are that the resulting functionality would be brittle: small changes in either system, technically or managerially, would break the code. They use entirely separate systems of unique identifiers for artworks and artist names, have completely different database and cataloguing standards, different management teams with different business processes and priorities, different funding, different software-upgrade cycles, and different maintenance schedules. And these are just two of our 29 databases! </p>
+	<p>This example and others like it begged for more powerful software development tools and a strategic approach to managing complexity so data could be assembled and used efficiently for a variety of purposes. They also beg the question of whether this particular integration challenge would be as severe had an overarching data strategy existed to guide the acquisition and development of these systems in the first place.</p>
+	<h2>Established Projects</h2>
+	<p>Challenges like the TMS/Inventories integration detailed above represented optional development projects that SAAM could produce to serve the public better. During the EASM process SAAM grappled with the implications of several funded, staffed, and underway projects that could have a large impact on Web development and the institutional data environment. </p>
+	<ul>
+		<li><strong>The Luce Foundation Center for American Art</strong> will be a new visible storage center featuring 3,300 artworks in 64 secure glass cases. Requirements include maintaining content on Kiosks, handhelds, and the Web, and drawing content from SAAM&rsquo;s collection information system (TMS) and a content management data store (TeamSite).</li>
+		<li><strong>The Lunder Conservation Center</strong> will be the first art conservation facility that allows the public permanent behind-the-scenes access to the preservation work of museums. Requirements include maintaining content to feed Kiosks, handhelds, and the Web.</li>
+		<li><strong>A SAAM/NPG Handheld computer guide</strong> will give the public access to extended multimedia content for SAAM, the National Portrait Gallery (NPG), and the Luce and Lunder centers. Requirements include the ability to draw content from both museums&rsquo; collection information systems and to have interoperability with SAAM/NPG Web site components and contact databases.</li>
+		<li><strong>A Joint SAAM/NPG Membership</strong> program will allow the public to join both museums simultaneously. Requirements include a workflow and data store for member information and direct e-mail solicitations.</li>
+		<li><strong>Joint SAAM/NPG Visit and Calendar Websites</strong> will give the public a single point of entry for planning visits to both collections. Requirements include a shared calendar application, self-service e-newsletter registration, content management functionality, and data stores for member information.</li>
+	</ul>
+	<p>Each of these initiatives implies interoperability with multiple existing data stores, the creation of new data stores, the development of a fair amount of new code and/or the development of middleware between existing systems, the discovery, documentation, and reconciliation of multiple sets of existing business processes, and the creation of new business processes. Each initiative is a high-visibility public-facing project that must be built on a foundation of solid technology, business management, and data.</p>
+	<h2>Complexity</h2>
+	<p>We have found that a few factors responsible for data complexity in our initiatives come up time and time again. They fall into three categories: Executive Factors, Technology Factors, and Data Factors.</p>
+	<h4>Executive Factors</h4>
+	<ul>
+		<li>Objectives  &ndash; Data management objectives are often poorly understood and articulated.</li>
+		<li>Ownership/Stewardship  &ndash; Data within a museum is often owned and managed in a loose collaboration between a number of departments.</li>
+		<li>Keystone Employees  &ndash; Often there are only a handful of staff members who really know the history and status of a given data collection. Finding these people and getting commitments for their time is not always easy.</li>
+		<li>Business Rules  &ndash; Rules determine when and how information can be used and updated, and in our case include security and privacy requirements.</li>
+		<li>Perception of Value  &ndash; Museums struggle to measure the monetary value of their data, and therefore have difficulty justifying long-term investments for its care and feeding.</li>
+		<li>Project Funding  &ndash; Because museum funding is often tied to individual, stand-alone research or exhibition projects, these efforts tend to produce silos of data and code.</li>
+	</ul>
+	<h4>Technology Factors</h4>
+	<ul>
+		<li>Physical Platforms  &ndash; data live on a variety of operating systems and servers,
+		  in a variety of geographic locations.</li>
+		<li>Application Platforms  &ndash; data live behind the veil of numerous software applications
+		  allowing varying degrees of transparency and access. Some applications are professionally
+		  developed and stable, others are not.</li>
+		<li>Documentation  &ndash; uneven or non-existent documentation of hardware, software, and systems hampers efficient integration and data use</li>
+	</ul>
+	<h4>Data Factors</h4>
+	<ul>
+		<li>Data Quality  &ndash; Data often exist in states of uneven or unknown quality.</li>
+		<li>Data Provenance  &ndash; It is often difficult to tell where data came from and when
+		  and how things might have changed.</li>
+		<li>Mixture of Data Types  &ndash; Many museums have data in structured and unstructured states, in SQL-friendly relational databases, XML, MS Word, HTML, plain text, and other formats.</li>
+		<li>Business Metadata  &ndash; exactly what does a value of &ldquo;true&rdquo; mean in &ldquo;user field 1&rdquo; in that collection information system? The real meaning (semantic meaning) of most structured data is not well documented. </li>
+		<li>Trusted Source of Record  &ndash; every piece of information in an organization (the title of an artwork, for example) should have one and only one definitive &ldquo;storage location&rdquo; in an organization, but this is often not the case.</li>
+	</ul>
+	<p>Flaws or weaknesses in any of these areas can undermine data integration and application development efforts and put the long-term operation of important systems at risk.</p>
+	<p>Another way of thinking about the complexity factors is as indicators of the value that can be realized from data in your possession. For example, if you&rsquo;re a treasure hunter and have multiple databases of maps showing the locations of buried treasure, it is less valuable if you don&rsquo;t have metadata that tells you which records came from fieldwork and which were culled from works of fiction (a data provenance issue), or if the person who knows how to generate reports from the system is not available to you (a keystone employee issue). The overall goal of data strategy is to raise the potential value of information in an organization by mitigating problems across the complexity factors.</p>
+	<h2>Mergers and Acquisitions</h2>
+	<p>The EASM process made us realize that in many ways SAAM had a management challenge similar to that of a corporation undergoing a series of mergers and acquisitions. With our reopening we were acquiring new programs (the Luce and Lunder Centers, the handheld guide) and also merging our operations with those of the National Portrait Gallery (the joint membership campaign and the shared calendar). Because mergers and acquisitions have repeatedly challenged the corporate-management community over the last 30 years, we reasoned that there would be a body of research and practice there that could help us get a handle on our data complexity issues.</p>
+	<p>To make the comparison between SAAM&rsquo;s position and a mergers and acquisitions challenge clear, imagine that you&rsquo;re the IT manager for a bank. Your Web site gives your customers access to their checking, savings, money market, and loan accounts. Behind the scenes, each of these account types evolved separately with their own set of data structures, platforms (Oracle on Solaris, for example), physical locations (two server farms and a disaster-recovery hot site), security requirements, and business rules (free checking for people carrying a combined balance of $2,000 or more in their checking and savings accounts). Now you learn that your bank has just purchased a competitor, and in two months you&rsquo;ve got to provide access to all of their customers&rsquo; accounts through a single sign-on on your Web site. What do you do? </p>
+	<p>According to Sid Adelman et al in Data Strategy (2004), a merger/acquisition like this might involve wrestling with the following difficulties:</p>
+	<ul>
+		<li>Duplicate Records  &ndash; Individuals might have accounts with both banks. Which record becomes the trusted source?</li>
+		<li>Duplicate Keys  &ndash; Even if primary keys (unique numeric identifiers used in databases) are unique in each bank&rsquo;s systems, there might be overlapping numbers between the banks.</li>
+		<li>Different data types and field lengths are used by the two banks.</li>
+		<li>Data elements with the same names have different meanings.</li>
+		<li>Data elements with the same meaning have different names.</li>
+		<li>Corresponding data elements have different business rules.</li>
+	</ul>
+	<p>At their root, these are the same kinds of challenges that face Web masters, IT managers, and the museum-vendor community when museums need to use old data in new ways or need to add significant new functionality to their operations.</p>
+	<h2>Industry Solutions</h2>
+	<p>Our assumption going into this process was that we would take each of our 29 separate data stores, analyze them to figure out what they contained and how they related to each other, and rationalize them into a single mother-of-all-databases on top of which we could layer application code for dynamic Web sites, handhelds, kiosks, and other tools. In this mindset, executive and data complexity-factors  &ndash; if they were considered at all  &ndash; would be triaged and mitigated on the fly in a &lsquo;best effort&rsquo; process focused on achieving the best possible product at the moment of reopening with a secondary emphasis on improving the overall data ecosystem or increasing the intrinsic value of our information.</p>
+	<p>After the EASM process and a gradual comprehension of the complexity factors in play  &ndash; especially the significance of the non-technical issues  &ndash; we came to the realization that this was an inadequate approach. This path may temporarily increase the amount of information or functionality available to management and the public, but the end-product would in its essence be a stovepipe system built on top of other stovepipe systems: brittle, unpredictable, difficult (and expensive) to mange, likely to fail, and decreasing, rather than increasing, the potential value of SAAM&rsquo;s data.</p>
+	<h2>Mitigating Technology and Data Complexity Factors</h2>
+	<p>Thinking about mergers and acquisitions and looking to the corporate sector for alternatives we focused first on techniques that might help us manage complexity in the technology and data factors, most of which have to do with knowing and documenting what data you have, what you can do with it, and how to work with information on disparate systems. </p>
+	<p>And this is where things begin to get a little geeky. According to Gartner Group, there are six fundamental technologies that can be used to facilitate data integration, many of which are frequently used in parallel or like links of a chain. Web masters will recognize many of these techniques, though perhaps they may know them by different names. They are (from Gartner Group, Data Integration Forms the Technology Foundation of EIM):</p>
+	<ul>
+		<li>File Transfer Protocol/batch file transfer  &ndash; simply the moving of data from one location to another, typically to work around geographically or architecturally incompatible systems.</li>
+		<li>Replication  &ndash; maintaining separate synchronized copies of information, usually from geographically dispersed applications</li>
+		<li>Gateways  &ndash; providing simplified access to data in hard to work with legacy applications</li>
+		<li>Integration Brokers  &ndash; incorporating adapters and business logic to route transactions to data stores based on conditional logic at run time.</li>
+		<li>Extraction, Transformation, and Loading (ETL)  &ndash; usually a batch processes of pulling data from one data source, transforming its syntax and semantics, and then writing the transformed data to a new data store.</li>
+		<li>Virtual Data Federation  &ndash; allowing data to be integrated from multiple sources into a single virtual view. The data remains at the source, and transformation processes to reconcile data happen on the fly.</li>
+	</ul>
+	
+	<p>Of these, Extraction, Transformation and Loading (ETL) and Virtual Data Federation seemed from an architectural point of view to provide SAAM with the most stable platform and the greatest overall reduction in complexity, although a strategy using either toolset without proper attention to documentation or data/executive processes could easily disintegrate into the mother-of-all databases scenario that we so wanted to avoid.</p>
+	<p>Though the ideas of Virtual Data Federation are fairly new, there are some compelling advantages to this approach.</p>
+	<p>As Gartner Group puts it, </p>
+	<blockquote>the main thrust of [the] technology is the execution of distributed queries against various data sources, the federation of the query results into views, and the consumption of these views by applications and query and reporting tools.  (Gartner Group, Integrate Your Data to Create a Single Customer View, 2004.) </blockquote>
+	<p>In practical terms, what this means is that, in theory, you can sit down at your desk and use a single application to:</p>
+	<ul>
+		<li>import data from a variety of data sources (SQL, Web services, xml, and unstructured and semi-structured data like Web pages)</li>
+		<li>create a graphical and contextual models of the data in a data-dashboard</li>
+		<li>add metadata that clarifies what the data is how it can be used, and what the business rules are</li>
+		<li>stage data by pulling it out of an unstable or difficult to access system into a staging area where it can be examined and manipulated without affecting the root system</li>
+		<li>perform data transformations (for example, massaging dates from two different databases into the same format)</li>
+		<li>track provenance (where data came from and how and when it has been manipulated)</li>
+		<li>create and enforce security models</li>
+		<li>generate reports from, and about, your data, metadata, provenance, and security</li>
+		<li>combine data sources into new virtual data sources</li>
+		<li>and finally, provide access to your information via SOAP, XML, or SQL.</li>
+	</ul>
+	<p>Data access can be read only, or read-write, and can exchange data with root databases in real time, a significant advantage over techniques like ETL, which are read only and generally operate in scheduled batch processes.</p>
+	<p>When these capabilities are used in a comprehensive effort to simplify data complexity across an organization, the activity is called Enterprise Information Integration, or EII. Vendors of Virtual Data Federation/EII software include Avaki, CenterBoard, Certive, Composite Software, Journee, MetaMatrix, Metatomix, Siperian and Snapbridge Software. (Gartner Group, 'EII' Vendors Offer Virtual Data Federation Technology, ID Number: T-22-5256, 2004.)</p>
+	<h4>Benefits</h4>
+	<p>An attractive aspect of EII is that it allows for versioning of the data environment. This is particularly useful in environments where one or more data systems are undergoing an upgrade or change that alters where data lives or how it can be accessed. In this situation, one can create two separate versions of the entire data environment, one of which is &ldquo;live,&rdquo; and the other being modified for testing and development. </p>
+	<p>From a data complexity point of view, EII is compelling because it provides both a repository for metadata and a way to share and update that metadata across the organization. As anyone who has tried to reduce clutter around a house knows, a big part of the struggle is establishing a set place to put everything, and perhaps the biggest obstacle to establishing uniformly clean metadata has been a standard way to make and store it. Tools that display information, and that information&rsquo;s metadata, in the same place side-by-side will increase the likelihood that the quality of documentation is well understood and improves over time. Similarly, having a single place where data from across the organization can be accessed and scrutinized has the potential to improve overall data quality. </p>
+	<p>Another advantage of EII tools is that they tend to be model-driven, meaning that they enable (or force) organizations to diagram and document data relationships in the abstract, then apply those relationships to the nuts-and-bolts aspects of servers, ports, SQL, tables, and rows. Developers and business users needing to access data can interact with the model layer and its relatively friendly-looking names and labels, rather than being forced to grapple with the underlying technical complexity. Also, models are relatively self-documenting.</p>
+	<h4>Drawbacks</h4>
+	<p>From an operational perspective, there are two main drawbacks to the EII model. The first is cost. These products are typically manufactured by startups intent on making money from the financial services and homeland security industries, and they are priced accordingly. The vendor community is unfamiliar with museum business goals, skill sets, and budgets (though compelling business cases can be made that justify the expense in terms of realized improvements in data use and value), and the museum community is unfamiliar with the level of effort required to make use of these products over time. </p>
+	<p>The second drawback is maturity. According to Gartner Group, the majority of products in this area are young and have not been tested through a large number of production deployments. (Gartner Group, Virtual Federation: How It Is (and Is Not) Being Used, ID Number: M-22-5254, 2004.)</p>
+	<h4>SAAM, Virtual Data Federation and EII</h4>
+	<p>Over the long term SAAM intends to explore Virtual Data Federation and EII in combination with other data integration techniques to reduce complexity in the data and technology factors. This direction addresses technical and data complexity factors as follows: </p>
+	<ul>
+		<li>Physical Platforms  &ndash; Use EII tools (adapters, function libraries, and scripting environments) to exchange data to be exchanged with disparate systems. Code and data access are centralized in one place.</li>
+		<li>Application Platforms  &ndash; Use model-driven approach and EII tools to simplify access to application data and consolidate business rules and security in one place.</li>
+		<li>Documentation  &ndash; Use Model-driven approach and take advantage of consolidated rules, security, and code to assess and improve documentation.</li>
+		<li>Data quality  &ndash; Use data import, discovery, modeling, and reporting to assess data quality and plan/monitor data enhancement efforts.</li>
+		<li>Data provenance  &ndash; Use EII data provenance tools to track integrated data back to root sources.</li>
+		<li>Mixture of data types  &ndash; Use EII tools to import and publish from XML, SQL, and Web Services.</li>
+		<li>Business Metadata  &ndash; Use data import, discovery, and modeling to assess metadata. Use EII as metadata repository data can be found, seen, and documented in one environment.</li>
+		<li>Trusted Source of Record  &ndash; Use import, discovery, and modeling to find out where duplicate data exists and establish business rules and application logic to enforce that all data consumers are using the correct trusted data sources.</li>
+	</ul>
+	<p>It should be noted that progress in reducing complexity in technology and data factors should be focused on concrete objectives rather than the capabilities of a particular tool set (Tannenbaum, 2000). Progress in reducing data and technical complexity can be achieved using an array of low-tech approaches, and to a certain degree the methodology chosen is secondary to mustering the managerial will to focus and succeed. For example, business metadata (the real meaning of data) can be documented using word processing or spreadsheet programs  &ndash; one doesn&rsquo;t need an expensive metadata repository to do it. Any methodology conscientiously followed is better than none, and museums willing to take on the organizational effort of reducing data complexity should embrace any reasonable means to get started. Investments in tool-based methodologies become reasonable only if merited by the overall level of effort of the project, the maturity and experience of the organization, and the desired return in increased data value. </p>
+	<h2>Mitigating Executive Complexity Factors</h2>
+	<p>Executive complexity factors are primarily about ensuring that the managerial framework is in place to support data integration and strategy initiatives. Because Web developers and content specialists can accomplish magical things on their own, and technology and data groups often work in isolation, it is tempting to overlook the benefits of initiating and sustaining a comprehensive data strategy program over time.  Remembering the treasure hunter analogy above, even with the best technology and information resources, the full value of data cannot be realized if complexity in executive factors rises above critical levels. It&rsquo;s sometimes sufficient or necessary to have technology or content groups working in isolation or &lsquo;under the radar&rsquo; of management, but to get the full value from organizational data, projects should have solid executive sponsorship and museum-wide visibility.</p>
+	<p>As a case-in-point, Adelman, et al, propose four data strategy <strong>Worst</strong> Practices:</p>
+	<ul>
+		<li>Let each department head, including IT, determine her own data responsibilities; those functions that are not adopted, don&rsquo;t get done.</li>
+		<li>Allow overlapping responsibilities. Doing so results in energy expended on turf battles and not on delivering real capability to the organization.</li>
+		<li>Not educating management on the value of data.</li>
+		<li>Not assigning responsibility for data quality.</li>
+	</ul>
+	<p>For practical purposes, basic management practices and common sense can conquer this domain, and higher levels of organizational expertise only improve the quality, quantity and speed of complexity reduction.</p>
+	<p>Quantifying the value of data, however, is tricky. There are established models for measuring the tangible benefits of information in some lines of museum business, including merchandising, e-commerce, events and ticketing, and donor development, but I know of no standard or widely-adopted metrics to calculate the value of art-information data. Possible contenders might include intangible benefits such as improving public relations, reputation, and impact on board members and donors; competitive effectiveness (to secure object loans, to garner visitors); improved internal decision making; better customer service (to internal partners, collaborators, researchers); employee empowerment; and the demands of accreditation and financial reporting (adapted and expanded from Adelman, 2004). </p>
+	<p>SAAM&rsquo;s data strategy direction for the executive complexity factors is shown below.</p>
+	<ul>
+		<li>Objectives  &ndash; Agree upon concrete and achievable milestones. For example, validate all metadata for the permanent collection within 12 months.</li>
+		<li>Ownership/Stewardship  &ndash; Establish unambiguous roles and responsibilities for museum data, systems, and business processes.</li>
+		<li>Keystone Employees  &ndash; Secure the commitment of key personnel before initiating data projects.</li>
+		<li>Business Rules  &ndash; Unearth and document business rules as a regular part
+		  of operations. Institute documentation standards and assign responsibility for
+		  the management of documentation. Ensure that evaluation of business rules is
+		  part of every data-development project.</li>
+		<li>Perception of Value  &ndash; Develop models that account for the tangible and intangible value of data. Evaluate museum initiatives in terms of their impact on organizational data value.</li>
+		<li>Project Funding  &ndash; Advocate for stable funding for data strategy initiatives. Ensure projects have sufficient funding and direction to avoid creating data silos. Reward projects that improve or leverage organizational data value. </li>
+	</ul>
+	<h2>Capability and Maturity</h2>
+	<p>Are you ready for change? And if so, how much? Creating a data strategy and reducing data complexity requires focus and commitment from virtually all parts of an organization, and while most museums have the means to create data (it&rsquo;s hard not to create data), many struggle to find the time, money, expertise (technical and managerial), or willpower to get data strategy projects off the ground. Museum managers need to assess their organization&rsquo;s capabilities and take them into account when considering the initiation of a data strategy project. </p>
+	<p>A useful construct for assessing the capacity to take on new technology and data initiatives is the Capability Maturity Model, or CMM. CMM was first defined and standardized in 1991 by the Software Engineering Institute at Carnegie Mellon University (http://www.sei.cmu.edu/) to provide the federal government with a way to assess the capabilities of its software vendors (Paulk, et al, 1995), but it is a also powerful way to understand the maturity of the management processes in your department, work group, or museum. CMM defines five levels of maturity, which can be summarized as follows (Adapted from Paulk, et al):</p>
+	<ol>
+		<li>Initial  &ndash; Processes, if they are defined at all, are ad hoc. Successes depend on individual heroics and are generally not repeatable.</li>
+		<li>Repeatable  &ndash; Basic project management practices are established and the discipline is in place to repeat earlier successes with similar projects.</li>
+		<li>Defined  &ndash; Processes are documented and standardized and all projects use approved, tailored versions of the standard processes.</li>
+		<li>Managed  &ndash; The performance of processes and the quality of end-products
+		  are managed with quantitative measurement and analysis.</li>
+		<li>Optimizing  &ndash; Continuous process improvement is enabled by quantitative feedback from the process and from piloting innovative ideas.</li>
+	</ol>
+	<p>If you see your workgroup operating at level 1 or 2, you&rsquo;re not alone: organizations of all sizes struggle with basic process maturity issues, especially when software and data complexity are a factor. A 1992 General Accounting Office report concluded:</p>
+	<blockquote>As systems become increasingly complex, successful software development becomes increasingly difficult. Most major system developments are fraught with cost, schedule, and performance shortfalls. We have repeatedly reported on costs rising by millions of dollars, schedule delays of not months but years, and multibillion-dollar systems that don&rsquo;t perform as envisioned (General Accounting Office 1992).</blockquote>
+	<p>In Data Strategy, Adelman et al proposes a generic data integration effort as applied to the five CMM levels.</p>
+	<blockquote>
+	  <p>Level 1  &ndash; Limited data federation; often with redundant and inconsistent
+	    data. Data strategy is not even on the organizational radar.</p>
+	  <p>Level 2  &ndash; Limited data consolidation; documenting redundancies and inconsistencies.
+	    Some isolated departments are trying to raise awareness and initiate projects.</p>
+	  <p>Level 3  &ndash; Data integration initiated; new &lsquo;disintegration&rsquo; is
+	    discouraged. Multi-departmental teams begin working on policies and procedures
+	    to advance a data strategy. </p>
+	  <p>Level 4  &ndash; Data integration widely adapted; &lsquo;disintegration&rsquo; is
+	    penalized. All projects in the organization adhere to data integration policies
+	    and managers are held accountable for variances.</p>
+	  </blockquote>
+	<p>One of the best steps museum managers can take is to assess their positions in the CMM hierarchy and take action to begin ratcheting their organizations upwards. Accomplishments in any area of process improvement in a museum are bound to have a beneficial effect on data strategy efforts.</p>
+	<h2>Conclusion</h2>
+	<p>The transition from taking data for granted to managing it as a strategic asset with tangible value echoes the transitions that have been happening in museum Web sites over the last 10 years. In the old days, back in the 1990&rsquo;s, it was enough to write HTML and upload the pages to a server. Web content was considered to be groups of stand-alone HTML documents hyperlinked in meaningful ways, and there wasn&rsquo;t that much on the Web anyway. When significant quantities of HTML documents and data accrued and maintenance became a concern, we started structuring HTML into templates and using CSS and other techniques to separate design from content. Web development, once ad hoc, was becoming standardized. Now, as we start to develop reusable components and code libraries for our Web sites, and we utilize content management applications to publish dynamic content to a variety of network-enabled devices, we&rsquo;re beginning to understand the potential of our Web sites as complex software applications, capable of great things but requiring a different set of skills and more mature processes to maintain and nurture.</p>
+	<p>Data  largely   fuelled the evolution from ad hoc to application-centric
+	  Web sites, and managing data complexity is a prerequisite for achieving excellence
+	  in outreach, publication, operations, and collections stewardship and study
+	  in museums. A comprehensive data strategy  &ndash; at any level of organizational maturity  &ndash; can reduce complexity and help museums realize the full potential of their information.</p>
+	<h3>References</h3>
+	<p class="references">Adelman, S. et al (2005). Data Strategy. New York: Addison-Wesley.</p>
+	
+	<p class="references">Cockburn, A. (2000). Writing Effective Use Cases. New York: Addison-Wesley Professional.</p>
+	
+	<p class="references">Gartner Research, (2005). Data Integration Forms the Technology Foundation of EIM. ID Number: G00124151. <a href="http://www.gartner.com/" target="_blank">http://www.gartner.com</a>. (Accessed through a license to the Gartner portal.) </p>
+	
+	<p class="references">Gartner Research (2004). Virtual Federation: How It Is (and Is Not) Being Used. ID Number: M-22-5254. <a href="http://www.gartner.com/" target="_blank">http://www.gartner.com</a>. (Accessed through a license to the Gartner portal.)</p>
+	
+	<p class="references">Gartner Research (2004). 'EII' Vendors Offer Virtual Data Federation Technology. ID Number: T-22-5256. <a href="http://www.gartner.com/" target="_blank">http://www.gartner.com</a>. (Accessed through a license to the Gartner portal.)</p>
+	
+	<p class="references">General Accounting Office (1992). IMTEC-93-13 Mission-Critical Systems: Defense Attempting to Address Major Software Challenges. <a href="http://archive.gao.gov/d36t11/148399.pdf" target="_blank">http://archive.gao.gov/d36t11/148399.pdf</a>. (Accessed January 2006.)</p>
+	
+	<p class="references">Metamatrix, Inc., (2005). Selecting the Right Enterprise Information Integration Solution. <a href="http://www.metamatrix.com/resources/white.jsp" target="_blank">http://www.metamatrix.com/resources/white.jsp</a>. Accessed December, 2005.</p>
+	
+	<p class="references">Paulk, M., et al (1995). The Capability Maturity Model: Guidelines for Improving the Software Process, New York: Addison-Wesley Professional.</p>
+	
+	<p class="references">Phillips, P.L. (2004). Creating the Perfect Design Brief: How to Manage Design for Strategic Advantage. New York: Allworth Press.</p>
+	
+	<p class="references">Tannenbaum, A. (2002). Metadata Solutions: Using Metamodels, Repositories, XML, and Enterprise Portals to Generate Information on Demand. New York: Addison-Wesley.</p>
+	
+			 	<!-- InstanceEndEditable -->
+				 <h4>Cite as:</h4>
+				<p class="references"><!-- InstanceBeginEditable name="OnlineCitation" --> Edson M., Data Access Strategy<!-- InstanceEndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2006: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics, published March 1, 2006 at http://www.archimuse.com/mw2006/papers/<!-- InstanceBeginEditable name="URL" -->edson/edson.html<!-- InstanceEndEditable --></p>
+				<br />
+	  	 	</div>
+		</div>
+		<div id="sidebar">
+			<div id="side-nav">
+				<ul id="side-nav-list">
+					    <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+						<li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+						<li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+						<li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+						<li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+						<li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+						<li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+						<li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+				</ul>
+			</div>
+			<div id="search-site">
+				<form method="post" action="http://www2.archimuse.com/cgi-bin/htsearch">
+					<input type="hidden" name="format" value="builtin-long" />
+					<input type="hidden" name="method" value="and" />
+					<input type="hidden" name="config" value="htdig-mw2006" />
+					<input type="hidden" name="restrict" value="" />
+					<input type="hidden" name="exclude" value="" />
+					<input type="text" size="20" name="words" value="" id="searchmw" />
+					<input type="image" src="../../images/searchmw.gif" id="searchbox" name="search" />
+				</form>
+			</div>
+			<div id="sidebar-links">
+				<ul id="sidebar-links-list">
+					<li><a href="../../../index.html" class="produced-by">produced by<br />
+					    <img src="../../images/sidelogo.gif" width="144" height="37" alt="AMI logo" /></a></li>
+					<li><a href="../../../index.html">Join our mailing list</a></li>
+					<li><a href="http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+					</a><img src="../../../external.gif?link=http://www.archimuse.com/ami.images/search.gif" alt="search" width="24" height="25" /></li>
+				</ul>
+		  	</div>
+		</div>
+		<div id="footer">
+		  <div id="last-updated">
+			<!--htdig_noindex-->
+            published: March 27, 2006<br />
+            analytics code updated: Oct. 28, 2010
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+	       </div>
+		<div id="footer-content">
+				Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E 2P3 Canada<br />
+				Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+				
+				<script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2006";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2006 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				</script>	
+
+		<br />
+				Copyright &copy; 2006 - Archives &amp; Museum Informatics - All rights reserved.<br />
+			</div>
+			<div style="clear:both">
+			</div>
+		</div>	
+	</div>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2006/papers/edson/edson.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:37:09 GMT -->
+</html>
+					

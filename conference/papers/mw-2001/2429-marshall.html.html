@@ -1,0 +1,1127 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/marshal/marshall.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:49:28 GMT -->
+<head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>Making good use of user input: Incorporation of public evaluation into the system development process</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onLoad="MM_preloadImages('../../nav/mw2001_nav_registeron.gif','#943398414283');MM_preloadImages('../../nav/mw2001_nav_workshopson.gif','#943398455733');MM_preloadImages('../../nav/mw2001_nav_sessionson.gif','#943398500450');MM_preloadImages('../../nav/mw2001_nav_speakerson.gif','#943398534416');MM_preloadImages('../../nav/mw2001_nav_demoson.gif','#943398577050');MM_preloadImages('../../nav/mw2001_nav_exhibiton.gif','#943398612066');MM_preloadImages('../../nav/mw2001_nav_eventson.gif','#943398640266');MM_preloadImages('../../nav/mw2001_nav_beston.gif','#943398663166');MM_preloadImages('../../nav/mw2001_nav_keydateson.gif','#943398701050');MM_preloadImages('../../nav/mw2001_nav_seattleon.gif','#943398731383');MM_preloadImages('../../nav/mw2001_nav_sponsoron.gif','#943398934733')">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.register','document.register','../../nav/mw2001_nav_registeron.gif','#943398414283')"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"></a> 
+        <br>
+        <a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.workshops','document.workshops','../../nav/mw2001_nav_workshopson.gif','#943398455733')"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"></a> 
+        <br>
+        <a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sessions','document.sessions','../../nav/mw2001_nav_sessionson.gif','#943398500450')"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"></a> 
+        <br>
+        <a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.speakers','document.speakers','../../nav/mw2001_nav_speakerson.gif','#943398534416')"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"></a> 
+        <br>
+        <a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.interact','document.interact','../../nav/mw2001_nav_interacton.gif','#943398534416')"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"></a> 
+        <br>
+        <a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.demos','document.demos','../../nav/mw2001_nav_demoson.gif','#943398577050')"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"></a> 
+        <br>
+        <a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.exhibits','document.exhibits','../../nav/mw2001_nav_exhibiton.gif','#943398612066')"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"></a> 
+        <br>
+        <a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.events','document.events','../../nav/mw2001_nav_eventson.gif','#943398640266')"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"></a> 
+        <br>
+        <a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.best','document.best','../../nav/mw2001_nav_beston.gif','#943398663166')"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"></a> 
+        <br>
+        <a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.dates','document.dates','../../nav/mw2001_nav_keydateson.gif','#943398701050')"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"></a> 
+        <br>
+        <a href="../../seattle/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.seattle','document.seattle','../../nav/mw2001_nav_seattleon.gif','#943398731383')"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"></a> 
+        <br>
+        <a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sponsor','document.sponsor','../../nav/mw2001_nav_sponsoron.gif','#943398934733')"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"></a> 
+        <br>
+        <br>
+        <br>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"></a> 
+        <br>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br>
+        158 Lee Avenue<br>
+        Toronto, Ontario<br>
+        M4E 2P3 Canada<br>
+        info@ archimuse.com<br>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br>
+            A&MI</font></a> </span></td>
+        </tr>
+      </table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class='verysmall'>Published: March 15, 2001.<br>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated:&nbsp;"+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"><br>
+      <!-- #BeginEditable "Body" --> 
+
+      <h1 class="PaperTitle">Making good use of user input: Incorporation of public 
+
+        evaluation into the system development process</h1>
+
+      <h2 class="Author">Fiona Marshall, The British Museum, UK</h2>
+
+      <h1 class="abstractTitle">Abstract:</h1>
+
+      <span class="AbstractText">Predicting the structure and function of a public 
+
+      system without user input is fraught with danger, but this user input is 
+
+      very difficult to obtain without a working prototype. Traditional system 
+
+      design methods make little provision for evaluation and testing by public 
+
+      users. Weaving the results of evaluation and testing into the end of the 
+
+      system development process presents risks: how, for example, can we address 
+
+      unforeseen navigation problems identified during user evaluation, while 
+
+      at the same time ensuring that tight deadlines are met? Another challenge 
+
+      is that we often work with teams of specialists (interface designers, HTML 
+
+      developers, database specialists, content creators etc): alteration of one 
+
+      element often has knock-on effects on other team members. </span><span class="AbstractText"> 
+
+      Drawing on experience with the COMPASS project at the British Museum, the 
+
+      author will present practical ideas for incorporating evaluation into the 
+
+      system development process.</span>
+
+      <p class=AbstractText>Keywords: Evaluation, Prototyping, Usability testing, 
+
+        User interface design, COMPASS, British Museum.</p>
+
+      <h1>Introduction</h1>
+
+      <p class=normal>In this paper, I shall consider how the results of usability 
+
+        and prototype testing can be fed into the development process most effectively. 
+
+        Much has been written about the need for user input in system development, 
+
+        but do we test our systems with prospective users at the optimum time 
+
+        in the development process? I shall discuss a number of alternative methodologies 
+
+        for evaluation and prototyping, highlighting the challenges they present. 
+
+        Finally, I shall suggest a possible way forward, based on my experience 
+
+        with the COMPASS Project.</p>
+
+      <p class=normal>User interface design and testing</p>
+
+      <p class=normal>A plethora of published information exists on the design 
+
+        of user interfaces. A gem amongst these is Nielsen (2000), which provides 
+
+        excellent advice - including many examples - on designing usable websites. 
+
+        Schofield &amp; Flute (1997) provide similarly practical advice on designing 
+
+        kiosk software and hardware. The case for usability testing and prototyping 
+
+        is well made by Nielsen (1993) and Preece (1994), both of which describe 
+
+        alternative procedures. Mitchell and Economou (2000) advise on the practice 
+
+        of formative evaluation, prototyping and summative evaluation in museums.</p>
+
+      <p class=normal>These references show that there are many methods of evaluation 
+
+        and prototyping; Shackel in Preece (1994) explains that you will probably 
+
+        need to use different methods at different stages of the project. There 
+
+        are two basic types of prototype: evolutionary and throw-away. The best 
+
+        prototypes are probably those that are produced quickly and thrown away. 
+
+        They are produced near the start of the development cycle, before too 
+
+        much costly work has been invested in interface design. In the case of 
+
+        complex systems using a range of software tools, the further you get into 
+
+        development without prototyping, the less chance you have to change the 
+
+        interface and the greater the risk of failure.</p>
+
+      <br clear=all>
+
+      <p class=normal>Costs are always a major factor in any project, but they 
+
+        seem to be dwelt on most particularly when working with a commercial supplier. 
+
+        My perception from talking to a number of suppliers is that they are often 
+
+        reluctant to prototype. In the context of competitive bids and cost cutting, 
+
+        they may feel that prototyping is too expensive. Some developers seem 
+
+        to think that the <i>client</i> should know how the end users of their 
+
+        system will want it to function. Other developers claim <i>they</i> know 
+
+        what system users want, based on previous projects. Neither assumption 
+
+        is true: both client and developer needs to find out what prospective 
+
+        users want and the best way to do that is by prototype testing.</p>
+
+      <p class=normal>Below I shall describe different types of usability testing 
+
+        and prototyping and examples of how they were applied to the COMPASS project 
+
+        at the British Museum. First, though, some brief information about COMPASS.</p>
+
+      <h3>COMPASS</h3>
+
+      <p class=normal>COMPASS (Collections Multimedia Public Access System) is 
+
+        a database-driven multimedia guide to a selection of around 5,000 of the 
+
+        Museum's objects. The system is aimed at adults with no prior knowledge 
+
+        of the collections, as well as school children aged 8-11 and family groups. 
+
+        More information is given in the Appendix to this paper.</p>
+
+      <p class=normal>The full COMPASS system will be available in the British 
+
+        Museum on wide screen format touchscreens linked to the Museum's 
+
+        internal high speed network. The content includes high quality images, 
+
+        3d reconstructions, animations and specially-written text narratives. 
+
+        The interface - designed to be used from a touchscreen only - uses DHTML 
+
+        templates accessing System Simulation Ltd's Index+ database. </p>
+
+      <p class=normal>A web version, using a different design of user interface 
+
+        (HTML templates), was launched on the web in June 2000 ( (Note that this 
+
+        is currently separate from the British Museum's main website, although 
+
+        linked - if you can find the link. The Museum plans to bring the two systems 
+
+        closer together.) The internet interface is deliberately low tech, ensuring 
+
+        that it can be used without plug-ins on low-end PCs with low-speed internet 
+
+        links, as are still widely used in UK schools and homes. Accessibility 
+
+        for users with visual impairments was a key factor in design of the graphical 
+
+        and text-only web interfaces. </p>
+
+      <p class=normal>The commercial software supplier System Simulation Ltd (SSL) 
+
+        provided the database (based on Index+) and user interfaces for the Reading 
+
+        Room and internet. Due to the number of contributors involved in the project, 
+
+        development occurred in three separate, but linked, strands: content production, 
+
+        development of the production database and specification and design of 
+
+        the user interface. </p>
+
+      <p class=normal>All content on COMPASS has been produced with our different 
+
+        audiences' needs in mind. On many public systems, the user needs 
+
+        prior knowledge of the content to know what they can search for. To make 
+
+        things easier, we are providing indexes which use terms in common usage 
+
+        - rather than technical/curatorial terms. On the touchscreen version, 
+
+        users just point at the word they want. In addition, on both versions 
+
+        we provide virtual 'tours' of groups of objects in familiar 
+
+        themes, objects of the month available from the Home page and thousands 
+
+        of links between the objects and to background information.</p>
+
+      <p class=normal>The Museum's emphasis has been on developing high quality 
+
+        content rather than a high tech user interface. We wanted a clean design, 
+
+        through which our rich content would shine through, without the need for 
+
+        plug-ins and frames. Intuitive and readable were two key requirements. 
+
+        The Museum worked closely with SSL, different target groups and experts 
+
+        in evaluation in an effort to realise its aims of ease of use and accessibility.</p>
+
+      <p class=normal>Development and revision of the user interface has been 
+
+        one of the most challenging aspects of the project. Based in part on this 
+
+        experience, I shall now describe some evaluation and prototyping methods 
+
+        and the challenges they present.</p>
+
+      <h3>Evaluation and prototyping</h3>
+
+      <h2>Informal interviews </h2>
+
+      <p class=normal>The first stage in any system development is, of course, 
+
+        to find out about the target users and what they want from your system. 
+
+        This could involve talking to prospective users (eg teachers, visitors) 
+
+        direct and referring to organisations (including museums) who have already 
+
+        done this type of research. </p>
+
+      <p class=normal><b>Challenges:</b> The main challenge with asking potential 
+
+        users what they want is trying to get a reliable response:</p>
+
+      <ul>
+
+        <li class="normal"><span class="normal">Firstly, if you ask people what they want in a system, 
+
+          they might not appreciate the possibilities. You might have to provide 
+
+          mock-ups to explain your plans - or even prototypes.</span></li>
+
+        <li class="normal"><span class="normal">Secondly, some people might say they would like the 
+
+          proposed system - and then don't use it when it is released. Alternatively, 
+
+          they might say they would never use it in a million years - and then 
+
+          become system junkies. (Neilsen (2000) gives some examples of this.) 
+
+        </span></li>
+
+      </ul>
+
+      <h3>Surveys </h3>
+
+      <span class="Normal">A more reliable approach is to analyse things like 
+
+      public enquiries to your Information desk. With COMPASS, we were able to 
+
+      use the results of general visitor surveys which indicated that a significant 
+
+      proportion of visitors to the Museum would like more information about the 
+
+      collections - including online. </span> 
+
+      <h3>Formative prototype </h3>
+
+      <p><span class="Normal">In an ideal world, everyone would produce prototypes 
+
+        before they embark on any development work at all, in order to see whether 
+
+        the public like their initial ideas. In 1998, the British Museum produced 
+
+        a 'throw-away' prototype COMPASS system which was evaluated by museum 
+
+        visitors and professional colleagues. The main emphasis of this early 
+
+        prototype was the evaluation of different technical options for delivery 
+
+        of multimedia. The prototype enthused curators about the potential of 
+
+        multimedia and helped to obtain management - and, most importantly, donor 
+
+        - support.</span></p>
+
+      <p><span class="Normal"><b>Challenges:</b> </span> </p>
+
+      <ul>
+
+        <li><span class="Normal"> The work involved in such an early prototype 
+
+          is, even without the development of much live content, likely to be 
+
+          very intensive - and therefore very costly. Of course if funding is 
+
+          obtained as a result of this work, the effort will be well repaid. </span> 
+
+          <p class=normal> 
+
+        <li class="normal"><span class="normal"> Time gaps between initial prototyping and obtaining 
+
+          funds for full development may be significant enough to see major developments 
+
+          in technology. This might reduce the value of the early prototype in 
+
+          providing lessons for the full system. 
+
+      </ul>
+
+      <h3>Written specifications </h3>
+
+      <p class=normal>These are supposed to describe exactly what the system must 
+
+        and should do, often for the purposes of producing a contract between 
+
+        museum and supplier.</p>
+
+      <p class=normal><b>Challenges: </b>Designed to ensure that the client and 
+
+        the developer knows what to expect and that neither side changes the requirement 
+
+        halfway through the contract, a written specification for user interfaces 
+
+        and screen designs can cause all sorts of misunderstandings and problems. 
+
+      </p>
+
+      <p class=normal> 
+
+      <ul>
+
+        <li><span class="Normal"> Words used to describe required screen designs 
+
+          (eg 'clean', 'intuitive') are open to differences 
+
+          of interpretation. </span> 
+
+          <p class=normal> 
+
+        <li class="normal"><span class="normal"> More fundamentally, though, formal system specifications 
+
+          were traditionally produced in conjunction with the end-users. Probably 
+
+          possible (although difficult) with internal systems, where future users 
+
+          can define their work processes, it would be nearly impossible to produce 
+
+          such a specification in conjunction with public users. While you might 
+
+          be able to form a focus group to assist with the process, if you involved 
+
+          the same people for too long, they would become familiar with your plans 
+
+          and would not adequately represent the average real user, who arrives 
+
+          at your site with no prior knowledge. 
+
+      </ul>
+
+      <h3>Mock-up screens </h3>
+
+      <p class=normal>My own preference is for sketches produced as a result of 
+
+        brainstorming sessions, but some designers will prefer to work up full 
+
+        graphical designs on screen. </p>
+
+      <p class=normal><b>Challenges:</b> </p>
+
+      <p class=normal> 
+
+      <ul>
+
+        <li class="normal"><span class="normal"> Design work can be labour intensive. A team might 
+
+          be able to produce 20 rough sketches in an afternoon and will have lost 
+
+          little time if they decide to throw them all away. 20 designs produced 
+
+          on screen will take much longer and if the client doesn't like 
+
+          them, much more money has been spent and there is less room for manoeuvre. 
+
+        <li class="normal"><span class="normal"> You might want to use these mock-ups for evaluation, 
+
+          but it is difficult for prospective users to understand how static graphical 
+
+          layouts link together to form a live system. 
+
+        <li class="normal"><span class="normal"> As Verplank explains in Preece (1994), production 
+
+          of very attractive graphical designs on screen can encourage designers 
+
+          to 'fix' on a particular solution too soon, rather than exploring 
+
+          alternatives. 
+
+      </ul>
+
+      <p class=normal><span class="Normal"><b></b></span><b>Horizontal prototypes 
+
+        </b></p>
+
+      <p class=normal>A horizontal prototype provides most of the user interface, 
+
+        but without the depth (eg content, links). It could be useful for testing 
+
+        usability.</p>
+
+      <p class=normal><b>Challenges:</b> The lack of content could distract testers. 
+
+        (With COMPASS, the developer produced a full working system, to which 
+
+        we added limited content for testing with visitors (see below). Although 
+
+        the tests were generally useful, testers were frustrated that their efforts 
+
+        frequently yielded 'no hits'.)</p>
+
+      <p class=normal><b>Vertical prototypes </b></p>
+
+      <p class=normal>A vertical prototype is a working system developed for one 
+
+        specific part of the required functionality, eg searching. It is good 
+
+        for testing particularly complex functionality.</p>
+
+      <p class=normal><b>Challenges: </b>Production of such a prototype could 
+
+        be very time consuming for complex systems. </p>
+
+      <p class=normal><b>Scenarios </b></p>
+
+      <p class=normal>A scenario is a way of describing how a system is used in 
+
+        a particular situation, i.e. when a user carries out a specific task or 
+
+        set of tasks. It might be used to demonstrate a system or to see whether 
+
+        testers can carry out one particular course of action. Scenarios can be 
+
+        presented in text format or can be built in systems such as Macromedia 
+
+        Director. We used the latter approach to test the COMPASS touchscreen 
+
+        searches. The COMPASS designer mocked up screen designs, initially in 
+
+        Photoshop, and then stitched them together into a Director movie. We asked 
+
+        visitors to try to search for specific things using these; if they pressed 
+
+        the correct buttons in the correct order, they found the records in question. 
+
+        This test yielded very useful results about usability in this specific 
+
+        area.</p>
+
+      <p class=normal><b>Challenges:</b> </p>
+
+      <p class=normal> 
+
+      <ul>
+
+        <li class="normal"><span class="normal"> The linear, fixed nature of a scenario might limit 
+
+          the value of a test, particularly for a non-linear system. 
+
+        <li class="normal"><span class="normal"> The limited nature of a scenario means that an interviewer 
+
+          generally needs to be on hand to help the tester. This reduces the scope 
+
+          for discrete observation. 
+
+      </ul>
+
+      <p class=normal><b>Full working prototypes/Observation and interviews</b></p>
+
+      <p class=normal>A full working prototype generally uses the same software 
+
+        tools as the final version and is not thrown away at the end of testing. 
+
+      </p>
+
+      <p class=normal><b>Challenges: </b>With a very complex system, much effort 
+
+        goes into production of this prototype. Subsequent changes can have major 
+
+        implications for the developer, who would have to redesign screens and 
+
+        HTML templates and recode links to the database. Changes can also affect 
+
+        content developers.</p>
+
+      <p class=normal>For the COMPASS website, our developer produced full graphical 
+
+        designs, converted them to HTML and linked the templates to the database. 
+
+        This full working system was released for evaluation, complete in most 
+
+        respects apart from the content. The COMPASS team set up standalone PCs 
+
+        in one of the Museum galleries. Visitors were asked to try out the system 
+
+        and were observed (at distance) and then interviewed by COMPASS staff. 
+
+        We found the observation results particularly useful. Both the graphical 
+
+        interface and the text-only version were also evaluated by blind and partially 
+
+        sighted users using screen reader software at the Sensory Disability Research 
+
+        Unit at Hertfordshire University, where testers were interviewed and recorded 
+
+        on video as they used the system. </p>
+
+      <p class=normal>Results were generally positive, but many useful observations 
+
+        were made. Many of the required changes were addressed, although this 
+
+        required screen redesigns and much effort from the developer. The complexity 
+
+        of producing a working prototype of a system that knits together a database, 
+
+        HTML templates, designs and evolving content, cannot be underestimated. 
+
+      </p>
+
+      <p class=normal>Despite some minor issues, the team was keen to release 
+
+        COMPASS on the web, partly to elicit feedback (via a questionnaire and 
+
+        email) which would inform ongoing content development and design of the 
+
+        touchscreen interface. Secondly, we were able to test our publication 
+
+        process from database to live site before the greater complexity of publishing 
+
+        from database to two live sites (internet and intranet). Thirdly, difficulties 
+
+        with the user interface design process for the web system led us to try 
+
+        alternative methodologies for the touchscreen development, including the 
+
+        scenarios explained above.</p>
+
+      <p class=normal>We are now planning the development of the Educational COMPASS 
+
+        website. What lessons have we learnt and how will we change the methodology 
+
+        for the Education site?</p>
+
+      <p class=normal><b>Advice on the system development process</b></p>
+
+      <p class=normal>Although the COMPASS team wants to make some changes to 
+
+        the web interface, user reaction so far has been very positive. The team 
+
+        is very pleased with the touchscreen interface and early testing with 
+
+        potential users was encouraging. However, the actual <i>process</i> of 
+
+        user interface design and development has been very challenging and quite 
+
+        painful for both client and developer. If we were starting again today, 
+
+        we would do things differently in places. Some of the following is therefore 
+
+        based on exp<span class="Normal">erience of trying it another way (in 
+
+        other words: do as I say, not as I did...!).</span></p>
+
+      <ol>
+
+        <li class="normal"><span class="normal">Find out as much as you can about your target users 
+
+          (age range, IT knowledge, interests etc). If you have a fairly definable 
+
+          audience (eg schools, users with particular disabilities), go and talk 
+
+          to them or to organisations which have done this sort of research already.<br>
+
+          <br>
+
+        </span></li>
+
+        <li class="normal"><span class="normal">Read as much as you can about design principles, prototyping 
+
+          and evaluation before you select your software developer. You need to 
+
+          know what to ask them to do and how long it should take. Do not assume 
+
+          that your supplier will know best. (Of course, they should know best, 
+
+          but they should find it much easier to work with a well-informed client.)<br>
+
+          <br>
+
+        </span></li>
+
+        <li class="normal"><span class="normal">In planning your content, do plenty of formative evaluation 
+
+          before you start, eg ask for advice from colleagues in other museums, 
+
+          your reception desk staff, analyse your public enquiries. You could 
+
+          talk to visitors, Friends organisations etc, but as explained in Informal 
+
+          Interviews above, be slightly wary of subjective answers unless you 
+
+          have an early prototype on which to base your questions.<br>
+
+          <br>
+
+        </span></li>
+
+        <li class="normal"><span class="normal">Look at websites and CD-ROM's and make notes on 
+
+          what you like and don't like - and why. This can be a huge help 
+
+          to your designer to give them an idea of where to start and what to 
+
+          avoid.<br>
+
+          <br>
+
+        </span></li>
+
+        <li class="normal"><span class="normal">Hold brainstorming sessions with your designers and 
+
+          try to sketch out as many wild and wacky ideas as you can possibly manage. 
+
+          Try to dissuade your designer from narrowing down the options too early 
+
+          as this could limit creativity.<br>
+
+          <br>
+
+        </span></li>
+
+        <li class="normal"><span class="normal">Discuss your sketches and select your chosen way forward. 
+
+          Build flow diagrams and navigation schemes to show how the system would 
+
+          work from the user's point of view. 'Walk' through them 
+
+          with your colleagues to make sure that they make sense.<br>
+
+          <br clear=all>
+
+        </span></li>
+
+        <li class="normal"><span class="normal">Produce a 'grey' (ie un-'designed') 
+
+          prototype of parts of the system to show to potential users. This could 
+
+          be built using a simple HTML authoring tool or Director and could be 
+
+          done by the client rather than the developer. The grey prototype will 
+
+          emphasise the navigation though the system (eg menus, options, searches). 
+
+          You will probably need to include some 'dummy' content. Ask 
+
+          a representative sample of potential users to try out the prototype. 
+
+          Observe (from a discrete distance) how they use the system and where 
+
+          they have problems. Interview them afterwards. Update the prototype 
+
+          in line with the results. Note: Testing and documenting the results 
+
+          can be very time consuming. Your developer should make sure that they 
+
+          have plenty to do in parallel while you are testing, or you may feel 
+
+          pressurised into cutting back on testing to keep the project on track.<br>
+
+          <br>
+
+        </span></li>
+
+        <li class="normal"><span class="normal">Ask your designers to develop the second prototype. 
+
+          Depending on the nature of your system, this could either:</span></li>
+
+        <ul>
+
+          <p class=normal> 
+
+          <li class="normal"><span class="normal"> Use the same 'grey' screens, but with 
+
+            links to your database behind the scenes to allow more testing of 
+
+            functionality or 
+
+          <li class="normal"><span class="normal"> It could be based on new graphical screens, much 
+
+            closer to the final interface, but with no functional links to a database. 
+
+            This would allow more accurate testing of the usability of the interface. 
+
+            If you have to keep to a corporate style, you might want to involve 
+
+            museum designers in the screen design discussions, but do make sure 
+
+            that graphic designers who are more used to working with traditional 
+
+            print media understand the fundamental differences in aim and approach 
+
+            of computer interfaces. <br>
+
+            <br>
+
+        </ul>
+
+        <p class=normal><span class="Normal">Again, observe testers trying the 
+
+          system and interview them afterwards. Final sign off of the prototype 
+
+          screens should be conditional on the developer ensuring that the live 
+
+          system will reflect the results of usability testing. If sign off has 
+
+          to be done by senior managers, they must be kept up to date with the 
+
+          test results.</span></p>
+
+        <p class=normal> 
+
+        <li class="normal"><span class="normal"> If all goes well, your developer should now be able 
+
+          to proceed with the full development, secure in the knowledge that you 
+
+          will not make any more fundamental changes to the interface which cost 
+
+          very large sums (and time) to change. If you are still not sure on this 
+
+          point, you need another round of prototype testing. Obviously, technical 
+
+          issues will arise as the developer moves to using the 'real' 
+
+          software tools, rather than those used for the prototype. You should 
+
+          work closely with the developer to ensure that any limitations are spotted 
+
+          early on and that decisions are made on consequent revisions to the 
+
+          specification. 
+
+      </ol>
+
+      <h3>Conclusion</h3>
+
+      <p class=normal>The above process is not, of course, the only way to develop 
+
+        a system. I hope, however, that this paper will encourage museums to think 
+
+        about the process and how best to work with their software developer. 
+
+        Whether to test at all is no longer in question, but museums should consider 
+
+        what sort of prototype to develop and when to test it with prospective 
+
+        users. Too early and the target audience may not understand what you can 
+
+        offer them. Too late and it can cost a fortune to put your system right. 
+
+        The timing of the usability testing may be up for discussion, but one 
+
+        thing is not: go live without testing at all and you could end up with 
+
+        an ignominious flop on your hands</p>
+
+      <h3>References </h3>
+
+      <p class=ReferencesText><span class="ReferencesText">Marshall, F. (2001). 
+
+        COMPASS at the British Museum: Tailoring content for particular audiences. 
+
+        <i>Multimedia and Information Technology</i>, March 2001 (forthcoming).</span></p>
+
+      <p class=ReferencesText><span class="ReferencesText">Mitchell, W.L. &amp; 
+
+        Economou, D. (2000). Methodological Approaches to Developing Content for 
+
+        the Cultural Grid. <i>mda Information</i> 5(1), 5-10.</span></p>
+
+      <p class=ReferencesText><span class="ReferencesText">Nielsen, J. (1993).<i> 
+
+        Usability Engineering</i>. San Diego, Academic Press.</span></p>
+
+      <p class=ReferencesText><span class="ReferencesText">Nielsen, J. (2000). 
+
+        <i>Designing Web Usability: The Practice of Simplicity</i>. Indianapolis: 
+
+        New Riders Publishing.</span></p>
+
+      <p class=ReferencesText><span class="ReferencesText">Petrie, H. et al (2000). 
+
+        <i>An Evaluation of the British Museum COMPASS website with visually impaired 
+
+        people.</i> University of Hertfordshire, Sensory Disabilities Research 
+
+        Unit. </span></p>
+
+      <p class=ReferencesText><span class="ReferencesText">(Unpublished)</span></p>
+
+      <p class=ReferencesText><span class="ReferencesText">Preece, J. et al (1994). 
+
+        <i>Human-computer interaction</i>. Harlow, England: Addison-Wesley.</span></p>
+
+      <p class=ReferencesText><span class="ReferencesText">Schofield, J. &amp; 
+
+        Flute, J (1997). <i>Use and Usability: A guide to Designing Interactive 
+
+        Multimedia for the Public</i>. Melbourne: Multimedia Victoria.</span></p>
+
+      <h3>Credits</h3>
+
+      <p class=AcknowedgementsText>I should like to thank the following British 
+
+        Museum staff for their invaluable help and advice on this paper: David 
+
+        Jillings (COMPASS Project Manager), Mark Timson (Senior Designer, COMPASS), 
+
+        Matthew Cock (Creative Editor, COMPASS), Carolyn Howitt (Education Officer, 
+
+        COMPASS), Sue Gordon (Editorial Assistant, COMPASS) and Ray Devlin (Collections 
+
+        Documentation Management Section).</p>
+
+      <h3>APPENDIX: COMPASS </h3>
+
+      <p class=normal>COMPASS is a database-driven multimedia guide to a selection 
+
+        of around 5,000 of the Museum's objects, mainly those on display. 
+
+        The system is aimed at adults with no prior knowledge of the collections 
+
+        as well as school children aged 8-11 and family groups. The full COMPASS 
+
+        system will be available in the Museum's recently restored Reading 
+
+        Room from Spring 2001, where visitors will be able to use the 50 wide 
+
+        screen format touchscreens linked to the Museum's internal high speed 
+
+        network. The content includes high quality images, 3d reconstructions, 
+
+        animations and specially-written text narratives. The interface uses DHTML 
+
+        templates accessing the Index+ database. </p>
+
+      <p class=MsoCaption><a name="fig1"></a><a href="marshallfig1.html"><img src="marshall-fig1_thumb.jpg" width="257" height="165" alt="Fig.1: An object record from the touchscreen version of COMPASS." border="0"></a></p>
+
+      <p class=MsoCaption>Fig.1: An object record from the touchscreen version 
+
+        of COMPASS.</p>
+
+      <p class=MsoCaption><a name="fig2"></a><a href="marshallfig2.html"><img src="marshall-fig2_thumb.jpg" width="245" height="157" border="0" alt="Fig.2: General Index from the touchscreen version of COMPASS."></a></p>
+
+      <p class=MsoCaption>Fig.2: General Index from the touchscreen version of 
+
+        COMPASS.</p>
+
+      <p class=MsoCaption><a name="fig3"></a><a href="marshallfig3.html"><img src="marshall-fig3_thumb.jpg" width="243" height="155" border="0" alt="Fig.3: Date search from the touchscreen version of COMPASS."></a></p>
+
+      <p class=MsoCaption>Fig.3: Date search from the touchscreen version of COMPASS.</p>
+
+      <p class=MsoCaption><a href="marshallfig4.html" name="fig4"><img src="marshall-fig4_thumb.jpg" width="247" height="158" border="0" alt="Fig.4: Freetext search from the touchscreen version of COMPASS."></a></p>
+
+      <p class=MsoCaption>Fig.4: Freetext search from the touchscreen version 
+
+        of COMPASS.</p>
+
+      <p class=normal>A web version, using a different design of user interface 
+
+        (HTML templates), was launched on the web in June 2000 ( The internet 
+
+        interface is deliberately low tech, ensuring that it can be used without 
+
+        plug-ins on low-end PCs with low speed modems as are still widely used 
+
+        in UK schools and homes. Accessibility for users with visual impairments 
+
+        was a key factor in the design of the graphical and text-only interfaces. 
+
+      </p>
+
+      <p class=normal>We have incorporated several features to simplify access 
+
+        for users with no prior knowledge of the collections. Online 'tours', 
+
+        for example, group together objects into familiar themes. Some have been 
+
+        written for children aged 8-11 and for family groups; one (on the Year 
+
+        of the Dragon) was written by pupils from a Chinese school in London. 
+
+      </p>
+
+      <p class=normal>A full educational version of COMPASS is being developed 
+
+        for use on the web. As well as using pre-set groups of objects assembled 
+
+        into subject areas to support the UK National Curriculum, teachers are 
+
+        expected to make strong use of the 'personal folder' facility. 
+
+        This will enable all users - both on the web and in the Museum - to store 
+
+        personal selections of objects in their own folder. Selections made on 
+
+        the web will be retrievable in the Museum and can be printed on purchase 
+
+        of a BM smartcard.</p>
+
+      <p class=normal>The COMPASS project has been wholly funded by a very generous 
+
+        donation from the Annenberg Foundation in the US. As well as funding hardware 
+
+        and software, this donation paid for all content creation. A team of specialists 
+
+        in text editing, imaging, educational multimedia, 3d reconstruction and 
+
+        animation has been appointed and the COMPASS budget compensates curatorial 
+
+        departments, photographers etc for their time. All content has been produced 
+
+        by or under the direction of over 90 museum curators and must be 'signed 
+
+        off' by the curators before it is published. Guidance on text production 
+
+        etc was provided by the COMPASS team, who edit all material prior to sign 
+
+        off. </p>
+
+      <p class=normal>For more information on COMPASS content creation and audiences, 
+
+        see Marshall (2001).</p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/marshal/marshall.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:49:28 GMT -->
+</html>

@@ -1,0 +1,1282 @@
+<html>
+
+
+<!-- Mirrored from www.museumsandtheweb.com/mw98/papers/suhajda/suhajda_paper.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 20:36:18 GMT -->
+<head>
+
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+   <meta name="keywords" content="online, museums, virtual museums,virtual exhibitions, virtual collections, cultural heritage, interactivemultimedia, world wide web,professional conferences, papers, articles, international, web museums,online tours, web art, museum education">
+
+   <meta name="GENERATOR" content="Mozilla/4.01 [en] (WinNT; I) [Netscape]">
+
+   <title>MW98: PAPERS</title>
+
+</head>
+
+<body bgcolor="#FFEECC">
+
+<img src="../papers.gif" alt="Papers" height=68 width=176>
+
+<table>
+
+<tr>
+
+<td><img src="../dot_clear.gif" hspace=2 height=40 width=35></td>
+
+
+
+<td width="450">
+
+<center><b><font size=+1>Open the gates to the virtual visitors !</font></b></center>
+
+
+
+<center><b><font size=+1>(The MA.M.A -Hungarian Museums' Database- project)</font></b></center>
+
+
+
+<center><a href="../http://www.mama.hu/" link to hungarian museums home page>www.mama.hu</a></center>
+
+
+
+<center>&nbsp;</center>
+
+<b><a href="../../bios/suhajda.html">Attila Suhajda</a>, Ministry of Culture and Education</b>&nbsp;
+
+<br>&nbsp;
+
+
+
+<p><a name="toc"></a><b><font size=+1>Contents</font></b>&nbsp;
+
+
+
+<p><a href="#c1">1. Abstract</a>&nbsp;
+
+<br><a href="#c2">2. The aims of the "MA.M.A" (Hungarian Museums'&nbsp;</a>&nbsp;
+
+<br><a href="#c2">&nbsp;&nbsp;&nbsp; Database) project&nbsp;</a>&nbsp;
+
+<br><a href="#c3">3. The problems of creating a general museum</a>&nbsp;
+
+<br><a href="#c3">&nbsp;&nbsp;&nbsp; documentation system&nbsp;</a>&nbsp;
+
+<br><a href="#c4">4. What is expected of the system?</a>&nbsp;
+
+<br><a href="#c5">5. The realization of the project&nbsp;</a>&nbsp;
+
+<br>&nbsp;&nbsp;&nbsp; <a href="#c6">5.1. The unified data structure</a>&nbsp;
+
+<br>&nbsp;&nbsp;&nbsp; <a href="#c7">5.2. Fields on the query form</a>&nbsp;
+
+<br>&nbsp;&nbsp;&nbsp; <a href="#c8">5.3. The physical structure of the
+
+MA.M.A system</a>&nbsp;
+
+<br><a href="#c122">6. The Importance of the MA.M.A&nbsp;</a>&nbsp;
+
+<br><a href="#c133">7. The Future and Aims of MA.M.A&nbsp;</a>&nbsp;
+
+<br><b><u>Images</u></b>&nbsp;
+
+<br><font size=-1><a href="#c99">1. A panorama view of the Museum of Ethnography</a></font>&nbsp;
+
+<br><font size=-1><a href="#c100">2. Interior view of the Museum of Ethnography&nbsp;</a></font>&nbsp;
+
+<br><a href="#c11"><font size=-1>3. The INGRES version of the graphical
+
+thesaurus&nbsp;</font>&nbsp;</a>&nbsp;
+
+<br><font size=-1><a href="#c11">&nbsp;&nbsp;&nbsp; (Hungarian National
+
+Museum)</a>&nbsp;</font>&nbsp;
+
+<br><a href="#c12"><font size=-1>4. The ORACLE version of the graphical
+
+thesaurus</font>&nbsp;</a>&nbsp;
+
+<br><font size=-1><a href="#c12">&nbsp;&nbsp;&nbsp; system (Museum of Ethnography)</a>&nbsp;</font>&nbsp;
+
+<br>&nbsp;
+
+
+
+<p>&nbsp;<a name="c1"></a><font face="Arial,Helvetica">Abstract:</font>
+
+<font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+
+
+<p><i><font size=-1>In 1996 the Ministry of Culture and Education began
+
+(together with 11 state museums) the "MA.M.A" Hungarian Museums Database
+
+project.The aim of this project is to establish a searchable artifacts
+
+index database. Each state museum implemented a local network with a local
+
+server plus internet connection. The project designed and developed a database
+
+management system for each museums collection. Over these local databases
+
+we put an index database -called M.A.MA- containing 12 elements available
+
+in each collection. The local databases are stored and maintained on the
+
+local servers, however for security reasons only the well protected central
+
+computer is serving information to the Internet. This central computer
+
+will provide place for individual museum home pages too.&nbsp;</font></i>&nbsp;
+
+<br><i><font size=-1>The M.A.MA database is accessible on 3 main levels.
+
+The first for the public, limited searching capabilities but accessible
+
+for everyone from the internet. On the 2nd level the general database can
+
+be found with free searching capabilities, and the third level is closed,
+
+this is the researchers database, which contains detailed information about
+
+the objects of collections. The project didn't standardize at the level
+
+of the different collections data, but it has attempted to serve provide
+
+for general searching. This paper will present the results of this project
+
+include the solution of the museological problems and the professional
+
+technological background.&nbsp;</font></i>&nbsp;
+
+<br>&nbsp;
+
+
+
+<p><a name="c2"></a><font face="Arial,Helvetica">The aims of the "MA.M.A"
+
+(Hungarian Museums' Database) project </font><font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+
+
+<p><font size=-1>"MA.M.A" is a multimedia database of artifacts collected
+
+by the most prominent Hungarian museums.&nbsp; The aim of the project is
+
+to <b><i>create a database</i></b> which contains information about historical
+
+relics, art, technical and literary products of the Hungarian nation, which
+
+can be used for scientific and educational purposes and which at the same
+
+time would also help to recognize and better preserve our cultural heritage.A
+
+further aim of the project was to provide at least <b><i>basic informatical
+
+infrastructure</i></b> for the national museums.&nbsp;</font>&nbsp;
+
+<br>&nbsp;
+
+
+
+<p><a name="c3"></a><font face="Arial,Helvetica">The problems of creating
+
+a general museum documentation system </font><font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+
+
+<p><font size=-1>To create such a system has been a goal of the sphere
+
+of public collections for a long time, but these efforts -although they
+
+had some results - mostly failed.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>Unified way of documentation has been regulated since
+
+the 1950's by law in the Hungarian museums. This has greatly helped the
+
+development of a general computerized register of artifacts, but is much
+
+less useful in the creation of special collection structures.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>Since the systems of object description are varied from
+
+museum to museum, and even between the collections in the same museum,
+
+at this stage of the project our efforts towards a uniform inventory system
+
+are restricted to solving the problems at the level of <b><i>content retrieval</i></b>.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>As a further problem, the <b><i>different nomination</i></b>
+
+of the same artifacts causes additional difficulties in the retrieval.
+
+In order to build up a well searcheable database, we have to face this
+
+problem of nomination as well: in other words we have to create thesauruses
+
+which contain standardized expressions concerning the different types of
+
+artifacts.&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;</font>&nbsp;
+
+
+
+<p><a name="c4"></a><font face="Arial,Helvetica">What is expected of&nbsp;
+
+the system? </font><font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+<ol>
+
+<li>
+
+<font size=-1>Our primary aim was to create a public, <b><i>well searcheable</i></b>
+
+database that is <b><i>accessible for everyone</i></b>. Based on this concept
+
+we have defined a so called basic data structure containing 12 pieces of
+
+information. Each collection can provide data to this structure, let it
+
+be a zoological museum collecting butterflies or a technical collection
+
+with steam engines. We have called this <b><i>simple database structure
+
+"MA.M.A"</i></b> which is in fact a common unified index database of artifacts.&nbsp;</font></li>
+
+</ol>
+
+
+
+<ol>
+
+<li>
+
+<font size=-1>The second requirement concerning this system was its open
+
+endedness, which means that without difficulties a museum can join later
+
+(applying new collections - adding new description fields).</font></li>
+
+</ol>
+
+
+
+<ol>
+
+<li>
+
+<font size=-1><b><i>Easy maintenance</i></b> is also very important, to
+
+be able to allow customization - according to the different needs of museums
+
+- without endangering the integrity of the system. The significance of
+
+this element will be clarified later in this paper when I shall discuss
+
+the physical realization of the system.&nbsp;</font></li>
+
+</ol>
+
+
+
+<ol>
+
+<li>
+
+<font size=-1>The next important expectation was to provide a user friendly
+
+client software with minimal hardware background which does not require
+
+special training from the user may it be the museologist maintaining the
+
+system or an virtual visitor.&nbsp;</font></li>
+
+</ol>
+
+
+
+<ol>
+
+<li>
+
+<font size=-1><b><i>Data protection</i></b> - as is the case with similar
+
+valuable databases - is treated naturally as a question of special importance.&nbsp;</font></li>
+
+
+
+<br><font size=-1>The museums' databases will be <b><i>accessible on 3
+
+main levels</i></b>. The first level is the "MA.M.A" database.&nbsp; It
+
+will have free public access and will contain no more then the 12 pieces
+
+of information about each object which is stored in the common index database,
+
+but the and searching will be limited. The second level will contain the
+
+individual museums' databases with more detailed information. These databases
+
+are protected by passwords, it is the right of the individual museum to
+
+grant access to the password. However, there is read-only access to the
+
+data provided.&nbsp;</font>&nbsp;
+
+<br><font size=-1>The third is the level of researchers' database, where
+
+a double key protection system is applied, which provides access and the
+
+right of modification only to authorised users.&nbsp;</font></ol>
+
+<font size=-1>&nbsp;</font>&nbsp;
+
+
+
+<p><a name="c5"></a><font face="Arial,Helvetica">The realization of the
+
+project</font> <font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+
+
+<p><font size=-1>At the end of 1996 the Hungarian Ministry of Culture and
+
+Education started to develop the informatical systems of the national museums.&nbsp;
+
+This was the starting point of the "MA.M.A" project (Hungarian Museums'
+
+Database) involving the following 13 museums:&nbsp;</font>&nbsp;
+
+<ol>
+
+<li>
+
+<b><font size=-1>Museum of Applied Arts&nbsp;</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>Hungarian National Gallery&nbsp;</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>Hungarian National Museum&nbsp;</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>Hungarian Institute of Theatre History/Hungarian Museum
+
+of Theatre History&nbsp;</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>National Museum of Science and Technology&nbsp;</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>National Library and Museum of Pedagogy&nbsp;</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>Hungarian Museum of Literature&nbsp;</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>Open Air Museum of Ethnography&nbsp;</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>Museum of Fine Arts&nbsp;</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>National Museum of Natural History&nbsp;</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>Museum of Ethnography</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>Budapest Historical Museum&nbsp;</font></b></li>
+
+
+
+<li>
+
+<b><font size=-1>Museum of Agriculture</font></b></li>
+
+</ol>
+
+<font size=-1>These museums house the vast <b><i>majority of the Hungarian
+
+cultural heritage</i></b> and art treasures such as the Hungarian Crown,
+
+the Corvinas manuscripts and many other unique art treasures.The number
+
+of the objects preserved in their collection is remarkable high, approximately
+
+<b><i>20 million items</i></b>. Similarly sized collections exist only
+
+in the biggest of the museums in the County network.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>The project can be participated in&nbsp; by any of the
+
+public collection, <b><i>admission is open</i></b> to all.&nbsp; All <b><i>"MA.M.A"
+
+services are free</i></b> of charge for participants, who receive their
+
+own home page on the "MA.M.A" server and software to build and maintain
+
+their databases. In return it is the task of the individual museums to
+
+digitalize and make their databases permanently available.&nbsp; To date
+
+the program has been financed totally by the state - the National Museums
+
+are entirely funded from the Budget.&nbsp; Private collections and those
+
+maintained by local governments have the difficult task of providing the
+
+necessary informatical infrastructure, consequently the upgrading of their
+
+own documentation system, and preparation of their individual "MA.M.A"
+
+version attracts a smaller fee.&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;</font>&nbsp;
+
+<br><font size=-1>One of the most complicated tasks of the project has
+
+been the creation of the <b><i>unified data structure</i></b> accepted
+
+by all institutions involved, as each of the participating museums had
+
+different approaches to this problem. There were museums which would have
+
+liked to issue only 3 items of information about the objects in their colections,
+
+which would have made adoptation of the system practically impossible,
+
+whilst another museum would have freely agreed to total access to their
+
+whole documentation.We could characterize the common database structure
+
+as a solution of compromise. All museums involved provide the data specified
+
+on the common index database, although not all data will be searchable
+
+in the public system.&nbsp;</font>&nbsp;
+
+<br>&nbsp;
+
+
+
+<p><a name="c6"></a>The unified data structure: <font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+<br>&nbsp;
+
+<table border >
+
+<tr>
+
+<td width="35"></td>
+
+
+
+<td align=CENTER width="125"><b>Field name</b></td>
+
+
+
+<td align=CENTER width="220"><b>Comment</b></td>
+
+</tr>
+
+
+
+<tr>
+
+<td>1.</td>
+
+
+
+<td><b><font size=-1>Object ID</font></b></td>
+
+
+
+<td><font size=-1>eg. inventory number</font></td>
+
+</tr>
+
+
+
+<tr>
+
+<td>2.</td>
+
+
+
+<td><b><font size=-1>Identification</font></b></td>
+
+
+
+<td><font size=-1>(genus/ name of object/ name of work of art)</font></td>
+
+</tr>
+
+
+
+<tr>
+
+<td align=LEFT valign=TOP>3.</td>
+
+
+
+<td><b><font size=-1>Acquisition method</font></b></td>
+
+
+
+<td><font size=-1>excavation / purchase / present, etc.</font></td>
+
+</tr>
+
+
+
+<tr>
+
+<td align=LEFT valign=TOP>4.</td>
+
+
+
+<td valign=TOP><font size=-1><b>Date</b>&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- date of acquisition&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- date of preparation&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- date of usage&nbsp;</font>&nbsp;<font size=-1>&nbsp;</font></td>
+
+
+
+<td><font size=-1>Date interval (-from, -to year)</font></td>
+
+</tr>
+
+
+
+<tr>
+
+<td align=LEFT valign=TOP>5.</td>
+
+
+
+<td valign=TOP><font size=-1><b>Chronology</b>&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;-preparation&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- usage</font></td>
+
+
+
+<td><font size=-1>free text field (eg. XIth century, Middle Age, etc.)&nbsp;</font>&nbsp;
+
+<br><font size=-1>Chronology are appeared in the following 4 context:&nbsp;</font>&nbsp;
+
+<br><font size=-1>(Age / Culture / Century / Style)</font></td>
+
+</tr>
+
+
+
+<tr>
+
+<td align=LEFT valign=TOP>6.</td>
+
+
+
+<td><font size=-1><b>Location</b>&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- origin&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- usage&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- acquisition</font></td>
+
+
+
+<td><font size=-1>field of locations wich related the object in different
+
+context</font></td>
+
+</tr>
+
+
+
+<tr>
+
+<td align=LEFT valign=TOP>7.</td>
+
+
+
+<td><b><font size=-1>Material</font></b></td>
+
+
+
+<td>&nbsp;</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>8.</td>
+
+
+
+<td><b><font size=-1>Technique</font></b></td>
+
+
+
+<td>&nbsp;</td>
+
+</tr>
+
+
+
+<tr>
+
+<td align=LEFT valign=TOP>9.</td>
+
+
+
+<td><font size=-1><b>Register of Names</b>&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- acquisitor&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- master&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- craftsman&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- designer&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;- workshop&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;etc.&nbsp;</font>&nbsp;</td>
+
+
+
+<td><font size=-1>field of names wich related the object in different context&nbsp;</font>&nbsp;
+
+<br><font size=-1>eg: workshop/acquisitor/master/designer/subject/user,
+
+etc</font></td>
+
+</tr>
+
+
+
+<tr>
+
+<td align=LEFT valign=TOP>10.</td>
+
+
+
+<td><font size=-1><b>Multimedia informations</b>&nbsp;</font>&nbsp;</td>
+
+
+
+<td><font size=-1>multiply values field (image, voice, video)</font></td>
+
+</tr>
+
+
+
+<tr>
+
+<td align=LEFT valign=TOP>11.</td>
+
+
+
+<td align=LEFT valign=TOP><b><font size=-1>Maintenance</font></b></td>
+
+
+
+<td><font size=-1>internal technical field</font>&nbsp;
+
+<br><font size=-1>eg. to indicate the object is sequestered&nbsp;</font></td>
+
+</tr>
+
+
+
+<tr>
+
+<td>12.</td>
+
+
+
+<td><b><font size=-1>Storage</font></b></td>
+
+
+
+<td><font size=-1>exhibition / store</font></td>
+
+</tr>
+
+</table>
+
+&nbsp;
+
+
+
+<p><a name="c7"></a>Fields on the query form: <font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+<br>&nbsp;
+
+<table border width="100%" >
+
+<tr>
+
+<td align=LEFT valign=TOP width="35"></td>
+
+
+
+<td align=LEFT valign=TOP width="150">
+
+<center><b>Field name</b></center>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>1.</td>
+
+
+
+<td>Identification</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>2.</td>
+
+
+
+<td>Date/Chronology of preparation</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>3.</td>
+
+
+
+<td>Locations</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>4.</td>
+
+
+
+<td>Register of Names</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>5.</td>
+
+
+
+<td>Material</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>6.</td>
+
+
+
+<td>Technique</td>
+
+</tr>
+
+</table>
+
+&nbsp;
+
+
+
+<p><font size=-1>The following <b><i>secondary information </i></b>are
+
+attached to the index database:</font>&nbsp;
+
+
+
+<p><b><font size=-1>1. Locations&nbsp;</font></b>&nbsp;
+
+<br><b><font size=-1>2. Institutions&nbsp;</font></b>&nbsp;
+
+<br><b><font size=-1>3. Collections&nbsp;</font></b>&nbsp;
+
+<br><b><font size=-1>4. Material&nbsp;</font></b>&nbsp;
+
+<br><b><font size=-1>5. Techniques&nbsp;</font></b>&nbsp;
+
+<br><b><font size=-1>6. Methods of acquisitions&nbsp;</font></b>&nbsp;
+
+<br><b><font size=-1>7. Register of Names&nbsp;</font></b>&nbsp;
+
+<br><font size=-1><b>8. References (publications)</b>&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>During the physical creation of the system we took into
+
+account new technology suitable for the publication of databases on the
+
+internet.&nbsp; For this reason we chose the new database handler by <b><i>ORACLE</i></b>,
+
+particularly useful when dealing with large multimedia databases.&nbsp;
+
+Publication of the database is facilitated by the <b><i>ORACLE Application
+
+Server</i></b>, whilst client software is provided in the form of <b><i>Netscape
+
+Communicator</i></b> (luckily received free of charge).&nbsp;</font>&nbsp;
+
+
+
+<p><a name="c8"></a><font size=-1>The table below illustrates the <b><i>physical
+
+structure of the MA.M.A</i></b> system:&nbsp;</font> <font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+
+
+<p><a href="Struct.gif"><img src="STR.JPG" border=0 height=234 width=200></a>&nbsp;
+
+
+
+<p><font size=-1>There are 2 SUN servers at the MA.M.A Centre.&nbsp; The
+
+database server is a <b><i>SUN Ultra 450</i></b> machine, which is the
+
+most advanced machine ever used by a museum in Hungary.&nbsp; This machine
+
+hosts the joint index database of all the participating museums, and the
+
+individual databases of those museums which do not have a suitable server
+
+of their own for the servicing of their databases. This machine is shielded
+
+and protected from the outside world by a <b><i>firewall system</i></b>
+
+which also prevents unauthorized access. Authorization will be provided
+
+by <b><i>Netscape Certificate's Server</i></b>.&nbsp;</font>&nbsp;
+
+<br><font size=-1>The database server can only communicate with one other
+
+machine from the outside of the firewall.&nbsp; This is a smaller capacity
+
+<b><i>SUN Ultra 1</i></b> server. This machine will be the web server,
+
+the only server visible for outside visitors. This server will not store
+
+any data, its task is to forward requests to the database server which
+
+in return will only transfer back data found for the particular request.
+
+The webserver will also store forms necessary for the use of the collections
+
+of the various museums as well as the downloading and maintenance software
+
+supporting these forms. Data entered on these forms will then be utilised
+
+by the ORACLE Application Server program to generate the tables or html
+
+pages that will eventually appear on the end users's screen.&nbsp;</font>&nbsp;
+
+<br><font size=-1>The client program itself operates in a regular internet
+
+browser environment, apart from a password, a user needs nothing else to
+
+start work.&nbsp; After logging on the MA.M.A server and entering a valid
+
+password, a program module containing the dataforms of the requested museum
+
+will be downloaded on the user's computer.&nbsp; As the client application
+
+is used for the maintenance of the database as well as the search function,
+
+the more complex functions are provided by the use of JAVA scripts and
+
+applets.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>All participating institutions have their own NT or UNIX
+
+operation system servers and have the ORACLE Workgroup Server and the Application
+
+Server appropriate licences.&nbsp; The key concept of the system is that
+
+the local servers use the <b><i>same applications</i></b> as the main,
+
+central server, the only restriction being is that they&nbsp; can only
+
+access dataforms of the requested institution.&nbsp; All structural changes
+
+are first to be registered with the central server, which will then automatically&nbsp;
+
+syhchronise and update the application used on the local server of the
+
+institution which requested the changes. This way it is possible to ensure
+
+the <b><i>uniformity of the index database</i></b> which has the advantage
+
+that if a researcher outside of Hungary (naturally who possesses a valid
+
+password) wishes to use the system, via the central server it is possible
+
+to access the data system of the researcher's own local collection.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>As the individual institutions are&nbsp; presently lacking
+
+firewall protection and the configuration of the servers is still under
+
+way, the decision was made that the databases would <b><i>only be served
+
+through MA.M.A central server</i></b>.&nbsp; In time and with the development
+
+of appropriate protection these functionns can be taken over by the individual
+
+institutions and MA.M.A would only provide the index database, acting as
+
+a type of compass for browsers.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>Maintainence of the Museum databases can be undertaken
+
+both on the local servers and on the MA.M.A server also.&nbsp; As exactly
+
+the <b><i>same program</i></b> runs on both the local and main servers
+
+no appreciable difference can be discerned when using the two. Data exchange
+
+between servers is practically automatic, synchronisation of the databases
+
+is programable.&nbsp; This means that new and/or modified data is registered
+
+on the central server, from whence the jointly constructed secondary databases
+
+(e.g: names, materials) return to the individual museum servers.&nbsp;</font>&nbsp;
+
+<br><font size=-1>Consistency is the task of the central server, which
+
+regularly <b><i>replicates the central database</i></b>. The Museums currently
+
+have an Internet connection capability of 64kb/s, whilst the server has
+
+a capability of 128kb/s.&nbsp; If necessary this can be extended to 2Mb/s.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>Database storage of visual and audio multimedia data occurs
+
+according to <b><i>standard formats</i></b> and can be viewed using standard
+
+browsers.&nbsp; We plan to store the image data in the up to now little
+
+used but advantageous .FIF (<b><i>Fractal Image</i></b> Format) format.&nbsp;
+
+This requires however the acquisition of special hardware for the institutions.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>It is also worth mentioning use of the ORACLE CONTEXT
+
+module, which enables the identification and accessability of artifacts
+
+upon the basis of even the smallest fragment of a word in&nbsp; any of
+
+the attached documents (Word, Excel, etc).&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>The MA.M.A centre is presently located in the Ethnographical
+
+Museum, where its operation is overseen by suitably trained personel.&nbsp;</font>&nbsp;
+
+
+
+<p><a name="c99"></a><font size=-1><b><i>A panorama view of the Museum
+
+of Ethnography:</i></b>&nbsp;</font> <font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+
+
+<p><a href="Nm_out.gif" target="_top"><img src="OUT.JPG" border=0 height=136 width=200></a><font size=-1>&nbsp;</font>&nbsp;
+
+<br>&nbsp;
+
+
+
+<p><a name="c100"></a><font size=-1><b><i>Interior&nbsp; view of the Museum
+
+of Ethnography:</i></b>&nbsp;</font> <font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+<br>&nbsp;
+
+<br><a href="Nm_int.gif" target="_top"><img src="INT.JPG" border=0 height=135 width=200></a>&nbsp;
+
+
+
+<p><font size=-1>It is not our intention to resolve the issue of standard,
+
+consistent terminology within the framework of this project: a special
+
+graphic theosaurus has been created seperately and made available without
+
+charge to each and every institution.&nbsp;</font>&nbsp;
+
+
+
+<p><a name="c11"></a><font size=-1><b><i>The INGRES version of the graphical
+
+thesaurus (Hungarian National Museum):</i></b>&nbsp;</font> <font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+<br><font size=-1>&nbsp;</font>&nbsp;
+
+<br><a href="Mnm_t1.gif" target="_top"><img src="1.JPG" border=0 height=164 width=200></a>&nbsp;<a href="Mnm_t2.gif" target="_top"><img src="2.JPG" border=0 height=161 width=200></a>&nbsp;
+
+<br>&nbsp;
+
+
+
+<p><a name="c12"></a><font size=-1><b><i>The ORACLE version of the graphical
+
+thesaurus system (Museum of Ethnography):</i></b>&nbsp;</font> <font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+<br><font size=-1>&nbsp;&nbsp;</font>&nbsp;
+
+<br><a href="Nm_t1.gif" target="_top"><img src="Nm1.JPG" border=0 height=145 width=200></a>&nbsp;
+
+<br>&nbsp;
+
+
+
+<p><a name="c122"></a><font face="Arial,Helvetica">The Importance of the
+
+MA.M.A</font><font size=-1>&nbsp;</font> <font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+
+
+<p><font size=-1>It is essential to underline the real importance of the
+
+project.&nbsp; It is obvious that information&nbsp; technology has reached
+
+the stage where it requires quality information for the manufacture of
+
+newer and newer products.&nbsp; This is an ideal moment for the Museums
+
+to profit from the situation, yet at the same time certain dangers have
+
+also appeared.&nbsp;</font>&nbsp;
+
+<br><font size=-1>Should the Museums appear on <b><i>digital culture markets</i></b>
+
+as important content providers then they may acheive a much <b><i>better
+
+position</i></b> for themselves and won't be without a share of the spoils&nbsp;
+
+either.&nbsp;</font>&nbsp;
+
+<br><font size=-1>&nbsp;</font>&nbsp;
+
+
+
+<p><a name="c133"></a><font face="Arial,Helvetica">The Future and Aims
+
+of MA.M.A</font><font size=-1>&nbsp;</font> <font size=-1><a href="#toc">(toc)</a></font>&nbsp;
+
+
+
+<p><font size=-1>A database containing valuable cultural material has a
+
+right to exist.&nbsp; Its existence is not primarily determined by economic
+
+considerations but rather is of great importance to the fields of <b><i>education
+
+and research</i></b>.&nbsp; It is not without importance either the fact
+
+that such a small country as ours can appear on the internet, bringing
+
+together those interested, being able to introduce them to the country's
+
+riches, to our&nbsp; past and present, perhaps even through a visit to
+
+a virtual museum.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>Presently we have no knowledge of similar european projects
+
+aiming to unify country size public collections.&nbsp;</font>&nbsp;
+
+<br><font size=-1>In 1996 Hungary signed the EU initiated "<b><i>Multimedia
+
+Access to Europe's Cultural Heritage</i></b>" memorandum of understanding.&nbsp;
+
+We would like to<b><i> participate</i></b> within this large project as
+
+a smaller independent project.&nbsp; It is important to discover new sources
+
+- here we are not thinking of technological - to assist us in building
+
+our databases and <b><i>making our system multilingual</i></b>.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>We intend to continue operating our services <b><i>free
+
+of charge</i></b>.&nbsp; In the future however downloading of higher quality
+
+images and sections of film and audio will become chargeable.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>Realisation of the project is presently underway - the
+
+system is in <b><i>experimental phase</i></b>.&nbsp; The "Museum and the
+
+Web '98" conference is the international debut for MA.M.A.&nbsp; At the
+
+time of writing the loading of information into the database is taking
+
+place. The initial database will contain between <b><i>1.5-1.8 million
+
+records</i></b>.&nbsp;</font>&nbsp;
+
+
+
+<p><font size=-1>Hungary is preparing for the <b><i>Millenium celebrations
+
+of the State in 2000.</i></b>&nbsp; The country would like to celebrate
+
+and begin the 21st century in a fitting manner.&nbsp; We hope that our&nbsp;
+
+project can contribute to the preservation and introduction of our country's
+
+past and present to the entire world.&nbsp;</font>&nbsp;
+
+<br><font size=-1>We would like to extend an <b><i>invitation to visit
+
+Hungary</i></b> for the celebrations of 2000, either in person or virtually
+
+through MA.M.A.</font>&nbsp;
+
+
+
+<p><b><font size=-1>Attila Suhajda</font></b>&nbsp;
+
+<br><font size=-1>archaeologist &amp; computer programmer</font>&nbsp;
+
+<br><font size=-1>informatical advisor</font>&nbsp;
+
+<br><font size=-1>Ministry of Culture and Education</font>&nbsp;
+
+<br><font size=-1>1055 Budapest, Szalay u. 10-14.</font>&nbsp;
+
+<br><font size=-1>HUNGARY</font>
+
+<br><font size=-1>Tel: (361) 302-0600/1581</font>&nbsp;
+
+<br><font size=-1>Fax: (361) 3319-508</font>&nbsp;
+
+<br><font size=-1>Email: <a href="mailto:suhajda@helka.iif.hu">suhajda@helka.iif.hu</a></font>&nbsp;
+
+<br>&nbsp;
+
+
+
+<p><img src="../dot_clear.gif" vspace=16 >&nbsp;
+
+
+
+<p><img src="../../mw98-line.gif" , , , HEIGHT=2 WIDTH=420>&nbsp;
+
+<br><i><font size=-2>Last modified: April 3, 1998. This file can be
+
+found below <a href="../http://www.archimuse.com/mw98/" target="_top" TARGET="_top">http://www.archimuse.com/mw98/</A></font></i>&nbsp;
+
+<br><font size=-2>Send questions and comments to <a href="../../index.html">info@museumsandtheweb.com</a></font>&nbsp;</td>
+
+</tr>
+
+</table>
+
+&nbsp;
+
+</body>
+
+
+<!-- Mirrored from www.museumsandtheweb.com/mw98/papers/suhajda/suhajda_paper.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 20:36:29 GMT -->
+</html>
+

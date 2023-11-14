@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw17.mwconf.org/paper/building-distributed-online-exhibitions-with-iiif/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 22:01:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Building distributed online exhibitions with IIIF &#8211; MW17: Museums and the Web 2017</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Building distributed online exhibitions with IIIF Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw17.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login3822.css?ver=1604077128' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-twentysixteen/style3ce7.css?ver=20201208' media='all' />
+<style id='twentysixteen-style-inline-css'>
+
+		/* Custom Link Color */
+		.menu-toggle:hover,
+		.menu-toggle:focus,
+		a,
+		.main-navigation a:hover,
+		.main-navigation a:focus,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.social-navigation a:hover:before,
+		.social-navigation a:focus:before,
+		.post-navigation a:hover .post-title,
+		.post-navigation a:focus .post-title,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.site-branding .site-title a:hover,
+		.site-branding .site-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-footer a:hover,
+		.entry-footer a:focus,
+		.comment-metadata a:hover,
+		.comment-metadata a:focus,
+		.pingback .comment-edit-link:hover,
+		.pingback .comment-edit-link:focus,
+		.comment-reply-link,
+		.comment-reply-link:hover,
+		.comment-reply-link:focus,
+		.required,
+		.site-info a:hover,
+		.site-info a:focus {
+			color: #e55747;
+		}
+
+		mark,
+		ins,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.widget_calendar tbody a,
+		.page-links a:hover,
+		.page-links a:focus {
+			background-color: #e55747;
+		}
+
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
+		textarea:focus,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.menu-toggle:hover,
+		.menu-toggle:focus {
+			border-color: #e55747;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation li:hover > a,
+			.main-navigation li.focus > a {
+				color: #e55747;
+			}
+		}
+	
+</style>
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src='https://mw17.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexe006.html?p=1414' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed36ff.json?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fbuilding-distributed-online-exhibitions-with-iiif%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embedae65?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fbuilding-distributed-online-exhibitions-with-iiif%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-twentysixteen/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-1414 wp-custom-logo wp-embed-responsive">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+					<div class="site-branding">
+						<a href="../../index.html" class="custom-logo-link" rel="home"><img width="240" height="240" src="../../wp-content/uploads/2017/02/cropped-mw-final.png" class="custom-logo" alt="MW17: Museums and the Web 2017" /></a>					</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p> MW17: Museums and the Web 2017 <span>Cleveland Ohio - April 19-22</span></p>
+								<form class="search-form" role="search" method="get" action="#">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-1-container"><ul id="menu-menu-1" class="primary-menu"><li id="menu-item-3074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3074"><a href="https://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-88"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580"><a href="../../local-information-and-accommodation/index.html">Local Information and Accommodation</a></li>
+	<li id="menu-item-1917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1917"><a href="../../faqs/index.html">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-172"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-475"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-108"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="../../call-for-proposals/index.html">Call for Proposals</a></li>
+	<li id="menu-item-494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-135"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-1689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1689"><a href="../../advertising/index.html">Advertising</a></li>
+</ul>
+</li>
+<li id="menu-item-573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-573"><a href="../../program/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-2972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2972"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-3023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3023"><a href="../../select-session-slides/index.html">Presentations</a></li>
+	<li id="menu-item-1760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1760"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2968"><a href="../../glami-winners/index.html">GLAMi Winners</a></li>
+		<li id="menu-item-2963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2963"><a href="../../glami-nominees/index.html">GLAMi Nominees</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2894"><a href="../../mwx/index.html">MWX 2017</a></li>
+	<li id="menu-item-1252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1252"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="../../committees/index.html">Committees</a></li>
+</ul>
+</li>
+<li>
+    <form role='search' method='get' class='search-form' action='http://mw17.mwconf.org/'>
+	<label>
+	<span class='screen-reader-text'>Search for:</span>
+	<input type='search' class='search-field' placeholder='Search &hellip;' value='' name='s' />
+	</label>
+	<button type='submit' class='search-submit'>
+	<span class='screen-reader-text'>Search</span></button>
+	</form>    
+	</li></ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+	
+<section id="page-hero">
+	<div class="background"> </div>
+</section>
+<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];
+    jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw17.mwconf.org/wp-content/themes/mw-twentysixteen/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-1414" class="post-1414 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">Building distributed online exhibitions with IIIF</h1>
+
+<p>, <a target="_blank" href="http://www.museumsandtheweb.com/member/azaroth42/">Robert Sanderson</a>, J. Paul Getty Trust, USA</p>
+<h2>Abstract</h2>
+The creation of online exhibitions—delivered via the web, mobile applications, or kiosks—often requires the painstaking duplication of images and object descriptions that are stored in collection management and digital asset management systems. This task is further complicated by the inclusion of objects held by other institutions, whether they have been loaned for the exhibition or are present only in the online version. The end product of this effort is most often a digital exhibition that itself is managed within its own data silo and maintained in a format that does not facilitate reuse or discovery.
+
+In this presentation we will describe how the International Image Interoperability Framework (IIIF) can benefit curators and technologists as they work together to build online exhibitions. Using examples from the collections of the Getty and the Yale Center for British Art, we will discuss how the interoperability provided by IIIF allows exhibition creators to easily assemble collections of objects from many different institutions; bring display metadata into the online exhibition without manual data entry; and enrich the content with annotations, such as highlights of regions of interest within images or allowing feedback from either select participants or the public, as desired. We will also demonstrate how the content of the exhibition can be reused in other contexts, because of the interoperable nature of the descriptions. The presentation will conclude with an overview of the IIIF-compatible tools that are available to support online exhibitions, as well as a discussion of the ways in which vendors and the museum community can contribute to the advancement of interoperable software.</p>
+<p><b>Keywords:</b> IIIF, interoperability, exhibitions, linked data</p>
+<h2>Introduction</h2>
+<p>The Web is now more than 25 years old, and has fundamentally changed the way that communication occurs at a global level. One of the fundamental tenets of the Web is its distributed nature; originally to protect it from disruption, this has evolved into becoming a participatory and inclusive environment thrugh which content can be created, shared, and interlinked by anyone. This cross-linking of content is of vital importance, as it provides a pattern for the discovery of new, related content by both humans and machines, rather than being partitioned in separate databases that happen to be on a network.</p>
+<p>In times of xenophobia and both financial and social uncertainty, it is a moral imperative of the cultural heritage sector to work together to promote and celebrate our unique diversities, instilling the wonder that art can bring in as wide an audience as possible. By exposing our visitors to content that both reassures and challenges them, allowing them to explore their understanding of their own culture and those of others, and by facilitating their interactions with institutional specialists and each other, we are instrumental in breaking down the partitioning walls of ignorance and fear.</p>
+<p>For cultural heritage organizations such as museums, image content is the primary means of creating compelling online engagement with visitors. Digitization efforts ranging from photography to photogrammetry have been ongoing at many of our institutions for years, providing the content for online exhibitions. But these exhibitions are treated the same way as we have treated their printed catalogs, as static and stand-alone products to be produced and forgotten. This approach does not take advantage of the shared social experience that the Web can so easily provide. Beyond that, it does not take advantage of the shared content ecosystem which can improve both the consumer&#8217;s and producer&#8217;s experience.</p>
+<p>Workflows for the creation of digital exhibitions revolve around manual data re-entry and image upload, despite the fact that this content is already online and accessible. This is particularly true for objects from other institutions, or even other departments within a single organization that use a different content management system. There is no interrelationship between the exhibition system, the catalogs (print or digital), the collection management systems, or even the institutions. There is no potential for the reuse of the data in analysis or research, and the results are ultimately not reproducible.</p>
+<p>Enter the International Image Interoperability Framework (IIIF).</p>
+<h3>An overview of IIIF</h3>
+<p>IIIF (pronounced &#8220;triple eye eff&#8221;) is a community primarily composed of cultural heritage organizations with a goal of enabling interoperability and reuse of image-based content (<a href="http://iiif.io/">http://iiif.io/</a>). Initially started in the higher education domain, it was quickly adopted by the digital library world and is increasingly expanding into museums, galleries and archives. The community includes organizations from the Americas, Europe, Asia, Africa, and Australasia, and is supported financially by a consortium that funds the salaries of two full-time employees to manage communication and technical adoption.</p>
+<p>To fulfill its goal of interoperability, the community works together to produce specifications of how systems should interact when requesting and using image content, and the descriptions of the context in which those images are used. These specifications (called APIs) work with the Web infrastructure to ensure that the content is part of the Web, not just on it. They allow systems to be built that can interact directly with the content, regardless of the host institution or specific technology product used. By using the Web as the communication channel, the interrelationships between the digital content and the objects they depict and describe become part of the same social framework.</p>
+<p>As a community IIIF also creates products that implement those specifications and encourages and facilitates their adoption and use. Specification without implementation is just a piece of digital paper, and worth about as much. The implementations range from commercial products built by Digital Asset Management System vendors, to free and open-source projects in a variety of programming languages, with a variety of capabilities. The community welcomes experimentation and diversity of implementation, rather than selecting one product to endorse or develop. The requirement is that the implementations follow the technical interaction patterns laid out in the API specification, of which there are currently four such specifications:</p>
+<ul>
+<li>The Image API (version 2.1) describes how to retrieve segments or complete images at different sizes, and a linked data description of the technical and rights metadata about the images that depict the objects</li>
+<li>The Presentation API (version 2.1) describes the context in which the image should be displayed to the user, including labels, ordering of the content, and relationships to other objects.</li>
+<li>The Search API (version 1.0) describes a method of searching any available full text content or comments about the objects.</li>
+<li>The Authentication API (version 1.0) describes how viewing applications should allow users from around the Web to authenticate with the hosting organizations to get access to controlled resources.</li>
+</ul>
+<p>The APIs provide several key features of interest and relevance for digital exhibitions.</p>
+<h2>Flexible, cross-repository access to images</h2>
+<p>The IIIF APIs provide the information needed to deliver a wide range of online user experiences. From the perspective of a developer of a digital exhibition, the Image API capabilities are central. It is common practice today to copy digital images of collection objects into content management platforms, which then host the images and create derivatives at varying sizes in order to meet the requirements of the user interface design. Even in cases where an integration has been made with a local DAMS, the content management platform may still require a copy of the image in order to efficiently manage image requests at specific resolutions.  In addition, the local DAMS may not contain the images of objects from other institutions, necessitating the manual upload of these images as well as manual entry of any metadata required for management purposes.</p>
+<p>The IIIF Image API addresses these issues by providing a consistent method of requesting images at varying sizes from any compliant image repository. Given the location of an image made available via the Image API, an application can request derivatives at any scale required by its user interface. An example of this is the Mirador viewer, which displays smaller thumbnails when browsing for an object, as an aid to identifying the object or distinguishing it from others.  When the user navigates to an individual object’s view, the application requests a larger thumbnail for each image. The application can query the size and aspect ratio of the image using the Image API and can request images scaled to the exact pixel dimensions required in each case.</p>
+<p>An online exhibition that draws on content from multiple IIIF-enabled institutions can likewise forgo the local duplication and management of images that has traditionally been required. Use of a shared API allows the development of systems that are agnostic as to the location of the image provider, so long as the image servers conform to the Image API specification. That this approach is capable of scaling globally is evidenced by the Mirador viewer demonstration instance (<a href="http://projectmirador.org/demo/">http://projectmirador.org/demo/</a>), which draws on images delivered via the Image API  from more than a dozen institutions in the United States, Europe, and Japan.</p>
+<h3>Descriptive text</h3>
+<p>The goal of “international interoperability” carries with it the assumption that the IIIF APIs will be capable of providing the information necessary to support internationalized software applications. The Presentation API defines a number of properties that contain text that are intended to be displayed to users, so it defines an internationalization pattern that allows the language of display strings to be specified if needed. Software applications that take into account language preferences supplied by the user’s browser can deliver content in the appropriate language, even if the application itself has not been localized to the desired language.</p>
+<p>The Presentation API also provides a metadata property that contains a list of label-value pairs. These are intended to provide a mechanism for the display of metadata fields that the content provider desires to make available. Note that these pairs carry no semantic meaning, are not bound to any specific metadata schema, and are not intended for any purpose other than display. As is the case with other descriptive properties, the strings can be supplied in alternative languages, which allows for labels and values to be translated separately. For example, the National Library of Wales in some cases publishes alternative labels (e.g., “Period” and “Cyfnod”), while providing a single value (e.g., “1400-1500”) to be displayed regardless of the user’s language preference.</p>
+<h3>Collections of objects</h3>
+<p>At the core of the IIIF Presentation API is the concept of a manifest, which carries the information needed to display an object; but in many cases, content owners wish to organize these objects into lists or hierarchies. As a result, the Presentation API provides a collection resource that may contain both manifests and nested collections (manifests may be part of more than one collection at the same time). Collections admit the same descriptive properties as manifests: a label, description, thumbnail, display metadata, and rights information can all be applied to collections and used in the construction of hierarchical views. In addition, both collections and manifests can carry a timestamp to facilitate the creation of date-based browse features or timelines in the user interface. IIIF content providers have made use of collections to publish manifests grouped by creator, medium, curatorial department, and other characteristics. For the purposes of creating a digital exhibition, IIIF collections provide the mechanism for organizing, describing, and publishing the manifests of the exhibition contents.</p>
+<h3>Embedded data and services</h3>
+<p>The IIIF APIs make widespread use of the concept of services, which either embed data directly into a manifest or reference external APIs. Authentication and search functions are defined as services within a manifest, and even IIIF Image API endpoints are services. While the expression and behaviors of these core services are defined in relevant IIIF API specifications, the pattern is extensible and custom services can be defined by content providers, or, more productively, by wider agreement among the IIIF community. One simple but useful service is provided as an example: a service that embeds geographical coordinates within a manifest using a JSON-LD representation of data defined by the GeoJSON format (Butler et al., 2016). Just as the navigation date allows a single date to be associated with a manifest or collection for the purposes of rendering a timeline or browse function, the GeoJSON service allows a point to be associated with the object. Similar to the manifest’s metadata construct, the service does not specify the significance of the specified location: it could indicate the location depicted, or the find site of the object. A repository that consistently exposes location data via GeoJSON can lower the barrier to the development of map-based interfaces in software clients.</p>
+<h3>Annotations</h3>
+<p>Annotations are another core component of the IIIF APIs, which employ a data model developed by the Open Annotation Collaboration (Sanderson et al., 2013) that has since evolved into a Web standard published by the W3C (Sanderson et al., 2017). These annotations are used to associate images, text, and other information with IIIF objects. An annotation typically consists of a target, such as a point or area on a IIIF Canvas, and a body, such as text that describes the target region. This data model has seen increasing adoption in applications designed to enrich collections through annotation by curators as well as crowdsourcing; the Rijksmuseum’s use of Accurator (<a href="http://annotate.accurator.nl/intro.html">http://annotate.accurator.nl/intro.html</a>) is just one example. Open Annotation provides a simple yet highly flexible model for authoring and publishing annotations in custom exhibition software as well as Open Annotation-compatible viewers such as Mirador.</p>
+<h2>Digital exhibitions</h2>
+<p>There is a wide range of potential definitions for what counts as a &#8220;digital exhibition;&#8221; however, since IIIF is a foundational technology, it can play a role in the creation and dissemination of any of the exhibitions encountered at the authors&#8217; institutions. The intent or audience of the exhibition (along which lines distinctions have been drawn) does not alter the need to interact with images or the descriptive context that enables the audience to engage with and appreciate the objects they depict.</p>
+<p>To demonstrate this, we can distinguish between the following intents or forms of a digital exhibition. The list is not intended to be comprehensive, but only to demonstrate the broad spectrum.</p>
+<ol>
+<li>Digital Only. The digital exhibition is the sole form of the exhibition, which does not, and perhaps cannot, exist in a physical form. This sort of exhibition would allow objects that are impossible or prohibitively costly to move to be displayed next to each other, to reconstruct objects from their fragments, and to see views of objects that are impossible in real life such as both the front and back of a painting hung on a wall.</li>
+<li>Blended. The exhibition consists of both physical and digital components, where the digital components do not replicate the physical but are additive. For example, the Getty&#8217;s recent exhibition on the<em> Cave Temples of Dunhuang</em>  (<a href="http://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/index.html">http://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/index.html</a>) had a traditional gallery experience, a physical reconstruction of several caves, and a virtual reality experience of other caves.</li>
+<li>Exhibition Memorial. The exhibition is primarily physical and bounded in time, and the digital part is intended to provide a simulacrum of the experience. As the complexity and completeness of the digital exhibition increases, it starts to blend into either a new digital-only exhibition or an exhibition catalog.</li>
+<li>Exhibition Advertisement. The exhibition is almost exclusively physical and bounded in time, and the digital part is intended to encourage the audience to attend it. The complexity and completeness of the digital exhibition is intentionally low so as not to  detract from the physical exhibition.</li>
+</ol>
+<p>In all of these cases, there are requirements for displaying a series of images, potentially at different sizes or picking out a particular region of interest, along with descriptive information. This functionality is enabled by the same IIIF APIs over the same underlying data, providing economies of scale and ease of reuse.</p>
+<h3>Current technology</h3>
+<p>The Yale Center for British Art (YCBA) and the programs at the Getty do not have exactly the same technology stacks; however, the differences in workflow are minor. As such we present the current technology in use at YCBA as an exemplar of the place from which we collectively start.</p>
+<p>The Yale Center for British Art has deployed a Drupal-based platform to create and publish digital exhibitions. The site employs responsive design techniques to publish content for mobile, kiosks, and the Web. The user interface provides a browse function for the objects contained in the exhibition, and map- and timeline-based displays of selected objects. Additional pages can be created to provide biographical information about artists and to highlight multimedia content.</p>
+<p>While the platform has been used to host a number of exhibitions, it is tightly coupled to YCBA’s TMS and DAMS infrastructure. The platform integrates with YCBA&#8217;s collection management system, Gallery Systems’ TMS, by consuming exported XML data that is also used to populate YCBA&#8217;s online catalog. A second integration is required to access content from an internal API that allows access to content from YCBA&#8217;s DAMS. The pair of integrations is sufficient to populate the application with the required tombstone information for each object, as well as thumbnail and larger images.  Other data, such as geographic coordinates and date information, are entered manually. Of course, these integrations are only effective for content published from the YCBA&#8217;s collection.  Entries must be created in the system manually for objects from beyond YCBA.  Even records from the YCBA&#8217;s archives, which are managed using ArchivesSpace, and objects from Yale University’s libraries, must be entered manually.</p>
+<p>The development of the exhibition platform did not anticipate a need to repurpose the exhibition content for other applications.  At the time of the system’s development, it was designed to serve content to mobile devices and kiosks as well as the Web. As YCBA explores other technology options for serving mobile users and developing new in-gallery experiences, the desirability of publishing digital exhibition content through multiple channels rapidly becomes  apparent. When viewed in the context of a broader ecosystem of applications, the standalone exhibition platform is revealed as an unfortunate data silo.</p>
+<p>IIIF promises to ease the acquisition of digital images and metadata for online exhibitions by offering a mechanism for interoperability of internal museum, library, and archive systems. At the same time, it presents a mechanism for collecting and organizing the content of digital exhibitions in a format that can be shared with other IIIF-aware applications. This functionality will improve all steps of the exhibition&#8217;s lifecycle, from planning through publication and later reuse.</p>
+<h3>Digital exhibition workflow</h3>
+<p>The planning phase of an exhibition, whether physical or digital, necessarily involves the curation of a list of objects that are to serve as its focus. The selection process itself can entail significant discussions among curatorial staff, the exhibitions department, and other units within the museum. Logistical concerns, such as the availability of high resolution images for use online, can play a role in determining which objects are suitable for inclusion. The planning process is also likely to require many parties to work across institutional as well as departmental boundaries. Standard tools for online collaboration, such as e-mail and shared spreadsheets, are often used to coordinate this planning workflow.</p>
+<p>IIIF was designed from the outset to enable the curation of lists of objects as well as collaborative annotation of objects and images. Objects under consideration for the exhibition can be grouped into IIIF collections. Annotations can be used as a means of discussing the suitability of an object or a particular image, highlight areas areas of interest within the image, or to create commentary to be used within the online presentation of the objects within the exhibition.</p>
+<p>IIIF also promises to reduce the administrative overhead of obtaining images from other institutions. While institutions may apply access control under IIIF, the value of interoperability is realized when images are made available at sufficiently high resolution to be reused in other contexts on the Web. In order to encourage publication for reuse, IIIF provides dedicated fields within its data model for attribution, a link to information about the license under which the image is published, and a logo image.  Together these serve to inform the user of the originator of the content and the terms of use for content retrieved via the IIIF APIs. If the publishing institution has complied with best practices, it is likely that the curator can immediately make a determination of whether the IIIF image can be used in an online exhibition. This is in stark contrast with the many bilateral discussions required when such rights statements are not made available in a shared and commonly understood way, and stands to save a lot of time and money.</p>
+<p>The construction of a digital exhibition can require a significant amount of manual data entry and file management. Metadata and descriptive information created using <em>ad hoc</em> processes during the planning phase must be transferred to the exhibition application. Images must be selected, cropped, and uploaded as well, usually using desktop applications to perform the image manipulation. These manual processes are indicative of a lack of integration between the exhibition software and tools used for planning, as well as the current inability to integrate content from external repositories.</p>
+<p>The need for manual intervention can be greatly reduced through the use of IIIF. If IIIF manifests are available it may be possible to publish the provided metadata directly in the exhibition. An exhibition system can assemble objects into IIIF collections and use that data structure to provide additional information required to render the objects in context, such as the navigation date, geographic position, and thumbnail image. The exhibition system can also provide image cropping functionality through the Image API, which allows URL access to regions of an image directly, without the manual and time-consuming use of tools such as Photoshop.</p>
+<p>Once the digital exhibition has been planned and the necessary content assembled, it is necessary to display it online to users. This rendering is most frequently done with one-off code, or requires extensive customization of a more generic tool. This raises the costs per exhibition significantly. IIIF does not obviate the need for specific customizations for the detailed and highly interactive virtual experience level of exhibition, but for advertising and memorials of physical exhibitions, this is unlikely to be necessary or justified. Instead, with some tidying, the collection and manifests used in the planning and construction can serve as the description for off-the-shelf viewers to render the exhibition online. For more detailed exhibitions, IIIF can still help with the structure and descriptive content, allowing callouts from a framework to individual object and exhibition-specific functionality.</p>
+<p>Beyond rendering, there is minimal reuse of digital exhibitions as they are simply Web pages without machine-readable data backing them. The focus is on the presentation, not on the description; however, these two are combined in a developer- and publisher-friendly way in IIIF. Further, linking within and across exhibitions becomes straightforward using the IIIF paradigms, as it is built on top of Linked Open Data. The identity of the exhibition and its components are a native part of the Web, not just the HTML pages.</p>
+<h2>Community participation</h2>
+<p>While the groundwork is well set, several challenges have been identified with this approach. Those challenges can be overcome relatively easily with the participation of the community in the process of understanding and building exhibitions using IIIF and the implementation of viewers that support them.</p>
+<p>In order to provide consensus around the range of activities that should be considered, an established pattern in the IIIF community is to spend time examining shared feature sets and whether it would be valuable to provide a common framework that implements them.  This focus on what is useful, combined with discussion about what new features could be implemented at the same time, keeps the work focused and practical. IIIF viewers to date have focused on single objects and paged objects, such as books and manuscripts, and would greatly benefit from this use case analysis of a wider range of viewing paradigms.</p>
+<p>The development community across IIIF can also work to ease development effort of the viewing applications, to ensure that bespoke exhibition requirements can take place within a framework without significant overheads. In this scenario, extensions can be shared within the community rather than duplicated, even if they are not core IIIF functionality. However, it requires the core viewing applications to be sufficiently stable and extensible that every extension doesn&#8217;t need to be constantly rewritten to maintain the integration.</p>
+<p>It would be greatly beneficial if vendors within the museum sector adopted the IIIF APIs natively within their offerings, rather than requiring organizations to add inefficient shims over top of them. With access to and understanding of the internal functionality, vendors are best positioned to do this work for their products. The YCBA workarounds of getting content out of TMS and digital asset management systems are echoed at the Getty, and doubtless elsewhere in as many flavors as there are museums. Vendor engagement would ease this, allowing museums to get on with creating more and better exhibitions and less time worrying about software interoperability.</p>
+<p>There are also a few areas of work needed for the IIIF specifications in order to ensure the best end user experience. The Presentation API assumes that there is a single set of owner-provided descriptive metadata for an object which is appropriate for use in any context, whereas an exhibition might like to provide exhibition-specific information.  Use cases for this include how the object fits into the sequence of objects that make up the exhibition, or simply to standardize the name used for an artist where different organizations have different cataloging and display rules. Secondly, assessment of best practices around different ways of linking resources together within and across exhibitions should be enabled by the specifications. Finally, with most widespread requirements, integration of audio, video, and 3D material would provide significant impact in the presentation of digital exhibitions on the Web.</p>
+<h2>Conclusions</h2>
+<p>In this paper we first discussed the functionality of the IIIF specifications, and then related that functionality to requirements for several different types of digital exhibition; we then discussed the various steps in the workflow from planning the exhibition to delivering it on the Web for viewing and reuse in a wider environment.  The approach described has some significant benefits, such as the automation of repetitive tasks that are currently done manually and the facilitation of collaboration across departments and organizations at all stages within the lifecycle of the exhibition. These improvements will save both time and money, enabling smaller organizations to engage more easily and large organizations to do more.</p>
+<p>While IIIF may have appeal at the level of the individual institution as a mechanism for improving internal processes, the publication of interoperable content has a positive global impact. The adoption of IIIF for exhibitions broadens the interoperable content ecosystem, providing greater access to art historical resources. The challenges and opportunities that this new use of IIIF has uncovered are better understood through engagement, and IIIF would benefit significantly from the participation of the broader museum community to ensure that all relevant, shared use cases are able to be met.</p>
+<h2>References</h2>
+<p>Butler, H., M. Daly, A. Doyle, S. Gillies, S. Hagen, &amp; T. Schaub. (2016). The GeoJSON Format, RFC 7946.  Consulted January 20th, 2017. Available  <a href="http://www.rfc-editor.org/info/rfc7946">http://www.rfc-editor.org/info/rfc7946</a></p>
+<p>Sanderson, R., P. Ciccarese, &amp; H. Van de Sompel. (2013).  Open Annotation Data Model. Consulted January 18th, 2017.  Available <a href="http://www.openannotation.org/spec/core/">http://www.openannotation.org/spec/core/</a></p>
+<p>Sanderson, R., P. Ciccarese, &amp; B. Young. (2017).  Web Annotation Data Model, W3C Candidate Recommendation.  Consulted January 20th, 2017. Available <a href="https://www.w3.org/TR/annotation-model/">https://www.w3.org/TR/annotation-model/</a></p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+,  and Robert Sanderson. "Building distributed online exhibitions with IIIF." <i>MW17: MW 2017</i>. Published February 9, 2017. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw17.mwconf.org/paper/building-distributed-online-exhibitions-with-iiif/<br /><br /><hr>
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h2><p class="must-log-in">You must be <a href="../../wp-login103d.html?redirect_to=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fbuilding-distributed-online-exhibitions-with-iiif%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- .comments-area -->
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="text-7" class="widget widget_text">			<div class="textwidget"><h2 class="widget-title">Community Conveners</h2>
+<p><a title="Wezit" href="https://wezit.io/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/wezit-250-75.jpg" alt="Wezit" /></a><br />
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a></p>
+<h2 id="gold-sponsor" class="widget-title">Platinum Sponsor</h2>
+<p><a title="Microsoft" href="http://aka.ms/museweb" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/Microsoft-250-75.jpg" alt="Microsoft" /></a><br />
+<!-- <a title="Izi Travel" href="http://www.izi.travel" target="_blank" rel="noopener"><img src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/izi-250-75.jpg" alt="Izi Travel" class="sponsor-img sponsor-top" /></a> --></p>
+<h2 id="gold-sponsor" class="widget-title">Gold Sponsor</h2>
+<p><a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a></p>
+<h2 id="bronze-sponsor" class="widget-title">Bronze Sponsors</h2>
+<p><a title="MailChimp" href="https://mailchimp.com/resources/guides/mailchimp-for-nonprofits/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a><br />
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/netx-250-75.gif" alt="Netx" /></a><br />
+<a title="PatronTech" href="http://patrontechnology.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/patron-250-75.jpg" alt="PatronTech" /></a></p>
+<h2 id="conference-sponsor" class="widget-title">Conference Sponsors</h2>
+<p><a title="CMA" href="http://clevelandart.org/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/cma-250-75.jpg" alt="CMA" /></a><br />
+<a title="Rock &amp; Roll" href="http://www.rockhall.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/rrhf-250-75.jpg" alt="Rock &amp; Roll" /></a></p>
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+</body>
+
+<!-- Mirrored from mw17.mwconf.org/paper/building-distributed-online-exhibitions-with-iiif/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 22:02:06 GMT -->
+</html>

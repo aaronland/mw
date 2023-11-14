@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/a-modern-museum-web-stack/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:52:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>A Modern Museum Web Stack | MWA2015: Museums and the Web Asia 2015</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/mw-theme/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mwa2015.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/wp-emoji.js?ver=5.6","twemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/twemoji.js?ver=5.6"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='../../wp-content/themes/twentyeleven/blockscb8b.css?ver=20190102' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index272e.html?p=762' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed14cd.json?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fa-modern-museum-web-stack%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed74d1?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fa-modern-museum-web-stack%2F&amp;format=xml" />
+</head>
+
+<body class="paper-template-default single single-paper postid-762 wp-embed-responsive single-author two-column right-sidebar">
+<div id="page" class="hfeed">
+
+<style type="text/css">
+branding.img { height: auto; display: block; width: 100%; }
+#image  { position:relative;z-index:10;  }
+#text   { position:absolute; z-index:100; }
+#site-description { font-weight: normal; color: #fff; margin: 0 20px 20px 0;}
+#site-title a { color: #fff; }
+#site-title { margin-right: 20px; }
+</style>
+
+<header id="branding" role="banner">
+<hgroup>
+	<div id="text">
+<h1 id="site-title"><span><a href="../../index.html" rel="home">MWA2015: Museums and the Web Asia 2015</a></span></h1>
+<h2 id="site-description">The conference of Museums and the Web in Asia | October 5-8 | Melbourne, Australia</h2>
+	</div>
+</hgroup>
+
+			
+<div id="image"><a href="../../index.html"><img src="../../wp-content/uploads/2014/10/Melbourne-MWA2015.jpg" width="1000" height="250" alt="Museums and the Web Asia 2015" /></a></div>
+			
+			
+										
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-10"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="../../local-info/index.html">Local Info</a></li>
+	<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+	<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-16"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="../../exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="../../advertising-guildlines/index.html">Advertising Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="../../attending/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="../../workshop-program/index.html">Workshops</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../hobart-deep-dive/index.html">Hobart Deep Dive</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="../../attendees/index.html">Attendees</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<div id="primary">
+<div id="content" role="main">
+<article id="post-762" class="post-762 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">A Modern Museum Web Stack</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/maas/">Rowan Stenhouse</a>, The Museum of Applied Arts & Sciences, Australia, <a target="_blank" href="https://www.museumsandtheweb.com/member/Kaho/">Kaho Cheung</a>, Museum of Applied Arts and Sciences, Australia</p>
+<h2>Abstract</h2>
+The Museum of Applied Arts and Sciences launched their new Wordpress website in December 2014.  Before development started, the team conducted extensive research on current best practises for modern web development. This How-To session details the results and application of our research. It is split up into the main three components of a web stack - infrastructure, backend and frontend.
+
+This session will be conducted by Kaho Cheung (Senior Digital Developer/Producer) and Rowan Stenhouse (Senior Digital Developer/Producer) from the Digital Studio team.</p>
+<p><b>Keywords:</b> stack, wordpress, bedrock, ansible, kitchen-ci, gulp</p>
+<h2>A Modern Museum Web Stack</h2>
+<p class="c0 c10"> The landscape of the internet and the web has changed massively in the past few years. The challenge facing so many institutions with small development teams is how to develop and maintain modern web applications with limited time and resources. The Museum of Applied Arts and Sciences (MAAS) recently conducted research to improve almost every aspect of our web environment and we would like to share this journey with the wider museum community.</p>
+<p class="c0 c10">All the technologies listed in this paper are open source projects to some degree. The Museum’s web team has a strong focus on open source and consider it a prerequisite for all our projects. We have found that these solutions are often more flexible and dependable than their closed source counterparts. They allow the Museum’s small development team to rapidly develop innovative solutions and to “stand on the shoulders of giants”.</p>
+<p class="c0 c10">This paper is broken down into three main sections &#8211; infrastructure, backend and frontend. Each section provides a general overview of how we modernised our development practises. For areas of interest, we have provided links for further reading.</p>
+<h3>Infrastructure</h3>
+<p class="c0">The software that underlies a web application is a regularly forgotten &#8211; although it is a critical component in a web application. In many organisations, the job of setting up the server is left to a system administrator or <a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FVirtual_private_server&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGpZUl--F1Sq6clns6d8u2fvxCrgw">a </a><span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FVirtual_private_server&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGpZUl--F1Sq6clns6d8u2fvxCrgw">VPS</a></span> provider who has little understanding of the web application. More effort is often expended on giving the server a pet name than ensuring it is optimised to run code. The end result is the web application cannot take full advantage of the hardware it is running on. Developers also have a poor understanding of how to address performance, security, and stability issues when they arise.</p>
+<p class="c0">In the past the Museum has utilised a traditional<a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FLinux&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHY1aHqJV8IDw0Pqp_2hlCmZO4hxA"> </a><span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FLinux&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHY1aHqJV8IDw0Pqp_2hlCmZO4hxA">Linux</a></span>,<a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fhttpd.apache.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEnE18Zqwca67qcEKHyyk34gCmIlQ"> </a><span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fhttpd.apache.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEnE18Zqwca67qcEKHyyk34gCmIlQ">Apache</a></span>,<a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fwww.mysql.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEvGGObign2adN3GfBzkBlqdJr9cg"> </a><span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fwww.mysql.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEvGGObign2adN3GfBzkBlqdJr9cg">MySQL</a></span> <a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fwww.mysql.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEvGGObign2adN3GfBzkBlqdJr9cg">a</a>n<a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fwww.mysql.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEvGGObign2adN3GfBzkBlqdJr9cg">d</a> <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fwww.php.net%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGUlCk-q5esuXzE4tZTKxa4TS4I_g">PHP</a></span> (<span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FLAMP_(software_bundle)&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFDiwalJtW1aS0dYd4BYaEiNPxYAA">LAMP</a></span>) stack as it is easy to maintain and well understood. It is the go-to setup for many open source applications, has excellent community support and a proven track record. The shortcomings of such a setup become apparent when you run complex and database intensive applications in high load production environments. The end result is application response times suffer during high demand and end users quickly become frustrated. MAAS has experienced performance issues with our web applications at peak times such as school holidays and special events. At the beginning of 2015 the team started an investigation into how we could improve our infrastructure in three key areas: performance, security and stability.</p>
+<h3>Performance</h3>
+<p class="c0">In terms of performance, our goal was to reduce the page load times and also be able to handle a higher level of site visitors. It is our strong belief that the responsiveness of a website is a key user experience indicator and studied how responsiveness could be improved through both server optimisation and frontend/backend improvements.</p>
+<h3>Security</h3>
+<p class="c0">Web application security is vitally important these days. To keep on top of security issues, the team required systems that were easy to patch and keep up to date as hackers often exploit vulnerabilities before they are have been updated. Keeping our web user’s information secure while in transmission was also very important to us so. We studied SSL/TLS best practices with an aim to provide HTTPS for all our sites that handle user information. Google now uses HTTPS as a ranking signal in Google search as part of their “HTTPS everywhere” (Bahajji &amp; Illyes, 2014) initiative, giving us another reason to implement it across our web applications.</p>
+<h3>Infrastructure As Code</h3>
+<p class="c0">The key issue was how to rapidly implement changes to our infrastructure while maintaining application stability. As a result, one of the major concepts we introduced to the Museum this year is <span class="c18">infrastructure as code (Sitakange, 2014)</span>. Instead of viewing server software and configuration as monolithic, we treat it the same as a web application, something that can be improved upon and evolve with time.</p>
+<p class="c0">Defining infrastructure as code allows the build process of servers to be stored in repositories instead of being kept in forgotten documentation or even worse, someone’s head. It also lowers the bar for many developers who see server configuration and management complex and difficult to understand. Once the infrastructure they use everyday is displayed to them in the form of code, the undertaking of making additions and improvements is far more approachable.</p>
+<p class="c0">The process of attempting such a task has been made much easier in recent years with the rise of tools such as <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fwww.docker.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNE5nyFU509RkAzKxHJaHHo4XAXEsQ">Docker</a></span>, <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fpuppetlabs.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGTpLGD_zQDlplwQ_JTcsc3mSCqzA">Puppet</a></span>, <span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fwww.ansible.com%2Fhome&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFd92R6P6KSKc4IoU7ISkVAb3j_0A">Ansible</a></span> and <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fwww.chef.io%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNF3XeRtp3xhoKyGmHO-2IhC072YDw">Chef</a></span> that make provisioning and configuring servers very approachable for the average developer.</p>
+<h4>Chef</h4>
+<p class="c0">After evaluating the various tools available, the Museum decided on Chef, as it has strong community support, a simple way of encrypting sensitive server configuration variables (database passwords, SSL private keys, etc) and tight integration with Amazon Web Services through <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Faws.amazon.com%2Fopsworks%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFA_XCwD-2whUXVTvIXe50pRC8ezg">Opsworks</a></span>. In addition, the <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fdownloads.chef.io%2Fchef-dk%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNF_U47SCFTs7LlXltWmMKu_J6pJYQ">Chef Development Kit</a></span> (ChefDK) comes with an application called Kitchen CI allowing us to test most aspects of our infrastructure before we use it in a production environment.</p>
+<p class="c0"><span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fkitchen.ci%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHEoIN0mHix00SjYobv3zgl0-rAFQ">Kitchen CI</a></span> enables the Museum to rapidly build and test new server software and configurations. This facilitates a more ambitious approach to our application stack, including the addition of new technologies like Google’s<a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSPDY&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHLxEF1-FejE9PG3gdl53nTAxXAgQ"> </a><span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSPDY&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHLxEF1-FejE9PG3gdl53nTAxXAgQ">SPDY protocol</a></span> and Facebook’s<a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fhhvm.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFpzj_PsH342Xf01W0NkbslxPfU7g"> </a><span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fhhvm.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFpzj_PsH342Xf01W0NkbslxPfU7g">HipHop Virtual Machine</a></span>. Testing a Chef build with Kitchen CI can be as simple as confirming a particular software package has been installed on the server to testing detailed performance characteristics of the system. Another great feature of Chef is data bags, a tool used to encrypt sensitive information about the server.</p>
+<p class="c0">Because Chef is largely platform agnostic, it has also has given us the flexibility to choose where to deploy our web applications. The same Chef build can be provisioned on the Museum’s own virtual environment, a third party VPS provider or<a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Faws.amazon.com%2Fwhat-is-cloud-computing%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHZk6dcdag7N0c8lCzVXPFehK6YZw"> </a><span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Faws.amazon.com%2Fwhat-is-cloud-computing%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHZk6dcdag7N0c8lCzVXPFehK6YZw">Amazon Web Services</a></span> <a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Faws.amazon.com%2Fwhat-is-cloud-computing%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHZk6dcdag7N0c8lCzVXPFehK6YZw">(AWS)</a>, depending on the requirements of a particular project. <span class="c9">When using a VPS or AWS, a VM is provided which includes a preconfigured operating system, whereas our own in-house </span>virtual environment (vSphere) and local development environment (VirtualBox) does not. To fill that gap we utilise a tool called Veewee that allows us to easily build clean installs from an operating system install (iso file) giving us the same consistency you would expect from AWS.</p>
+<div id="attachment_758" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/image02.png"><img aria-describedby="caption-attachment-758" loading="lazy" class="wp-image-758 size-large" src="../../wp-content/uploads/2015/07/image02-1024x883.png" alt="image02" width="584" height="504" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/image02-1024x883.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/image02-300x259.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/image02-348x300.png 348w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/image02.png 1999w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-758" class="wp-caption-text">Diagram 1: The provisioning pathways available to us using Chef and Veewee</p></div>
+<p class="c0">Along with Kitchen CI’s suite of tests we utilise a collection of quality, ‘free to use’ web services that allow us to tune various aspects of application stack.</p>
+<h4>Redbot</h4>
+<p class="c0"><span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fredbot.org&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGbb51O8_BQKF9OwnVjeYheAE-Qfg">Redbot</a></span> is a simple to use tool for testing server response headers and is especially useful for checking that headers correctly for caching and compression.</p>
+<h4>SSL Server Test</h4>
+<p class="c0">Implementing HTTPS correctly can often be a complex and difficult task for novice developers. <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fwww.ssllabs.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHP86i8MHWy8R0NzhSRTYR9NeAQOQ">Qualys SSL Labs</a></span> provides an <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fwww.ssllabs.com%2Fssltest%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFl-moqIfpVNV7kyFNf-wwha1_1kg">excellent tool</a></span> for confirming your HTTPS configuration is correct and that it prevents techniques used to subvert HTTP encryption such as <a href="http://www.heartbleed.com/">heartbleed</a> and <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#BEAST_attack">BEAST</a>. Qualys also provides easy to understand guides for implementing HTTPS on a variety of different web servers. Utilising the information available from Qualys has allowed the Museum to implement advanced HTTPS features such as <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FForward_secrecy&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEFACtpvdc600RHVPQwC_dACZR-tw">Perfect Forward Secrecy</a></span> and <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHTTP_Strict_Transport_Security&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGnqZ3j8hqESQyUN7Y3GayTgRhtag">Strict Transport Security</a></span>.</p>
+<h4>Google Pagespeed</h4>
+<p class="c0"><span class="c12"><a class="c3" href="https://developers.google.com/speed/pagespeed/?hl=en">Pagespeed</a></span> is a great tool for testing a variety of performance characteristics of your application. Although Pagespeed’s main focus is on front-end performance improvements, it does offer insights into how aspects of the infrastructure is performing.</p>
+<h4>Vagrant</h4>
+<p class="c0">Developing code on our new infrastructure also required a new approach to our own local development environments. We could not longer utilise local web servers like XAMPP and MAMP because of the vast differences between local and production environments. Due to differing PHP versions and other configuration options, code that worked on local machines would not reliably behave in the same manner on the production server.</p>
+<p class="c0">To address this we started using the virtualisation software <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fwww.vagrantup.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGIPqi-jXhXAZJ91ybWAezY-WIfBg">Vagrant</a></span>. This program allows us to easily configure and run multiple virtual environments on our local machines using popular virtualisation applications such as VirtualBox or VMware Fusion. Consequently, we have gone from a team of developers running bespoke and often customised local environments, to having consistent and easy to duplicate environments which can be destroyed and rebuilt in as little as 20 minutes on modern hardware.</p>
+<p class="c0">Vagrant makes running local copies of our web applications so easy that we are even considering setting it up on our content producers’ machines giving them a sandbox environment to test new content ideas.</p>
+<p class="c0">We have now built a variety of new systems using these techniques including our main website, <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fmaas.museum&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFR-LtO4sDjqPBJvJVd8Zb4248Dyw">maas.museum</a></span>. With the ability to build and test server infrastructure in place, we have been able to implement better security practices, improve the reliability of our applications and decrease application response times by an order of magnitude. The great thing about this approach is that it is only the a starting point. We will continue to develop our infrastructure with the same enthusiasm as the applications we run on top of them.</p>
+<p class="c0"><a href="../../wp-content/uploads/2015/07/image00.png"><img loading="lazy" class="alignnone size-full wp-image-759" src="../../wp-content/uploads/2015/07/image00.png" alt="image00" width="282" height="299" /></a> <a href="../../wp-content/uploads/2015/07/image03.png"><img loading="lazy" class="alignnone size-medium wp-image-760" src="../../wp-content/uploads/2015/07/image03-229x300.png" alt="image03" width="229" height="300" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/image03-229x300.png 229w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/image03.png 291w" sizes="(max-width: 229px) 100vw, 229px" /></a></p>
+<p class="c0"><span class="c18">Diagram 2: Iteration and testing of our systems has taken us from the application stack on the left to the one on the right</span></p>
+<h3>Deployment</h3>
+<p class="c0">In an environment where a web application is expected to be available 24/7, deploying code to a web server has often been a stressful event. Deployment frequently requires a carefully crafted sequence of events to ensure the application is still accessible while pushing new features and bug fixes to the site. The issue of code deployment has only become more pressing as the demand for quick turnarounds of new features has increased, so traditional approaches to code deployment have become unwieldy and prone to error.</p>
+<p class="c0">Every developer has a story about a deployment that has gone wrong. Having great developers and good deployment practices is no guarantee that everything will go smoothly. What the Museum wanted to achieve was being able to make code deployments in a consistent and repeatable fashion, to record deployments made to a web application and track performance differences between deployments.</p>
+<p class="c0">The Museum approached this task by comparing modern deployment tools including the Python based <span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fwww.ansible.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNE-x16GvrKpdCIPxqDn2BXSIz5Oag">Ansible</a></span> and <span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fwww.fabfile.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEEOZYGeuGZjJjR8mLf5AGYV96Uow">Fabric</a></span>, along with Ruby’s <span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fcapistranorb.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGSTMpB5rC07g5xT-33D_su6HHKMA">Capistrano</a></span>. All of these tools have a rich feature set allowing rollback of deployments, front-end build processes (e.g. Grunt, Gulp), package management and deployment notifications.</p>
+<p class="c0">We ended up choosing Capistrano because of its flexibility, ease of use and integration with our WordPress boilerplate, Bedrock. Capistrano makes it simple to deploy code to multiple environments in a consistent manner and to perform other tasks such as cache invalidation and logging of individual deployments. What Capistrano (and other deployment tools for that matter) cannot provide is tracking the performance characteristics of each deployment. This is where the web service New Relic comes into play.</p>
+<h4>New Relic</h4>
+<p class="c0"><span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fnewrelic.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGlSsFVMq3Mb4U2ei50vlOp4S8P6A">New Relic</a></span> is a real time application monitoring tool that the Museum uses to track application errors and performance. Having this information available to us has been invaluable in catching bugs that escape other means of testing. In conjunction with Capistrano, it allows us to make informed decisions about deployments and measure all aspects of our application stack.</p>
+<p class="c0">While deploying code will always involve a certain aspect of finger crossing, the Museum has been able to place a reliable mechanism for rolling out new features while ensuring minimum disruption to our end users.</p>
+<h2>Backend</h2>
+<p class="c0">Like many institutions, we use a content management system (CMS) to allow members of staff to publish content to the web. <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fwordpress.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHMNU3-oD9UXv7MfUazWHnHqHS79w">WordPress</a></span> is our CMS of choice as it is intuitive, has great community support and is extremely extensible. The downside is it misses out on some <span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2F12factor.net%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHiNz3Nucs0_qkCa7MYUaEMvCnV_w">modern features</a></span> that other applications take for granted, such as dependency management, deployment strategies and separation of configuration from code.</p>
+<h3>Bedrock WordPress Boilerplate</h3>
+<p class="c0">In our research, we discovered the <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Froots.io%2Fbedrock%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNH1HrLjK44MntT8KrGDIDmpKbfMVg">Bedrock</a></span> boilerplate brought many of these modern application framework features to WordPress. Built and maintained by <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Froots.io%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHPund9YmNFl-VVNM2ulNv9LYH0Gg">Roots</a></span>, this team of full stack developers studiously keep the project up to date with the latest web technologies.</p>
+<p class="c0"><span class="c19 c21">The following features provide a good overview of Bedrock’s advantages over the stock standard WordPress install.</span></p>
+<h3>Composer</h3>
+<p class="c0">Many modern programming languages use dependency management to leverage open source code and manage complex code libraries. <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fgetcomposer.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEhxf8df2A4nLZIZrCVBRdpgDtF9Q">Composer</a></span> is really the only game in town for modern PHP dependency management.</p>
+<p class="c0">Bedrock comes with a base configuration file for Composer. This JSON file is used to download and update plugins, themes and even WordPress itself with one command. This makes it very easy to roll back to previous versions if an incompatibility is found.</p>
+<p class="c0">Perhaps the biggest advantage of Composer is that WordPress core plugins and themes do not have to be uploaded into a Git repository. This is best practise as it keeps the repository free of vendor code and avoids <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDependency_hell&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGCin8T4SQo7C-2x6XQGrG0Cja3Eg">dependency hell</a></span>.</p>
+<p class="c0">Using Composer also makes a particular WordPress site easily transportable. One member of the team can edit the JSON file to upgrade a plugin and then commit the change into the repository. Other members can then pull in the new changes, resulting in everyone using the same version on their local machines. Compared to manual upgrades in WordPress, Composer prevents mismatched WordPress and plugin versions across the team.</p>
+<p class="c0">This portability is also important for deployments, in fact Composer is a requirement when deploying to a server using Capistrano. Instead of uploading WordPress files, Capistrano will trigger Composer to run on the server and install it along with other PHP dependencies. This process bypasses the local machine as the server does all the work in grabbing external code.</p>
+<h3>Updated File and Folder Structure</h3>
+<p class="c0">The standard folder structure is familiar to most WordPress developers:</p>
+<ul class="c8 lst-kix_48d5plnn5zy9-0 start">
+<li class="c0 c1">wordpress
+<ul>
+<li class="c0 c1">wp-admin</li>
+<li class="c0 c1">wp-content
+<ul>
+<li class="c0 c1">languages</li>
+<li class="c0 c1">plugins</li>
+<li class="c0 c1">themes</li>
+<li class="c0 c1">uploads</li>
+</ul>
+</li>
+<li class="c0 c1">wp-includes</li>
+</ul>
+</li>
+</ul>
+<p class="c0">Bedrock makes significant changes to this structure as illustrated below:</p>
+<ul class="c8 lst-kix_fccaqq3lxsm2-0 start">
+<li class="c0 c1">bedrock
+<ul>
+<li class="c0 c1">config</li>
+<li class="c0 c1">scripts</li>
+<li class="c0 c1">web
+<ul>
+<li>app
+<ul>
+<li>mu-plugins</li>
+<li>plugins</li>
+<li>themes</li>
+<li>uploads</li>
+</ul>
+</li>
+<li> wp
+<ul>
+<li class="c0 c1">wp-admin</li>
+<li class="c0 c1">wp-content
+<ul>
+<li class="c0 c1">languages</li>
+<li class="c0 c1">plugins</li>
+</ul>
+</li>
+<li class="c0 c1">wp-includes</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="c0">The biggest structure changes include the WordPress folder moved two levels down in /web/wp and the uploads folder relocated from wp-content to web/app. This results in the entire WordPress core being separate from themes, plugins and uploaded content. In this case, Bedrock considers WordPress to be a type of dependency. By explicitly ensuring that it is isolated, code integrity is maintained as working files cannot leak into the core.</p>
+<p class="c0">The other important change relates to the WordPress configuration file (wp-config.php). Despite it containing sensitive server data, it usually sits exposed in the root folder of a typical WordPress website. In Bedrock, the web root of the website points to /web, where wp-config.php is now located. However it is no longer a security issue as it references all configuration variables from outside of the web root in /config. These variables are further defined by environment using a tool called Dotenv.</p>
+<h4>Dotenv</h4>
+<p class="c0"><span class="c9">Configuration variables change between environments and storing them in code repositories is cumbersome and poses a security risk. Following one of the tenets of the 12 Factor App (<a class="c3" href="http://www.google.com/url?q=http%3A%2F%2F12factor.net%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHiNz3Nucs0_qkCa7MYUaEMvCnV_w">http://12factor.net/</a>)</span><span class="c9">, Bedrock uses a small utility called dotenv to store environment variables such as database details, domain specific information and caching configurations. Dotenv was originally built in Ruby but was ported to PHP in 2013 and has allowed us to manage our variables in a flexible and portable manner.</span></p>
+<h2>Frontend</h2>
+<p class="c0">Frontend development is a relatively new phenomenon in the world of web technologies. Continual advances in Javascript and CSS have allowed websites to grow into rich application experiences, almost on par with desktop and mobile apps. The web landscape has also changed radically with the rise of mobile, requiring new tools and skillsets to accommodate the ever growing list of of browsers, devices and screen sizes.</p>
+<p class="c0">With this in mind, the next stage was to research the best way to build a future proof WordPress theme. Rather than extending an existing theme or building one from scratch, we decided to find an appropriate starter theme that incorporated all the latest trends in modern frontend development. Once again we returned to the Roots group and found they had built a starter theme called Sage that met all our requirements.</p>
+<h3>Sage Theme</h3>
+<p class="c0">Unlike most WordPress themes, Sage has barely any visual styling, instead providing a modern platform for frontend and theme development.</p>
+<p class="c0">Current MAAS WordPress websites that use Sage include:</p>
+<ul class="c8 lst-kix_xk29aoomtos4-0 start">
+<li class="c0 c1">maas.museum</li>
+<li class="c0 c1">sydneydesign.com.au</li>
+<li class="c0 c1">sydneyscience.com.au</li>
+</ul>
+<h4>Don’t Repeat Yourself (DRY)</h4>
+<p class="c0">Most WordPress themes have multiple template files that each load a header and footer file. While this is easy to use and understand, it does create a lot unnecessary code duplication (aka WET &#8211; Write Everything Twice).</p>
+<p class="c0">Similar to Root’s Bedrock custom folder structure, Sage eschews the standard theme structure by funnelling all pages through one file called base.php. The header, footer and even the sidebar are only loaded in one file. This ensures that everything is DRY as possible.</p>
+<h4>Bower</h4>
+<p class="c15">Similar to Composer, <span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fbower.io%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEq7PqN93tv-ulwZao7M8zit_tYhw">Bower</a></span> is a package manager for frontend Javascript libraries. Sage’s Bower configuration file comes prepackaged with essential libraries like <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fjquery.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHwHug0a3dAQeHj3gBsPltK-jTsaQ">jQuery</a></span> and <span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fmodernizr.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNE7yLNCIuoouLI7DTscz1_biEbNHg">Modenizr</a></span>. Installing a new library is a simple process of editing the config file and running Bower’s update function on the command line.</p>
+<h4>Build Automation</h4>
+<p class="c0">As frontend development has grown in complexity, new tools have been built to help automate repetitive tasks like managing dependencies and minifying script files. Sage leverages <span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fnodejs.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHswJNMhgW-o3Z2bHy6y33tlwEIug">Node.js</a></span> and its vast ecosystem to create a fast and efficient build process.</p>
+<h5>Node.js</h5>
+<p class="c0">Node.js is a server side development platform built on Chrome’s V8 Javascript Engine. Despite it being a server side technology, Node has become an essential tool for frontend development. All Node libraries are written in Javascript, the same language that is used on web browsers. This has opened up of a vast new developer base, allowing frontend Javascript developers to write server side code. Further aiding Node.js’ growth is its easy to use package manager NPM (Node Package Manager).</p>
+<h5>Gulp</h5>
+<p class="c0">Gulp is a popular library that runs on Node.js and is the heart of the build process for Sage. One of Gulp’s main features is dealing with multiple JavaScript files. When run, Gulp will error check Javascript files, join them together and minify them to reduce the file size. Similarly, CSS files go through an error check and minify process. However instead of processing standard CSS files, Gulp can use an extended version of CSS, of which there are two options &#8211; <a href="http://sass-lang.com/">SASS</a> and <a href="http://lesscss.org/">LESS</a>.</p>
+<h4>Extending CSS: SASS vs LESS</h4>
+<p class="c0">The main purpose of CSS is to style HTML pages. In its current form it is not considered a programming language as it doesn’t have standard programming features such as variables, conditionals and functions. However, SASS and LESS have become popular ways of extending CSS to include these features.</p>
+<p class="c0">Although LESS and SASS are very similar, it has become pretty clear in the last year that SASS has more momentum. To illustrate, the latest version of Twitter Bootstrap (4.0 Alpha) has announced that they are switching from LESS to SASS (Bootstrap Team, 2015). In anticipation of this, the museum decided during the research stage to work with SASS.</p>
+<p class="c0">Currently, browsers only recognise CSS files, not SASS (.scss) or LESS (.less) files. This is where Gulp comes in to preprocess and convert the file to standard CSS. Gulp can be run manually so when a change is made, a build command is executed and the browser is refreshed to view the changes. Unfortunately, this process gets tedious very quickly as there could be over a hundred changes throughout the day.</p>
+<p class="c0">Luckily, Gulp comes with the <span class="c18">watch</span> function where it will detect file save changes, automatically compile source files (CSS, JS, HTML etc) and inject the changes instantly into the browser. This feature is a huge improvement on a typical manual workflow and is accomplished using the Gulp plugin BrowserSync.</p>
+<h4><span class="c19">BrowserSync</span></h4>
+<p class="c0">Tools like <span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Flivereload.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFT-7hpxrn2vWuvL1QIubL-p8tZTA">LiveReload</a></span> can be set up to to automatically refresh the browser whenever any HTML or Javascript is updated. With CSS updates, no browser refresh is required because LiveReload will inject the new styling code into the browser.</p>
+<p class="c0"><span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fwww.browsersync.io%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHjt2NLG1JZdV3jw_C-mrtAuavqXw">BrowserSync</a></span> and Gulp can do all of this, but also track navigation across multiple browser windows. This will even work across devices in the same network as the development computer. This means that while a development site is viewed, every page click will be reflected across all connected devices. In addition to navigation tracking, scrolling information is also tracked. We found these features particularly useful for building responsive websites. Any code updates could be viewed instantly in multiple device sizes without any manual refreshing.</p>
+<p class="c0">One interesting outcome of technologies like LiveReload and BrowserSync is that in some circumstances, the design mockup stage of website building can be skipped. Rather than experimenting with a colour scheme or typography in Photoshop, the combination of SASS and BrowserSync can lead to quicker results. This is particularly true for designing responsive websites because graphics programs are unable to replicate the variety of browser sizes required for real world application.</p>
+<p class="c0">Building layouts is usually aided by a grid framework, such as Twitter Bootstrap. While Bootstrap comes pre-installed with Sage, we researched other alternatives and decided to go a different route.</p>
+<h4>Susy Grid vs Twitter Bootstrap</h4>
+<p class="c0"><span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fgetbootstrap.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFcuWE7kcMSjG0AtLf81JzsTheXPQ">Twitter Bootstrap</a></span> is without a doubt the most popular frontend framework in web development right now (Gerchev, 2014). Essentially it is a library of HTML, CSS and Javascript files to help start the building of websites. Bootstrap’s most important feature is the mobile responsive grid system. A typical Bootstrap setup is usually divided into 12 columns, with four breakpoints for mobile, tablet and monitors screen sizes (xs, sm, md, lg). The 12 column amount is useful as it allows a site to be divided up into two columns of six, three columns of four or four columns of three. Unfortunately, our design mockups for the new MAAS website required even more flexibility as the footer needed five columns. This would not have been possible with a 12 column grid.</p>
+<div id="attachment_761" style="width: 920px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/image01.png"><img aria-describedby="caption-attachment-761" loading="lazy" class="wp-image-761 size-full" src="../../wp-content/uploads/2015/07/image01.png" alt="image01" width="910" height="638" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/image01.png 910w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/image01-300x210.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/image01-428x300.png 428w" sizes="(max-width: 910px) 100vw, 910px" /></a><p id="caption-attachment-761" class="wp-caption-text">Diagram 3: Example layout Illustrating the limitations of a standard Bootstrap 12 Column Grid</p></div>
+<p class="c0">Our research led us to <span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fsusy.oddbird.net%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGQz-ziuTU4PTY1innB5_1FDdmZog">Susy</a></span>, a SASS based flexible grid system that can handle as many columns as necessary. We also chose Susy because it is not downloaded by the browser at all, in contrast to Bootstrap’s sizeable grid library download. Susy is essentially a set of mathematical functions to help work out column widths, gutters and other layout properties.</p>
+<p class="c0">From five columns, to six and even seven, Susy only requires a simple command in the SASS stylesheet to make it work (eg. span(2 of 10), span(2 of 12), span(1 of 7)). This also differs greatly from Bootstrap’s method, where column widths are set in HTML as specially named classes (eg. col-md-6).</p>
+<p class="c0">The other disadvantage to Bootstrap is the need to include layout information in HTML. This ties the content strongly to styling and makes it difficult to decouple from Bootstrap in the future. After working with Susy, we found that we could rapidly prototype complicated layouts with as many custom breakpoints as needed.</p>
+<h4>CSS Methodology</h4>
+<p class="c0">With our HTML free of Bootstrap code and a blank canvas for our starter theme, we took the opportunity to review our Museum-wide CSS naming conventions. We knew that our flagship site would have a long life span, so getting CSS right the first time would pay off dividends in the future.</p>
+<p class="c0">Popular CSS methodologies include:</p>
+<ul class="c8 lst-kix_gicuumf5mdhs-0 start">
+<li class="c0 c1"><span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Foocss.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNF5RzmZIp9NZ6Fnijc-mandQ3WG8g">Object Oriented CSS</a></span> (OOCSS)</li>
+<li class="c0 c1"><span class="c12"><a class="c3" href="https://www.google.com/url?q=https%3A%2F%2Fsmacss.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNF7HeYoRQ6vUMNy7kK2xopjc6XopA">Scalable and Modular Architecture for CSS</a></span> (SMACSS)</li>
+<li class="c0 c1"><span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fgetbem.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGd7GZCeZ28JLvVpT7tktfUi9C8dw">Block Element Modifier</a></span> (BEM)</li>
+</ul>
+<p class="c0">We eventually settled on BEM as its component based system worked well with our theme design and Gulp/SASS build process. In the BEM convention, all main components such as the header, content and footer are called Blocks.</p>
+<p class="c0">Items within the Block are identified as Elements while Modifiers are used to make minor changes to a Block or Element. Part of the convention is to always use lowercase and a single dash between words. This differentiates from the double dash used for Modifiers. Element names must be prefixed with the parent Block, using two underscores between them. The following diagram illustrates an example use case.</p>
+<ul class="c8 lst-kix_w214bgs8p5dl-0 start">
+<li class="c0 c1">.header (Block)
+<ul>
+<li class="c0 c1">.header__menu (Element), .header__menu&#8211;light (Modifier)</li>
+</ul>
+</li>
+<li class="c0 c1">.body-content (Block)
+<ul>
+<li class="c0 c1">.body-content__main (Element)</li>
+<li class="c0 c1">.body-content__sidebar (Element)</li>
+</ul>
+</li>
+<li class="c0 c1">.footer (Block)</li>
+</ul>
+<p class="c0">In BEM, everything is namespaced and has a unique class, so descendent selectors are never used. While there is extra markup, giving a unique class to every element has improved maintenance. We found that classes are easier to understand, behave in a predictable manner and avoids <span class="c12"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fwww.smashingmagazine.com%2F2007%2F07%2Fcss-specificity-things-you-should-know%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEdNQS-h_ozT4rAh7ClUlLg48lwkA">specificity wars</a></span>.</p>
+<h3>A Word on IE8 Support</h3>
+<p class="c15">During 2014, MAAS upgraded all Museum computers from aging boxes running Windows XP to new systems on Windows 7. The upside to this was that Internet Explorer 8 was no longer in use as the Windows 7 came pre-installed with IE9. After our analytics revealed that only a minute proportion of users were using IE8 and that Windows XP had passed its end-of-life status, the Museum decided to not support this browser.</p>
+<p class="c15">This decision meant that time-consuming hacks were no longer necessary. HTML5 elements (eg. header, article, button etc) and responsive media queries could be used without the help of Javascript workarounds. In addition, CSS pseudo properties like first-child and nth-child could be targeted, leading to more efficient CSS and speeding up frontend development.</p>
+<p class="c0">Dropping support for IE8 was also necessary due to its dated support for SSL cipher suites. IE8 lacks support for TLS 1.2 and none of its ciphers offer real world <a href="https://en.wikipedia.org/wiki/Forward_secrecy">perfect forward secrecy</a>.</p>
+<h2>Conclusion</h2>
+<p class="c15">It is hoped this research paper has presented worthwhile information about all parts of a Museum website stack. In some ways, we have only scratched the surface as infrastructure, backend and frontend are subjects worthy of research papers on their own.</p>
+<p class="c15">A key point is the need to continually iterate all parts of the stack and not be married to a particular technology. In fact, this paper should be considered a living document as we are already embarking on new research to further improve our Museum stack.</p>
+<div>
+<h2>Acknowledgements</h2>
+</div>
+<p>Dan Collins, Head of Digital and Media, Museum of Applied Arts and Sciences.</p>
+<div>
+<h1 class="c5">References</h1>
+<p class="c5"><span class="c7">Bahajji, Z and Illyes, G. (2014). Google Online Security Blog: HTTPS as a ranking signal. Consulted August 26, 2015. Available: </span><span class="c12 c7"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fgoogleonlinesecurity.blogspot.com%2F2014%2F08%2Fhttps-as-ranking-signal_6.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHZYwZlegB43yBs7xfYxjDEXrpuyA">http://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html</a></span></p>
+</div>
+<div></div>
+<div>
+<p class="c5"><span class="c7">Bootstrap Team. (2015). Bootstrap 4 alpha &#8211; Bootstrap Blog. Consulted 26 Aug. 2015. Available: </span><span class="c12 c7"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fblog.getbootstrap.com%2F2015%2F08%2F19%2Fbootstrap-4-alpha%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNF1wmvffy2Qt9JZltt_x5BNAY4cdA">http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/</a></span></p>
+</div>
+<div>
+<p class="c5"><span class="c7">Gerchev, I. (2014). 5-most-popular-frontend-frameworks-compared &#8211; SitePoint. Consulted 25 August 2015. Available: </span><span class="c12 c7"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fwww.sitepoint.com%2F5-most-popular-frontend-frameworks-compared%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEH_lpzKG_oBZGAc52fKT7JDc0s9w">http://www.sitepoint.com/5-most-popular-frontend-frameworks-compared/</a></span></p>
+<p class="c5"><span class="c7">Sitakange, J. (2014). Infrastructure as Code: A Reason to Smile | ThoughtWorks. Consulted 25 August 2015. Available:  </span><span class="c12 c7"><a class="c3" href="http://www.google.com/url?q=http%3A%2F%2Fwww.thoughtworks.com%2Finsights%2Fblog%2Finfrastructure-code-reason-smile&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGBiLEFf35iE1EuJRW3eCoVclJoPg">http://www.thoughtworks.com/insights/blog/infrastructure-code-reason-smile</a></span></p>
+</div>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+. "A Modern Museum Web Stack." <i>MWA2015: Museums and the Web Asia 2015</i>. Published September 1, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mwa2015.museumsandtheweb.com/paper/a-modern-museum-web-stack/<br /><br /><hr>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://mwa2015.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><hr>
+<h3 class="widget-title">Global sponsor</h3>
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a>
+
+<h3 class="widget-title">Platinum sponsor</h3>
+<a title="MailChimp" href="http://nonprofits.mailchimp.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a>
+
+<h3 class="widget-title">Gold sponsor</h3>
+<a title="AARNet" href="http://www.aarnet.edu.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/AARNet-250-75.jpg" alt="AARNet" /></a>
+
+<h3 class="widget-title">Silver sponsors</h3>
+<a title="CV" href="http://www.creative.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CV-250-75.jpg" alt="CV" /></a>
+<a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<h3 class="widget-title">Bronze sponsors</h3>
+<a title="Ruckus" href="http://www.ruckuswireless.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/ruckus-250-75.jpg" alt="Ruckus" /></a>
+
+<a title="CoM" href="http://www.melbourne.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CoM-250-75.jpg" alt="CoM" /></a>
+
+<a title="Lumicom" href="http://lumicom.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/lumicom-250-75.jpg" alt="CoM" /></a>
+
+<a title="Tomizone" href="http://tomizone.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/tomizone-250-75.jpg" alt="Tomizone" /></a>
+
+<h3 class="widget-title">Partner</h3>
+<a title="MV" href="http://museumvictoria.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/mv-250-100.jpg" alt="MV" /></a>
+
+<div style="text-align:right;"><a href="../../sponsorship-opportunities/index.html">become a sponsor</a></div>
+<hr></div>
+		</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/search?q=%40museweb+OR+%23museweb+OR+%23mwa2015" data-widget-id="519731970960400384">Tweets about "@museweb OR #museweb OR #mwa2015"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br />
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-5" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br />
+703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info@museumsandtheweb.com</p></div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+
+			
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/a-modern-museum-web-stack/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:53:00 GMT -->
+</html>

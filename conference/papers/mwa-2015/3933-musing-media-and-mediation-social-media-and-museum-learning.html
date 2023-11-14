@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/musing-media-and-mediation-social-media-and-museum-learning/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:53:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Musing, media, and mediation: Social media and museum learning. | MWA2015: Museums and the Web Asia 2015</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/mw-theme/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mwa2015.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/wp-emoji.js?ver=5.6","twemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/twemoji.js?ver=5.6"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='../../wp-content/themes/twentyeleven/blockscb8b.css?ver=20190102' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexb645.html?p=489' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed401d.json?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fmusing-media-and-mediation-social-media-and-museum-learning%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed2a39?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fmusing-media-and-mediation-social-media-and-museum-learning%2F&amp;format=xml" />
+</head>
+
+<body class="paper-template-default single single-paper postid-489 wp-embed-responsive single-author two-column right-sidebar">
+<div id="page" class="hfeed">
+
+<style type="text/css">
+branding.img { height: auto; display: block; width: 100%; }
+#image  { position:relative;z-index:10;  }
+#text   { position:absolute; z-index:100; }
+#site-description { font-weight: normal; color: #fff; margin: 0 20px 20px 0;}
+#site-title a { color: #fff; }
+#site-title { margin-right: 20px; }
+</style>
+
+<header id="branding" role="banner">
+<hgroup>
+	<div id="text">
+<h1 id="site-title"><span><a href="../../index.html" rel="home">MWA2015: Museums and the Web Asia 2015</a></span></h1>
+<h2 id="site-description">The conference of Museums and the Web in Asia | October 5-8 | Melbourne, Australia</h2>
+	</div>
+</hgroup>
+
+			
+<div id="image"><a href="../../index.html"><img src="../../wp-content/uploads/2014/10/Melbourne-MWA2015.jpg" width="1000" height="250" alt="Museums and the Web Asia 2015" /></a></div>
+			
+			
+										
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-10"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="../../local-info/index.html">Local Info</a></li>
+	<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+	<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-16"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="../../exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="../../advertising-guildlines/index.html">Advertising Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="../../attending/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="../../workshop-program/index.html">Workshops</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../hobart-deep-dive/index.html">Hobart Deep Dive</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="../../attendees/index.html">Attendees</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<div id="primary">
+<div id="content" role="main">
+<article id="post-489" class="post-489 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">Musing, media, and mediation: Social media and museum learning.</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/NarelleL/">Narelle Lemon</a>, La Trobe University, Australia, <a target="_blank" href="https://www.museumsandtheweb.com/member/Jan Molloy/">Jan Molloy</a>, IMMIGRATION MUSEUM, Australia</p>
+<h2>Abstract</h2>
+Social media enables possibilities for museums to engage with ideas and with audiences who want to participate, who can generate content, and who would like to create a community (Boches, 2013). This is a challenging space. But worth exploring and unpacking further. In this paper we offer the chance to discuss what social media can bring to the museum space, but particularly the museum education space. We share innovative practices in the Australian context that demonstrates what is possible. Focus is on connecting teachers and the museum using social media to begin, continue, and extend connections and conversations. 
+
+The focus of the paper will be to share a variety of case studies. We discuss the development of an accredited teacher education subject located within a postgraduate degree at La Trobe University and delivered in partnership with Museum Victoria and National Gallery of Victoria. This subject integrates a variety of social media platforms to engage future teachers with cultural organisations as resources for learning. This case is then juxtaposed with how Museum Victoria is utilising social media with teachers. Specifically we share the Twitter profile of @MVTeachers and the development of ongoing connections to the Museum’s humanities and sciences education programs and resources through #TwitterTours. A community of learners underpinned by building and supporting relationships, making new connections, sharing and modeling, and connecting future ways of working is demonstrated in all these cases. Central is the engagement with museums, collective and multiple voices as well as technology. This is modeling the future of learning in cultural organisations. This way of working focuses on participatory cultural communication (Russo et al., 2008; Simon, 2010) and enables a social constructive approach to communication. Most importantly access, contribution and learning is contemporary and future proofed.</p>
+<p><b>Keywords:</b> museum learning, social media, teachers, community, engagement, Twitter</p>
+<h1>Introduction</h1>
+<p>Museums are now actively concentrating on enriching the total experience for visitors. As McIntrye &amp; Murphy (2011) note they are “tailoring new kinds of social experience for visitors to exhibitions” (p.4). In addressing this focus, mobile digital technology, interfaces and connection with websites are becoming more embedded and networked, and are thus changing the experience for visitors to museums (Johnson et al., 2011; Kelly, 2014; Lemon, 2015; Russo, 2012; Russo &amp; Peacock, 2009; Simon, 2010). The interaction with digital technologies, including Web 2.0 platforms, provides more flexible and personalized information thus encouraging interaction and discussion between visitors, museum staff and objects (Lemon, 2013; Russo, 2011; Simon, 2010). These changes can improve the quality of programs offered in museums overall (Griffin, 2011; Simon, 2010). One specific area that is under-represented and often misunderstood is the use of social media to engage with museum education audiences.</p>
+<p>Social media enables museums to engage with ideas and with audiences who want to participate, who can generate content, and who would like to create a community (Boches, 2013). Social media platforms encourage and support participatory communication, which in turn transforms the relationships that museums have with their visitors. This is particularly noticeable, as Kelly (2014, p.56) reports “in the educational sector, including schools, universities and museums”. This is however a challenging space, but worth exploring and unpacking further. In this paper we offer the chance to discuss what social media can bring to the museum space, and particularly the museum education space. We share innovative practices in the Australian context that demonstrate what is possible. The focus is on connecting teachers and the museum using social media to begin, continue, and extend connections and conversations.</p>
+<p>The focus of the paper will be to share a variety of case studies. We discuss the development of an accredited teacher education subject located within a postgraduate degree at La Trobe University and delivered in partnership with Museum Victoria and National Gallery of Victoria. This subject integrates a variety of social media platforms to engage future teachers with cultural organisations as resources for learning utilizing the hashtag #CL15. This case is juxtaposed with how Museum Victoria is utilising social media with teachers. Specifically we share the Twitter profile of @MVTeachers and the development of ongoing connections to the Museum’s humanities and sciences education programs and resources through #TwitterTours. A community of learners underpinned by building and supporting relationships, making new connections, sharing and modeling, and connecting future ways of working is demonstrated in all these cases. Central is the engagement with museums, collective and multiple voices as well as technology. This is modeling the future of learning in cultural organisations. This way of working focuses on participatory cultural communication (Russo et al., 2008; Simon, 2010) and enables a social constructive approach to communication that invites audiences to have a role in learning about culture. Most importantly access, contribution and learning is contemporary and future proofed.</p>
+<p>We write this paper from the stance of being educators in and outside of the museum environment who engage with technology for learning and engagement with others. We are users of social media to engage with professional audiences and this has influenced our movement into using social media, and especially Twitter, to connect with education audiences: that is teachers, pre-service teachers, and students.</p>
+<h2>Museum education and social media</h2>
+<p>The next section of the paper shares narratives of social media use to engage education audiences. The ways these platforms can enhance communication, participation, and inquiry are illustrated in the following three examples, all demonstrating how Twitter can be used to engage with education audiences across sectors.</p>
+<h3>Development of the MV Teachers Twitter account</h3>
+<p>Museum Victoria (MV) comprises three public museums:<em> Immigration Museum</em>, <em>Melbourne Museum </em>including <em>Bunjilaka Aboriginal Cultural Centre</em> and <em>Scienceworks</em> including <em>Lightning room, High Voltage Theatre, and Melbourne Planetarium</em>. Each year more than 210,000 Foundation to Year 12 (F-12) students from across the state visit one of the venues of Museum Victoria. MV’s program is broad and inclusive in reach and aligns with government policies and Department of Education and Training priorities regarding access and diversity. Education Program Coordinators with responsibility for the development of Humanities and Science Education programs are based at each of the museums and there is a digital education programs coordinator role with responsibilities across the three museums.</p>
+<p>MV Teachers is Museum Victoria&#8217;s online subscription service for teachers in Victorian schools and education institutions. Our website identifies the role of MV Teachers this way. “It is designed to give you [the teacher] easy access to all our museums and education services in order to help (you) plan school group excursions to our venues” (Museum Victoria, 2015, para1). MV Teachers asks teachers who are registered with the Victorian Institute of Teaching to subscribe via email and communicates to all subscribers via a monthly email. A member of the Education and Community Programs department manages this email account and the content is provided by the Education Program Coordinators. It is the main means of promoting and communicating the formal education offer from the museum and has over 4000 subscribers. It has been operating since 2006.</p>
+<p>In 2012 the MV Teachers Facebook page began and by 2014 there were 273 followers in June 2015. This has risen to 782 followers in August 2015.</p>
+<p>Several members of the education staff began using Twitter as a Personal Learning Network (PLN) after attending the International Society for Technology in Education (ISTE) Asia conference in 2012 and in early 2014 conversations commenced regarding the development of a dedicated MVTeachers Twitter account. Education staff attended the unconference #Teachmeet in 2012. This was as a direct result of a PLN established via Twitter connections and the identification of several digital education networks already established in Victoria via Twitter indicating that participation in conversations and networks might be enabled through an MVTeacher’s Twitter account. This seemed to offer a chance to tap into a community of early adopters who were thinking about learning and connectivity in new and innovative ways.</p>
+<p>While the email subscription service offered a valuable method for broadcasting information and keeping subscribers informed, there was very little interaction online. The Facebook page operated in a similar manner. For some Museum Victoria Education staff a Twitter account offered an opportunity to explore a potentially responsive and participatory method of participating in the education community. The MV Teachers Twitter account became active in May 2014.</p>
+<p>Museum Victoria already operated a number of Twitter accounts, including venue-based accounts (Melbourne Museum, Scienceworks, Immigration Museum) and a Museum Victoria account. These accounts were all managed by staff from the Marketing and Communications team. Our MVTeacher’s Twitter account is operated by several active Twitter users within the education team and is contributed to by a range of education and non-education Museum staff. The account is growing and by June 2015 had 1078 followers, had delivered over 3000 tweets and follows 1313 accounts.</p>
+<p>Since the account opened we have evidence to support the following observations regarding Museum Victoria Teachers and our connection to teachers, learning and the work of the museum. We like to think of this in three ways – we have extended our reach, modelled the application of Twitter for learning, and expanded our networks (within and outside the museum).</p>
+<p>Our Twitter account was launched at a #Teachmeet and this relationship between the Teachmeet community and MV Teachers on Twitter is important. Teachers attending #Teachmeets are taking their learning into their own hands, they are sharers and they are building meaningful collaborative learning communities for themselves and their students. We asked the attendees at the May 2014 #Teachmeet held at the Immigration Museum to join us in the MV Teachers PLN and we actively followed all teachers who followed us. The collaborative model of #Teachmeets where networking and learning depends on the willingness to be open and frank about what happens in the classroom is also a marker of the ways in which learning and collaboration happen on Twitter, in the spaces educators inhabit.</p>
+<p>Our MVTeachers account has worked to promote our digital platforms and to extend the promotion by sharing the ‘how’ as well as the ‘what’. This has included connecting to individual teachers, classes of learners and responding in real time when teachers and students are in the field or in our museums. Twitter has offered opportunities for new and different connections to learning. There are projects happening this year that would not have happened without our Twitter account. MVTeachers on Twitter is mediating connections between learners and those responsible for education programming at our museums. It is also fostering richer communication between departments within the museum and demonstrating that learning can be effective, exciting and enriched when a learner of any age or expertise is connected to their community.</p>
+<h3>Development of Twitter tours</h3>
+<p>Museum Victoria’s Education staff were interested in not only using Twitter to connect with educators and learners, but also to explore new ways of using the platform to foster learning. One aspect of this came with a focus on location-based learning, and this led to the trialling of Twitter tours conducted by staff both on location in exhibitions and out on location in Melbourne.</p>
+<p>The Twitter tour concept was developed as way to not only promote museum collections and resources, but also to share the different perspectives of a range of expert staff. The first Twitter tour was conducted along the path of Melbourne’s Golden Mile, which traces the development of the city of Melbourne. Several education staff took part in the tour in order to provide their own unique perspectives on the locations visited. This included an educator from <em>Bunjilka Aboriginal Cultural Centre</em>, an educator from the Immigration Museum, and an educator working in Digital Education. The team moved through different locations in Melbourne’s central business district (CBD), documenting their experiences, offering interpretations of significant locations, demonstrating the use of digital tools to capture learning, and interacting in real time with people following along on Twitter.</p>
+<p>The Twitter tour presented an opportunity to model ways that social media can be used to document learning and connect with others. It also allowed Museum Victoria staff to highlight items from our collection and place them in context (location, time, perspective, etc.). Several more Twitter tours were conducted with more specific topics, including two tours about migration to Melbourne (conducted within the<em> Immigration Museum</em> and then on location in the city) and a Koorie Culture and History tour of <em>Bunjilaka Aboriginal Cultural Centre</em> and the surrounding Carlton Gardens. The model will be developed further to document and tour through new exhibitions, or to allow other expert staff such as scientists or historians to connect with the education community.</p>
+<p>All of the Twitter tours were later documented using the digital storytelling tool Storify. This not only allowed us to easily collate the tweets sent during the tour, but also to add extra context and resources.</p>
+<h3>Sharing the learning</h3>
+<p>Museum Victoria’s Education team also hoped that the Twitter tour model would be a good example for teachers looking to find ways to make excursions to our museums, or out on location, much more valuable. We hoped to be able to connect students who were on excursion to our extensive collections and expertise. Several teachers had made contact with MV Teachers on Twitter during excursions to our venues, offering us the chance to interact with the class, link to useful resources or learn about their impressions of the museum. We’d also been part of an interesting inquiry about an artwork from a teacher visiting the Aztecs exhibition at Melbourne Museum. This inquiry lead to the teacher not only connecting with our education staff, but also to an international expert in Aztec culture.</p>
+<p>In order to encourage similar interactions with teachers, classes or students, two educators from Museum Victoria presented about the Twitter tour model at a local TeachMeet event, sharing our impressions of the experience and giving tips for how to conduct one’s own Twitter tour.</p>
+<p>A Melbourne teacher, Michelle Scott, from St Luke’s Primary School Blackburn South observed Cameron and Jan’s presentation about Twitter Tours at a TeachMeet session through the TeachMeet Twitter feed. She tweeted about this that evening commenting how inspiring this practice was. Michelle then decided to apply it to an upcoming excursion with a Grade 3 &amp; 4 class. The students from St Luke’s Primary School Blackburn South were planning to conduct a walk of their local area, first in a nature reserve and then in a shopping strip in their suburb. Before the walk Michelle made contact with MV Teachers on Twitter letting us know that they would be conducting their own Twitter tour (see Figure 1).</p>
+<p><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure1.png"><img loading="lazy" class=" wp-image-550 size-full aligncenter" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure1.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure1" width="642" height="485" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure1.png 642w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure1-300x227.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure1-397x300.png 397w" sizes="(max-width: 642px) 100vw, 642px" /></a></p>
+<p><em>Figure 1: </em><em>St Luke’s Primary School Blackburn South Twitter conversation with @MVTeachers</em></p>
+<p>This provided our staff with the opportunity to follow along on the day and interact with the students as they were out on location. Instead of the traditional model of an organisation deciding what teachers or students might need, we were able to be responsive to the interests of the students, and also to relate our collections to their local area. At one stage students identified some insects and asked a question on Twitter. One of the MV science educators was able to respond with some prompts to model scientific inquiry. She was also able to direct students to the Museum Victoria Field Guide app to help them identify the insects. Eventually an entomologist at Museum Victoria was also able to respond to let students know what they had found (see Figure 2).</p>
+<p><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure2.png"><img loading="lazy" class=" wp-image-551 size-full aligncenter" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure2.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure2" width="342" height="712" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure2.png 342w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure2-144x300.png 144w" sizes="(max-width: 342px) 100vw, 342px" /></a></p>
+<p><em>Figure 2: Example of conversation between school and entomologist</em></p>
+<p>The interactions continued throughout the day with parents, other community members and staff from Museum Victoria responding to tweets from the class. As the students were identifying the focus of their own learning (in this case they were interested in the concept of change over time) we were able to also help provide some useful stimuli for the students using our own expertise. In one case this included linking to a photograph from the State Library of Victoria’s collections, taken in 1975. Students then recreated the photo in the present day. We aimed to show not only that we had a range of resources, but that as connected learners we were also able to make links to other resources or organisations.</p>
+<p>The school also applied our modelling of Storify in order to collate and reflect on the Twitter tour. This ensured that the work from the day is published, shared and archived. As of June 2015, the Storify of the walk has been viewed over 1700 times. The Storify was collated by another teacher at the school, Celia Coffa (see <a href="https://storify.com/slblackburnsth/middles-learning-walk-part1">https://storify.com/slblackburnsth/middles-learning-walk-part1</a>).</p>
+<p>The impact of the Twitter tour model is best summed up by Celia who reflected on the experience on her blog:</p>
+<blockquote>
+<p style="text-align: left">[T]he teachers have modelled a new way of learning to our students. We have shown how we can seek information in a number of ways, that there are a number of sources of information and technology can enhance that in so many ways. By making their learning and their questions visible they were challenged as well as informed to a far greater extent than a simple walk in the park may do… At their young age, they [students] cannot use Twitter or most social media tools on their own but they are being modelled the concept of being connected learners. They have seen their teachers reach out to experts and receive feedback. They were involved in the conversations to create the questions and responded to the answers.</p>
+</blockquote>
+<p style="text-align: right">– Celia Coffa, Geography Walk Meet Twitter Tour, November 19, 2014</p>
+<p style="text-align: right">(Full blog post accessed here: <a href="http://ccoffa.edublogs.org/2014/11/19/geography-walk-meets-twittertour/#.VGx4TleUewE">http://ccoffa.edublogs.org/2014/11/19/geography-walk-meets-twittertour/#.VGx4TleUewE</a>).</p>
+<h3>Twitter, Museums and Teacher Education</h3>
+<p>Connecting future teachers to the breadth of resources for learning within museums and galleries was the driver for the development of an accredited teacher education core subject located within a Master of Teacher (primary). This subject is called Connected Learning: Working with museums and galleries to deepen arts and humanities learning (the subject description can be found here: <a href="http://www.latrobe.edu.au/students/subjects/current/edu5cla-connecting-learning">http://www.latrobe.edu.au/students/subjects/current/edu5cla-connecting-learning</a>)<strong>.</strong> Developed in partnership between La Trobe University, Melbourne Museum, Immigration Museum and National Gallery of Victoria, the subject focuses on how these sites as well as other Galleries, Libraries, Archives and Museums (GLAM) sites are resources for primary (Year Foundation to Year 6) curriculum and learning opportunities onsite, offsite and online, and for ongoing teacher professional development. The subject is offered as a core subject in the second trimester in their first year of an 18-month accelerated degree. There is a focus on arts and humanities, with reference made to integrated curriculum, technology, and other discipline areas. The subject scaffolds future teachers (pre-service teachers) to consider GLAM sites for ongoing learning, resources for curriculum, and reflecting upon education across formal and informal sites while connecting with museum educators through online and face-to-face opportunities. The subject is delivered in a blended mode over 12 weeks with 80% content engaged with online (five modules that are designed to be completed over two to three weeks each) and two days face-to-face on site at the partner museums and galleries (one module called an intensive). The online component specifically introduces social media platforms for professional engagement to develop a personal learning network (PLN) and make connections with peers, teachers, museum educators, and global community.</p>
+<p>We have introduced the pre-service teachers to Twitter, Pinterest and blogging. Each social media is scaffolded throughout the subject with student centered learning activities building from initial introduction and support for establishing a professional profile. Their lecturer has a strong presence in all these spaces to engage with and scaffold learning. This paper specially shares the Twitter engagement of 67 pre-service teachers over the space of the two days engaging during the two day intensive (the two days were a part of a week long face to face study that involved the pre-service teachers engaging with two other subject they were concurrently undertaking) on site at Melbourne Museum, Immigration Museum and the two National Gallery of Victoria locations. The development and enactment of the teacher education subject integrates social media to:</p>
+<ul>
+<li>Expose alternative ways of connecting to fellow educators;</li>
+<li>Demonstrate how museums and social media are sites for informal learning with transference across boundaries into formal learning settings;</li>
+<li>Support learning by doing underpinned by a social constructivist and connectivism learning framework;</li>
+<li>Extend connections between pre-service teachers and museum educators and museums;</li>
+<li>Support digital engagement anywhere, anytime to build ongoing professional relationships;</li>
+<li>Connect beyond just the subject content;</li>
+<li>Establish relationships and possibilities for future growth professionally and in integrating meaningful use of museums in curriculum; and</li>
+<li>Share how relationships can build from teacher education into teacher practice – take into the classroom on practicum and once graduated and employed.</li>
+</ul>
+<p>The pre-service teachers move between the face-to-face and online space to explore connections to learning in cultural organisations as a part of this teacher education subject. This paper shares aspects of the two days on site at the galleries and museums through the tweets the pre-service teachers shared. Specifically we focus on the tweets scaffolded through some of the questions posed in a tweet chat hosted by @MVTeachers where one question per day was posed over a series of 6 days before and after the onsite visits.</p>
+<p><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure3.png"><img loading="lazy" class="aligncenter wp-image-552 size-medium" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure3-243x300.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure3" width="243" height="300" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure3-243x300.png 243w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure3.png 449w" sizes="(max-width: 243px) 100vw, 243px" /></a></p>
+<p><em>Figure 3: Meeting face-to-face to brief on two days of museum and gallery site visits after learning online for 7 weeks</em></p>
+<p>As a part of module 4, run at week 8 of the twelve-week subject, two days were run on site at Melbourne Museum, Immigration Museum and the National Gallery of Victoria sites (International and Federation Square). This was in July 2015. To support the face-to-face learning across the four sites students were also encouraged to tweet about their learning and to also engage in a tweet chat hosted by Cameron and Jan facilitated through @MVTeachers. Museum educators from the National Gallery of Victoria were also invited to tweet.</p>
+<p>The pre-service teachers had been using Twitter since the beginning of the subject, were confident in their professional voice, and were aware of how they could interact with each other, teachers, GLAM sites, and museum educators. Tweet chats had also been a regular part of the pre-service teachers learning with a variety of conversations scaffolded during online modules, for example: a set of questions posed over a module, a set of questions posed in a one hour specific time, etc. The tweet chat with @MVTeachers was a different model again. The tweet chat invited the pre-service teachers to respond to a set question each day. Tweeting was seen as a way to capture learning experiences, for the pre-service teachers to reflect upon their learning scaffolded through workshops run at each of the sites, and to exchange ideas. This visual capacity of Twitter curated through the hashtag #CL15 (created from the subject name Connected Learning 2015) generated interest from those not participating in the subject but who were interested in the learning experience and are advocates of museum learning.</p>
+<p style="text-align: center"><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure4.png"><img loading="lazy" class="alignnone size-full wp-image-553" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure4.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure4" width="452" height="162" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure4.png 452w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure4-300x108.png 300w" sizes="(max-width: 452px) 100vw, 452px" /></a></p>
+<p><em>Figure 4: Jan engaging with #CL15 community in preparation before two day site visits</em></p>
+<p>The tweet chat ran in parallel to site visits. The students participated in the two days through a scheduled timetable run much like an excursion (see Figure 5). This was also seen as further modeling associated to the partnership between museums, museum educators, and teachers when enacting such learning experiences in schools. The pre-service teachers were randomly divided into four groups of between 14 to 18 students with a total of 67 participating. Each group rotated through four three-hour workshops over the two days. At each site they participated in specifically designed learning activities that supported F-6 curriculum, arts, humanities, technology, inquiry, and/or higher order thinking. These workshops were delivered by museum educators who led the pre-service teachers through practical activities that they completed offering a chance to discuss pedagogy, engage with objects and exhibitions, and carefully consider how museum learning, object based pedagogy and informal learning sites can support them as future primary school teachers (see Figure 6 for tweets sharing learning on site).</p>
+<p><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure5.png"><img loading="lazy" class=" size-full wp-image-554 aligncenter" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure5.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure5" width="522" height="461" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure5.png 522w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure5-300x265.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure5-340x300.png 340w" sizes="(max-width: 522px) 100vw, 522px" /></a></p>
+<p><em>Figure 5: Timetable of the #CL15 community two day site visits</em></p>
+<p><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6a.png"><img loading="lazy" class="wp-image-555 size-medium aligncenter" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6a-237x300.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure6a" width="237" height="300" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6a-237x300.png 237w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6a.png 450w" sizes="(max-width: 237px) 100vw, 237px" /></a><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6b.png"><img loading="lazy" class=" wp-image-556 size-medium aligncenter" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6b-235x300.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure6b" width="235" height="300" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6b-235x300.png 235w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6b.png 451w" sizes="(max-width: 235px) 100vw, 235px" /></a></p>
+<p style="text-align: center"><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6c.png"><img loading="lazy" class="alignnone size-medium wp-image-557 aligncenter" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6c-300x244.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure6c" width="300" height="244" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6c-300x244.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6c-369x300.png 369w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6c.png 447w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6d.png"><img loading="lazy" class="aligncenter wp-image-558" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure6d.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure6d" width="201" height="258" /></a></p>
+<p><em>Figure 6 a, b, c and d: Museum educators from Melbourne Museum and Immigration Museum leading pre-service teachers through museum education philosophies before heading into the exhibition space</em></p>
+<h3>#CL15 Tweet chat with @MVTeachers</h3>
+<p>The #CL15 tweet chat in the week of the face-to-face component of the subject invited the pre-service teachers to exchange a professional dialogue. This online conversation was seen as a way for the pre-service teachers to share their goals and intentions of applying learning from the previous seven weeks of learning with insights gained from being onsite. The application and transference of learning was a key driver of this tweet chat, as too the chance to continue the conversations from online (blog, Pinterest, Twitter) to face-to-face (site visits) back to online (Twitter). To specifically support this one question was posed per day, with responses encouraged at anytime throughout the day. The questions were pre-advertised to the students via Twitter and through the universities online learning management system. By having @MVTeachers host the tweet chat, the pre-service teachers were being invited to extend their PLN, to engage with different voices, and to demonstrate reflective and metacognitive thinking in their sharing of their voice. Significantly, the pre-service teachers would be able to engage with Cameron and Jan via the Twitter environment but would then meet them personally in the workshops run on site. This was seen as a way to build professional relationships with impact both for the subject engagement but also confidence to access these sites on completion of the subject and once graduated.</p>
+<p style="text-align: center"><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure7.png"><img loading="lazy" class="alignnone size-medium wp-image-559" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure7-277x300.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure7" width="277" height="300" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure7-277x300.png 277w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure7.png 451w" sizes="(max-width: 277px) 100vw, 277px" /></a></p>
+<p><em>Figure 7: Example of a question posed as part of the tweet chat hosted by @MVTeachers </em></p>
+<p>The third question in the tweet chat asked the pre-service teachers to consider: what do you want from your two days intensive? How will you measure achievement of expectations? The pre-service teachers engaged with @MVTeachers over the day focusing on the question. Setting goals and considering expectations before spending two days on sites was a vital part of the reflective and reflexive process. The tweets indicated a willingness to explore the sites for learning, and moving from being a student to a teacher. This shift in identity required the pre-service teachers to consider past experiences of learning in museums (of which we had focused on in past modules) whether positive, negative or indifferent, and begin to unpack ideas of curriculum, professional development, and pedagogy to engage active learning. The pre-service teachers demonstrated a positive attitude towards exploration foregrounded by inquiry, question asking, building networks, collaborating, accessing new ideas and resources, and gaining new perspectives. This was an encouraging and constructive outcome of this tweet chat, reinforcing skills often requested of teachers when considering new ideas. A sample of the pre-service teachers tweets are shared in Figure 8.</p>
+<p style="text-align: center"><a href="../../wp-content/uploads/2015/07/image022.png"><img loading="lazy" class="alignnone wp-image-568 size-full" src="../../wp-content/uploads/2015/07/image022.png" alt="image022" width="246" height="576" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/image022.png 246w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/image022-128x300.png 128w" sizes="(max-width: 246px) 100vw, 246px" /></a></p>
+<p><em>Figure 8: #CL15 tweet chat sample responses from the questions: what do you want from your two days intensive? How will you measure achievement of expectations?</em></p>
+<p>On the second of the two days spent onsite at the four cultural organisations, @MVTeachers posed the question: what connections are you making between the site you are in today and a site you visited yesterday? This question was generated to see how the pre-service teachers were making connections on sites but also across sites and was underpinned by seeing how they could make curriculum and learning links.</p>
+<p style="text-align: center"><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure9.png"><img loading="lazy" class="alignnone wp-image-561 size-medium" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure9-300x279.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure9" width="300" height="279" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure9-300x279.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure9-323x300.png 323w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure9.png 453w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><em>Figure 9: Tweet chat question posed by @MVTeachers on Twitter to #CL15</em></p>
+<p><em> </em>The responses indicated a high level of reflective practice and transference of workshop experiences, extending time spent with objects into teaching practice, and conversations with museum educators. Sample tweets are shared (Figure 10) to support insights into the types of connections for learning made as future primary school teachers.</p>
+<p style="text-align: center"><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure10.png"><img loading="lazy" class="alignnone wp-image-562 size-full" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure10.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure10" width="260" height="585" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure10.png 260w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure10-133x300.png 133w" sizes="(max-width: 260px) 100vw, 260px" /></a></p>
+<p><em> </em><em>Figure 10: Sample #CL15 tweets from the questions: what connections are you making between the site you are in today and a site you visited yesterday?</em></p>
+<p>The pre-service teachers communicated inspiration to go back and visit sites to continue making their own connections to cultural organisations for learning. These insights were shared via Twitter with extensions to other sites (Figure 11).</p>
+<p style="text-align: center"><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure11.png"><img loading="lazy" class="alignnone wp-image-563 size-medium" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure11-300x230.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure11" width="300" height="230" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure11-300x230.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure11-1024x783.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure11-392x300.png 392w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure11.png 1609w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><em>Figure 11: Tweets demonstrating impact of museum visits as part of subject onsite visits</em></p>
+<p>Post intensive tweets demonstrated the impact for some pre-service teachers, connecting to the value of cultural organisations to support learning (Figure 12).</p>
+<p style="text-align: center"><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure12.png"><img loading="lazy" class="alignnone wp-image-564 size-full" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure12.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure12" width="453" height="92" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure12.png 453w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure12-300x61.png 300w" sizes="(max-width: 453px) 100vw, 453px" /></a></p>
+<p><em>Figure 12: A pre-service teacher tweet sharing new insights into value of engaging with museums for learning</em></p>
+<p>Conversations and inquiry for curriculum links were engaged with beyond the onsite visits. Keeping the conversation going and linking into new connections made face-to-face within workshops was then developed off site via Twitter. This illuminated how professional relationships and PLNs can grow. In this example the conversation shows how one pre-service teacher’s connection with Cameron to discuss curriculum triggered by an assessment task based on developing a mini unit of work (4 lessons) for F-6 centered on an object was enacted. The workshop activity at Melbourne Museum centered on iPads and the application Book Creator inspired reflective practice for the pre-serve teacher.</p>
+<p style="text-align: center"><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure13.png"><img loading="lazy" class="alignnone wp-image-565 size-full" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure13.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure13" width="251" height="496" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure13.png 251w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure13-152x300.png 152w" sizes="(max-width: 251px) 100vw, 251px" /></a></p>
+<p><em>Figure 13: Twitter conversation between museum educator and pre-service teacher post site visit</em></p>
+<p>Twitter enabled an extension of networks for the pre-service teachers. One teacher from a Melbourne primary school who engages with @MVTeachers and Melbourne Museum (as shared in the blog post earlier in this paper) participated with the pre-service teachers as a part of #CL15 discussions and sharing of experiences.</p>
+<p style="text-align: center"><a href="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure14.png"><img loading="lazy" class="alignnone size-full wp-image-566" src="../../wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure14.png" alt="Musing media and mediation_Social media and museum learning_Lemon_Figure14" width="457" height="110" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure14.png 457w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Musing-media-and-mediation_Social-media-and-museum-learning_Lemon_Figure14-300x72.png 300w" sizes="(max-width: 457px) 100vw, 457px" /></a></p>
+<p><em>Figure 14: Tweet from a teacher observing #CL15 online curation of museum visits integrated into their teacher education subject</em></p>
+<h1>Discussion and concluding thoughts</h1>
+<p>Web 2.0 applications are changing how museums engage with their audiences (Cathcart &amp; Taylor, 2014; Giaccardi, 2012; Kelly, 2014). Kelly (2014) reinforces that “the ways museums communicate and interact with their audiences has undergone a rapid and profound transformation…[and that t]his has been especially noticeable over the past five years, due to the rise of the Internet and social media together with the explosion in mobile technologies” (p54). As a result there are various “ways in which audiences engage, participate, review and critique museum practices…in the realm of online media” (Russo, 2012, p.145). The cases shared in this paper demonstrate how museums, specifically museum education can and does engage with education audiences in new ways through in these examples the platform of Twitter. This use of social media is paralleled with a paradigmatic shift in communication practices that are underpinned by spontaneity, informality, and active participation (Trembacj &amp; Deng, 2015). The use of Twitter brings together cultural institutions, brings the user and the content together, encourages visitors to curate their interest with cultural materials and establishes a steady social connection with one another (Simon, 2010).</p>
+<p>We were all users of social media personally for professional connections before introducing the platform into museum education. We knew the value, professional etiquette and how to appropriately engage audiences, and had established a pattern for use. The ability to trouble shoot and establish profiles and grow networks was vital in the success of the generation of @MVTeachers and #CL15. The mediation of online discussions through Twitter by the authors’ supports what Kelly (2010) reiterates as a need to “develop new and nimble approaches to museum practices” (p.407). The narratives shared in this paper across multiple sites and audiences builds further on Kelly’s (2010) work and thus enacts:</p>
+<ul>
+<li>A way of being that lets go of authority with a shift towards sharing authority;</li>
+<li>Risk taking;</li>
+<li>Working in partnership across sectors (museum and education) to create a community that has permission to play and learn from others;</li>
+<li>Connections and networks both internally and externally;</li>
+<li>Mediation, scaffolding and support that others can build from;</li>
+<li>Acknowledgment that a healthy community will self-monitor, self-correct and model a professional approach to networking, sharing, and curation of content;</li>
+<li>A collective voice while also taking one’s place as the subject matter experts;</li>
+<li>Mindfulness that some areas of discussion and curation will still need a level of discipline and organizational input, yet many more will require participation and joint problem-solving;</li>
+<li>Extension of museum audiences across times and boundaries.</li>
+</ul>
+<p>A common thread throughout the cases is communication, building profile and education capacity with teachers, pre-service teachers and museum educators, and networking across education. Museum Victoria’s creation of their Twitter profile @MVTeachers and the teacher education accredited subject use of #CL15 reveal how “people can build, control and distribute their own experiences on demand” (Russo, 2012, p.152). There is the opportunity to “collect, archive, and share across peer-to-peer distributed networks” (Russo, 2012, p.152) to scaffold, support, and develop creating and sharing of meaning making and knowledge that is closely associated to experiences of value to him or her (Gurian, 2010; Russo, 2012).</p>
+<p>Twitter enables audiences to engage in “discussion and share subject knowledge outside of the museum” (Russo, 2012, p.153). Tweet chats and twitter tours build on the premise of online dialogue to engage in specific topics. In the sharing of the narratives in this paper we allow for insights into how such conversations provide valuable insights into the meanings that education audiences construct from their museum experiences, while providing a voice to both the museum and education audiences. In engaging with education audiences through @MVTeachers and #CL15 we build from the growing interest in how social media, specifically the platform Twitter, supports the formation of a community of learners who are like-minded people with common interests within education (Carpenter &amp; Krutka, 2014) and across museums.   Users demonstrate reflective practice and concise articulation as they share tweets in the online forum. Short and sharp response with opportunity to post multiple tweets in response to the dialogue is considered normal practice. A participatory learning culture with active content generation (Davis et al., 2015) underpins Twitter and our use of this platform. All cases shared in this paper demonstrate that the “emergent participatory culture fostered by social media offers numerous benefits for peer-to-peer learning, collaborative problem solving, and the development of a more empowered sense of citizenship, as well as skills in modern academic settings and the workplace” (Trembacj &amp; Deng, 2015, p. 101).</p>
+<p>In sharing these cases we provide insight into how museum education when engaging with social media develops capacity for educators (teachers and pre-service teachers) to engage with museums, museum educators and sites and objects for learning. We scaffold and support meaning making and exploration into cultural knowledge. As the communities develop it is envisaged that support and the access to resources, pedagogical strategies, and ideas will become more fluid in the online environment with possibility to transfer to face-to-face interactions and partnerships with museums.</p>
+<h1>References</h1>
+<p>Boches, E. (2013). Getty Museum being social with ideas that engage. Accessed from <a href="http://edwardboches.com/getty-museum-being-social-with-ideas-that-engage">http://edwardboches.com/getty-museum-being-social-with-ideas-that-engage</a></p>
+<p>Carpenter, J.P., &amp; Krutka, D.G. (2014). How and Why Educators Use Twitter: A Survey of the Field. <em>Journal of Research on Technology in Education</em>, 46(4), 414-434.</p>
+<p>Cathcart, M. &amp; Taylor, A.F. (2014). Museums step into the future with digital presence. Retrieved from <a href="http://www.abc.net.au/radionational/programs/booksandarts/museums-step-into-the-future-with-digital-presence/5884474">http://www.abc.net.au/radionational/programs/booksandarts/museums-step-into-the-future-with-digital-presence/5884474</a></p>
+<p>Davis, J.L., Compton, D., Farris, N. D., &amp; Love, T.P. (2015). Implementing and analyzing social media in Higher Education. <a href="http://www.ingentaconnect.com/content/nfp/jfd;jsessionid=16f5x52x81mxc.victoria"><em>The Journal of Faculty Development</em></a><em>, </em>29(2), 9-16.</p>
+<p>Giaccardi, E. (2012). <em>Heritage and social media: Understanding heritage in a participatory culture</em>. London: Routledge.</p>
+<p>Griffin, J. (2011). The Museum Education Mix: Students, teachers and museum Educators. In D. Griffin &amp; L. Paroissien (Eds.), <em>Understanding Museums: Australian Museums and Museology.</em> Canberra: National Museum Australia. Retrieved from http://www.nma.gov.au/research/understanding-museums/JGriffin_2011.html.</p>
+<p>Gurian, E. 2010. Curator: From soloist to impresario. In Cameron, F., &amp; Kelly, L. (Eds.), <em>Hot Topics, Public Culture, Museums.</em> (pp.95–111). London: Cambridge Scholars.</p>
+<p>Johnson, L., Adams, S., and Witchey, H. (2011). <em>The NMC Horizon Report: 2011 Museum Edition</em>. Austin, Texas: The New Media Consortium.</p>
+<p>Kelly, L. (2014). The connected museum in the world of social media. In K.Drotner, K.C. Schroder (Eds.). <em>Museum communication and social media: The connected museum.</em> (pp.54-71). London: Routledge.</p>
+<p>Kelly, L. (2010). <a href="http://australianmuseum.net.au/publication/How-Web-20-is-Changing-the-Nature-of-Museum-Work">How Web 2.0 is Changing the Nature of Museum Work</a>. <em>Curator</em>. 53. (4), 405-410.</p>
+<p>Lemon, N. (2015). Young children, digital cameras and art gallery spaces. In Lemon, N. (Ed.), <em>Revolutionizing Arts Education in K-12 Classrooms through Technological Integration<strong>. </strong></em>(pp.168-188). Hershey, Pennsylvania, USA: IGI Global.</p>
+<p>Lemon, N. (2013). Voice, Choice, Equity and Access: Young children capturing their gallery education experiences with cameras. <em>Journal of Museum Education,</em> 38(3) 349-363(15).</p>
+<p>McIntyre, D. and Murphy, B. (2011). Museums Australia 2011: Submission to commonwealth inquiry on national broadband network (NBN) rollout. Canberra: House of Representatives Standing Committee on Infrastructure and Communications.</p>
+<p>Museum Victoria. (2015). MV Teachers. Retrieved from <a href="https://museumvictoria.com.au/education/mvteachers/">https://museumvictoria.com.au/education/mvteachers/</a></p>
+<p>Russo, A. (2011). Transformations in Cultural Communication: Social Media, Cultural Exchange, and Creative Connections. <em>Curator: The Museum Journal</em>, 54(3), 327–346.</p>
+<p>Russo, A. (2012). The rise of the ‘media museum’. In Giaccardi, E. (Ed.), <em>Heritage and social media: Understanding heritage in a participatory culture</em>. (pp.145-157). London: Routledge.</p>
+<p>Russo, A., and Peacock, D. (2009). Great Expectations: Sustaining Participation in Social Media Spaces. (2009). Accessed from <a href="http://www.archimuse.com/mw2009/papers/russo/russo.html">http://www.archimuse.com/mw2009/papers/russo/russo.html</a></p>
+<p>Russo, A., Watkins, J., Kelly, L., and Chan, S. (2008). <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.2151-6952.2008.tb00292.x/abstract">Participatory communication with social media</a>. <em>Curato</em><em>r: The Museum Journal</em>, 51(1), 21-31.</p>
+<p>Simon, N. (2010). <em>The participatory museum</em>. Santa Cruz, CA: Museum 2.0.</p>
+<p>Trembacj, S.A., and Deng, L. (2015). Social media and participatory culture: Opportunities and challenges for reforming the contemporary museum. In Hastings, A.K. (Ed.<em>), Annual Review of Cultural Heritage Informatics: 2014</em>. (pp.99-116). South Carolina, US: The University of South Carolina’s School of Library and Information Science</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+. "Musing, media, and mediation: Social media and museum learning.." <i>MWA2015: Museums and the Web Asia 2015</i>. Published August 14, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mwa2015.museumsandtheweb.com/paper/musing-media-and-mediation-social-media-and-museum-learning/<br /><br /><hr>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://mwa2015.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><hr>
+<h3 class="widget-title">Global sponsor</h3>
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a>
+
+<h3 class="widget-title">Platinum sponsor</h3>
+<a title="MailChimp" href="http://nonprofits.mailchimp.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a>
+
+<h3 class="widget-title">Gold sponsor</h3>
+<a title="AARNet" href="http://www.aarnet.edu.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/AARNet-250-75.jpg" alt="AARNet" /></a>
+
+<h3 class="widget-title">Silver sponsors</h3>
+<a title="CV" href="http://www.creative.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CV-250-75.jpg" alt="CV" /></a>
+<a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<h3 class="widget-title">Bronze sponsors</h3>
+<a title="Ruckus" href="http://www.ruckuswireless.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/ruckus-250-75.jpg" alt="Ruckus" /></a>
+
+<a title="CoM" href="http://www.melbourne.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CoM-250-75.jpg" alt="CoM" /></a>
+
+<a title="Lumicom" href="http://lumicom.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/lumicom-250-75.jpg" alt="CoM" /></a>
+
+<a title="Tomizone" href="http://tomizone.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/tomizone-250-75.jpg" alt="Tomizone" /></a>
+
+<h3 class="widget-title">Partner</h3>
+<a title="MV" href="http://museumvictoria.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/mv-250-100.jpg" alt="MV" /></a>
+
+<div style="text-align:right;"><a href="../../sponsorship-opportunities/index.html">become a sponsor</a></div>
+<hr></div>
+		</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/search?q=%40museweb+OR+%23museweb+OR+%23mwa2015" data-widget-id="519731970960400384">Tweets about "@museweb OR #museweb OR #mwa2015"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br />
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-5" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br />
+703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info@museumsandtheweb.com</p></div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+
+			
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/musing-media-and-mediation-social-media-and-museum-learning/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:54:14 GMT -->
+</html>

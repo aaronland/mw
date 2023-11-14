@@ -1,0 +1,906 @@
+<html><!-- #BeginTemplate "/Templates/mw2002-papers.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2002/papers/honeysett/honeysett.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:47:52 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" -->
+
+	<title>MW2002: Papers: Content Management for a Content-Rich Website</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=en">
+
+	<meta name="DC.Format" content="text/html">
+
+	<meta name="DC.language" content="ISO 8859-1">
+
+	<meta name="DC.Title" content="Content Management for a Content-Rich Website">
+
+	<meta name="htDig.keywords" content="Content Management, Templates, Workflow, Virtualisation, XML">
+
+	<meta name="keywords" content="Content Management, Templates, Workflow, Virtualisation, XML">
+
+	<meta name="DC.Subject" content="Content Management, Templates, Workflow, Virtualisation, XML">
+
+	<meta name="description" content="Over the last year the J. Paul Getty Trust's web presence has evolved from a group of disparate, independently maintained websites, into an homogenous consistently branded one - getty.edu. This transformation culminated with the implementation of a leading Content Management System (CMS).
+
+There were and are, many process-changes and challenges in implementing a CMS in an institution such as the Getty, these issues are not unique and span the gamut from social, to business, to technical. This paper will highlight the major issues, describe the route the Getty took, and give an insight into the functionality and capability of a leading CMS application for a content-rich museum website.">
+
+	<meta name="DC.Description" content="Over the last year the J. Paul Getty Trust's web presence has evolved from a group of disparate, independently maintained websites, into an homogenous consistently branded one - getty.edu. This transformation culminated with the implementation of a leading Content Management System (CMS).
+
+There were and are, many process-changes and challenges in implementing a CMS in an institution such as the Getty, these issues are not unique and span the gamut from social, to business, to technical. This paper will highlight the major issues, describe the route the Getty took, and give an insight into the functionality and capability of a leading CMS application for a content-rich museum website.">
+
+	<meta name="DC.Publisher" content="Archives & Museum Informatics">
+
+	<meta name="DC.Creator" content="Honeysett, Nik"><!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="><!-- #BeginEditable "script" --><!-- #EndEditable -->
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link rel="stylesheet" href="../../Library/mw2002-paper.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" background="../../images/mw2002.bg.gif" text="#000000" link="#003399" vlink="#660000" onLoad="MM_preloadImages('../../images/register_on.gif','../../images/workshops_on.gif','../../images/sessions_on.gif','../../images/speakers_on.gif','../../images/interact_on.gif','../../images/demos_on.gif','../../images/exhibit_on.gif','../../images/events_on.gif','../../images/best_on.gif','../../images/dates_on.gif','../../images/boston_on.gif','../../images/sponsors_on.gif')">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tr> 
+    <td width="145" align="LEFT" valign="TOP"> 
+      <p><a href="../../index.html"><img src="../../images/mw.gif" width="112" height="155" border="0" alt="/mw/"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('register','','../../images/register_on.gif',1)"><img name="register" border="0" src="../../images/register_off.gif" width="114" height="18" alt="Register"></a><a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('workshops','','../../images/workshops_on.gif',1)"><img name="workshops" border="0" src="../../images/workshops_off.gif" width="114" height="18" alt="Workshops"></a><a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sessions','','../../images/sessions_on.gif',1)"><img name="sessions" border="0" src="../../images/sessions_off.gif" width="114" height="18" alt="Sessions"></a><a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('speakers','','../../images/speakers_on.gif',1)"><img name="speakers" border="0" src="../../images/speakers_off.gif" width="114" height="18" alt="Speakers"></a><a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('interactions','','../../images/interact_on.gif',1)"><img name="interactions" border="0" src="../../images/interact_off.gif" width="114" height="18" alt="Interactions"></a><a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('demonstrations','','../../images/demos_on.gif',1)"><img name="demonstrations" border="0" src="../../images/demos_off.gif" width="114" height="18" alt="Demonstrations"></a><a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('exhibits','','../../images/exhibit_on.gif',1)"><img name="exhibits" border="0" src="../../images/exhibit_off.gif" width="114" height="18" alt="Exhibits"></a><a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('events','','../../images/events_on.gif',1)"><img name="events" border="0" src="../../images/events_off.gif" width="114" height="18" alt="Events"></a><a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('best','','../../images/best_on.gif',1)"><img name="best" border="0" src="../../images/best_off.gif" width="114" height="18" alt="Best of the Web"></a><a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dates','','../../images/dates_on.gif',1)"><img name="dates" border="0" src="../../images/dates_off.gif" width="114" height="18" alt="Key Dates"></a><a href="../../boston/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('boston','','../../images/boston_on.gif',1)"><img name="boston" border="0" src="../../images/boston_off.gif" width="114" height="18" alt="Boston"></a><a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sponsors','','../../images/sponsors_on.gif',1)"><img name="sponsors" border="0" src="../../images/sponsors_off.gif" width="114" height="18" alt="Sponsors"></a><br>
+        <br>
+        <a href="../http://www.archimuse.com/" target="_top"><img src="../../images/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"></a> 
+        <br>
+        <span class="small">Archives &amp; Museum Informatics<br>
+        158 Lee Avenue<br>
+        Toronto, Ontario<br>
+        M4E 2P3 Canada</span></p>
+      <p class="small">info @ archimuse.com<br>
+        <a href="../http://www.archimuse.com/" style="text-decoration: underline">www.archimuse.com</a></p>
+      <table width="74">
+        <tr> 
+          <td> <a href="../http://search.museumsandtheweb.com/search" target="_top"> <img src="../../images/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+          </td>
+          <td valign="MIDDLE"> <a href="../http://search.museumsandtheweb.com/search" style="text-decoration: underline"> 
+            <span class="verysmall">Search<br></span></a> </td>
+        </tr>
+      </table>
+      <p><font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="small">Join 
+        our <a href="../http://search.museumsandtheweb.com/mailinglist/" style="text-decoration: underline"> 
+        Mailing List</a>. <br>
+        <a href="../http://search.museumsandtheweb.com/terms-of-use-privacy/" style="text-decoration: underline"> 
+        Privacy</a>.</span></font> </p>
+       <p><font SIZE='-2' class='verysmall'>published: April, 2002 </font>
+        <!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"analytics scripts updated:&nbsp;"+document.lastModified);
+
+// -->
+      </p>
+   <p><font face="Arial, Helvetica, sans-serif" class="small">© Archives & Museum Informatics, 2002.</font><br>
+  <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Att
+   ribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>      </p>
+    </td>
+    <td width="455" align="LEFT" valign="TOP" class="normal">
+      <p><a href="../../speakers/index.html"><img src="../../images/papers.gif" width="390" height="55" border="0" alt="MW2002: Papers"></a></p>
+     <!-- #BeginEditable "Body of Page" --> 
+
+      <p class=PaperTitle>Content Management for a Content-Rich Website</p>
+
+      <p class=Author>Nik Honeysett, J. Paul Getty Trust,  Los Angeles, USA</p>
+
+      <p class=PaperURL><a
+
+href="../http://www.getty.edu/" target="_blank">http://www.getty.edu</a> <a
+
+name="_Hlt1124626"></a> </p>
+
+      <p class=MsoPlainText align=center><b>Abstract</b></p>
+
+      <p class=AbstractText>Over the last year the J. Paul Getty Trust's Web presence 
+
+        has evolved from a group of disparate, independently maintained Web sites 
+
+        into a homogenous consistently branded one - getty.edu. This transformation 
+
+        recently culminated with the implementation of a leading Content Management 
+
+        System (CMS). There were and are many process-changes and challenges in 
+
+        implementing a CMS in an institution such as the Getty.  These issues 
+
+        are not unique and span the gamut from social, to business, to technical. 
+
+        This paper will highlight the major issues, describe the route the Getty 
+
+        took, and give an insight into the functionality and capability of a leading 
+
+        CMS application for a content-rich museum Web site.</p>
+
+      <p class=AbstractText>Keywords: Content Management, Templates, Workflow, 
+
+        Virtualisation, XML.</p>
+
+      <h1>Introduction</h1>
+
+      <p>The Getty is a campus of six programs: Museum, Research Institute, Conservation 
+
+        Institute, Trust Administration, Grant Program and Leadership Institute. 
+
+        All these programs contribute content for the Web site, resulting in a 
+
+        very content-rich environment. It currently includes details on 4,000 
+
+        works of art; 1,500 artist biographies; 3 hours of streaming video; past 
+
+        and present exhibitions; art historical research papers and tools; conservation 
+
+        research papers and tools; on-line library research tools; detailed visitor 
+
+        information; an event calendar, and a parking reservation system.</p>
+
+      <p>Up until a year ago, each program independently maintained its own portion 
+
+        of getty.edu. A gateway homepage was placed at the top level, but as soon 
+
+        as one drilled down into the Website, it was immediately apparent that 
+
+        there was no consistent design, navigation, or look and feel, and no way 
+
+        to navigate around the site without going back to the homepage.</p>
+
+      <p>A trustee-level decision was made to present the Web site with a consistent 
+
+        design and look and feel - a Web group was formed and charged with this 
+
+        task. Accomplishing this task would include the implementation of a Content 
+
+        Management System (CMS) to ensure that all the programs could continue 
+
+        to contribute content to the Web site but in a managed and decentralized 
+
+        way. Rather than implement the redesign and CMS simultaneously, the redesign 
+
+        was implemented first, but significant effort was assigned to preparing 
+
+        the HTML pages for later CMS integration.</p>
+
+      <p>The Web site was re-launched in February, 2001, with a unified design 
+
+        and functionality and a more thematic treatment of the content. The task 
+
+        had required that the webgroup temporarily &#145;own&#146; all the content 
+
+        and the processes associated with getting that content to the Web. The 
+
+        knowledge gained during this process was crucial in being able to identify 
+
+        the real requirements of any CMS that the Getty would need to implement.</p>
+
+      <h1>Maintenance Burden</h1>
+
+      <p class=MsoBodyText>There was a significant burden to re-launching the 
+
+        Web site before implementing a CMS. To guarantee that ongoing development 
+
+        and maintenance on the Web site adhered to the new rules and style guide, 
+
+        all content still had to funnel through the webgroup - the new design 
+
+        had committed us to a frequent subsite update regime. The GartnerGroup, 
+
+        whom the Getty use to benchmark themselves against similar organizations 
+
+        and business processes, publish a graph which exactly summed up where 
+
+        we stood in the Web life-cycle. Even with a webgroup of 18 people, there 
+
+        were few resources to develop new content.</p>
+
+      <p class=MsoCaption><img src="honeysett.fig01.jpg" width="400" height="264"><br>
+
+        Fig 1: Website Life Cycle Costs. GartnerGroup © 1999</p>
+
+      <h1>Preparing For a CMS</h1>
+
+      <p>To prepare the Getty community for a CMS, which might take 6-9 months 
+
+        to select, the webgroup temporarily established its own managed environment 
+
+        to create and deploy content to coincide with the launch of the redesign. 
+
+        On the infrastructure side, we implemented a three-tier staging environment 
+
+        (see figure 2) and a custom-written application to &#145;push&#146; content 
+
+        between tiers. This was a fairly high-level tool operating on directories 
+
+        rather than individual files. On the business side, we established a strict 
+
+        push schedule, which meant that content could only be moved into production 
+
+        twice a week - although this could be fast-tracked for emergencies on 
+
+        a case by case basis.</p>
+
+      <p class=MsoCaption><img src="honeysett.fig02.jpg" width="400" height="265"><br>
+
+        Fig 2: Three-tier Staging Environment</p>
+
+      <p>Initially there was great resistance from the programs to this regime. 
+
+        The &#145;anarchic&#146; nature of content generation and deployment that 
+
+        had established itself at the Getty meant that this was a considerable 
+
+        culture shock. The programs perceived a &#145;loss of control&#146; of 
+
+        their content, and objected to the delay between pushes. Fortunately, 
+
+        the reality was different: the schedule of pushing every other day allowed 
+
+        for only one day to create and review content before it went live. The 
+
+        programs soon fell into the regime and altered their business processes 
+
+        to accommodate the schedule. With the CMS implementation we could afford 
+
+        to increase the push schedule to whatever was appropriate - since it would 
+
+        be automatic. But the temporary situation was a good proving ground for 
+
+        a professionally managed environment.</p>
+
+      <h1>CMS Requirements</h1>
+
+      <p>Armed with the detailed knowledge of content generation and processes 
+
+        around the Getty gained during the redesign, the Web group drew up a requirements 
+
+        document for a CMS. Our &#145;big ticket&#146; items are probably consistent 
+
+        with many museums&#146; CMS wish list, and these were:</p>
+
+      <ul>
+
+        <li><span class="MsoBodyText">Template Driven: To guarantee consistent 
+
+          visual design, to separate content from design and to allow multiple 
+
+          content use.</span></li>
+
+        <li> <span class="MsoBodyText">Used by HTML Illiterate: To allow an interface 
+
+          that lets non-HTML contributors submit and review web content.</span></li>
+
+        <li> <span class="MsoBodyText">Workflow: The processes established at 
+
+          the Getty to get content to the Web site range from a simple two-step 
+
+          workflow to complex multi-program, concurrent-task processes.</span></li>
+
+        <li><span class="MsoBodyText"> File  Versioning: The ability to track 
+
+          individual file changes, what and by whom.</span></li>
+
+        <li><span class="MsoBodyText"> Rollback: The ability to publish an edition 
+
+          of the Web site on any previous date. </span></li>
+
+        <li><span class="MsoBodyText">Open/Standard Architecture: The Getty's 
+
+          Web infrastructure is based on Unix servers, iPlanet Web servers, Java/perl 
+
+          CGI applications and Oracle databases, all sitting on a Novell network. 
+
+          Any Web application has to live in this environment.</span></li>
+
+        <li><span class="MsoBodyText">Virtualisation: The ability to see any changes 
+
+          or new content in the context of the entire Web site - before it is 
+
+          deployed.</span></li>
+
+        <li><span class="MsoBodyText"> Multiple Web site Management: For getty.edu 
+
+          and for our Intranet GO (Getty Online).</span></li>
+
+        <li> <span class="MsoBodyText">Cross-platform clients: The Getty has Mac 
+
+          and PC-based contributors.</span></li>
+
+        <li> <span class="MsoBodyText">Multi-channel Deployment: Eg.  XML and 
+
+          WML delivery.</span></li>
+
+        <li><span class="MsoBodyText">In-house Maintenance and Development: Not 
+
+          to have to go back to the vendor.</span></li>
+
+        <li> <span class="MsoBodyText">Vendor Stability: An important consideration 
+
+          given the current economic times.</span></li>
+
+      </ul>
+
+      <p>After tracking the CMS market during the re-design, the Web group focused 
+
+        on three CMS products after the usual RFI (Request For Information) and 
+
+        RFP (Request For Proposal) processes. These were: Stellent's Expedio (<a href="../http://www.stellent.com/" target="_blank">http://www.stellent.com</a>), 
+
+        Vignette's StoryServer (<a href="../http://www.vignette.com/" target="_blank">http://www.vignette.com</a>) 
+
+        and Interwoven's Teamsite (<a href="../http://www.interwoven.com/" target="_blank">http://www.interwoven.com</a>). 
+
+        After a bake-off, the Getty selected Interwoven as its preferred CMS vendor.</p>
+
+      <h1>Implementation</h1>
+
+      <p>Teamsite is a Web-application suite based on C++, java, perl/cgi and 
+
+        XML technologies. It is a client/server environment with all users interacting 
+
+        with it via a browser. After some testing we established that Internet 
+
+        Explorer was more compatible. The only exception to the browser interface 
+
+        is the module to create workflows &#150; this is a Windows application. 
+
+        Teamsite offers fully integrated <b>Templating</b>, a very flexible and 
+
+        fully integrated <b>Workflow</b> engine, full <b>Virtualisation</b> and 
+
+        integration with a broad range of Web content creation applications such 
+
+        as <b>Dreamweaver</b> and <b>Homesite</b>. It also stands as a solid platform 
+
+        on which to further develop our Web site, by integrating with an array 
+
+        of <b>application</b>, <b>personalization</b> and <b>syndication</b> servers 
+
+        &#150; which are long-term goals for the Web site.</p>
+
+      <p>Interwoven's terms and conditions of sale include an agreed method of 
+
+        installation and configuration. This means you need to buy their professional 
+
+        services or contract with a registered Interwoven partner - a so- called 
+
+        &#145;enabler&#146;, of which there are many and for which there is a 
+
+        'corkage' fee to Interwoven. After reading a number of 'dot com' elegies, 
+
+        we were keen not to have any one of these &#145;enablers&#146; come in, 
+
+        install the product, then hold us to ransom over professional services 
+
+        to develop our site. Also, our Web group has a strong technical component 
+
+        and should be more than capable of maintaining the environment. The best 
+
+        integration solution for us was Interwoven&#146;s so-called &#145;Fast 
+
+        Forward Core Pack&#146; - a 30-day engagement with a Teamsite consultant 
+
+        and project manager. At the end of this engagement, the client is &#145;guaranteed&#146; 
+
+        to have a correctly installed and configured product, at least one site 
+
+        deployed through Teamsite as a file-managed process, and up to two templates 
+
+        and two workflows in place.</p>
+
+      <p>We scheduled technical training to coincide with the arrival of the implementation 
+
+        consultant so that we could speak the Teamsite language and could assist 
+
+        in the installation and configuration. We installed the suite onto our 
+
+        Unix <b>staging</b> server, since once operational, we eliminated the 
+
+        need for a separate staging environment.</p>
+
+      <h1>Environment</h1>
+
+      <p class=MsoBodyText>Teamsite uses a server's native file structure to manage 
+
+        and deploy content, and manages separate Web sites as <b>branches. </b>Because 
+
+        of this approach, the default view of a Web site within Teamsite is as 
+
+        a file system like Windows Explorer:</p>
+
+      <p class=MsoCaption><img src="honeysett.fig03.jpg" width="400" height="301"><br>
+
+        Fig 3: Teamsite's Default View of a Website</p>
+
+      <p>Each registered user has an account based on the server's native authorization 
+
+        technology. In our case this is LDAP. Within Teamsite, each user is assigned 
+
+        at least one <b>workarea</b> and has a virtual view of the whole site. 
+
+        This <b>workarea</b> corresponds to the section of the Web site on which 
+
+        they work; they only have permission to modify documents within their 
+
+        own <b>workarea</b>. Every user is also assigned a <b>role</b> depending 
+
+        on contribution level. This determines the authority they have within 
+
+        the environment: <b>author</b>, <b>editor</b>, <b>administrator</b> or 
+
+        <b>master</b>:</p>
+
+      <ul>
+
+        <li>Author &#150; the primary content creator: he owns content; can create 
+
+          and edit files; can receive assignments through the workflow engine 
+
+          and has work approved by his workarea owner.</li>
+
+        <li>Editor &#150; creates content and oversees content creation: he owns 
+
+          a workarea; can create, edit and delete files; approves or rejects work 
+
+          of the authors; can submit files to the staging area and can publish 
+
+          editions. </li>
+
+        <li>Administrator &#150; manages an area or branch (Web site), of which 
+
+          he is the owner and can create and delete workareas.</li>
+
+        <li>Master &#150; has absolute power and fundamental administrative control 
+
+          over the product - a role reserved for a Unix System Administrator and 
+
+          a person to be chosen wisely.</li>
+
+      </ul>
+
+      <p class=MsoCaption><img src="honeysett.fig04.jpg" width="400" height="231"><br>
+
+        Fig 4: Schematic of the Teamsite Environment and Associated Roles</p>
+
+      <p class=MsoBodyText>Working within the <b>workarea</b>, a user first synchronises 
+
+        with the latest version of content by performing a <b>get latest</b> function 
+
+        within the <b>staging area</b>. When the appropriate edits have been made 
+
+        and checked within the virtualized view of the entire site, the content 
+
+        is submitted back to the <b>staging area</b>. Browsing in the virtualized 
+
+        view of the Web site is no different from browsing the site under normal 
+
+        circumstances. The <b>staging area</b> is where all the content from different 
+
+        <b>workareas</b> is integrated and tested. It is a read-only environment 
+
+        where nothing can be edited. According to the publishing schedule, a snapshot 
+
+        is made of the <b>staging area</b> creating an <b>edition</b>, which can 
+
+        then be deployed to the production server.</p>
+
+      <p>We were looking to manage two Web sites with Teamsite: getty.edu and 
+
+        our Intranet, GO. After a week of analysis we began planning two development 
+
+        environments, each of these becoming a branch within Teamsite. We then 
+
+        'sucked in' each site &#150; a tar&#146;ing, FTP and untar&#146;ing process 
+
+        &#150; which took about a day each. So, within two week' of the consultant's 
+
+        arrival, we had set up a pre-production environment for both sites. With 
+
+        these environments in place, we scheduled some intensive training on the 
+
+        core Teamsite functions of Templating and Workflow &#150; unfortunately, 
+
+        this required a lengthy field trip to Interwoven&#146;s training facilities 
+
+        in San Francisco.</p>
+
+      <h1>Templating</h1>
+
+      <p>Templating is a core function of a CMS. It allows the separation of content 
+
+        from design, the automatic generation of an HTML page from content, guarantees 
+
+        consistent visual design, and allows Web pages to be generated by HTML-illiterate 
+
+        contributors. A fully templated site is one significant goal of full implementation. 
+
+        Teamsite&#146;s templating system is based on XML and requires a thorough 
+
+        understanding to develop templates. We began by analyzing our Web site 
+
+        to identify a list of initial template candidates. We started with the 
+
+        broad assumption on the cost/benefit of converting pages under the homepage. 
+
+        This indicated that the greatest cost/benefit was to be had at the lowest 
+
+        levels, where many pages would be served with a single template. For example, 
+
+        the museum collection subsite consists of approximately  18,000 pages,. 
+
+        Analysis of the design and layout indicated that we could probably serve 
+
+        this with fewer than five templates, possibly even one.</p>
+
+      <p><b><br>
+
+        <span class="MsoCaption"><img src="honeysett.fig05.jpg" width="400" height="270"><br>
+
+        Fig 5: Identifying Template Candidates </span></b></p>
+
+      <p>We then applied a number of qualifications: Do a number of people contribute 
+
+        content to this page? Does the content on this page change often? Additionally, 
+
+        we wanted the first template candidates to also establish precedents for 
+
+        resolving issues that would globally impact the site. We focused on two 
+
+        candidates: the Job Postings, which have a lot of similar pages and a 
+
+        daily turnover, and the News Articles, which have a weekly turnover but 
+
+        a significant number of contributors (and consequently a complex associated 
+
+        workflow).</p>
+
+      <h1>Templating Process</h1>
+
+      <p class=MsoBodyText>Templating is a three-step process of data capture, 
+
+        storage and presentation, figure 6 shows a schematic of this process.</p>
+
+      <p class=MsoCaption><img src="honeysett.fig06.jpg" width="400" height="271"><br>
+
+        Fig 6: Templating Overview</p>
+
+      <p>When a user wants to submit content using a template, they first fill 
+
+        out a <b>data capture template</b> (<b>DCT</b>). This is in an XML configuration 
+
+        file, created by a developer with a good understanding of XML and some 
+
+        basic programming skills. Submitting a completed <b>DCT</b> saves a <b>data 
+
+        content record</b> (<b>DCR</b>) which is either saved as a file or to 
+
+        a database. The last element is a <b>presentation template</b> (<b>PT</b>), 
+
+        another XML file with a variety of markup flavors: ASP, JSP, WML or HTML 
+
+        and also embedded <b>perl</b> callouts and conditional programming tags. 
+
+        The <b>PT</b> is essentially created from an existing HTML page by giving 
+
+        it an XML &#145;wrapper&#146; and substituting the content areas with 
+
+        appropriate XML tags that are defined in the <b>DCR</b>. Figure 7 shows 
+
+        code fragments tracing a single piece of content, a job title, from capture 
+
+        to presentation:</p>
+
+      <p class=MsoCaption><img src="honeysett.fig07.jpg" width="400" height="146"><br>
+
+        Fig 7: Tracing a single piece of content </p>
+
+      <p>When the presentation engine combines the <b>DCR</b> and the <b>PT</b> 
+
+        it executes any perl and any conditional tags to generate the final page. 
+
+        The jurisdiction of the different roles in the templating process can 
+
+        be summarized as:</p>
+
+      <p class=MsoCaption><img src="honeysett.fig08.jpg" width="400" height="322"><br>
+
+        Fig 8: The Jurisdiction of Roles in the Templating Process</p>
+
+      <p>The templating architecture makes for a very powerful and flexible process 
+
+        and allows for single presentation templates to account for a wide range 
+
+        of related Web pages. Much of the template process can be automated; for 
+
+        example, workflows can be invoked at the <b>DCR</b> commit stage, or the 
+
+        final Web page can be generated automatically when a <b>DCR</b> is saved. 
+
+        It is wise not to underestimate the amount of work required to convert 
+
+        a Web site into templates.</p>
+
+      <h1>Workflow</h1>
+
+      <p>Workflow is another core function of a CMS - it defines the content creation 
+
+        and approval processes. The workflow module in Teamsite was one of the 
+
+        most comprehensive and flexible we reviewed during the selection process. 
+
+        The biggest challenge we found in implementing workflows within the Getty 
+
+        is the analysis of the 'business' processes, which continues to be a challenge. 
+
+        This analysis is a time-consuming practice in an environment where these 
+
+        processes have grown organically over time. When interviewing staff around 
+
+        the Getty, we often found ourselves giving advice on consolidating their 
+
+        processes, since no one had thought to review what was happening. Often 
+
+        when we flowcharted the program's processes, staff were surprised at how 
+
+        redundant their activities were. The concise steps to analyzing a process 
+
+        that we use are:</p>
+
+      <p class=listwithnumbers> 1. State the general requirement for the process</p>
+
+      <p class=listwithnumbers> 2. Identify the tasks that need to be performed</p>
+
+      <p class=listwithnumbers> 3. Identify who needs to perform the tasks</p>
+
+      <p class=listwithnumbers> 4. Order the tasks in which they need to be performed</p>
+
+      <p class=listwithnumbers> 5. Review with the process requirement</p>
+
+      <p>Having generated and signed off a flow chart representing the workflow 
+
+        process, the next step is to implement the workflow. <b>WorkflowBuilder</b> 
+
+        is a drag-and-drop flowcharting application based heavily on the <b>Visio</b> 
+
+        interface. </p>
+
+      <p class=MsoCaption><img src="honeysett.fig09.jpg" width="400" height="276"><br>
+
+        Fig 9: An Example Workflow in WorkflowBuilder</p>
+
+      <p>Figure 9 shows a typical workflow of six <b>tasks</b>. When invoked within 
+
+        Teamsite, the instance of this workflow is termed a <b>job</b>. It has 
+
+        a variety of variables associated with it, which are defined when the 
+
+        <b>job</b> starts. For example, one variable might be the name of a file 
+
+        that needs updating or the name of a directory where a new page needs 
+
+        to be created. The first task in figure 9 is a content-creation task which 
+
+        will be assigned to a user using the <b>owner</b> variable. When the content 
+
+        has been written and submitted, the workflow sends an e-mail to the appropriate 
+
+        <b>approver</b> with review instructions and a hyperlink to the relevant 
+
+        content. A rejection generates an e-mail back to the <b>owner</b>, but 
+
+        an approval submits the content which might invoke the automatic generation 
+
+        of a Web page ready for deployment. This workflow is very generic. The 
+
+        use of variables allows for many instances of a single workflow &#150; 
+
+        the variables simply travel along with a particular workflow instance. 
+
+        The power of the workflow engine can be extended immensely by additional 
+
+        tasks such as the <b>CGI</b> script invocation and an <b>external</b> 
+
+        task which runs any external application or script on the host machine.</p>
+
+      <h1>Deployment</h1>
+
+      <p>Deployment of content is the final step in the content generation process. 
+
+        It is the sending and receiving of files from the base server to the receiver 
+
+        host. Any number of deployment scenarios can be created, based on three 
+
+        basic themes: Deploy files in a specified list - the list can be generated 
+
+        programmatically; Deploy files in a directory by file comparison between 
+
+        the source and the target;  Deploy directories by directory comparison 
+
+        between the source and the target. The file transfer executes in a transactional 
+
+        mode, meaning that content will not be replaced on the production server 
+
+        until all the requested files have been received. </p>
+
+      <p class=MsoCaption><img src="honeysett.fig10.jpg" width="400" height="306"><br>
+
+        Fig 10: Deployment</p>
+
+      <h1>The Rollout</h1>
+
+      <p>One important factor in selecting this product was its ability to manage 
+
+        a Web site at a file level. This allowed us to implement Teamsite without 
+
+        disturbing the contributors around the Getty using their Dreamweaver and 
+
+        Homesite applications. We simply continued to import their files from 
+
+        the development server into Teamsite until we were ready to schedule their 
+
+        training and register them as users. The go-live date was an uneventful 
+
+        day. One day we were 'pushing,' and the next day we were 'deploying'.&#150;  
+
+        This fact alone makes it a resounding success. The process of trawling 
+
+        through the Website leaving templated content in our wake is ongoing, 
+
+        to be completed around June 2002.</p>
+
+      <h1>Future Initiatives</h1>
+
+      <p>We selected Teamsite with a long-term web strategy in mind. We chose 
+
+        this particular product because we require a platform that will foster 
+
+        the best opportunities to meet our long term goals and also one that is 
+
+        flexible enough to integrate with presently unknown program initiatives 
+
+        and future www trends. There are two immediate initiatives that are of 
+
+        note:</p>
+
+      <p><b>Vocabulary-Assisted Metatagging</b> &#150; There is a significant 
+
+        metadata initiative at the Getty and extensive research into vocabulary-assisted 
+
+        searching. Currently, searching on getty.edu results in an 'invisible' 
+
+        expansion against our <b>ULAN</b> (United List of Artist Names) vocabulary. 
+
+        By way of an example, if one searches for Carrucci on our Web site, 15 
+
+        hits are returned to Pontormo but no mention of Carrucci &#150; because 
+
+        Carrucci was the birth name of Pontormo as defined in ULAN. While we will 
+
+        continue to expand search queries against our vocabularies (<b>Art &amp; 
+
+        Architecture Thesaurus</b> and the <b>Thesaurus of Geographic Names</b> 
+
+        are planned shortly), we plan to integrate more fully the metatagging 
+
+        of content at the creation stage. As luck would have it, Teamsite has 
+
+        a module called <b>Metatagger</b>, which we have already begun to investigate.</p>
+
+      <p><b>Personalisation &#150; </b>The 'next big thing' for our Web site is 
+
+        a venture into the world of Personalization. Again, as luck would have 
+
+        it, Interwoven is partnered with a variety of personalization server providers. 
+
+        At the time of writing, we are in the selection process, so stay tuned.</p>
+
+      <h1>Conclusion</h1>
+
+      <p>Teamsite is an expensive solution to enterprise-wide content management 
+
+        that the Getty is in the fortunate position to be able to afford. Moreover, 
+
+        our Web strategy is such that we require an &#145;industrial grade&#146; 
+
+        CMS such as this to achieve our goals. The implementation involved a significant 
+
+        amount of planning, strategizing and work plus a high level of technical 
+
+        skill and support. The ongoing maintenance and development of the site 
+
+        through Teamsite has greatly increased the skill level of the Web group 
+
+        and shifted the typical requirements of a &#145;manually&#146; maintained 
+
+        Website. In some areas it has polarized the webgroup resources, requiring 
+
+        more technical people to work on the &#145;back end&#146; but fewer technical 
+
+        and fewer Web-literate people on the &#145;front end&#146;. The executive-level 
+
+        expectation of a CMS is often a reduction in resources required for Web 
+
+        site development. To a certain extent this is true; however, those reduced 
+
+        resources are at a higher technical level that may offset any perceived 
+
+        budgetary reductions. For us, the webgroup is just as busy after the implementation. 
+
+        The difference is that we&#146;re accomplishing more.</p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2002/papers/honeysett/honeysett.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:47:55 GMT -->
+</html>

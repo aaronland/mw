@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/a-review-of-a-year-of-open-access-images-at-te-papa/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:55:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>A review of a year of open access images at Te Papa | MWA2015: Museums and the Web Asia 2015</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/mw-theme/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mwa2015.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/wp-emoji.js?ver=5.6","twemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/twemoji.js?ver=5.6"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='../../wp-content/themes/twentyeleven/blockscb8b.css?ver=20190102' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexfdd5.html?p=538' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed155a.json?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fa-review-of-a-year-of-open-access-images-at-te-papa%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed79cc?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fa-review-of-a-year-of-open-access-images-at-te-papa%2F&amp;format=xml" />
+</head>
+
+<body class="paper-template-default single single-paper postid-538 wp-embed-responsive single-author two-column right-sidebar">
+<div id="page" class="hfeed">
+
+<style type="text/css">
+branding.img { height: auto; display: block; width: 100%; }
+#image  { position:relative;z-index:10;  }
+#text   { position:absolute; z-index:100; }
+#site-description { font-weight: normal; color: #fff; margin: 0 20px 20px 0;}
+#site-title a { color: #fff; }
+#site-title { margin-right: 20px; }
+</style>
+
+<header id="branding" role="banner">
+<hgroup>
+	<div id="text">
+<h1 id="site-title"><span><a href="../../index.html" rel="home">MWA2015: Museums and the Web Asia 2015</a></span></h1>
+<h2 id="site-description">The conference of Museums and the Web in Asia | October 5-8 | Melbourne, Australia</h2>
+	</div>
+</hgroup>
+
+			
+<div id="image"><a href="../../index.html"><img src="../../wp-content/uploads/2014/10/Melbourne-MWA2015.jpg" width="1000" height="250" alt="Museums and the Web Asia 2015" /></a></div>
+			
+			
+										
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-10"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="../../local-info/index.html">Local Info</a></li>
+	<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+	<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-16"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="../../exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="../../advertising-guildlines/index.html">Advertising Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="../../attending/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="../../workshop-program/index.html">Workshops</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../hobart-deep-dive/index.html">Hobart Deep Dive</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="../../attendees/index.html">Attendees</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<div id="primary">
+<div id="content" role="main">
+<article id="post-538" class="post-538 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">A review of a year of open access images at Te Papa</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/adriankingston/">Adrian Kingston</a>, Museum of New Zealand Te Papa Tongarewa, New Zealand, <a target="_blank" href="https://www.museumsandtheweb.com/member/philipe/">Philip Edgar</a>, Museum of New Zealand Te Papa Tongarewa, New Zealand</p>
+<h2>Abstract</h2>
+Te Papa has been providing open access to more than 45,000 high-resolution images for over a year. This session will address what a year's worth of downloads looks like from user, data, financial, creative, and museum perspectives. How do our numbers stack up against others internationally, and was it worth it? And of course, do we keep doing it?</p>
+<p><b>Keywords:</b> open access, high resolution, reuse, collections, analysis, openglam, impact, ugly graphs, bad visualisations</p>
+<h2>1. Introduction</h2>
+<p><span style="font-weight: 400;">In June 2014, the Museum of New Zealand, Te Papa, made available to the public more than 30,000 high-resolution images of its collection to download and reuse. The images were made available with No Known Copyright Restriction (NKCR) statements (17,000 images) or Creative Commons attribution, non-commercial, no derivatives BY-NC-ND licenses (14,000 images) through Te Papa’s collections website, Collections Online (</span><a href="http://www.collections.tepapa.govt.nz/"><span style="font-weight: 400;">www.collections.tepapa.govt.nz</span></a><span style="font-weight: 400;">). This paper describes Te Papa’s open access program with an emphasis on the results of the program after one year of activity. </span></p>
+<p><span style="font-weight: 400;">The paper is divided into three parts. Part One details the reasons why Te Papa developed an open access program, describing what we hoped might happen if we made our collection images available for reuse; and exploring the international, New Zealand, and organisational contexts within which the decision to support an open access program was made. Part Two explains Te Papa’s open access program in more depth, documenting what we put in place to deliver downloadable images and describing the initial response we received after launch. Part Three explores the results of the program one year on, describing the extent—and ways—to which Te Papa’s collection images have been used; and compares this activity with similar open access programs internationally.</span></p>
+<h2>2. Part one: Why open access?</h2>
+<h3>Hopes and dreams</h3>
+<p><span style="font-weight: 400;">In launching Te Papa’s open access program, we hoped that our efforts would empower people to use images of Te Papa’s collection items in teaching and learning, research, innovation, and new forms of creativity. We recognised that for our online visitors, access now means being able to reuse a collection image, not just view it; and that if we wanted to stay relevant we needed to work with our visitors, not against them.<br />
+</span></p>
+<p><span style="font-weight: 400;">We also saw benefits for the Museum. For Te Papa, we hoped that making our images available in this way would help open an exchange with individuals and communities that could bring new knowledge into the museum. We hoped that Te Papa’s reputation would be enhanced and that we would benefit as a museum from this public goodwill. In the medium term, we hoped these intangible benefits would lead to more tangible benefits like increased visitation and the revenue that would bring. Reducing licensing restrictions would also enable Te Papa to participate in high-profile online projects and collaborations that had previously been prohibited—projects such as Flickr Commons, Wikimedia, and the Digital NZ Mix and Mash competition.</span></p>
+<h3>Context</h3>
+<p><span style="font-weight: 400;">Te Papa’s journey to open access took place over a number of years. The decision to make a significant number of images available in high resolution for public reuse took place in 2013 as a response to:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">an international context where a number of museums were making significant open access image releases,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">a local context where open government, open data, and open access licensing were emerging as a government priority, and</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">a changing environment at Te Papa where the principle of sharing authority became an organisational priority, and the public good aspects of previously commercial areas were being recognised.</span></li>
+</ul>
+<h4><strong>International context</strong></h4>
+<p><span style="font-weight: 400;">Between 2010 and 2013, a number of institutions in Europe and the United States made all, or significant proportions, of their digital collection, available for the public to download and reuse, often in the highest resolution available. High-profile open access image releases during this period were launched by the Rijksmuseum (150,000 images); the British Library (1 million images); the National Gallery of Art, USA (37,000 images); the Los Angeles County Museum of Art (20,000 images); the J. Paul Getty Museum (4,600 images); and Yale University (250,000 images). </span></p>
+<p>The commitment to the public good and recognition of the impact that museums can have through open access programs was clear in the comments of the practitioners behind these initiatives:</p>
+<blockquote><p><i><span style="font-weight: 400;">Why open content? Why now? The Getty was founded on the conviction that understanding art makes the world a better place, and sharing our digital resources is the natural extension of that belief. This move is also an educational imperative. Artists, students, teachers, writers, and countless others rely on artwork images to learn, tell stories, exchange ideas, and feed their own creativity.</span></i></p>
+<p style="text-align: right;"><span style="font-weight: 400;">– Getty Museum. (Cuno, 2013) </span></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">The Gallery believes that increased access to high quality images of its works of art fuels knowledge, scholarship, and innovation, inspiring uses that continually transform the way we see and understand the world of art.</span></i></p>
+<p style="text-align: right;"><span style="font-weight: 400;">– National Gallery of Art (no date) </span></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">The open access policy allows us to more fully harness the potential of digital and networked technologies in service to scholarship as well as to creative use and reuse of our rich cultural heritage. It frees us to concentrate on our core mission to create, preserve, and disseminate knowledge in digital form. </span></i></p>
+<p style="text-align: right;"><span style="font-weight: 400;">– Yale University (Bellinger, 2011)</span></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Why would a museum give away images of its art? […] it’s because our mission is to care for and share those works of art with the broadest possible public. The logical, radical extension of that is to open up our treasure trove of images. </span></i><span style="font-weight: 400;">Los Angeles County Museum of Art.</span></p>
+<p style="text-align: right;"><span style="font-weight: 400;">– Heibel (2013)</span></p>
+</blockquote>
+<p><span style="font-weight: 400;">During this period, New Zealand’s annual National Digital Forum conferences were occasions for inspirational talks on open access from Michael Edson (director, Web and New Media Strategy, Smithsonian Institute) in 2010 and later Peter Gorgels (the Rijksmuseum) in 2013.</span></p>
+<h4><strong>New Zealand context</strong></h4>
+<p><span style="font-weight: 400;">During the period from 2009 to 2013, the New Zealand government clearly articulated the benefits of open access to New Zealand and New Zealanders. In 2010, the New Zealand Government Open Access Licensing Framework (NZGOAL) version 1 was launched. NZGOAL </span><span style="font-weight: 400;">seeks to standardise the licensing of government copyright works for reuse using Creative Commons New Zealand law licences and recommends the use of &#8220;no known rights&#8221; statements for non-copyright material. </span></p>
+<p><span style="font-weight: 400;">NZGOAL notes that:</span></p>
+<blockquote><p><i><span style="font-weight: 400;">State Services agencies generate vast quantities of copyright and non-copyright material. It is widely recognised, in New Zealand and abroad, that significant creative and economic potential may lie dormant in such material when locked up in agencies and not released on terms allowing re-use by others. That potential is two-fold:</span></i></p>
+<p><i><span style="font-weight: 400;">(a)</span></i><i><span style="font-weight: 400;">       </span></i><i><span style="font-weight: 400;">individuals, non-profit and commercial organisations can leverage this material for creative, cultural and economic growth, improved environmental sustainability, greater productivity, and the wider public benefit….</span></i></p>
+<p style="text-align: right;"><span style="font-weight: 400;">– New Zealand government (2015)</span></p>
+</blockquote>
+<p><span style="font-weight: 400;">As an </span><span style="font-weight: 400;">autonomous Crown (New Zealand government) entity</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">Te Papa was not directed to comply with the NZGOAL framework, but the government strongly encouraged state agencies such as Te Papa to adopt NZGOAL and provide public online access to non-copyright material that is, or may be, of interest to people using a &#8220;no known rights&#8221; statement. Agencies such as Te Papa were also encouraged to make their copyright works which are, or may be, of interest or use to people available online for reuse on the most open of licensing terms within NZGOAL—the Creative Commons Attribution (BY) licence—unless a defined restriction applies.</span></p>
+<p><span style="font-weight: 400;">Also, DigitalNZ, an initiative with</span><a href="http://www.digitalnz.org/partners/current-content-contributors"><span style="font-weight: 400;"> nearly 200 partners</span></a><span style="font-weight: 400;">, led by the </span><a href="http://www.natlib.govt.nz/"><span style="font-weight: 400;">National Library of New Zealand</span></a><span style="font-weight: 400;">, had been championing open content for New Zealanders since 2009, and providing best practice for clear rights statements and encouraging reuse. DigitalNZ was able to harvest and provide open New Zealand related content from international organisations, but Te Papa was not yet contributing open content in a meaningful way. </span></p>
+<h4><strong>Organisational context</strong></h4>
+<p><span style="font-weight: 400;">Between 2011 and 2013, under a new chief executive, Te Papa reviewed its vision, principles, and strategic priorities.From this process emerged a new vision: “Changing Hearts, Changing Minds, Changing Lives”; and new strategic priorities. One key strategic priority that emerged reflected a long-term Te Papa principle: “Mana Taonga | Sharing Authority.” The concept of Mana Taonga is defined by Te Papa as:</span></p>
+<blockquote><p><span style="font-weight: 400;">… share[ing] decision-making with iwi (tribes), communities, and individuals with respect to managing and understanding their taonga (treasures).</span></p></blockquote>
+<p><span style="font-weight: 400;">Usually associated with how Te Papa cares for, interprets, and provides access to the physical collections in Te Papa’s guardianship, it was clear that this principle could be extended to digital initiatives—the open access program would provide a way to share authority over the collections with individuals and communities, enabling them to reuse the collections in their own ways without having to ask for permission.<br />
+</span></p>
+<p><span style="font-weight: 400;">Alongside this envisioning process, Te Papa made changes to its organisational structure. These changes included moving the Te Papa Picture Library from Te Papa’s Commercial directorate to a unit of its Museum Operations and Services directorate: Digital Collections and Access. In Digital Collections and Access, the Picture Library was aligned with Te Papa’s Collections Online program. Importantly, the Picture Library was repositioned primarily as a service for the public good and to be measured in terms other than solely revenue generation. This alignment and positioning was an acknowledgement that image sales and licensing was not a significant aspect of Te Papa’s commercial operating model and helped address the long-standing tension that existed in the Museum between the imperative to derive revenue from image sales and the public good opportunities that an open access program would enable.<br />
+</span></p>
+<h3>Te Papa’s commitment to open access</h3>
+<p><span style="font-weight: 400;">Although Te Papa had been applying No Known Copyright statements and Creative Commons licences to images since November 2010, these images had only ever been made public at low resolution. This restriction had been imposed to reduce the risk of unauthorised commercial use of these images, and the perceived commercial impact that would have on the Te Papa Picture Library (later renamed Media Sales and Licensing).</span></p>
+<p><span style="font-weight: 400;">Between 2010 and 2013, the positive reaction to open access programs at museums in Europe and the United States; the New Zealand government’s emphasis on open access; and Te Papa’s new strategic priorities and changing business model created an environment where digital practitioners at Te Papa could make the case to extend Te Papa’s open access program to enable high-resolution download of collection images.</span></p>
+<p><span style="font-weight: 400;">In July 2013, Te Papa’s new strategic directions were outlined in Te Papa’s Statement of Intent—the Museum&#8217;s public accountability document that sets out its intentions, objectives, and planned outputs for the following three years. The Statement made a commitment to improving access to and sharing of the Museum’s collections. This commitment included improving Te Papa’s Collections Online website by implementing an Open Access Licensing framework to enable online visitors to download high-quality, high-resolution digital images free of charge. Te Papa set a target of making 10,000 images available at high resolution under “no known rights“ or Creative Commons licences for the following three years (Museum of New Zealand Te Papa Tongarewa, 2013).</span></p>
+<p><span style="font-weight: 400;">This commitment meant that more than 30,000 images of collection items could be made available for the public to download for reuse in high resolution. This commitment did not, however, alter Te Papa’s policy of applying the more restrictive Creative Commons BY-NC-ND licence (allowing the Museum to retain some control over commercial reuse) and retaining an All Rights Reserved statement for images of collection items:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">With third-party copyright interests</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Associated with or depicting Maori taonga (treasures) or Maori ancestors, a recommendation applied to protect traditional knowledge</span></li>
+</ul>
+<h2>3. Part two: How we did it</h2>
+<p><span style="font-weight: 400;">In 2005, Te Papa implemented KE EMu as its Collection Information System. A key goal in implementing this system was creating a truly central repository for all collection-related information, to the extent possible. The system is used to document all of Te Papa’s collection processes, such as acquisitions, loans, conservation, and exhibitions, as well as all collection-related digital media, and, importantly, information regarding rights and licenses. Public digital access to collection information had begun with baby steps in 2005 with the launch of Collections Online, with only a few thousand objects. As Te Papa matured digitally and began to understand the value of making the collections as accessible as possible, the Collections Online platform and content developed. By 2013, there were approximately 500,000 records describing collection items and specimens; over 100,000 images; and information on thousands of related people, places, topics, terms, and other related knowledge. The majority of Te Papa’s humanities collections, and the most significant science collections, were available. All the information and digital media was managed and delivered by EMu in what was now a well-oiled and stable publishing process, with updated content moving online hourly as collection managers, curators, and others added or improved content as part of their business-as-usual.</span></p>
+<p><span style="font-weight: 400;">Collections Online underwent a responsive redesign in early 2014. This ensured the platform was ready for the next stage of digital access to the collections. Similar to Kelly (2013), technology was not the driver of open access, but having stable platforms made it considerably easier to meet our goals of providing more open access to our collections to our users. </span></p>
+<p><span style="font-weight: 400;">We had the data we needed, the information management and publishing platforms, and we had the mandate to open our collections further for the public. We needed only two more things: a technical solution for providing access to the relevant high-resolution images (with appropriate security in place); and a clear process for users that gave very clear messaging on how the images could be used (or not), whilst providing as low a barrier to download as possible. We also needed to understand exactly what images we were going to be making available. </span></p>
+<h3>Technical solution</h3>
+<p><span style="font-weight: 400;">As discussed earlier, the publishing process was already in place, with data in appropriate records triggering the images that would become available in Collections Online. Te Papa had been displaying appropriate licence statements on collection records since 2010, and from that time Te Papa’s rights advisor had been working tirelessly to identify as many collection objects as possible that were able to have an NKCR statement or Creative Commons licence rights module records attached. It was these two rights records that were used to enable the download process at the web layer: two very simple, easy to maintain flags. These flags, combined with “publish to web” flags on the individual images (again, managed by EMu and part of our right clearance process) allowed the EMu API (IMu) to allow access to the image files. This approval system combined with the image API also provided the benefit of making it simple to provide access to the available images through a simple, persistent URL without needing to go through Collections Online. We have already used this system to provide more images and content to other projects.</span></p>
+<p><span style="font-weight: 400;">Considerable testing was undertaken to ensure only images that were flagged appropriately were made available and that URL hacking would not allow access to files that shouldn’t be published, either because the object or the images didn’t have appropriate clearance (for example, a conservation treatment image of an collection object that was out of copyright, and therefore marked as No Known Copyright Restrictions). This was particularly important with contemporary artworks and images of provenanced taonga (Maori objects with known iwi—tribal—associations).</span></p>
+<p><span style="font-weight: 400;">Consistent with Collections Online’s persistent and easy-to-read URLs, the URLs for retrieving images were made simple and easy to construct with a valid image identifier. This fairly basic but functional delivery system has allowed us to enable simple image sharing with other external projects. </span></p>
+<h3>User experience</h3>
+<p><span style="font-weight: 400;">The scope of the project was limited to the download process, so there wasn’t much room to change specimen or object pages much, but luckily when we had undertaken the Collections Online responsive redesign a few months earlier it had considered the download call to action. What remained was designing the user flow that followed a user finding an object record that had downloadable images. The main requirements were:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ability to deal with multiple images per object</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Low barrier to action</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Extremely clear in terms of providing mandatory information: object caption, image details, license requirements</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A mechanism for gathering use data</span></li>
+</ul>
+<p><span style="font-weight: 400;">We looked at many other institutions&#8217; downloadable images. Download requirements ranged from a single click/immediate download to needing to provide an email address, through to needing a full account. Based on the goals of the project, we decided to make the images as easy to download as possible, but to gather enough information to let Te Papa make useful decisions regarding the future of the project. We opted for a download page that gathered the information required as concisely as possible, with a strictly optional and unobtrusive short survey. </span></p>
+<p><span style="font-weight: 400;">Working with our writing team, we tried various layouts and hierarchies for instructive versus informative information, and we tested our options on various users in house. We did not do any significant user testing, but will do so to inform any future iterations.<br />
+</span></p>
+<p><span style="font-weight: 400;">Feedback so far indicates users find the user interface is simple to use. Further, with a respectable percentage of users willing to provide usage data, indications are that the use survey (described below) isn’t too obstructive. </span></p>
+<h3>Metrics</h3>
+<p><span style="font-weight: 400;">We were clear from the beginning that getting useful metrics for the downloads was going to be essential for gaining insight into what was happening as a result of making these images downloadable. Again, we had to keep all aspects of the project within scope, and extensive analytics could be a project in its own right, so we opted to keep it simple for launch. On the download page, we included a simple survey where, if the user chooses, they could select: </span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A category for “Intended main use”: a selection of seven categories that loosely map to a 4Q satisfaction survey (a survey we also have in Collections Online) for consistency across data collection methods,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A URL, if relevant, and </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A free text field. </span></li>
+</ul>
+<p><span style="font-weight: 400;">Users have been generous with their responses, and there is analysis of this information later in the paper. </span></p>
+<p><span style="font-weight: 400;">The survey platform we selected was keen.io, with minimal extra development. We selected it as it was lightweight, offered simple data retrieval, and is free at our requirements level. As with many “let’s see how it goes” solutions, it has stayed in place, as it continues to meet our needs. </span></p>
+<h3>Images</h3>
+<p><span style="font-weight: 400;">Te Papa has been digitising the collections in various forms since the late 1990s. As with many collections of the size of a national institution that has been digitising for that long, there are a number of image sizes and qualities in the Collection Information System. The earliest (and worst) are 640 pixels on the longest dimension, highly compressed greyscale. The latest can range up to 15,000 pixels on the longest dimension, RGB, uncompressed. To have a better idea of what we were going to be making available, we undertook analysis of the first 20,000 images. Due to the nature of the range of image compressions, bit-depth, and aspect ratios, all of which make using file size of image dimensions difficult, we instead used megapixel as a consistent, if blunt, measure. The image files generally fit within the following ranges:</span></p>
+<table style="height: 152px;" width="429">
+<tbody>
+<tr>
+<td><b>Megapixels</b></td>
+<td><b>Count</b></td>
+<td><b>Percentage</b></td>
+</tr>
+<tr>
+<td><b>less than 1</b></td>
+<td><span style="font-weight: 400;">388<br />
+</span></td>
+<td><span style="font-weight: 400;">2%</span></td>
+</tr>
+<tr>
+<td><b>1 to 4</b></td>
+<td><span style="font-weight: 400;">2,732<br />
+</span></td>
+<td><span style="font-weight: 400;">13%</span></td>
+</tr>
+<tr>
+<td><b>4 to 10</b></td>
+<td><span style="font-weight: 400;">5,090</span></td>
+<td><span style="font-weight: 400;">24%</span></td>
+</tr>
+<tr>
+<td><b>10+</b></td>
+<td><span style="font-weight: 400;">13,200</span></td>
+<td><span style="font-weight: 400;">61%</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-weight: 400;">Normalised to fit a 4:3 ratio, the varying sizes are indicated below. For comparison, the most common screen size to visit the Te Papa website in June 2015 was 1366 x 768 (~1 MP), followed closely by 1920 x 1080 (~2MP). Combined, these two resolutions make up 25% of our visitors.</span></p>
+<div id="attachment_570" style="width: 827px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/01-screens.png"><img aria-describedby="caption-attachment-570" loading="lazy" class="size-full wp-image-570" src="../../wp-content/uploads/2015/07/01-screens.png" alt="Figure 1: Megapixel comparison" width="817" height="613" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/01-screens.png 817w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/01-screens-300x225.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/01-screens-400x300.png 400w" sizes="(max-width: 817px) 100vw, 817px" /></a><p id="caption-attachment-570" class="wp-caption-text">Figure 1: megapixel comparison</p></div>
+<p>We were pleasantly surprised with the overall distribution of image sizes, with the majority being over 4 megapixels (approximately 1800 x 2400 normalised). But overwhelmingly, most files were well over 10 megapixels, which made us comfortable that, for at least the next couple of years, we could say “high resolution” with confidence. The language we actually use is “at the highest resolution available,” and we make sure the pixel dimensions and file size are clearly shown before clicking the download button, to help negate any unpleasant surprises, that either the image is too small or too big.</p>
+<p><span style="font-weight: 400;">We decided to only make 1:1 JPEGs with minimal compression available, even if we had TIFFs, for a number of pragmatic reasons. We hypothesized, based on the nature of examples we had seen used by people who had asked for reusable images, that most were destined for digital screen-based use only. JPEG is more than adequate for most screen and Web purposes. We also did not want to inadvertently have users downloading files that were hundreds of megabytes in size, which many of our larger TIFFs can be. And finally, it also kept our delivery system simpler and more secure. The multimedia repository that delivers the images only holds JPEGs (derivatives of the TIFFs we hold), and the repository with the TIFFs and other restricted images sit in a different location. We have not had much feedback about requiring TIFFs, but we do offer the option to contact the Media Licensing department if for some reason the user would like access to the TIFF. </span></p>
+<h3>The Launch</h3>
+<p><span style="font-weight: 400;">Te Papa has not previously marketed online access to the collections, and this was a real opportunity to finally say something we thought would be of real interest to the New Zealand public and the wider sector. We did not have any specific budget, but we did have a plan. We launched with a press release coauthored with the Minister of Culture and Heritage; we circulated to local press, blogged, and hit our main social media channels. </span></p>
+<p><span style="font-weight: 400;">The coverage was well received and redistributed. Good local newspaper coverage included a two-page full-colour spread in a national paper. The online coverage was smaller but generated significant coverage to Collections Online (New Zealand Herald, 2014). </span></p>
+<p><span style="font-weight: 400;">Social media response included hundreds of retweets, favourites, and likes, and good international blog coverage. There were three negative tweets, all focussing on the fact that the creative commons licence was one of the most restrictive. These were reasonably quickly defused with replies suggesting this was still a big step forward, and that Te Papa may look at updating the CC to a less restrictive license in the future. Traffic to the Collections Online site increased approximately 500% at peak on the first two days. </span></p>
+<p><span style="font-weight: 400;">There were over 5,000 views of the launch blog post describing the project in the first month, which was the highest for the Te Papa blog that year (Kingston, 2014).</span></p>
+<h2>4. Part three: The results after a year</h2>
+<p><span style="font-weight: 400;">Te Papa had no evidence-based numbers as a target for downloads, but it was generally agreed that approximately 5,000 downloads of images in the first 12 months would be a useful target. If the images were unique, it would equate to 15% of the original 30,000 images released, but we knew the images downloaded would often be repeated by multiple users.</span></p>
+<table>
+<tbody>
+<tr>
+<td></td>
+<td><b>No Known </b><b>Copyright </b><b>Restrictions<br />
+</b></td>
+<td><b>CC BY-NC-ND<br />
+</b></td>
+<td><b>Total objects with </b><b>images </b><b>available online</b></td>
+</tr>
+<tr>
+<td><b>Archives &#8211; Collected (Archives)</b></td>
+<td>141</td>
+<td>1540</td>
+<td>5739</td>
+</tr>
+<tr>
+<td><b>Archives &#8211; Museum (Archives)</b></td>
+<td>1065</td>
+<td></td>
+<td>1420</td>
+</tr>
+<tr>
+<td><b>Art</b></td>
+<td>6082</td>
+<td>433</td>
+<td>10299</td>
+</tr>
+<tr>
+<td><b>History</b></td>
+<td>973</td>
+<td>6496</td>
+<td>18886</td>
+</tr>
+<tr>
+<td><b>Philatelic (History)</b></td>
+<td>5</td>
+<td>4</td>
+<td>120</td>
+</tr>
+<tr>
+<td><b>Pacific Cultures </b></td>
+<td>46</td>
+<td>575</td>
+<td>6316</td>
+</tr>
+<tr>
+<td><b>Photography</b></td>
+<td>98</td>
+<td>21883</td>
+<td>60419</td>
+</tr>
+<tr>
+<td><b>Plants (Botany)</b></td>
+<td></td>
+<td>7368</td>
+<td>8083</td>
+</tr>
+<tr>
+<td><b>Birds (Zoology)</b></td>
+<td></td>
+<td>645</td>
+<td>647</td>
+</tr>
+<tr>
+<td><b>Crustacea (Zoology)</b></td>
+<td></td>
+<td>53</td>
+<td>53</td>
+</tr>
+<tr>
+<td><b>Archaeozoology (Zoology)</b></td>
+<td></td>
+<td>15</td>
+<td>15</td>
+</tr>
+<tr>
+<td><b>Fish (Zoology)</b></td>
+<td></td>
+<td>246</td>
+<td>246</td>
+</tr>
+<tr>
+<td><b>Insects (Zoology)</b></td>
+<td></td>
+<td>953</td>
+<td>1135</td>
+</tr>
+<tr>
+<td><b>Fossil Vertebrates (Zoology)</b></td>
+<td></td>
+<td>259</td>
+<td>312</td>
+</tr>
+<tr>
+<td><b>Land Mammals (Zoology)</b></td>
+<td></td>
+<td>223</td>
+<td>223</td>
+</tr>
+<tr>
+<td><b>Marine Invertebrates (Zoology)</b></td>
+<td></td>
+<td>10</td>
+<td>73</td>
+</tr>
+<tr>
+<td><b>Marine Mammals (Zoology)</b></td>
+<td></td>
+<td>21</td>
+<td>23</td>
+</tr>
+<tr>
+<td><b>Molluscs (Zoology)</b></td>
+<td></td>
+<td>1245</td>
+<td>1248</td>
+</tr>
+<tr>
+<td><b>Reptiles and Amphibians (Zoology)<br />
+</b></td>
+<td></td>
+<td>83</td>
+<td>84</td>
+</tr>
+<tr>
+<td></td>
+<td><b>8,410</b></td>
+<td><b>42,052</b></td>
+<td></td>
+</tr>
+<tr>
+<td><b>TOTAL</b></td>
+<td></td>
+<td><b>50,462</b></td>
+<td><b>115,341</b></td>
+</tr>
+</tbody>
+</table>
+<p>Table 1: objects available with images for download at June, 3 2015</p>
+<p><span style="font-weight: 400;">The table above shows the images available by collection at the most granular level. For the analysis from this point on, due to the relatively low numbers for some collections—particularly science collections—some collections are grouped into broader categories. </span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Museum Archives and Collected Archives are merged to be </span><b>Archives</b></li>
+<li style="font-weight: 400;"><b>Art </b><span style="font-weight: 400;">remains as is</span></li>
+<li style="font-weight: 400;"><b>Photography </b><span style="font-weight: 400;">remains as is</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Philately is incorporated into </span><b>History</b></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Archaeozoology, Birds, Crustacea, Fish, Fossil Vertebrates, Insects, Land Mammals, Marine Invertebrates, Marine Mammals, Molluscs, Reptiles, and Amphibians are all merged into </span><b>Zoology</b></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Plants is renamed </span><b>Botany</b></li>
+</ul>
+<p><span style="font-weight: 400;">Also, in the analysis we will be comparing against the number of objects with images available under a downloadable licence as of June 4, 2015, one year after launch, as during the 12 months after launch we progressively added 20,000 images to the downloadable pool, pushing the total from 30,000 to 50,000. While this does makes the analysis more difficult to directly compare, it reflects the organic nature of growth of content and use. If we were to use the original 30,000 number at launch, the percentages of use would be more flattering, but less accurate.</span></p>
+<h3>Downloads</h3>
+<p><span style="font-weight: 400;">Just over 30,000 images were available at launch, and in the 12 months since then, another 20,000 have been made available, taking the total available to 50,464.</span></p>
+<p><span style="font-weight: 400;">In the 12 months following launch (June 4, 2014, to June 3, 2015), 17,405 images were downloaded. We were expecting a drop in downloads following the hype around the launch, but were pleasantly surprised by the fact this activity only fell by about 50% and remained relatively high, barring seasonal and event-based peaks and troughs. For example, December was lower, most likely due to New Zealand summer school holidays and matching decline in general visitation to Collections Online; and an increase in World War 1-related material in March and April corresponding to the 100th anniversary commemorations on the Gallipoli ANZAC landings. </span></p>
+<p><span style="font-weight: 400;">This appears to be a similar pattern witnessed by the J. Paul Getty Museum (though on a considerably larger scale). A launch in August 2013 with 4,600 images available resulted in 57,901 downloads in the first month, gradually settling down to ~9,000 to ~16,000 downloads per month (an additional 13,500 images were released in January 2015, resulting in a slight increase of downloads from that point) (Chen, 2015).<br />
+</span></p>
+<p><span style="font-weight: 400;">With the Getty project having run for two years, a year longer than Te Papa, that the pattern remained steady is encouraging. </span></p>
+<p><span style="font-weight: 400;">We are also have significantly lower visitation and downloads than the Rijksmuseum, which has 30,000 visits per month to the Rijkstudio as of 2013 (Pekel, 2013).</span></p>
+<p><span style="font-weight: 400;">Averaging across the 12 months, every 100 visitors to collections online resulted in 5.6 download events.</span></p>
+<div id="attachment_585" style="width: 1610px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/02-downloads-per-month.png"><img aria-describedby="caption-attachment-585" loading="lazy" class="size-full wp-image-585" src="../../wp-content/uploads/2015/07/02-downloads-per-month.png" alt="Figure 2. Image downloads by month" width="1600" height="656" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/02-downloads-per-month.png 1600w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/02-downloads-per-month-300x123.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/02-downloads-per-month-1024x420.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/02-downloads-per-month-500x205.png 500w" sizes="(max-width: 1600px) 100vw, 1600px" /></a><p id="caption-attachment-585" class="wp-caption-text">Figure 2: image downloads by month</p></div>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td></td>
+<td><b>Downloads</b></td>
+<td><b>Collections </b><b>Visitors</b></td>
+<td><b>%</b></td>
+</tr>
+<tr>
+<td><b>June</b></td>
+<td><span style="font-weight: 400;">2,792</span></td>
+<td><span style="font-weight: 400;">36,896</span></td>
+<td><span style="font-weight: 400;">7.5</span></td>
+</tr>
+<tr>
+<td><b>July</b></td>
+<td><span style="font-weight: 400;">1,363</span></td>
+<td><span style="font-weight: 400;">23,647</span></td>
+<td><span style="font-weight: 400;">5.7</span></td>
+</tr>
+<tr>
+<td><b>August</b></td>
+<td><span style="font-weight: 400;">1,331</span></td>
+<td><span style="font-weight: 400;">22,900</span></td>
+<td><span style="font-weight: 400;">5.8</span></td>
+</tr>
+<tr>
+<td><b>Sept</b></td>
+<td><span style="font-weight: 400;">770</span></td>
+<td><span style="font-weight: 400;">19,559</span></td>
+<td><span style="font-weight: 400;">3.9</span></td>
+</tr>
+<tr>
+<td><b>October</b></td>
+<td><span style="font-weight: 400;">1,451</span></td>
+<td><span style="font-weight: 400;">22,934</span></td>
+<td><span style="font-weight: 400;">6.3</span></td>
+</tr>
+<tr>
+<td><b>November</b></td>
+<td><span style="font-weight: 400;">1,375</span></td>
+<td><span style="font-weight: 400;">21,821</span></td>
+<td><span style="font-weight: 400;">6.3</span></td>
+</tr>
+<tr>
+<td><b>December</b></td>
+<td><span style="font-weight: 400;">720</span></td>
+<td><span style="font-weight: 400;">18,322</span></td>
+<td><span style="font-weight: 400;">3.9</span></td>
+</tr>
+<tr>
+<td><b>January</b></td>
+<td><span style="font-weight: 400;">1,237</span></td>
+<td><span style="font-weight: 400;">44,241*</span></td>
+<td><span style="font-weight: 400;">2.7*</span></td>
+</tr>
+<tr>
+<td><b>February</b></td>
+<td><span style="font-weight: 400;">1,100</span></td>
+<td><span style="font-weight: 400;">24,436</span></td>
+<td><span style="font-weight: 400;">4.5</span></td>
+</tr>
+<tr>
+<td><b>March</b></td>
+<td><span style="font-weight: 400;">1,754</span></td>
+<td><span style="font-weight: 400;">27,253</span></td>
+<td><span style="font-weight: 400;">6.4</span></td>
+</tr>
+<tr>
+<td><b>April</b></td>
+<td><span style="font-weight: 400;">1,909</span></td>
+<td><span style="font-weight: 400;">27,998</span></td>
+<td><span style="font-weight: 400;">6.8</span></td>
+</tr>
+<tr>
+<td><b>May</b></td>
+<td><span style="font-weight: 400;">1,410</span></td>
+<td><span style="font-weight: 400;">27,639</span></td>
+<td><span style="font-weight: 400;">7.9</span></td>
+</tr>
+<tr>
+<td></td>
+<td><b>17,212</b></td>
+<td><b>317,646</b></td>
+<td><b>5.6 (average)</b></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-weight: 400;">Table 2: percentage of site visitors who downloaded images, by month<br />
+</span><span style="font-weight: 400;">* spike in traffic to Collections Online due to link from Reddit to a mummified Moa head</span></p>
+<h4>Downloads by license</h4>
+<p><span style="font-weight: 400;">With the majority of the images (84%) available being NKCR, it is not surprising the majority downloaded were of this license. It is interesting that whilst two thirds of the Creative Commons Licensed images were </span><i><span style="font-weight: 400;">unique </span></i><span style="font-weight: 400;">downloads, less than half of the No Known Copyright Restrictions image downloads were unique. To put it another way, many of the NKCR images were downloaded more than once.<br />
+</span></p>
+<p><span style="font-weight: 400;">Perhaps correspondingly, only 15.7% of the NKCR images were downloaded at least once, whilst 29% of the CC images were downloaded at least once. This is less likely to be about the license itself, but instead the types of content that are issued with those licenses. For example, the images with No Known Copyright Restrictions are predominantly two-dimensional pictorial works, highly reproducible and suitable for many occasions, and of interest to many users, resulting in repeated downloads of a few images. At the same time, the photography collection has varying degrees of cataloguing quality, meaning some of the images are more difficult to find, therefore making some images under-represented in download statistics. The CC licensed images are of a variety of three-dimensional objects, often industrial or domestic design, or in Te Papa’s case natural science specimens. These tend to be of individual interest to a more niche audience and are more widely spread across the images.</span></p>
+<div id="attachment_584" style="width: 1097px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/03-downloads-by-licence.png"><img aria-describedby="caption-attachment-584" loading="lazy" class="size-full wp-image-584" src="../../wp-content/uploads/2015/07/03-downloads-by-licence.png" alt="Figure 3. Images downloaded by license" width="1087" height="502" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/03-downloads-by-licence.png 1087w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/03-downloads-by-licence-300x139.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/03-downloads-by-licence-1024x473.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/03-downloads-by-licence-500x231.png 500w" sizes="(max-width: 1087px) 100vw, 1087px" /></a><p id="caption-attachment-584" class="wp-caption-text">Figure 3: images downloaded by license</p></div>
+<h4>Downloads by image size</h4>
+<p><span style="font-weight: 400;">While a number of images downloaded were 1 megapixel or smaller (very old, very small scans), it is pleasing to note the vast majority of images downloaded were over 10 megapixels, providing most of our users with very usable file sizes. The still relatively high proportion of small images downloaded indicates the images do still have some value to users, as they continue with the download even after we have made very clear on the download page the small pixel dimensions and file size. Whilst we would ideally like to replace these with newer and larger images, until this happens we still believe there is value in keeping these small images available. A small usable image is still better than no image.</span></p>
+<div id="attachment_583" style="width: 1569px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/04-dowloads-by-image-size.png"><img aria-describedby="caption-attachment-583" loading="lazy" class="wp-image-583 size-full" src="../../wp-content/uploads/2015/07/04-dowloads-by-image-size.png" alt="" width="1559" height="767" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/04-dowloads-by-image-size.png 1559w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/04-dowloads-by-image-size-300x148.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/04-dowloads-by-image-size-1024x504.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/04-dowloads-by-image-size-500x246.png 500w" sizes="(max-width: 1559px) 100vw, 1559px" /></a><p id="caption-attachment-583" class="wp-caption-text">Figure 4: images downloaded by size</p></div>
+<h3>Popularity</h3>
+<p><span style="font-weight: 400;">Some of the top 10 objects have direct relationship to those promoted at launch, and these items dominated the top 25 at assessment after six months. More recently, archival material relating to WWI has shown organic demand due to the centennial commemorations of the the ANZAC Gallipoli campaign. Other items are finding their way up the ranks through being unique and interesting. These are the objects that always find an audience: the mummified moa head, the colossal squid, John Webber’s </span><i><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/Object/41431" target="_blank">Portrait of Captain James Cook</a></span></i><span style="font-weight: 400;">, J. G. Keulemans’ </span><i><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/Object/48313" target="_blank">Three Huia</a></span></i><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Based on trends over the last 12 months and of what is popular in Collections Online in general, we expect the top ranks to settle down over time to the always popular broad-based audience or iconic objects, with event-based subject matter moving its way up the order at key times. </span></p>
+<p><span style="font-weight: 400;">Te Papa intends to use the popularity rankings to inform digitisation strengths and weaknesses and also focus rights clearance processes. The Getty use the top objects to inform their retail product development; Te Papa could investigate these sorts of opportunities as well. </span></p>
+<p><span style="font-weight: 400;">The top 200 objects comprise the following collections:</span></p>
+<table style="height: 355px;" width="379">
+<tbody>
+<tr>
+<td><span style="font-weight: 400;">Photography</span></td>
+<td><span style="font-weight: 400;">73</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">History</span></td>
+<td><span style="font-weight: 400;">45</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Art</span></td>
+<td><span style="font-weight: 400;">41</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Pacific Cultures</span></td>
+<td><span style="font-weight: 400;">14</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Archives &#8211; Collected</span></td>
+<td><span style="font-weight: 400;">13</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Marine Mammals</span></td>
+<td><span style="font-weight: 400;">4</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Fossil Vertebrates</span></td>
+<td><span style="font-weight: 400;">4</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Land Mammals</span></td>
+<td><span style="font-weight: 400;">2</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Plants</span></td>
+<td><span style="font-weight: 400;">1</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Molluscs</span></td>
+<td><span style="font-weight: 400;">1</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Insects</span></td>
+<td><span style="font-weight: 400;">1</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Birds</span></td>
+<td><span style="font-weight: 400;">1</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">The number-one downloaded collection items are a reflection of the heavy emphasis on the World War 1 centenary: 609 downloads of images from </span><a href="http://collections.tepapa.govt.nz/Object/397412"><i><span style="font-weight: 400;">New Zealand’s Roll of Honour 1915 The Auckland Weekly News Illustrated List</span></i></a><i><span style="font-weight: 400;">.</span> </i><span style="font-weight: 400;">The booklet has been downloaded in its entirety (98 images) three times, with others just downloading individual images or sections.</span></p>
+<div id="attachment_582" style="width: 1073px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/05-roll-of-honour.png"><img aria-describedby="caption-attachment-582" loading="lazy" class="size-full wp-image-582" src="../../wp-content/uploads/2015/07/05-roll-of-honour.png" alt="Figure 5. Screenshot of New Zealand's Roll of Honour, 1915 " width="1063" height="1162" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/05-roll-of-honour.png 1063w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/05-roll-of-honour-274x300.png 274w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/05-roll-of-honour-937x1024.png 937w" sizes="(max-width: 1063px) 100vw, 1063px" /></a><p id="caption-attachment-582" class="wp-caption-text">Figure 5: screenshot of New Zealand&#8217;s Roll of Honour, 1915</p></div>
+<p>Examples given in the download survey for intended use included:</p>
+<ul>
+<li style="font-weight: 400;"><i><i><span style="font-weight: 400;">Community Project in Surrey UK, looking at the stories of a few soldiers who received treatment at Walton-on-Thames</span></i></i></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">West Kirby Museum research Group are writing up all the local WW1 dead and had served with the NZ Forces</span></i></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Looking for photo of family member killed in First World War 1915</span></i></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Family tree</span></i></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Looking for information on a relative (David Adams Oliver) killed in WW1</span></i></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Blackie, Hellyer, Kelly families war dead sons photos</span></i></li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td><b># of downloads</b></td>
+<td><b>Object</b></td>
+<td><b>Collection</b></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">609</span></td>
+<td><span style="font-weight: 400;">CA000512/001/0021; New Zealand&#8217;s Roll of Honour 1915 The Auckland Weekly News Illustrated List; 21 October1915; Maori; Wilson &amp; Horton Ltd </span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/397412" target="_blank">http://collections.tepapa.govt.nz/object/397412</a></span></td>
+<td><span style="font-weight: 400;">Archives &#8211; Collected</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">213</span></td>
+<td><span style="font-weight: 400;">AL.000563; Photograph album of Major J.M. Rose, 1st NZEF; 1914-1919; New Zealand European; Rose, John</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/1366687" target="_blank">http://collections.tepapa.govt.nz/object/1366687</a></span></td>
+<td><span style="font-weight: 400;">Photography</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">123</span></td>
+<td><span style="font-weight: 400;">GH003689; Poster, &#8216;Record of the New Zealand Expeditionary Force&#8217;; 1919; Government Life Insurance Office</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/67007" target="_blank">http://collections.tepapa.govt.nz/object/67007</a></span></td>
+<td><span style="font-weight: 400;">History</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">105</span></td>
+<td><span style="font-weight: 400;">2002-0020-1; Sketchbook; 1759-1773; Greenwood, John</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/572377" target="_blank">http://collections.tepapa.govt.nz/object/572377</a></span></td>
+<td><span style="font-weight: 400;">Art</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">98</span></td>
+<td><span style="font-weight: 400;">CA000316/001/0004; Troopship publication: The Pakeha; 1914-1917</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/247193" target="_blank">http://collections.tepapa.govt.nz/object/247193</a></span></td>
+<td><span style="font-weight: 400;">Archives &#8211; Collected</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">92</span></td>
+<td><span style="font-weight: 400;">FE012543; O le Tusi FAALUPEGA o Samoa; 1981; Samoan; Malua Printing Press</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/1094507" target="_blank">http://collections.tepapa.govt.nz/object/1094507</a></span></td>
+<td><span style="font-weight: 400;">Pacific Cultures</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">86</span></td>
+<td><span style="font-weight: 400;">1993-0029-6; Three huia (Heteralocha acutirostris); circa 1900; Keulemans, J. G.</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/48313" target="_blank">http://collections.tepapa.govt.nz/object/48313</a></span></td>
+<td><span style="font-weight: 400;">Art</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">75</span></td>
+<td><span style="font-weight: 400;">GH012052; Ration Book; October 1943; New Zealand Government</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/855480" target="_blank">http://collections.tepapa.govt.nz/object/855480</a></span></td>
+<td><span style="font-weight: 400;">History</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">68</span></td>
+<td><span style="font-weight: 400;">1960-0006-1; Five cats; late 18th century; Unknown</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/44778" target="_blank">http://collections.tepapa.govt.nz/object/44778</a></span></td>
+<td><span style="font-weight: 400;">Art</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">63</span></td>
+<td><span style="font-weight: 400;">GH016383; Poster, &#8216;The Empire Needs Men!&#8217;; January 1915; Wardle, Arthur</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/1020691" target="_blank">http://collections.tepapa.govt.nz/object/1020691</a></span></td>
+<td><span style="font-weight: 400;">History</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">63</span></td>
+<td><span style="font-weight: 400;">CA000316/001/0030; Troopship publication: &#8220;The Oilsheet&#8221;; 25 December 1916; Perry, Jas</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/909409" target="_blank">http://collections.tepapa.govt.nz/object/909409</a></span></td>
+<td><span style="font-weight: 400;">Archives &#8211; Collected</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">40</span></td>
+<td><span style="font-weight: 400;">A.018196; &#8220;Cleopatra&#8221; in Domain cricket ground; 1914; Walrond, Robert</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/538276" target="_blank">http://collections.tepapa.govt.nz/object/538276</a></span></td>
+<td><span style="font-weight: 400;">Photography</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">40</span></td>
+<td><span style="font-weight: 400;">CA000373/001/0001; The Diary of Felton Mathew (&amp; Others) [unidentified]; 1840-28 July 1841; Maori; Mathew, Felton</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/538202" target="_blank">http://collections.tepapa.govt.nz/object/538202</a></span></td>
+<td><span style="font-weight: 400;">Archives &#8211; Collected</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">33</span></td>
+<td><span style="font-weight: 400;">M.277964; Mesonychoteuthis hamiltoni Robson, 1925; isopropanol 50%</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/846805" target="_blank">http://collections.tepapa.govt.nz/object/846805</a></span></td>
+<td><span style="font-weight: 400;">Molluscs</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">33</span></td>
+<td><span style="font-weight: 400;">OR.025037; Eudyptula minor variabilis; dry</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/417811" target="_blank">http://collections.tepapa.govt.nz/object/417811</a></span></td>
+<td><span style="font-weight: 400;">Birds</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">33</span></td>
+<td><span style="font-weight: 400;">C.014174; Ballarat Street, Queenstown, NZ, flooded 1878; 1878; Hart, William</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/18969" target="_blank">http://collections.tepapa.govt.nz/object/18969</a></span></td>
+<td><span style="font-weight: 400;">Photography</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">32</span></td>
+<td><span style="font-weight: 400;">GH015835; Poster, &#8216;The &#8220;Spirit of ANZAC&#8221; Calls You&#8217;; Late 1939 / Early 1940; Whitcombe &amp; Tombs Limited</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/780935" target="_blank">http://collections.tepapa.govt.nz/object/780935</a></span></td>
+<td><span style="font-weight: 400;">History</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">32</span></td>
+<td><span style="font-weight: 400;">GH003692; Painting Book, &#8216;The Marigold Painting Book by Kate Greenaway&#8217;; circa 1900; Frederick Warne and Company</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/67016" target="_blank">http://collections.tepapa.govt.nz/object/67016</a></span></td>
+<td><span style="font-weight: 400;">History</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">28</span></td>
+<td><span style="font-weight: 400;">OL000370; Female deity; circa 1800; Cook Islands Maori; Unknown</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/155067" target="_blank">http://collections.tepapa.govt.nz/object/155067</a></span></td>
+<td><span style="font-weight: 400;">Pacific Cultures</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">27</span></td>
+<td><span style="font-weight: 400;">FE010354; Samurai armour (Sendai-do no Gusoku); 1735; Japanese; Muneyoshi of the House of Myouchin</span><span style="font-weight: 400;"><a href="http://collections.tepapa.govt.nz/object/181321" target="_blank">http://collections.tepapa.govt.nz/object/181321</a></span></td>
+<td><span style="font-weight: 400;">History</span></td>
+</tr>
+</tbody>
+</table>
+<p>Table 3: top twenty downloaded objects</p>
+<h3>Intended image use</h3>
+<p><span style="font-weight: 400;">The number of respondents to the optional survey at download was 28%, or 4,975 respondents.</span></p>
+<div id="attachment_581" style="width: 947px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/06-intended-image-use.png"><img aria-describedby="caption-attachment-581" loading="lazy" class="size-full wp-image-581" src="../../wp-content/uploads/2015/07/06-intended-image-use.png" alt="Figure 6. Screenshot of download page example. " width="937" height="887" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/06-intended-image-use.png 937w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/06-intended-image-use-300x284.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/06-intended-image-use-317x300.png 317w" sizes="(max-width: 937px) 100vw, 937px" /></a><p id="caption-attachment-581" class="wp-caption-text">Figure 6: screenshot of download page example</p></div>
+<p>The questions in the survey are:</p>
+<p><span style="font-weight: 400;">“What&#8217;s your intended main use of these images?”</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">To publish in a book (Book)</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Blog or website (Blog)</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Make a print for home (Print)</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">For school, university etc (School)</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Scholarly or professional research (Research)</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Personal or community research (Personal)</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">To make something else cool (Other)</span></li>
+</ul>
+<p><span style="font-weight: 400;">“What’s the Web address? We’d like to see it!” (If</span><i><span style="font-weight: 400;"> Blog or Website</span></i><span style="font-weight: 400;"> is selected)</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">(URL)</span></li>
+</ul>
+<p><span style="font-weight: 400;">“Could you tell us more? (We’re really interested)”</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">(Free text)</span></li>
+</ul>
+<p><span style="font-weight: 400;">The survey also harvests from the page for each response:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Object title </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Copyright statement </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Object unique identifier </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Collection category</span></li>
+</ul>
+<p><span style="font-weight: 400;">The intended use results were:</span></p>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight: 400;">Book</span></td>
+<td><span style="font-weight: 400;">107</span></td>
+<td><span style="font-weight: 400;">1.85%</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Blog</span></td>
+<td><span style="font-weight: 400;">447</span></td>
+<td><span style="font-weight: 400;">7.75%</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Print</span></td>
+<td><span style="font-weight: 400;">458</span></td>
+<td><span style="font-weight: 400;">7.94%</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">School</span></td>
+<td><span style="font-weight: 400;">583</span></td>
+<td><span style="font-weight: 400;">10.11%</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Other</span></td>
+<td><span style="font-weight: 400;">790</span></td>
+<td><span style="font-weight: 400;">13.7%</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Research</span></td>
+<td><span style="font-weight: 400;">1,043</span></td>
+<td><span style="font-weight: 400;">18.092%</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Personal</span></td>
+<td><span style="font-weight: 400;">1,547</span></td>
+<td><span style="font-weight: 400;">26.83%</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Other</span></td>
+<td><span style="font-weight: 400;">790</span></td>
+<td><span style="font-weight: 400;">13.7%</span></td>
+</tr>
+</tbody>
+</table>
+<div id="attachment_580" style="width: 1138px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/07-intended-use.png"><img aria-describedby="caption-attachment-580" loading="lazy" class="size-full wp-image-580" src="../../wp-content/uploads/2015/07/07-intended-use.png" alt="Figure 7. Image downloads by intended use. " width="1128" height="616" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/07-intended-use.png 1128w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/07-intended-use-300x164.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/07-intended-use-1024x559.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/07-intended-use-500x273.png 500w" sizes="(max-width: 1128px) 100vw, 1128px" /></a><p id="caption-attachment-580" class="wp-caption-text">Figure 7: image downloads by intended use</p></div>
+<p><span style="font-weight: 400;">Interestingly, while the “use” categories on the download survey and on a similar 4Q survey on the Collections Online site (for general visitors to the site) don’t exactly match, they reflect some similarities. For example: </span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">4Q survey response, “for school” &#8211; 10.11%</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">Download survey response “for school” &#8211; 10.90%</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">4Q survey response, “research” &#8211; 18.10%</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">Download survey response “research” &#8211; 24.40%</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">4Q survey response, “personal” &#8211; 26.83%</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">Download survey response “personal” &#8211; 34.10%</span></p>
+<p><span style="font-weight: 400;">Looking at Google Analytics sessions across 2013/2014 with the same period 2014/2015, and removing ad hoc spikes through Reddit, etc., there is only approximately only a 5% to 10% increase in sessions, which appears to begin right after launch of the download project and the related promotion. You could argue such a small increase falls within a margin of error and should not be considered a real increase. However, combining this with fairly comparable statistics for those who are generally using Collections Online, and those downloading images for school, professional research, or personal use, it could be summised that the download project has not driven new audiences to the site, but rather added new functionality and increased access for those who were already using it. </span></p>
+<p><span style="font-weight: 400;">This conclusion is at odds with what was was noted in the outcomes of of a study of 11 museums including the Walters, Yale Centre for British Art, National Gallery of Art (USA), British Museum, Getty, and Metropolitan Museum of Art: “virtually every museum reported increased website traffic, as well as what they considered a significant interest in the available images. Website visit increases ranged from about 20 to 250 percent, with many museums reporting increases of at least 100 percent” (Kelly, 2013). However, as also noted, due to the differences in collections and audiences, websites, rates of change, and methods of measure, it is difficult to compare “apples with apples.” Te Papa will need more time and to investigate other factors before concluding the open access policy has not increased our reach.</span></p>
+<p><span style="font-weight: 400;">The number of times the intended purpose was “To publish in a book” was 107 responses, or 1.87%. However, when looking at the free text explanations, many of these books were actually government department newsletters, school journals, non-profit society newsletters, or home-made books (“a book I am making for my father in his 70s,” “family tree”). Other comments were that the “book” was only in the research phase, so may not even be included. Previously, these users would have had to ask for permission through our Picture Library and possibly would have paid a (small) fee, even though the majority of these uses are non-commercial. These are good examples of uses that may not have happened, as the need to pay, or even the need to ask, would have been a barrier to the users, who may have then looked elsewhere.<br />
+</span></p>
+<p><span style="font-weight: 400;">The statistics indicate the majority of the downloads are being used for personal use, education, and research. There is very little indication that images are being used commercially, which had been a concern for some in the Museum.<br />
+</span></p>
+<p><span style="font-weight: 400;">Again, whilst scale and collections are quite different, the Getty download project feedback ran along broadly similar lines. Approximately three quarters (~282,000) of respondents are private individuals downloading for personal or non-commercial use use. Approximately 1% indicated the images were intended for publication. The Getty does have a category for “Commercial use,” which was selected by approximately 12% of users downloading images (Chen, 2015).</span></p>
+<p><span style="font-weight: 400;">When looking at the intended use by collection, there are expected patterns. The visual collections, art, archives, and photography score highly in personal, “print,” and “blog”; history scores well in “school.”</span></p>
+<div id="attachment_579" style="width: 1610px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/08-intended-use-collection.png"><img aria-describedby="caption-attachment-579" loading="lazy" class="size-full wp-image-579" src="../../wp-content/uploads/2015/07/08-intended-use-collection.png" alt="Figure 8. Intended use by collection" width="1600" height="737" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/08-intended-use-collection.png 1600w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/08-intended-use-collection-300x138.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/08-intended-use-collection-1024x472.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/08-intended-use-collection-500x230.png 500w" sizes="(max-width: 1600px) 100vw, 1600px" /></a><p id="caption-attachment-579" class="wp-caption-text">Figure 8: intended use by collection</p></div>
+<p>&nbsp;</p>
+<div id="attachment_578" style="width: 1610px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/09-collection-by-intended-use.png"><img aria-describedby="caption-attachment-578" loading="lazy" class="wp-image-578 size-full" src="../../wp-content/uploads/2015/07/09-collection-by-intended-use.png" alt="" width="1600" height="735" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/09-collection-by-intended-use.png 1600w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/09-collection-by-intended-use-300x138.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/09-collection-by-intended-use-1024x470.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/09-collection-by-intended-use-500x230.png 500w" sizes="(max-width: 1600px) 100vw, 1600px" /></a><p id="caption-attachment-578" class="wp-caption-text">Figure 9: collection by intended use</p></div>
+<p><span style="font-weight: 400;">Generally, there were no real surprises in the types of overall “intended purpose” of Te Papa’s downloaded content; they align with our current understanding of the users of Collections Online. </span></p>
+<p><span style="font-weight: 400;">A word cloud from the comments from the survey again offers no real surprises. Key words such as “research,” “history,” “art,” “family,” “Project,” “university,” and many New Zealand-specific words reinforce the uses already indicated in the intended use category statistics. There are a few others that don’t necessarily follow the same pattern, but are nonetheless unsurprising, such as “facebook.” A number of the respondents referenced Facebook groups to which they were posting the image, such as “Friends of Palmerston North Railway Station.”</span></p>
+<div id="attachment_577" style="width: 1102px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/10-word-cloud.png"><img aria-describedby="caption-attachment-577" loading="lazy" class="wp-image-577 size-full" src="../../wp-content/uploads/2015/07/10-word-cloud.png" alt="" width="1092" height="946" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/10-word-cloud.png 1092w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/10-word-cloud-300x260.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/10-word-cloud-1024x887.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/10-word-cloud-346x300.png 346w" sizes="(max-width: 1092px) 100vw, 1092px" /></a><p id="caption-attachment-577" class="wp-caption-text">Figure 10: word cloud highlights common words in download survey feedback</p></div>
+<p>But the most useful (and more interesting) stories come from trawling through the actual comments, where you start to connect much more personally with the stories of use, research, and creativity, and can much more clearly understand the impact of providing access to the public&#8217;s collections. The stories also show how our diverse collections meet an incredibly diverse range of audiences and needs, and we simply cannot guess what those are.</p>
+<p><span style="font-weight: 400;">A few selected highlights are below:</span></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Digital grunge art&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Cultural values assessment of the Manawatu Gorge- was after a photo of the 40 mile bush as it was but this is the closest I have been able to find. Thanks&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Comparison with new UK specimen&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Children&#8217;s art classes based on native fauna&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Born and bred Wellingtonian. I love delving around in our history :-)&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;I am writing an article on lupin and will be attributing the photo to your site.&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;I found this lovely image in a charity shop in Carterton today on sale for $50… </span></i><span style="font-weight: 400;">(long personal story)</span><i><span style="font-weight: 400;">&#8230; I can&#8217;t believe that I found it at the top of the list in a quick google search ten minutes ago!&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;graphic design, vintage imagery&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;[Redacted] is my great uncle and with the upcoming 100th anniversary of WW1 I would like a photo of him.&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;For Rotorua Museum Education programme&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Display in Qatar for ANZAC Day&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;For a molecular phylogenetic study of Isolepis&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Finding an image of a soldier who died in Gallipolli Private David [Redacted]&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Part of an art project in National gallery of Denmark&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Searching for historical images of fish to reproduce on pendants.&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Community Project in Surrey UK, looking at the stories of a few soldiers who received treatment at Walton-on-Thames.&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Semiotic analysis for conference&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;she was my Dance teacher in the 1950&#8217;s&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Since I become a chief I need to have a better understanding of the Samoan culture.&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;son&#8217;s elementary school project on colossal squid&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;the official fb page of Ngati Whakaue ki Ohinemutu, with the members on this page all descendents and/or current residents of Ngati Whakaue &amp; Ohinemutu&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;to use in creating 3D objects for virtual art collection&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;use in teaching mindfullness&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;To send to my boss. She loves cats…&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Research for New Zealand Post coin design&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;possible Gif it up entry&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Ferns of Vanuatu study&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Article in Engineering Insight magazine about the upgrade of the Carillon&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Architectural history paper on Renaissance Revival (Architecture) &#8211; New Zealand&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;A boat. This one, in fact. Not a scale model, though: full-size.&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;I may be having Huia chest tattoo…&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;I&#8217;am Tongan from one of the Toutai (Sailing) Families that sailed for Tupou 1st the first Christian King. Researching the Kalia&#8217;s that shared their origins from the Fijian Drua.&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;I&#8217;m a girl guide leader. For our ANZAC badge we are learning about rationing and I want to show them a ration book to give their learning more meaning.&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;doing weaving course&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;I&#8217;m a Canadian who lived in Wellington for just under 2 years. Every now and then on my way home from work I would stop by the Te Papa Museum just to see this one painting. I have never been much for art but for some reason this painting&#8230; is &#8220;something else. I guess maybe that&#8217;s the point of it all (art).</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Illustrate an original Christmas carol.&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Interested in ukiyo-e art and Hiroshige.&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Learning about Japan as part of an inquiry unit about what makes countries unique.&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Lecture at Tate Britain&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;Massey student researching pre- 1945 dress&#8221;</span></i></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">&#8220;National Museum of Australia thingy mapping the emotional field of war records (not yet titled)&#8221;</span></i></p>
+<p style="padding-left: 30px;"><em>&#8220;not sure&#8221;</em></p>
+<h3>Examples of reuse</h3>
+<h4><strong>Example 1: Little spotted kiwi/<em>Feast of feathers</em></strong></h4>
+<div id="attachment_576" style="width: 1610px" class="wp-caption alignnone"><a href="http://collections.tepapa.govt.nz/Object/159924"><img aria-describedby="caption-attachment-576" loading="lazy" class="wp-image-576 size-full" src="../../wp-content/uploads/2015/07/11-kiwi.png" alt="" width="1600" height="1200" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/11-kiwi.png 1600w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/11-kiwi-300x225.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/11-kiwi-1024x768.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/11-kiwi-400x300.png 400w" sizes="(max-width: 1600px) 100vw, 1600px" /></a><p id="caption-attachment-576" class="wp-caption-text">Figure 11: little spotted kiwi (Apteryx owenii), 1872, London, by Johannes Keulemans. Acquisition history unknown. Te Papa (1992-0035-1093/2). U<span style="font-weight: 400;">sed as part of a Buller’s Birds themed event as part of Wellington on a Plate.</span></p></div>
+<p>&nbsp;</p>
+<div id="attachment_575" style="width: 1031px" class="wp-caption alignnone"><a href="http://www.wellingtononaplate.com/events/feast-of-feathers/"><img aria-describedby="caption-attachment-575" loading="lazy" class="wp-image-575 size-full" src="../../wp-content/uploads/2015/07/12-feast-of-feathers.png" alt="" width="1021" height="935" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/12-feast-of-feathers.png 1021w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/12-feast-of-feathers-300x275.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/12-feast-of-feathers-328x300.png 328w" sizes="(max-width: 1021px) 100vw, 1021px" /></a><p id="caption-attachment-575" class="wp-caption-text">Figure 12. <em>Feast of Feathers</em>. Example of collection image reuse. <span style="font-weight: 400;">“A four-course dinner with wild game and poultry, alongside Buller’s Birds paintings.” Available</span><i> </i><a href="http://www.wellingtononaplate.com/events/feast-of-feathers/"><span style="font-weight: 400;">http://www.wellingtononaplate.com/events/feast-of-feathers/</span></a></p></div>
+<h4><strong>Example 2: Three huia/&#8221;What will you do for the arts&#8221;</strong></h4>
+<div id="attachment_574" style="width: 1610px" class="wp-caption alignnone"><a href="http://collections.tepapa.govt.nz/Object/48313"><img aria-describedby="caption-attachment-574" loading="lazy" class="wp-image-574 size-full" src="../../wp-content/uploads/2015/07/13-three-huia.png" alt="" width="1600" height="1159" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/13-three-huia.png 1600w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/13-three-huia-300x217.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/13-three-huia-1024x742.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/13-three-huia-414x300.png 414w" sizes="(max-width: 1600px) 100vw, 1600px" /></a><p id="caption-attachment-574" class="wp-caption-text">Figure 13: three huia (Heteralocha acutirostris), circa 1900, London, by Johannes Keulemans. Purchased 1993 with New Zealand Lottery Grants Board funds. Te Papa (1993-0029-6).</p></div>
+<p><span id="more-538"></span></p>
+<div id="attachment_573" style="width: 970px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/14-massey-brochure.png"><img aria-describedby="caption-attachment-573" loading="lazy" class="size-full wp-image-573" src="../../wp-content/uploads/2015/07/14-massey-brochure.png" alt="Figure 14. What will you do for the arts? Example of collection image reuse" width="960" height="960" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/14-massey-brochure.png 960w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/14-massey-brochure-150x150.png 150w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/14-massey-brochure-300x300.png 300w" sizes="(max-width: 960px) 100vw, 960px" /></a><p id="caption-attachment-573" class="wp-caption-text">Figure 14: &#8220;What will you do for the arts?&#8221; Example of collection image reuse.</p></div>
+<p>&nbsp;</p>
+<div id="attachment_572" style="width: 1290px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2015/07/15-arts-debate.png"><img aria-describedby="caption-attachment-572" loading="lazy" class="size-full wp-image-572" src="../../wp-content/uploads/2015/07/15-arts-debate.png" alt="Figure 15. Arts debate with projected backdrop. Example of collection image reuse" width="1280" height="960" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/15-arts-debate.png 1280w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/15-arts-debate-300x225.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/15-arts-debate-1024x768.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/15-arts-debate-400x300.png 400w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><p id="caption-attachment-572" class="wp-caption-text">Figure 15: arts debate with projected backdrop. Example of collection image reuse.</p></div>
+<p style="padding-left: 30px;"><em><span style="font-weight: 400;">&#8220;Used as collateral and projected backdrop for a pre-election debate on the future of arts&#8221;</span></em></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">“This was the first time that I had used an image from the digitised collection (out of copyright) image repository. The whole process of registering for and receiving the image was very smooth. We credited the image as instructed, and the three huia became a symbol for what can happen to the areas of arts, culture and heritage should they be starved, neglected, or rarefied.&#8221;</span></i></p>
+<p><strong>Example 3: Various works/<em>Knowledge on a beam of starlight</em></strong></p>
+<div id="attachment_571" style="width: 1610px" class="wp-caption alignnone"><a href="http://arts.tepapa.govt.nz/on-the-wall/kerry-ann-lee-knowledge-on-a-beam-of-starlight"><img aria-describedby="caption-attachment-571" loading="lazy" class="wp-image-571 size-full" src="../../wp-content/uploads/2015/07/16-kerry-ann-lee.png" alt="16-kerry-ann-lee" width="1600" height="934" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/16-kerry-ann-lee.png 1600w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/16-kerry-ann-lee-300x175.png 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/16-kerry-ann-lee-1024x598.png 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/16-kerry-ann-lee-500x292.png 500w" sizes="(max-width: 1600px) 100vw, 1600px" /></a><p id="caption-attachment-571" class="wp-caption-text">Figure 16: screenshot showing Kerry Ann Lee, <em>Knowledge on a beam of starlight</em>, 2014, a three-panel light work created for an installation in the exhibition Nga Toi | Arts Te Papa, at Te Papa, 2015. Lee created the works using images from the downloadable collections.</p></div>
+<h3>Discussion</h3>
+<p><span style="font-weight: 400;">The first year of Te Papa’s open access program has been a success. We have seen a much higher level of download activity than we imagined, and there is a clear indication that our visitors appreciate the efforts Te Papa has made to make these images reusable and easy to download. The wide range of uses, creativity, and personal stories that have emerged from the program has been surprising; and the evidence that our collections are a relevant part of people&#8217;s day-to-day lives beyond the museum is rewarding. We believe the open access image program has significantly increased Te Papa’s reputation in New Zealand and internationally, and brought substantial public good will.</span></p>
+<p><span style="font-weight: 400;">Concerns that an open access image program would significantly impact media sales and licensing revenue, and that images would be exploited commercially, have not eventuated. In the area most likely to feel the impact of open access—the Picture Library/Media Sales and Licensing unit—the unit’s revenue remained stable in the year following the launch of the program. There were also significant savings made in operational costs due to the reduced need to process the low-value image requests that are now handled through public self-service. </span></p>
+<p><span style="font-weight: 400;">Te Papa has learnt a lot from opening up. We were correct in our assumption that people were interested in using our collections, and removing barriers was all it took. Looking forward, we would like to continue to find out what our users want; keep seeking new ways to make the collections easy to find, share, and use; and ensure we are learning as we go. The use data (and the narrative surrounding it) that we have collected from from one year of open access is incredibly valuable—it provides compelling reasons to continue our program, contribute our images to collaborative efforts like Wikimedia, and explore expanding the program to include data and embrace more open Creative Commons licenses.<br />
+</span></p>
+<h2>Acknowledgements</h2>
+<p><span style="font-weight: 400;"> Victoria Leachman (Te Papa), Raj Rajneil (previously Te Papa), Curdin Krummenacher (Te Papa).</span></p>
+<h2>References</h2>
+<p><span style="font-weight: 400;">Bellinger, M. (2011). &#8220;</span><span style="font-weight: 400;">Digital Images of Yale’s Vast Cultural Collections Now Available for Free.&#8221; YaleNews. </span><span style="font-weight: 400;">Consulted August 13, 2015. Available </span><a href="http://news.yale.edu/2011/05/10/digital-images-yale-s-vast-cultural-collections-now-available-free"><span style="font-weight: 400;">http://news.yale.edu/2011/05/10/digital-images-yale-s-vast-cultural-collections-now-available-free</span></a></p>
+<p><span style="font-weight: 400;">Chen, C. (2015). Personal communication and internal statistics shared by Getty Museum. August 12.</span></p>
+<p><span style="font-weight: 400;">Cuno, J. (2013). &#8220;</span><span style="font-weight: 400;">Open Content, An Idea Whose Time Has Come.&#8221; <em>The Getty Iris</em>. </span><span style="font-weight: 400;">Consulted August 13, 2015. Available </span><a href="http://blogs.getty.edu/iris/open-content-an-idea-whose-time-has-come/"><span style="font-weight: 400;">http://blogs.getty.edu/iris/open-content-an-idea-whose-time-has-come/</span></a></p>
+<p><span style="font-weight: 400;">Heibel, A. (2013). &#8220;What Do Cats Have to Do With It? Welcome to Our New Collections Website.&#8221; Los Angeles County Museum of Art (LACMA). Consulted August 13, 2015. Available </span><a href="http://unframed.lacma.org//2013/03/14/what-do-cats-have-to-do-with-it-welcome-to-our-new-collections-website/"><span style="font-weight: 400;">http://unframed.lacma.org//2013/03/14/what-do-cats-have-to-do-with-it-welcome-to-our-new-collections-website/</span></a></p>
+<p><span style="font-weight: 400;">Kelly, K. (2013). <em>Images of Works of Art in Museum Collections: The Experience of Open Access (A study of 11 Museums)</em>. Council of Library and Information Resources. Consulted August 13, 2015. Available </span><a href="http://www.clir.org/pubs/reports/pub157/pub157.pdf"><span style="font-weight: 400;">http://www.clir.org/pubs/reports/pub157/pub157.pdf</span></a></p>
+<p>Kingston, Adrian. (2014). &#8220;Free, downloadable images from Te Papa’s collections.&#8221; Museum of New Zealand Te Papa Tongarewa blog. June 3. Available <a href="http://blog.tepapa.govt.nz/2014/06/03/free-downloadable-images-from-te-papas-collections/"><span style="font-weight: 400;">http://blog.tepapa.govt.nz/2014/06/03/free-downloadable-images-from-te-papas-collections/</span></a></p>
+<p>Museum of New Zealand Te Papa Tongarewa. (2013). <span style="font-weight: 400;"><em>Museum of New Zealand Te Papa Tongarewa Statement of Intent 2013/14, 2014/15, 2015/16</em>. Available http://www.tepapa.govt.nz/SiteCollectionDocuments/AboutTePapa/LegislationAccountability/1-763611-Final_Statement_of_Intent_2013-16_for_Web.pdf </span></p>
+<p><span style="font-weight: 400;">National Gallery of Art. (no date). Open Access Policy for Images of Works of Art Presumed in the Public Domain.</span> <span style="font-weight: 400;">Consulted August 13, 2015. Available </span><a href="https://images.nga.gov/en/page/openaccess.html"><span style="font-weight: 400;">https://images.nga.gov/en/page/openaccess.html</span></a></p>
+<p><span style="font-weight: 400;">New Zealand Government. (2015). NZGOAL (New Zealand Government Open Access and Licensing) framework. </span><span style="font-weight: 400;">Consulted August 13, 2015. Available </span><a href="https://www.ict.govt.nz/guidance-and-resources/open-government/new-zealand-government-open-access-and-licensing-nzgoal-framework/nzgoal2/"><span style="font-weight: 400;">https://www.ict.govt.nz/guidance-and-resources/open-government/new-zealand-government-open-access-and-licensing-nzgoal-framework/nzgoal2/</span></a></p>
+<p>New Zealand Herald. (2014). &#8220;Te Papa puts part of national collection online for free.&#8221; June 4. Available <a href="http://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&amp;objectid=11267600"><span style="font-weight: 400;">http://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&amp;objectid=11267600</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Pekel, J. (2013). &#8220;</span><span style="font-weight: 400;">Case Study: Rijksmuseum releases 111.000 high quality images to the public domain.&#8221; OpenGLAM. Consulted August 13, 2015. Available </span><a href="http://openglam.org/2013/02/27/case-study-rijksmuseum-releases-111-000-high-quality-images-to-the-public-domain/#sthash.ayaUhB4q.dpuf"><span style="font-weight: 400;">http://openglam.org/2013/02/27/case-study-rijksmuseum-releases-111-000-high-quality-images-to-the-public-domain/#sthash.ayaUhB4q.dpuf</span></a></p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+. "A review of a year of open access images at Te Papa." <i>MWA2015: Museums and the Web Asia 2015</i>. Published August 15, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mwa2015.museumsandtheweb.com/paper/a-review-of-a-year-of-open-access-images-at-te-papa/<br /><br /><hr>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://mwa2015.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><hr>
+<h3 class="widget-title">Global sponsor</h3>
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a>
+
+<h3 class="widget-title">Platinum sponsor</h3>
+<a title="MailChimp" href="http://nonprofits.mailchimp.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a>
+
+<h3 class="widget-title">Gold sponsor</h3>
+<a title="AARNet" href="http://www.aarnet.edu.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/AARNet-250-75.jpg" alt="AARNet" /></a>
+
+<h3 class="widget-title">Silver sponsors</h3>
+<a title="CV" href="http://www.creative.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CV-250-75.jpg" alt="CV" /></a>
+<a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<h3 class="widget-title">Bronze sponsors</h3>
+<a title="Ruckus" href="http://www.ruckuswireless.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/ruckus-250-75.jpg" alt="Ruckus" /></a>
+
+<a title="CoM" href="http://www.melbourne.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CoM-250-75.jpg" alt="CoM" /></a>
+
+<a title="Lumicom" href="http://lumicom.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/lumicom-250-75.jpg" alt="CoM" /></a>
+
+<a title="Tomizone" href="http://tomizone.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/tomizone-250-75.jpg" alt="Tomizone" /></a>
+
+<h3 class="widget-title">Partner</h3>
+<a title="MV" href="http://museumvictoria.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/mv-250-100.jpg" alt="MV" /></a>
+
+<div style="text-align:right;"><a href="../../sponsorship-opportunities/index.html">become a sponsor</a></div>
+<hr></div>
+		</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/search?q=%40museweb+OR+%23museweb+OR+%23mwa2015" data-widget-id="519731970960400384">Tweets about "@museweb OR #museweb OR #mwa2015"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br />
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-5" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br />
+703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info@museumsandtheweb.com</p></div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+
+			
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/a-review-of-a-year-of-open-access-images-at-te-papa/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:56:19 GMT -->
+</html>

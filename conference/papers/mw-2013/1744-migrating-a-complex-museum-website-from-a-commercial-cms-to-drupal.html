@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mw2013.museumsandtheweb.com/paper/migrating-a-complex-museum-website-from-a-commercial-cms-to-drupal/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:48:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Migrating a Complex Museum Website from a Commercial CMS to Drupal | MW2013: Museums and the Web 2013</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/twentyeleven/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mw2013.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MW2013: Museums and the Web 2013 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW2013: Museums and the Web 2013 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW2013: Museums and the Web 2013 &raquo; Migrating a Complex Museum Website from a Commercial CMS to Drupal Comments Feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw2013.museumsandtheweb.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index7dfd.html?p=4120' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed6c9b.json?url=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fmigrating-a-complex-museum-website-from-a-commercial-cms-to-drupal%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed266f?url=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fmigrating-a-complex-museum-website-from-a-commercial-cms-to-drupal%2F&amp;format=xml" />
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #850000; }
+</style>
+	</head>
+
+<body class="paper-template-default single single-paper postid-4120 custom-background two-column right-sidebar">
+<div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="../../index.html" title="MW2013: Museums and the Web 2013" rel="home">MW2013: Museums and the Web 2013</a></span></h1>
+				<h2 id="site-description">The annual conference of Museums and the Web | April 17-20, 2013 | Portland, OR, USA</h2>
+			</hgroup>
+
+						<a href="../../index.html">
+									<img src="../../wp-content/uploads/2012/09/portland_strip.jpg" width="1000" height="288" alt="" />
+							</a>
+			
+								<form method="get" id="searchform" action="https://mw2013.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content" title="Skip to primary content">Skip to primary content</a></div>
+				<div class="skip-link"><a class="assistive-text" href="#secondary" title="Skip to secondary content">Skip to secondary content</a></div>
+								<div class="menu-mw2013-menu-container"><ul id="menu-mw2013-menu" class="menu"><li id="menu-item-238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-238"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-603" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-603"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+	<li id="menu-item-6483" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6483"><a href="http://www.museumsandtheweb.com/conferences/">Conferences</a></li>
+</ul>
+</li>
+<li id="menu-item-2524" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2524"><a href="../../news/index.html">News</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-262"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-2357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2357"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243"><a href="../../local-information/index.html">Local Information</a></li>
+	<li id="menu-item-242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-242"><a href="../../call-for-proposals/index.html">Call for Proposals</a>
+	<ul class="sub-menu">
+		<li id="menu-item-508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-508"><a href="../../call-for-proposals/guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+		<li id="menu-item-509" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-509"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+		<li id="menu-item-510" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-510"><a href="../../submit-proposal/index.html">Submit Proposal</a></li>
+		<li id="menu-item-2574" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2574"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+		<li id="menu-item-5875" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5875"><a href="../../call-for-proposals/presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	</ul>
+</li>
+	<li id="menu-item-714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-714"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+	<li id="menu-item-3146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3146"><a href="../../exhibitor-rates/index.html">Sponsorship</a></li>
+</ul>
+</li>
+<li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-526"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-3196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3196"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-527"><a href="../../exhibiting/exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a href="../../registration/exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-1935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1935"><a href="../../guidelines-for-advertisers/index.html">Guidelines for Advertisers</a></li>
+</ul>
+</li>
+<li id="menu-item-689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-689"><a href="../../conference/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-4186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4186"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><a href="../../sessions/index.html">Sessions</a></li>
+	<li id="menu-item-697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697"><a href="../../workshops/index.html">Workshops</a></li>
+	<li id="menu-item-6745" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-6745"><a href="../../introducing-mwx2013-new-exhibition-program-for-museums-and-the-web/index.html">MWX</a></li>
+	<li id="menu-item-3220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3220"><a href="../../best-of-the-web/index.html">Best of the Web</a>
+	<ul class="sub-menu">
+		<li id="menu-item-6424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6424"><a href="../../best-of-the-web-winners/index.html">Best of the Web Winners</a></li>
+		<li id="menu-item-3221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3221"><a href="../../best-of-the-web-criteria/index.html">Best of the Web Criteria</a></li>
+		<li id="menu-item-3228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3228"><a href="../../best-of-the-web-nominees/index.html">Best of the Web Nominees</a></li>
+	</ul>
+</li>
+	<li id="menu-item-701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-701"><a href="../../demonstrations/index.html">Demonstrations</a></li>
+	<li id="menu-item-6255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6255"><a href="../../salons/index.html">Salons</a></li>
+	<li id="menu-item-528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-528"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-702"><a href="../../sponsors/index.html">Sponsors</a></li>
+	<li id="menu-item-6478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6478"><a href="../../papers/index.html">Papers</a></li>
+	<li id="menu-item-719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-719"><a href="../../proceedings/index.html">Proceedings</a></li>
+</ul>
+</li>
+<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-730"><a href="../../people/index.html">People</a>
+<ul class="sub-menu">
+	<li id="menu-item-731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731"><a href="../../speakers-authors/index.html">Speakers &#038; Authors</a></li>
+	<li id="menu-item-732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-732"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-257"><a href="../../program-committee/index.html">Program Committee</a></li>
+	<li id="menu-item-3135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3135"><a href="../../bow-committee/index.html">BoW Committee</a></li>
+</ul>
+</li>
+<li id="menu-item-6564" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6564"><a href="http://www.museumsandtheweb.com/publication-order/">Publications</a></li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<style type="text/css">
+#full_width_content {
+	margin-left: 76px;
+	margin-right: 76px;
+}
+
+h2, h3, h4 {
+	font-weight: bold;
+}
+</style>
+
+<div id="primary">
+<div id="full_width_content">
+			
+
+<h1 class="entry-title">Migrating a Complex Museum Website from a Commercial CMS to Drupal</h1>
+<br />
+
+<a href="../../user/index63e1.html?u=Jane%20Alexander">Jane Alexander</a>, USA, <a href="../../user/index4f56.html?u=nkrause">Niki Krause</a>, USA<br /><br /><b>Abstract</b><br />
+<p>In 2010 The Cleveland Museum of Art rolled out a brand new website, winning online acclaim and garnering numerous design awards based on a high-concept idea: while the museum’s galleries are closed during its $350 million building expansion, make its collections available online. Allow online visitors to explore virtually, getting lost in the world-class art. But although visually distinctive, the website was far from perfect: it couldn’t support the technology or communications goals of the museum going forward, because of its underlying, heavily customized CMS and its shallow information architecture..</p>
+<p>To regain financial and developmental control of the museum website, Information Management and Technology Services (IMTS) managed the migration of the website from its heavily-customized legacy content management system (Sitecore CMS) to a flexible, open-source CMS (Drupal) that could be maintained and expanded in-house.</p>
+<p>This paper explores the managerial and technical processes required to replace the website with a new one that looked the same, but delivered a better user experience.</p>
+<p><b>Keywords: </b>public websites, content management systems, open source, digital asset management, integration, project management</p>
+<h2>1. Background</h2>
+<p>In late 2008, the Cleveland Museum of Art envisioned a new public website that would present the museum&#8217;s entire collection virtually and encourage online visitors to immerse themselves in exploration even while the physical galleries were closed during the museum’s $350-million building expansion project, The initial plan proposed by the internationally-acclaimed design firm Pentagram was to weave artwork through every part of the website, to keep a renowned collection &#8220;out there&#8221; in the public eye while the physical works were in temporary storage or travelling to other museums.</p>
+<p>Pentagram proposed that the website be intentionally shallow, using a visually-pleasing mix of images—of art, people, events, and the museum itself—and text blocks laid out as a deck of cards for navigation and enticement. Longer textual content describing art, exhibitions, upcoming events and programs, etc., would float above the visual array in simple black pop-ups.</p>
+<h3>A New Website with Cracks and Holes, and a New IMTS Director</h3>
+<p>The new director of Information Management and Technology Services (IMTS) started three weeks before the planned launch of the new website. The Director of Marketing and Communications at the time had outsourced development of the new website to a Microsoft Sitecore-certified implementer. There was no IMTS representative on the project team, and no needs assessment or scope of work (SOW) document. The implementer was essentially working from the Pentagram design sketches, and building backwards. And, ironically for a website that was focused on art, the implementation of an extensive and complex online collection was an afterthought.</p>
+<h3>Collection Online an afterthought</h3>
+<p>On December 31, 2010, just three months before the proposed launch, CMA contracted with Piction the vendor partner who provides the museum’s internal digital asset management (DAM) for object images to create the mini-repository and online collection. When the new IMTS director began on March 1, it was apparent that this was an impossible feat. Again, neither a needs assessment of the back end and its relation to the new website, nor a statement of work (SOW), had been completed. The IMTS director reported that this would need two more months in order to deliver a minimally-functional Collection Online integrated with the Sitecore display layer.</p>
+<p><strong>Critical shortcomings.</strong> The resulting website, launched in May 2010, was visually stunning. Unfortunately, the navigation, design (front end and back end) and structure were poorly-suited to serve the needs of actual online visitors. Moreover, the site failed to meet the requirements of the Communications and Advancement departments or to further the overall goals of the museum in regards to scholarship, artistic excellence, and community engagement.</p>
+<p>The Sitecore CMS was heavily customized by the original implementer with perplexing code, rendering it prohibitively expensive to adapt to future needs. Search Engine Optimization (SEO) and Google image indexing were impossible (there were no paths for pages); social-media sharing functionality had not been developed; and the plug-ins—including the Calendar and Mailing Lists—behaved idiosyncratically. The Sitecore user interface was complex and unintuitive (especially for content developers); and while the content development was deemed complete, and functional in Internet Explorer, the public website offered limited support for Firefox, Chrome, and Safari. In addition, there was no plan or accommodation for access by any mobile device.</p>
+<p>Despite proven public interest, the site&#8217;s homepage failed to incorporate any museum related events. Users were unable to access any information pertaining to the museum’s wide catalog of lectures, films, performance events, art classes, antiques road shows, and book clubs. Even basic, general information—like hours of operation, admission (free!), and driving directions—was sparse, difficult to find, and often out of date.</p>
+<p>Financially, Sitecore license fees were high, and a separate license was required to maintain both a staging environment and a production environment. Because Sitecore required that development be performed by a certified developer, the museum needed to maintain a long-term relationship with a third-part implementer, or pay for the training and certification of one or more staff members.</p>
+<p><strong>Stakeholders and ownership disconnect.</strong> Museum staff uniformly perceived that the Sitecore website was ‘owned’ by the old Marketing &amp; Communications department, and that key areas central to the overall mission of scholarship, artistic excellence, and community engagement, had no visibility or voice in the museum’s online presence.</p>
+<p>The Web Editors—Marketing &amp; Communications and Design staff who all had responsibilities in addition to website work—were overwhelmed creating content related to major exhibitions and high-profile institutional announcements, even before they reviewed, edited, re-wrote, re-voiced, and finally posted submissions from ‘secondary’ program areas. Staff members who knew both the details of these secondary program offerings and their target audiences intimately had no direct access to the Sitecore admin interface to add or edit content. There was no interdepartmental arena for discussing and setting priorities, for either online content or website. There was no defined channel for internal communications regarding the museum’s single most important tool for communicating with the public.</p>
+<h3>Pressing Projects and Challenging Environment</h3>
+<p>With the building project well underway, the new IMTS director had to focus on the design and implementation of the technology infrastructure. Choices regarding amount and locations for connectivity/wifi had to be made within an inflexible budget determined years before. Meanwhile, three “top priority” application projects were assigned to IMTS, all inter-dependent and with firm implementation deadlines:</p>
+<h4>A) Choosing a Collection Cataloging and Management System (CCMS)</h4>
+<p>For three years, the museum had been considering commercial replacements for its 15-year-old, custom-built Apelles collection management system. The selection taskforce was at a complete stalemate, with half advocating for a strong library-oriented cataloging system, and the other half advocating a workflow/request-centric solution with minimal support for cataloging. No cross-department needs assessment had been conducted, and no formal request for proposals (RFP) process conducted; this project would require extensive, cooperative work to determine and implement a solution.</p>
+<p>The museum ultimately found that no single commercial solution could address all of its needs, so they elected a design-to-build, proprietary collection cataloging and management system (CCMS), based on the Microsoft Sharepoint platform. The CCMS is scheduled for launch in July 2013.</p>
+<h4>B) Life-long Learning Center (LLC, now known as Gallery One)</h4>
+<p>In early 2010, this family-oriented “learning zone” project was being managed by a small group in the Education department. Upon reviewing the proposals of the interactive design firm they’d retained, IMTS reported to the Director that the project as outlined was too costly, not dynamic, and incorporated dated technologies. The physical space of the life-long learning center (LLC)  was at the lobby entrance to the museum; the opening date of 12-12-12 was not flexible: the project had to be done right, and on time.</p>
+<p>The museum assembled a new project team, including IMTS, Education &amp; Interpretation, and Design &amp; Architecture. Vendor partners included a new interactive design team, an AV integrator, and digital asset management (DAM) specialist that could provide a CMS solution that linked to the museum’s existing DAMs and feed the art-related data to the project’s interactive elements. The end result was Gallery One.</p>
+<h4>C) A Collection-focused Mobile Platform for Tours (ArtLens app)</h4>
+<p>The need for a mobile app for touring the permanent collection was a priority. IMTS decided to work with Piction (the vendor partner who provides the museum’s internal DAM for object images) to test a mobile tour that could run from the current website. It was clear from the results that a museum-wide app needed to be created as a second step. The team suggested incorporating the project into Gallery One so that the back end would be designed to handle our data for all interactives. Linking the iPad app to the galleries also strengthened Gallery One’s concept and goal to move visitors into the galleries with a better tool set to understand art.</p>
+<p>Museum IMTS staff was working large application projects, without a dedicated applications team. The department was restructured: technical services were made more efficient, media services focused on content and AV. The department ultimately hired an application services manager and pulled together programmers and data analysts from IT and other departmental silos.</p>
+<h3>IMTS Proposes a Way Forward</h3>
+<p>After careful assessment of the whole technology landscape, the IMTS director met with division directors and proposed the following website initiatives:</p>
+<ul>
+<li>Bring hosting and development in house to control costs and direction.</li>
+<li>Identify and implement the right back end CMS for the website, to address current accessibility issues and build a flexible platform for additional development.</li>
+<li>Give the museum departments a larger role in guiding and maintaining the website, to increase buy-in and improve content quality and currency.</li>
+<li>Upgrade Collection Online usability, then expand it to be a true, world-class research tool.</li>
+<li>Develop the website as the central support for future art and technology museum efforts.</li>
+</ul>
+<h2>2. Stabilize and Plan (Phase 1)</h2>
+<h3>Project Leadership</h3>
+<p>In March 2011, after the IMTS department finished restructuring and just nine months after website launch, director David Franklin shifted complete management of the website from the old Marketing and Communications department to IMTS to ensure that it aligned with both strategy and internal systems infrastructure. IMTS was primed to identify and address technical and organizational problems, and prepare the website for upcoming challenges:</p>
+<ul>
+<li>Promoting many more events and exhibitions as new sections of the museum open to the public through an enhanced calendar and robust ticketing system.</li>
+<li>Shifting the focus to online giving and establishing a strong online presence to engage tech-savvy young professionals as active members, requiring outreach to a new demographic and a transaction portal.</li>
+<li>Emphasizing scholarship and lay-research, a personal priority of the Director to enhance the collection online and provide better visibility and access to research efforts through the museum.</li>
+<li>Supporting the museum’s planned interpretation-meets-technology initiative and iPad app for collection exploration – Gallery One and the ArtLens app.</li>
+</ul>
+<p>CMA charged the IMTS with the task of managing the technical development, functionality, support, and strategic planning of CMA’s website.</p>
+<h3>Steering Committee</h3>
+<p>A new Web Steering Committee (WSC) was established with key deputy director-level staff, to meet monthly and provide oversight for the public face of the museum. Members included the Director of Collections Management, Director of Communications, Director of Design and Architecture, Director of Library and Archives, Director of Membership and Visitor Experience, and a deputy director from the Development department. The steering committee was led by the IMTS director, and project managed by the application services manager.</p>
+<table width="658" border="0" cellspacing="0" cellpadding="0">
+<col width="145" />
+<col width="26" />
+<col width="145" />
+<col width="26" />
+<col width="145" />
+<col width="26" />
+<col width="145" />
+<tbody>
+<tr>
+<td width="145" height="21"><strong>Subcommittee</strong></td>
+<td width="26"><strong> </strong></td>
+<td width="145"><strong>Includes staff from</strong></td>
+<td width="26"><strong> </strong></td>
+<td width="145"><strong>Focuses on</strong></td>
+<td width="26"><strong> </strong></td>
+<td width="145"><strong>Furthering goal</strong></td>
+</tr>
+<tr>
+<td width="145" height="120">Collection Research &amp; Presentation</td>
+<td width="26"> </td>
+<td width="145">Curatorial, Collection Management, Conservation, Exhibitions, and the Ingalls Library and Museum Archives</td>
+<td width="26"> </td>
+<td width="145">Collection Online, plus content related to research, caretaking, and presentation of art in the permanent collection and special exhibitions</td>
+<td width="26"> </td>
+<td width="145">scholarship, artistic excellence</td>
+</tr>
+<tr>
+<td width="145" height="120">Educational and Entertainment Programming </td>
+<td width="26"> </td>
+<td width="145">Education &amp; Interpretation; Performing Arts, Music &amp; Film; Community Arts; Marketing &amp; Communications; and Media Services</td>
+<td width="26"> </td>
+<td width="145">event-related content</td>
+<td width="26"> </td>
+<td width="145">scholarship, artistic excellence, community engagement</td>
+</tr>
+<tr>
+<td width="145" height="69">Transactions </td>
+<td width="26"> </td>
+<td width="145">Membership, Development, Ticketing, the Museum Store, Human Resources, IMTS</td>
+<td width="26"> </td>
+<td width="145">online giving, e-commerce, recruitment, constituent history and retention</td>
+<td width="26"> </td>
+<td width="145">community engagement</td>
+</tr>
+<tr>
+<td rowspan="2" width="145" height="72">Branding </td>
+<td width="26"> </td>
+<td rowspan="2" width="145">Marketing &amp; Communications and Design</td>
+<td width="26"> </td>
+<td width="145">promotional strategy,</td>
+<td width="26"> </td>
+<td rowspan="2" width="145">artistic excellence, community engagement</td>
+</tr>
+<tr>
+<td width="26" height="52"> </td>
+<td width="26"> </td>
+<td width="145"> homepage, look &amp; feel, and institutional voice/tone</td>
+<td width="26"> </td>
+</tr>
+<tr>
+<td width="145" height="52">User Functionality </td>
+<td width="26"> </td>
+<td width="145">Design, IMTS, plus select web-savvy staff from throughout the museum</td>
+<td width="26"> </td>
+<td width="145">user interface design, information architecture</td>
+<td width="26"> </td>
+<td width="145">scholarship, artistic excellence, community engagement</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 1: Web Steering Committee: Subcommittee Makeup and Focus</strong></p>
+<p>Each subcommittee was chaired by one of the WSC members, and one or more IMTS representatives participate, depending on their specialty (e.g., the business systems analyst attends Transactions subcommittee meetings). The subcommittees meet mid-month (or more frequently when required, e.g., during the conceptual redesign of an entire ‘learn’ section), then relay their meeting minutes, action items, and recommendations through their chair to the WSC for consideration.</p>
+<p>This committee/subcommittee structure maximizes stakeholder exposure, while minimizing the time commitments for any individual staff member, and allows multiple projects in content development or needs analysis to run in parallel. For example, redesigns for the main menu structure and Collection Online were tackled simultaneously by the User Functionality and Collection Research and Presentation subcommittees, respectively, while Transactions worked with an outside vendor on portal development.</p>
+<p>The Marketing and Design subcommittee would continue to maintain brand consistency and institutional voice/message throughout the website, and for the time being, all content changes would continue to go through the Web Editors group established for the previous Sitecore implementation.</p>
+<h3>Assessment of CMS Options</h3>
+<p>The WSC considered working through the problems and staying the course with Sitecore or moving to an open-source solution. Various strategies were discussed for both CMS solutions:</p>
+<p><strong>Stay with Sitecore.</strong> The existing Sitecore implementation was poorly implemented, involving heavy customization using C#, the integration of buggy plug-ins, and reliance on Sitecore’s barely-accessible data structure. With those underlying shortcomings and the high cost of continued development, coupled with the lack of internal control, a decision had to be made. The IMTS director saw two options for continuing with Sitecore as the website back end:</p>
+<ol>
+<li><strong>Move to another implementer, </strong>with the hopes that a new developer with a fresh perspective/different skill set could resolve the most critical issues and make the best of the Sitecore tool. The museum would gain development resources, while requiring no capital investment for additional Sitecore/Visual Studio licenses, as development/staging would be done on the implementer’s system. On the downside, two vendor partners would still be present in the website project; and there would be some lead time in hiring a new vendor/developer with Sitecore certification (or paying to have a vendor partner with other CMS development experience certified in Sitecore), then allowing that new vendor/developer the time to unravel and understand the existing highly-customized code base. As a final consideration, a new implementer would have other clients; museum development priorities would be subject to schedule availability.</li>
+<li><strong>Hire an in-house sitecore web developer and to set up an in-house test/staging environment. </strong>The benefit of this approach would be that it would allow the site to be completely self-sufficient, and able to address museum development priorities on the museum’s preferred schedule. However, the museum would be plagued with a high capital expenditure (additional server hardware, plus Sitecore/Visual Studio software and annual license fees), and require a longer lead time to set up, hire a developer, and obtain proper training/certification of Sitecore and the custom code base.</li>
+<li><strong>Migrate to Drupal.</strong> The option IMTS proposed, which was ultimately adopted by the WSC, was moving to open-source Drupal CMS software. There were many positives for this approach: the core Drupal code base was being actively developed and well-managed in the development community, and many plug-in modules were readily available. Additionally, many open-source developers were available for hire in the field, and already working with similar institutions on similar projects. Drupal is used commonly among libraries, museums of all types, archives, and educational institutions (e.g., peers in all CMA functions) and the platform was scalable for our institution.</li>
+</ol>
+<p>The negatives to such a move were the unknowns: the risk of using a new platform, the lack of knowledge regarding the migration path from Sitecore to Drupal, and the lack of information regarding the timeline for conversion. The multi-channel, multi-phase migration plan was roughed out:</p>
+<ol>
+<li>Hire an in-house web developer.</li>
+<li>Assess the real needs of the museum in terms of web content/delivery.</li>
+<li>Improve the user experience on the existing website / Collection Online as much as possible, as inexpensively as possible, then keep Sitecore running in maintenance mode.</li>
+<li>Build a robust new back end for the website in Drupal 7.x, which meets all the core needs of the museum’s various departments.</li>
+<li>Expand the new Drupal platform to fully support the museum’s goals of artistic excellence, community engagement, and scholarship; tackle the “wish list” for content delivery, functionality, and user experience.</li>
+</ol>
+<h3>In-house Web Developer</h3>
+<p>Over the summer of 2011, the museum opened its search for an in-house web developer with both development and design experience, and ultimately hired a veteran programmer with a second-career fine arts degree, several years&#8217; experience on a university web development and support team (including coding a custom CMS from the ground up), and recent experience as the marketing-department webmaster for a large Cleveland non-profit.</p>
+<p>The first assignment for the in-house web developer was simple: learn everything about the museum’s web content needs, and about the Drupal CMS and its support community. The decade-old staff Intranet was ripe for replacement, and work began to install, configure, and build a new internal website using the just-released Drupal 7.x.</p>
+<p>The IMTS director, applications team leader, and new in-house web developer attended the Museum Computer Network and Museums and the Web conferences, and started trolling the websites of peer institutions, science museums and historical societies, and commercial galleries with a mission to determine of the industry’s best practices, note the caveats, and understand how other museums were integrating their art and technology.</p>
+<h3>Short-term Solutions</h3>
+<p><strong>Basic missing functionality: Share and Back.</strong> The Pentagram design, as implemented in the Sitecore-based site, was intentionally shallow. The animated cards on the landing pages provided the key visual elements, with information pages designed to float above while the landing pages were ghosted in the background. The pop-up implementation resulted in two serious usability issues for online visitors, which required immediate attention:</p>
+<ul>
+<li><span style="color: #333333;font-family: 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', sans-serif;font-style: normal">URLs were created and displayed only for landing pages. Obviously, this was an immediate obstacle to driving traffic to specific information pages on the website via e-newsletters and social media. The old Marketing and Communications department contracted with the original implementer to create a sharable, short URL for every information page; this was implemented as a pop-up on top of a pop-up, but it worked.</span></li>
+</ul>
+<div id="attachment_4127" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig01.gif"><img aria-describedby="caption-attachment-4127" loading="lazy" class="size-large wp-image-4127" alt="The [Share] pop-up added to Sitecore allowed staff and online visitors to access a short URL for a specific information page. This functionality was not required after the move to the Drupal-based site. Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig01-1024x675.gif" width="584" height="384" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig01-1024x675.gif 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig01-300x197.gif 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig01-455x300.gif 455w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4127" class="wp-caption-text">The [Share] pop-up added to Sitecore allowed staff and online visitors to access a short URL for a specific information page. This functionality was not required after the move to the Drupal-based site. Photo by CMA.</p></div>
+<ul>
+<li><span style="color: #333333;font-family: 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', sans-serif;font-style: normal">Standard browser back-button functionality did not work with the Sitecore pop-ups. Online visitors were able to search the site and see a results list, but had to re-execute the search after following any of the links to an information page. IMTS contracted with the original implementer to re-implement the universal search results display on a plain vanilla page. The styling mimicked the look of the floating, black text area, but there was no ghosted-out landing page behind it: the background was solid background gray. (This early theming adaptation was later used for styling peripheral sites, and became a basis for the later replacement of the pop-up pages on the Drupal-based site.)</span></li>
+</ul>
+<div id="attachment_4128" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig02.gif"><img aria-describedby="caption-attachment-4128" loading="lazy" class="size-large wp-image-4128" alt="The re-implemented search results page on the Sitecore-based site was a “real” page rather than a pop-up, allowing online visitors to (finally) use the back button. Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig02-1024x656.gif" width="584" height="374" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig02-1024x656.gif 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig02-300x192.gif 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig02-467x300.gif 467w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4128" class="wp-caption-text">The re-implemented search results page on the Sitecore-based site was a “real” page rather than a pop-up, allowing online visitors to (finally) use the back button. Photo by CMA.</p></div>
+<p>&nbsp;</p>
+<p><strong>Navigation changes.</strong> Several design-related usability issues in the Sitecore website were addressed with no programmer intervention, using strategies later retained in the Drupal website. The WSC User Functionality subcommittee spent several months analyzing the Sitecore website and surveying other museum sites to determine standards for best-practice navigation and menu structure (e.g., where are job postings, the day’s events, and access to art online?). Two simple modifications were made to content, overriding recommendations from the Pentagram style guide:</p>
+<ul>
+<li><span style="color: #333333;font-family: 'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', sans-serif;font-style: normal">Originally, every landing page was created with multiple image-only cards, depicting either an art object or editorial photography (e.g., photos taken of people with art, in classes, listening to lectures, etc.). These image-only cards were confusing to online visitors, because they frequently did not relate to the topic of the landing page, and there was no clear pattern as to where they would lead. These image-only cards were completely removed, with no impact on the visuals of the website.</span></li>
+</ul>
+<div id="attachment_4129" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig03.png"><img aria-describedby="caption-attachment-4129" loading="lazy" class="size-large wp-image-4129" alt="“Where am I going?” Three of the image-only cards on this landing page lead to the same content page (Studio Classes for Children and Teens). Other image-only cards here are blind (lead nowhere). Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig03-1024x420.png" width="584" height="239" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig03-1024x420.png 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig03-300x123.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig03-500x205.png 500w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig03.png 1129w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4129" class="wp-caption-text">“Where am I going?” Three of the image-only cards on this landing page lead to the same content page (Studio Classes for Children and Teens). Other image-only cards here are blind (lead nowhere). Photo by CMA.</p></div>
+<div id="attachment_4130" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig04.png"><img aria-describedby="caption-attachment-4130" loading="lazy" class="size-large wp-image-4130" alt="“Why is this even here? What does it have to do with anything?”The art-object cards on this landing page lead to art-object detail pages, completely unrelated to the performing arts content around it. Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig04-1024x540.png" width="584" height="307" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig04-1024x540.png 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig04-300x158.png 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig04-500x263.png 500w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig04.png 1295w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4130" class="wp-caption-text">“Why is this even here? What does it have to do with anything?”The art-object cards on this landing page lead to art-object detail pages, completely unrelated to the performing arts content around it. Photo by CMA.</p></div>
+<div id="attachment_4131" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig05.gif"><img aria-describedby="caption-attachment-4131" loading="lazy" class="size-large wp-image-4131" alt=" Landing pages are much cleaner and easier to navigate with art-object and image-only cards removed. Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig05-1024x490.gif" width="584" height="279" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig05-1024x490.gif 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig05-300x143.gif 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig05-500x239.gif 500w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4131" class="wp-caption-text">Landing pages are much cleaner and easier to navigate with art-object and image-only cards removed. Photo by CMA.</p></div>
+<ul>
+<li>Based on the WSC User Functionality subcommittee’s recommendations, the main menu—displayed at the top of each page—was re-coded and completely reconfigured by in-house staff, and the submenus/content were reorganized to reflect the expectations of online visitors, rather than echo the museum’s internal structure of content silos/departments. Language used in the menus was simplified, and redundant links were removed, unless it made logical sense from the online visitor’s perspective for them to remain.</li>
+</ul>
+<h3>Homepage</h3>
+<p>One frustrating issue with the Pentagram design was that there was not enough screen real-estate (e.g., cards) to adequately feature non-exhibition programs—including popular lectures, films, performance events, art classes, antiques roadshows, and book clubs—on the home page. Additionally, since each card was exactly the same size, there was no way to emphasize major exhibitions or other featured content, beyond proximity of their card to the logo.</p>
+<p>The User Functionality subcommittee recommended a slideshow treatment to increase screen real estate, and IMTS recommended “breaking” the design to include multi-card images. Design staff carefully selects images for two-and three-card use, so that it appears the scene is being viewed through a window: the effect is visually stunning, compelling, and personal. This design solution was so effective that IMTS contracted with the original implementer to add the functionality to Sitecore (April 2012), and then re-implemented it with totally different code/machinery for use in Drupal.</p>
+<div id="attachment_4132" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig06.gif"><img aria-describedby="caption-attachment-4132" loading="lazy" class="size-large wp-image-4132" alt="The original Pentagram homepage. The only emphasis possible is proximity to the logo. Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig06-1024x574.gif" width="584" height="327" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig06-1024x574.gif 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig06-300x168.gif 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig06-500x280.gif 500w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4132" class="wp-caption-text">The original Pentagram homepage. The only emphasis possible is proximity to the logo. Photo by CMA.</p></div>
+<div id="attachment_4133" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig07.gif"><img aria-describedby="caption-attachment-4133" loading="lazy" class="size-large wp-image-4133" alt="Showing emphasis on the homepage, using a triptych rotator to emphasize major exhibitions. Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig07-1024x582.gif" width="584" height="331" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig07-1024x582.gif 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig07-300x170.gif 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig07-500x284.gif 500w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4133" class="wp-caption-text">Showing emphasis on the homepage, using a triptych rotator to emphasize major exhibitions. Photo by CMA.</p></div>
+<h3>Interim Improvements to Collection Online</h3>
+<p>The WSC Collection Research and Presentation subcommittee assessed five areas in the original Collection Online implementation, considering all data back to its original source: data movement, searching behavior, publishing/display, user functions, and meeting immediate Curatorial needs regarding the collection. Based on the subcommittee’s findings, several immediate improvements were made to the Collection Online. IMTS managed a joint development project with Piction (who controlled the DAM data structure and return streams) and the Sitecore implementer (who controlled the display layer, and had to deploy the code).</p>
+<ul>
+<li>Search functionality upgraded to allow for more complex searches and improved results: wildcarding, stop-word application, diacritic/Latin-1 character support, a new artist-name search field, and modified search drop-downs.</li>
+<li>Sort and display logic was modified to hide certain object part records from the search results, and display them instead as related records.</li>
+<li>Functionality was added to allow for on-the-fly watermarking for designated images (specifically to protect Contemporary art).</li>
+</ul>
+<h3>A Model for Distribution of Content Creation and Maintenance</h3>
+<p>In June 2012, IMTS proposed a radical shift in museum information culture: allow staff members in the stake-holder areas to enter and maintain the content for their own programs, to address the issues of content depth, accuracy, and currency, as well as distribute the maintenance workload.</p>
+<p>The plan IMTS outlined for the WSC was as follows:</p>
+<ol>
+<li>Tech-savvy wordsmiths will be chosen from each stake-holding area, and their job descriptions adjusted to include the additional responsibilities.</li>
+<li>Content Gatekeepers will be trained in Chicago style and given a basic guide to the ‘museum voice’ by the new Marketing and Communications staff, then shown how to use the data entry templates.</li>
+<li>Marketing and Communications staff would provide a second set of eyes to ensure consistency of both message and voice, by ‘roving’ the site and adjusting/providing posting-specific feedback to individual Content Gatekeepers.</li>
+<li>Content Gatekeepers would meet formally once a month to discuss upcoming events (e.g., composed of content from multiple stakeholder areas) and content changes, and to review general style/voice adjustments.</li>
+<li>The Branding subcommittee would maintain the homepage arrangement plan and calendar, with additional input from the Content Gatekeepers to ensure secondary programs were given more visibility when needed.</li>
+</ol>
+<p>The Marketing &amp; Communications staff was concerned about the shift in editorial control, and the potential impact on content quality and institutional voice. In February 2012, as a pre-production pilot for the public website content-maintenance strategy, IMTS and Marketing and Communications worked together to test the content gatekeeper model for the newly-developed, Drupal-based Staff Intranet site.</p>
+<p>This pilot allowed IMTS to fine-tune some gatekeeper staff selections recommended to the WSC, as well as the standing agenda and presentation style for the monthly meetings. Most helpfully, the staff Intranet team experimented with several different Drupal-supported approval processes for content publication, and found a rough balance for editorial control and efficiency.</p>
+<p>One intranet gatekeeper—for Performing Arts, Music and Film—almost simultaneously started working as proto-content gatekeeper for the public website because of the huge amount of calendar-related program content his area provided. He gamely learned data-entry templates and rules for Sitecore and two flavors of Drupal; helped prepare the training strategy for Content Gatekeepers to follow; and became part of the hands-on content conversion and testing efforts in the Web-911 task force.</p>
+<h3>Parallel Development of an e-Commerce Portal</h3>
+<p>The Advancement Department—which includes Development, Membership, and Visitor Experience—had long identified the need to facilitate online giving, upgrade membership sales/renewals and online ticketing, and ultimately adopt a Single Shopping Cart model to facilitate the application of member discounts. They wanted to encourage membership and multiple purchases through up-selling, and create a comprehensive history of museum visitors’ membership statuses, purchases, and interests.</p>
+<p>The existing online sales platform had some serious issues: there was no single location for all online-giving options, leading to confusion; ticketing services functioned only through Internet Explorer; and new members were unable to apply membership discounts to purchases outside of the transaction where the purchase was made.</p>
+<p>In a parallel project to the website migration, the IMTS department worked with two outside vendors to implement an e-Commerce portal on a separate, secure server. Two phases of this effort were completed in rapid succession, providing:</p>
+<ul>
+<li>Online tools for both members and staff, to look up membership IDs, edit contact information, and request a replacement membership cards.</li>
+<li>A Central Table, to tie together record identifiers in the membership tracking system, ticketing system, and online store.</li>
+<li>Membership purchase, renewal, and gift memberships. Forms are linked to the Central Table, and recommend upgrades based on current status.</li>
+<li>Donor-circle (elite) membership care. Forms are linked to the Central Table, and highlight benefits based on current status.</li>
+<li>Simple “donate now” forms for general donations, as well as the ongoing building-campaign. Forms include links to matching-gift tools.</li>
+</ul>
+<h2>3. Building the Foundation (Phase 2)</h2>
+<p>The award-winning Pentagram design was maintained for the Drupal-based site, in order to maintain integrity of brand and visual continuity. That said, given the new and different functionality, the usability needs required some extensions to the theming.</p>
+<h3>Redesign of Pop-up Pages</h3>
+<p>Eliminating pop-up pages opened up the site for SEO and provided a URL for every page; provided better lateral navigation; adapted the slideshows to a more standard style (using big arrows instead of a row of numbers below an image); and allowed for the ability to embed video.</p>
+<div id="attachment_4134" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig08.gif"><img aria-describedby="caption-attachment-4134" loading="lazy" class="size-large wp-image-4134" alt="The original pop-up information page design, floating over the landing page. Related materials and share/print are on the right. Note the slide numbers above the page title. Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig08-1024x662.gif" width="584" height="377" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig08-1024x662.gif 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig08-300x194.gif 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig08-463x300.gif 463w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4134" class="wp-caption-text">The original pop-up information page design, floating over the landing page. Related materials and share/print are on the right. Note the slide numbers above the page title. Photo by CMA.</p></div>
+<div id="attachment_4135" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig09.gif"><img aria-describedby="caption-attachment-4135" loading="lazy" class="size-large wp-image-4135" alt="The newly-designed basic information page, with its own URL and left-side navigation for related materials, as well as direct navigation to the parent landing page and all sibling pages. The share/print functionality is now offered via icon. Note the slideshow is not controlled by arrows on either side of the banner. Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig09-1024x765.gif" width="584" height="436" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig09-1024x765.gif 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig09-300x224.gif 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig09-401x300.gif 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4135" class="wp-caption-text">The newly-designed basic information page, with its own URL and left-side navigation for related materials, as well as direct navigation to the parent landing page and all sibling pages. The share/print functionality is now offered via icon. Note the slideshow is not controlled by arrows on either side of the banner. Photo by CMA.</p></div>
+<p>A common public complaint about the Sitecore-based website was theme related: the white text on black background was difficult to read, especially for those with low vision. Design staff addressed this in the pop-up page redesign for the Drupal site as a user option: click an icon, and the text area would changed to a more readable black-on-white, and the preference would be remembered as the online visitor navigated from page to page.</p>
+<div id="attachment_4123" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig10.gif"><img aria-describedby="caption-attachment-4123" loading="lazy" class="size-large wp-image-4123" alt="The ‘peel’ icon allows online visitors to toggle text areas from white-on-black to black-on-white, for easier reading. Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig10-1024x738.gif" width="584" height="420" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig10-1024x738.gif 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig10-300x216.gif 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig10-416x300.gif 416w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4123" class="wp-caption-text">The ‘peel’ icon allows online visitors to toggle text areas from white-on-black to black-on-white, for easier reading. Photo by CMA.</p></div>
+<h3>Redesign of Art Object Pages</h3>
+<p>After reviewing dozens of other museum online collections, the WSC Collection Research and Presentation subcommittee determined that the existing vertical layout design involved too much scrolling: the art images were too far away from the descriptive metadata and tagging interface. The subcommittee and Design staff proposed a side-by-side layout, breaking with the pop-up page (basic page) template.</p>
+<div id="attachment_4124" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig11.gif"><img aria-describedby="caption-attachment-4124" loading="lazy" class="size-large wp-image-4124" alt="“What is it?” The original art-object detail pages used the same pop-up page design, floating over the search results page. The online visitor couldn’t look at the art and see the description at the same time. Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig11-1024x638.gif" width="584" height="363" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig11-1024x638.gif 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig11-300x187.gif 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig11-481x300.gif 481w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4124" class="wp-caption-text">“What is it?” The original art-object detail pages used the same pop-up page design, floating over the search results page. The online visitor couldn’t look at the art and see the description at the same time. Photo by CMA.</p></div>
+<div id="attachment_4125" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig12.gif"><img aria-describedby="caption-attachment-4125" loading="lazy" class="size-large wp-image-4125" alt="The phase I design for the new art-object information page, as implemented. Art and descriptive information are side-by-side, and the identifying information is concatenated, like a wall label or caption. Description, Inscription, and the See Also links area may be opened/closed. Alternate views of the art are offered as thumbnails in a scroll bar below the image area. Photo by CMA," src="../../wp-content/uploads/2013/02/krause.fig12-1024x576.gif" width="584" height="328" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig12-1024x576.gif 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig12-300x169.gif 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig12-500x281.gif 500w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4125" class="wp-caption-text">The phase I design for the new art-object information page, as implemented. Art and descriptive information are side-by-side, and the identifying information is concatenated, like a wall label or caption. Description, Inscription, and the See Also links area may be opened/closed. Alternate views of the art are offered as thumbnails in a scroll bar below the image area. Photo by CMA,</p></div>
+<h3>Legacy Data Analysis and Content Type Design</h3>
+<p>The Application team spent the spring of 2012 reviewing the different types of content already housed in the Sitecore system, mapping the fields, and reviewing their findings with the stakeholder department via the Web Steering Committee. Ultimately, 40 different types of data were specified in detail, including eight unique kinds of events/calendar items.</p>
+<p>This list would form the starting point for content type development in Drupal. Current content types are shown below:</p>
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+<col width="110" />
+<col width="19" />
+<col width="185" />
+<col width="19" />
+<col width="80" />
+<col width="19" />
+<col width="168" />
+<tbody>
+<tr>
+<td width="110" height="21"><strong><span style="font-family: Calibri;font-size: small">Basics</span></strong></td>
+<td width="19"><strong><span style="font-family: Calibri;font-size: small"> </span></strong></td>
+<td width="185"><strong><span style="font-family: Calibri;font-size: small">Pieces &amp; Parts</span></strong></td>
+<td width="19"><strong><span style="font-family: Calibri;font-size: small"> </span></strong></td>
+<td width="80"><strong><span style="font-size: small"><span style="font-family: Calibri">Calendar </span></span></strong></td>
+<td width="19"><strong><span style="font-family: Calibri;font-size: small"> </span></strong></td>
+<td width="168"><strong><span style="font-family: Calibri;font-size: small">Special Content</span></strong></td>
+</tr>
+<tr>
+<td width="110" height="20"><span style="font-family: Calibri;font-size: small">Basic Page</span></td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">British Portrait Miniature Artist</span></td>
+<td width="19"> </td>
+<td width="80"><span style="font-family: Calibri;font-size: small">Exhibition</span></td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Affiliate Group</span></td>
+</tr>
+<tr>
+<td width="110" height="20"><span style="font-family: Calibri;font-size: small">Blog Post</span></td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Collection Department</span></td>
+<td width="19"> </td>
+<td width="80"><span style="font-family: Calibri;font-size: small">Film</span></td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Annual Report</span></td>
+</tr>
+<tr>
+<td width="110" height="20"><span style="font-family: Calibri;font-size: small">Card Landing Page</span></td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Contact</span></td>
+<td width="19"> </td>
+<td width="80"><span style="font-family: Calibri;font-size: small">Hosted Event</span></td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Art Object</span></td>
+</tr>
+<tr>
+<td width="110" height="20"><span style="font-family: Calibri;font-size: small">Document</span></td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Curator</span></td>
+<td width="19"> </td>
+<td width="80"><span style="font-family: Calibri;font-size: small">Lecture</span></td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Art to Go Program</span></td>
+</tr>
+<tr>
+<td width="110" height="20"><span style="font-family: Calibri;font-size: small">Panel</span></td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Daily Special</span></td>
+<td width="19"> </td>
+<td width="80"><span style="font-family: Calibri;font-size: small">Other Event</span></td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Collection in Focus Article</span></td>
+</tr>
+<tr>
+<td width="110" height="20"><span style="font-family: Calibri;font-size: small">Webform</span></td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Facilitator</span></td>
+<td width="19"> </td>
+<td width="80"><span style="font-family: Calibri;font-size: small">Performance</span></td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Distance Learning Program</span></td>
+</tr>
+<tr>
+<td width="110" height="20"> </td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Featured Item</span></td>
+<td width="19"> </td>
+<td width="80"><span style="font-family: Calibri;font-size: small">Special Event</span></td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Donor Circle Level</span></td>
+</tr>
+<tr>
+<td width="110" height="20"> </td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Gallery or Space</span></td>
+<td width="19"> </td>
+<td width="80"><span style="font-family: Calibri;font-size: small">Tour</span></td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">In the News Article</span></td>
+</tr>
+<tr>
+<td width="110" height="20"> </td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Gallery View</span></td>
+<td width="19"> </td>
+<td width="80"> </td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">In-house Education Program</span></td>
+</tr>
+<tr>
+<td width="110" height="20"> </td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Map</span></td>
+<td width="19"> </td>
+<td width="80"> </td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Internship Opportunity</span></td>
+</tr>
+<tr>
+<td width="110" height="34"> </td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Sponsor</span></td>
+<td width="19"> </td>
+<td width="80"> </td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Job/Employment Opportunity</span></td>
+</tr>
+<tr>
+<td width="110" height="20"> </td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Sponsor Block</span></td>
+<td width="19"> </td>
+<td width="80"> </td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Member Magazine</span></td>
+</tr>
+<tr>
+<td width="110" height="20"> </td>
+<td width="19"> </td>
+<td width="185"><span style="font-family: Calibri;font-size: small">Wallpaper</span></td>
+<td width="19"> </td>
+<td width="80"> </td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Membership Level</span></td>
+</tr>
+<tr>
+<td width="110" height="20"> </td>
+<td width="19"> </td>
+<td width="185"> </td>
+<td width="19"> </td>
+<td width="80"> </td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">News Article</span></td>
+</tr>
+<tr>
+<td width="110" height="20"> </td>
+<td width="19"> </td>
+<td width="185"> </td>
+<td width="19"> </td>
+<td width="80"> </td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">News Release</span></td>
+</tr>
+<tr>
+<td width="110" height="20"> </td>
+<td width="19"> </td>
+<td width="185"> </td>
+<td width="19"> </td>
+<td width="80"> </td>
+<td width="19"> </td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Personal Story</span></td>
+</tr>
+<tr>
+<td width="110" height="21"><span style="font-family: Calibri;font-size: small"> </span></td>
+<td width="19"><span style="font-family: Calibri;font-size: small"> </span></td>
+<td width="185"><span style="font-family: Calibri;font-size: small"> </span></td>
+<td width="19"><span style="font-family: Calibri;font-size: small"> </span></td>
+<td width="80"><span style="font-family: Calibri;font-size: small"> </span></td>
+<td width="19"><span style="font-family: Calibri;font-size: small"> </span></td>
+<td width="168"><span style="font-family: Calibri;font-size: small">Volunteer Opportunity</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 2: CMA Content Types as of April 2013</strong></p>
+<h3>Support for Gallery One and ArtLens</h3>
+<p>As the museum’s Gallery One and ArtLens projects progressed to the functional-design phase in early 2012, it became clear that the CMA public website would need to provide two vital support services for these art and technology initiatives:</p>
+<ol>
+<li>Feed a list of the current day’s exhibitions and events/programming for display in the ArtLens, including a identifying image, title, time, venue/room, and a brief description.</li>
+<li>Provide a destination for social-media shares of visitors’ favorite art objects, from interactives throughout Gallery One and from the ArtLens. Ideally, this would be a complete description of the art, with images and all related media.</li>
+</ol>
+<p>The Sitecore implementation could not support either of these requirements, which put a hard end date on the website migration to Drupal. The website would have to be operating with the new back end by 12-12-12, the Gallery One donor opening gala. Collections Online re-implementation and the calendar module became the immediate development priorities for CMA’s in-house web developer and vendor partners.</p>
+<h3>Implementation Plan for Back end Development and Migration</h3>
+<p>With an immovable deadline in place and the level of complexity of the project, the IMTS director decided to engage an expert advisor/development firm to work with the in-house web developer, providing depth of experience for module choice and best-practice approaches to the server setup, module choice, content-type definition, migration and non-standard functionality approach. The intention was a cooperative effort, with the expert advisor serving as a mentor/trainer to bring our in-house web developer up to expert level, comfortable with every aspect of the website and able to take over administration and development.</p>
+<p>The museum’s online branding had to be maintained. The Drupal implementation allowed the museum to add new functional elements while maintaining the overall look and feel of the CMA website would remain. Theming would consist of careful mimicry, with design-consistent accommodations. The migration started with a thorough review of the in-house needs assessment and candidate content-type list, and setup with git and unfuddle for code- and task management. Drupal modules to support specific functionality needs were identified and installed (and of course, added to over time):</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="10%"><strong><span style="font-family: Calibri">Module</span></strong></td>
+<td valign="top" width="21%"><strong><span style="font-family: Calibri">Description</span></strong></td>
+<td valign="top" width="30%"><strong><span style="font-family: Calibri">Use</span></strong></td>
+<td valign="top" width="37%"><strong><span style="font-family: Calibri">URL</span></strong></td>
+</tr>
+<tr>
+<td valign="top" width="10%"><span style="font-family: Calibri">Views</span></td>
+<td valign="top" width="21%"><span style="font-family: Calibri">customized sortable formatted lists of content or fields based on field value comparisons</span></td>
+<td valign="top" width="30%"><span style="font-family: Calibri">We use Views for: calendar day, today&#8217;s events, customized page-level event listings, card decks, job opportunities, membership levels, document repositories, etc.</span></td>
+<td valign="top" width="37%"><span style="text-decoration: underline"><span style="font-family: Calibri">http://drupal.org/project/views</span></span></td>
+</tr>
+<tr>
+<td valign="top" width="10%"><span style="font-family: Calibri">Field Collection</span></td>
+<td valign="top" width="21%"><span style="font-family: Calibri">blocks of common information with common display needs across content types</span></td>
+<td valign="top" width="30%"><span style="font-family: Calibri">We use Field Collection for: card fields, page banner fields, common event fields, art object images, etc.</span></td>
+<td valign="top" width="37%"><span style="text-decoration: underline"><span style="font-family: Calibri">http://drupal.org/project/field_collection</span></span></td>
+</tr>
+<tr>
+<td valign="top" width="10%"><span style="font-family: Calibri">Features</span></td>
+<td valign="top" width="21%"><span style="font-family: Calibri">&#8220;codified&#8221; (i.e., made into code) groups of common &#8220;features&#8221; (i.e., node types, views, pages, settings)</span></td>
+<td valign="top" width="30%"><span style="font-family: Calibri">We use Features for: multiple-developer environments, reverting back to stable code while developing, providing a platform to custom code, updating production environment from development server (with git)</span></td>
+<td valign="top" width="37%"><span style="text-decoration: underline"><span style="font-family: Calibri">http://drupal.org/project/features</span></span></td>
+</tr>
+<tr>
+<td valign="top" width="10%"><span style="font-family: Calibri">Display Suite</span></td>
+<td valign="top" width="21%"><span style="font-family: Calibri">custom display modes for cross-site use</span></td>
+<td valign="top" width="30%"><span style="font-family: Calibri">We use Display Suite for: field level displays, including custom PHP, specific wording for links (e.g., &#8220;view African Art in the collection”), standardizing document download links, providing different display modes for event lists and field collections (e.g., films and performances have ticket links at top)</span></td>
+<td valign="top" width="37%"><span style="text-decoration: underline"><span style="font-family: Calibri">http://drupal.org/project/ds</span></span></td>
+</tr>
+<tr>
+<td valign="top" width="10%"><span style="font-family: Calibri">Panelizer</span></td>
+<td valign="top" width="21%"><span style="font-family: Calibri">Customizes panel displays on any node</span></td>
+<td valign="top" width="30%"><span style="font-family: Calibri">We use Panelizer for customizing basic pages from a default configuration for content and layout &#8211; developers can add panels containing views, nodes, menus, custom PHP code, etc.</span></td>
+<td valign="top" width="37%"><span style="text-decoration: underline"><span style="font-family: Calibri">http://drupal.org/project/panelizer</span></span></td>
+</tr>
+<tr>
+<td valign="top" width="10%"><span style="font-family: Calibri">Migrate</span></td>
+<td valign="top" width="21%"><span style="font-family: Calibri">migrate/import content from a file/website/database to Drupal</span></td>
+<td valign="top" width="30%"><span style="font-family: Calibri">We use(d) Migrate for: importing Sitecore data from CSV files, import articles from WordPress blog, weekly refresh of Art Objects from Piction database</span></td>
+<td valign="top" width="37%"><span style="text-decoration: underline"><span style="font-family: Calibri">http://drupal.org/project/migrate</span></span></td>
+</tr>
+<tr>
+<td valign="top" width="10%"><span style="font-family: Calibri">Search modules</span></td>
+<td valign="top" width="21%"><span style="font-family: Calibri">Search API, Apache Solr, Facet API, Nodequeue</span></td>
+<td valign="top" width="30%"><span style="font-family: Calibri">We use search modules for general search capability and enhanced collection search</span></td>
+<td valign="top" width="37%">http://drupal.org/project/search_api<br />
+http://drupal.org/project/apachesolr<br />
+http://drupal.org/project/facetapi<br />
+http://drupal.org/project/nodequeue</td>
+</tr>
+<tr>
+<td valign="top" width="10%"><span style="font-family: Calibri">Menu modules</span></td>
+<td valign="top" width="21%"><span style="font-family: Calibri">Menu, Menu Block, Rendered Menu (sandbox module)</span></td>
+<td valign="top" width="30%"><span style="font-family: Calibri">We use menu modules for general menus, page-level menus of menu-peer items, rendered menu displays and dynamic menus built from views.</span><span style="font-size: small"><span style="font-family: Calibri"> Menu is core module</span></span></td>
+<td valign="top" width="37%">http://drupal.org/project/menu_block<br />
+http://drupal.org/sandbox/tim.plunkett/1688232</td>
+</tr>
+<tr>
+<td valign="top" width="10%"><span style="font-family: Calibri">Services modules</span></td>
+<td valign="top" width="21%"><span style="font-family: Calibri">Services, Services Views, REST Server</span></td>
+<td valign="top" width="30%"><span style="font-family: Calibri">We use services modules to make specific data available for display in iPad application, ArtLens</span></td>
+<td valign="top" width="37%">http://drupal.org/project/services<br />
+http://drupal.org/project/services_views<br />
+http://drupal.org/project/rest_server</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 3: Key Drupal Modules Implemented</strong></p>
+<p>The choice to engage an out-of-state firm complicated the mentoring, and made the practical exchange of nuanced information about the museum&#8217;s web content and required functionalities difficult. Yet despite the difficulties encountered along the way, the end product is very exciting.</p>
+<h3>Responsive Design and a First Pass at Mobile Device Support</h3>
+<p>The museum had set aside small capital budget line in 2011 to pilot a mobile website. IMTS and Piction had piloted a mobile website for art-object access (a sleek, scaled down Collection Online), as a precursor to drafting the scope of work for the ArtLens.</p>
+<p>The expert advisors brought in for the Sitecore-to-Drupal migration suggested incorporating responsive design into the theming, to develop a single interface that adapted (stretched and collapsed across various pre-defined width breakpoints) for display via desktop browser windows, tablets and minis, and smartphones.</p>
+<h3>Expansion of the e-Commerce Portal</h3>
+<p>In a parallel project to the website migration, IMTS, the WSC Transactions subcommittee, and the Education and Interpretation department worked together with vendor partner, The Opal Group, to expand the portal functionality to include:</p>
+<ul>
+<li>An easy-to use RSVP module for unticketed events, including membership sneak-previews.</li>
+<li>A context-sensitive form for group registrations for special exhibition group tours, school tours and classroom experiences, and art-to-go requests.</li>
+</ul>
+<p>These new transactions are recorded in the Central Table suite, to add to the history/statistics.</p>
+<h3>Launch</h3>
+<p>Nine hours before the Gallery One opening and ArtLens launch on December 12, 2012, the IMTS department flipped the DNS switch to allow the new Drupal-based website to take over www.clevelandart.org, and conducted a frantic round of ‘Hail Mary’ testing to ensure that all the integration stuck; shared art objects successfully launched the correct website pages from e-mail, Facebook, and Twitter; and the feed for the Today calendar on ArtLens proclaimed the opening-day events as the clock ticked past midnight, just as expected.</p>
+<p>The website implementation team took a deep breath, set up triage, and immediately launched into shakedown mode for the Drupal-based website:</p>
+<ul>
+<li>Online visitors called almost immediately to report issues with Internet Explorer 8 on Windows XP (related to IE7 not supporting responsive design) and Chrome (image-card caching), which required immediate attention.</li>
+<li>Curatorial staff identified several glitches with the untested Collection Online.</li>
+<li>Several peripheral content areas still needed to be built and converted, including the British Portrait Miniatures Catalog electronic publication, the museum’s Nazi-era provenance database, and a new Teacher Resource Center of lesson plans and downloadable classroom aids.</li>
+<li>The Design department started its in-depth review of the complex theming implementation, so the in-house Web Developer could pull everything up to spec and add additional styles for new content types and functionality.</li>
+</ul>
+<p>With the entire website migration budget spent (and then some), the museum now relied solely on its in-house web developer and the applications team.<br />
+A complete timeline of the implementation is available in the Appendix below.</p>
+<h2>4. Planning to Soar (Phase 3)</h2>
+<h3>Distributing Responsibility for Website Content</h3>
+<p>The museum’s content gatekeeper experiment proved successful for the internal staff intranet: variety and currency of content improved, with minimal “hands on” oversight from Marketing and Communications. Twelve new content gatekeepers identified for the public website will be trained in May 2013 to take over content development and maintenance responsibilities, freeing the web editors to become true oversight editors, and concentrate on promotion through homepage/campaign development and SEO. The approval process to be used for content created outside the Marketing and Communications department will also be finalized and implemented with Drupal module support and appropriate training.</p>
+<h3>Mobile Device Support</h3>
+<p>The responsive-design menu collapse machinery built into the Drupal theming provides a useful base for the support of tablet devices and high-resolution minis. Upon review and testing, the smartphone presentation of the responsive design is not as user friendly: the dual column of cards offered for navigation is awkward to scroll and select with the thumb, and the availability of the fully-collapsed menu is confusing when opened; the scrolling required is practically endless.</p>
+<p>Design staff and IMTS proposed a simple, more app-like approach for the narrowest breakpoint in the responsive design (e.g., for smartphones): remove the collapsing menus; render the navigation as ladder-like, full-width buttons using theming similar to that already developed for the ArtLens calendar feed; and make use of the browser’s back button (for return) and CMA logo (as an intuitive “home” button). Graphic elements would be limited: two rotators on the smartphone homepage (for major exhibitions and featured events), and mini-thumbs on the buttons, rather than full-image cards. This approach should sidestep many of the layering issues in older iOS and Android OS devices.</p>
+<p>A rework of the responsive design to support stretch-and-collapse for desktop browsers and tablets, and provide an alternate, streamlined presentation for smartphones is currently underway and an in-house development project.</p>
+<h3>SEO Implementation</h3>
+<p>During the need-assessment phase, the Marketing &amp; Communications department determined that search engine optimization (SEO) was their top priority. The architecture of the original Sitecore implementation did not support crawlers beyond the card-deck navigation (which contained only titles), and paths for the meaty content pages were hidden even when aliased. For more than two years, the CMA had effectively disappeared from Google, Yahoo, and Bing. The public could not find our art or events without going to the website itself.</p>
+<p>After the initial push to set up content types and accommodate legacy data in the “open for crawlers” Drupal system, IMTS started looking at taking the next step to true SEO, and identified a set of Drupal modules to support this effort:</p>
+<table border="0" cellspacing="0" cellpadding="0">
+<thead>
+<tr>
+<td valign="top"><strong><span style="font-family: Calibri">Module</span></strong></td>
+<td valign="top"><strong><span style="font-family: Calibri">Description</span></strong></td>
+<td valign="top"><strong><span style="font-family: Calibri">URL</span></strong></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td valign="top"><span style="font-family: Calibri">Meta Tags</span></td>
+<td valign="top"><span style="font-family: Calibri">Automatically provides structured metadata about site content</span></td>
+<td valign="top"><a href="http://drupal.org/project/metatag"><span style="text-decoration: underline"><span style="font-family: Calibri;color: #0000ff">http://drupal.org/project/metatag</span></span></a></td>
+</tr>
+<tr>
+<td valign="top"><span style="font-family: Calibri">schema.org </span></td>
+<td valign="top"><span style="font-family: Calibri">Provides “rich bits” for use by Google, Yahoo, and Bing, to improve the display of search results</span></td>
+<td valign="top"><a href="http://drupal.org/project/schemaorg"><span style="text-decoration: underline"><span style="font-family: Calibri;color: #0000ff">http://drupal.org/project/schemaorg</span></span></a></td>
+</tr>
+<tr>
+<td valign="top"><span style="font-family: Calibri">XML Site Map</span></td>
+<td valign="top"><span style="font-family: Calibri">Creates a formatted sitemap to optimize crawling, and keep indexed results up to date</span></td>
+<td valign="top"><a href="http://drupal.org/project/xmlsitemap"><span style="text-decoration: underline"><span style="font-family: Calibri;color: #0000ff">http://drupal.org/project/xmlsitemap</span></span></a></td>
+</tr>
+<tr>
+<td valign="top"><span style="font-family: Calibri">RobotsTXT</span></td>
+<td valign="top"><span style="font-family: Calibri">Allows management of the robots.txt file via Drupal, to tell crawlers what site content to bypass/ignore</span></td>
+<td valign="top"><a href="http://drupal.org/project/robotstxt"><span style="text-decoration: underline"><span style="font-family: Calibri;color: #0000ff">http://drupal.org/project/robotstxt</span></span></a></td>
+</tr>
+<tr>
+<td valign="top"><span style="font-family: Calibri">Drupal SEO Essentials</span></td>
+<td valign="top"><span style="font-family: Calibri">Manages installation and configuration of core SEO modules</span></td>
+<td valign="top"><a href="http://drupal.org/project/seo"><span style="text-decoration: underline"><span style="font-family: Calibri;color: #0000ff">http://drupal.org/project/seo</span></span></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 4: Drupal SEO modules</strong></p>
+<p>IMTS and WSC Branding subcommittee are working in partnership with the museum’s advertising firm to determine and implement a set of best practices for the content-side of SEO: definition of paths and aliases, wording of page titles and page descriptions, and optimization of the site map presented. The Marketing &amp; Communications department will oversee keywording, coordinated for all major campaigns, and provide analysis of those efforts. IMTS will set up a comprehensive dashboard for website analysis for the WSC to review at will, and incorporate SEO best practices into Content Gatekeeper training.</p>
+<h3>Expansion of e-Commerce Portal</h3>
+<p>The plan for expanding the website e-commerce / transaction portal includes:</p>
+<ul>
+<li>Integration with the museum’s institutional scheduling system, Artifax, to dynamically display room reservations/use for public events throughout the museum.</li>
+<li>Addition of full-function ticketing functionality, including support for series and seat choice, membership subscriptions and renewals, online donations, and event tickets within a single transaction. Ticket delivery methods include will call, print-at-home, send-ticket to mobile device, and true ticketless (verified onsite with a scan of membership card or driver’s license).</li>
+</ul>
+<h3>Expansion of Collection Online</h3>
+<p>Driven by the director’s initiative to take scholarship to the next level at the museum and provide world-class resources for researchers, the plan to enhance and expand the Collection Online is ambitious and exiting:</p>
+<ul>
+<li>Addition of Zoomify to the art-object image viewer, for all available views (exclusive of the Contemporary collection).</li>
+<li>Full tagging functionality based on the Steve model (http://steve.museum) will be added to art-object detail pages, and perhaps later tied to specific views of the object. Access to the tagging interface will not require login, and tags provided will be fed back to the museum’s CCMS.</li>
+<li>Expansion of the Collection Online discovery engine, through the expansion of available facets for search refinement, the addition of new data of art objects (e.g., provenance, research bibliography, etc.), and the integration of content from editorial photography, the museum archives, and the library catalog.</li>
+<li>Support for visitor-defined tours (e.g., lists/personal collections of selected art objects, associated with a title), defined from ArtLens or defined directly on the website. Tours must be viewable both on the website in desktop mode, and via the visitor’s mobile device.</li>
+<li>Support for creation of downloadable slideshows for registered educators (e.g., lists/groupings of selected art objects and their captions, sorted in a specific order).</li>
+</ul>
+<div id="attachment_4126" style="width: 594px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2013/02/krause.fig13.gif"><img aria-describedby="caption-attachment-4126" loading="lazy" class="size-large wp-image-4126" alt="The phase II art-object detail page, as wireframed, showing the related content area (tabbed), tagging interface, and expanded descriptions. Note that when the Description area is closed, the tagger is right next to the art, for easy use. Photo by CMA." src="../../wp-content/uploads/2013/02/krause.fig13-1024x873.gif" width="584" height="497" srcset="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig13-1024x873.gif 1024w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig13-300x255.gif 300w, https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/02/krause.fig13-351x300.gif 351w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-4126" class="wp-caption-text">The phase II art-object detail page, as wireframed, showing the related content area (tabbed), tagging interface, and expanded descriptions. Note that when the Description area is closed, the tagger is right next to the art, for easy use. Photo by CMA.</p></div>
+<h2>5. Conclusion</h2>
+<p>While the prospect of migrating to an entirely new content management system and immediately going live with a complex new website may seem like the unlikeliest of scenarios, CMA determined through careful consideration to make just such a move. By carefully evaluating all possible avenues—including working to fix and enhance the existing Sitecore installation—the IMTS team hired a Drupal expert advisor/development firm to guide the migration of the existing site to an self-hosted server that the in-house web developer would then maintain and continue to develop with the support of the CMA application and network managers. Considering the long-term costs of the Sitecore site, and the improved functionality and flexibility available with Drupal, the decision was simple.</p>
+<p>Online visitors have seen two solid years of frequent, small improvements: evolution, rather than an extinction-level event and the sudden emergence a fully-formed new website. The technical execution of the website’s transformation occurred in sprints, with a variety of short-term functional improvements being developed and deployed on the Sitecore platform, even as construction proceeded on the new Drupal back end. Intellectual changes made to content, its organization, and the main menu structure carried over seamlessly during transition with no wasted effort.</p>
+<h2>Acknowledgements</h2>
+<p>Thanks to the members of the Web Steering Committee (Elizabeth Bolander, Carla Howard and Denise Grcevich, Dale Hilton, Betsy Lantz, Aaron Petersal, Jeffrey Strean, Mary Suzor) and its hardworking subcommittees (especially Jon Seydl, Elizabeth Saluk, Dean Yoder, and Susan Miller), the IMTS Applications Team (including in-house web developer Jeanne DeBonis, Linda Wetzel, Will Hannah, and Andrea Bour), and the Web Editors (Tom Barnard, Kyle Miers, and proto-gatekeeper Michael McKay). Special thanks also to our dedicated vendor partners for this effort: Piction (Erick Kendrick, Marcelle Kratochvil, Marty Channon), The Opal Group (Jim Kilmer), and Big River (Ron Cass).</p>
+<h2>Appendix: Sitecore-to-Drupal Migration Timeline</h2>
+<div>
+<table border="0" cellspacing="0" cellpadding="0">
+<thead>
+<tr>
+<td valign="top" width="128"><strong>Date</strong></td>
+<td valign="top" width="496"><strong>Milestone</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td valign="top" width="128">November 2009</td>
+<td valign="top" width="496">Pentagram website design accepted by Board of TrusteesSitecore build-out begins for core website</td>
+</tr>
+<tr>
+<td valign="top" width="128">February 2010</td>
+<td valign="top" width="496">Collection Online component of Sitecore website spec’d</td>
+</tr>
+<tr>
+<td valign="top" width="128">March 2010</td>
+<td valign="top" width="496">CMA begins manual content entry into Sitecore</td>
+</tr>
+<tr>
+<td valign="top" width="128">May 2010</td>
+<td valign="top" width="496">Sitecore website goes live on hosted servers, maintained by developer</td>
+</tr>
+<tr>
+<td valign="top" width="128">August 2010</td>
+<td valign="top" width="496">Sitecore website moved to in-house servers, maintained by developer</td>
+</tr>
+<tr>
+<td valign="top" width="128">March 2011</td>
+<td valign="top" width="496">Website leadership moved from Marketing to IT</td>
+</tr>
+<tr>
+<td valign="top" width="128">May 2011</td>
+<td valign="top" width="496">Web Steering Committee / Subcommittees established areas of concern identified for general usability areas of concern identified for transaction-based features.<br />
+Planning begins for in-house maintenance/development</td>
+</tr>
+<tr>
+<td valign="top" width="128">June 2011</td>
+<td valign="top" width="496">Content Gatekeeper plan proposed</td>
+</tr>
+<tr>
+<td valign="top" width="128">August 2011</td>
+<td valign="top" width="496">in-house Web Developer hired</td>
+</tr>
+<tr>
+<td valign="top" width="128">September 2011</td>
+<td valign="top" width="496">interim adjustments to Collection Online search function in Piction+Sitecore</td>
+</tr>
+<tr>
+<td valign="top" width="128">December 2011</td>
+<td valign="top" width="496">search results page re-implemented in Sitecore (back button functionality)</td>
+</tr>
+<tr>
+<td valign="top" width="128">November 2011</td>
+<td valign="top" width="496">main navigation menu overhaul in Sitecore</td>
+</tr>
+<tr>
+<td valign="top" width="128">April 2012</td>
+<td valign="top" width="496">rotators added to Sitecore; homepage coverage expandsinternal needs assessment conducted, content types identified</td>
+</tr>
+<tr>
+<td valign="top" width="128">May 2012</td>
+<td valign="top" width="496">discovery project for fast-track Drupal development</td>
+</tr>
+<tr>
+<td valign="top" width="128">June 2012</td>
+<td valign="top" width="496">Advancement department reworks entire ‘support’ section; expert advisor retained for fast-track Drupal development</td>
+</tr>
+<tr>
+<td valign="top" width="128">July 2012</td>
+<td valign="top" width="496">new web servers set up for Drupal development; content types reviewed and mappedDrupal buildout begins with expert advisor and in-house Web Developer responsive-design wireframes reviewed</td>
+</tr>
+<tr>
+<td valign="top" width="128">August 2012</td>
+<td valign="top" width="496">redesign for Collection Online accepted by WSC</td>
+</tr>
+<tr>
+<td valign="top" width="128">September 2012</td>
+<td valign="top" width="496">conversion of Sitecore data, WordPress blog begins</td>
+</tr>
+<tr>
+<td valign="top" width="128">October 2012</td>
+<td valign="top" width="496">expert advisor trains in-house Wed Designer (during Hurricane Sandy)</td>
+</tr>
+<tr>
+<td valign="top" width="128">November 2012</td>
+<td valign="top" width="496">Education &amp; Interpretation reworks entire ‘learn’ sectionUser Functionality proposes new ‘research’ sectionsimultaneous data entry begins in Sitecore+Drupal for new content</td>
+</tr>
+<tr>
+<td valign="top" width="128">December 2012</td>
+<td valign="top" width="496">initial Piction standing migration for Collection Online on Drupal-based system completed; skeletal Drupal website goes live, incorporating blog content, Collection Online, and incomplete mobile site; Gallery One and ArtLens integration tested, goes live immediately; triptych rotators added to Drupal; partial homepage available; IE8 backward compatibility crisis; expert advisor exits project</td>
+</tr>
+<tr>
+<td valign="top" width="128">January 2013</td>
+<td valign="top" width="496">legacy data conversion continuesbasic theming corrections mademultiple Drupal views added, basic functionality corrected/completed; related pages/documents functionality added; autopath + globalredirect Drupal modules added; path review begins</td>
+</tr>
+<tr>
+<td valign="top" width="128">February 2013</td>
+<td valign="top" width="496">site search and results display upgradeddate-related sorting and display re-implemented (calendar); Collection Online search and display upgraded; artist index added</td>
+</tr>
+<tr>
+<td valign="top" width="128">March 2013</td>
+<td valign="top" width="496">‘research’ section implemented; banner slideshows re-implemented to support HTML captionsreusable sponsor blocks added to structure/theming; single-card rotators added to Drupal; homepage complete; Piction standing migration for collection online re-implemented, refined; mobile site design fleshed out; re-implementation begins; SEO implementation plan drafted; Drupal SEO modules identified</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: left"><strong>Table 5: Sitecore-to-Drupal Migration Timeline</strong></p>
+</div>
+
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+J. Alexander and N. Krause, Migrating a Complex Museum Website from a Commercial CMS to Drupal. In <i>Museums and the Web 2013</i>, N. Proctor & R. Cherry (eds). Silver Spring, MD: Museums and the Web. Published April 4, 2013. Consulted <script type="text/javascript">document.write(full_date);</script> <!-- April 23, 2022 -->.<br />
+https://mw2013.museumsandtheweb.com/paper/migrating-a-complex-museum-website-from-a-commercial-cms-to-drupal/<br /><br /><hr>
+<!-- 
+<script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js'></script>
+<script type="text/javascript">
+var tz = jstz.determine();
+tz.name();
+</script>
+
+
+<script type="text/javascript">document.write(tz.name()); 
+</script>UTCApril 23, 2022-->
+
+	<div id="comments">
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="../../wp-loginc396.html?redirect_to=https%3A%2F%2Fmw2013.museumsandtheweb.com%2Fpaper%2Fmigrating-a-complex-museum-website-from-a-commercial-cms-to-drupal%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+</div><!-- #content -->
+</div><!-- #primary -->
+
+
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-2" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br>
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-3" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br>
+703 Dale Drive<br>
+Silver Spring MD 20910 USA<br>
+info@museumsandtheweb.com</div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+			<div id="site-generator">
+								<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mw2013.museumsandtheweb.com/paper/migrating-a-complex-museum-website-from-a-commercial-cms-to-drupal/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:50:16 GMT -->
+</html>

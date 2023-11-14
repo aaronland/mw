@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw18.mwconf.org/paper/more-than-views-diving-into-video-analytics-beyond-view-counts/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:28:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<script src="https://use.typekit.net/yhd3uya.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>More than views: Diving into video analytics beyond view counts &#8211; MW18: Museums and the Web 2018</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; More than views: Diving into video analytics beyond view counts Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw18.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='cookie-notice-front-css'  href='../../wp-content/plugins/cookie-notice/css/front.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='spacexchimp_p005-bootstrap-tooltip-css-css'  href='../../wp-content/plugins/social-media-buttons-toolbar/inc/lib/bootstrap-tooltip/bootstrap-tooltipe6e5.css?ver=4.67' media='all' />
+<link rel='stylesheet' id='spacexchimp_p005-frontend-css-css'  href='../../wp-content/plugins/social-media-buttons-toolbar/inc/css/frontende6e5.css?ver=4.67' media='all' />
+<style id='spacexchimp_p005-frontend-css-inline-css'>
+
+                    .sxc-follow-buttons {
+                        text-align: center !important;
+                    }
+                    .sxc-follow-buttons .sxc-follow-button,
+                    .sxc-follow-buttons .sxc-follow-button a,
+                    .sxc-follow-buttons .sxc-follow-button a img {
+                        width: 64px !important;
+                        height: 64px !important;
+                    }
+                    .sxc-follow-buttons .sxc-follow-button {
+                        margin: 5px !important;
+                    }
+                  
+</style>
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login287b.css?ver=1604077068' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-conference/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-conference/style3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<script id='cookie-notice-front-js-extra'>
+var cnArgs = {"ajaxUrl":"https:\/\/mw18.mwconf.org\/wp-admin\/admin-ajax.php","nonce":"ccedfb3d0d","hideEffect":"fade","position":"bottom","onScroll":"0","onScrollOffset":"100","onClick":"0","cookieName":"cookie_notice_accepted","cookieTime":"31536000","cookieTimeRejected":"2592000","cookiePath":"\/","cookieDomain":"","redirection":"0","cache":"0","refuse":"0","revokeCookies":"0","revokeCookiesOpt":"automatic","secure":"1","coronabarActive":"0"};
+</script>
+<script src='../../wp-content/plugins/cookie-notice/js/front.min9e1e.js?ver=1.3.2' id='cookie-notice-front-js'></script>
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script src='../../wp-content/plugins/social-media-buttons-toolbar/inc/lib/bootstrap-tooltip/bootstrap-tooltipe6e5.js?ver=4.67' id='spacexchimp_p005-bootstrap-tooltip-js-js'></script>
+<!--[if lt IE 9]>
+<script src='https://mw18.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index9f3f.html?p=2554' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed4b0f.json?url=https%3A%2F%2Fmw18.mwconf.org%2Fpaper%2Fmore-than-views-diving-into-video-analytics-beyond-view-counts%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed003d?url=https%3A%2F%2Fmw18.mwconf.org%2Fpaper%2Fmore-than-views-diving-into-video-analytics-beyond-view-counts%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-conference/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-2554 wp-embed-responsive cookies-not-set">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+			<div class="site-branding">
+				<a href="../../index.html" class="custom-logo-link" rel="home" itemprop="url"><img width="80" height="80" src="../../wp-content/themes/mw-conference/images/mw-logo-red-sm.png" class="custom-logo" alt="" itemprop="logo" /></a>			
+			</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p><a href="../../index.html" rel="home">MW18: Museums and the Web 2018</a><span>Vancouver, Canada &#8211; April 18-21 2018</span></p>
+								<form class="search-form" role="search" method="get" action="https://mw18.mwconf.org/">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-container"><ul id="menu-menu" class="primary-menu"><li id="menu-item-464" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-464"><a href="http://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-6"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="../../faq/index.html">Conference FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-514"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382"><a href="../../local-information-and-accommodation/index.html">Hotel and Accommodation</a></li>
+	<li id="menu-item-1132" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1132"><a href="https://www.tourismvancouver.com/museums-and-the-web/">Local Information</a></li>
+	<li id="menu-item-1991" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1991"><a href="../../museum-crawl/index.html">Museum Crawl</a></li>
+	<li id="menu-item-403" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-403"><a href="../../travel-requirements/index.html">Canadian Travel Requirements</a></li>
+	<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="../../volunteering/index.html">Volunteering</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../scholarships/index.html">Scholarships</a></li>
+</ul>
+</li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-38"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43"><a href="../../call-for-proposals/index.html">Call for Proposals</a>
+	<ul class="sub-menu">
+		<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+		<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	</ul>
+</li>
+	<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-75"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="../../advertising/index.html">Advertising</a></li>
+	<li id="menu-item-1133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1133"><a href="../../exhibiting-information/index.html">Exhibit Hall Information</a></li>
+</ul>
+</li>
+<li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-95"><a href="../../index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-542"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-2887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2887"><a href="../../presentations/index.html">Presentations</a></li>
+	<li id="menu-item-2973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2973"><a href="../../papers/index.html">Papers</a></li>
+	<li id="menu-item-467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-96"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2790"><a href="../../glami-finalists/index.html">GLAMi Finalists</a></li>
+	</ul>
+</li>
+	<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="../../mwx/index.html">MWX 2018</a></li>
+</ul>
+</li>
+</ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+		<section id="page-hero">
+		<div class="background"> </div>
+	</section>
+
+	<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];		    
+	jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw18.mwconf.org/wp-content/themes/mw-conference/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-2554" class="post-2554 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">More than views: Diving into video analytics beyond view counts</h1>
+
+<p><a target="_blank" href="https://www.museweb.net/member/jmunar/">Jonathan Munar</a>, Art21, USA</p>
+
+<h2>Abstract</h2>
+View counts are universally accepted as an important metric when analyzing video viewership. Views are easy to measure and easy to understand for all stakeholders. But developing a meaningful understanding of video performance and potential comes from metrics well beyond just view counts.
+
+While view counts are considered a measure of success or popularity, there are layers of additional metrics from which we can extract valuable insights to help inform key decisions and strategies. This analysis can, in turn, help to improve overall video viewership.
+
+An understanding of video analytics provides value across a video’s entire workflow chain. Video producers, content managers, and marketing specialists alike can benefit from knowing how to analyze data and act upon trends—influencing the production, distribution, and promotion of video content.
+
+In this how-to session, we will look at video viewership data across some of the more widely-used platforms, with a focus on YouTube and Google Analytics toolsets.
+
+Attendees will learn basic to intermediate approaches for identifying key viewership metrics. We will review strategies for using data and analysis to help inform production, distribution, and marketing decisions. As part of the investigation, we will ask questions such as the following:
+
+How much of a video did your viewers watch? Where did the viewer watch the video? How did the viewer find your video? From which devices did your viewers watch your video? How do trends vary across devices, regions, or referrals, and what might that data suggest?</p>
+<p><b>Keywords:</b> video, analytics, distribution, marketing, YouTube, Google Analytics</p>
+<h2>Introduction</h2>
+<p>How do we measure success for video content? As content producers from cultural institutions, the answer to that question is not as straightforward as it seems. Mission-driven organizations might not share the same bottom-line goals as commercial institutions; however, the approaches for measuring, analyzing, and communicating success are shared by each side.</p>
+<p>Most audiences have become accustomed to view counts as the primary indicator of success, because success is traditionally communicated by quantitative metrics&#8221; “Video X already has 1 million views.” However, what led to views—or may lead to views—is the far more important aspect to concentrate on. If we cannot understand the reasons that audiences are or are not watching our video content, then we cannot develop strategies to convert audiences into viewers.</p>
+<p>When you analyze and act on key performance metrics, the views will come.</p>
+<h2>So don’t pay attention to views?</h2>
+<p>Views are an important measurement, absolutely. After all, at the end of the day, we want to understand the reach of our video content just as much we do the quality of that reach.</p>
+<p>View counts can be considered a measurement of how effective your production, distribution, and marketing strategies are. Positive view counts mean you did something right along the way—be it an engaging topic, a compelling video title or thumbnail, or general search engine optimization. The more you invest in the types of actions that lead to views, the more views will come. So, if you’re looking to get more views, first look at the data beyond the views.</p>
+<h2>Monitor trends, but above all, tell your story</h2>
+<p>It is indeed possible to focus too much on viewer trends and analytics. The temptation to chase certain viewer habits or demographics is difficult to resist. Responsible use of viewer data requires finding the balance of the data that matters to you while still being able to tell your story. Let your story remain the driving factor in the production of your video, while analytics are there to help you most effectively relay that story to audiences.</p>
+<h2>Analytics tools</h2>
+<p>There are numerous free and paid tools to help measure and analyze video performance. For the purposes of this paper, I will focus primarily on two free and common tools that anyone can easily access: YouTube Analytics and Google Analytics.</p>
+<p>Use of Google Analytics in combination with custom video playing solutions will require a bit of setup around event tracking. For more on that, please refer to <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/events">Event Tracking for Google Analytics</a>.</p>
+<h2>Identifying key metrics</h2>
+<h3>Retention</h3>
+<p>Not every video view is equal. Where one viewer might watch 70% of a video, while another watches only 30%, each is recorded equally as a “view,” yet the qualitative value of each of those views is on opposing sides of the spectrum. Measuring the quality of a single view comes in part by analyzing how much of a viewer’s attention was captured. How much of a video did the viewer watch?</p>
+<p>Retention is a key indicator of engagement and can help inform future decisions around the editing of video content. Trends in retention times can help to analyze the performance of narrative pacing, visual appeal, and overall editing choices.</p>
+<p>Retention is perhaps the most important metric to monitor. Retention is the performance indicator for performance indicators, effectively used in combination with other metrics to determine the quality of viewership across various measurements.</p>
+<h3>Playback locations and devices</h3>
+<p>Understanding the context in which viewers discover and consume video content gives insight into audience viewing habits, as well as larger trends around general video consumption.</p>
+<p>Playback location data—such as YouTube watch pages and off-site embeds—provides key insight into where audiences are watching your video content. Off-site viewership also offers a glimpse into the influencers (e.g. social media, news sites, blogs, etc.) behind video viewership. Device information data—such as desktop computers, mobile phones, and smart televisions—give insight into the viewing conditions under which video content is consumed.</p>
+<p>Analyzing playback locations and devices, in combination with retention data, can help inform decisions around the production, distribution, and marketing of video content. For example, if a large portion of viewers are watching your video content through the YouTube app on their mobile phones, but the average retention rate amongst this group is low, then that may lead to questions about how mobile-friendly your video is. Similarly, if you maintain a high retention rate amongst the audience that watches your video through the YouTube app on their smart televisions, then that could be an indication of the television-friendly production of your video.</p>
+<h3>Traffic sources</h3>
+<p>Traffic source data provides insight into audience discovery trends. Traffic source data may include website referrals, campaign referrals, and external website embeds. For YouTube in particular, traffic source data gives channel owners a sense of how well their video content performs within the YouTube ecosystem, providing metrics around specific YouTube features such as video suggestions, playlist referrals, and use of the YouTube platform search.</p>
+<p>Analyzing traffic source data can help to inform decisions around search engine optimization, marketing, distribution, and general relationships with individual sources. For example, if a healthy share of viewership comes as a result of YouTube suggestions, then that might lead to questions about the successes of tagging, descriptive information, and other variables that might influence the scoring of a video within the YouTube algorithm. Pairing that analysis with retention data gives additional insight into the effectiveness of those SEO efforts. If a video is receiving a lot of views as a suggestion from another video, yet the average audience retention from that group is relatively low, then that may lead to questions about the validity of the video suggestion.</p>
+<h3>Region and language</h3>
+<p>Region and language data provide insight into audience geographic locations and primary languages.</p>
+<p>YouTube provides this region data at the country level, whereas Google Analytics will let you narrow down to the city level.</p>
+<p>Analyzing region and language data, in combination with retention data, can help paint a clearer picture of who our audiences are and help to inform decisions around production, marketing, and distribution. For example, for videos that relate to or target a certain geographic demographic, region data can help measure the effectiveness of those efforts.</p>
+<h2>Analyzing trends</h2>
+<p>Effective data analysis comes from the strategic combination of metrics that represent the types of situations and scenarios against which performance is measured. Below are a few common trends to monitor.</p>
+<h3>Retention across viewership scenarios</h3>
+<p>Once again, for emphasis: Retention is the single most important metric to analyze when it comes to video content. Retention tells a powerful story of how engaged a viewer is. When analyzing video performance amongst various subsets of audience, retention becomes the key indicator in comparing engagement between groups.</p>
+<p>For example, in the case of playback location report, we can analyze how engaged a YouTube user is compared to a viewer who encountered an embed from an external website. Perhaps more viewers might represent one group over the other, yet the engagement from the latter category is significantly higher. From this, we can create a narrative around the behavior of YouTube audiences in comparison to that of a specific external website.</p>
+<h3>Pageviews vs. video plays</h3>
+<p>Having audiences visit a video page is only part of the challenge in promoting video content. The next challenge is to convert that visitor into a viewer. How meaningful is that page view if the visitor didn’t end up watching the video?</p>
+<p>By measuring and analyzing the average view-to-visit rate across video pages on a website, we can  establish an average baseline against which each video’s performance can be measured over time.</p>
+<h3>Analyzing data over time</h3>
+<p>Viewership of a single video is likely to drop significantly in the days following the video’s publish. With marketing efforts winding down, and every last platform push notification sent, any eventual viewership comes as the result of discovery tools or additional marketing.</p>
+<p>By analyzing the long tail of a film, we can measure performance under purely organic conditions and begin to develop a baseline set of data for future comparisons and analysis.</p>
+<h3>Monitoring for anomalies</h3>
+<p>Spikes in activity come and go, and it’s always tempting to chalk those up as an immediate success—and rightfully so. Even if that spike in views doesn’t nearly match the average quality of views for a particular video, the spike is at least an encouraging indication of positive audience reach.</p>
+<p>With the tools available to us, we can trace the origins of viewer anomalies with an incredible degree of granularity. From where on the Web did these viewers come? Were these viewers similarly as engaged as other viewer groups? By comparing these results to a video’s lifetime baseline, we can better understand how to act upon these anomalies.</p>
+<h3>Comparing apples to apples</h3>
+<p>Be mindful of the comparisons that you draw between audiences and understand that audience habits may vary from platform to platform. When comparing video performance across your video content, be sure to consider that not all platform audiences are the same—and that audiences on your own platforms aren’t necessarily identical to those on third-party platforms.</p>
+<h2>Using data to inform strategies</h2>
+<p>Now that we have defined some key metrics and basic approaches for analysis, we can investigate how to use this information to build strategies around the production, distribution, and marketing of video content.</p>
+<h3>Analyzing for production needs</h3>
+<h4>Head, body, and tail retention</h4>
+<p>The data-minded producer will first look to retention data to help inform the overall production of future films. In terms of retention analysis, it is helpful to think of the film in three different sections: the head, the body, and the tail. Measuring retention changes at these three points gives an indication of how engaged users are at three key points during a film.</p>
+<p>The head is typically considered the first 2% of the video—a crucial segment that can make or break the quality of a view. This is the point where a viewer decides whether or not a video met their expectations or held their general attention. Watching a video is a commitment of time on the viewer’s part, regardless of length, so head retention is a particularly key data point to monitor.</p>
+<p>Significant drop offs in head retention may point to issues that can influence future decisions in the production process. Factors to consider are the use and effectiveness of opening graphics; the audio and visual settings; and general narrative and visual pacing.</p>
+<p>The body of a video is the main attraction—the 96% of the video that contains a video’s entire narrative. Analyzing retention performance here gives a good indication of a video’s overall pacing. At this point, a viewer has already committed to keep watching a video, so body retention helps to understand how well a video delivers on maintaining that commitment.</p>
+<p>Downward trends in body retention throughout the body might suggest a loss of interest to a viewer that otherwise already committed to watching a video, but careful analysis of these trends can help shape future production styles. By identifying the points where audiences are dropping off, producers can get a sense of what might have caused a viewer to stop watching, which could be anywhere from audio or visual monotony, to front-loaded narratives, to general narrative pacing.</p>
+<p>The tail is the last 2% of a video—the part where the story is just about wrapped up. Significant drop-off at the tail is expected, as viewers tend to move on once they get a sense that the core content is completed.</p>
+<p>Monitoring tail retention is much more important if the tail contains key narrative or calls to action. If viewers are leaving before any pertinent information ever appears on screen, then this might inform future production strategy as to where this content is placed in the future, or how a video might more fluidly transition from story, to conclusion, to credits.</p>
+<h4>Whose screen?</h4>
+<p>An understanding of the environments in which audiences are viewing video can also contribute to future production strategy. Analysis of playback location, device, and region data—in combination with retention data—can point to how well a video performs under the preferred viewing conditions of audiences.</p>
+<p>Playback location is less of an actionable measurement for producers since most of the variables involved are in the control of a third party. For example, the appearance of an embed on an external website is determined by the website publisher. Even then, a viewer might watch that video at full screen. Or, the viewer might be less inclined to complete the video because of a small embed or otherwise uncomfortable viewing experience.</p>
+<p>Device data, on the other hand, gives a better sense of the audiences viewing environments. Measuring engagement across device types provides an indication of a video’s performance under varying viewing conditions. For example, as mobile video consumption continues to trend higher after each year, we can look at retention data for mobile viewers to help indicate how mobile-friendly a video is. Are these mobile viewers more or less engaged than desktop or TV viewers, or than mobile viewers on other comparable videos? Producers can analyze this data to optimize everything from color correction, to on-screen text or graphics, to general pacing.</p>
+<p>Region data, in turn, can give a sense of viewer satisfaction from other parts of the world. For example, if retention rates are significantly low amongst viewers from Spanish-speaking countries, yet that overall audience is relatively high, then that may lead to questions around the accessibility of videos for the audience that wants to watch them. Likewise, if you have made an effort to provide Spanish language captions for your videos and you noticed a significant increase in quality of viewership amongst Spanish speaking audiences, then that may serve as validation of your global accessibility efforts.</p>
+<h3>Analyzing for marketing and distribution needs</h3>
+<h4>Release times and days</h4>
+<p>As with any field, your mileage may vary when it comes to optimizing release and promotion times for video content. Whereas some types of video content might make for engaging morning viewing, others might not. An analysis of this data over time can help determine what works best for your content.</p>
+<p>Change the release and promotion times from video to video and compare the results of each change. Track the amount of initial views over a set period to get a sense of the general audience reach and the effectiveness of your promotional messaging. Are you attracting more viewers at one time of day over another? Are the bulk of your views coming primarily from a single source, such as YouTube notifications or Twitter posts?</p>
+<p>Look also to the retention times for each group. Were your audiences more engaged during one time of day over another? Were your Twitter followers more engaged in video content at one time of day, while your Facebook followers were more engaged at another?</p>
+<p>With careful analysis over time, marketers can get a clearer sense of which release and promotion strategies are most effective for their audiences.</p>
+<h4>Keyword and visual hooks</h4>
+<p>As much as release times and promotional messaging has an active influence on viewership, the presentation of video across platforms can have a passive influence on viewers. Discovery optimization strategies across metadata such as video titles, thumbnail choice, and even keyword choices, can influence a viewer to find and eventually view your video.</p>
+<p>Experiment with different video title constructions across videos to help determine what works best for your audience. View counts here would be an indication of the effectiveness in enticing audiences. However, retention data more points to the success of those efforts. Were viewers more or less engaged by one type of title over another? Did the contents of a video meet the expectations set by the title?</p>
+<p>The same can be said about thumbnail choices. Experiment with different types of thumbnails and analyze performance just as you would with titles to help determine which types of visual constructions are most effective for your audiences.</p>
+<p>Finally, keyword choices can not only influence whether or not audiences will choose to watch a video, but keywords can also influence how or if search engine and platform algorithms show your video to audiences. Analyze traffic sources to see how audiences are arriving to your video. If by YouTube search, then analyze keyword data to see if videos are effectively reaching the right audiences. Are you not seeing keywords in your report that you are certain apply to your videos? Similarly, take a look at the engagement for certain keywords, as this can be another indication of if your keyword choices are effectively communicating the contents of your film. Did the contents of a video meet the expectations set by the keyword result?</p>
+<h4>Optimizing for distribution platforms</h4>
+<p>Not all platforms are built equally. For example, there are typically extreme differences in behavior of YouTube audiences compared to audiences on your own site. The intent of each visitor type is more often different. YouTube audiences are searching for content that isn’t necessarily yours, whereas your own website audiences have already committed to consuming only your content.</p>
+<p>Understand the habits of each audience and expect to develop different, if not at times conflicting, strategies for enticing viewers across platforms. Experiment with different keyword and visual hooks across platforms and measure the data to see what works best for each. For example, you might be able to assume that your own website audiences are a bit more informed about your brand and your initiatives, and therefore need a less aggressive hook for watching a video. Choose a thumbnail or title to measure the extent to which this assumption holds true.</p>
+<h2>Conclusion</h2>
+<p>Effectively analyzing video performance is by no means a simple task. The most resource-filled organizations have a dedicated staff—or even department!—just for analyzing video performance.<br />
+However, with a basic understanding of some key approaches to analyzing video performance, we can begin to experiment with and refine our approaches to video production, distribution, and marketing to optimize to our core audiences.</p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+Munar, Jonathan. "More than views: Diving into video analytics beyond view counts." <i>MW18: MW 2018</i>. Published March 16, 2018. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw18.mwconf.org/paper/more-than-views-diving-into-video-analytics-beyond-view-counts/<br /><br />
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><h2 id="Gold" class="widget-title">Gold Sponsor</h2>
+<a title="TixTrack" href="http://www.tixtrack.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/tixtrack-250-75.jpg" alt="TixTrack" /></a>
+<h2 id="silver" class="widget-title">Silver Sponsor</h2>
+<a title="Axiell" href="http://www.axiell.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/axiell-250-75.jpg" alt="Axiell" /></a>
+<a title="Piction" href="https://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<a title="Brightcove" href="https://www.brightcove.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/bc-250-75.jpg" alt="Brightcove" /></a>
+<h2 id="bronze" class="widget-title">Bronze Sponsors</h2>
+<a title="Quartex" href="http://www.quartexcollections.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/quartex-250-75.jpg" alt="Quartex" /></a>
+<a title="alley interactive" href="http://www.alleyinteractive.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ai-250-75.jpg" alt="alley interactive" /></a>
+<a title="ideum" href="http://www.ideum.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ideum-250-75.jpg" alt="ideum" /></a>
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/netx-250-75.jpg" alt="Netx" /></a>
+<a title="Four Kitchens" href="http://fourkitchens.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/4K-250-75.jpg" alt="Four Kitchens" /></a>
+<h2 id="conference-partner" class="widget-title">Conference Partners</h2>
+<a title="VAG" href="http://vanartgallery.bc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/VAG-250-75.jpg" alt="VAG" /></a>
+<a title="MOA" href="http://moa.ubc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/moa-250-75.jpg" alt="MOA" /></a>
+<h2 id="conference-supporter" class="widget-title">Conference Supporters</h2>
+<a title="BCMA" href="http://museumsassn.bc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/BCMA-250-75.jpg" alt="BCMA" /></a>
+<a title="NGX" href="http://ngxinteractive.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ngx-250-75.jpg" alt="NGX" /></a>
+<a title="EDM" href="http://edmstudio.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/edm-250-75.jpg" alt="EDM" /></a>
+<a title="Olson" href="http://olsonvisual.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/olson-250-75.jpg" alt="Olson" /></a></div></section><section id="text-3" class="widget widget_text">			<div class="textwidget">
+<ul class="sxc-follow-buttons">
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://www.facebook.com/museweb/"
+                                        
+                                        title="Facebook"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/facebook.png"
+                                            alt="Facebook"
+                                        />
+                                    </a>
+                              </li>
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://twitter.com/museweb"
+                                        
+                                        title="Twitter"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/twitter.png"
+                                            alt="Twitter"
+                                        />
+                                    </a>
+                              </li>
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://www.linkedin.com/company/10246519/"
+                                        
+                                        title="LinkedIn"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/linkedin.png"
+                                            alt="LinkedIn"
+                                        />
+                                    </a>
+                              </li>
+</ul>
+
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+
+		<!-- Cookie Notice plugin v1.3.2 by Digital Factory https://dfactory.eu/ -->
+		<div id="cookie-notice" role="banner" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Cookie Notice" style="background-color: rgba(0,0,0,1);"><div class="cookie-notice-container" style="color: #fff;"><span id="cn-notice-text" class="cn-text-container">We use cookies to ensure that we give you the best experience on our website. Please read our cookie policy and, if you continue to use the site, acknowledge that you accept the terms and conditions of use. </span><span id="cn-notice-buttons" class="cn-buttons-container"><a href="#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button bootstrap" aria-label="Ok">Ok</a><a href="https://www.museumsandtheweb.com/cookie-policy/" target="_blank" id="cn-more-info" class="cn-more-info cn-button bootstrap" aria-label="Read more">Read more</a></span><a href="javascript:void(0);" id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" aria-label="Ok"></a></div>
+			
+		</div>
+		<!-- / Cookie Notice plugin --></body>
+
+<!-- Mirrored from mw18.mwconf.org/paper/more-than-views-diving-into-video-analytics-beyond-view-counts/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:28:39 GMT -->
+</html>

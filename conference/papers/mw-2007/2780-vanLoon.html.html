@@ -1,0 +1,815 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2007-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/vanLoon/vanLoon.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:29:54 GMT -->
+<head>
+<!-- #BeginEditable "HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2007: Papers: Van
+Loon, et al., Supporting Social Interaction: A Collaborative Trading Game On
+PDA</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2007" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Keywords" -->
+<meta name="Keywords" content="PDA, museum, social interaction, collaborative learning, mobile technologies, articles, papers, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Description" -->
+<meta name="Description" content="Museums and the Web 2007: the international conference for culture and heritage on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2007" />
+<!-- #EndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="../../css/mw2007.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="../../css/mw2007-noNews.css" type="text/css"  media="print, screen" />
+	<link rel="stylesheet" href="../../css/papers.css" type="text/css"  media="print, screen" />
+
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+</head>
+<body  onload="initImgRotation()">
+	<div id="container">
+		<div id="header" onclick="location.href='../index.html';" style="cursor:pointer;">
+		</div>
+		<div id="top-nav">
+			<ul id="top-nav-list">
+				<li><a href="../../register/index.html">Register</a></li>
+				<li><a href="../../dates/index.html">Key Dates</a></li>
+				<li><a href="../../sescal/index.html">Schedule</a></li>
+				<li><a href="../../local/index.html">Local Info</a></li>
+			</ul>
+		</div>
+		<div id="header-photo">
+			<a href="../../images/credits.html">
+			<!-- InstanceBeginEditable name="header-photo" -->
+			<img src="vanloon-figure6-t.jpg" alt="MW-photo" name="img1" width="229"  height="132" id="img1" />
+			<!-- InstanceEndEditable -->	
+			</a>
+		</div>
+		<div id="date">
+			April 11-14, 2007<br />
+			San Francisco, California
+		</div>
+		<div  id="title">
+			<h1> 
+				<!-- InstanceBeginEditable name="PageTitle" -->
+				Supporting Social Interaction: A Collaborative Trading Game On PDA
+				
+				<!-- InstanceEndEditable -->
+   			</h1>
+		</div>
+		<div id="main-content">
+		  <div id="callout">          </div>
+		  <div id="intro-paragraph">
+				<!-- #BeginEditable "IntroParagraph" -->
+ 
+				  <h2 class="Author">Heleen Van Loon, Kris Gabri&euml;ls, Kris Luyten, Daniel
+				    Teunkens, Karel Robert, Karin Coninx, Expertise Centre for Digital Media,
+				    Hasselt University &ndash; transnationale Universiteit Limburg; and Elke
+				    Manshoven, Provincial Gallo-Roman Museum, Belgium</h2>
+				  <p class="URL"><a href="../http://www.archie-project.be/" target="_blank">http://www.archie-project.be/</a></p>
+				  <h3 class="AbstractTitle">Abstract</h3>
+				  <p class="abstractText">ARCHIE is a research project in which the educational
+				    staff of the Gallo-Roman Museum collaborates with the Human-Computer
+				    Interaction research group of the Expertise Centre for Digital Media
+				    (Hasselt University) in the context of the expansion of the museum. The
+				    starting point of this interdisciplinary collaboration is our strong
+				    belief that handheld guides are a promising medium to enhance visitors&rsquo; learning
+				    experiences in a museum and strengthen the experience of a group visit. </p>
+				  <p class="abstractText">In this paper we present a first application: a
+				    collaborative trading game for (school)groups of children; from conceptual
+				    stage towards final implementation and conclude with user test results. We
+				    designed the museum game so that every player is dependent on the concrete
+				    actions of other players; only through social interaction and cooperation
+				    can they come to a good result.</p>
+				  <p class="keywords">Keywords: PDA, museum, social interaction, collaborative
+				    learning, mobile technologies</p>   				
+  				<!-- #EndEditable -->		  </div>
+				<!-- #BeginEditable "BodyText" --> 
+
+				  <h1>Introduction</h1>
+				  <p>The use of a pocket-sized computer in a museum as
+				    a tool to enhance the visit experience has found its way into many museums
+				    over the last five years. Science centres, heritage institutions
+				    and contemporary museums like Tate Modern in London, the Marble Museum
+				    in Carrara, the Exploratorium in San Francisco, and Torre Aquila in Trento
+				    have been experimenting with mobile applications. For a state-of-the-art
+				    and more detailed review of mobile applications in museums and cultural
+				    environments, see&nbsp; Proctor &amp; Tellis (2003), Raptis et al. (2005),
+				    and Linaza et al. (2006).</p>
+				  <p>Pioneers of multimedia guides are still exploring
+				    the best ways to make use of them, but meanwhile there is already some
+				    consensus on the strengths and pitfalls of PDAs. First of all,
+				    PDA technology allows the dynamic presentation of information without
+				    disturbing the physical space of the exhibition and not limited by the
+				    aesthetics of the gallery. Secondly, handheld devices enable visitors
+				    to browse information at their own pace and according to their own interests. And
+				    last but not least, they give scope for offering something entirely different
+				    from a conventional label; namely, a wide range of content and media,
+				    putting sound, photos, videos, text and interactive games in the palms
+				    of visitors&rsquo; hands. Starting from these advantages, screen-based
+				    multimedia guides can be welcome additions to the visitor experience. However,
+				    the first PDA-based applications in museums also revealed some important
+				    shortcomings. The device demands a lot of attention. It generates the
+				    unintended side effect that it is quite an individual experience, and
+				    thus it isolates visitors from one another (Vom Lehn &amp; Heath, 2005;
+				    Vom Lehn, Heath &amp; Hindmarsh, 2005; Angliss, 2006a, 2006b). With
+				    the ARCHIE project, we want to deal with these negative side effects
+				    and explore the different possibilities a mobile museum guide can offer
+				    in the future: greater versatility for visitors to get information tailored
+				    to their needs and interests (personalization), the opportunity to discover
+				    the exhibits at their own pace (localization), and stimulation through&nbsp; social
+				    interaction among family or group members (communication).</p>
+				  <p>In their leading reference work on learning in museums,
+				    Falk and Dierking (2000) came to emphasize the role of the social group
+				    in the way visitors construct meaning in their contextual model of learning. Following
+				    this model, social interaction&nbsp; not only promotes, but also is a
+				    prerequisite for, intellectual, social, personal and cultural development
+				    (Morrissey, 2002). Recent studies with children and object-centered
+				    learning also recognize the importance of social interaction:</p>
+				  <p class="BlockQuote">the potential of the learning environment and its
+				    objects largely depends on the social atmosphere generated and the support
+				    young children receive through positive, reciprocal interactions. [&hellip;]
+				    The successful learning setting functions as a community of learners,
+				    where all individuals are respected, their learning is supported, and
+				    opportunities for collaboration are provided (Piscitelli &amp; Weier,
+				    2002, p. 126).</p>
+				  <p>Though the research on social interaction and collaboration
+				    using new technologies is quite recent (Hawkey, 2004), there are already
+				    some projects on museum co-visiting. The Sotto Voce project developed
+				    an electronic guidebook prototype that promotes interaction between museum
+				    visitors through content and audio sharing (Woodruff, Aoki, Hurst &amp; Szymanski,
+				    2001). This study resulted in an interesting set of design principles,
+				    but the collaboration between companions is rather passive (following
+				    or checking in tasks). The goal of the Cicero Project (Laurillau &amp; Patern&ograve;,
+				    2004) &ndash; to promote social interaction between visitors through
+				    cooperative and educational games &ndash; fits in with our project. Also
+				    the reported findings of the user tests of the &lsquo;Mystery in the
+				    Museum&rsquo; game in the Solomos Museum are very interesting (Cabrera
+				    et al., 2005). However, we hope to take the idea of a collaborative
+				    learning activity one step further than the above-mentioned edugames
+				    which are still to be played at a quite individual level with only a
+				    shared enigma.</p>
+				  <p>In collaboration with the museum team of the Gallo-Roman
+				    Museum, we decided to develop a prototype of a learning activity for
+				    (school) groups of children 10-14 years old. These youngsters are
+				    one of the main target groups of the museum. Extensive visitor
+				    research the museum organised in 2005 pointed out that they have an especially
+				    strong interest in multimedia and games (Provincial Gallo-Roman Museum,
+				    2005). Therefore, a collaborative museum game on PDA can be a perfect
+				    means to support a museum visit for these young people. With this
+				    first application, we want to verify the usefulness of the service and
+				    test whether it supports our goals.</p>
+				  <h1>Designing a Collaborative Trading Game on PDA</h1>
+				  <p>An appropriate design process runs through different
+				    phases from concept generation to implementation and evaluation. In
+				    our HCI research group, we worked from a User-Centered Design (UCD) approach. The
+				    main idea of UCD is to involve the users of a product throughout its
+				    lifecycle, from planning through post-release assessment, in order to
+				    guarantee positive user experience (usability, accessibility, functionality,
+				    etc.)&nbsp; (Redmond-Pyle &amp; Moore, 1995). While the basic
+				    principles are the same, different variations of User-Centered Design
+				    processes exist. The International Organization for Standardization
+				    (ISO) states that there are four human-centered activities that should
+				    take place during a system development project. These activities
+				    are</p>
+				  <ol>
+				    <li>understanding and specifying the context of
+				      use,</li>
+				    <li>specifying the user and organizational requirements,</li>
+				    <li>producing design solutions,</li>
+				    <li>evaluating designs against requirements.</li>
+			    </ol>
+				  <p>The human-centered design process should start at
+				    the earliest stage of the project and should be repeated iteratively
+				    until the system meets the specified requirements&nbsp; (International
+				    Organization for Standardization, 1999) &ndash; see Figure 1.</p>
+				  <p class="caption"><a name="Fig1" id="Fig1"></a><a href="vanLoon-fig1.html"><img src="vanloon-figure1-thumbnail.jpg" alt="Fig 1: The interdependence of human-centered design activities" width="400" height="152" border="0" /></a></p>
+				  <p class="caption">Fig 1: The interdependence of human-centered design
+				    activities</p>
+				  <p>Extensive user analysis and constant evaluation are
+				    typical activities in the User-Centered Design process, and they also
+				    played important roles when we designed our prototype. </p>
+				  <h1>A Six-Phase Process of Design</h1>
+				  <p>Our process consists of 6 phases we believe to be
+				    important for future designers (see Figure 2). Some steps may seem
+				    new and others are may be over- emphasized, but in the end it is the
+				    same story as the ISO standard: analysis, design, evaluation and numerous
+				    iterations.</p>
+				  <p class="caption"><a name="Fig2" id="Fig2"></a><a href="vanLoon-fig2.html"><img src="vanloon-figure2-thumbnail.jpg" alt="Figure 2: Design process of the prototype" width="400" height="226" border="0" /></a></p>
+				  <p class="caption">Figure 2: Design process of the prototype</p>
+				  <p>Concerning the borderlines between the different phases
+				    of the design process, it is wrong to suggest every phase has a clear
+				    beginning and end: rather, they&nbsp; blend into each other and are repeatedly
+				    evaluated. </p>
+				  <h2>1. User Analysis</h2>
+				  <p>In the context of future expansion, the Gallo-Roman
+				    Museum conducted an extensive investigation among its visitors and potential
+				    visitors to find out what prompts them to visit the museum, what their
+				    interests are, and how they want to learn about the collection (Provincial
+				    Gallo-Roman Museum, 2005). The results of this visitor research
+				    were used to provide us with&nbsp; profiles, visit expectations, learning
+				    styles, visit behaviour, and preferences concerning information and presentation
+				    for the main target groups.</p>
+				  <p>One of these target groups is the &lsquo;auto-active
+				    experiencers&rsquo;, aged between 10 and 14, who visit the museum with
+				    their school. They like multimedia and computers: they also like
+				    them in museum presentation. As their name points out, their main
+				    expectation is to experience the museum and relax, have a nice day out. Their
+				    ideal museum is an amusement park. They also have a strong need
+				    for hands-on activities, and they like to map out their own routes according
+				    to their interests. However,&nbsp; these youngsters prefer an autonomous
+				    visit: hanging around with (groups of) friends is really important for
+				    them. </p>
+				  <p>Besides the contextual information of the target user
+				    we obtained through the visitor research, we also conducted a <em>focus
+				    group</em> (Preece et al., 2002) of
+				    youngsters (4 boys and 2 girls, aged between 12 and 14 years). The
+				    main reason was to get better acquainted with their needs and expectations
+				    towards a museum game. First, we invited them to think aloud about
+				    gaming in the museum, and confronted them with possible consequences,
+				    (dis)advantages, practical issues, &hellip;&nbsp; Then we observed them
+				    while they were testing our previous demo (a PDA tour to the Neanderthal
+				    man exhibition). This gave them the chance to think more concretely about
+				    a museum game on a PDA platform and give some feedback (see Figure 3).</p>
+				  <p>In general, their main expectations towards a museum
+				    game are that it has to</p>
+				  <ul>
+				    <li>be lots of fun, with enough challenges and plenty
+				      of variety (a good mix between easy and hard/difficult),</li>
+				    <li>promote unconscious learning (young people do
+				      not want to get the impression that they are learning),</li>
+				    <li>integrate (the most important) objects/exhibits
+				      of the museum within the game,</li>
+				    <li>provide a personal and adaptable character/avatar
+				      (they also like to set their personal settings in the beginning;
+				      for example, age, difficulty level &hellip;),</li>
+				    <li>encourage playing together/helping each other
+				      out (they really liked the idea of a chatbox), although
+				      competition between team members is also really important, </li>
+				    <li>integrate a help menu within the game (they
+				      do not read the manual in advance: they just start and &lsquo;find out&rsquo;). </li>
+			    </ul>
+				  <p class="caption"><a name="Fig3" id="Fig3"></a><a href="vanLoon-fig3.html"><img src="vanloon-figure3-thumbnail.jpg" alt="Fig 3: Focus group" width="400" height="139" border="0" /></a></p>
+				  <p class="caption">Fig 3: Focus group</p>
+				  <h2>2. Concept Generation</h2>
+				  <p>Starting from the results of the user analysis, we
+				    decided to work on a specific chapter of the future museum exhibition
+				    concerning the introduction of social differentiation in West European
+				    society (around 825 BC). The main message is the introduction of
+				    iron objects and salt as a seasoning in daily life. This results
+				    in new exchange networks with the Hallstatt region (South Germany and
+				    Austria). Ambitious individuals from the local population emerge
+				    as key figures in these contacts and start to form a socially distinct
+				    elite class. It is really important to take some time to consider
+				    attentively the main idea or message of the exhibition, because the presentation
+				    (and also the PDA tour) must directly reflect this (Katz et al., 2006). </p>
+				  <p>The emergence of an elite class, new exchange networks
+				    and new products inspired us to design a collaborative trading game for
+				    teams of 4 persons. In this conceptual phase, we constructed a <em>scenario</em> for
+				    the game which includes:</p>
+				  <ul>
+				    <li>number of players, their roles and goals</li>
+				    <li>rules of play</li>
+				    <li>different phases within the game, how it evolves</li>
+				    <li>extra ideas, alternatives</li>
+				    <li>how the game could fit into an overall museum
+				      game</li>
+				    <li>possible errors </li>
+			    </ul>
+				  <p>We decided that every player had to have an explicit
+				    role in the game: there are three farmers and one leader. Each
+				    one has individual properties and specific goals that need to be achieved. By
+				    solving questions or playing little games, farmers have the possibility
+				    of gaining or augmenting their exchangeable goods (local products like
+				    cattle, sheep &hellip;). The leader has an overall view of&nbsp; the
+				    earned exchangeable goods of his farmers, and only he can make them a
+				    trade proposal. The leader also has exclusive contacts in the exchange
+				    networks: he can travel to the Hallstatt region three times during the
+				    game to exchange local products for iron objects and salt. While every
+				    farmer has as a goal obtaining a specific amount of iron and salt, the
+				    leader&rsquo;s objective is to keep every farmer satisfied (this means
+				    making sure that every farmer obtains his goals) and to get hold of a
+				    bronze sword.</p>
+				  <p>The game is designed so that every player is dependent
+				    on the concrete actions of other players; only through social interaction
+				    and cooperation can they can come to a good result. The main message
+				    is to learn in an unconscious way about unequal stratifications in society:
+				    how they came into existence, how they worked, and more precisely, how
+				    it must have felt to actually be in an unequal position.</p>
+				  <h2>3. Conceptual Design</h2>
+				  <p>With the scenario written down, we started to create
+				    a <em>user task model</em>: this is
+				    a scheme which maps out all possible user actions and activities in each
+				    stage of the game (Mori et al., 2002). User task models are frequently
+				    used to specify requirements for an application from a user&rsquo;s point
+				    of view. These task models allow gradual refinement of the high-level
+				    tasks and goals into fine-grained actions and activities. </p>
+				  <p>This structured description gives input to a more
+				    specific <em>storyboard</em> which
+				    includes user needs, functional information, and all aspects of the UI:
+				    buttons, navigation, actions, etc. The storyboard also contains
+				    the first mock-ups of the user interface (low-fidelity prototyping)&nbsp; created
+				    by the designers using information from the scenario and user task model
+				    (see Figure 4).</p>
+				  <p>During conceptual design, ideas of the concept generation
+				    phase are constantly evaluated on feasibility. For example, in
+				    the first scenario we had the idea that in the last stage of the game
+				    the leader should manually distribute the iron objects and salt among
+				    his farmers. But while we were working on the user task model,
+				    it soon became clear that this would take too much time from the leader. Because
+				    this is not interesting for the other players, we decided that the distribution
+				    of iron and salt should happen automatically when the leader returns
+				    from the Hallstatt region. The storyboard also quickly reveals
+				    possible problems and difficulties for programming the game. </p>
+				  <p>During the next phases, the low-fidelity prototypes
+				    of the user interface will gradually evolve towards what is called high-fidelity
+				    prototypes, the concrete and final user interface.</p>
+				  <p class="caption"><a name="Fig4" id="Fig4"></a><a href="vanLoon-fig4.html"><img src="vanloon-figure4-thumbnail.jpg" alt="Fig 4: Sketches from the storyboard" width="400" height="291" border="0" /></a></p>
+				  <p class="caption">Fig 4: Sketches from the storyboard</p>
+				  <h2>4. Architectural Design</h2>
+				  <p>Once the functional requirements for the system had
+				    been specified, we started to think about the overall software architecture. This
+				    resulted in the ARCHIE Mobile Guide System which consists of a set of
+				    three core services (personalization, localization and communication)
+				    on top of which an arbitrary interface shell can be deployed (see Figure
+				    5). The core services are in fact proxies that communicate with
+				    a central server containing a database of visitor profiles, visitor groups,
+				    artefact locations, etc. Although an interface shell can make use
+				    of the different core services, it can be developed quite independently;
+				    it only has to handle events sent by the services it is subscribed on.</p>
+				  <p class="caption"><a name="Fig5" id="Fig5"></a><a href="vanLoon-fig5.html"><img src="vanloon-figure5-thumbnail.jpg" alt="Fig 5: Framework overview" width="400" height="214" border="0" /></a></p>
+				  <p class="caption">Fig 5: Framework overview</p>
+				  <p>This approach results in a flexible mobile guide system
+				    rather than one particular mobile guide: various interface shells that
+				    behave differently can be developed, and by using the communication service
+				    which handles the interaction between visitors, it is possible to implement
+				    collaborative applications such as games.</p>
+				  <p>The trading game is actually an interface shell that
+				    is developed on top of the ARCHIE framework and makes use of its several
+				    core services. The localization service is used for determining
+				    when the game has to be started; namely, when all team members are nearby
+				    the physical presentation of the particular museum narrative. This
+				    is realized by catching and interpreting the events from the localization
+				    service. This service makes use of the wireless network to determine
+				    the location of the visitor. Personalization is realized by assigning
+				    each team member a specific role &ndash; farmer or leader &ndash; and
+				    by providing each person with an individual adaptable character (avatar). The
+				    communication service makes it possible for team- mates to communicate
+				    directly with each other through a chatbox. They can use this Voice-over-IP-based
+				    communication channel to negotiate or comment on the trade proposals
+				    and/or to help each other solve the questions. An indirect communication
+				    style allows visitors to exchange other types of data and is carried
+				    out by the trade actions which are necessary to accomplish the game. By
+				    sending a trade proposal to a farmer, the leader initiates indirect communication.
+				    The farmer replies by accepting or refusing this trade proposal. The
+				    data that is exchanged between the players is obviously game related.</p>
+				  <p>A good architecture partitions the system&rsquo;s
+				    present and foreseeable requirements into a set of loosely coupled subsystems
+				    with each a high internal cohesion (Larman, 2004). Low coupling improves
+				    the ease of development, and software changes in one module will affect
+				    fewer other modules. High cohesion is achieved by grouping similar tasks
+				    in one module. The ARCHIE Mobile Guide System fulfills these requirements.
+				    Changes in one of the core services do not demand change in other core
+				    services, and new services can be easily added. Also, creating new interface
+				    shells does not require a new software structure since there is no hard
+				    binding between the interface shells and the core services because of
+				    the event bus interface.</p>
+				  <p>Once the system architecture is clearly defined, implementation
+				    can be started.</p>
+				  <h2>5. Content Development</h2>
+				  <p>When the scenario and storyboard are ready, and computer
+				    scientists have started the implementation of the game, it is possible
+				    to start focusing on the concrete content development. &nbsp;It is possible
+				    to argue that this stage has already started during or after the concept
+				    generation phase, because deciding on the main message of the exhibition,
+				    the game, rules of play, etc. can also be interpreted as content development. Again,
+				    the borderlines between the different phases of the design process should
+				    not be seen as strict.</p>
+				  <p>It is important to take time to decide what topics,
+				    exhibits, angles of approach, and type of questions the PDA should take
+				    care of. This exercise helps to analyse the content and show how&nbsp; it
+				    can clarify, summarize and/or emphasize the main idea of the exhibition. This
+				    analysis is also important to get a clear view of a visitor&rsquo;s (possible)
+				    understanding and participation throughout the exhibition. The
+				    content should be catchy enough to trigger the visitor to extend and
+				    go deeper into this virtual visit without neglecting the surrounding
+				    exhibits. This brings us to an important design issue: the information
+				    balance. In a museum environment, there are multiple entities that
+				    deliver information to the visitor ( museum exhibits, companions and
+				    in this case, the PDA). To manage the constantly changing demands
+				    of these entities, each visitor performs a sophisticated balancing act
+				    (Woodruff et al., 2001). The mobile guide should help visitors
+				    balance their attention in a natural way and therefore maximize their
+				    enjoyment of the visit. And in all ways, the content developer
+				    should avoid possible information overload.</p>
+				  <p>Concerning interface, media and content, we developed
+				    some guidelines or sensitivities that can help the content developer
+				    and user interface designer to create an interactive handheld guide that
+				    fits appropriately into a visitor&rsquo;s desired experience. These
+				    sensitivities underline critical issues that should be considered while
+				    designing in order to encourage interaction between visitors and the
+				    museum. Note the following suggestions.</p>
+				  <h3>User Interface</h3>
+				  <ul>
+				    <li>Keep it consistent, intuitive and clear. </li>
+				    <li>Provide a short introduction to all the buttons
+				      and functions. </li>
+				    <li>Make it work with a selection menu that lets
+				      the visitor remain in control of the information delivery.</li>
+				    <li>Visual selection (of objects) is preferred above
+				      entering numbers.</li>
+			    </ul>
+				  <h3>Information / Type Of Media</h3>
+				  <ul>
+				    <li>Present information in small, easily-digested
+				    snippets: captions, sounds, videos and photos are preferred.</li>
+				    <li>Choose audio presentation of descriptions rather
+				      than written paragraphs.</li>
+				    <li>Keep text on screen to a minimum. </li>
+				    <li>Keep audio and video clips short (30-40 seconds
+				      maximum).</li>
+				    <li>Avoid playing audio while showing text on screen
+				      at the same time .</li>
+			    </ul>
+				  <h3>Content</h3>
+				  <ul>
+				    <li>Encourage visitors to look (more profoundly)
+				      at the exhibits (for example, zoom into details).</li>
+				    <li>Direct the visitor&rsquo;s gaze by use of spoken
+				      instructions and low-key animations on screen when it&rsquo;s time
+				      to look at the real object.</li>
+				    <li>Stimulate comment and discussion about the exhibition. </li>
+				    <li>Provide hardware and content for retrieval by
+				      two persons or more.</li>
+			    </ul>
+				  <p>The trading game we were developing includes an introductory
+				    movie (with audio) and a set of 20 multiple choice questions about museum
+				    exhibits (including images). The introductory movie is a flash
+				    animation which runs for one minute. It provides some background
+				    information on the game and a very short explanation of all 4 buttons. The
+				    audio captions consist of very short sentences, on average 10-12 words
+				    each. </p>
+				  <p>Most of the multiple choice questions are introduced
+				    through an image of a museum exhibit and the direction, &lsquo;Look for
+				    this object&rsquo;. Once the museum object has been found, the
+				    visitor continues to answer the questions. It is also possible
+				    to visually select one of the multiple answers by clicking on an image-button. </p>
+				  <p>Text on screen; for example, the multiple choice questions
+				    and the explanations within the help menu, is kept minimal (sentences
+				    with 5-6 words on average). We use a clear and readable font, with
+				    enough contrasting colours. The overall user interface is uncomplicated
+				    and consistent, and&nbsp; the use of buttons (back, next) and wizards
+				    is intuitive (see Figure 6).</p>
+				  <p class="caption"><a name="Fig6" id="Fig6"></a><a href="vanLoon-fig6.html"><img src="vanloon-figure6-thumbnail.jpg" alt="Fig 6: Screenshots of the question (left) and the chatbox (right) interface" width="400" height="242" border="0" /></a></p>
+				  <p class="caption">Fig 6: Screenshots of the question (left) and the
+				    chatbox (right) interface</p>
+				  <h2>6. Evaluation</h2>
+				  <p>This last phase is probably one of the most important
+				    steps within the design process, and unfortunately it is also the one
+				    most often neglected. Designers quickly assume that if they and their
+				    colleagues can use the software and find it attractive, others will too. Furthermore,
+				    they prefer to avoid evaluation because it adds development time and
+				    costs money. But without evaluation, designers cannot be sure that
+				    their software is usable. Although there are many definitions and
+				    many different evaluation techniques (Preece et al., 2002), we decided
+				    to involve the future users directly to check whether their needs are
+				    being met. </p>
+				  <p>In a first iteration, we organised an informal initial
+				    evaluation of the first workable prototype. We asked some colleagues
+				    (both software development experts and users with no experience in software
+				    development) to try our first prototype (which did not contain images,
+				    nor the introduction movie at that point) and give some feedback. This
+				    internal evaluation quickly revealed some errors, problems, inconsistencies &hellip; and
+				    gave us a clear view of what had to be changed to make the interface
+				    more usable and intuitive. </p>
+				  <p>Three weeks later, after the prototype had been adapted
+				    according to the recommendations of the informal initial evaluation,
+				    we visited three secondary schools in and around Hasselt (two general
+				    schools and one technical). In all cases, our contact person at
+				    the school was the history teacher who arranged some time (during class
+				    or lunch break), space (a class room that simulated a museum gallery &ndash; posters
+				    of museum objects were placed on the tables) and groups of students (8
+				    students per session) to test our prototype. First, we gave them
+				    a short introduction to the ARCHIE project and asked if they were familiar
+				    with the Gallo-Roman Museum. Because the museum is well-known in
+				    the region, almost all students had already visited it at least once. We
+				    divided the 8 students into 2 groups of 4 players and handed over the
+				    PDAs. During the test the students were observed (see Figure 7),
+				    and afterwards they were asked to fill in a questionnaire. This
+				    consisted of 20 questions concerning both personal background, and the
+				    usability and playability of the trading game. Because it is easier
+				    to process specific answers that can be categorized, we worked with multiple
+				    choice questions and Likert scales. There was only one open ended
+				    question in the end: &lsquo;Do you have other ideas or remarks?&rsquo;&nbsp; Besides
+				    the observations and questionnaires, we also logged user actions on the
+				    PDA.</p>
+				  <p class="caption"><a name="Fig7" id="Fig7"></a><a href="vanLoon-fig7.html"><img src="vanloon-figure7-thumbnail.jpg" alt="Fig 7: Usability tests" width="400" height="139" border="0" /></a></p>
+				  <p class="caption">Fig 7: Usability tests</p>
+				  <p>In total, 68 school children between 11 and 15 years
+				    old participated in the usability test (55%&nbsp; aged 13 years). More
+				    boys (75%) joined the tests; this follows from the fact that the largest
+				    part of the usability tests was held at the technical school (where in
+				    terms of percentage more boys attend). Further test results, however,
+				    did not indicate any difference between boys and girls. As expected,
+				    all the young people were extremely experienced in ICT. On a daily
+				    basis, 78 % have access to a PC, 76 % use the Internet, and 63 % own
+				    a mobile phone. They frequently play computer games and chat with
+				    friends. A PDA is the only medium they do not know well, but this
+				    does not mean they have problems using it: 82 % say it is very easy to
+				    use. </p>
+				  <p>Concerning the trading game, all students found it
+				    very funny and nice to play. Although we told them that it was
+				    just a prototype, their only remark was that the game should last a bit
+				    longer. Also the chatbox service was positively evaluated: they
+				    really liked it, found it easy to use, and 88 % would certainly use it
+				    during a museum visit: &lsquo;to stay in contact with family and friends
+				    while they aren&rsquo;t nearby&rsquo;, &lsquo;it&rsquo;s nice and handy&rsquo;, &lsquo;to
+				    pass information&rsquo;, &lsquo;it&rsquo;s an amusing way to learn something
+				    new&rsquo; &hellip;&nbsp; They are also very positive about the idea
+				    of a PDA as a museum guide, because &lsquo;it&rsquo;s more fun&rsquo; (85%), &lsquo;I
+				    can map out my own route&rsquo; (40%), &lsquo;I understand things better&rsquo; (30%),
+				    and &lsquo;it&rsquo;s more informative&rsquo; (20%).</p>
+				  <p>Our general conclusion about the usability tests is
+				    that young people are enthusiastic about the PDA medium: they only want
+				    more of it (more questions, more possibilities to adapt their avatar,
+				    etc). One of the standard questions they asked us after the usability
+				    test was, &lsquo;When will it be installed in the museum?&rsquo; Another
+				    was, &lsquo;When will you come again?&rsquo;&nbsp; The application also
+				    seems to support our goals: observations confirm that the trading game
+				    provoked collaboration and lots of social interaction among its players,
+				    and there was also a good balance between looking on screen and looking
+				    around. The questions stimulated the students to look around and
+				    examine the museum objects (in this case, the images on the posters). </p>
+				  <p>It is notable that young people do not read text on
+				    screen, nor listen to very long audio captions. A good example
+				    is the introductory movie: all participants indicated the movie is clear,
+				    but our&nbsp; observation confirmed that they just watched the movie
+				    without listening. Another example is the chatbox: some students
+				    asked us how they can use this service even though the directions for
+				    use can be read on the screen. It is really important to make the
+				    screen more visually appealing; for example, by placing text in balloons,
+				    by making lips move when a character is telling something, by working
+				    with multiple voices/dialects, etc. </p>
+				  <h1>Conclusion</h1>
+				  <p>ARCHIE is an interdisciplinary research project which
+				    aims to discover how a handheld guide can be used to enhance the museum
+				    learning experience. Because we stress the important role of social
+				    interaction as a prerequisite for intellectual, social, personal and
+				    cultural development, one of the main objectives of the ARCHIE project
+				    is to encourage and stimulate interaction both with the museum and with
+				    fellow visitors, using the PDA as a communication medium. We have
+				    developed an initial application that incorporates the concepts discussed
+				    in this paper: a collaborative trading game. The design process
+				    that leads to this prototype consists of 6 steps: user analysis, concept
+				    generation, conceptual design, architectural design, content development
+				    and evaluation. User tests pointed out that the objective of social
+				    interaction has been accomplished and that the PDA enhances user experience
+				    significantly. The ARCHIE mobile guide framework that was used
+				    for the trading game is currently being extended so that more complex
+				    museum visits (e.g. an overall museum game for different types of groups)
+				    can be supported.</p>
+				  <h2>Acknowledgements</h2>
+				  <p class="AcknowedgementsText">Part of the research at EDM is funded by
+				    ERDF (European Regional Development Fund), the Flemish Government, and
+				    the Flemish Interdisciplinary Institute for Broadband Technology (IBBT).</p>
+				  <p class="AcknowedgementsText">We would also like to thank Mieke Haesen
+				    for her help with the evaluation process, the museum staff of the Gallo-Roman
+				    Museum for close cooperation, and the secondary schools O.-L.-Vrouwlyceum
+				    (Genk), Middenschool Kindsheid Jesu (Hasselt) and Technisch Instituut
+				    St.-Lodewijk (Genk) for evaluating the software discussed in this paper.</p>
+				  <h1>References </h1>
+				  <p class="ReferencesText">Angliss, S. (2006a). &ldquo;Talking sense&rdquo;.
+				    In <em>Museum Practice Magazine</em>,
+				    34, 46-47.</p>
+				  <p class="ReferencesText">Angliss, S. (2006b). &ldquo;Sound and vision&rdquo;.
+				    In <em>Museum Practice Magazine</em>,
+				    34, 51-52.</p>
+				  <p class="ReferencesText">Cabrera, J.S., H.M. Frutos, A.G. Stoica, N. Avouris,&nbsp; Y.
+				    Dimitriadis,&nbsp; G. Fiotakis, &amp; K.D. Liveri (2005). &ldquo;Mystery
+				    in the Museum: Collaborative Learning Activities using Handheld Devices&rdquo;. Proc.
+				    of MobileHCI 05. New York: ACM Press, 315-318. Retrieved February,
+				    2006, from http://hci.ece.upatras.gr/pubs_files/s126SimarroCabrera_et_al_MobileHCI_2005.pdf</p>
+				  <p class="ReferencesText">Falk, J. &amp; L. Dierking (2000). <em>Learning
+				      from Museums: Visitor Experiences and the Making of Meaning</em>.
+				      Walnut Creek: Altamira Press.</p>
+				  <p class="ReferencesText">Hawkey, R. (2004). &ldquo;Learning with
+				    Digital Technologies in Museums, Science Centres and Galleries, King&rsquo;s
+				    College London&rdquo;. Retrieved November, 2006, from Futurelab
+				    at&nbsp; <a href="../http://www.futurelab.org.uk/research/reviews/09_01.htm" target="_blank">http://www.futurelab.org.uk/research/reviews/09_01.htm</a></p>
+				  <p class="ReferencesText">International Organization for Standardization
+				    (1999). ISO 13407. &ldquo;Human Centred Design Process for Interactive
+				    Systems&rdquo;, Geneva. </p>
+				  <p class="ReferencesText">Katz, S., Y. Kahanov, N. Kashtan, T. Kuflik,&nbsp; I.
+				    Graziola,&nbsp; C. Rocchi,&nbsp; O. Stocj, &amp; M. Zancanaro (2006). &ldquo;Preparing
+				    Personalized Multimedia Presentations for a Mobile Museum
+				    Visitors&rsquo; Guide &ndash; a
+				    Methodological Approach&rdquo;. Museums and the Web 2006, Retrieved December,
+				    2006, from <a href="../http://www.archimuse.com/mw2006/abstracts/prg_300000703.html" target="_blank">http://www.archimuse.com/mw2006/abstracts/prg_300000703.html</a></p>
+				  <p class="ReferencesText">Larman, C. (2004). <em>Applying UML and Patterns:
+				      An Introduction to Object-Oriented Analysis and Design and Iterative
+				      Development</em> (3rd Edition). Prentice
+				      Hall PTR.</p>
+				  <p class="ReferencesText">Laurillau, Y. &amp; F. Patern&ograve;, (2004).
+				    Supporting museum co-visits using mobile devices. Proc. of MobileHCI
+				    04, Berlin: Lecture Notes in Computer Science, 451-455. Retrieved
+				    November, 2005, from <a href="../http://giove.cnuce.cnr.it/pdawebsite/CiceroPublications.html" target="_blank">http://giove.cnuce.cnr.it/pdawebsite/CiceroPublications.html</a>.</p>
+				  <p class="ReferencesText">Linaza, M.T., A. Garc&iacute;a,&nbsp; A. Susperregui, &amp; C.
+				    Lamsfus, C. (2006). &ldquo;Interactive Mobile Assistants for Added-value
+				    Cultural Contents&rdquo;. In: M. Ioannides, D. Arnold, F. Niccolucci &amp; K.
+				    Mania (Eds.) <em>Proc. of VAST 2006.</em>&nbsp; Aire-la-Ville:
+				    Eurographics Association. 83-90.</p>
+				  <p class="ReferencesText">Morrissey, K.A. (2002). &ldquo;Pathways Among
+				    Objects and Museum Visitors&rdquo;. In S.G.Paris (Ed.), <em>Perspectives
+				    on Object-Centered Learning in Museums.</em> Mahwah:
+				    Lawrence Erlbaum Associates, 285-299. </p>
+				  <p class="ReferencesText">Mori, G., F. Patern&ograve;, &amp; C. Santoro
+				    (2002). &ldquo;CTTE: Support for Developing and Analyzing Task Models
+				    for Interactive System Design&rdquo;. In <em>IEEE Trans. Software Eng</em>.
+				    28( 8 ). 797-813. </p>
+				  <p class="ReferencesText">Piscitelli, B. &amp; K. Weier (2002). &ldquo;Learning
+				    With, Through, and About Art: The Role of Social Interactions&rdquo;.
+				    In S.G.Paris (Ed.), <em>Perspectives on Object-Centered Learning in Museums</em>.
+				    Mahwah: Lawrence Erlbaum Associates, 121-151.</p>
+				  <p class="ReferencesText">Preece, J., Y. Rogers, Y. &amp; H. Sharp (2002). <em>Interaction
+				      design: beyond human-computer interaction.</em>&nbsp; New
+				      York: John Wiley &amp; Sons, Inc.</p>
+				  <p class="ReferencesText">Proctor, N. &amp; C. Tellis (2003). &ldquo;The
+				    State of the Art in Museum Handhelds in 2003&rdquo;. In: D. Bearman &amp; J.
+				    Trant (Eds.) <em>Museums and the Web, Selected papers from Museums and
+				    the Web 2003</em>. Pittsburgh:
+				    Archives &amp; Museum Informatics. 227-238. Retrieved November, 2005,
+				    from <a href="../http://www.archimuse.com/mw2003/papers/proctor/proctor.html" target="_blank">http://www.archimuse.com/mw2003/papers/proctor/proctor.html</a> </p>
+				  <p class="ReferencesText">Provincial Gallo-Roman Museum (2005). Quantitative
+				    learning target group research. Unpublished findings, Tongeren.</p>
+				  <p class="ReferencesText">Raptis, D., N. Tselios &amp; N. Avouris (2005). &ldquo;Context-based
+				    design of mobile applications for museums: a Survey of existing practices&rdquo;. In <em>Proc.
+				    of MobileHCI&rsquo;05</em>. New
+				    York: ACM Press, 153-160.</p>
+				  <p class="ReferencesText">Redmond-Pyle, D. &amp; A. Moore (1995). <em>Graphical
+				      User Interface Design and Evaluation. A practical process</em>. Harlow:
+				      Prentice Hall Pearson Education Limited.</p>
+				  <p class="ReferencesText">Vom Lehn, D., &amp; C. Heath (2005). &ldquo;Accounting
+				    for New Technology in Museum Exhibitions&rdquo;. In <em>International
+				    Journal of Arts Management</em>, 7(3),
+				    11-21.</p>
+				  <p class="ReferencesText">Vom Lehn, D., C. Heath &amp; J. Hindmarsh (2005). &ldquo;Rethinking
+				    interactivity: design for participation in museums and galleries&rdquo;.
+				    Work, Interaction &amp; Technology Research Group, King&rsquo;s College
+				    London. Retrieved January 26, 2006, from Re-thinking Technologies in
+				    Museums at <a href="../http://www.idc.ul.ie/museumworkshop/" target="_blank">http://www.idc.ul.ie/museumworkshop/</a></p>
+				  <p class="ReferencesText">Woodruff, A., P.M. Aoki, A. Hurst &amp; M.H.
+				    Szymanski&nbsp; (2001). &ldquo;Electronic Guidebooks and Visitor Attention&rdquo;.
+				    Proceedings of 6th International Cultural Heritage Informatics Meeting,
+				    Milan, Italy. Retrieved November, 2005, from <a href="../http://www.archimuse.com/publishing/ichim01_vol1/woodruff.pdf" target="_blank">http://www.archimuse.com/publishing/ichim01_vol1/woodruff.pdf</a></p>
+				  <p>&nbsp;</p>
+		  <!-- #EndEditable -->
+				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Van Loon, et al., Supporting Social Interaction: A Collaborative Trading Game On PDA<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2007: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics, published March 1, 2007  Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+http://www.archimuse.com/mw2007/papers/<!-- #BeginEditable "URL" -->vanLoon/vanLoon.html
+				 <!-- #EndEditable --></p>
+				<p class="references"><em><!-- InstanceBeginEditable name="Editorial Note" -->Editorial Note<!-- InstanceEndEditable --></em> </p>
+	  </div>
+<div id="sidebar">
+			<div id="side-nav">
+				<ul id="side-nav-list">
+					    <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+						<li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+						<li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+						<li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+						<li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+						<li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+						<li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+						<li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+				</ul>
+			</div>
+			<div id="search-site">
+				<form method="post" action="../http://search.archimuse.com/cgi-bin/htsearch">
+					<input type="hidden" name="format" value="builtin-long" />
+					<input type="hidden" name="method" value="and" />
+					<input type="hidden" name="config" value="htdig-mw2007" />
+					<input type="hidden" name="restrict" value="" />
+					<input type="hidden" name="exclude" value="" />
+					<input type="text" size="20" name="words" value="" id="searchmw" />
+					<input type="image" src="../../images/searchmw2007.gif" id="searchbox" name="search" />
+				</form>
+			</div>
+				<div id="sidebar-links">
+				<ul id="sidebar-links-list">
+					<li><a href="../../../index.html" class="produced-by">produced by<br />
+					    <img src="../../images/sidelogo.gif" width="144" height="37" alt="AMI logo" /></a></li>
+					<li><a href="../../../index.html">Join our mailing list</a></li>
+					<li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+					<img src="../../../external.gif?link=http://www.archimuse.com/ami.images/search.gif" alt="search" width="24" height="25" /></a></li>
+				</ul>
+		  </div>
+		</div>
+		<div id="footer">
+		  <div id="last-updated">
+          published: April 11, 2007<br />
+			last updated:<!-- #BeginDate format:Am1a -->October 28, 2010 12:23 PM<!-- #EndDate -->
+		        <div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+		  </div>
+			<div id="footer-content">
+				Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E 2P3 Canada<br />
+				Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+				
+				<script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2007";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2007 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				</script>	
+
+		<br />
+				Copyright &copy; 2006 - Archives &amp; Museum Informatics - All rights reserved.<br />
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/vanLoon/vanLoon.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:30:16 GMT -->
+</html>
+					

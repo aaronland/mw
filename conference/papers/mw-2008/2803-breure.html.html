@@ -1,0 +1,895 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2008-papers.dwt" codeOutsideHTMLIsLocked="true" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2008/papers/breure/breure.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:58:21 GMT -->
+<head>
+
+<!-- InstanceBeginEditable name="HeadPageTitle" -->
+	<title>Archives &amp; Museum Informatics: Museums and the Web 2008: Paper: Breure, L., et al., Modeling Portals for Cultural Landscapes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="metaTitle" -->
+	<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2008: Proceedings" />
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Keywords" -->
+<meta name="Keywords" content="cultural landscape, maps, GIS, visual narrative, Rich Internet Applications, mw, mw2008, museums and the web, matw, 2008, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Description" -->
+<meta name="Description" content="Museums and the Web 2008: the international conference for culture and heritage on-line" />
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2007" />
+<!-- InstanceEndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<!-- InstanceBeginEditable name="charset" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="../../css/mw2008.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/papers.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/mw2008-noNews.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="ImageRotateScript" -->
+
+<!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="PageScript" -->
+<!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+</head>
+<body  onload="initImgRotation()">
+<div id="container">
+  <div id="header" onclick="location.href='../../index.html';" style="cursor:pointer;"> </div>
+  <!--htdig_noindex-->
+  <div id="top-nav">
+    <ul id="top-nav-list">
+      <li><a href="../../register/index.html">Register</a></li>
+      <li><a href="../../dates/index.html">Key Dates</a></li>
+      <li><a href="../../sescal/index.html">Schedule</a></li>
+      <li><a href="../../local/index.html">Local Info</a></li>
+    </ul>
+    <!--/htdig_noindex-->
+  </div>
+  <div id="header-photo"> 
+	 <!-- InstanceBeginEditable name="header-photo" --> <img src="Breure.fig2-t.jpg"  height="132" width="229" alt="MW-photo" />	 <!-- InstanceEndEditable --></div>
+<div id="print-title">
+	<h1>Museums and the Web 2008: the international conference for culture and heritage on-line</h1>
+	<h2>produced by Archives &amp; Museum Informatics</h2>
+	<h3>site at http://www.archimuse.com/mw2008/</h3>	 
+</div> 
+ <div id="date"> <a href="../../sescal/index.html">April 9-12, 2008</a><br />
+    <a href="../../local/index.html">Montr&eacute;al, Qu&eacute;bec, Canada</a> </div>
+  <div id="title">
+    <h1> 
+		<!-- InstanceBeginEditable name="PageTitle" --> 
+Modeling Portals for Cultural Landscapes
+		<!-- InstanceEndEditable --> </h1>
+  </div>
+  <!--htdig_noindex-->
+  <div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+        <h3 class="Author"><a href="../../bios/au_440015961.html">Leen Breure</a>, Utrecht University,
+          <a href="../../bios/au_440015973.html">Willemke Landman</a>, Landschap Erfgoed Utrecht, 
+          <a href="../../bios/au_440015983.html">Sandor Spruit</a>, and <a href="../../bios/au_440015987.html">Hans Voorbij</a>, Utrecht University, The Netherlands</h3>
+        <h3 class="AbstractTitle">Abstract</h3>
+        <p class="AbstractText">A great variety of Web sites displaying cultural aspects
+  of landscapes exist today. Although built on different design patterns, all
+  these Web sites have to cope with the typical problem of creating a concise but
+  comprehensive representation of a variety of cultural resources within a
+  framework of time and space. In this paper we discuss currently predominant but
+  very different approaches, ranging from an historical GIS and a wiki with
+  Google maps to illustrated HTML-documents and Flash-based visual narratives. We
+  propose a model that identifies generic requirements for spatiotemporal
+  cultural heritage Web sites. The model helps to understand how well different
+  implementation environments suit various objectives. The model is applied to
+  our own cultural landscape portal on the region around the Vecht, a small river
+  which runs from the city of Utrecht to the north, at both sides fringed by a
+  rich historical landscape.</p>
+<p class="AbstractText">Keywords: cultural landscape, maps, GIS, visual
+  narrative, Rich Internet Applications</p>
+	  <!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+
+<h1>Cultural Landscapes </h1>
+<p>A <i>cultural
+  landscape</i> is the product of
+  both the activity of nature and human intervention. It includes historical
+  places, buildings, and other cultural markers, together with the natural
+  environment itself; by the impact of human habitation it has got cultural value
+  as well (Breure <i>et al</i>.,
+  2006). Such a landscape can be considered as a &lsquo;museum without walls&rsquo;.</p>
+<p>In 1992 UNESCO&rsquo;s
+  World Heritage Committee defined three categories of cultural landscapes:</p>
+<ol>
+  <li>Clearly defined landscapes designed and created
+    intentionally by man; for example, gardens and parks constructed for aesthetic
+    reasons.</li>
+  <li>Organically evolved landscapes reflecting the
+    historical process of evolution. They fall into two subcategories:
+    <ol class="list-letters">
+      <li>a relict (or fossil)
+        landscape in which an evolutionary process came to an end at some time in the
+        past, having significant features still visible in material form.</li>
+      <li>a continuing landscape in
+        which the evolutionary process is still in progress, at the same time
+        exhibiting significant material evidence of its evolution over time.</li>
+    </ol>
+  </li>
+  <li>    Associative cultural landscapes, areas with powerful religious, artistic or
+    cultural associations rather than material cultural evidence (R&ouml;ssler, 2003).</li>
+</ol>
+<p>This paper focuses
+  on category 2b, the landscape with historical value still retaining an active
+  role in society. This category has some inherent information problems. </p>
+<h1>Cultural Landscape Portals And Their Information Problems</h1>
+<p>For centuries
+  different groups of people have cultivated their environment. Traces of these
+  activities are deposited in the landscape or have been scattered over various
+  collection holders, like museums, archives, libraries, research institutes,
+  government agencies - even far outside the cultural landscape itself. This is
+  documented by a great variety of spatiotemporal cultural heritage Web sites
+  which we subsume under the general notion of <i>cultural landscape portals</i>.</p>
+<p>Each of them deals
+  with specific aspects of cultural landscapes, often aiming at a particular
+  purpose that sometimes even lies far beyond the regional scope of the landscape
+  itself. A holistic view, however, seems more appropriate to show the role of a
+  cultural landscape in an actively changing society. Tourism, spatial planning
+  and initiatives to strengthen awareness of regional identity may benefit from
+  an integrated approach. In the Dutch context, for example, decisions on a
+  prominent issue like regional water management require integration of
+  information from many sources and are related to a wide range of issues: land
+  use, preservation of natural environment, cultural heritage, national versus
+  regional spatial planning, and so on. </p>
+<p>The target audience
+  of these portals is a fleeting group of tourists, schoolchildren, students,
+  architects, town and country planners, governmental administrators and the
+  local population, who do not want to spend hours studying scattered sources and
+  distilling the information they need. These users rather prefer &lsquo;one-window
+  shopping&rsquo; and information packages whose essence can be quickly grasped.
+  Instead of long-winded stories, explorative interfaces should be offered, empowering
+  users to integrate information to their own taste and from different Web sites
+  in a transparent way.</p>
+<p>Many cultural
+  landscape portals came into existence as database-driven projects and still
+  present themselves as structured collections of individual items. Users with
+  limited, factual questions will be satisfied with searching information about a
+  specific location or object. A landscape portal is then the specialized entry
+  point. </p>
+<p>However, information
+  integration requires more. Ideally, one must be able to read&rdquo; the landscape in
+  its spatiotemporal context (Birnbaum, 1994; Taylor; 2003; Scazzosi, 2004;
+  Breure et al., 2006). This implies building relations between points in time
+  and space in order to create cause-and-effect-trajectories. This reading will
+  take place on different levels: landscape as nature, habitat, artifact, system,
+  problem, wealth, ideology, history, place and aesthetic. Integration (and
+  understanding) may still require a lot of study in spite of all the information
+  available on the Web.</p>
+<p>To support this
+  reading process, a cultural landscape portal can help users to find and
+  integrate the variety of scattered information. It may not only provide data,
+  but also explain the landscape&rsquo;s development. This requires an overview of the
+  area&rsquo;s full extent, with its infrastructure, vegetation and land use, and a
+  more detailed display of objects and historical locations, in their present
+  state as well as in the previous or future stages. All of these can be linked
+  together by a representation of the processes that underlie the landscape&rsquo;s
+  changes over time (Breure et al., 2006). Technically, this means an integration
+  of different multimedia objects, including texts, (aerial) photographs,
+  historical and modern maps, and video.</p>
+<p>This brief sketch
+  leaves us with some thorny questions about content engineering and portal
+  design. Although reflecting different design patterns, all cultural landscape
+  portals have to cope with the problem of creating a comprehensive yet concise
+  representation of a variety of cultural resources within a framework of time
+  and space. Are there any best practices for creating such an integrative view
+  on a cultural landscape, leaving ample room for detailed exploration too? What
+  kinds of design patterns and techniques have proven to be most successful? How
+  are they to be translated to the portal&rsquo;s architecture? In other words, can we
+  define some architectural principles that solve the typical information
+  problems of cultural landscape portals? </p>
+<h1>A Model For An Integrative Presentation Of Cultural Landscapes</h1>
+<h2>A Theoretical Framework: Building On The Legacy Of The <i>Annales</i></h2>
+<p>In search of a
+  suitable portal architecture, we may learn from existing Web sites. How well do
+  they succeed in presenting an integrated view of their collection? Although we
+  already implied what we mean by integrating cultural landscape information, the
+  notion should be more well-founded before starting any analysis of existing
+  portals.</p>
+<p>The landscape as
+  substratum of historical discourse is not new. About the middle of the previous
+  century the idea was taken to a higher level by the French <i>Annales</i> school of history. In 1949 the monumental work
+  by Fernand Braudel, <i>The Mediterranean,</i> was published (French title: <i>La M&eacute;diterran&eacute;e et le monde
+  m&eacute;diterran&eacute;en &agrave; l&rsquo;&eacute;poque de Philippe II &ndash; </i>revised in 1966; Braudel, 1966). It comprised
+  much more than a detailed study of the Mediterranean as a cultural landscape:
+  it demonstrated also a theoretical model of geohistory, or, rather a &lsquo;total
+  history&rsquo; (<i>histoire globale</i>)
+  based on geographic structures and differences in historical time. </p>
+<p>The work starts from
+  the premise that human society develops at different rhythms and that all the
+  elements within any human situation interact with one another. There are three
+  levels of historic time, or three lenses,&rdquo; for observing the past:</p>
+<ul>
+  <li>The <i>longue dur&eacute;e</i> is a perspective that concentrates on the
+    immobile, the steady patterns of life with its underlying geographical
+    constraints and natural regulating mechanisms related to climate, seasons and
+    social conventions.</li>
+  <li>The <i>moyenne dur&eacute;e </i>(or <i>conjonctures</i>) is about historical processes that develop in
+    cycles like the rise of a trade center. Its time span is about fifty  to one
+    hundred years.</li>
+  <li>The <i>courte dur&eacute;e </i>(or <i>histoire</i> <i>&eacute;v&eacute;nementielle</i>) deals with the short-term events in history
+    and their consequences, like warfare, political actors, earthquakes, famines,
+    diseases (Hufton, 1986).</li>
+</ul>
+<p>In spite of
+  criticism and revisiting (Clark, 1999; Lai, 2004), Braudel&rsquo;s ideas are still
+  influential in cultural landscape studies (Barker, 1995; Westerdahl, 1998;
+  Ucko, 1999), not surprisingly because of his integrative approach with emphasis
+  on overview. Maritime archeology, for example, coined the term &lsquo;maritime <i>dur&eacute;e</i>&rsquo; to refer to the long-term interaction between
+  humans and the maritime coastal landscape (R&ouml;nnby, 2007). Viewed through the
+  lens of the <i>Annales</i>, the
+  dynamic change between centralization and decentralization in the Maya state
+  was explained as a classic example of the contradictions between a long-term
+  structure (kinship) and medium-term (kingship) cycle&rdquo; (Iannone, 2002).</p>
+<p>Likewise inspired by
+  Braudel&rsquo;s intellectual legacy, we introduce here a simple model that will help
+  to define the notion of information integration with regard to a cultural
+  landscape. It should not be considered as a working out of Braudel's theory,
+  but rather as a practical frame of reference that employs the idea of different
+  historical rhythms. Upon a basis formed by the dimensions of time and space we
+  propose three layers:</p>
+<ol>
+  <li>Structures (in a Braudelian sense): geological,
+    geographical, climatological, but also fundamental, stable political and legal
+    structures.</li>
+  <li>Processes: a catch-all term for all those
+    longer-time-related human activities and/or gradual changes in the natural
+    environment that formed distinctive stages of the cultural landscape, like the
+    historical peat extraction causing today&rsquo;s problems of water management in
+    several Dutch regions.</li>
+  <li>Events concerning objects and locations
+    relevant to the landscape&rsquo;s history and/or natural development. They have in
+    common that they take up relatively little time or space. Information on this
+    level includes not only the event itself, but also its material cultural
+    evidence; e.g. it contains the fact of building a castle as well as a
+    description of what was built. </li>
+</ol>
+<p>To symbolize the
+  differences in rhythm, we may visualize the layers in a pyramid shape, like in
+  figure 1. With the help of this model, a portal for cultural landscapes can be
+  characterized by roughly mapping its content on to these levels with some indication
+  of its extent in time and space. </p>
+<p class="caption"><img src="Breure.fig1.jpg" alt="Figure 1" width="400" height="241" /></p>
+<p class="caption">Fig 1: A reference model for cultural landscapes</p>
+<h1>Defining Information Integration</h1>
+<p>The portal&rsquo;s content
+  will consist of well-organized chunks of information, or topics. A <i>topic</i> in its simplest form can be represented by a
+  short text; however, a cluster of related texts, images, maps, diagrams, etc.
+  will occur much more frequently. In a database-driven system, a topic coincides
+  with a view (snapshot), a particular selection of data.</p>
+<p>Against the
+  background of the reference model, information integration can be bound to two
+  principles:</p>
+<ol>
+  <li><b><i>A topic should extend over multiple
+    dimensions</i></b>. In terms of
+    figure 1, a topic should not be a &lsquo;circle in a plane&rsquo;, for example, a factual
+    account of events without integrating related processes and structures; also a
+    &lsquo;wall&rsquo; or a &lsquo;pillar&rsquo; is an undesirable shape, which would imply a historical
+    narrative covering a small time slice, and/or tiny territory. Although
+    publications on such limited topics have their own value, for example in local
+    history, they do not contribute to an integrative view on the cultural
+    landscape as a whole. The ideal shape is a &lsquo;sphere&rsquo;, a topic that has a
+    balanced integration of various historical levels over a reasonable distance in
+    time and space. In practice we will find, of course, much less ideal shapes.</li>
+  <li><b><i>Topics should be connected through
+    content, not only by hyperlinks</i></b>.
+    Although hyper linking topics is a major step towards integration, users may
+    perceive the shift from one document to an other as an abrupt change. They have
+    to pick up the story line each time a new document is opened. This can be cured
+    by deliberately dividing a topic into two parts, core and context information.
+    The latter will cover related topics in a global or fragmentary way depending
+    on the subject. </li>
+</ol>
+<p>Principle 1 will
+  automatically encourage a more panoramic style of writing and displaying, in
+  which other topics appear on the horizon. However, contextual connections need
+  not necessarily be made in the text itself. There are many more options to
+  implement this principle; for example, through an interactive map that keeps
+  one part (the overview) static, while another part changes, e.g. through a
+  pop-up window. An interactive timeline (with more information than just names)
+  can also function as a connector and can be used in the contextual part of
+  several related topics. A well-chosen image will also connect different
+  stories, as with the old school wall pictures about farm life or meadow birds
+  which implicitly provide context to the individual objects displayed. </p>
+<p>Hyperlinks, or any
+  substitute in the form of buttons, clickable maps etc., are still required, but
+  they are always embedded within a content that provides a sort of preview of
+  the topic linked to. This will result in interesting graphical page navigators
+  which replace a simple list of page titles.</p>
+<p>To summarize both
+  principles visually: in our definition a highly integrated presentation looks
+  like Figure 2. Topics are ideally spheres intersecting one another, rather than
+  balls connected with lines (which represent hyperlinking only). The connector
+  is either the intersection itself (i.e. shared content), or the ball in the
+  middle (binding contextual content). In addition, these spheres should
+  intersect more than one layer, thus combining different levels of history. </p>
+<p>However, information
+  integration thus defined lacks the important quality of overview or filtering.
+  This is not so much a feature of the content structure itself, but rather a
+  quality of the presentation. It is also highly related to information
+  requirements, which will vary by target audience, and therefore are a rather
+  subjective criterion. Referring to Figure 2, we may say at least that the user
+  should not perceive the portal&rsquo;s content merely as a multitude of topics.
+  Ideally, users can follow one or more story lines through an information
+  hierarchy formed by connected topics. In our discussion of portals below, this
+  aspect is not rated, since it requires profound and detailed usability
+  analysis.</p>
+<p class="caption"><img src="Breure.fig2.jpg" alt="Figure 2" width="400" height="228" /></p>
+<p class="caption">Fig 2: Integrated information in a cultural landscape
+  portal.</p>
+<h1>Examples Of Cultural Landscape Portals Regarding Information Integration</h1>
+<p><i>(See the section
+  References for the URLs of the Web sites cited below.) </i></p>
+<h2>I: Collection Portals </h2>
+<p>A large group of
+  cultural landscape portals are based on physical collections of cultural
+  heritage institutions, which vary from museums, libraries, archives to
+  projects, mostly of regional or supraregional character, and which present
+  material from different collection holders.</p>
+<h3>Historical Map Collections</h3>
+<p>Collections of
+  historical maps form an important category in this group and are sometimes the
+  outstanding representation of cultural landscapes, like in <i>American Memory</i>. There, cultural landscapes are documented by
+  digitized maps viewable through a zooming and navigation mechanism, presented
+  completely with metadata. This is a recurrent pattern, also used by many
+  libraries for their map collections. This type of Web site aims primarily at
+  presenting collections and is not intended as a real cultural landscape portal.
+  The degree of integration is usually low &ndash; in terms of our model, it does
+  not go beyond &lsquo;circles in the plane of structures&rsquo;. Of course, maps may also
+  document historical processes and events, but when presented individually, as
+  static images, one can only see how structures have changed over time, perhaps
+  after printing the maps first. The process itself must be reconstructed by the
+  user himself.</p>
+<p>A larger integration
+  of map information on the level of structures can be realized by georeferencing
+  maps and by search options using a gazetteer. The <i>Royal Tropical Institute</i> in the Netherlands has brought a substantial
+  collection of colonial maps on-line (Indonesia, Suriname and the Netherlands
+  Antilles); they can be searched by  geographical names. Hits are circled on the
+  historical map and can be marked also on Google Earth.</p>
+<h3>Mixed Collections</h3>
+<p>Maps may be part of
+  mixed digital collections which include also material like photographs, art
+  reproductions and written documents. This type of portal distinguishes itself
+  from the previous category by its heterogeneous character, but has the same
+  focus on collections, mainly resulting in an equally low degree of integration.
+  A good example is <i>Digital Himalaya</i>,
+  which includes also journals, films, music, photos, texts and census data.</p>
+<p>Another
+  representative of this genre is the <i>Japanese Historical Map Collection</i>, housed on the Berkeley campus in the East
+  Asian Library. The on-line version is related to the David Rumsey Collection
+  and counts over 1100 images of maps and books.</p>
+<p>In terms of our
+  model, this type of portal covers all levels of history, but the topics are
+  quite small, granules rather than balls, without connections other than
+  metadata.</p>
+<h2>ll: Reference Portals</h2>
+<p>We understand by
+  reference portals those Web sites whose main purpose is to collect and share
+  information from different sources, and to organize and present it in a certain
+  format; for example, as a database or a wiki or through a geographic
+  information system (GIS). As with conventional reference works like an atlas or
+  encyclopedia, the emphasis is on creating knowledge rather than on displaying
+  collections. </p>
+<h3>Databases</h3>
+<p>Professional
+  information about cultural landscapes is systematically organized in <b>(text)
+  databases like</b> the <i>World
+  Heritage Site</i> of UNESCO and <i>Cultbase</i>, created by PAN, a thematic network on
+  cultural landscapes and their ecosystems. A survey of these institutional
+  expert databases is far beyond the scope of this paper.</p>
+<p><b>Digital libraries</b> form a special subcategory; they can also be
+  classified as mixed collections. They contain a wide range of historical
+  sources, both visual material and texts. Most well-known is <i>Perseus</i>, which covers not only antiquity, but also,
+  amongst other topics, the history of London from its founding to the 19th
+  century. Another nice example is the <i>Tibetan and Himalayan Digital Library</i>. It contains a variety of cultural resources,
+  like images, audio/video, interactive maps, a GIS, and a gazetteer which is
+  connected with an interactive map. However, viewing a QuickTime-panorama from 
+  Mount Everest, it is impossible to switch to a map or GIS to locate the
+  position.</p>
+<p>Integration will
+  vary: a lot of content is very well linked, but in other cases isolated
+  documents are displayed and users must find their way to neighboring
+  information on their own. Like mixed collections, these portals cover all
+  historical levels.</p>
+<h3>Wikis</h3>
+<p>Following
+  Wikipedia&rsquo;s popular model, some Web sites sprang into existence and tried to
+  get non-professionals involved. Germany has a <i>Germaniki</i> with information about German cities and
+  towns, and the <i>Kulturlandschaftsportals Th&uuml;ringen</i> makes an appeal to local populations to
+  participate in a research project on the cultural landscape and to share their
+  local expertise through a wiki. The south-western part of the Netherlands is
+  being documented in the <i>Buurtatlas</i> (&lsquo;neighborhood atlas&rsquo;), which combines a wiki with Google maps.</p>
+<p>With regard to our
+  reference model, the wikis mentioned tend to focus on the level of events.
+  Because automatic linking is part of the wiki model, one can easily switch
+  topics, but the built-in collaborative mechanisms do not direct the users
+  towards an integrated presentation of content. Because the usage of a wiki
+  implies a great number of authors, a balanced contextual overlap between topics
+  is hard to realize. </p>
+<h3>GIS</h3>
+<p>We use the term
+  &lsquo;geographic information system&rsquo; (GIS) in the broad sense of the word, as an
+  information system that handles locationally defined data, not necessarily
+  having possibilities for extensive data analysis. Therefore, software like
+  Google Earth and Google Maps also falls under this definition. </p>
+<p>Google software
+  makes it quite easy to mark cultural data on a map; for example, archeological
+  excavations, as the Belgian Web site <i>OpGraven</i> does. The award-winning Flemish cultural
+  heritage site <i>Erfgoed in Vlaanderen</i> combines Google Map technology with Flickr, where pictures are grouped and made
+  accessible through various entries.</p>
+<p>Because many
+  professional landscape organizations, government agencies and research groups
+  tend to create their own GIS to visualize administrative data, it is unfeasible
+  to give a representative sketch of the full range of applications. We shall
+  concentrate, for our purpose, on the most important subcategory: <i>historical
+  GIS</i>, which uses
+  geovisualization as a common framework to integrate spatially referenced data,
+  mainly from serial historical sources. Historical maps can be used as 
+  (semi-transparent) overlays to combine different views of a landscape over
+  time.</p>
+<p>A historical GIS is
+  used for three purposes: </p>
+<ol>
+  <li>to empirically research the history of land use
+    in relation to human settlement and economic change, </li>
+  <li>to visualize past landscapes, and </li>
+  <li>to make historical-geographical source
+    materials available to scholars and to the general public (Knowles, 2005). In
+    the Netherlands, <i>HISGIS</i> documents the history of the northern province of Friesland in this way.</li>
+</ol>
+<p>The <i>Electronic
+  Cultural Atlas Initiative</i> (ECAI) is a good starting point for an overview of this subcategory. Many of
+  the projects listed are powered by the open source package <i>TimeMap</i>, which allows integration of diverse data
+  resources into a unified structure by defining a conceptual mapping between a
+  spatiotemporal data model and the project data. Maps with timelines and
+  controls are displayed through a Java applet. Areas are made clickable and
+  linkable to any Web resource. Historical processes can be visualized through
+  animations created on the fly, provided the underlying data are suitable for
+  display on a map. </p>
+<p><i>ECAI Iraq</i> is an illustration of what can be realized
+  with TimeMap. Data about the Iraqi and Mesopotamian culture is stored in
+  hundreds of Web sites around the world. ECAI Iraq acts as a central access
+  point using time-enabled thematic maps. The time line displays for each period
+  a list of links to Web resources. The interactive maps show the different
+  empires which can be switched on/off, or filtered through a time scale slider.
+  The Web site provides multiple entry points, like a map index and a list plus
+  clickable map of historical sites and empires.</p>
+<p>Given the
+  predominant combination of maps and database data, one misses sometimes an
+  explanatory historical narrative. An exception in this respect is <i>A Vision
+  of Britain</i>, created by the
+  Great Britain Historical GIS Project. After selection of a location and a
+  theme, the statistical data are introduced by a short text. The site contains
+  also historical maps and &ndash; a striking narrative element &#8211;
+  travelers&rsquo; tales linked to locations.</p>
+<p>The historical GIS
+  approach has powerful integrative capabilities, in particular with regard to
+  our first principle: a GIS can cover all levels of history and provide an
+  integrated view through a combination of maps, animations, and statistical
+  charts. Its limitation lies with the second principle, that of connecting
+  through content. Integration is fully dependent on the content&rsquo;s spatial
+  characteristics. A map is the only connector between topics, which are, in this
+  context, views or snapshots. </p>
+<h2>lll: Gateway Portals</h2>
+<p>Although &lsquo;gateway&rsquo;
+  is often used as a synonym of &lsquo;portal&rsquo;, we want to reserve this term for
+  introductory portals with emphasis on educational and promotional purposes.
+  Many Web sites in this category are set up by collection holders or cultural
+  heritage sites for the benefit of tourists, schools and the general public.</p>
+<p>The low end
+  distinguishes itself from typical tourist Web sites by the larger amount of
+  background information supplied. A few examples chosen haphazardly are the
+  French Web site about the Loire valley, <i>Val de Loire</i>, the gateway to the <i>Australian Alps
+  National Parks</i>, and the <i>Jurassic
+  Coast</i> Web site about the
+  Dorset and East Devon sea side.</p>
+<p>In the Netherlands,
+  local museums and archives cooperate in Web showcases which display highlights
+  of regional cultural heritage (for example, <i>Collectie Utrecht</i>). These Web sites tend to present historical
+  processes as narratives composed of text and images, with links to collection
+  elements. They have entries on themes, time periods and places, and interactive
+  maps to facilitate selections. </p>
+<p>A more media-rich
+  variant is the on-line exhibitions which combine clickable maps, animation,
+  video and audio to create a more immersive experience. Some fine examples are
+  presented by the <i>Arctic Studies Center</i>. In <i>Vikings: The North Atlantic Saga</i> the concept of text-plus-images still
+  dominates, but documents are enriched by audio and video, and are made
+  accessible through clickable stops on a journey map.</p>
+<p>The high end
+  comprises the Flash-based visual narratives like those we may find in the
+  portfolios of American studios, like <i>Terra Incognita</i> and <i>Second Story</i>. Here, the emphasis on multimedia and
+  interactive experience is even stronger.</p>
+<p>In <i>Congo Trek</i>, a co-production by Terra Incognita and
+  National Geographic, one can hike with biologist Michael Fay across central
+  Africa by moving a magnifier window over a digital map and by clicking places
+  to read a dispatch from that location. Digital videos about forest life are
+  held together by clickable 360<sup> </sup>degrees Shockwave panoramas.</p>
+<p>In Second Story&rsquo;s <i>Monticello</i> about the home of Thomas Jefferson, an
+  integration of multimedia content is realized through a feature-filled
+  interactive map of the plantation, a comprehensive database of images, and
+  immersive 3D representations of the house (Johnson, 2005).</p>
+<p>The category of
+  gateway portals shows a sliding scale from hyperlinked illustrated texts to
+  highly integrated multimedia presentations. A question presents itself: What
+  role do multimedia techniques play with regard to information integration?
+  Adding just more images, animations, or videos will not work. However,
+  appropriate usage can strike the balance between comprehensiveness and
+  conciseness. Where a hierarchy of hyperlinked texts becomes easily a burden, a
+  varied mixture of multimedia views on the same subject may create a compelling
+  experience. These views (topics, in terms of our model) can be connected by
+  interactive images that function as visual skeletons.</p>
+<h1>The Art Of Presentation</h1>
+<h2>Rich Internet Applications</h2>
+<p>Content integration
+  itself does not yet guarantee a unified experience. The high end of gateway
+  portals fall into the category of Rich Internet Applications (RIA). As Mullet
+  (2003) has pointed out, RIA create seamless user experiences through immediate
+  responses and smooth transitions between different states. They keep focus,
+  presenting a complete story about a single subject without distracting
+  information, and they are aware of user requirements through appropriate
+  filtering. All this requires some heuristics for organizing the content presentation.
+  This is also made clear by Terra Incognita and Second Story in their
+  reflections on the experiential rich media applications they create (Marable,
+  2000, 2004; Johnson 2003, 2005). Marable (2004) is most explicit with his
+  Integrated On-line Exhibit Model. Formulated with on-line exhibitions in mind,
+  it can be applied to cultural landscapes as well, as we demonstrate below. The
+  model has three tiers:</p>
+<ol>
+  <li><i>Experience</i>, a narrative-driven layer with emotionally engaging and
+    entertaining elements.</li>
+  <li><i>Exhibit</i>, the majority of interpretive and educational content in a
+    mixture of linear and non-linear modes. Here, visitors can explore topics and
+    themes.</li>
+  <li><i>Research</i> (or archive), comprising the exhibition sources, like historical
+    documents, works of art, etc.</li>
+</ol>
+<p>There are two
+  additional key elements in the model: <i>multiple entry points</i>, which give different audiences access to the
+  layer of content that best meets their needs, and <i>connecting story lines</i> encouraging visitors to follow a theme or
+  topic between the layers.</p>
+<h2>Enhancing The On-Line Exhibit Model</h2>
+<p>In our own research
+  project, the Cultural Landscape Explorer, we have experimented with integrating
+  and presenting content along the lines described above. We have built an
+  experimental portal <i>Venster op de Vecht </i>(http://www.vensteropdevecht.nl/), which covers the cultural
+  landscape of the river Vecht, a small river in the Rhine-Meuse delta near
+  Utrecht, with medieval castles and 17th and 18th century stately homes on its
+  banks, and peat lands on both sides. The portal can be classified as a gateway
+  and contains &ndash; on purpose &ndash; content with a varying degree of
+  integration and a wide range of presentation modes; e.g. simple illustrated
+  HTML documents connected by hyperlinks, an innovative guided tour based on
+  Google Maps, as well as high-end visual narratives. Our findings show that
+  cultural landscape content as described by our reference model (Figure 1) can
+  be mapped also into the on-line exhibition model such as the one outlined
+  above. </p>
+<ol>
+  <li><i>Events</i>: these, in particular their cultural
+    evidences, form the points of interest which are suitable for attracting
+    visitors&rsquo; attention. This is the experience level. One successful way of
+    presentation is a flight over the landscape&rdquo; as in our guided tour based on
+    Google Maps (cf. also Terra Explorer: <a href="http://www.skylinesoft.com/">http://www.skylinesoft.com/</a>). Each stop
+    has a popup balloon with pictures, and some have video fragments. A short text
+    with hyperlinks refers to more detailed information elsewhere in the portal.
+    Here, both the Google map and the balloon content act as connectors. Other
+    entry points are map-linked slide shows with photos about a particular area.</li>
+  <li><i>Processes</i>: it is tempting to visualize processes
+    primarily through a thematic map or animations, as with a historical GIS.
+    Initially, we did this, for example, with the interplay between land and water
+    in the peat lands. However, it became clear that to be easily understood, this
+    type of presentation required more text and pictures. The full presentation of
+    a process will take elements from all three levels (events, processes,
+    structures). In our case it evolved towards an on-line exhibit: text slides
+    with pictures and historical maps combined with Flash-animations, mixing a
+    linear story with explorative visuals. Connections are made through text that
+    refers to other topics, and through clickable maps that act as skeletons to
+    which other topics are linked. </li>
+  <li><i>Structures</i>: the atlas, with both modern and historical
+    maps, forms the archive section of our portal. Much of the material is still
+    underutilized and is waiting to be better integrated with the process and event
+    layers.</li>
+</ol>
+<h1>Conclusion</h1>
+<p>Helping users to
+  read and to understand a cultural landscape requires more than just linked
+  content; the content must be also self-integrated. The model we propose helps
+  to illustrate why experiential Web applications with elements of both
+  historical GIS and visual narratives provide best practices for supporting
+  information integration. Based on quite different philosophies but both
+  enabling exploration of underlying collections, historical GIS and visual
+  narratives are complementary approaches which can very well be combined. So
+  far, we have not found examples that did so on an extensive scale. Google Maps
+  and interactive Flash maps are the light variants of geovisualization, and  can
+  be added to portals of any type. But the effect of offering these techniques
+  will be much greater when applied to a presentation that provokes visual and
+  associative thinking. The content needs to be staged not in the linear way of a
+  book, but in an explorative and multi-dimensional visual space. Such a
+  presentation is highly applicable to portals of cultural landscapes. </p>
+<h1>References</h1>
+<h2>A. Publications</h2>
+<p class="ReferencesText">Barker,G.(1995). A Mediterranean Valley: Landscape
+  Archaeology and Annales History in the Biferno Valley. Leicester: Leicester
+  University Press.</p>
+<p class="ReferencesText">Birnbaum, A.(1994). Protecting Cultural Landscapes:
+  Planning, Treatment and Management of Historic Landscapes, consulted December
+  28, 2007. <a href="http://www.oldhousejournal.com/npsbriefs2/brief36.shtml">http://www.oldhousejournal.com/npsbriefs2/brief36.shtml</a></p>
+<p class="ReferencesText">Braudel, F.(1966). La M&eacute;diterran&eacute;e et le monde
+  m&eacute;diterran&eacute;en &agrave; l&rsquo;&eacute;poque de Philippe II, 2nd revised ed. Paris: Armand Colin. </p>
+<p class="ReferencesText">Braudel, F. &amp; S. Matthews (1982). On History.
+  Chicago: The University of Chicago Press.</p>
+<p class="ReferencesText">Breure, L., J. van den Berg, A.G.L. Spruit, &amp; J.B.
+  Voorbij, (2006). Visualizing cultural landscapes, in V.P. Guerrero-Bote (Ed.),
+  Current Research in Information Sciences and Technologies. Multidisciplinary
+  Approaches to Global Information Systems. Proceedings of the I International
+  Conference on Multidisciplinary Information Sciences and Technologies, Merida
+  (Spain), 598-602.</p>
+<p class="ReferencesText">Clark, S. (Ed.)(1999). The Annales School: Critical
+  Assessments. London, New York: Routledge.</p>
+<p class="ReferencesText">Hufton, O. (1986), Fernand Braudel. Past and Present,
+  112 August, 208-213.</p>
+<p class="ReferencesText">Iannone, G. (2002). Annales History and the Ancient
+  Maya State: Some Observations on the &quot;Dynamic Model&quot;. American
+  Anthropologist, 104.1 March, 68-78.</p>
+<p class="ReferencesText">Johnson, B. (2003). Disintermediation and the Museum
+  Web Experience: Database or Documentary-Which Way Should We Go? In J. Trant and
+  D. Bearman (eds.). Museums and the Web 2003: Proceedings. Toronto: Archives
+  &amp; Museum Informatics, published March 12, 2003 at
+  <a href="http://www.archimuse.com/mw2003/papers/johnsonbrad/johnsonbrad.html">http://www.archimuse.com/mw2003/papers/johnsonbrad/johnsonbrad.html</a></p>
+<p class="ReferencesText">Johnson, B. (2005). Place-based Storytelling Tools: A
+  new look at Monticello. In J. Trant and D. Bearman (eds.). Museums and the Web
+  2005: Proceedings. Toronto: Archives &amp; Museum Informatics, published March
+  31, 2005 at <a href="http://www.archimuse.com/mw2005/papers/johnsonB/johnsonB.html">http://www.archimuse.com/mw2005/papers/johnsonB/johnsonB.html</a></p>
+<p class="ReferencesText">Knowles, A.K. (2005). &#65279;Historical Uses of GIS.
+  Paper delivered at PACSCL symposium, Future Foundations: Mapping the Past:
+  Building the Philadelphia GeoHistory Network,&rdquo; 2 December 2005, consulted
+  December 30, 2007.
+  <a href="http://www.philageohistory.org/geohistory/symposium/resources/knowles_friday.pdf">http://www.philageohistory.org/geohistory/symposium/resources/knowles_friday.pdf </a></p>
+<p class="ReferencesText">Lai, C. (2004), Braudel's Historiography Reconsidered.
+  Lanham, Md.: University Press of America.</p>
+<p class="ReferencesText">Marable, B. (2000). A Walk Through an Online Exhibit,
+  consulted January 2, 2008.
+  <a href="http://www.terraincognita.com/article.php?category=behind_the_scenes">http://www.terraincognita.com/article.php?category=behind_the_scenes</a></p>
+<p class="ReferencesText">Marable, B. (2004). Experience, Learning, and Research:
+  Coordinating the Multiple Roles of On-line Exhibitions. In: D. Bearman and J.
+  Trant (eds.). Museums and the Web 2004: Proceedings. Toronto: Archives &amp;
+  Museum Informatics, 2004. <a
+href="http://www.archimuse.com/mw2004/papers/marable/marable.html">http://www.archimuse.com/mw2004/papers/marable/marable.html</a></p>
+<p class="ReferencesText">Mullet. K. (2003). The Essence of Effective Rich
+  Internet Applications, consulted January 3, 2008.
+  <a href="http://download.macromedia.com/pub/solutions/downloads/business/essence_of_ria.pdf">http://download.macromedia.com/pub/solutions/downloads/business/essence_of_ria.pdf </a></p>
+<p class="ReferencesText">R&ouml;nnby, J. (2007). Maritime Dur&eacute;es: Long-Term
+  Structures in a Coastal Landscape. Journal of Maritime Archaeology, 2.2
+  December, 65-82. </p>
+<p class="ReferencesText">R&ouml;ssler, M. (2003). Linking Nature and Culture: World
+  Heritage Cultural Landscapes. In Cultural Landscapes: the Challenges of
+  Conservation, World Heritage 2002 - Shared Legacy, Common Responsibility,
+  Associated Workshops 11-12 November 2002, Ferrara &ndash; Italy. UNESCO World
+  Heritage Centre, 10-15, consulted December 23, 2007. <a
+href="http://unesdoc.unesco.org/images/0013/001329/132988e.pdf">http://unesdoc.unesco.org/images/0013/001329/132988e.pdf</a></p>
+<p class="ReferencesText">Scazzosi, L. (2004). Reading and assessing the
+  landscape as cultural and historical heritage. Landscape Research, 29.4
+  October, 335-355.</p>
+<p class="ReferencesText">Taylor, K. (2003). Cultural landscape as open air
+  museum: Borobudur world heritage site and its setting. Humanities Research,
+  10.2, 51-62.</p>
+<p class="ReferencesText">Ucko, P. (1999). The Archaeology and Anthropology of
+  Landscape: Shaping Your Landscape. London, New York: Routledge.</p>
+<p class="ReferencesText">Wallerstein, I (1997). Time and Duration: The
+  Unexcluded Middle, consulted December 28, 2007.
+  <a href="http://www.binghamton.edu/fbc/iwtimdu.htm">http://www.binghamton.edu/fbc/iwtimdu.htm</a></p>
+<p class="ReferencesText">Westerdahl, C. (1998).The Maritime Cultural Landscape.
+  On the concept of the traditional zones of transport geography, consulted
+  December 27, 2007. <a href="http://www.abc.se/~m10354/publ/cult-land.htm">http://www.abc.se/~m10354/publ/cult-land.htm</a></p>
+<h2>B. Web sites</h2>
+<p class="ReferencesText">American Memory, <a
+href="http://lcweb2.loc.gov/ammem/gmdhtml/">http://lcweb2.loc.gov/ammem/gmdhtml/</a></p>
+<p class="ReferencesText">Arctic Studies Center,
+  <a href="http://www.mnh.si.edu/arctic/index.html">http://www.mnh.si.edu/arctic/index.html</a></p>
+<p class="ReferencesText">Australian Alps National Parks,
+  <a href="http://www.australianalps.deh.gov.au/">http://www.australianalps.deh.gov.au/</a></p>
+<p class="ReferencesText">A Vision of Britain, <a href="http://www.visionofbritain.org.uk/">http://www.visionofbritain.org.uk/</a></p>
+<p class="ReferencesText">Buurtatlas, <a href="http://www.buurtatlas.nl/">http://www.buurtatlas.nl/</a></p>
+<p class="ReferencesText">Collectie Utrecht, <a
+href="http://www.collectieutrecht.nl/">http://www.collectieutrecht.nl</a></p>
+<p class="ReferencesText">Congo Trek,
+  <a href="http://www.nationalgeographic.com/congotrek/">http://www.nationalgeographic.com/congotrek/</a></p>
+<p class="ReferencesText">Cultbase, <a href="http://pan.cultland.org/cultbase/">http://pan.cultland.org/cultbase/</a></p>
+<p class="ReferencesText">Digital Himalaya, <a
+href="http://www.digitalhimalaya.com/">http://www.digitalhimalaya.com/</a></p>
+<p class="ReferencesText">ECAI (Electronic Cultural Atlas Initiative), <a
+href="http://www.ecai.org/">http://www.ecai.org/</a></p>
+<p class="ReferencesText">ECAI Iraq, <a href="http://ecai.org/iraq/">http://ecai.org/iraq/</a></p>
+<p class="ReferencesText">Erfgoed in Vlaanderen, <a href="http://www.erf-goed.be/">http://www.erf-goed.be/</a></p>
+<p class="ReferencesText">Germaniki, <a href="http://www.germanplaces.com/germany-wiki/">http://www.germanplaces.com/germany-wiki/</a></p>
+<p class="ReferencesText">HISGIS (<i>Historisch GIS Frysl&acirc;n</i>), <a href="http://www.hisgis.nl/">http://www.hisgis.nl/</a></p>
+<p class="ReferencesText">Japanese Historical Map Collection, <a
+href="http://www.davidrumsey.com/japan/">http://www.davidrumsey.com/japan/</a></p>
+<p class="ReferencesText">Jurassic Coast, <a href="http://www.jurassiccoast.com/">http://www.jurassiccoast.com/</a></p>
+<p class="ReferencesText">Kulturlandschaftsportals Th&uuml;ringen, <a
+href="http://www.kulturlandschaft.fh-erfurt.de/">http://www.kulturlandschaft.fh-erfurt.de/</a></p>
+<p class="ReferencesText">Monticello, <a href="http://explorer.monticello.org/">http://explorer.monticello.org/</a></p>
+<p class="ReferencesText">OpGraven, <a href="http://www.opgraven.be/">http://www.opgraven.be/</a></p>
+<p class="ReferencesText">Perseus, <a href="http://www.perseus.tufts.edu/">http://www.perseus.tufts.edu/</a></p>
+<p class="ReferencesText">Royal Tropical Institute Netherlands, <a
+href="http://www.kit.nl/">http://www.kit.nl/</a></p>
+<p class="ReferencesText">Second Story: <a href="http://www.secondstory.com/">http://www.secondstory.com/</a></p>
+<p class="ReferencesText">Terra Explorer: <a href="http://www.skylinesoft.com/">http://www.skylinesoft.com/</a></p>
+<p class="ReferencesText">Terra Incognita, <a href="http://www.terraincognita.com/">http://www.terraincognita.com/</a></p>
+<p class="ReferencesText">Tibetan and Himalayan Digital Library, <a
+href="http://www.thdl.org/">http://www.thdl.org/</a></p>
+<p class="ReferencesText">TimeMap, <a href="http://www.timemap.net/">http://www.timemap.net/</a></p>
+<p class="ReferencesText">Val de Loire, <a href="http://www.valdeloire.org/">http://www.valdeloire.org/</a></p>
+<p class="ReferencesText">Venster op de Vecht, <a href="http://www.vensteropdevecht.nl/">http://www.vensteropdevecht.nl/ </a></p>
+<p class="ReferencesText">Vikings: The North Atlantic Saga,
+  <a href="http://www.mnh.si.edu/vikings/">http://www.mnh.si.edu/vikings/</a></p>
+<p class="ReferencesText">World Heritage Site UNESCO,
+  <a href="http://www.worldheritagesite.org/">http://www.worldheritagesite.org/</a></p>
+<!-- InstanceEndEditable --> </div>
+  				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Breure, L., et al., Modeling Portals for Cultural Landscapes<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2008: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2008. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2008/papers/<!-- #BeginEditable "URL" -->breure/breure.html
+				 <!-- #EndEditable --></p>
+</div>
+  <!--htdig_noindex-->
+  
+  <div id="sidebar">
+    <div id="side-nav">
+      <ul id="side-nav-list">
+        <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+        <li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+        <li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+        <li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+        <li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+        <li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+        <li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+        <li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+        <li id="pc"> <a href="../../thanks/index.html" class="menu">Committees</a></li>
+      </ul>
+    </div>
+    <div id="search-site">
+<form method="get" id="searchform" action="http://wp.museumsandtheweb.com/">
+<input type="text" class="field" name="s" id="s" placeholder="Search">
+<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+</form>
+    </div>
+    <div id="sidebar-links">
+      <ul id="sidebar-links-list">
+        <li><a href="../../../index.html" class="produced-by">produced by<br />
+          <img src="../../images/sidelogo.png" width="144" height="37" alt="AMI logo" /></a></li>
+        <li><a href="../../../index.html">Join our mailing list</a></li>
+        <li><a href="http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+          <img src="../../images/search.gif" alt="search" width="24" height="25" border="0" /></a></li>
+      </ul>
+    </div>
+    <div id="sidebar-acknowledge">
+      <p><img src="../../images/PCH-logo.png" alt="PCH" width="160" height="22" /><br />
+        Presented  in conjunction with the<br />
+        Department of Canadian Heritage through the <a href="http://www.chin.gc.ca/" target="_blank">Canadian
+      Heritage Information Network (CHIN)</a> and <a href="http://www.pch.gc.ca/progs/pcce-ccop/index_e.cfm" target="_blank">Canadian Culture Online (CCO)</a>.</p>
+      <div id="sponsor">
+ <p>Sponsored by<br />
+   <a href="../../exhibit/ex_335001860.html">Interwoven</a> and <a href="../../exhibit/ex_335001863.html">Interflow</a></p>
+</div>
+    </div>
+   <!--/htdig_noindex-->
+  </div>
+  <div id="footer">
+   <div id="last-updated">published April 9, 2008<br />
+	 last updated:
+	   <!-- #BeginDate format:Am1a -->October 27, 2010 10:14 PM<!-- #EndDate --><br />
+      <div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+    </div>
+    <!--htdig_noindex-->
+    <div id="footer-content">
+      <p>Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E
+        2P3 Canada<br />
+        Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2008";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2008 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				  </script>
+        <br />
+        Copyright &copy; 2008 &ndash; Archives &amp; Museum Informatics &ndash; All
+        rights reserved.<br />
+      </p>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2008/papers/breure/breure.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:58:22 GMT -->
+</html>

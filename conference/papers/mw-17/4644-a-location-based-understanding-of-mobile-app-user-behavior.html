@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw17.mwconf.org/paper/a-location-based-understanding-of-mobile-app-user-behavior/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:51:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>A location based understanding of mobile app user behavior &#8211; MW17: Museums and the Web 2017</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; A location based understanding of mobile app user behavior Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw17.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login3822.css?ver=1604077128' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-twentysixteen/style3ce7.css?ver=20201208' media='all' />
+<style id='twentysixteen-style-inline-css'>
+
+		/* Custom Link Color */
+		.menu-toggle:hover,
+		.menu-toggle:focus,
+		a,
+		.main-navigation a:hover,
+		.main-navigation a:focus,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.social-navigation a:hover:before,
+		.social-navigation a:focus:before,
+		.post-navigation a:hover .post-title,
+		.post-navigation a:focus .post-title,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.site-branding .site-title a:hover,
+		.site-branding .site-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-footer a:hover,
+		.entry-footer a:focus,
+		.comment-metadata a:hover,
+		.comment-metadata a:focus,
+		.pingback .comment-edit-link:hover,
+		.pingback .comment-edit-link:focus,
+		.comment-reply-link,
+		.comment-reply-link:hover,
+		.comment-reply-link:focus,
+		.required,
+		.site-info a:hover,
+		.site-info a:focus {
+			color: #e55747;
+		}
+
+		mark,
+		ins,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.widget_calendar tbody a,
+		.page-links a:hover,
+		.page-links a:focus {
+			background-color: #e55747;
+		}
+
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
+		textarea:focus,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.menu-toggle:hover,
+		.menu-toggle:focus {
+			border-color: #e55747;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation li:hover > a,
+			.main-navigation li.focus > a {
+				color: #e55747;
+			}
+		}
+	
+</style>
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src='https://mw17.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexbd7b.html?p=1018' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embedfec1.json?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fa-location-based-understanding-of-mobile-app-user-behavior%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed7410?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fa-location-based-understanding-of-mobile-app-user-behavior%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-twentysixteen/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-1018 wp-custom-logo wp-embed-responsive">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+					<div class="site-branding">
+						<a href="../../index.html" class="custom-logo-link" rel="home"><img width="240" height="240" src="../../wp-content/uploads/2017/02/cropped-mw-final.png" class="custom-logo" alt="MW17: Museums and the Web 2017" /></a>					</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p> MW17: Museums and the Web 2017 <span>Cleveland Ohio - April 19-22</span></p>
+								<form class="search-form" role="search" method="get" action="#">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-1-container"><ul id="menu-menu-1" class="primary-menu"><li id="menu-item-3074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3074"><a href="https://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-88"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580"><a href="../../local-information-and-accommodation/index.html">Local Information and Accommodation</a></li>
+	<li id="menu-item-1917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1917"><a href="../../faqs/index.html">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-172"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-475"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-108"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="../../call-for-proposals/index.html">Call for Proposals</a></li>
+	<li id="menu-item-494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-135"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-1689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1689"><a href="../../advertising/index.html">Advertising</a></li>
+</ul>
+</li>
+<li id="menu-item-573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-573"><a href="../../program/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-2972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2972"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-3023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3023"><a href="../../select-session-slides/index.html">Presentations</a></li>
+	<li id="menu-item-1760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1760"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2968"><a href="../../glami-winners/index.html">GLAMi Winners</a></li>
+		<li id="menu-item-2963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2963"><a href="../../glami-nominees/index.html">GLAMi Nominees</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2894"><a href="../../mwx/index.html">MWX 2017</a></li>
+	<li id="menu-item-1252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1252"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="../../committees/index.html">Committees</a></li>
+</ul>
+</li>
+<li>
+    <form role='search' method='get' class='search-form' action='http://mw17.mwconf.org/'>
+	<label>
+	<span class='screen-reader-text'>Search for:</span>
+	<input type='search' class='search-field' placeholder='Search &hellip;' value='' name='s' />
+	</label>
+	<button type='submit' class='search-submit'>
+	<span class='screen-reader-text'>Search</span></button>
+	</form>    
+	</li></ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+	
+<section id="page-hero">
+	<div class="background"> </div>
+</section>
+<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];
+    jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw17.mwconf.org/wp-content/themes/mw-twentysixteen/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-1018" class="post-1018 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">A location based understanding of mobile app user behavior</h1>
+
+<p><a target="_blank" href="http://www.museumsandtheweb.com/member/diana/">Diana Marques</a>, University of Porto, Portugal / National Museum of Natural History, Smithsonian Institution, Portugal, <a target="_blank" href="http://www.museumsandtheweb.com/member/kearins/">Robert Costello</a>, National Museum of Natural History, Smithsonian Institution, USA, <a target="_blank" href="http://www.museumsandtheweb.com/member/balpert/">Brian Alpert</a>, Smithsonian Institution, USA</p>
+<h2>Abstract</h2>
+Understanding differences in user behaviors with mobile apps developed for in-gallery experiences and offsite uses is a fundamental consideration when designing content for mobile devices. The user experience and engagement with mobile products are greatly dependent on a multiplicity of factors such as social context, time availability, noise and distraction level, personal comfort, and individual goals, all of which are related to the users’ setting. Developing an app that bears user location in mind can ultimately assist with successfully reaching a larger audience and extending the mobile product’s life cycle in the sense that mobile apps are disposable products.
+
+In order to understand user behaviors with one mobile app in different surroundings, we turn to analytic tools. As simple as this may seem, knowing the location of the device (and therefore the user) is not a trivial exercise, yet this information is paramount for comparing other user metrics. We suggest comparisons of user metrics with inaccurate location data compromises the study. For example, Google Mobile Analytics, one of the most popular tools, reports not on the location of the device but rather on the location of the Internet Service Provider, meaning that international or out-of-state visitors at the museum may be misleadingly reported as engaging with the app at their place of origin.
+
+Using the Smithsonian’s National Museum of Natural History mobile app, Skin & Bones, as a case study on location-based user behavior, we describe how we customized Google Mobile Analytics through events coding, filtering and segmentation analysis to retrieve accurate location data, which allowed us to compare app sessions taking place inside and outside of the Museum.</p>
+<p><b>Keywords:</b> mobile, location, analytics, visitor behavior</p>
+<h2><strong>Overview</strong></h2>
+<p>Museum mobile apps have been developed with different use cases in mind, such as providing onsite service within museums, e.g., location services, enhancing the substance of exhibitions with ancillary content, and being an integral part of the exhibition design and experience (Burnette, 2012). According to existing surveys (Tallon, 2013) the leading mobile experiences are in-museum apps meant primarily to be used throughout the premises during in-person visits. Commonly those apps also aim to extend the museum experience beyond the onsite visit. Temporary exhibitions in particular may exploit exclusive features of mobile technology to enhance the in-gallery experience, and provide access to the content for individuals that cannot visit in person. The location of the user when engaging with the app is then one of the primary considerations that museum professionals have to account for when initiating a mobile project.</p>
+<p>Using Google Mobile Analytics (GMA), we analyzed mobile app data to understand user behavior in a location-based context. The objective was to analyze the use of an exhibit-based app inside a museum exhibition and how it compares with the use of the app outside the museum. In this case, the onsite location is an antiquated exhibition inside the Smithsonian’s National Museum of Natural History (NMNH), known as the ’Bone Hall.’ For context, the Bone Hall is an evolutionary parade of nearly 300 articulated skeletons arranged in a series of connecting rooms containing fish, amphibians, reptiles, birds and mammals (Figure 1). Exhibit labels mostly refer to esoteric anatomical characteristics of groups of vertebrates, such as the orders of mammals, say little to nothing about individual species, and contain no images of the animals in life. The formidable combination of a lifeless exhibition design and specialized and abstruse text apparently motivates visitors to move along. Visitors use the Bone Hall as a pathway connecting one area of the museum to another and spend 1:34 (mode time, i.e., the most recurrent duration of the visit; 3:24 is the mean duration of the visit) in a space that is 82m long and contains 61 displays. Even if visitors do not dwell in the Bone Hall, as they would in other exhibitions at the museum, the space tends to be extremely crowded in peak visitation times during the year. Large groups and families with strollers contribute greatly to slowing or stopping the flow of traffic, and pose significant challenges to visitors with reduced mobility. The amount of people coupled with the hard surfaces and outdated construction, lead to ambient sound levels considerably above 80-90 decibels.</p>
+<figure id="attachment_1017" aria-describedby="caption-attachment-1017" style="width: 800px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1017" src="../../wp-content/uploads/2017/01/Marques.fig1_.jpg" alt="Figure 1" width="800" height="533" /><figcaption id="caption-attachment-1017" class="wp-caption-text">Figure 1: general view of the Bone Hall. Photo Credit: 2008-10806 Osteology Hall by Chip Clark, NMNH, Smithsonian Institution</figcaption></figure>
+<p>Skin &amp; Bones was developed as a companion mobile app to the Bone Hall to resuscitate the exhibition by increasing the enjoyment and memorableness of the visitor experience, and improve the communication of the main organizing principles of the Hall to the visitor (Marques &amp; Costello, 2015). The app is an option for visitors interested in delving beyond what is available in the physical space, but is not intended to replace the antiquated experience. The historical skeletal collection is preserved as it was meant to be in the 20th century and visitors can choose to experience the exhibition with a foot in either century. Although the primary use case for Skin &amp; Bones was to serve as an onsite companion to the Bone Hall, it was also meant to be a content-rich tool offering engagement opportunities outside NMNH. Individuals that for one reason or another cannot visit the museum in Washington DC, can use Skin &amp; Bones to unlock the science and nature stories associated with the skeleton collection and visitors that went to the Bone Hall can relive their in-gallery experience and further explore content when no longer in the building.</p>
+<p>The app contains 32 videos, 4 activities, and notably, 10 Augmented Reality (AR) pieces<em>.</em> The AR works with object recognition and 3D tracking to accurately superimpose static and animated 3D digital models onto skeletons on display from as large as a 6m long Steller’s sea cow to a diminutive 8cm common vampire bat. AR is uniquely suited to be experienced in the Bone Hall and at the time we completed this study the app was not capable of triggering the augmented content outside of the exhibition. A subsequent app upgrade enabled AR offsite.</p>
+<p>We tailored both the user interface and content for dual-location use. We expected changes in motivation and environmental factors would drive differences in patterns of behavior based on location, yet we could not know exactly what they would be. In that sense we were designing blindly. Based on less rigorous observations of visitors watching videos in other exhibitions within NMNH, we assumed users would lightly sample video while in the exhibition and spend more time viewing video offsite. Time constraints, crowding and noise are likely to influence behavior with each of the three content types offered by Skin &amp; Bones. We wanted to know whether our assumptions were valid and if so, to what extent. We intentionally produced a lot of video in light of what we already knew about the low sampling rate of visitors with video in exhibitions at NMNH, yet with the expectation and hope that they would sample them more thoroughly away from the museum. Taking a piece of the exhibition home to relive and reconnect without the same time constraints was a goal for extending the experience.</p>
+<p>The app is a bring-your-own-device model and visitors to the Hall can connect to the free Wi-Fi network provided by NMNH to download the app to their devices. With visitors in the exhibition connected to the museum Internet service and users outside the museum connected to other services, it should be relatively easy to distinguish onsite and offsite users. However, two confounding variables presented a more complex situation. A large number of onsite users did not opt to use the free Wi-Fi and instead used their cellular data plans. The other more general case is how GMA reports user location by indicating the location of the user’s Internet Service Provider (ISP) rather than the geographic location of the mobile device. Thus, a user connected through cellular service in the museum in Washington, DC can be reported as a user in San Francisco, CA.</p>
+<h2><strong>Methods</strong></h2>
+<p>GMA data are best interpreted as trends and should be used for comparison purposes only. Given the sketchy nature of data retrieval from analytics tools, and considering that GMA uses a sampling process that is not disclosed, it is best to treat the data within limits. The results from any user of a GMA enabled app that downloads the app and opens it at least once, regardless of the location, might become part of a dataset. However, the information about that user cannot be accessed separately from the information gathered from other users. The GMA online dashboard only displays aggregated data across categories for any selected period within an app’s lifetime.</p>
+<p>For Skin &amp; Bones, separating users into two locations (inside the museum and offsite) and extracting informative data on their behaviors was a layered process that involved coding on the back end of the app and filtering and segmenting on GMA.</p>
+<h3><strong>Coding</strong></h3>
+<p>GMA &#8220;events&#8221; are used to collect data about interactions with particular pieces of content and functions within apps and require adding tracking code during app development. For this study, the purpose for coding events was to monitor the frequency and duration for viewing of videos, activities, and AR experiences by all users of the app.</p>
+<p>The GMA code was integrated into the Skin &amp; Bones code to record each time a user presses play to watch a video, triggers an AR resource, or completes an activity. Also, when a video is played for more than 80% of its total duration, GMA counts one &#8220;play event&#8221; plus one &#8220;played 80% event&#8221;—the remaining 20% of the videos account for the credits that users are less likely to watch. Therefore, if the user is identified with one &#8220;played 80% event,&#8221; she is considered to have watched the entire video. The &#8220;AR triggered event&#8221; could only be recorded in sessions taking place in the Bone Hall given that the augmented content was not available anywhere else at the time of this study. Thus, by default, an AR event locates the user in the exhibition.</p>
+<h3><strong>Filtering</strong></h3>
+<p>Two GMA filters were created upon the public release of the app since filters do not operate retroactively. The filters use the Smithsonian Wi-Fi network IP address, which can be identified by a unique number sequence, as the differentiating criterion. The &#8220;SI traffic only&#8221; filter retrieved GMA data from individuals connected to the museum network. The &#8220;external traffic only&#8221; filter retrieved all other data, i.e., from individuals connected to any other Wi-Fi network or utilizing their own mobile data plan. The data collected by the first filter is from individuals using the app in the exhibition. Data from the second filter includes a mix of individuals outside of the exhibition (using Wi-Fi and cellular data plans) and individuals in the exhibition (on cellular data plans) and on its own cannot be considered clean enough for analysis of offsite behavior.</p>
+<h3><strong>Segmenting</strong></h3>
+<p>GMA data segments can isolate and analyze subsets of the entire dataset according to customized criteria. When combined with the internal and external traffic filters, segmenting allowed for discrimination of location-based behavior profiles of Skin &amp; Bones users inside and outside of the Bone Hall.</p>
+<p>The segments &#8220;visitation summer hours&#8221; and &#8220;visitation winter hours&#8221; isolated data that was collected by GMA while NMNH was open in the summer (10:00AM-7:30PM) and during the rest of the year (10:00AM-5:30PM). When used in combination with the internal traffic filter, the data that reflects engagement with videos, AR and activities was assuredly generated by users while in the exhibition (data segment represented in red in Figure 2).</p>
+<p>The segments &#8220;non-visitation summer hours&#8221; and &#8220;non-visitation winter hours,&#8221; isolated data collected for when the museum was closed. When used in combination with the external traffic filter, the location-based profile is solely of users from outside of the exhibition (data segment represented in blue in Figure 2).</p>
+<figure id="attachment_1014" aria-describedby="caption-attachment-1014" style="width: 800px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1014" src="../../wp-content/uploads/2017/01/Marques.fig2_.jpg" alt="Figure 2" width="800" height="453" /><figcaption id="caption-attachment-1014" class="wp-caption-text">Figure 2: representation of Skin &amp; Bones users in the Bone Hall and offsite, and the two options of Internet connection, using Wi-Fi or mobile data. The filter &#8220;SI traffic only&#8221; combined with the segment isolating data collected during open hours retrieved information regarding users in the Bone Hall (highlighted in red). The filter &#8220;external traffic only&#8221; combined with the segment that isolated data collected during closed hours retrieved information regarding users offsite (highlighted in blue)</figcaption></figure>
+<p>This filtering and segmentation method does not analyze data pertaining to <em>all</em> Skin &amp; Bones users for a certain period of time, and there is no reliable information regarding the total number of individuals that downloaded and used the app in the Bone Hall versus the total number of those who used it outside of the museum. In this study the NMNH user segment represents 33.8% of all Skin &amp; Bones users, and the segment pertaining to external users represents 27.3% of the app users. Although the data analyzed is 61.1% of the total dataset, this method circumvents the problem associated with the GMA reported user location being synonymous with the ISP location. This method isolates data from a subsample of users that were surely at the exhibition and data from a subsample of users that were guaranteed to be outside of NMNH, which then provides the opportunity to compare their behaviors and overall profiles.</p>
+<p>In addition to GMA data analysis this study also conducted interviews with visitors to the Bone Hall that were invited to use Skin &amp; Bones in museum iPads allocated to the research project.</p>
+<h2><strong>Results</strong></h2>
+<p>After parsing the data a few trends emerged that convincingly show that user behaviors are different within and outside the exhibition. One trend is choice of device. As an iOS based app, users do have a few device choices – iPad, iPod, and iPhone. iPod users were so few that data was compared only between using a personal iPhone or an iPad while visiting NMNH versus another location. Table 1 results show a shift from a 4:1 iPhone to iPad ratio in the exhibition to less than 3:1 outside the exhibition.</p>
+<table style="height: 182px;" width="564">
+<tbody>
+<tr>
+<td width="180"></td>
+<td style="text-align: center;" width="81">
+<p style="text-align: center;"><strong>Sessions in the Bone Hall</strong></p>
+</td>
+<td style="text-align: center;" width="108">
+<p style="text-align: center;"><strong>Sessions Outside<br />
+of the Museum</strong></p>
+</td>
+</tr>
+<tr>
+<td width="180">
+<p style="text-align: center;"><strong>Sessions with iPad</strong></p>
+</td>
+<td style="text-align: center;" width="81">
+<p style="text-align: center;">13.4%</p>
+</td>
+<td style="text-align: center;" width="108">
+<p style="text-align: center;">34.1%</p>
+</td>
+</tr>
+<tr>
+<td width="180">
+<p style="text-align: center;"><strong>Sessions with iPhone</strong></p>
+</td>
+<td width="81">
+<p style="text-align: center;">82.9%</p>
+</td>
+<td width="108">
+<p style="text-align: center;">63.7%</p>
+</td>
+</tr>
+<tr>
+<td width="180">
+<p style="text-align: center;"><strong>Average Screens/Session</strong></p>
+</td>
+<td width="81">
+<p style="text-align: center;">14</p>
+</td>
+<td width="108">
+<p style="text-align: center;">6</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1: comparison between Skin &amp; Bones sessions in the Bone Hall (n=4,919) and outside of the museum (n=4,507) regarding the number of sessions with iPad, number of sessions with iPhone and average number of screens per session, for the time period of January 2015 &#8211; January 2016</p>
+<p>Results additionally show that users outside of the museum tend to conduct considerably more long sessions (&gt;3:00) and fewer short sessions (1:00 or less), than users in the Bone Hall; however, as seen in Table 1 those sessions go through, on average, less than half the number of screens than sessions that take place in the exhibition. One other aspect of session duration is that they last longer on an iPad – average of 8:23 when compared to 5:02 on an iPhone – even if the average number of screens per session is approximately the same, 9.3 on an iPad and 9.2 on an iPhone. Therefore, users outside of the museum spend more time with the app in longer sessions, and more so if they’re using a larger screen (iPad). They also spend more time with individual pieces of content, even if they see a smaller number.</p>
+<p>GMA is capable of differentiating new users from returning users through an anonymous unique identifier that tags each device that launches the app for the first time throughout the lifetime of the app. Figure 3 compares the percentage of new and returning sessions for users in the Bone Hall and offsite. It shows that most are new sessions, particularly at the museum. This was expected given that the app was predominantly promoted inside the exhibition through posters and led to greater awareness and first-time use <em>in situ</em>. There was no active promotion outside of the museum, only some media coverage during the first few months of the app. The results also reveal the number of returning users was overall low and despite GMA limitations regarding the location of the users, it is probable that revisiting sessions took place offsite. Previous studies conducted at the Museum and across the Smithsonian Institution (Bielick, Pekarik, &amp; Doering, 1995; Bitar, Pekarik, &amp; Renteria, 2013; Doering &amp; Pekarik, 2010; Marino et al., 2004) indicate that the year-round audience is mostly composed of first-time visitors. Returning users of Skin &amp; Bones were likely to be first-time visitors to the Museum who engaged again with the app after they were no longer in the building, either during visitation or non-visitation hours.</p>
+<figure id="attachment_1016" aria-describedby="caption-attachment-1016" style="width: 600px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1016" src="../../wp-content/uploads/2017/01/Marques.fig3_.jpg" alt="Figure 3" width="600" height="397" /><figcaption id="caption-attachment-1016" class="wp-caption-text">Figure 3: comparison between the percentage of Skin &amp; Bones sessions by new users (blue) and by returning users (red), for (a) users in the Bone Hall and (b) users outside of the museum, for the time period of January 2015-January 2016</figcaption></figure>
+<p>Table 2 illustrates the popularity of the AR content in Skin &amp; Bones when compared to videos and activities among users that were conducting sessions in the exhibition – 65.3% of the sessions triggered AR content whereas only 32.4% played video and 2.3% played activities. Outside of the museum the augmented content was not a choice, and activities were more significant in the total number of events and users played more videos indicating an effect of content replacement attributable to AR.</p>
+<table style="height: 309px;" width="539">
+<tbody>
+<tr>
+<td width="96"></td>
+<td width="114">
+<p style="text-align: center;"><strong>Sessions in the Bone Hall </strong>(%)</p>
+</td>
+<td style="text-align: center;" width="107"><strong>Sessions Outside of the Museum </strong>(%)</td>
+</tr>
+<tr>
+<td style="text-align: center;" width="96"><strong>AR Triggered</strong></td>
+<td style="text-align: center;" width="114">65.3</td>
+<td width="107">
+<p style="text-align: center;">N/A</p>
+</td>
+</tr>
+<tr>
+<td width="96">
+<p style="text-align: center;"><strong>Video Play</strong></p>
+</td>
+<td style="text-align: center;" width="114">32.4</td>
+<td style="text-align: center;" width="107">87.8</td>
+</tr>
+<tr>
+<td style="text-align: center;" width="96"><strong>Activity Completed</strong></td>
+<td style="text-align: center;" width="114">2.3</td>
+<td width="107">
+<p style="text-align: center;">12.2</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Table 2: comparison between the percentage of Skin &amp; Bones sessions in the Bone Hall and outside of the museum regarding the occurrence of GA event actions AR Triggered, Video Play and Activity Completed, for the time period of March 2015 &#8211; January 2016</p>
+<p>One interesting aspect of video viewing is the obvious difference in completion rate between Bone Hall sessions and sessions everywhere else. Whereas only 26.3% of videos watched at the exhibition were seen to completion, 45.7% of those viewed offsite were played to the end. This supports the earlier findings of greater attention span in an offsite environment being more favorable to longer sessions and to spending extra time with individual pieces of content.</p>
+<p>One other supporting aspect of the content disruption effect of the Bone Hall on users is shown by activity preference and completion. The two activities that are the least complex, easiest to understand and the most haptic were favored at the exhibition. The most complex activity with an increasing level of difficulty requiring greater concentration, therefore extra dedication, was favored by offsite users who were also more persistent in continuing on to level two after completing the first level with success, when compared to in-gallery users.</p>
+<p>The analysis of content type viewing according to location and device used is equally interesting and illustrated in Table 3. In-gallery iPad users gave preference to watching videos when compared to in-gallery iPhone users. In fact, their video completion rate was 30.6% and only 13.7% for iPhone users in the Bone Hall. Outside the museum differences in screen size barely affected the type of content viewed.</p>
+<table style="height: 303px;" width="566">
+<tbody>
+<tr>
+<td width="112"></td>
+<td style="text-align: center;" colspan="2" width="108"><strong>Sessions in the<br />
+Bone Hall (%)</strong></td>
+<td style="text-align: center;" colspan="2" width="113"><strong>Sessions Outside of<br />
+the Museum (%)</strong></td>
+</tr>
+<tr>
+<td width="112"></td>
+<td width="49">
+<p style="text-align: center;">iPhone</p>
+</td>
+<td style="text-align: center;" width="59">iPad</td>
+<td style="text-align: center;" width="54">iPhone</td>
+<td style="text-align: center;" width="59">iPad</td>
+</tr>
+<tr>
+<td width="112">
+<p style="text-align: center;"><strong>AR Triggered</strong></p>
+</td>
+<td width="49">
+<p style="text-align: center;">71.5</p>
+</td>
+<td style="text-align: center;" width="59">50.7</td>
+<td style="text-align: center;" colspan="2" width="113">N/A</td>
+</tr>
+<tr>
+<td style="text-align: center;" width="112"><strong>Video Play</strong></td>
+<td style="text-align: center;" width="49">27</td>
+<td style="text-align: center;" width="59">45.4</td>
+<td style="text-align: center;" width="54">51.6</td>
+<td width="59">
+<p style="text-align: center;">47.8</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;" width="112"><strong>Activity Completed</strong></td>
+<td style="text-align: center;" width="49">1.5</td>
+<td style="text-align: center;" width="59">3.9</td>
+<td style="text-align: center;" width="54">48.4</td>
+<td width="59">
+<p style="text-align: center;">52.2</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Table 3 – Comparison of the percentage of GMA event actions AR Triggered, Video Play and Activity Completed that occurred in sessions in the Bone Hall and outside of the museum conducted on iPhones and iPads, for the time period of March 2015 &#8211; January 2016.</p>
+<p>In conclusion, the bimodal analysis of the app showed marked differences between the two locations in the devices used, the depth of the app sessions and engagement with content. Even with the exhibit displays setting the ideal context for users, within the exhibition they were impaired by time limitations, personal agendas, social demands and the conditions of the environment, which likely shortened the attention span of the visitors. Nevertheless, some found value in the fact they could return to the app after the visit to share their experience or use the app as an educational resource, as the interviews revealed.</p>
+<p style="padding-left: 30px;">Visitor 1: &#8220;Surely we didn’t do all of the videos either, because we’re pressed for time and we don’t want to spend a whole lot of time in one exhibit, and some of the videos are like three and half minutes long.”<em><br />
+</em>Visitor 2<em>: </em>“What if you were to download the app, could you watch this stuff later?”<em><br />
+</em>Research Assistant: “Yes.”<em><br />
+</em>Visitor 2: “So that I think it would be&#8230; if we actually had the app to be able to go back and sort of re-watch that stuff.”</p>
+<p style="padding-left: 30px;">“It would be a way to share knowledge, and not everyone is going to be able to come out. ‘Here’s all the pictures and video we took and also there’s this,’ you have an iPhone and pull this out, ‘this is just one section of one of the museums to give you a taste of what’s there.’”</p>
+<p style="padding-left: 30px;">“And it could be used for the kids too. So they come on a tour, they go back to school, they have to do something for class about it, they could bring it back up.”</p>
+<h2><strong>Discussion</strong></h2>
+<p>As a group, museum visitors appear to be keenly aware of their time and move through the large, permanent exhibitions in under 15:00 and often half that amount. As mentioned, from existing studies we know most visitors are at NMNH for the first time, and their agenda is often to see as much of the museum as possible. Using a mobile app slows down the visitor, which is what exhibition designers strive to achieve, yet in this setting it is somewhat at odds with the pace visitors set for themselves. When not using Skin &amp; Bones in the Bone Hall, visitors dwell an average time of 3:24, whereas with the app the average in-gallery time is 14:00. This is likely about as much time as can be expected in this setting and it can be interpreted with some measure of success. Another measure is stopping coverage (the percent of stops for all possible stops). The stopping coverage of the Bone Hall increased from 5% to 19% after Skin &amp; Bones was made available, and became nearly identical to the stopping coverage of another more modern permanent exhibition at the museum. This reflects the visitors’ sense of how much time they can expend on an experience of interest. Our findings suggest they were visibly impaired by time constraints, social demands and the conditions of the environment as indicated by shorter app sessions and viewing of fewer pieces and shorter durations of content.</p>
+<p>Understandably, the offsite visitor, and especially the iPad user, had a greater appetite for consuming content in depth and the correlation to screen size reveals the obvious sense of pleasure associated with larger screens – movie theaters being the zenith of this trend and small mobile phone screens being the nadir. But what is the effect of the device on behavior within an exhibition? Does screen size matter or is the exhibition environment the governing mechanism controlling content viewing? For museums considering handing out devices, this is an important consideration. The data from this study suggests there are differences in behavior associated with different screen sizes within the exhibition, but not outside the museum. We think there is an interplay between the constraints of the environment and screen size. At the Bone Hall visitors with iPads were more invested in video—they viewed more and completed more. iPhone users saw the inverse—lower video use and completion, and higher AR viewing. This suggests tablets are preferred mobile devices for viewing and listening to video within an exhibition setting.</p>
+<p>We suggest museum mobile app development should be mindful of these differences and design experiences with multiple use locations in mind. Important decisions include screen size versus device portability, and amount, depth and duration of content. The bimodal in-gallery and offsite model of Skin &amp; Bones extended the opportunity for engagement beyond the physical space of the exhibition, and facilitated different experiences according to the user location. Unless a museum is looking into providing an exclusive on-site experience to draw in visitors, or specifically wants to develop a tool that is external to its galleries, it seems advantageous to adopt a bimodal model and attentively consider the different settings that users might find themselves in when using the mobile tool.</p>
+<p>The idea expressed by participants seeing the app as a continuation of the museum aligns perfectly with the museum professionals’ argument for the use of mobile as an extension of the experience.</p>
+<p>Through customization of a free and widely-used mobile app analytics tool we were able to circumvent some of the inherent challenges associated with collecting and analyzing location based data. Even when the absolute and total number of users cannot be determined, differences in behavioral patterns can be uncovered. We were able to apply 61.1% of the GMA data to the analysis, which suggests smaller museums with fewer users can achieve large enough samples to analyze user behavior with confidence using the same method.</p>
+<h2><strong>Acknowledgements</strong></h2>
+<p>The production of Skin &amp; Bones and research were supported by the Booz Allen Hamilton Corporation, the co-funding of the European project POPH/FSE, and a grant from the Foundation for Science and Technology (SFRH/BD/51840/2012), under the UT Austin|Portugal CoLab. The production and research were also supported by the Smithsonian Digitization Program Office, and the offices of Education &amp; Outreach, Exhibits, Vertebrate Zoology, and Photography and Media at the Smithsonian’s National Museum of Natural History.</p>
+<h2><strong>References</strong></h2>
+<p>Bielick, S., Pekarik, A. J., &amp; Doering, Z. (1995). <em>Beyond the Elephant. </em>31. Washington DC: Institutional Studies Office, Smithsonian Institution.</p>
+<p>Bitar, S., Pekarik, A. J., &amp; Renteria, J. (2013). <em>Visitor Experience Summary Report.</em> 9. Washington DC: National Museum of Natural History, Smithsonian Institution.</p>
+<p>Burnette, A. (2012). So many devices, so many options: an introduction to cross-platform thinking. In N. Proctor (Ed.), <em>Mobile apps for museums: the AAM guide to planning and strategy. </em>87–92. Washington DC: The AAM Press.</p>
+<p>Doering, Z. &amp; Pekarik, A. J. (2010). <em>Nature, science and culture on display</em>. Washington DC: Office of Policy and Analysis, Smithsonian Institution.</p>
+<p>Marino, A., Doering, Z., Ernst, K., Karns, D., Kaufmann, C., Munteanu, I., et al. (2004). <em>Results of the 2004 Smithsonian-wide survey of museum visitors. </em>18. Washington DC: Office of Policy and Analysis, Smithsonian Institution.</p>
+<p>Marques, D. &amp; Costello, R. (2015). &#8220;Skin &amp; bones: an artistic repair of a science exhibition by a mobile app.&#8221; <em>Midas</em>. http://doi.org/10.4000/midas.933</p>
+<p>Tallon, L. (2013). <em>Mobile Strategy in 2013: an analysis of the annual Museums and Mobile survey. </em>22. London: Pocket-Proof &amp; LearningTimes.</p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+Marques, Diana, Robert Costello and Brian Alpert. "A location based understanding of mobile app user behavior." <i>MW17: MW 2017</i>. Published January 31, 2017. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw17.mwconf.org/paper/a-location-based-understanding-of-mobile-app-user-behavior/<br /><br /><hr>
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h2><p class="must-log-in">You must be <a href="../../wp-login62e2.html?redirect_to=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fa-location-based-understanding-of-mobile-app-user-behavior%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- .comments-area -->
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="text-7" class="widget widget_text">			<div class="textwidget"><h2 class="widget-title">Community Conveners</h2>
+<p><a title="Wezit" href="https://wezit.io/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/wezit-250-75.jpg" alt="Wezit" /></a><br />
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a></p>
+<h2 id="gold-sponsor" class="widget-title">Platinum Sponsor</h2>
+<p><a title="Microsoft" href="http://aka.ms/museweb" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/Microsoft-250-75.jpg" alt="Microsoft" /></a><br />
+<!-- <a title="Izi Travel" href="http://www.izi.travel" target="_blank" rel="noopener"><img src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/izi-250-75.jpg" alt="Izi Travel" class="sponsor-img sponsor-top" /></a> --></p>
+<h2 id="gold-sponsor" class="widget-title">Gold Sponsor</h2>
+<p><a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a></p>
+<h2 id="bronze-sponsor" class="widget-title">Bronze Sponsors</h2>
+<p><a title="MailChimp" href="https://mailchimp.com/resources/guides/mailchimp-for-nonprofits/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a><br />
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/netx-250-75.gif" alt="Netx" /></a><br />
+<a title="PatronTech" href="http://patrontechnology.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/patron-250-75.jpg" alt="PatronTech" /></a></p>
+<h2 id="conference-sponsor" class="widget-title">Conference Sponsors</h2>
+<p><a title="CMA" href="http://clevelandart.org/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/cma-250-75.jpg" alt="CMA" /></a><br />
+<a title="Rock &amp; Roll" href="http://www.rockhall.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/rrhf-250-75.jpg" alt="Rock &amp; Roll" /></a></p>
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+</body>
+
+<!-- Mirrored from mw17.mwconf.org/paper/a-location-based-understanding-of-mobile-app-user-behavior/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:51:58 GMT -->
+</html>

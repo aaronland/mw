@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/museums-the-playful-web-a-revolution-in-sensemaking/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:51:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Museums and the playful web – a revolution in sense-making | MWA2015: Museums and the Web Asia 2015</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/mw-theme/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mwa2015.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/wp-emoji.js?ver=5.6","twemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/twemoji.js?ver=5.6"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='../../wp-content/themes/twentyeleven/blockscb8b.css?ver=20190102' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index3f66.html?p=686' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed65ba.json?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fmuseums-the-playful-web-a-revolution-in-sensemaking%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed6a56?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fmuseums-the-playful-web-a-revolution-in-sensemaking%2F&amp;format=xml" />
+</head>
+
+<body class="paper-template-default single single-paper postid-686 wp-embed-responsive single-author two-column right-sidebar">
+<div id="page" class="hfeed">
+
+<style type="text/css">
+branding.img { height: auto; display: block; width: 100%; }
+#image  { position:relative;z-index:10;  }
+#text   { position:absolute; z-index:100; }
+#site-description { font-weight: normal; color: #fff; margin: 0 20px 20px 0;}
+#site-title a { color: #fff; }
+#site-title { margin-right: 20px; }
+</style>
+
+<header id="branding" role="banner">
+<hgroup>
+	<div id="text">
+<h1 id="site-title"><span><a href="../../index.html" rel="home">MWA2015: Museums and the Web Asia 2015</a></span></h1>
+<h2 id="site-description">The conference of Museums and the Web in Asia | October 5-8 | Melbourne, Australia</h2>
+	</div>
+</hgroup>
+
+			
+<div id="image"><a href="../../index.html"><img src="../../wp-content/uploads/2014/10/Melbourne-MWA2015.jpg" width="1000" height="250" alt="Museums and the Web Asia 2015" /></a></div>
+			
+			
+										
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-10"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="../../local-info/index.html">Local Info</a></li>
+	<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+	<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-16"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="../../exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="../../advertising-guildlines/index.html">Advertising Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="../../attending/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="../../workshop-program/index.html">Workshops</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../hobart-deep-dive/index.html">Hobart Deep Dive</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="../../attendees/index.html">Attendees</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<div id="primary">
+<div id="content" role="main">
+<article id="post-686" class="post-686 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">Museums and the playful web – a revolution in sense-making</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/cathstyles/">Catherine Styles</a>, Sembl, Australia</p>
+<h2>Abstract</h2>
+This paper recognises and pays tribute to the playful turn in museums, whose significance is greater than it seems, in a world where ‘play’ is associated with inconsequentiality, even pretence. I contend that at this historical moment, our innate faculty for playful thinking (by which I mean intuitive, associative thinking in particular) is critical: both underrated and immensely valuable.
+
+Museums are keepers of material culture, and places for reflecting on the physical and social worlds we inhabit. For the last four centuries they have also been implicated in shaping modern Western knowledge, so it is fitting that museums should also be in the vanguard of reactivating unconscious or intuitive modes of cognition – it’s a timely counterbalance to the post-Enlightenment passion for rational analysis. 
+
+Playfulness emerges from, and fuels, an authority-shift among museums and their publics – indeed in the process of knowledge-making itself. In the early 21st-century context of abundant information, adopting a more playful attitude is clearly advantageous for a museum in terms of attracting visitors. But the benefit can extend well beyond the museum. As I will argue, by cultivating our innate faculty for pattern recognition, we can better comprehend the complex systems in which we are all embroiled, and begin to imagine solutions to the global crises we face.</p>
+<p><b>Keywords:</b> play, cognition, sense, authority, systems, intuition</p>
+<blockquote>
+<p style="text-align: left">If one, and only one, shortcoming were to be pointed out about modernity, it may be the lack of intuition as a valid epistemological source. (Farasha Euker, co-editor of <em>Luvah: Journal of the Creative Imagination</em>)</p>
+<p style="text-align: left">Tell all the truth but tell it slant / Success in circuit lies / Too bright for our infirm delight / The truth’s superb surprise</p>
+<p style="text-align: right">– Emily Dickinson</p>
+</blockquote>
+<h2>Introduction [1]</h2>
+<p>Museums are at their best when they allow a sense of the unknown to persist in their galleries, and least effective – actually dull – when they banish wonder by pretending to know it all. In recent years, a pattern has emerged in work done by and with (or without or in spite of) museums.[2] We could call this new trajectory the playful turn – and this emerging mode in digital culture and museum programming is much more significant than it seems, in a world where ‘play’ is so closely associated with inconsequentiality, with unimportance. Playfulness concurs with an authority-shift among museums and their publics – indeed in the process of knowledge-making itself. Like the court jester in the medieval court, playfulness disrupts knowledgeability, calling it into question, and inspiring critical reflection.</p>
+<p>Before sketching out an account of museological history to explore ‘how museums know what they know’, and how playfulness is disrupting that, it’s worth pausing to remind ourselves why we bother with museums. What are they actually for? Beyond preserving artefacts or representing history or instructing people on important aspects of the world, or any other thing that museums do, what is their highest purpose? In a Foucault-inspired[3] nutshell, their purpose is to provide the space and means for people to reflect on the world. To clarify that, any notion of ‘the world’ should always include and problematise the part played by human perception. Human consciousness is – obviously – human, so it’s important to bear in mind that our sense of the world is inevitably shaped by the particularities of our experience. So to be precise, the ultimate purpose of a museum is to provide a space and means for people to reflect on both the world and our perception of it, where ‘our perception’ is that of two kinds of inhabitants of the museum’s world – its creators and its visitors.</p>
+<div id="attachment_688" style="width: 594px" class="wp-caption alignleft"><img aria-describedby="caption-attachment-688" loading="lazy" class="wp-image-688 size-large" src="../../wp-content/uploads/2015/07/the-world-inside-1024x578.jpg" alt="the-world-inside" width="584" height="330" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/the-world-inside.jpg 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/the-world-inside-300x169.jpg 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/the-world-inside-500x282.jpg 500w" sizes="(max-width: 584px) 100vw, 584px" /><p id="caption-attachment-688" class="wp-caption-text">The world – inside our museums and our heads</p></div>
+<p>This means that when I talk about ‘how museums know about the world’, as well as meaning ‘how the people who make museums know about both the world and our perception of it’, I also mean ‘how spaces-for-reflecting-on-both-the-world-and-our-perception-of-it know about the world’. The short answer to these questions of how is – for centuries – blindly, because neither the people who made museums, nor the museums they made, factored in consciousness and its limits, at the point of the museum’s construction or its consumption.</p>
+<h2>How museums know, traditionally</h2>
+<p>Museums are not in the habit of encouraging visitors to question or ‘play with’ their representations. For the last 400 years our ways of knowing and understanding the world have been dominated by the modern, rational, scientific tradition that emerged as the age of Enlightenment. Museums played a significant part in this dawn, and whether we regard them as as swept along in the tide of reason, or as agents of the regime change, the museum form is implicated in the history of knowledge. In retrospect, we can recognise museums as authoritarian. (If we instead orient ourselves to the future, the fact that museums exercise power may be less problematic: museums can also serve to generate new kinds of knowledge, and new modes of thought.)</p>
+<p>Progenitors of the museum were cabinets of curiosity and fairs designed to elicit wonder and awe (Bennett, 1995). In her book, <em>Designing for the Museum Visitor Experience,</em> Tiina Roppola provides a cogent summary of the affect of these early displays relative to the later form of the Enlightenment-driven museum. She situates cabinets of curiosity &#8220;in a transitional space between a world no longer unquestioningly ruled by theology and one not yet ruled by science&#8221; (Roppola, 2012: 13). In addition to demonstrating the wealth, prestige or enterprise of the collector, who limited and controlled access to them, cabinets of curiosity also embodied open-mindedness on the part of the collector, and cultivated the same among their privileged visitors.</p>
+<p>Public museums began to appear in the eighteenth century; most famously, the Louvre was nationalised during the French revolution. In the nineteenth century many other museums opened their doors to public visitors, &#8220;[m]otivated by Enlightenment intentions to liberate, democratise, civilise and educate&#8221;. (Roppola, 2012: 14) Museums enacted a particular type of knowledge and particular ways of knowing. Knowledge was produced and shared through museums in accordance with the emerging disciplines of history, archaeology, biology and anthropology – in terms of order and rationality; and in conscious resistance to &#8220;ways of knowing governed by superstition, faith and custom&#8221;. (14)</p>
+<p>Douglas Crimp resists the idea that cabinets of curiosity morphed gradually into museums, arguing that the former’s &#8220;heterogenous profusion&#8221; was &#8220;utterly incompatible&#8221; with the orderly classifications of the latter (Crimp, 1993: 225). Indeed, museums did not simply become more open and democratic. During the same period that museums became more accessible to public visitors, and therefore more broadly effective as knowledge institutions, their epistemic approach tightened and contracted, becoming more professional and – with regard to visitors – much more didactic. A profusion of curios stakes no particular claim on knowledge; on the contrary, it engages visitors’ imagination, drawing them in to wondering about the world from whence such things came. In doing so, it cultivates an open-minded curiosity. A neat assemblage ordered in accordance with scientific classification systems constitutes an apparently perfect representation of a part of the world: unambiguous, fixed, and complete. It engages visitors’ intellect, inviting them to adopt a body of predetermined, definitive knowledge. In doing so, it obscures other aspects of its representation: the imaginary, the speculative, the symbolic; and the puzzling, the mysterious, the unknown.</p>
+<p>Modern museums and their precursors all dynamically enact ways of knowing through the bodies and minds of their visitors. But it is only from the Enlightenment age that museums began to serve a clear disciplinary function, helping to institute social ideologies that privileged bourgeois white men (Bennett, 1995, 97). Museums did this disciplinary work in a register of rationality that actively resisted the role of emotion and imagination – indeed, of any embodied personal relation between curators and visitors to the material and the people it represents.</p>
+<p>For indigenous peoples, museums literally orchestrated the imperialist project of dispossession, collecting material culture as well as human remains, and displaying both for the edification of non-Indigenous visitors. Essentially, these exhibitions served to instruct white people in their superiority. Today there are significant collections of Indigenous Australian cultural material all around the world, and now that non-Indigenous people recognise the hegemony of these former practices, museums must find ways to deal with the material and symbolic legacies of imperialist practices that they have inherited. In relation to human remains and, to a lesser degree, material culture, this work proceeds steadily and, for the most part, quietly. In relation to symbolic reparation, Australian museums tend to make oblique general references to former practices. It seems to be difficult for them to acknowledge the severity of their ancestral offence.</p>
+<p>The rupture between modern and postmodern museological practice may be smoothed over, but the shift in our understanding of the role of museums – and how museums articulate their own role – has been dramatic. Since the late 1980s, bodies of literature on museums and their cultural function have been replete with a sense of museums’ critical imperative, and call, in various ways, for museums to present material and its meaning as a problem for visitors to investigate, rather than a position for its producers to deliver.[4] Museums continue to trade on their authoritative cachet, but their voices have diversified, and audiences are no longer so docile. Since the late ‘noughties’, the advent of the read-write web and the publication of Nina Simon’s practice-led research, <em>The Participatory Museum</em>, have also inspired and enabled museums to draw visitors in to the process of making their collections meaningful. Around the world, through the #musetech network and the #openglam movement, museums are exploring ways of repositioning museum collections as public resources for informal and lifelong learning, both personally and collectively.</p>
+<p>In other ways, Enlightenment age thinking persists in 21st-century museums. There remains a split between the serious ‘research’ function of professional curators, who are academically trained and whose role centres on the production of authoritative knowledge, and emergent alternative means of generating knowledge through audience or other stakeholder participation: public programs, web applications for ‘crowdsourcing’, and the still lower-status education programs and discovery centres, during which visitors are traditionally encouraged to create content but where there is little or no expectation that anything of value to the museum or the public will result. Museums still favour the work of disciplinary expertise over the personal and cultural knowledge visitors bring to museums and create with them (if and when we let them).</p>
+<p>This persistent split between serious research and spontaneous, embodied or amateur knowledge echoes the dualism of Enlightenment thinking: intellect versus emotion, mind versus body, rationality versus intuition. And it endures despite the conscious understanding many people have, based on an abundance of testimony from respected thinkers through the ages, that diligent research and rational thinking are not all it takes to know and understand the world.[5] We may also know that often we find the answers we seek by looking from within, by tapping in to serendipity, by making spontaneous connections. But culturally, in Anglo Australia at least, we continue to authorises diligent, rational reasoning, to downplay the role of intuition, and to treat Indigenous cultural knowledge as valuable only in isolation from the modern Western knowledge system that it might otherwise destabilise.</p>
+<h2>A revolution in sense-making</h2>
+<p>In various contexts, for various reasons, we can discern that the wheel of sense-making is turning again. The overabundance of information is one impetus. When there is too much data, old analytical methods fail: it’s no longer possible for an individual to carefully sift through everything to distinguish and document structures and anomalies. And there is a growing awareness and acceptance that crowds – not just experts – can and should be involved in the production of knowledge. Like it or not, Wikipedia is revolutionising both what and how we know. Clearly, digital tools and methods open up new worlds of possibility for the production and authorisation of knowledge.</p>
+<p>In the digital humanities and in experimental museum practice, there is a palpable turn toward play as a mode of thought. Two aspects of this turn are relevant here: one is the use of computational methods to present and filter large datasets, leaving humans free to make intuitive connections; another is the proliferation of explicitly playful, ‘gamey’ ways to interact with cultural heritage.</p>
+<p>In a fertile area of experimentation, museum collections are being re-assembled into digital interfaces that enable visitors to see the whole and explore the parts. Reimagining the process of knowledge generation, these interfaces offer happenstance browse as an alternative to diligent search. Seminal to this movement is the work of digital artist-academic Mitchell Whitelaw, initiated in 2008 through his ‘Visible archive’ project with the National Archives of Australia.[6] In Mitchell’s terms, it is important that interfaces be generous rather than stingy. Rather than requiring visitors to state (and thereby to already know) the nature of their enquiry (in a search box), a generous interface will ‘show everything’, and invite visitors to explore. And as he and others have found, browsing a generous interface can yield unexpected and interesting results; in other words, it can generate knowledge in a new way. One example is Whitelaw’s collaboration with Ben Ennis Butler for ‘Explore’, a browser for the National Gallery of Australia’s Australian prints and printmaking collection. The Gallery’s senior curator of Australian Prints, Drawings and Illustrated Books, Roger Butler, testifies that even someone with deep inside knowledge of the collection can benefit from using the browser: &#8220;I have been responsible for building up the Australian print collection and I know the artists and their works well, but I constantly stumble across works and artists I had forgotten when playing with Explore.&#8221;[7]</p>
+<p>In addition to generous interfaces for exploring whole collections, over the last few years a cornucopia of playful tools for gently surfacing historical sources of interest has emerged. Digital historian Tim Sherratt has created several; Vintage Face Depot is a recent example. It’s a Twitter bot that responds when you send it a photographic face by tweeting a same-but-different photograph back. The original face is overlaid with a face from an Australian newspaper. Eerily or delightfully, the partial transparency effectively morphs one face into the other, and the tweet comes complete with a link to the original face in the Trove newspapers database.[8]</p>
+<div id="attachment_689" style="width: 785px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-689" loading="lazy" class="size-full wp-image-689" src="../../wp-content/uploads/2015/07/vintage-fac-depot.jpg" alt="A 'conversation' with the Vintage Face Depot Twitter bot, and the original image of 'Miss Muriel Wirth, an Equestrienne with the Wirth Circus', from the Adelaide Quiz, 11 December 1901" width="775" height="558" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/vintage-fac-depot.jpg 775w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/vintage-fac-depot-300x216.jpg 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/vintage-fac-depot-417x300.jpg 417w" sizes="(max-width: 775px) 100vw, 775px" /><p id="caption-attachment-689" class="wp-caption-text">A &#8216;conversation&#8217; with the Vintage Face Depot Twitter bot, and the original image of &#8216;Miss Muriel Wirth, an Equestrienne with the Wirth Circus&#8217;, from the Adelaide <em>Quiz</em>, 11 December 1901</p></div>
+<p>Mitchell Whitelaw has also used translucent overlays to enchanting effect in his 2014 project, <em>Succession</em>. At the push of a button it randomly generates a collage of five images drawn from a set of 2000 documenting the history of Newcastle-Upon-Tyne. The effect is something akin to heavy industrial digital scrapbooking – and naturally, the five sources are shown for you to unpack the collage and study individual images.[9] Also notable is Serendipomatic, a product of the Center for History and New Media’s annual ‘digital humanities barn raising’ project, One Week One Tool. You feed it a slab of text and it returns an assortment of records from four aggregators of cultural material.[10] The diversity and abundance of the result set suggests that however well you know your field, it is always possible to push its boundaries; there are always more sources to consider, whether they are directly relevant or more distantly related.</p>
+<p>Further along the playful continuum, there is a surge of interest in games – more formalised play-spaces – as a pathway to knowledge and a means of problem-solving. Many museums have dedicated significant resources to creating digital games for on- and off-site visitors.[11] Educators within and beyond museums are experimenting with ‘game-based learning’, social entrepreneurs and aid organisations are producing ‘serious games’, and the Games for Change movement is mobilising an international community of practitioners to propagate digital games as an agent for social change. Gameplay and game design have also lately received due recognition as vehicles for practising skills essential for the increasingly complex conditions of the 21st century.[12] Evidently, the conditions of this historical moment favour playful approaches.</p>
+<p>It is important to note that if we expand our frame of reference, this validation of play is nothing new or special. Consciously or not, humans have always played – and not just as a sideline pastime or as children, but as a fundamental part of interacting with others, in all areas of life. In <em>Homo Ludens: A Study of the Play Element in Culture</em>, Dutch historian and philosopher Johan Huizinga urges readers to recognise play as precisely that from which culture and civilisation emerges:</p>
+<blockquote><p>The spirit of playful competition is, as a social impulse, older than culture itself and pervades all life like a veritable ferment. Ritual grew up in sacred play; poetry was born in play and nourished on play; music and dancing were pure play. Wisdom and philosophy found expression in words and forms derived from religious contests. The rules of warfare, the conventions of noble living were built up on play-patterns. We have to conclude, therefore, that civilisation is, in its earliest phases, played. It does not come from play like a babe detaching itself from the womb: it arises in and as play, and never leaves it. (Huizinga, 1955: 173)</p></blockquote>
+<p>Clearly, play pervades many aspects of cultural production, and always has. What’s peculiar about this historical moment is perhaps only that it follows the age of reason – in which play was apparently banished from the knowledge-making process. Now, we are recognising that it is neither necessary nor possible to banish play.</p>
+<p>We may be approaching peak binary oppositional thinking, and peak slavish commitment to linear logic, and games may be helping us to achieve this watershed moment. Jordan Shapiro writes a column on games and education in <em>Forbes</em> magazine. One of his articles is called &#8220;How game-based learning can save the humanities&#8221; (Shapiro, 2013). It laments the arts’ separation from and subordination to the sciences and commends Gamestar Mechanic, a system in which players design games for other players, for helping to heal the rift between technical and aesthetic thinking, quantitative and qualitative learning. Shapiro’s commentary resonates with the growing move to insert an ‘A’ for ‘arts’ into the critical disciplinary grouping of science, technology, engineering and mathematics (STEM) so it becomes ‘STEAM’.</p>
+<p>In the context of museology, we can also discern a yearning for a more integrated approach. In his preface to a book on Panamanian museums Jack Lohman, CEO of the Royal British Columbia Museum, called for museums to cultivate a more holistic and dynamic understanding of how the world works:</p>
+<blockquote><p>The seventeenth century Newtonian and Cartesian metaphor no longer adequately explains the workings of the universe in which we live [&#8230;] The machine imagery led us to the belief that studying the parts was the key to understanding the whole. Quantum physics [&#8230;] encourages us to seek to understand the working of the whole system rather than focus on the significance of individual parts. We are directed to give attention to the interconnectedness, the relationships within the system that exists. The way in which everything relates to the other is the key to understanding of the self (Lohman, 2011: ix)</p></blockquote>
+<p>By calling for a focus on interconnectedness, Lohman crystallises the issue. Attending to relationships is ‘the key to understanding’ the whole – the multiple, complex, dynamic systems within which we all operate. And as an almost incidental consequence of that relational focus, and that holistic mission, we can gain insight into the separate parts.</p>
+<p>Lohman’s reference to Descartes hints at a second (not unrelated) reason for focusing on interconnections: it calls into question the divisive and oppressive binary oppositional thinking[13] that we have inherited. So shifting focus from things to how they are connected is a critical intervention in two ways: it expands the scope of our perception, enabling us to see the bigger picture; and – potentially – it encourages us to recognise and historicise conceptual divisions that we might otherwise take for granted. In other words, to attend to connectivity is to expand and to interrogate your view of the world – to augment your perception.[14]</p>
+<h2>Playing with perception</h2>
+<p>If museums are for reflecting on the world and our perception of it; and if at this point in history games are a good medium, and connectivity is an important approach – what happens when we put it all together?</p>
+<p>My contribution to the playful turn in museum practice and the digital humanities is ‘Sembl’,[15] a web-based board game of connections between collection images. It’s designed to draw players in to cultural heritage material (and through that, the world) – as they examine and make sense of the images – but at the same time, to call attention to the process of sense-making. In the game, in each turn, your mission is to identify a resemblance between a pair of images. One image is already on the board; the other you select from an array of openly-licensed images of material in collections around the world. Once you have chosen an image, you craft a ‘sembl’; in other words you describe what the pair has in common. The challenge is to be interesting – surprising, insightful or humorous, for example – because each connection is rated by other players on a sliding scale of interestingness, and only the most interesting win a place on the board. It’s a radically open form of sense-making; a good pun will usually beat a staid logical connection. And sometimes, the process yields a powerful insight into the world and how we perceive it.</p>
+<p>Here’s an illustration of how connective thinking might shift perception. On the left is a metal breastplate inscribed with the title ‘Timothy, Chief of Merricumbene’, which was given by a white settler to an Aboriginal man, to be worn on his chest; on the right is a branding iron.[16] What do they have in common?</p>
+<div id="attachment_690" style="width: 773px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-690" loading="lazy" class="size-full wp-image-690" src="../../wp-content/uploads/2015/07/breastplate-branding-iron.jpg" alt="On the left is a breastplate given by a white Australian settler to an Aboriginal man; on the right, a branding iron. What connects them is that both label bodies." width="763" height="395" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/breastplate-branding-iron.jpg 763w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/breastplate-branding-iron-300x155.jpg 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/breastplate-branding-iron-500x259.jpg 500w" sizes="(max-width: 763px) 100vw, 763px" /><p id="caption-attachment-690" class="wp-caption-text">On the left is a breastplate given by a white Australian settler to an Aboriginal man; on the right, a branding iron. What connects them is that both label bodies.</p></div>
+<p>One answer is that both objects label bodies; breastplate as brand. This resemblance reminds us that white settlers imposed a regime of authority on Aboriginal people. It’s a simple analogy, but it can inspire us to reconsider the breastplate not as an honour bestowed, but as something darker and more complex. It can alert us to the power of language to assert identity and ownership (in the case of the branding iron, explicitly). Implicitly, the connection also raises the spectre of colonial-era treatment of Indigenous people as animals. Through this pairing, to explore similarity is to recognise difference – clearly, but also gently, palatably.[17]</p>
+<p>To play Sembl is to exercise the faculty of pattern recognition or analogy, which is the core of cognition itself – to associate.[18] We are yet to effectively train machines to do it but for humans, pattern recognition is effortless. In fact, it is easiest for us to find associations while we are asleep and dreaming, or awake but allowing our minds to wander. It’s when we start thinking consciously that it becomes difficult. Our preference for logical, analytical modes of cognition interferes with our natural ability to think associatively. In an article in the American Journal of Play, psychologist Victoria Stevens makes a strong case for ‘combinatorial play’ – specifically, for discovering ’hidden similarities’ – as a means of inspiring people to question their perception, to solve problems and to generate insights:</p>
+<blockquote><p>Learning to focus on not focusing or concentrate on not concentrating constitutes a complex form of play of the highest order. Once mastered, this special, imaginative combinatory play frees the mind and enables a fluid blend of conscious and unconscious cognitive processes. This process is not only essential to creativity, but to the imagination, metacognition, and empathy. (Stevens, 2014: 101–2)</p></blockquote>
+<p>Evidently, although it’s a natural cognitive process, analogy-making is something that we should all practise, for individual and social wellbeing as much as for global and historical understanding.</p>
+<p>Curiously, there is a perfect resonance between this call for attention to connectivity or to hidden similarities, and the process of sense-making in pre-modern societies. In <em>The Order of Things: An Archaeology of the Human Sciences</em>, Foucault accounts for the epistemic shift that occurred around the 17th century precisely in terms of resemblance. Resemblance was, he writes, ‘the fundamental experience and primary form of knowledge’ (54):</p>
+<blockquote><p>Up to the end of the sixteenth century, resemblance played a constructive role in the knowledge of Western culture. It was resemblance that largely guided exegesis and the interpretation of texts; it was resemblance that organized the play of symbols, made possible knowledge of things visible and invisible, and controlled the art of representing them. (17)</p></blockquote>
+<p>According to Foucault, it was during the 17th century that resemblance relinquished its role in sense-making.[19] What emerged in its place was the opposite faculty of discrimination, of identification via differentiation:</p>
+<blockquote><p>The activity of the mind &#8230; will therefore no longer consist in &#8230; drawing things together &#8230; in setting out on a quest for everything that might reveal some sort of kinship, attraction, or secretly shared nature within them, but on the contrary, in &#8230; discriminating &#8230; that is, in establishing their identities. (55)</p></blockquote>
+<p>Where we once focused on affinity to make sense of the world, we shifted our focus to difference. Where we once used the infinite possibilities of analogy to connect things and events, we came to use binary logic to distinguish and identify and understand separate parts of the world.</p>
+<p>So it turns out that the current calls for attention to connectivity and resemblance are actually calls for a revival of the pre-Enlightenment mode of sense-making. Similarly, the so-called playful turn is actually a return, particularly in the sense of playful, intuitive, associative thinking. In this light, as well as sharpening their natural faculty for pattern recognition, Sembl players – and anyone else on a quest to discover hidden similarities – are reactivating a significant aspect of premodern consciousness.</p>
+<p>Another powerful association must be noted here. The more we focus on similarity the greater our sense that everything is connected,[20] and that we are therefore all part of a single unified whole. In generating a sense of wholeness, along with deep empathetic insights into history (as in the example of Aboriginal breastplate as brand), there is a spiritual dimension to resemblance-based play-knowing – a beauty and a power. This spiritual dimension echoes the religious foundation of premodern society as much as it resonates with the spiritual dimension of modern scientific endeavours.[21] By playing Sembl – or by otherwise intuiting connectedness – we invoke the possibility of unity through diversity.</p>
+<h2>Conclusion – the conscious museum</h2>
+<p>In addition to enabling dramatic improvements in many areas of human life, Enlightenment thinking nurtured what we can characterise, retrospectively, as reductive, divisive thinking, and subordinated more unifying, affinity-based ways of knowing. Museums were active agents in this disciplinary project – and specialists in imperialist hegemony. Today, their authority as a source of knowledge of the world persists, and their approach to sense-making is shifting. Generous and playful interfaces to cultural heritage encourage us to look beyond disciplinary structures and constraints, to reclaim modes of thought that are more childlike and diversionary. In many cases these interfaces are emerging at the periphery of museums. The extent to which museums embrace play remains to be seen but it will likely be huge, if not disruptive to sense-making as we know it.</p>
+<p>Coinciding with the playful turn is a growing awareness of the global imperative to shift attention from the parts to the whole, from things to how things relate, in order to expand consciousness and problematise perception. Some members of the museum sector recognise this imperative, and some curators might describe their role in terms of identify connections between objects. However, the organising principle of museums – their unit and currency – is individual items, not their attributes or relationships. In that sense it’s not surprising that the idea of interconnectedness is yet to find a nurturing niche in museums.</p>
+<p>The playful trajectory and the imperative to attend to connectivity converge at the point where playful, intuitive, associative thinking is explicitly oriented toward forging connections between disparate items. It’s at this nexus that I have created Sembl, and I hope that over time, it will grow and adapt to be fit for survival in the complex habitat of the museum world. Whatever particular interfaces they adopt, I urge museums to ride the wave of interest in playful sense-making – to recognise it as a powerful force for activating visitors’ reflections on the world and how we perceive it.</p>
+<p>There’s a paradox to knowledge, wisdom and authority, which has no doubt been expressed – and better – before, and which I wish museums would embrace. At precisely the moment we recognise we don’t know it all, we begin to. Perception is eternally questionable; so we might as well play around with it.</p>
+<h2>Endnotes</h2>
+<p class="p1"><span class="s1">[1] I’m an educated white person so in that sense I write from a position of privilege, of centredness in the modern, scientific, Enlightenment tradition. In communicating about these ways of knowing I use the pronouns ‘we’ and ‘our’ to acknowledge my personal propinquity with this epistemological approach, despite my misgivings about it and the fact that it also marginalises aspects of my own experience and that of many Others.</span></p>
+<p class="p1">[2] <span style="line-height: 1.5">I use ‘museums’ here as a shorthand for places that collect and share cultural heritage material.</span></p>
+<p class="p1">[3] <span style="line-height: 1.5">Foucault wrote of museums as ‘heterotopias’ – discrete, cordoned sites of collection and display that operate in relation to, and that intervene in, the ordinary spaces of everyday life. These other-places &#8220;have the curious property of being in relation with all the other sites, but in such a way as to suspect, neutralize, or invert the set of relations that they happen to designate, mirror or reflect&#8221; (Foucault, 1986: 24). In Foucault’s account, heterotopic sites are not only representative of culture, they are instrumental to its production. They orient and reorient visitors toward the real. Their meaning and value does not reside within but emerges from their relation to, their engagement with, and their effect on, the society in which they operate.</span></p>
+<p class="p1">[4] <span style="line-height: 1.5">For a sample of writers that in some way call for museums to adopt reflexive representational techniques see: Gerald, 1990: 18; Horne, 1986: 7; Way, 1993: 110; Bennett, 1988: 83; Jones, 1992, Lumley, 1988: 13, Tchen, 1992: 311; Merriman, 1989: 162–3; Karp, 1992a; Karp, 1992b; MacDonald, 1996; Silverstone, 1994.</span></p>
+<p class="p1">[5] M<span class="s1">ichael Polanyi’s notion of tacit knowledge is important and influential – the idea that &#8220;we can know more than we can tell&#8221; and that discoveries are often the result of playing out a hunch (Polanyi, 1967). Einstein said of his discoveries: &#8220;There is no logical way to the discovery of these elemental laws. There is only the way of intuition, which is helped by a feeling for the order lying behind the appearance.&#8221; (Popova, 2012) See also: Ira Flatow on EO Wilson’s insistence that scientific endeavour involves a poetic phase, of metaphor and fantasy and creativity (Flatow, 2013); and Arthur Koestler’s seminal work, <i>The Act of Creation</i>, in which he argues that ‘there are no frontiers where the realm of science ends and that of art begins’ (Koestler, 1975: 28). Cultural historian Marina Warner writes in <i>Stranger Magic: Charmed States and the Arabian Nights</i>: &#8220;The faculties of imagination – dream, projection, fantasy – are bound up with the faculties of reasoning and essential to making the leap beyond the known into the unknown&#8221; (Warner, 2011: 92). A final example is well-known among dream interpretation practitioners (eg see uh.edu/engines/epi1868.htm) and concerns the invention of the sewing machine. In 1846, having struggled for a long time with the design of the needle, Elias Howe went to sleep and dreamed: he was attacked by warriors, each brandishing a spear with a circular eye near the point. When he woke, he had solved the design problem: the eye of the needle must be adjacent to the tip.</span></p>
+<p class="p1">[6] <span style="line-height: 1.5">Whitelaw documents this work at: </span><a style="line-height: 1.5" href="http://visiblearchive.blogspot.com.au/"><span class="s2">visiblearchive.blogspot.com.au</span></a></p>
+<p class="p1">[7] <span style="line-height: 1.5">This comment was published in the University of Canberra magazine, </span><i style="line-height: 1.5">Monitor</i><span style="line-height: 1.5">, issue 2, September 2013. See also Mitchell’s examples of information that became apparent through his interactive browser for the archival series A1 (Whitelaw, 2009).</span></p>
+<p class="p1">[8] <span style="line-height: 1.5">Tim Sherratt’s tools are available via wraggelabs.com. Another good example is &#8220;The Future of the Past&#8221;, which co-creates data poetry by displaying important words from 10,000 newspaper articles that include the phrase ‘the future’. Its rare combination of data-driven, quantitative mechanics and surprising, absurd qualitative outcomes elicit wonder and delight: ‘amplest monkey multifariously vieing curt grooved dot’.</span></p>
+<p class="p1">[9] <span style="line-height: 1.5">See </span><a style="line-height: 1.5" href="http://mtchl.net/succession"><span class="s2">mtchl.net/succession</span></a><span style="line-height: 1.5">.</span></p>
+<p class="p1">[10] <span style="line-height: 1.5">See <a href="http://serendipomatic.org/">serendipomatic.org</a> and for information about the project, <a href="http://oneweekonetool.org/">oneweekonetool.org</a>. Serendipomatic’s sources for content are the Digital Public Library of America, Europeana, Flickr Commons and Trove.</span></p>
+<p class="p1">[11]<span style="line-height: 1.5">For a list of examples, see <a href="http://museumgames.pbworks.com/">museumgames.pbworks.com</a>. In 2013–14 the Victoria &amp; Albert Museum hosted a game designer in residence – see <a href="http://am.ac.uk/content/articles/g/game-designer-resident-sophia-george/">am.ac.uk/content/articles/g/game-designer-resident-sophia-george</a>. And in July 2015 the Wellcome Collection employed a game designer to curate 15 games for a gala evening of play for adults – see <a href="http://wellcomecollection.org/events/friday-spectacular-play">wellcomecollection.org/events/friday-spectacular-play</a></span></p>
+<p class="p1">[12] <span style="line-height: 1.5">Games teach players to experiment, to learn from failure, to solve problems, collaborate and – perhaps most significantly – to think in terms of systems rather than linear causes and effects. Jane McGonigal has been integral to raising awareness of the power of games to solve real-world problems, particularly through her bestselling book </span><i style="line-height: 1.5">Reality is Broken</i><span style="line-height: 1.5"> (McGonigal, 2011). Award-winning game designer Eric Zimmerman has declared this the ‘ludic century’ (Zimmerman &amp; Chaplin, 2013).</span></p>
+<p class="p1">[13] <span style="line-height: 1.5">Oppositions that inform our perception include: white/other, male/female, logic/intuition, mind/body, science/arts, work/play, entities/attributes, digital/analogue, linear/spatial.</span></p>
+<p class="p1">[14] <span style="line-height: 1.5">Though it’s beyond the scope of this paper to explore the resonance in any depth, this notion of attending to interconnections aligns strongly with Indigenous ways of knowing, which tend to be non-linear and contextual. The ‘8 Aboriginal Ways of Learning’ wiki is instructive here – see </span><a style="line-height: 1.5" href="http://8ways.wikispaces.com/"><span class="s2">8ways.wikispaces.com</span></a><span style="line-height: 1.5">.</span></p>
+<p class="p1">[15] <span style="line-height: 1.5">Sembl (at </span><a style="line-height: 1.5" href="http://sembl.net/"><span class="s2">sembl.net</span></a><span style="line-height: 1.5">) is an extension of the work of Charles Cameron who, in the early 1990s, translated into the real world the ‘glass bead game’ in Herman Hesse’s novel of the same title (whose mechanics were only vaguely defined). Its initial development was funded by the Australian Capital Territory Government under the Innovation Connection (ICon) program. The beta version of the game was released in 2015.</span></p>
+<p class="p1">[16] <span style="line-height: 1.5">Breastplates were given by white settlers to Aboriginal people for various reasons from 1815 to the mid twentieth century. The names were anglicised and the titles were bestowed independently of the person’s status in their own community. Both objects are in the collection of the National Museum of Australia.</span></p>
+<p class="p1">[17] <span style="line-height: 1.5">Fred Wilson’s 1992 artistic intervention into the Maryland Historical Society also used simple juxtapositions to powerful effect. In one display case he placed fine silverware next to a set of slave shackles with the label ‘Metalwork’. I wrote about this example in a blogpost on how exploring sameness can identify difference: <a href="http://catherinestyles.com/2011/10/02/sembl-praxis">catherinestyles.com/2011/10/02/sembl-praxis</a>.</span></p>
+<p class="p1">[18] <span style="line-height: 1.5">Cognitive scientist Douglas Hofstadter and cognitive psychologist Emmanuel Sander elaborate on this principle in their book </span><i style="line-height: 1.5">Surfaces &amp; Essences: Analogy as the Fuel and Fire of Thinking</i><span style="line-height: 1.5"> (2013).</span></p>
+<p class="p1">[19] <span style="line-height: 1.5">Curiously, the meaning of the term ‘semblance’ itself shifted during the age of reason. Where earlier its meaning was simply a similarity or likeness, it came to mean the ‘apparent form of something, especially when the reality is different’, ie a veneer, guise or pretence. It is difficult not to regard this shift in the context of the Enlightenment disavowal of embodied perceptions in pursuit of a disembodied ‘reality’.</span></p>
+<p class="p1">[20] <span style="line-height: 1.5">My evidence for this claim is experiential as well as anecdotal: when a 10-year-old boy who tested an early version of Sembl was asked &#8220;What interested you about the game?&#8221; he responded: “Even really weird things are connected.”</span></p>
+<p class="p1">[21] <span style="line-height: 1.5">I’m thinking of physicists and astrophysicists’ exploration of the connections between atoms, organisms and the cosmos, which enable new views of whole systems (Carl Sagan, Richard Feynman, Neil deGrasse Tyson). I’m also thinking of the first astronauts to see planet Earth from space reported feelings of profound awe, a deep understanding of the interconnectedness of all life, and a powerful sense of environmental responsibility. See Planetary Collective’s film, </span><i style="line-height: 1.5">Overview</i><span style="line-height: 1.5">: <a href="http://vimeo.com/55073825">vimeo.com/55073825</a>.</span></p>
+<h2>References</h2>
+<p class="p1"><span class="s1">Bennett, T. (1988). “Museums and the People.” In T<i>he Museum Time Machine</i>. London: Routledge.</span></p>
+<p class="p1"><span class="s1">———. (1995). <i>The Birth of the Museum: History, Theory, Politics</i>. London: Routledge.</span></p>
+<p class="p1"><span class="s1">Crimp, D. (1993). <i>On the Museum’s Ruins</i>. Cambridge, Massachusetts and London, England: Massachusetts Institute of Technology.</span></p>
+<p class="p1"><span class="s1">Flatow, I. (2013). “EO Wilson’s Advice for Future Scientists.” <i>NPR</i>. npr.org/2013/06/21/194230822/e-o-wilsons-advice-for-future-scientists</span></p>
+<p class="p1"><span class="s1">Foucault, M. (1970). <i>The Order of Things: An Archaeology of the Human Sciences</i>. New York: Random House.</span></p>
+<p class="p1"><span class="s1">———. 1986.<span class="Apple-converted-space">  </span>‘Of other spaces’. <i>Diacritics: A Review of Contemporary Criticism</i>, 16(1), 22–7.</span></p>
+<p class="p1"><span class="s1">Gerald, G. (1990). “The Best Laid Plans of Mice and Men: Observations on Going Astray.” In <i>Visiting History</i>. Washington DC: American Association of Museums.</span></p>
+<p class="p1"><span class="s1">Hofstadter, D. &amp; Sander, E. (2013). <i>Surfaces and Essences: Analogy as the Fuel and Fire of Thinking</i>. New York: Basic Books.</span></p>
+<p class="p1"><span class="s1">Huizinga, J. (1955). <i>Homo Ludens: A Study of the Play Element in Culture</i>. Boston: Beacon Press.</span></p>
+<p class="p1"><span class="s1">Jones, J.P. (1992). “Colonial Legacy and the Community: The Gallery 33 Project.” In <i>Museums and Communities: The Politics of Public Culture</i>. Washington DC: Smithsonian Institution Press.</span></p>
+<p class="p1"><span class="s1">Karp, I. (1992a). “Introduction: Museums and Communities: The Politics of Public Culture.” In <i>Museums and Communities: The Politics of Public Culture</i>. Washington DC: Smithsonian Institution Press.</span></p>
+<p class="p1"><span class="s1">———. (1992b). “On Civil Society and Social Identity.” In <i>Museums and Communities: The Politics of Public Culture</i>. Washington DC: Smithsonian Institution Press.</span></p>
+<p class="p1"><span class="s1">Koestler, A. (1975). <i>The Act of Creation: A Study of the Conscious and Unconscious Processes in Humor, Scientific Discovery and Art</i>. London: Pan Books.</span></p>
+<p class="p1"><span class="s1">Lohman, J. (2011). “Preface.” In <i>Panamanian Museums and Historical Memory</i>. Museums and Diversity. Oxford: Museum of London and Berghahn Books.</span></p>
+<p class="p1"><span class="s1">MacDonald, S. (1996). “Theorizing Museums: An Introduction.” In <i>Theorizing Musuems: Representing Diversity in a Changing World</i>. Oxford: Blackwell in conjunction with the Sociological Review.</span></p>
+<p class="p1"><span class="s1">McGonigal, J. (2011). <i>Reality is Broken: How Games Make Us Better and How They Can Change the World</i>. New York: Penguin Press.</span></p>
+<p class="p1"><span class="s1">Merriman, N. (1989). “Museum Visiting as a Cultural Phenomenon.” In <i>The New Museology</i>. London: Reaktion Books.</span></p>
+<p class="p1"><span class="s1">Polanyi, M. (1967). <i>The Tacit Dimension</i>. New York: Anchor Books.</span></p>
+<p class="p1"><span class="s1">Popova, M. (2012). “How Intuition and the Imagination Fuel ‘Rational’ Scientific Discovery and Creativity: A 1957 Guide.” <i>Brain Pickings</i>. brainpickings.org/index.php/2012/06/01/the-art-of-scientific-investigation-beveridge-2</span></p>
+<p class="p1"><span class="s1">Roppola, T. (2012). <i>Designing for the Museum Visitor Experience</i>. Routledge Research in Museum Studies. New York and London: Routledge.</span></p>
+<p class="p1"><span class="s1">Shapiro, J. (2013). “How Game-Based Learning Can Save the Humanities.” <i>Forbes</i>. forbes.com/sites/jordanshapiro/2013/02/18/how-game-based-learning-can-save-the-humanities</span></p>
+<p class="p1"><span class="s1">Silverstone, R. (1994). “The Medium Is the Museum: On Objects and Logics in Times and Spaces.” In <i>Towards the Museum of the Future: New European Perspectives</i>. London and New York: Routledge.</span></p>
+<p class="p1"><span class="s1">Stevens, V. (2014). “To Think Without Thinking: The Implications of Combinatory Play and the Creative Process for Neuroaesthetics.” <i>American Journal of Play.</i> Volume 7, Issue 1: 99–119. journalofplay.org/sites/www.journalofplay.org/files/pdf-articles/7-1-article-to-think-without-thinking.pdf</span></p>
+<p class="p1"><span class="s1">Tchen, J.K.W. (1992). “Creating a Dialogic Museum: The Chinatown History Museum Experiment.” In <i>Museums and Communities: The Politics of Public Culture</i>. Washington DC: Smithsonian Institution Press.</span></p>
+<p class="p1"><span class="s1">Warner, M. (2011). <i>Stranger Magic: Charmed States and the Arabian Nights</i>. London: Random House.</span></p>
+<p class="p1"><span class="s1">Way, J.E. (1993). “The Modern Gallery Exhibition as a Form of Western–Indigenous Discourse.” In <i>Imagery and Creativity: Ethnoaesthetics and Art Worlds in the Americas</i>. Tucson: University of Arizona Press.</span></p>
+<p class="p1"><span class="s1">Whitelaw, M. (2009). “Exploring A1: Items to Documents.” visiblearchive.blogspot.com.au/2009/08/exploring-a1-items-to-documents.html</span></p>
+<p class="p2"><span class="s1">Zimmerman, E. &amp; Chaplin, H. (2013). “Manifesto: The 21st Century Will Be Defined by Games.” <i>Kotaku</i>. <a href="http://kotaku.com/manifesto-the-21st-century-will-be-defined-by-games-1275355204"><span class="s2">kotaku.com/manifesto-the-21st-century-will-be-defined-by-games-1275355204</span></a></span></p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+. "Museums and the playful web – a revolution in sense-making." <i>MWA2015: Museums and the Web Asia 2015</i>. Published August 23, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mwa2015.museumsandtheweb.com/paper/museums-the-playful-web-a-revolution-in-sensemaking/<br /><br /><hr>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://mwa2015.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><hr>
+<h3 class="widget-title">Global sponsor</h3>
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a>
+
+<h3 class="widget-title">Platinum sponsor</h3>
+<a title="MailChimp" href="http://nonprofits.mailchimp.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a>
+
+<h3 class="widget-title">Gold sponsor</h3>
+<a title="AARNet" href="http://www.aarnet.edu.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/AARNet-250-75.jpg" alt="AARNet" /></a>
+
+<h3 class="widget-title">Silver sponsors</h3>
+<a title="CV" href="http://www.creative.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CV-250-75.jpg" alt="CV" /></a>
+<a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<h3 class="widget-title">Bronze sponsors</h3>
+<a title="Ruckus" href="http://www.ruckuswireless.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/ruckus-250-75.jpg" alt="Ruckus" /></a>
+
+<a title="CoM" href="http://www.melbourne.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CoM-250-75.jpg" alt="CoM" /></a>
+
+<a title="Lumicom" href="http://lumicom.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/lumicom-250-75.jpg" alt="CoM" /></a>
+
+<a title="Tomizone" href="http://tomizone.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/tomizone-250-75.jpg" alt="Tomizone" /></a>
+
+<h3 class="widget-title">Partner</h3>
+<a title="MV" href="http://museumvictoria.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/mv-250-100.jpg" alt="MV" /></a>
+
+<div style="text-align:right;"><a href="../../sponsorship-opportunities/index.html">become a sponsor</a></div>
+<hr></div>
+		</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/search?q=%40museweb+OR+%23museweb+OR+%23mwa2015" data-widget-id="519731970960400384">Tweets about "@museweb OR #museweb OR #mwa2015"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br />
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-5" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br />
+703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info@museumsandtheweb.com</p></div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+
+			
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/museums-the-playful-web-a-revolution-in-sensemaking/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:51:39 GMT -->
+</html>

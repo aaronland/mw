@@ -1,0 +1,921 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+
+
+<!-- Mirrored from www.museumsandtheweb.com/mw99/papers/deck/deck.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:50:25 GMT -->
+<head>
+
+        <title>Archives & Museum Informatics: MW99 - paper</title>
+
+        <script language = "JavaScript">
+
+
+
+<!--
+
+
+
+// Detect if browser is Netscape 3 + or IE 4 +.
+
+bName = navigator.appName;
+
+bVer = parseInt(navigator.appVersion);
+
+    if ((bName == "Netscape" && bVer >= 3) || 
+
+        (bName == "Microsoft Internet Explorer" && bVer >= 4)) br = "n3"; 
+
+    else br = "n2";
+
+
+
+// Create image objects, preload all active and inactive images.
+
+    if (br== "n3") { 
+
+     
+
+    img2on = new Image();
+
+    img2on.src = "../../nav/mw99_nav_registeron.gif";
+
+    img3on = new Image();
+
+    img3on.src = "../../nav/mw99_nav_workshopson.gif";
+
+    img4on = new Image();
+
+    img4on.src = "../../nav/mw99_nav_demonstrationson.gif";
+
+    img5on = new Image();
+
+    img5on.src = "../../nav/mw99_nav_sessionson.gif";
+
+    img6on = new Image();
+
+    img6on.src = "../../nav/mw99_nav_speakerson.gif";
+
+    img7on = new Image();
+
+    img7on.src = "../../nav/mw99_nav_exhibiton.gif";
+
+    img8on = new Image();
+
+    img8on.src = "../../nav/mw99_nav_sponsoron.gif";
+
+    img9on = new Image();
+
+    img9on.src = "../../nav/mw99_nav_beston.gif";
+
+    img10on = new Image();
+
+    img10on.src = "../../nav/mw99_nav_eventson.gif";
+
+    img11on = new Image();
+
+    img11on.src = "../../nav/mw99_nav_keydateson.gif";
+
+        img12on = new Image();
+
+    img12on.src = "../../nav/mw99_nav_neworleanson.gif";
+
+
+
+     
+
+        img2off = new Image();
+
+    img2off.src = "../../nav/mw99_nav_registeroff.gif";
+
+    img3off = new Image();
+
+    img3off.src = "../../nav/mw99_nav_workshopsoff.gif";
+
+    img4off = new Image();
+
+    img4off.src = "../../nav/mw99_nav_demonstrationsoff.gif";
+
+    img5off = new Image();
+
+    img5off.src = "../../nav/mw99_nav_sessionsoff.gif";
+
+    img6off = new Image();
+
+    img6off.src = "../../nav/mw99_nav_speakersoff.gif";
+
+    img7off = new Image();
+
+    img7off.src = "../../nav/mw99_nav_exhibitoff.gif";
+
+    img8off = new Image();
+
+    img8off.src = "../../nav/mw99_nav_sponsoroff.gif";
+
+    img9off = new Image();
+
+    img9off.src = "../../nav/mw99_nav_bestoff.gif";
+
+    img10off = new Image();
+
+    img10off.src = "../../nav/mw99_nav_eventsoff.gif";
+
+    img11off = new Image();
+
+    img11off.src = "../../nav/mw99_nav_keydatesoff.gif";
+
+    img12off = new Image();
+
+    img12off.src = "../../nav/mw99_nav_neworleansoff.gif";
+
+    }
+
+
+
+// Function to "activate" images.
+
+function imgAct(imgName) {
+
+    if (br == "n3") {
+
+    document[imgName].src = eval(imgName + "on.src");
+
+    }
+
+}
+
+
+
+// Function to "deactivate" images.
+
+function imgInact(imgName) {
+
+    if (br == "n3") {
+
+    document[imgName].src = eval(imgName + "off.src");
+
+    }
+
+}
+
+
+
+// -->
+
+
+
+</script>
+
+<meta name="description" content="In Search of Meaningful Events: Curatorial Algorithms and Malleable Aesthetics, an essay by Andy C. Deck">
+
+<meta name="keywords" content="andyland,andyman,interactivity,politics,interface,art,censorship,public sphere,java,drawing,white board">
+
+</head>
+
+<body bgcolor="#FFFFFF" background="../../../conferences/conferences_bg.html">
+
+<table border="0" cellpadding="5">
+
+
+
+<tr>
+
+<td valign="TOP" width="135">
+
+
+
+
+
+<a href="../../index.html"><center><img src="../../mw99.gif" width=112 height=155 alt="Museums and the Web 1999" border="0"></center></a><p>
+
+
+
+
+
+
+
+
+
+<a href = "../../workshops/index.html" onmouseover = "imgAct('img3')"  onmouseout = "imgInact('img3')" target="_top">
+
+<img name= "img3" src="../../nav/mw99_nav_workshopsoff.gif" width=125 height=15 border=0 alt="Workshops"></a><br>
+
+
+
+<a href = "../../sessions/index.html" onmouseover = "imgAct('img5')"  onmouseout =
+
+"imgInact('img5')" target="_top">
+
+<img name= "img5" src="../../nav/mw99_nav_sessionsoff.gif" width=125 height=15
+
+border=0 alt="Sessions"></a><br>
+
+
+
+<a href = "../../speakers/index.html" onmouseover = "imgAct('img6')"  onmouseout = "imgInact('img6')" target="_top">
+
+<img name= "img6" src="../../nav/mw99_nav_speakersoff.gif" width=125 height=15 border=0 alt="Speakers"></a><br>
+
+
+
+<a href = "../../demos/index.html" onmouseover = "imgAct('img4')"  onmouseout = "imgInact('img4')" target="_top">
+
+<img name= "img4" src="../../nav/mw99_nav_demonstrationsoff.gif" width=125 height=15 border=0 alt="Demonstrations"></a><br>
+
+
+
+<a href = "../../exhibit/index.html" onmouseover = "imgAct('img7')"  onmouseout = "imgInact('img7')" target="_top">
+
+<img name= "img7" src="../../nav/mw99_nav_exhibitoff.gif" width=125 height=15 border=0 alt="Exhibit"></a><br>
+
+
+
+
+
+
+
+<a href = "../../events/index.html" onmouseover = "imgAct('img10')"  onmouseout = "imgInact('img10')" target="_top">
+
+<img name= "img10" src="../../nav/mw99_nav_eventsoff.gif" width=125 height=15 border=0 alt="Events"></a><br>
+
+
+
+<a href = "../../best/index.html" onmouseover = "imgAct('img9')"  onmouseout = "imgInact('img9')" target="_top">
+
+<img name= "img9" src="../../nav/mw99_nav_bestoff.gif" width=125 height=15 border=0 alt="Best of the Web"></a><br>
+
+
+
+
+
+
+
+<br>&nbsp;<br>
+
+
+
+<a href="http://www.archimuse.com/"><img src="../../../nav/nav_ami.html" width=135 height=25 alt="Home" border=0></a><br>
+
+
+
+<font size="-2">Archives & Museum Informatics<br>
+
+
+
+
+
+2008 Murray Ave.,<br>
+
+Suite D<br>
+
+Pittsburgh, PA<br>
+
+15217 USA<p>
+
+<p>
+
+<a href="../../../mw98/index.html">info@museumsandtheweb.com</a><br>
+
+<a href="http://www.archimuse.com/">www.archimuse.com</a><p></font>
+
+<p>
+
+<font size="-2">Join our <a href="../../../index.html">Mailing List</a>.<p></FONT>
+
+<font size="-2">
+Published: March 1999.<br /></font>
+
+<script language="JavaScript">
+
+<!--
+
+document.write("<FONT SIZE='-2'>"+"Updated:&nbsp;"+document.lastModified);
+
+// -->
+
+</script>
+
+
+</td>
+
+
+
+<td width="450" valign="TOP">
+
+<img src="../papers.gif" width=325 height=66 alt="Papers" border="0"><p>
+
+
+
+<h3>
+
+In Search of Meaningful Events: Curatorial Algorithms and
+
+Malleable Aesthetics</h3>
+
+
+
+<b><a href="../../bios/au_6367.html">Andy C. Deck</a></b><p>
+
+
+
+<p>
+
+
+
+        
+
+     So much of the contemporary experience of the World Wide Web
+
+is searching and sampling of the unfinished, insufficient
+
+precursors of what one may expect tomorrow.  In the climate of
+
+"cool" that prevails, many are occupied with looking, searching,
+
+and waiting rather than with dialogue, synthesis, derivation, and
+
+playful production.  In fact the trend is encouraged: the more
+
+pages of "search results" we scan the more advertising we see. The significance of
+
+editorial selection and algorithms that shape the resulting view of the internet
+
+extends beyond aesthetics.  Yet the concentration of authority around the mass
+
+market internet portals engages discursive formations that have emerged in recent
+
+years with respect to art and the public sphere, institutional critique, and
+
+freedom of speech.  Artists are posing questions about the limits and function of
+
+the arts in the sphere of the internet.  Insofar as public institutions treat
+
+their web sites as publicity tools  glorified pamphlets  one must turn toward the
+
+margins of creative production for clues about latent alternatives.  Fortunately
+
+the margins and centers of the internet continue to mingle, especially in a
+
+technical sense.  So one may still entertain some marginally central questions: If
+
+an art form overturns the paradigm of broadcast, allowing reciprocal action
+
+between transmitter and receiver, in what consists the act of curation?  Is the
+
+curator then a moderator?  An artist?  A programmer?  Malleable aesthetics provoke
+
+such questions.
+
+<p>
+
+     The cybernetic systems I have in mind may prove incompatible
+
+with normative museum practices, with the curation of objects and
+
+the documentation of art that exists prior to its reception.  The
+
+malleability I mean transforms hypertext and hypermedia: its essence lies in
+
+profound reconfigurability in response to feedback from observer/participants. 
+
+Whereas the beauty of existing hypertext and hypermedia art is supposed to reside
+
+in the masterful interplay of prospective narratives wired in by the author, the
+
+allure of malleable aesthetics is the potential digression toward and development
+
+of any direction.  Incompatible with forced enclosure, the purest forms of this
+
+category of production are licensed to assure that programming code remains in the
+
+public domain.           
+
+<p>
+
+    Some of the most intriguing microcosms of malleable aesthetics to date have
+
+been textual interactive systems that privilege the familiar signification of
+
+natural language as writing.  The call and response of textual dialogue, whether
+
+at the pace of conversation or in a slower, gradual accumulation of related ideas
+
+("bulletin boards"), offers a suggestive model for the articulation of meaning
+
+online.  There are dozens of varieties of dialogic text systems that embody
+
+different approaches to the control of events and interface.  One bland form,
+
+chat, imposes a potential anonymity, sometimes resists the use of one's preferred
+
+language, and favors people who can type.   But usually there is little or no
+
+censorship.  While this type of communication may foster subtle, shared events and
+
+ideas, usually there is no lasting record, except in the memories of the readers
+
+and writers.  
+
+<p>
+
+<center><table><tr><td><img src=hubba.gif></td></tr><tr><td>
+
+<small>Microsoft's Comic Chat with<br> drawings by 
+
+Jim Woodring</small></td></tr></table></center>
+
+<p>
+
+Variations of the chat interface include the categorization of discussion topics,
+
+and the ability to whisper to (or exclude) some readers.  Perhaps due to the
+
+transience of this type of speech, "freedom of chat" remains controversial only
+
+among the most domineering hosts.  Microsoft and AOL use the popularity of chat to
+
+leverage their power as a marketing venues.  Despite differences in their revenue
+
+models, both are developing a base of users for online consumer colonies.  That
+
+users have no profound, programmatic control of the underlying software greatly
+
+limits the malleable potential of such systems.  Public feedback used in this way
+
+becomes a disposable byproduct in the pursuit of market share.  It seems clear
+
+enough that developments that do not serve this pursuit will not flourish in
+
+regulated commercial software spaces, where feedback is reduced to what Hans
+
+Magnus Enzensberger has termed the "lowest level compatible with the system."
+
+(Enzensberger, 1982).  
+
+<p>
+
+There is little enough reason to believe that norms  held-over from broadcast are
+
+applicable to the internet.  Even the notion of communicative reciprocity seems a
+
+bit dated, since it appears to have more to do with ham radio than with the cagey
+
+mediation of software.  It would be a mistake, also, to assume that the appearance
+
+of persistence, in the form of the database, is a panacea for the passive legacy
+
+of broadcast.  However, those forms of persistence that contribute to the
+
+diffusion of control over public interactive systems, lead toward malleable
+
+aesthetics.  When feedback might affect the purposive qualities of a system,
+
+politics enters the picture.  "Once something is going to be permanent everybody
+
+cares about it" (Antin, 1992).  And so it goes even in the corners of cyberspace. 
+
+Those interfaces that give people opportunities to contribute in a cumulative way
+
+are usually absent from the fortified web sites of corporate media (and museums).  
+
+<p>
+
+Really to include the unknown lays open a Pandora's Box of expressive liberties to
+
+an anonymous public.  Most institutions are reluctant to pursue web ventures that
+
+cannot insure a degree of decorum.  Fearing what might happen, they front web
+
+sites that inexpensively advertise their stuff.  In so doing, they contribute to
+
+the mutation of the internet into an elaborate yellow pages catalog.  Here, public
+
+institutions follow the lead of the marketing sector, instead of standing with
+
+artists and intellectuals who would advance a different culture than the bogus
+
+authoritarianism of commercial television.
+
+<p>
+
+Clearly this is not to advocate institutional support for puerile uses of the new
+
+media.  The amazing growth of the web is evidence of the will of people to leave a
+
+mark  aesthetical, rhetorical, or otherwise  and it is with this in mind that one
+
+must ask whether museums, and other public institutions, will endorse or reject
+
+that will?  Insofar as the museum on the web will become more than a repository of
+
+support materials referring to a permanent collection, it must address the issue
+
+of feedback.  Is it wanted?  With what limits?  How might it be used?
+
+<p>
+
+Situating the museum and curator in the network of public
+
+collaboration, it may be said that control or moderation of input can take the
+
+form of preemptive interface design and programming, concurrent moderation by a
+
+living participant, or retroactive exclusion, censorship, and editing.  Concurrent
+
+moderation is the unviable offspring of broadcast and the chaperone.  Likewise,
+
+that there exists a technical solution able to resolve the political difficulties
+
+of real public participation is a myth. If an interface stops the cacophony of
+
+chat and the banality of "my first homepage" it might also prevent the ideal
+
+contribution, whatever that may be.  Software should not be used like a Kafkaesque
+
+bureaucracy to hide the trail of responsibility and repression.  Instead of
+
+resisting the response of the public, instead of serving as apologists for
+
+mediocre software, and instead of abstractly ascribing responsibility to
+
+"technology," institutions need to become more accountable.  Due to the political
+
+implications of interactive system design, it should be open to revision and
+
+debate.  In moving away from the stuffy, cosmetic web sites that have sprung up
+
+all over, the need for more transparent control policies is evident.           
+
+<p>
+
+Paradigmatic of this openness are the multi-user, object oriented "MOO" projects
+
+that have derived from role playing, text only "multi-user dungeons" (MUDs). 
+
+Participants with access to the internet connect to a computer that hosts the MOO
+
+server software and database. Typically, the people who use the MOO most become
+
+the policy architects and chief content providers.  It is not unusual for a 
+
+leadership committee to consist of a geographically
+
+dispersed group of interested users.  As with chat, the transience of utterances
+
+tends to make censorship a rarity, but in those situations where someone's behavior becomes
+
+really disruptive, generally, a joint decision is made concerning the best
+
+response.  This process, which ranges from democratic to oligarchic in practice,
+
+invokes a governmental, consensual protocol for the harmonization of online
+
+discourse. This kind of governance has predominated on the MOO systems over the
+
+last decade, and in practice it allows a wide latitude for expressiveness.  
+
+<p>
+
+Regardless of whether the MOO participants consider themselves artists, conflicts
+
+of authority arising from the regulation of collaborative, public art projects can
+
+be arbitrated in this way.  Rather than preemptively or automatically stifling
+
+behavior, it encourages participants to resolve their own differences, as tends to
+
+happen outside of digital channels.  Although not ideal, this model can also
+
+provide a flexible mechanism for institutions to defray controversy over online
+
+content: the responsibility for settling disagreements is delegated.  
+
+<p>
+
+MOOs differ significantly from chat for several reasons.  For one thing,
+
+persistent characters and environments give continuity to repeated visits.
+
+Although anonymity is an option, the metaphorical space of a MOO becomes familiar,
+
+as do the various personalities.  Regular visitors can contribute many types of
+
+'objects' to the database--descriptive, programmatic, automatic, responsive. 
+
+Users confront one another at the boundary of natural language and programming,
+
+but both novices and 'wizards' can meet and converse in this border zone.  People
+
+with modest programming skills add features (scripting, "rooms") to the MOO for
+
+others to use.  Nor is it unusual for the underlying source code, which can be
+
+obtained freely, to undergo changes.  The resulting synergy, by which the space is
+
+gradually reinvented, opens onto unanticipated paths.  The term "malleable
+
+aesthetics" as I mean it refers to this ability to accumulate not only statements,
+
+or data, but also the structural changes wrought by users of the system.  
+
+<p>
+
+Hybrid interfaces have appeared that attempt to give a more
+
+visual form to MOO personas and places.  This has been tried in numerous ways
+
+without widespread success.  Although networked, user-directed constructions are
+
+possible with multimedia (witness the World Wide Web itself), creating graphical
+
+avatars and imagery for visual MOOs demands some uncommon skills  the public is
+
+generally unfamiliar with programming languages and authoring tools.  Networked
+
+action games like Quake, while in some respects graphically responsive, impose a
+
+stark thematization.  Whereas MOO thematics span from quest games to postmodern
+
+culture, the graphical hybrids remain mired in layers of procedural complexity and
+
+graphical preconception.
+
+<p>
+
+Even if, through simulation, one is able to traverse a game
+
+"world," this remains the preconceived, labyrinthine navigation of non-malleable
+
+hypermedia.  In the arena of the reality engine, extension of default boundaries
+
+founders at the counterintuitive, mouse-driven interfacing of level editing, image
+
+processing, solids modeling, and motion control.  As a result gimmicks that offer
+
+superficial choices abound.  But whatever virtual wallpaper one selects, a shoot
+
+'em up game is still a shoot 'em up game.  The challenge latent in all the
+
+hybridized multi-user systems is the retrieval of narrative and visual thematics
+
+from engineers, programmers, and the competing demands of commodification in the
+
+marketplace of software and services.          
+
+<p>
+
+Probably it will not be long before microphones and digital video cameras explode
+
+the dominance of the mouse as a device for contributing to spontaneous, networked
+
+audio-visual events. One can imagine low budget, "on the scene" reporting being
+
+produced by independent documentarists equipped with little more than a video
+
+camera, microphone, PC, and internet connection.  Some indication of this pattern
+
+is already evident in the global spread of talk radio and independent music
+
+through streaming digital audio.  Such technologies promise to bring an
+
+intuitiveness to the creative use of computers that will make the boundary between
+
+player/consumer and producer/artist more permeable.  
+
+<p>
+
+But at the corporate portal, and within the intranet, a concurrent involution
+
+threatens this promise with cookie-cutter software that reduces creativity to one
+
+of several options and equates expression with consumption.  Still, given the
+
+tools that are widely available, the boundary is not altogether firm.  While
+
+firewalls, filtration, transmission asymmetry, and security mechanisms encroach
+
+insidiously on the technical feasibility of new forms of reciprocal communication,
+
+nonetheless experimentation continues.  The Java language, originally conceived of
+
+as a control language for interactive television, has become a popular means to
+
+orchestrate so called "client server" communications.  Using it to implement a
+
+collaborative drawing system, I have found that in spite of the limitations of the
+
+mouse, the programming language, and the browser context, I've become involved in
+
+a relationship with a public imagination that interests me more than mine alone. 
+
+The things that have been made  things that have happened  in this unusual space
+
+keep me focused on overcoming the looming sense of inadequacy.  Many times I have
+
+corresponded with people in dream-like non-verbal dialogues.  While I'm away from
+
+the place, some of my collaborators leave their experimental animations, whereas
+
+others labor away on a single image.  Because the saved drawings can be "played
+
+back," in the same sequence of strokes and marks used by the artist, the products
+
+of this program resemble time-lapse studies.  Eventually I'd like to give people
+
+of an editorial disposition tools to script metanarratives using the material that
+
+has already been made.  
+
+<p>
+
+I wonder whether it would be good to let people erase things in the database. 
+
+This would subvert my desire to accumulate a seamless retrospective view.  Perhaps
+
+the solution is to proceed in both directions, though I can oversee only one. 
+
+This is called "forking" in the field of free software development.  Open source,
+
+GNU General Public Licensing allows anyone, if desired, to produce derivatives of
+
+my software.  Having put so much labor into the project, it is not easy to let it
+
+go like this, but that's the only alternative to a world in which the software
+
+wheel is reinvented again and again.  With software, derivation is more productive
+
+than invention.
+
+<p><center><a href=http://www.andyland.net/draw target=_blank><img src=draw.jpg></a></center><p>
+
+In building the program, I have been struck by the many ways that censorship intertwines itself with design.  Each configuration can discourage someone and
+
+attract another.  Interfaces interpellate subjects.  It is from this point of
+
+reference that the term "curatorial algorithm" comes to make sense to me.  The
+
+programming and design decisions I've made determine, broadly, 
+
+what people are likely, and able, to produce with the drawing software.  In
+
+practice, I rarely delete or censor what people have added to the database. 
+
+Certainly there are elements of graffiti, shout outs and attempts at self
+
+promotion.  But I'm not keen to tell people how to use the software or what to
+
+write.  In this respect, I avoid the conventional role of the curator.
+
+Nevertheless, it is clear that making the interface less (or more) simplistic,
+
+dissuades some people from drawing.  Design decisions, then, which may derive from
+
+programming logistics or various biases, can amount to a form of feedback
+
+selection.  The people who are put off by the design ultimately will not be
+
+represented in the collective art that is made.  
+
+<p>
+
+With this in mind, I have tried to make an interface that at first view seems
+
+simple, but which also retains a certain functional depth, a capacity for
+
+subtlety.  I conceive of this software as a sort of bridge between entertainment
+
+and a creative process.  It has been my experience that people learn by doing, a
+
+common observation that is expressed more eloquently by Andreas Huyssen in writing
+
+of the  Heiner Müller's "learning plays":
+
+<blockquote>
+
+Don't learn from them (object lesson, theater as finished product, uncritical
+
+acceptance of thesis), but, by actively reproducing them, learn through them
+
+(example lesson, re-production of a process, Bei-Spiel, critical trying out of
+
+behavior). (Huyssen, 1976) 
+
+</blockquote>
+
+Software has the potential to stage the contradictory processes of dramatic
+
+presentations, and to allow people to learn by the acting through of situations.
+
+But it also has the potential to forestall such imaginative investment, leading
+
+users through a procession of preselected hierarchical hoops.
+
+As individuals, small groups, or modestly funded museums, the pace of content
+
+production set by advertising sponsored, venture capital infused, web sites
+
+appears unattainable.  And probably pace is not a virtue anyway.  Instead of
+
+emulating it, systems can be implemented that encourage the creative participation
+
+of visitors.  Such sites may be popular and at the same time conducive to the
+
+"critical trying out of behavior."  In this sense, it is possible to compete with
+
+the emerging web entertainment industry; and, what is more, this competition need
+
+not follow in lock step with the genres and values of the Gee Whiz industry. 
+
+Rather, the opportunity exists to close the gap between passive pass-times and
+
+nuanced artistic and intellectual engagement.
+
+<p>
+
+<p>
+
+<p>
+
+<hr>
+
+
+
+<h3>Citations</h3>
+
+<ol>
+
+<li>Antin, David. (1992) Fine Furs. In Mitchell, W.J.T. (Ed.) Art and the Public Sphere. University of
+
+Chicago Press, 1992. pp. 249-262. 
+
+<li>Enzensberger, Hans M.  (197?) Constituents of a Theory of the Media. In Critical Essays. 
+
+Continuum, 1982.  pp. 46-76.
+
+<li>Huyssen, Andreas. (1976)  After the Great Divide. Indiana University Press, 1986. p. 83.
+
+</ol><br>
+
+<p>
+
+
+
+
+
+</td>
+
+</tr>
+
+</table>
+
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+</body>
+<!--/htdig_noindex-->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw99/papers/deck/deck.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:50:25 GMT -->
+</html>
+
+

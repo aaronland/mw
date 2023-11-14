@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw17.mwconf.org/paper/audio-that-moves-you-experiments-with-location-aware-storytelling-in-the-sfmoma-app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:54:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Audio that moves you: experiments with location-aware storytelling in the SFMOMA app &#8211; MW17: Museums and the Web 2017</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Audio that moves you: experiments with location-aware storytelling in the SFMOMA app Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw17.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login3822.css?ver=1604077128' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-twentysixteen/style3ce7.css?ver=20201208' media='all' />
+<style id='twentysixteen-style-inline-css'>
+
+		/* Custom Link Color */
+		.menu-toggle:hover,
+		.menu-toggle:focus,
+		a,
+		.main-navigation a:hover,
+		.main-navigation a:focus,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.social-navigation a:hover:before,
+		.social-navigation a:focus:before,
+		.post-navigation a:hover .post-title,
+		.post-navigation a:focus .post-title,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.site-branding .site-title a:hover,
+		.site-branding .site-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-footer a:hover,
+		.entry-footer a:focus,
+		.comment-metadata a:hover,
+		.comment-metadata a:focus,
+		.pingback .comment-edit-link:hover,
+		.pingback .comment-edit-link:focus,
+		.comment-reply-link,
+		.comment-reply-link:hover,
+		.comment-reply-link:focus,
+		.required,
+		.site-info a:hover,
+		.site-info a:focus {
+			color: #e55747;
+		}
+
+		mark,
+		ins,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.widget_calendar tbody a,
+		.page-links a:hover,
+		.page-links a:focus {
+			background-color: #e55747;
+		}
+
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
+		textarea:focus,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.menu-toggle:hover,
+		.menu-toggle:focus {
+			border-color: #e55747;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation li:hover > a,
+			.main-navigation li.focus > a {
+				color: #e55747;
+			}
+		}
+	
+</style>
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src='https://mw17.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index1303.html?p=1027' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embeddaaf.json?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Faudio-that-moves-you-experiments-with-location-aware-storytelling-in-the-sfmoma-app%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed4233?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Faudio-that-moves-you-experiments-with-location-aware-storytelling-in-the-sfmoma-app%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-twentysixteen/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-1027 wp-custom-logo wp-embed-responsive">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+					<div class="site-branding">
+						<a href="../../index.html" class="custom-logo-link" rel="home"><img width="240" height="240" src="../../wp-content/uploads/2017/02/cropped-mw-final.png" class="custom-logo" alt="MW17: Museums and the Web 2017" /></a>					</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p> MW17: Museums and the Web 2017 <span>Cleveland Ohio - April 19-22</span></p>
+								<form class="search-form" role="search" method="get" action="#">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-1-container"><ul id="menu-menu-1" class="primary-menu"><li id="menu-item-3074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3074"><a href="https://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-88"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580"><a href="../../local-information-and-accommodation/index.html">Local Information and Accommodation</a></li>
+	<li id="menu-item-1917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1917"><a href="../../faqs/index.html">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-172"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-475"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-108"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="../../call-for-proposals/index.html">Call for Proposals</a></li>
+	<li id="menu-item-494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-135"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-1689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1689"><a href="../../advertising/index.html">Advertising</a></li>
+</ul>
+</li>
+<li id="menu-item-573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-573"><a href="../../program/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-2972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2972"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-3023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3023"><a href="../../select-session-slides/index.html">Presentations</a></li>
+	<li id="menu-item-1760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1760"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2968"><a href="../../glami-winners/index.html">GLAMi Winners</a></li>
+		<li id="menu-item-2963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2963"><a href="../../glami-nominees/index.html">GLAMi Nominees</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2894"><a href="../../mwx/index.html">MWX 2017</a></li>
+	<li id="menu-item-1252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1252"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="../../committees/index.html">Committees</a></li>
+</ul>
+</li>
+<li>
+    <form role='search' method='get' class='search-form' action='http://mw17.mwconf.org/'>
+	<label>
+	<span class='screen-reader-text'>Search for:</span>
+	<input type='search' class='search-field' placeholder='Search &hellip;' value='' name='s' />
+	</label>
+	<button type='submit' class='search-submit'>
+	<span class='screen-reader-text'>Search</span></button>
+	</form>    
+	</li></ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+	
+<section id="page-hero">
+	<div class="background"> </div>
+</section>
+<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];
+    jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw17.mwconf.org/wp-content/themes/mw-twentysixteen/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-1027" class="post-1027 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">Audio that moves you: experiments with location-aware storytelling in the SFMOMA app</h1>
+
+<p><a target="_blank" href="http://www.museumsandtheweb.com/member/spau/">Stephanie Pau</a>, SFMOMA, USA</p>
+<h2>Abstract</h2>
+A pagan, a high-wire walker, and the stars of HBO’s "Silicon Valley" walk into a museum…Whaaaaat? The expanded SFMOMA features a transformed digital program with mobile technology at its forefront. Promoted as a not-to-miss part of the reopened museum, SFMOMA’s new mobile app is designed to be a head-up, phone-in-pocket experience that harnesses the power of location aware technology to deliver surprising, intimate, and human-centered art stories you can only experience in situ. Hear how SFMOMA partnered with a tech start-up, audio storytellers, and voices from beyond the museum world to upend tried-and-true conventions of museum audio. Radio and podcast talent, fiction writers, stand up comedians, sports figures, and magicians are among the creative collaborators tapped to develop surprising, just-in-time moments. The resulting experience combines the production values of Radiolab with the (seeming) awareness of "Her" to create a unique style of audio storytelling that moves you—through space, across time, and most importantly, on a human level.
+
+We’ll give a 360 degree view of the museum’s experimental approach to mobile storytelling—and how it’s landed (or not) with visitors. We’ll reveal the why and the how behind the app’s 20+ hours of new mobile content, and discuss ways in which the resulting stories present new (and hopefully more fun) possibilities for location-aware storytelling. We’ll also share findings from data collection and a recent mobile app evaluation. Along the way, we’ll address questions such as: How do you get institutional buy-in for decidedly unconventional ideas? What can museums learn from the radio and podcast renaissance? What do you gain—and what are the challenges of—creating linear, place-based audio journeys? Of the many content approaches experimented with in the app, which have resonated with visitors? And which have not?</p>
+<p><b>Keywords:</b> SFMOMA, mobile app, storytelling, audio, sound, mobile, location-aware, evaluation</p>
+<h2><b>Introduction</b></h2>
+<p><span style="font-weight: 400">The setting is the San Francisco Museum of Modern Art, circa 2016. A mother and her son stroll quietly through a white-walled gallery space, pausing occasionally to view an artwork, read a label, or take a snapshot with their phones. Now and then they chat quietly amongst themselves. Suddenly they come to a halt. At the center of the room is a porcelain urinal, of the type one might find at a plumbing supply store. The urinal lays on its side, atop a pedestal, and its rim bears the signature “R. Mutt.” The pair’s bemused expressions reflect back at them in the object’s pristine white surface—and here, our scene takes a twist. Mother and son each take out a phone, tap the screen, and put their phones back into their pockets. Earbuds in place, they pause to listen to a audio track triggered by their arrival. A few moments later, mom looks at son, son looks at mom, and they burst out laughing in unison at the synced audio playing in their earbuds. Soon, they are examining the object from all sides, like archaeologists seeing an artifact anew. An impenetrable curiosity has been decoded and transformed into an iconic (and much more approachable) work of art: Marcel Duchamp’s <em>Fountain </em>(1917/1964).</span></p>
+<p><span style="font-weight: 400">The scene above is based on a genuine visitor observation—one of dozens recorded as part of a multi-pronged evaluation of the <a href="https://itunes.apple.com/us/app/sfmoma/id1109182982?mt=8" target="_blank">SFMOMA app</a>, an audio-first, location-aware mobile storytelling platform that was launched at the reopening of a dramatically transformed SFMOMA. The findings of this evaluation, particularly as they relate to the museum’s new storytelling approach, will be explored throughout this paper.</span></p>
+<figure id="attachment_1003" aria-describedby="caption-attachment-1003" style="width: 800px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1003" src="../../wp-content/uploads/2017/01/Pau.Fig1_.jpg.jpg" width="800" height="600" /><figcaption id="caption-attachment-1003" class="wp-caption-text">Figure 1: an SFMOMA app user begins the &#8220;I Don’t Get It Immersive Walk&#8221; in front of Marcel Duchamp’s <em>Fountain </em>(1917/1964). Photograph: Frankly, Green + Webb.</figcaption></figure>
+<h3><b>The Backdrop</b></h3>
+<p><span style="font-weight: 400">On May 14, 2016, SFMOMA re-opened following a three-year closure and the completion of a 235,000-square foot addition designed by the architecture firm Snøhetta. The museum faced both opportunities and challenges in its new, scaled-up reality. To secure the long-term financial health of the expanded SFMOMA, the museum sought to increase its annual audience attendance goals by almost twofold in its re-opening year, and 30% in subsequent steady state years. How would the organization and its offerings meet the promise of a facility that now had more than twice the amount of gallery space and three times the public space of Mario Botta’s 1995 original? How could we introduce audiences to over a thousand new works from the Doris and Donald Fisher collection, while finding fresh ways to interpret works from the core collection? </span></p>
+<p><span style="font-weight: 400">With the support of a generous grant from Bloomberg Philanthropies, SFMOMA’s Content Strategy and Digital Experience (CSDE) division embarked on an equally transformative relaunch of its digital program. Visitors to the expanded SFMOMA can experience a suite of new on-site engagements that are designed to make them feel listened to and welcomed, that give them the tools to draw connections between art and their own lives, and “to break down the boundaries between art, entertaining and learning” (SFMOMA, 2010). The digital program includes a more accessible, visitor-friendly website and three gallery-adjacent interpretive spaces, which provide learning opportunities where and when they are most relevant and needed. Yet no tool is more equipped to support a model of “just-in-time” learning than mobile technology. Thus the pursuit of a new type of mobile experience—and a unique storytelling approach therein—became a keystone of the digital strategy. </span></p>
+<p><span style="font-weight: 400">It should be said that the decision to create a new mobile platform was never a foregone conclusion—it came only after we determined that the experience goals compelled it. After all, we had been down this road before. In 2010 the museum’s Interactive Educational Technologies team (now known as Interpretive Media) took on the in-house production of the museum’s first native mobile app, which supplanted a keypad-based audio tour with a touch-screen multimedia guide (Samis &amp; Pau, 2009). It was the team’s most ambitious undertaking to date, involving four full-time staff to design and manage a new authoring environment, maintain a brand new fleet of museum-owned iPod touch devices and hardware, manage device check-out procedures, and create or creatively enhance hours of new and existing content—which was also being developed in-house (Samis and Pau, 2009; Gangsei &amp; Svenonius, 2011). In short, we understood the significant expenditure of staff time, resources, and budget involved in the creation of a new museum-wide mobile experience. With a serviceable app already available, we were not interested in recapitulating a familiar experience model within shinier wrappings. We would only pursue a new SFMOMA app if we could offer something new. </span></p>
+<p><span style="font-weight: 400">The Stedelijk Museum is credited with inventing the first audio guide in 1952 (Tallon, 2009). The audio was delivered to visitors ears’ using radio technology—a single, looping broadcast heard over a wireless handheld receiver. In the ensuing six decades, the museum audio tour has become a ubiquitous, even expected element of the museum visit, and much energy has been put toward the continual improvement of its form factors. That early chrome receiver gave way to a Linnaean-like tree of evolving devices, each offering greater mobility and control over the delivery of audio (and eventually) multimedia messages. Keypads and wands allowed visitors to access standalone “stops” at random, thus freeing them from the constraints of a time-based linear tour. As cell phones became more ubiquitous, museums began to publish audio content through dial-in services. MP3 players offered even further convenience, and with higher fidelity sound, and today’s smartphones offer built in location-awareness, native accessibility options, and sumptuous touchscreen interfaces. </span></p>
+<p><span style="font-weight: 400">Despite these innovations in mobile delivery, far less attention has been paid to the messages themselves. Of course, it would be unfair to say that all audio tours live up to their reputations as boring, dry, and academic. Exceptional audio tours are certainly to be found at museums and cultural sites around the world. One stand out is Antenna Theater’s “Alcatraz Cell House Tour,” which was produced over two decades ago for the National Park Service and continues to serve roughly 3,500 guests daily. Narration by ex-cons, prison guards, as well as chilling sound effects—some recorded on-site—bring the history of the infamous, now-decommissioned prison to life (Antenna International, n.d.). Likewise, a rich tapestry of sound serves as the essential connective tissue for the Victoria and Albert Museum’s popular exhibition </span><i><span style="font-weight: 400">David Bowie Is… </span></i><span style="font-weight: 400">B</span><span style="font-weight: 400">roadcast to visitors through a network of regional transmitters, museum-provided wireless receivers, and over-ear headphones (Sennheiser, 2013), the audio featured a collage of interviews, multiple points of view, and music by the late rock idol. As with the Alcatraz tour, the </span><i><span style="font-weight: 400">David Bowie Is… </span></i><span style="font-weight: 400">audio experience is positioned as an essential element of one&#8217;s visit—enhancing interactions with both the environment and the objects on display. </span></p>
+<p><span style="font-weight: 400">Yet as a whole, in-gallery audio tours (in particular those produced by and for art museums) fail to push beyond the usual stories told about art, instead resorting to fact-based narratives that could just as easily be told through the “neutral” voice of a one-hundred-fifty-word text panel. In their emphasis on getting the facts right, many audio tours do not take full advantage of the medium’s greatest strengths. Sound designers may be given little latitude to explore new recording methods, editing styles, or even with integrating the basic building blocks of sound effects, music, and ambience. Historically, SFMOMA audio tours also tended towards conservative interpretations. This began to change in 2005, with the launching of the magazine-style podcast series </span><i><span style="font-weight: 400">SFMOMA Artcasts</span></i><span style="font-weight: 400"> (Samis &amp; Pau, 2006). In 2009, we turned our attention to in-gallery audio (Samis &amp; Pau, 2009). In an effort to foster a more authentic and informal tone, we created nearly 100 new audio stops based around artist actualities and tape from a series of unscripted conversations between curators and educators. But experts and insiders remained the dominant voices, and those voices rarely expressed strong opinions, emotions, or personality. In regards to sound design, we continued to make sparing use of sound effects, music, and ambient sound, and only then in support of what was being expressed verbally.</span></p>
+<p><span style="font-weight: 400">As we embarked on the creation of the new SFMOMA app, we knew that in order to meet our lofty experience goals, we could not focus entirely on the platform and technology. It was imperative that we place as much energy towards telling great stories. To that end, we adopted a set of maxims that would guide our storytelling across platforms:</span></p>
+<blockquote><p><span style="font-weight: 400">1. Share your passion with me generously, and with genuine excitement.</span><br />
+<span style="font-weight: 400">2. Offer me a voice of experience that I can only get here.</span><br />
+<span style="font-weight: 400">3. Give me something I can relate to from my lived experience.</span><br />
+<span style="font-weight: 400">4. Introduce me to artists as the complex, fascinating humans they are.</span><br />
+<span style="font-weight: 400">5. Surprise and delight me with unexpected perspectives and experiences. (Coerver, 2016)</span></p></blockquote>
+<h2><b>The audience</b></h2>
+<p><span style="font-weight: 400">Implicit in any storytelling approach is another time-tested mantra: know your audience. In 2013, in the lead up to SFMOMA’s expansion project, the museum </span><span style="font-weight: 400">and brand strategy firm Wolff Olins conducted a comprehensive market study to define key psychographic segments of Bay Area art-interested audiences that are most likely to engage with the museum. Understanding the motivations of the local community was strategic: </span><span style="font-weight: 400">San Francisco Bay Area residents were most likely to become members and repeat visitors, bringing friends and family along with them. </span></p>
+<p><span style="font-weight: 400">The study identified perceptual barriers visitors have in connecting with the art on view and suggested ways in which the museum could respond to these challenges and encourage repeat visitation. The study, which engaged 615 Bay Area residents, revealed that arts-interested individuals represent 60% of the population in the local region, but only 5% of them feel very knowledgeable about the arts and culture, and 28% do not feel knowledgeable at all. However, the overwhelming majority of all arts-interested people—upwards of 90%—report that they are eager to learn more (Wolff Ollins, 2013).</span></p>
+<p><span style="font-weight: 400">Importantly, respondents expressed that they desired not only information, but fresh and novel ways to engage with art. Several studies conducted at SFMOMA, including a recent focus group, have shown that artists’ working methods, motivations, and personal interests are the pieces of information that viewers desire most while standing in front of an artwork (Samis &amp; Funk, 2014). Such findings are confirmed by studies of visitor needs and interests at other museums including The Museum of Modern Art (The Museum of Modern Art, 2012) and The Minneapolis Institute of the Art (The Minneapolis Institute of Arts, 1993). </span></p>
+<p><span style="font-weight: 400">But SFMOMA’s 2013 market study reveals another invaluable insight. While familiarity with modern and contemporary art is a key indicator of inclination to visit, even more important is the presence of two sentiments: that SFMOMA is “in line with my interests” and “a place for people like me.” Moreover, potential visitors indicated that the key attributes for a successful museum experience are “fun,” “warm,” and “inviting” (Wolff Ollins, 2013). This has been a challenge for all art museums, but particularly for those showing more challenging contemporary art.</span></p>
+<p><span style="font-weight: 400">Such findings suggested that SFMOMA needed to be more proactive in identifying new and more personally resonant ways for visitors to experience the art, and that it must find cultural ambassadors—both digital and in-person—to which visitors could relate and trust. Recognizing that potential visitors are interested in creative expressions across a variety of modes, SFMOMA sought to grow its audience by providing more points of access to modern and contemporary art beyond the discourse of academic art history. Back to the local angle, the museum also sought to place its art in a more deeply engaged dialogue with the rich tapestry of creative pursuits present in the San Francisco Bay Area. </span></p>
+<h2><b>No more Swiss Army Knives</b></h2>
+<p><span style="font-weight: 400">The Wolf Ollins audience research in hand, w</span><span style="font-weight: 400">e began the work of defining: (a) which of the audience segments we had the most potential to reach through the app, and (b) what set of features could best serve them.</span> <span style="font-weight: 400">In February 2015, the app’s core project team—made up of staff from interpretive media, Web and digital platforms, graphic design, and information technology—enlisted Frankly, Green + Webb to facilitate a two-day user journey mapping workshop that would be key to defining our experience goals, target audience, and core feature set (Frankly, Green + Webb, 2015). </span></p>
+<p><span style="font-weight: 400">Participants included members of the app project governance committee—a mix of emerging and senior level staff from across the organization (exhibitions, curatorial, visitor experience, education and public practice, marketing and communications) whose expertise would prove crucial to designing a mobile service to support the successful deployment, messaging, and maintenance of the new app infrastructure and content. Governance committee members held the app team accountable for providing quarterly progress updates; they, in turn, committed to report back to their respective departments, to participate in the visioning process, and to assist in rapid prototyping and user testing. </span></p>
+<p><span style="font-weight: 400">Importantly, the core app team’s urge to try something new came with the invaluable backing of some members from the museum’s board. At SFMOMA, all public-facing digital projects are overseen by the Digital Experience Committee, an advisory committee of board members and experts from the tech industry. As leaders in tech, they argued strongly for pursuing a riskier approach than most museums would take, in the pursuit of something new. </span></p>
+<p><span style="font-weight: 400">The core app team, governance, and advisory committees all agreed on what we</span><i><span style="font-weight: 400"> didn’t</span></i><span style="font-weight: 400"> want to create: an app that tried to do everything for everyone, and none of it particularly well. This “Swiss Army Knife” approach, as we called it, became shorthand for the team’s “anti experience goal”—the litmus test against which all app-related proposals would be measured in the months ahead. Mapping the theoretical journeys, frictions, and needs of several persona, we determined that our target audience—those who represented the most “natural” audience for a content-based app and would gain the most from its use—were first-time visitors ages 13-45, with a focus on &#8220;Fact Finders&#8221; and &#8220;Self Improvers.&#8221; These audience segments were strongly motivated by the desire to learn, and from that learning derived more meaningful and personal connections with the art (Wolf Ollins, 2013; Frankly, Green + Webb, 2015).</span></p>
+<figure id="attachment_1004" aria-describedby="caption-attachment-1004" style="width: 800px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1004" src="../../wp-content/uploads/2017/01/Pau.Fig2_.jpg.jpg" width="800" height="339" /><figcaption id="caption-attachment-1004" class="wp-caption-text">Figure 2: characteristics of the Fact Finder and Self-Improver personas, target audiences of the SFMOMA app (Wolff Ollins, 2013)</figcaption></figure>
+<p><span style="font-weight: 400">Finally, we came upon a decision that would shape the entire app experience, from content to platform to infrastructure. Unlike other museum apps, which could be used off-site as well as on, the SFMOMA app would be a destination program, an integral component of any visit; and, like the museum’s exhibitions and live programming, it could only be fully experienced on site. Content would be geofenced and available exclusively at the museum. To support the vision of a location-aware, story-first experience, the museum invested in comprehensive, free public WiFi, indoor surveys of all publicly accessible interior spaces, and a supporting suite of in-gallery signage. </span></p>
+<p><span style="font-weight: 400">Concierge services would be integrated into the app strategically, and only if they could facilitate a smooth transition from the outside-in. In-app ticketing moved users through the ticket scan lines more quickly; the digital membership card helped members do the same; current exhibition listings offered a way to prioritize one’s visit; and an auto-generated activity timeline would act as a post-visit souvenir of one’s visit. For everything else, including pre-visit planning and research, visitors could access the mobile-optimized SFMOMA.org. Additionally, dozens of new Visitor Experience staff were hired in the run-up to opening, and would be posted throughout the galleries to direct, orient, and answer questions from visitors in need.   </span></p>
+<h2><b>Experiments in place-based storytelling at SFMOMA</b></h2>
+<p><span style="font-weight: 400">We began the search for partners to help realize our vision. After considering RFP submissions from over a dozen producers and firms, SFMOMA hired Antenna International to be its primary audio production partner. Known today as one of the largest and most established producers of museum audio, it may be surprising to know that Antenna began as an experimental live performance group specializing in participatory theater augmented by sound. The aforementioned </span><i><span style="font-weight: 400">Alcatraz Cell House Tour</span></i><span style="font-weight: 400"> was their first audio tour produced for a cultural site. We were eager to tap into the company’s experimental roots, as was Christine Murray, our primary producer at Antenna. </span></p>
+<p><span style="font-weight: 400">We partnered with a local start-up named Detour to develop the SFMOMA app technology, platform, and several long-form audio walks. Some members of the SFMOMA app team, myself included, had served as early beta testers for the new venture, and were floored by Detour’s combination of gorgeously-produced audio with accurate outdoor location-awareness. Rather than building the SFMOMA app from the ground up—an endeavor that was beyond the scope of our budget and in-house expertise—we realized that we had an opportunity to form a mutually beneficial partnership. The SFMOMA app would integrate key features of Detour’s backend, while Detour would gain a museum partner willing to manage the risks involved with developing what had until that point been elusive: a story-first, indoor, location-aware app experience. To ensure that the content received as much attention as the technology, Detour CEO Andrew Mason enlisted veteran radio journalist Marianne McCune as SFMOMA’s primary producer on a series of 15 to 45 minute Immersive Walk journeys.</span></p>
+<p><span style="font-weight: 400">Enlisting internal stakeholders was also key in developing a more welcoming, accessible, and experimental storytelling style. Over its two decade long history, SFMOMA’s Interpretive Media team had worked closely with its curatorial counterparts to plan exhibitions, interview dozens of artists, and to develop leading-edge educational media, digital tools, and physical learning spaces, each progressively more experimental. Over time, the museum’s leadership and curatorial staff had become habituated to the team’s ethos of risk-taking, as long as the results were supported by the visual evidence and current scholarship, and did not negatively impact the museum’s relationship to its artists.</span></p>
+<p><span style="font-weight: 400">Working simultaneously with Antenna, Detour, and a network of independent talent, the app content team created over twenty hours of new audio content by re-opening, with more added since that time. Listeners can choose from:</span></p>
+<ul>
+<li><b>Immersive Walks</b><span style="font-weight: 400">: 15 to 45 minute guided audio journeys on topics such as post-war German identity, the role of art in imagining the future, and why abstract art helps us to see the world differently. Though most walks take place inside of the museum, one goes outside to explore the history and architecture of SFMOMA’s surrounding neighborhood.</span></li>
+<li><b>Nearby Audio: </b><span style="font-weight: 400">Self-directed visitors can choose from hundreds of snack-sized 1 to 2 minute long audio responses to individual artworks. The voices of musical composers, comedians, artists, playwrights, aerial dancers, pagan ministers and many more are represented.</span></li>
+<li><b>Highlights: </b><span style="font-weight: 400">Staff-curated lists of Nearby Audio stories for must-see, on view artworks.</span></li>
+</ul>
+<p><span style="font-weight: 400">From a storytelling perspective, we had few museum-based models to work from. Our main sources of inspiration were </span><i><span style="font-weight: 400">Radiolab</span></i><span style="font-weight: 400">, </span><i><span style="font-weight: 400">This American Life, </span></i><span style="font-weight: 400">and other series produced by master storytellers in podcasting and radio. By listening, experimenting, and learning through trial-and-error, we can articulate the following set of internal guidelines for creating magical, immersive, and engaging location-based audio experiences.   </span></p>
+<h2><b>Tell </b><b><i>a</i></b><b> story, not </b><b><i>the</i></b><b> story</b></h2>
+<p><span style="font-weight: 400">Whether in long or short-form audio, we aim to keep audio stories brief and to the point. Nearby Audios are typically two minutes in length, preferably shorter. Within Immersive Walks, which offer the “carrot” of a continuous narrative or guiding personality, we may spend three to four minutes at most in front of a single artwork. There are multiple reasons for this brevity: visitors’ attention spans are short, the potential for “museum fatigue” is high, and an overabundance of information could foster a feeling of fragmentation and loss of interest. </span></p>
+<p><span style="font-weight: 400">Each app content production cycle began with a creative kick-off, which we dubbed “hooks” meetings because of their focus on isolating the one or two big ideas that might feel most relevant to a broad audience. The objective of these inquiry-based discussions was to channel visitors’ most pressing questions, to gather scholarly insights from the curators, and to collectively think of voices (preferably from beyond the museum) that might lend compelling, authentic, and relatable perspectives. The app team was then free to proceed with scripting and production in earnest, free from the permission-based culture that dictates any single, correct way to approach a work. As Gary Garrels, Senior Curator of Painting and Sculpture put it: </span></p>
+<blockquote><p><span style="font-weight: 400">I am not a purist….I don’t think there is any one right interpretation about a work of art. So I gave my colleagues in &#8220;content&#8221; a lot of leeway….I have to say, they didn’t expect and didn’t ask to get involved in the curatorial decisions about what was in the gallery or how galleries were laid out. So I think there is a mutual respect of each others’ areas of expertise. </span><span style="font-weight: 400">(Rosenbaum, 2016)</span></p></blockquote>
+<h2><b>Show some personality</b></h2>
+<p><span style="font-weight: 400">The app offered us a platform for indulging our culturally omnivorous fantasies. We messaged high-wire walker Philippe Petit on Facebook to ask him to narrate an audio walk and amazingly, he said yes. We joined a Wiccan messaging board to scout for a pagan priestess with a keen eye for postwar American sculpture. We convinced Giants pitching coach Dave “Rags” Righetti to talk Dan Flavin with us. And we debated about Marcel Duchamp’s </span><i><span style="font-weight: 400">Fountain</span></i><span style="font-weight: 400"> with comedians Martin Starr and Kumail Nanjiani of HBO’s </span><i><span style="font-weight: 400">Silicon Valley</span></i><span style="font-weight: 400">.</span></p>
+<figure id="attachment_1005" aria-describedby="caption-attachment-1005" style="width: 800px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1005" src="../../wp-content/uploads/2017/01/Pau.Fig3_.jpg.jpg" width="800" height="533" /><figcaption id="caption-attachment-1005" class="wp-caption-text">Figure 3: Martin Starr and Kumail Nanjiani, co-stars on HBO’s Silicon Valley, are interviewed along with SFMOMA curator Caitlin Haskell (not shown) for the app’s I Don&#8217;t Get It immersive walk, 2016. Photograph: Geoff Captain.</figcaption></figure>
+<p><span style="font-weight: 400">We also reached out to creatives whom we had long admired, including former </span><i><span style="font-weight: 400">McSweeney’s</span></i><span style="font-weight: 400"> editor and fiction writer Eli Horowitz, with whom we developed our first fictional audio walk; documentary filmmaker Errol Morris; Avery Trufelman of the extraordinary design podcast </span><i><span style="font-weight: 400">99% Invisible</span></i><span style="font-weight: 400">; and Third Coast International Audio Festival, with whom we co-commissioned a series of soundscapes that can only be heard in SFMOMA’s new public elevators.</span></p>
+<p><span style="font-weight: 400">Aside from making our own jobs more interesting, why go to the trouble? Audience research shows that many potential visitors were also likely to be culturally omnivorous—enjoying not only the visual arts but also film, music, performance, books and other forms of culture (Wolff Ollins, 2013). By extending our reach beyond the art world’s innermost circles, we could appeal to the visitor’s broader sets of interests and create a more relatable, accessible, and personally resonant museum experience.</span></p>
+<figure id="attachment_1006" aria-describedby="caption-attachment-1006" style="width: 800px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1006" src="../../wp-content/uploads/2017/01/Pau.Fig4_.jpg.jpg" width="800" height="533" /><figcaption id="caption-attachment-1006" class="wp-caption-text">Figure 4: The author, producer Christine Murray, and sound engineer Ashleyanne Krigbaum visited the San Francisco Recology Center to interview artist-in-residence Jenny O’Dell about the work of John Chamberlain. Photograph: Stephanie Pau.</figcaption></figure>
+<h2><b>Create magical intersections with physical reality</b></h2>
+<p><span style="font-weight: 400">The audio tour genre has proliferated in part because it is understood as a visually non-invasive form of interpretation. With the ears as the conduit of information, the eyes are thus free to engage entirely with the art. Yet this simplistic view of audio denies the medium its full impact. Sound has the ability to transport the mind intellectually, spatially, temporally, and emotionally—all at once. As </span><i><span style="font-weight: 400">This American Life </span></i><span style="font-weight: 400">creator Ira Glass has said, “Radio is a very visual medium” </span><span style="font-weight: 400">(Abel, 2015). Location-aware technology introduces a set of new possibilities. In the SFMOMA app, we can use either radial or manually-drawn polygonal triggers to auto-start an audio piece as soon as the user steps into the pre-defined location. As a listener, this creates an uncanny sense that the narrator is “aware” and responsive to your presence. </span></p>
+<p><span style="font-weight: 400">To facilitate that fully immersive, near cinematic experience, our audio continually references surrounding physical environment. Rather than telling a visitor to simply “turn right,” consider a more site-aware description, such as “turn into the gallery just beyond that yellow wall on your right.” The effect of hearing accurate wayfinding descriptions can be both magical and reassuring to the listener. Be aware of the availability of nearby seating, and encourage visitors to take moments of rest. There is no way around it—in order to create a successful location-based audio walk, its creators must walk its path dozens of times to fully inhabit all of its features, and to get the timing just right. Find collaborators who are local to the site, or you risk creating a subpar experience.</span></p>
+<figure id="attachment_1025" aria-describedby="caption-attachment-1025" style="width: 600px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1025 size-full" src="../../wp-content/uploads/2017/01/Pau.Fig5_.png.png" width="600" height="800" /><figcaption id="caption-attachment-1025" class="wp-caption-text">Figure 5: an app user peers inside of the fourth floor seismic gap window, which was specially installed to support the Building for Art Immersive Walk experience. Photograph: Frankly, Green + Webb</figcaption></figure>
+<p><span style="font-weight: 400">At SFMOMA, we went as far as to purposefully install physical infrastructure that would support in-app stories. For example, in “Building for Art”—an Immersive Walk of nearly all seven floors of the expanded museum—we installed windows that allowed visitors to peer into a “seismic gap” that joins the 1995 and 2016 buildings, and ran an electric bulb to light its otherwise pitch-black interior. To create magical moments in “Neighborhood for Art”—an Immersive Walk about SFMOMA’s place in the South of Market neighborhood—we partnered with the California Historical Society to mount a physical exhibition of photographs by two artists featured in the tour. Moments after photographers Janet Delaney and Ira Nowinski are introduced, the app user approaches the entrance to the California Historical Society and are encouraged to go in. By flashing the SFMOMA app, visitors are given free entrance to view the exhibition as they complete that segment of the tour.</span></p>
+<h2><b>Make it fun, make it social</b></h2>
+<p><span style="font-weight: 400">30% of SFMOMA visitors using the app have a strong learning motivation, but the desire to learn and make meaningful connections with the art takes place within the context of a leisure experience. When asked to state their motivations for using the app, 18% reported the desire to be entertained and have fun. Throughout the tours, we injected moments of irreverence, laughter, and delight. We tried not to take ourselves too seriously, and to reveal both the narrators and the artists as the complex and fascinating human beings that they are. </span></p>
+<p><span style="font-weight: 400">Finally, Just as with watching a movie, listening can be a social experience. SFMOMA app users </span><span style="font-weight: 400">may listen to the stories together through the app’s new syncing function—an antidote to the isolation of traditional museum audio guides.</span></p>
+<figure id="attachment_1007" aria-describedby="caption-attachment-1007" style="width: 800px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1007" src="../../wp-content/uploads/2017/01/Pau.Fig6_.jpg.jpg" width="800" height="600" /><figcaption id="caption-attachment-1007" class="wp-caption-text">Figure 6: app users initiate the SFMOMA app’s “Sync” feature to listen to the Building for Art Immersive Walk in tandem. Photograph: Frankly, Green + Webb.</figcaption></figure>
+<h2><b>What we’ve learned: insights from the mobile app evaluation</b></h2>
+<p><span style="font-weight: 400">In fall of 2016, SFMOMA engaged Frankly, Green + Webb to conduct a study of the SFMOMA app experience. During the months of November and December 2016, field workers surveyed 488 visitors (270 users on both personal and museum-provided devices; 218 non-users who were both aware and unaware of the app) They conducted fifteen in-depth app user interviews, and recorded eight think-aloud usability sessions that were documented with Lookback software. Cross-tabulated against SFMOMA app analytics and the results of monthly visitor surveys, the study revealed key insights on these primary research questions:</span></p>
+<blockquote><p><span style="font-weight: 400">1. In what ways is the SFMOMA app meeting its objectives?</span><br />
+2. Who is the audience for the app? What are the opportunities and barriers for increasing the reach of the app?<br />
+<span style="font-weight: 400">3. What is the impact of the app on the visitor experience? Does the app help visitors engage with the museum in meaningful ways?” (Frankly, Green + Webb, 2017)</span></p></blockquote>
+<h3><b>Audience Reach </b></h3>
+<p><span style="font-weight: 400">Historically, the primary audience for museum mobile guides have been tourists—both domestic and international—and skew toward a more mature demographic. We had no illusions that our target audience—first-time visitors aged 13 to 45, as many local residents as tourists—were highly aspirational. We were therefore delighted to discover that nearly half (47%) of SFMOMA app users are under the age of 35, and are actually</span><i><span style="font-weight: 400"> more </span></i><span style="font-weight: 400">likely to be Bay Area locals (57%) than tourists (43%), especially international tourists (12%). Additionally, app users include not only first time (49%) but repeat visitors. Eleven percent of app users are “super” visitors who have been to the museum three or more times since it reopened. These numbers support the museum’s strategic objective of growing local audiences, and issues the museum a challenge: to continually refresh our content offerings in order to keep the app from feeling stale.</span></p>
+<p><span style="font-weight: 400">Though SFMOMA offers the same content through paid rental devices, visitors are encouraged to use the app on their personal devices. Signage installed throughout the museum and in the elevators promote the availability of the free downloadable app comprehensive free public WiFi. We offer free SFMOMA-branded earbuds at device checkout desks, and security officers and Visitor Experience staff have begun distributing them from their pockets. Finally, we offer charging stations (though admittedly not enough) in key rest points around the museum. The evaluation findings show that our efforts are making an impact. The majority of users (53%) have chosen to use the app on a personal device. “Shifting visitors away from museum-provided hardware to their own personal devices for mobile interpretation has been a goal of museums for the past decade….In this regard, SFMOMA’s app sets a new standard for a mobile museum service.” (Frankly, Green + Webb, 2017).</span></p>
+<figure id="attachment_1026" aria-describedby="caption-attachment-1026" style="width: 800px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1026 size-full" src="../../wp-content/uploads/2017/01/Pau.Fig7_.png.png" width="800" height="600" /><figcaption id="caption-attachment-1026" class="wp-caption-text">Figure 7: large digital screen arrays mounted above both the membership and and ticketing desks announce the availability of free WiFi and announce the SFMOMA app as an integral part of the visit. Photograph: Frankly, Green + Webb.</figcaption></figure>
+<figure id="attachment_1008" aria-describedby="caption-attachment-1008" style="width: 800px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1008" src="../../wp-content/uploads/2017/01/Pau.Fig8_.jpg.jpg" width="800" height="531" /><figcaption id="caption-attachment-1008" class="wp-caption-text">Figure 8: call-outs installed beside exhibition introductory texts (left) clue visitors into the existence of the SFMOMA app, comprehensive free WiFi, and act as a key to in-gallery icons. Inside of the galleries, mobile app “blurbs” (right) visually announce which artworks have Nearby Audio, and give pithy descriptions of the content. Photographs: Stephanie Pau.</figcaption></figure>
+<figure id="attachment_1013" aria-describedby="caption-attachment-1013" style="width: 600px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1013" src="../../wp-content/uploads/2017/01/Pau.Fig9_.jpg.jpg" width="600" height="800" /><figcaption id="caption-attachment-1013" class="wp-caption-text">Figure 9: free SFMOMA-branded earbuds are available at the device rental desk. Photograph: Stephanie Pau.</figcaption></figure>
+<p><span style="font-weight: 400">Yet we find that we could be doing more. Battery drains quickly on museum-provided devices, since units can’t go into power saving mode due to the protective casing. Pockets of weak WiFi are affecting the accuracy of location services in certain parts of the museum, and contribute to slow download times for visitors who are streaming content on personal devices. The unreliability of location accuracy in these zones can be particularly frustrating for Nearby Audio users. Having eliminated the punch-key number pad, these users lack a failsafe for calling up artwork if it doesn’t appear on-screen. These technical problems have clear impacts on user experience. 94% of users who didn’t experience any problems said that they were likely to recommend the app, compared to 81% of all users. Given that word of mouth is, quite remarkably, a key source of pre-visit awareness of the app (25%), addressing these technical bugs will be paramount in improving the reach and visitor satisfaction levels. </span></p>
+<h2><b>Duration</b></h2>
+<h4><span style="font-weight: 400">“It’s kept us in the museum longer. That’s for sure.” -Annie, survey taker</span></h4>
+<p><span style="font-weight: 400">The duration of content ranges widely—from one-minute Nearby Audios to forty-five minute Immersive Walks that traverse multiple floors. In offering a range of options, we were taking a chance that, given a compelling story, app users would be willing to commit to lengthier, multi-floor experiences. </span><span style="font-weight: 400">App analytics demonstrate that on the whole, the completion rate of a scene (be it a Nearby Audio or an Immersive Walk)—has little to do with duration. In fact, the completion rate of a forty-five minute tour is on par with that of a one-minute Nearby Audio (SFMOMA, 2017). This is corroborated by user surveys, in which </span><span style="font-weight: 400">75% of app users reported that the length of audio messages in the app was “just right” (Frankly, Green + Webb, 2017). </span><span style="font-weight: 400">On average, users are spending 116 minutes on the mobile app during their visit to SFMOMA. </span></p>
+<h2><b>Visitor responses to app stories</b></h2>
+<p style="text-align: left"><span style="font-weight: 400">Visitors are noticing the difference in style and tone, and appear to appreciate the diversity of voices presented in the app:</span></p>
+<blockquote><p><span style="font-weight: 400">“I like how we’re given not just curators or the artists talking about the art. There are other people&#8230;” -Chelsea</span></p>
+<p><span style="font-weight: 400">“I just had my first audio experience. Just amazing. I didn’t realize there was going to be stories, and music, and background&#8230;[I’m] delightfully surprised….they do it in a more storytelling way.” -Tammy</span></p>
+<p><span style="font-weight: 400">“The different voices. Different perspectives, and a good combination of entertaining yet factual.” -Eduardo</span></p></blockquote>
+<figure id="attachment_1010" aria-describedby="caption-attachment-1010" style="width: 800px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1010" src="../../wp-content/uploads/2017/01/Pau.Fig10.jpg.jpg" width="800" height="600" /><figcaption id="caption-attachment-1010" class="wp-caption-text">Figure 10: aerial dancer Courtney Moreno is interviewed for a Nearby Audio story on Kiki Smith’s <em>Lilith (</em>1994), while crouched in a pose similar to that of the figure in the sculpture. Photograph: Christine Murray.</figcaption></figure>
+<p><span style="font-weight: 400">The app stories very purposefully reflect a wide range of not only voices, but a spectrum of approaches to scripting and sound design</span><span style="font-weight: 400"> in both Nearby Audio and Immersive Walks. From story to story the intended effects are </span><span style="font-weight: 400">alternately earnest, emotional, circumspect, comedic, and at the far end of the limb, completely “out there.” Having no obvious models in the museum realm, we wanted to see what visitors’ appetites might be for the more experimental options. In-depth interviews with users revealed that for the most part, visitors are willing to play along. But the same piece of contact can land very differently with different visitors. And ultimately, the upper threshold for experimentation is determined by its relevance to the art. </span></p>
+<p><span style="font-weight: 400">Visitors responded positively to the comedy in “I Don’t Get It” because the jokes pertained directly to issues inherent in the artwork, or helped to resolve questions about the artist’s process or intent. By contrast, some listeners of the “Play by Play” Immersive Walk felt that the sports metaphors imposed themes back onto the artwork that weren’t necessarily native to the work itself. Compounding that was a multi-layered ESPN-inspired sound treatment, which some found cacophonous or grating. </span></p>
+<blockquote><p><span style="font-weight: 400">“There was too much talking [on the ‘Play by Play’ walk]&#8230;It wasn’t relevant to the art, actually. They were trying to [relate]&#8230;Frank Stella with the race track. I mean, they killed the metaphor for me, honestly.” -Christina</span></p></blockquote>
+<p><span style="font-weight: 400">Some fruit, it turns out, is too far out on the limb for app goers. Yet overall, the app is attracting a range of visitors who have different needs, motivations, and familiarity with modern art. In interviews, some visitors revealed a magical experience when the content appeared to answer their own questions. </span></p>
+<blockquote><p><span style="font-weight: 400">“My mom’s like ‘that’s not art’ and we turn on the app and the first thing they say is ‘most people dismiss this type of art. It’s funny how they knew.” -Chantal and Eric</span></p>
+<p><span style="font-weight: 400">“I really love Rothko and I’ve never been able to articulate why. The description of the emotion that this particular narrator described was just spot-on what I’ve always felt but have never been able to articulate.” -Diane</span></p></blockquote>
+<p><span style="font-weight: 400">Most users prefer to stick with the standalone Nearby Audios, but 34% of reported doing Immersive Walks. Those who did are, on the whole, delighted and surprised by their experience. </span></p>
+<blockquote><p><span style="font-weight: 400">“When I went on the walk, I definitely noticed and learning things about the art&#8230;I was looking at work I wouldn’t have looked at otherwise. The walks presented me with things I wouldn’t have even asked about.” -Kari</span></p>
+<p><span style="font-weight: 400">“I liked when she was able to just tell me where to go and I would go there and I wouldn’t have to be like advancing to the next thing or whatever because it didn’t know where I was.” -Christina</span></p></blockquote>
+<p><span style="font-weight: 400">Contrary to the perception of mobile apps and audio tours as isolating experiences, visitors reported that the app helped them to talk more with the people they came to the museum with, and gave them more confidence in looking at the art and in “doing” the museum visit:</span></p>
+<blockquote><p><span style="font-weight: 400">“Lots of my friends don’t know about art. [I’d say to them] ‘Come in and laugh together.’ So many people don’t have any introduction to art don’t have to feel embarrassed to learn.” -Anonymous survey respondent</span></p>
+<p><span style="font-weight: 400">“We talked more.” -Chantal</span></p></blockquote>
+<h2>Impact</h2>
+<p><span style="font-weight: 400">Use of the app correlates to a more favorable perception of SFMOMA, and improved satisfaction with the visit overall. 75% of app users who did not experience technical problems reported being more or much more satisfied than they had expected, versus 70% for non-users. When asked what words they would use to describe the museum, those who used the app were more likely than non-users to choose the words “fun” (13% vs. 10%) and “participatory” (6% vs. 3%). Some visitors even cited the app as a reason to visit and to return.</span></p>
+<blockquote><p><span style="font-weight: 400">“We might change to a member because of the app. We can’t get through in time, so we might upgrade to a membership. Tell them that. That’s a selling point right there.” -Annie</span></p>
+<p><span style="font-weight: 400">“I would go to a museum once every 5 or 10 years, but with this, I could have a different guided experience each time&#8230;I feel like it opens up an option that I didn’t feel like it was there before.” -Scott</span></p>
+<p><span style="font-weight: 400">“I actually thought it was a reason to come….If you’re not really into art, this actually gave you a window into it, a doorway….It could make you want to go. People who maybe didn’t even like museums, but said, ‘Let me give this a try because it will be a different experience.” -Leslie</span></p></blockquote>
+<h2><b>What&#8217;s Next?</b></h2>
+<p><span style="font-weight: 400">In many ways, the SFMOMA app has succeeded in its initial objectives. The content is resonating with much of our audience, and some users even see the stories as a reason to return. Furthermore, visitors who have had a positive experience with the app also have a better experience overall at the museum. Yet t</span><span style="font-weight: 400">he true magic of a location-aware storytelling experience lies not only in the content, but in the content’s synergy with all aspects of the mobile service. Audio, location, and WiFi need to work together seamlessly—an operational challenge in a museum that rarely stays still. On the content side, the museum’s frequent artwork rotations require near-constant maintenance and in-house audio editing skills, since wayfinding directions and artwork mentions are baked into the audio. On the infrastructure side, changes in wall configurations (which happen often between shows at SFMOMA) require re-surveying indoor spaces to support location accuracy.</span></p>
+<figure id="attachment_1011" aria-describedby="caption-attachment-1011" style="width: 800px" class="wp-caption aligncenter"><img loading="lazy" class="wp-image-1011" src="../../wp-content/uploads/2017/01/Pau.Fig11.jpg.jpg" width="800" height="534" /><figcaption id="caption-attachment-1011" class="wp-caption-text">Figure 11: an SFMOMA visitor takes a snapshot of Mark Rothko’s <em>No. 14, 1960</em> (1960).</figcaption></figure>
+<p><span style="font-weight: 400">The appetite for risk-taking that got us here in the first place has served us well in the months following the launch of both a new app and new building. We are still learning, but we’ve also been proactive in making changes that will improve the overall mobile service. SFMOMA is investing in additional WiFi Access Points (WAPs). We’ve worked with colleagues across the organization to adjust exhibition planning, installation, and operational workflows, in order to improve a mobile service with many moving parts. </span></p>
+<p><span style="font-weight: 400">As far as next steps, new audio stories are already in the pipeline, location-aware technologies continue to evolve, and other museums are now looking to adopt the platform. No doubt, this collective energy will lead to not only a better mobile service, but new approaches to location-aware storytelling across the museum sector.  </span></p>
+<h2><b>Acknowledgements</b></h2>
+<p><span style="font-weight: 400">The author wishes to thank her fellow core app team members, including Keir Winesmith and Sarah Bailey Hogarty (Web and Digital Platforms), and Bosco Hernandez (Design Studio). The development of a platform and infrastructure to support an indoor location-aware app—without the benefit of a building—was a herculean feat which could not have been accomplished without the tireless efforts of Keir, Sarah, SFMOMA’s IT and Operations teams, and our partners at Detour, in particular Andrew Mason, Ryan Holmes and Ulf Schwekendiek. De facto core app team members Chad Coerver and Erica Gangsei gave wise counsel to the project team at all stages. Thanks to Laura Mann and Lindsey Green of Frankly, Green + Webb, whose evaluation study provided us with many of the findings, recommendations, and photographs presented in this paper. In addition to Christine Murray (Antenna) and Marianne McCune (Detour), the author wishes to thank the many audio producers, scriptwriters, sound editors, artists, interviewees, and narrators who gave their time and talents to the project—alas, too many to name here. Finally, SFMOMA wishes to thank Bloomberg Philanthropies and the Institute of Museum and Library Sciences, whose generous grants supported the creation of the SFMOMA app project.</span></p>
+<h2><b>References</b></h2>
+<p><span style="font-weight: 400">Abel, J. (2015). </span><i><span style="font-weight: 400">Out on the Wire: The Storytelling Secrets of the New Masters of Radio</span></i><span style="font-weight: 400">. New York: Broadway Books. </span></p>
+<p><span style="font-weight: 400">Antenna International. (n.d.) “Alcatraz: Project Info”. Exact publish date unknown. Consulted January 20, 2017. Available</span> <a href="https://antennainternational.com/portfolio/alcatraz/"><span style="font-weight: 400">https://antennainternational.com/portfolio/alcatraz/</span></a></p>
+<p><span style="font-weight: 400">Coerver, C. (2016). “On </span><span style="font-weight: 400">Digital</span><span style="font-weight: 400"> Content Strategy.” On SFMOMA.org. Exact publish date unknown. Consulted January 20, 2017. Available </span><a href="https://www.sfmoma.org/read/on-digital-content-strategy/"><span style="font-weight: 400">https://www.sfmoma.org/read/on-digital-content-strategy/</span></a><span style="font-weight: 400">  </span></p>
+<p><span style="font-weight: 400">Frankly, Green + Webb. (2015). “SFMOMA Mobile App User Journey Mapping Final Recommendations Report.&#8221; Internal document. SFMOMA. </span></p>
+<p><span style="font-weight: 400">Frankly, Green + Webb. (2017). “SFMOMA Mobile App Evaluation: Findings Report.” Internal document. SFMOMA. </span></p>
+<p><span style="font-weight: 400">Gangsei, E., and T. Svenonius. (2010). “Mobile Means Multi-Platform: Producing Content for the Fast-Changing Mobile Space.” In J. Trant and D. Bearman (eds). </span><i><span style="font-weight: 400">Museums and the Web 2011: Proceedings</span></i><span style="font-weight: 400">. Toronto: Archives &amp; Museum Informatics. Published March 31, 2011. Consulted January 19, 2017. Available </span><a href="http://www.museumsandtheweb.com/mw2011/papers/mobile_means_multi_platform_producing_content_"><span style="font-weight: 400">http://www.museumsandtheweb.com/mw2011/papers/mobile_means_multi_platform_producing_content</span></a><span style="font-weight: 400">   </span></p>
+<p><span style="font-weight: 400">The Minneapolis Institute of Arts. (1993). “Interpretation at the Minneapolis Institute of Arts.” Minneapolis, Minnesota.  Consulted January 19, 2017. Available <a href="http://www.museum-ed.org/wp-content/uploads/2010/08/mia_interpretation_museum-ed.pdf">http://www.museum-ed.org/wp-content/uploads/2010/08/mia_interpretation_museum-ed.pdf</a></span></p>
+<p><span style="font-weight: 400">Morris Hargreaves McIntyre. (2016). “Culture Segments booklet 2016.” Consulted January 25, 2017. Available </span><a href="http://mhminsight.com/articles/culture-segments-1179"><span style="font-weight: 400">http://mhminsight.com/articles/culture-segments-1179</span></a><span style="font-weight: 400">  </span></p>
+<p><span style="font-weight: 400">The Museum of Modern Art. (2012). “Questions Visitors Have about Works of Art in MoMA&#8217;s Galleries.” Internal document. Study conducted by The Department of Education at The Museum of Modern Art, May 2012.</span></p>
+<p><span style="font-weight: 400">Rosenbaum, L. (2016). “Robust App, Weak Tours: My WSJ Review of SFMOMA’s Technological Transformation.” Consulted January 27, 2017. Available </span><a href="http://www.artsjournal.com/culturegrrl/2016/07/robust-app-weak-tours-my-wsj-review-of-sfmomas-technological-transformation.html"><span style="font-weight: 400">http://www.artsjournal.com/culturegrrl/2016/07/robust-app-weak-tours-my-wsj-review-of-sfmomas-technological-transformation.html</span></a></p>
+<p><span style="font-weight: 400">Samis, P. and D. Funk. (2014). “Fisher Focus Group Analysis.” Internal document. SFMOMA.</span></p>
+<p><span style="font-weight: 400">Samis, P. &amp; S. Pau. (2006). “‘Artcasting’ at SFMOMA: First-Year Lessons, Future Challenges for Museum Podcasters”. In J. Trant and D. Berman (eds). </span><i><span style="font-weight: 400">Museums and the Web 2006: Proceedings</span></i><span style="font-weight: 400">. Toronto: Archives &amp; Museum Informatics. Published March 1, 2009. Consulted January 22, 2017. Available </span><a href="http://www.museumsandtheweb.com/mw2006/papers/samis/samis.html"><span style="font-weight: 400">http://www.museumsandtheweb.com/mw2006/papers/samis/samis.html</span></a></p>
+<p><span style="font-weight: 400">Samis, P. and S. Pau. (2009). “After the Heroism, Collaboration: Organizational Learning and the Mobile Space.” In J. Trant and D. Bearman (eds). </span><i><span style="font-weight: 400">Museums and the Web 2009: Proceedings</span></i><span style="font-weight: 400">. Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted January 20, 2017. Available </span><a href="http://www.archimuse.com/mw2009/papers/samis/samis.html"><span style="font-weight: 400">http://www.archimuse.com/mw2009/papers/samis/samis.html</span></a></p>
+<p><span style="font-weight: 400">Sennheiser Press Release (2013). </span><span style="font-weight: 400">“‘David Bowie Is’: Sennheiser Helps the V&amp;A Bring Together Sound and Vision.” Published March 19, 2013. Consulted January 21, 2017. Available </span><a href="http://en-de.sennheiser.com/news-david-bowie-is-sennheiser-helps-the-va-bring-together-sound-and-vision-"><span style="font-weight: 400">http://en-de.sennheiser.com/news-david-bowie-is-sennheiser-helps-the-va-bring-together-sound-and-vision-</span></a></p>
+<p><span style="font-weight: 400">SFMOMA Press Room (2016). “The New SFMOMA Announces Transformed Digit</span><span style="font-weight: 400">al Strategy.” On SFMOMA.org. Published </span><span style="font-weight: 400">May 2, 2016. Consulted January 20, 2017. Available </span><a href="https://www.sfmoma.org/press/release/new-sfmoma-announces-transformed-digital-strategy/"><span style="font-weight: 400">https://www.sfmoma.org/press/release/new-sfmoma-announces-transformed-digital-strategy/</span></a></p>
+<p><span style="font-weight: 400">Tallon, L. (2009), “About that 1952 Stedelijk Museum audio guide, and a certain Willem Sandburg.” </span><i><span style="font-weight: 400">Musematic</span></i><span style="font-weight: 400">. Published May 19, 2009. Consulted January 19, 2017. Available </span><a href="http://musematic.net/2009/05/19/about-that-1952-sedelijk-museum-audio-guide-and-a-certain-willem-sandburg/"><span style="font-weight: 400">http://musematic.net/2009/05/19/about-that-1952-sedelijk-museum-audio-guide-and-a-certain-willem-sandburg/</span></a></p>
+<p><span style="font-weight: 400">Wolf Ollins. (2013). “Comprehensive Market Study for the San Francisco Museum of Modern Art.” Internal document. SFMOMA.</span></p>
+<p>&nbsp;</p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+Pau, Stephanie. "Audio that moves you: experiments with location-aware storytelling in the SFMOMA app." <i>MW17: MW 2017</i>. Published January 31, 2017. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw17.mwconf.org/paper/audio-that-moves-you-experiments-with-location-aware-storytelling-in-the-sfmoma-app/<br /><br /><hr>
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h2><p class="must-log-in">You must be <a href="../../wp-login42ad.html?redirect_to=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Faudio-that-moves-you-experiments-with-location-aware-storytelling-in-the-sfmoma-app%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- .comments-area -->
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="text-7" class="widget widget_text">			<div class="textwidget"><h2 class="widget-title">Community Conveners</h2>
+<p><a title="Wezit" href="https://wezit.io/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/wezit-250-75.jpg" alt="Wezit" /></a><br />
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a></p>
+<h2 id="gold-sponsor" class="widget-title">Platinum Sponsor</h2>
+<p><a title="Microsoft" href="http://aka.ms/museweb" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/Microsoft-250-75.jpg" alt="Microsoft" /></a><br />
+<!-- <a title="Izi Travel" href="http://www.izi.travel" target="_blank" rel="noopener"><img src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/izi-250-75.jpg" alt="Izi Travel" class="sponsor-img sponsor-top" /></a> --></p>
+<h2 id="gold-sponsor" class="widget-title">Gold Sponsor</h2>
+<p><a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a></p>
+<h2 id="bronze-sponsor" class="widget-title">Bronze Sponsors</h2>
+<p><a title="MailChimp" href="https://mailchimp.com/resources/guides/mailchimp-for-nonprofits/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a><br />
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/netx-250-75.gif" alt="Netx" /></a><br />
+<a title="PatronTech" href="http://patrontechnology.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/patron-250-75.jpg" alt="PatronTech" /></a></p>
+<h2 id="conference-sponsor" class="widget-title">Conference Sponsors</h2>
+<p><a title="CMA" href="http://clevelandart.org/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/cma-250-75.jpg" alt="CMA" /></a><br />
+<a title="Rock &amp; Roll" href="http://www.rockhall.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/rrhf-250-75.jpg" alt="Rock &amp; Roll" /></a></p>
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+</body>
+
+<!-- Mirrored from mw17.mwconf.org/paper/audio-that-moves-you-experiments-with-location-aware-storytelling-in-the-sfmoma-app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:55:34 GMT -->
+</html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2009-papers.dwt" codeOutsideHTMLIsLocked="true" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2009/papers/davidow/davidow.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:56:35 GMT -->
+<head>
+<!-- InstanceBeginEditable name="HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2009: Paper: Davidow, A., Fedora, Drupal, and Cloud Computing for a Low-Cost, Sustainable DAM</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2009: Proceedings" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="Keywords" -->
+<meta name="Keywords" content="Fedora, drupal, agile development, cloud computing, small archive, digital asset management, digital preservation, Amazon Web services, paper, research, MW2009, conference, museum, museums and the web, mw, matw, museums &amp; the web, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online, world wide web, www, web site, website, museum web site, museum website, howto,  conferences, professional papers, peer-reviewed, peer reviewed, peer review, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="Description" -->
+<meta name="Description" content="Museums and the Web 2009: the international conference for culture and heritage on-line" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2009" />
+<!-- InstanceEndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<!-- InstanceBeginEditable name="charset" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="../../css/mw2009.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/papers.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/mw2009-noNews.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+</head>
+<body>
+<div id="container">
+  <div id="header" onclick="location.href='../../index.html';" style="cursor:pointer;"> </div>
+  <!--htdig_noindex-->
+  <div id="top-nav">
+    <ul id="top-nav-list">
+      <li><a href="../../register/index.html">Register</a></li>
+      <li><a href="../../dates/index.html">Key Dates</a></li>
+      <li><a href="../../sescal/index.html">Schedule</a></li>
+      <li><a href="../../local/index.html">Local Info</a></li>
+    </ul>
+    <!--/htdig_noindex-->
+  </div>
+  <div id="header-photo"> 
+	 <!-- InstanceBeginEditable name="header-photo" --> <img src="davidow.t.png"  height="132" width="229" alt="MW-photo" />
+	 <!-- InstanceEndEditable --></div>
+<div id="print-title">
+	<h1>Museums and the Web 2009: the international conference for culture and heritage on-line</h1>
+	<h2>produced by Archives &amp; Museum Informatics</h2>
+	<h3>site at http://www.archimuse.com/mw2009/</h3>	 
+</div> 
+ <div id="date"> <a href="../../sescal/index.html">April 15-18, 2009</a><br />
+    <a href="../../local/index.html">Indianapolis, Indiana, USA</a> </div>
+  <div id="title">
+    <h1> 
+		<!-- InstanceBeginEditable name="PageTitle" --> 
+
+		<span class="PaperTitle">Fedora, Drupal, and Cloud Computing for a Low-Cost, Sustainable
+    DAM</span><!-- InstanceEndEditable --> </h1>
+  </div>
+  <!--htdig_noindex-->
+  <div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+        <h2 class="Author"><a href="../../bios/au_410013186.html">Ari Davidow</a>, Jewish Women&rsquo;s Archive, USA</h2>
+        <p class="URL"><a href="../http://jwa.org/">http://jwa.org</a></p>
+        <h3 class="AbstractTitle">Abstract</h3>
+        <p class="AbstractText">Digital asset management and digital preservation can require
+    expensive, proprietary software and expensive servers. For a small, underfunded
+    institution like the Jewish Women&rsquo;s Archive, the answer lies in using open
+    source technology, leveraging what we can do by collaborating extensively,
+    supplemented by relatively inexpensive cloud computer services that let us
+    explore and take chances without tying down our resources on expensive
+    hardware.</p>
+  <p class="AbstractText">The most important ingredient is probably Agile
+    development &ndash; doing large scale development by biting off small chunks of
+    useful development at a time, learning from what you have done, and then
+    planning the next chunk of work, funded as you can. In this project we
+    approached long-term Digital Asset Management by accomplishing just enough work
+    with Fedora so that our most urgent assets could be ingested and managed. At
+    the same time we directed development in Drupal, an open source content
+    management system. so that as we develop our public web &ldquo;face&rdquo; we are also
+    developing the common ways of working with data and displaying digital objects.
+    Soon, Drupal, an excellent CMS which has no particular digital asset management
+    affordances will be ready to serve as the front end to Fedora, an excellent
+    Digital Repository Framework with enviable digital asset management hooks, but
+    no interface of which to speak.</p>
+  <p class="AbstractText">This paper also serves as a call to other interested
+    archives to collaborate with us in future development.</p>
+  <p class="keywords">Keywords: Fedora, drupal, agile development, cloud computing,
+    small archive, digital asset management, digital preservation, Amazon Web
+    services</p>
+		<!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+
+
+    <h2>Introduction</h2>
+      <p>The Jewish Women&rsquo;s Archive (JWA), founded in November
+        1995, grew out of the recognition that neither the historical record preserved
+        in America&rsquo;s Jewish archives nor that preserved in its women&rsquo;s archives
+        accurately or adequately represented the complexity of Jewish women&rsquo;s lives and
+        experiences over the three centuries in which they had been making history in
+      the United States (JWA, 2006).</p>
+      <p>The Archive&rsquo;s mission is to &ldquo;uncover, chronicle, and
+        transmit the rich history of American Jewish women.&rdquo; That includes a commitment
+        to documenting Jewish women from all walks of life, and to reaching out to the
+      general public, as well as to scholars. </p>
+      <p>In the 13 years since its founding, the Jewish Women's
+        Archive has conducted interviews with, and collected materials about, hundreds
+        of American Jewish women. These oral histories represent a sustained effort to
+        begin filling in gaps in our understanding by restoring women's voices and
+        experiences to the historical record.  They are one small part of a larger effort, undertaken by academic and
+        community historians alike, to ensure that women are visible in the pages of
+      history books, archival collections, and communal narratives.</p>
+      <p>As an on-line-only archive, we initially viewed these oral
+        histories as raw materials from which clips would be presented on-line, or from
+        which on-line exhibit texts would be distilled. As a very small organization,
+        it never seemed cost-reasonable to expend precious resources worrying about the
+        initial interviews, and the likely audience for the interviews, beyond podcast
+      clips, seemed quite limited.</p>
+      <p>It is still not clear that there is a large audience for
+        the original interviews, transcribed or not. What is clear is that some of the
+        interviews need active preservation work. Cassettes die. MiniDisks become
+      unreadable.</p>
+      <p>We also feel that better tools for engaging with these
+        interviews are near. We can see better tools for searching and accessing audio
+        and video on the horizon. If these materials are on the Web, then it is
+        possible the oral histories which we have so painstakingly gathered will find
+        their audience. In the meantime, we needed to ensure that the recordings
+      remained accessible and usable for the long term. </p>
+      <h2>Preservation 101</h2>
+      <p>There are many ways to physically preserve audio and
+        video. The simplest, and the one that prevents further degradation to the
+        media, is to digitize the recordings, and then to ensure that those
+        digitizations are preserved. In addition to the digitization, museums must also
+        ensure that the maximum useful metadata is captured and preserved: When/where
+        was a recording made? On what medium? Who were the interviewer and interviewee?
+        What subjects were discussed? What locations? What time periods? Who owns the
+        recording? What rights and permissions have been secured to use the recording
+        in new ways? Once the recording is digitized, the process - all preservation
+        activity - needs to be documented. The digitized files are each assigned a
+        unique signature (commonly, a &ldquo;checksum&rdquo;) which will be generated anew
+        periodically and compared to the original to confirm that the recording has
+        neither been altered, nor suffered &ldquo;bit rot.&rdquo; This data has to be attached to
+      the recording and needs to be preserved along with it.</p>
+      <p>By the time beginning preservation activities began, the
+        Jewish Women&rsquo;s Archive had accumulated 6TB of Oral Histories. In 2007-2008 year
+        we downloaded the entire collection of cassette tapes, minidisks, VHS video and
+        miniDV tapes to an internal RAID Server and began capturing various types of
+        metadata in a series of spreadsheets. Long-term, our goal was to move all of
+        this data to a digital repository, and to provide variegated access to those
+        assets (different interfaces depending on role, differentiating exhibits,
+        etc.). In the meantime, we now had one set of digitizations, and their
+      accompanying spreadsheets, on a relatively robust single RAID server.</p>
+      <p>As anyone who has been responsible for corporate backup
+        knows, it is vital that all assets be backed up offsite, and in best case,
+        replicated to an entirely different geographic area. This helps ensure their recovery
+        not just from bad disks, but also from a local fire, theft, or natural
+        disaster. We had talked for some time about partnering with similar
+        organizations in other parts of the country or the world. Together, we could
+        back up each other&rsquo;s data over the Internet (or simply by shipping drives back
+        and forth). The problem, of course, is finding other institutions with IT
+        departments sufficiently far-sighted and robust that they could support such an
+        effort with us, and who agreed with us that this was a reasonable long-term
+      preservation plan, and could sell the extra storage cost to their boards.</p>
+      <p>We considered other backup options. Tape backup can be
+        used to get the data offsite easily. On the other hand, tape requires frequent
+        testing (drives go bad and begin backing up bogus data, or cease to read older
+        data). In addition, local tape collections don&rsquo;t provide the geographic balance
+        needed for curators to sleep easily at night. As data security people are fond
+        of pointing out, one does not begin to feel secure about data until it is
+        replicated in at least three geographically disparate regions such that the
+        likelihood of catastrophic failure and inability to recover drops close to
+        zero. To back up our archive to tape, for such quantities of data, would be prohibitively
+        expensive and tedious, and we would still have all the disadvantages of tape to
+        deal with. We concluded that tape is the wrong technology for preserving
+        largely static data, and in today&rsquo;s world, tape technologies changes so quickly
+      that it cannot be considered a comfortable long-term solution. </p>
+      <p>Many organizations use optical media instead of tape:
+        CD-ROMs and DVDs. In the best circumstances, these devices can easily last
+        20-30 years (which may turn out to be longer than we have devices that can read
+        the disks). Unfortunately, as we polled archives using optical media we
+        discovered that, regardless of brand, quality, batch, or other predictor, some
+        optical media would die, unpredictably, starting from the moment we tried to
+        burn the backup (or before). This meant that those institutions using optical
+        media had to rely on both LOCKSS (<u>L</u>ots <u>O</u>f <u>C</u>opies <u>K</u>eeps <u>S</u>tuff <u>S</u>afe) and frequent checks of each disk. We have no budget
+        to check all of our off-site optical media every six months or so. This would
+      be even more resource-intensive and nerve-wracking than using tape.</p>
+      <h2>Enter &ldquo;The Cloud&rdquo;</h2>
+      <p>The only current reasonably robust method of preservation
+        and backup seems to be to have those geographically separated RAID servers or
+        equivalent. Faced with this challenge, we considered a new alternative based on
+        using Amazon Web Services (AWS). The service had been recommended to us over
+        two years ago. Early users seemed happy. The service seemed reliable. I found
+        myself running the usual small archive evaluation: we have no dedicated IT
+        staff, no in-house expertise. Given the choice, I do not want to put my IT
+        money into developing such local expertise - that is money that could be used
+        directly on gathering Oral histories and processing them - things that nobody
+        else can do for us. In such a situation, the question isn&rsquo;t whether I feel that
+        our data on a foreign system is totally secure, but whether it is more likely to
+        be secure (both in the sense of being inaccessible to crackers, and in the
+        sense of being there, unchanged, when we want it) on AWS or in our shop. Who is
+      more likely to lose our data? The folks at AWS, or we ourselves?</p>
+      <p>The economics were especially interesting. In year one, we
+        purchased our RAID server and installed a T1 line. As we began moving the data
+        to AWS, our AWS charges grew slowly (the service meters both the bandwidth
+        required to add data, and monthly storage charges). By the time most of the
+        material is on AWS, we will be dealing with another year&rsquo;s budget and the RAID
+      server will have been paid for in the previous budget. </p>
+      <p>By loading our data slowly, we get to also take advantage
+        of the fact that ISPs tend to want a minimum 1-year contract for services. By
+        that math, the minimum speed (T1, in our case) that gets the job done in a
+        little less than a year is perfect. There remains risk that catastrophy will
+        strike before the backup is done, but taking a year to add an offsite backup
+        affordably is significantly more secure than not backing up offsite because it
+        is unaffordable. As noted, we also take advantage of the likelihood that Amazon
+        will do a much better, consistent-over-the-long-term job of ensuring that our
+        data are secure than we are likely to do locally. They have full-time engineers
+        to maintain their system and an SLA for uptime. We have an outsourced IT guy
+        who comes in as needed, and who monitors systems from his office. Note that at
+        this time, neither AWS nor we here at the office have a guarantee against data
+        loss. All we have is the likelihood that two disparate, geographically
+        separated systems won&rsquo;t go bad in the same way at the same time. This is
+        significantly better than one RAID array or closet of optical media in one
+        location. [A joint project by Fedora Commons and the DSpace Foundation, <i>DuraSpace,</i> is currently looking at using the cloud to provide geographically-distanced
+      replication and an SLA that covers data loss. (Morris 2008).]</p>
+      <h3>Content Management, Digital Asset Management, and Digital Preservation</h3>
+      <p>So far, we have talked about the crudest form of digital
+        preservation - getting data off of old analog devices into digital form, and
+        then making physical backups. In passing, I have also noted that there are
+        several types of metadata - information about the information we are preserving
+      - that we try to capture.</p>
+      <p>The software to help manage these assets is commonly
+        called a Digital Asset Management System, or DAMS. Our starter DAMS consisted
+        of lots of paper, Excel spreadsheets, and a RAID server. It worked quite well
+        up to a point, always assuming that our Digital Archivist never left and took
+        her memory with her. It didn&rsquo;t scale particularly well. She spent a lot of her
+        time tracking the spreadsheets, backing them up, double-checking one
+      spreadsheet relative to the next, fixing typos, and finding mis-filed files.</p>
+      <p>We tested, and continue to test, open source DAMS
+        solutions such as Archivists Toolkit and OpenCollection (some of whose
+        developers are now working on CollectionSpace). I should further note that
+        Digital Asset Management over time is Digital Preservation, and our concerns
+        had more to do with rights management and digital preservation than many of the
+        usual DAMS concerns: we don&rsquo;t have digital content that we own or license, for
+        instance. We have no reproduction issues. We do have assets that are private - accessible
+        only to scholars. We also have Web site assets that were licensed for specific
+        exhibit uses and whose usage rights we cannot extend to others. Not only do privacy
+        and rights &nbsp;have to be tracked, but
+      also any system we implement has to support enforcing those rights.</p>
+      <p>We did, at this point, have a new Content Management
+        System (CMS), Drupal. But it is important to note the obvious: Content
+        Management Systems are definitively <i>not</i> Digital Asset Management
+        systems. For starters, nobody uploads master TIFF images to a CMS - they would
+        never be displayed on the Web, and would simply chew up disk space to no
+        purpose. It is actually common for DAMS to include CMS modules where all of the
+        Web site content can be maintained for editing by editorial, marketing, and
+      professional staff. Content Management is exactly what a CMS is good for.</p>
+      <h3>Drupal</h3>
+      <p>We had a somewhat more complex situation than is addressed
+        by the average CMS. Starting about three years ago, we began to extract our Web
+        assets from a decade&rsquo;s worth of custom, proprietary systems and static HTML. It
+        was clear to us that we did not want, again, to have our primary data siloed
+        and inaccessible. Nor, once we had finished the migration, did we ever again want
+        to have to maintain a panoply of separate databases ranging from obsolete
+        Oracle 9/JSP pages to custom-built MySQL/PHP engines so obscure that we lack
+        the time and expertise to consider bug fixes, as we move from ISP to ISP, or
+        upgrade from server to server. We wanted to focus on the information, itself,
+        and maintenance of the data, not the data infrastructure. We do not have the
+        resources to maintain siloes &ndash; that is money stolen from gathering new oral
+      histories and creating new educational materials, exhibits, and features.</p>
+      <p>From our perspective, we are also not in the business of
+        gathering information that can sit waiting to be found - in this regard, we are
+        entirely an untraditional archive (except insofar as many traditional archives
+        are changing in similar directions). We want these stories used in teaching, we
+        want people engaged with this information, and we want it re-used in telling
+        new stories. Further, this is an age when people can contribute to the archive
+        directly. The same tools that enable engagement and re-use need to be enabled
+        to receive archival materials from our public, so not only does our CMS need to
+      manage editorial content, but it also needs to come with some tools that <i>do</i> generally appear in a DAMS, starting with the ability to accept content on-line.</p>
+      <p class="caption"><a name="fig1" id="fig1"></a><a href="davidow-fig1.html"><img src="davidow.fig1.jpg" alt="figure 1" width="478" height="559" /></a></p>
+      <p class="caption"><a href="davidow-fig1.html">Fig 1: A preview page from the recently launched (Mar 1,
+      2009) Encyclopedia, <i>Jewish Women</i> showing metadata </a></p>
+      <p>This requirement refers not just to the usual Web 2.0
+        comment and tag features, or to social networking tools. We are already into
+        our second &ldquo;on-line collecting&rdquo; project where people can contribute items to
+        the archive themselves. As I discuss below, this provided a first incentive to
+        customize the CMS with some of the same features expected in a DAMS - an
+        ability to parse uploads and to extract basic technical metdata (filetype,
+        checksum, etc.) plus the ability to store descriptive metadata (contributed by
+      whom, described how, etc.).</p>
+      <p>When we chose our CMS, we had a preference for open source
+        software. In theory, and occasionally in practice, we are happy to work with
+        proprietary commercial applications. In our office, people use Microsoft
+        Office, rather than OpenOffice. They hate Google Apps. Since we can hire almost
+        anybody and know that they understand MS Office well enough to work here, and
+        since existing staff like it, we&rsquo;re happy to go proprietary in this one
+        instance. We also use commercial bug-tracking software, FogBugz, because that
+        is the product that everyone liked enough to actually use. Having bug-tracking
+        software that people actually use matters a lot. But, whenever all things are
+        equal, and especially in the case of Web tools, our experience weights choices
+      heavily in the direction of well-known open source applications. </p>
+      <p>There are several popular CMSs. When we selected Drupal,
+        we felt that it was the most flexible among those that were sufficiently
+        popular and sufficiently well-developed to be likely to continue to develop
+        over time. We also wanted a CMS that relied primarily on MySQL and PHP, as it
+        is relatively easy to find reasonably good and relatively inexpensive
+        programmers who know both tools well. (Since these are &ldquo;gateway&rdquo; skills - the
+        first language/database that many autodidactic programmers pick up, - there are
+        also a plethora of people with these skillsets on their resumes whom one would
+      not wish to hire.)</p>
+      <p>Drupal is not the only good CMS, but it has been an
+        excellent choice for us. We continue to be quite happy with the developer
+        community, the tools, and the direction (Semantic Web tools coming in the next
+      major release) the code is moving. </p>
+      <p>When we decided to work with Fedora (see below), it was
+        also in the back of our minds that the University of Prince Edward Island
+        (UPEI) had already developed a module for Drupal to enable it to talk to Fedora
+        (Islandora 2008). As it turned out, UPEI is working with versions of Drupal and
+        Fedora slightly out of sync with what we are doing. This is not bad at this
+        stage of development. For the CMS side of DAM and Digital Preservation, that
+        just means that ultimately objects will physically be stored and maintained in
+        the Fedora repository, rather than in Drupal&rsquo;s own environment. Drupal&rsquo;s
+        digital asset tools are no more advanced than one might expect in the CMS. We
+      will not be sorry to make that transition when it comes.</p>
+      <p>In the meantime, we have two important goals, and are also
+      developing an important &ldquo;connector&rdquo;.</p>
+      <p>&nbsp;First, we
+        must import legacy Web code into Drupal. This is a relatively standard headache
+        involving generations of dissimilar static HTML and old Web applications using
+        a number of databases and templating codes. It takes time, and each month more
+      of that content is served from Drupal. </p>
+      <p>Second, we are developing tools in Drupal that &ldquo;think&rdquo; the
+        Fedora way. In particular, we have modified some Drupal modules so that editors
+        and content maintainers can treat all media objects - video, audio, images, so
+        far - as &ldquo;digital stuff&rdquo; without having to learn the HTML code, or to use
+        different modules and procedures to handle each type of object. In Fedora terminology,
+        we have created standard &ldquo;disseminators&rdquo; that can be activated automatically
+        depending on the type of object and the context. This means, for instance, that
+        an image will be displayed at a standard small size when a &ldquo;thumbnail&rdquo; is
+        required; at a different size when part of a story; and even at a third, large
+      size, when someone then clicks on the image, in the story.</p>
+      <p class="caption"><a name="fig2" id="fig2"></a><a href="davidow-fig2.html"><img src="davidow.fig2.jpg" alt="figure 2" width="484" height="257" /></a></p>
+      <p class="caption"><a href="davidow-fig2.html">Fig 2: Admin Entryway to JWA&rsquo;s WWII On-line Collecting
+      Project, based in Drupal</a></p>
+      <p>The same Dublin Core-based metadata is used as we are
+      using in Fedora.</p>
+      <p class="caption"><a name="fig3" id="fig3"></a><a href="davidow-fig3.html"><img src="davidow.fig3.jpg" alt="figure 3" width="359" height="402" /></a></p>
+      <p class="caption"><a href="davidow-fig3.html">Fig 3: Administering a media object in Drupal. Note the
+      Similarity to the metadata as used in our Fedora instance</a></p>
+      <p>One of the features that makes Drupal so amenable to modeling
+        different types of data is something called &ldquo;Content Construction Kit&rdquo; (CCK).
+        This module provides the tools so that instead of having the fields relevant to
+        a particular type of page defined for you, you define your content types
+        according to the needs of the data. Less specialized Web site owners might
+        create specialized content types good for loading restaurant reviews or contact
+        information. In our case, we used CCK to model the same fields for digital
+        objects as we used in Fedora. As is the case with our Fedora installation, as
+        we become more experienced and as our metadata become more complex, it is
+      relatively trivial to extend the CCK definition.</p>
+      <h2>Choosing Fedora, our Repository Framework and DAMS</h2>
+      <p>We spent over a year exploring potential repository
+        frameworks. Being situated just across the river from Tufts University (an
+        original Fedora site) and MIT (home to DSpace) gave us a wealth of local
+        expertise to draw on. We liked the instant usability of DSpace, but kept
+        running into problems unique to JWA. Most of our assets are not simple objects
+        such as images, text, or even simple audio and video. We have those assets, but
+        they usually need to be archived and maintained in more complex fashion. An &ldquo;oral
+        history,&rdquo; for instance, at JWA consists of several related elements. At a
+      minimum, these include:</p>
+      <ul>
+        <li> Original audio (usually, a WAV wrapper at the
+        highest resolution available form the source)</li>
+      <li> Presentation audio (mp3)</li>
+      <li> Original transcript (currently, Word docs)</li>
+      <li> Presentation transcript (PDF)</li>
+      <li> Metadata (various xml files, including technical
+        metadata provided by the New Zealand Metadata Extraction Tool, NLNZ 2003)</li>
+    </ul>
+      <p class="caption"><a name="fig4" id="fig4"></a><a href="davidow-fig4.html"><img src="davidow.fig4.jpg" alt="figure 4" width="500" height="130" /></a></p>
+      <p class="caption"><a href="davidow-fig4.html">Fig
+      4: Contents of a typical oral history</a></p>
+      <p>The issue here isn&rsquo;t how to archive wav, doc, mp3, pdf,
+        and xml files; rather, in this case, sanity dictates that we treat the group of
+        files as one working object. Starting two years ago, we had surveyed the field
+        of both open source and commercial systems. Last year we narrowed the choice
+        down to DSpace and Fedora. Ultimately, the complexity of our content models and
+        the perceived need for a rich set of relationships (RDF &ldquo;triples&rdquo;) led us to
+      the flexibility and complexity of Fedora. </p>
+      <p>Intriguingly, Fedora fit our plans in another way. I
+        mentioned earlier that it is increasingly true that if one starts with a
+        repository, adding a CMS to manage Web content can be simple. After all, one of
+        the main things a digital repository does is provide the ability to manage
+        digital assets over time. In the case of Fedora (and to a less extent, DSpace),
+      there is no useful built-in CMS.</p>
+      <p>We had already started migrating our Web assets into
+        Drupal. When we heard that the University of Prince Edward Island was already
+        at work on a Drupal/Fedora interface, we felt confident that this was a match
+        made in open source heaven. To be sure, we surveyed the field and considered
+        tools such as Fez and Muradora. At their current stages of development, they
+        were not tools that we wanted to live with, and they are not tools that support
+        traditional CMS roles - the ability to generate newsfeeds; use fancy templates
+        to entice Web visitors to explore further; and to customize the look and feel
+      of specific exhibits.</p>
+      <h2>Setting the Stage: Backing up to &lsquo;the Cloud&rsquo; in Agile Steps</h2>
+      <p>So, we knew that we wanted to set up a Fedora Commons
+        repository if we could find a few hundred thousand dollars in grant money or
+        contributions. We were using Drupal as our CMS, and it was clear that
+        ultimately we wanted all or most of the front end services to be handled by
+        Drupal. Our Drupal development environment was a relatively traditional one
+        with local &ldquo;sandboxes&rdquo; on people&rsquo;s desktop machines, plus virtualized dev, qa,
+        and production installations maintained on a couple of co-located servers at a
+        traditional ISP. As recently as three or four years ago, we would have been
+        paying rent on several physical servers, but with modern virtualization
+        software, there was no reason not to keep adding &ldquo;virtual&rdquo; servers to the same
+        box until there were load issues. The same development server could happily
+        host &ldquo;newsearch.dev.jwa.org,&rdquo; &ldquo;drupal.dev.jwa.org,&rdquo; along with the mailing
+        lists, bug-tracking software, database servers, etc. It was a very short leap
+      from our virtualized servers at a traditional ISP to Amazon Web Services.</p>
+      <p>In the meantime, one last technology appeared, &ldquo;Agile
+        Development.&rdquo; The problems we were trying to solve were common: with one
+        on-staff developer, it was taking forever to go from &ldquo;concept&rdquo; to usable tools,
+        and by the time we got there, priorities had changed. Agile development methods
+        focus on short (&lt; 6 weeks, typically) development cycles, with the intent
+        that tested code with usable features is put into people&rsquo;s hands quickly. Then,
+        the next cycle of development is informed not only by what seemed important at
+        the beginning of the project, but also by actual use of those initial tools and
+        the shifts in priority and refinement that hands-on use provides. Use of these
+        short cycles also meant that our developer could add functionality in several
+        areas during the course of the year, instead of in only one or two key areas,
+        making it easier for our Web site to develop based on how it was being used, or
+        in near-real-time based on new ideas, developments, or examples from outside
+        our site. Not only did we get faster development (albeit, in smaller chunks),
+        but the ability to respond quickly helped get staff more involved in the growth
+      and change of the Web site. </p>
+      <p>Staff took more ownership when they could see the changes
+        they had requested take place almost in real-time. The methodology put our Web
+        developer through some significant changes. Part of what makes him a great
+        developer is the ability to take &ldquo;as long as it takes&rdquo; to solve problems well.
+        Now we were telling him that every 4-6 weeks the development cycle would close
+        down. He was free to tell us what he couldn&rsquo;t get done in that time, but he had
+        to deliver usable code at the end of each cycle. There was initial resistance,
+        but I think that he is also enjoying the cycles now. He gets more variety, and
+        he knows that he doesn&rsquo;t have to solve everything <i>now.</i> He has to solve
+        enough so that staff can get their hands on a new iteration. There will always
+      be more iterations - new chances to rethink, refactor, improve, and move on.</p>
+      <h2>A lightweight Fedora installation &lsquo;in the cloud&rsquo;</h2>
+      <p>The pieces were in place. We were gaining more experience
+        with Drupal by the day, and it gave every indication (and continues to give
+        such indication as I write this paper) that it will make a delightful, flexible
+        front-end to Fedora. We were starting to back up our data to AWS. We still
+      needed Digital Asset Management in the here and now. </p>
+      <p>We began mooting the idea of a &ldquo;simplest Fedora
+        installation&rdquo; to friends at The MediaShelf with whom we had consulted earlier
+        about setting up the large Fedora installation. They were early proponents of
+      Agile development to us, so it made sense to rethink what we needed.</p>
+      <p>Suppose we stripped out almost everything and focused on
+        an admin-only interface? Suppose we focused on one content model: our oral
+        histories that constituted the archive&rsquo;s main digital asset? Could this be done
+        for under $50k? Would it be enough so that the preservation work that we had
+        begun last year by digitizing all of those tapes and other media could continue
+        with tools more sophisticated than our growing panoply of spreadsheets? If this
+        were possible, that would also mean that these assets were, in fact, on-line
+        and accessible. If we had to, that would mean that we <i>could</i> now offer
+        scholars access to interviews via the Web, even without the fancy DAMS of our
+      dreams.</p>
+      <p>We quickly modeled a three-stage Agile development project
+        and began work. We cut about $15k out of the budget by using AWS as the server
+        host, obviating the need to purchase large servers and an extra RAID array
+      upfront. We didn&rsquo;t even have to budget colo fees for new servers. </p>
+      <p>We had met one of the principals of The MediaShelf in an
+        earlier project, so we elected to save even more money by foregoing
+        face-to-face meetings and using Skype instead. (Our preference, by the way, was
+        not to use video in Skype meetings. While it is good to see the face of someone
+        with whom you are talking, it is also convenient to be able to roam the room - or
+        the office - without a camera noticing when one is or isn&rsquo;t right in front of
+        the computer. Skype turned out to have several advantages over traditional
+        conference calls, including the ability to conduct back-channel &ldquo;chat&rdquo; to pass
+        URLs and carry on side-conversations, as necessary. It also comes with a nicely
+      secure tool to pass things like SSH keys.</p>
+      <p>Development on AWS is simple, but it is also different
+        from traditional development. Things fit together differently. In a traditional
+        server environment, users purchase (or rent, via colocation) a server with a
+        certain amount of speed, RAM, and hard disk space. This can be very frustrating
+        because you are paying up front for speed and space that you estimate that you
+        might need before it is time to migrate to the next generation server. If you
+        guess wrong, it is expensive, and costs a lot of time to migrate. AWS obviates
+        that. You start small, with what you need to develop, and you can add new
+      capabilities - even new servers - in minutes, not days.</p>
+      <p>With AWS, the first difference is that you have absolutely
+        no idea where your data are - there is no longer a specified physical server
+        tied to your Web services. There is no cage at an ISP somewhere to visit. We
+      used three principal services:</p>
+      <ul>
+        <li> S3: Simple Storage Service - this is the AWS
+          equivalent of a network server. Our original backup plan was to use a simple
+        utility to pile everything here, and retrieve if/when necessary.</li>
+    </ul>
+      <p class="caption"><a name="fig5" id="fig5"></a><a href="davidow-fig5.html"><img src="davidow.fig5.jpg" alt="figure 5" width="500" height="271" /></a></p>
+      <p class="caption"><a href="davidow-fig5.html">Fig 5: Control panel for Amazon Web Services</a></p>
+      <ul>
+        <li> EC2: Elastic Compute Cloud - click a button and
+          add extra servers, bandwidth as needed. This is as close to metered server
+        power as we get right now. Fedora is running on EC2</li>
+      <li> EBS: Elastic Block Store - this is the
+        equivalent of &ldquo;ghost&rdquo; for your server setup. The same EBS setup can be used to
+        drive any number of servers, making provisioning those servers very fast. Even
+        in the traditional dev/production environment, it becomes very inexpensive to
+        modify a copy of the core setup: try it, and if it doesn&rsquo;t work, remove it and
+        start over with a new copy.</li>
+    </ul>
+      <p>Working with The MediaShelf was a pleasure. There were
+        more bugs than expected and the project was not completed in the originally
+        projected two month span. Even Agile development can be imperfectly
+        predictable. At one point we discovered that Fedora 3 (F3) choked on large-ish
+        files. There was a digression while The MediaShelf folks fixed F3, checked it
+        in to Fedora Commons, and then resumed work on our installation. To us, the ability
+        to work in this fashion (immediately fix the bugs and check them in to the main
+        code repository vs. wait for the next release of a commercial application,
+        which might or might not address our issues) is also one of the reasons we
+        treasure open source development. The resulting application (just now in the
+        final bugfix phase) has the double advantage that it has a well-constructed
+      user interface (UI) and works exactly as our Digital Archivist specified. </p>
+      <p class="caption"><a name="fig6" id="fig6"></a><a href="davidow-fig6.html"><img src="davidow.fig6.jpg" alt="figure 6" width="476" height="148" /></a></p>
+      <p class="caption"><a href="davidow-fig6.html">Fig 6: Entryway to the JWA Digital Repository</a></p>
+      <p>The overall process involves using a standard secure
+        protocol (SFTP) to move files, batched, to AWS to the &ldquo;watch folder&rdquo;. For audio
+        files, we zip everything into one large file which is automatically ingested.
+        Once the message is received that the files are ready for inspection and any
+        manual metadata tuning, the Archivist goes in and adds/edits basic metadata.
+        Our metadata schema is based on Dublin Core. Over time it will get more
+        complex. At this stage, it is quite critical to get digital objects under
+        management, and especially to have information about rights, permissions, etc.,
+        at our fingertips. The interfaces to Fedora were created using Ruby on Rails,
+        and the code generalized from our project is available from the MediaShelf via
+      RubyForge. It is called &ldquo;RubyFedora/ActiveFedora&rdquo;: <a href="../http://projects.mediashelf.us/projects/show/active-fedora">http://projects.mediashelf.us/projects/show/active-fedora</a>    .</p>
+      <p class="caption"><a name="fig7" id="fig7"></a><a href="davidow-fig7.html"><img src="davidow.fig7.jpg" alt="figure 7" width="487" height="265" /></a></p>
+      <p class="caption"><a href="davidow-fig7.html">Fig 7: Editing metadata using &ldquo;ActiveFedora.&rdquo; </a></p>
+      <h2>What We Learned and Next Steps</h2>
+      <p>First, we learned that we were right. It is possible to
+        build a useful, lightweight repository based on Fedora Commons code for
+        relatively little money. Because we did it using open source tools, the next
+        group will be able to do the same for even less - conceivably, for anyone with
+        our ideas of a good UI and our single content model, a useful repository can be
+      had just by downloading and installing RubyFedora/ActiveFedora.</p>
+      <p>AWS has been such a comfortable development environment
+        that we are likely to move our regular Web site, legacy Oracle, JSP, static
+        HTML, Drupal, and more to AWS. We estimate that we will cut our monthly
+        expenses even as we continue to add new services. When we started, AWS
+        supported only Linux, and had some limits on what database services could be
+        supported. That is still enough for us, but it should be noted that AWS now supports
+        a wider variety of services, supports Windows OS, and even boasts its own
+        database services. For now, we intend to stick with MySQL, and hope to migrate
+      the Oracle data in the next two years. </p>
+      <p>As one aspect of the project, we have a new search engine,
+        the open source Lucene/SOLR package installed. It will take another project,
+        however, before this is usefully customized for our Web site. Just as Fedora
+        doesn&rsquo;t do much useful &ldquo;out of the box,&rdquo; configuring a search engine so that it
+      provides useful results to site visitors is non-trivial.</p>
+      <p>Without Drupal connected to Fedora we have our simple,
+        inexpensive Digital Asset Management (DAM) and Digital Preservation services,
+        but we have not yet put those assets in the hands of our archive&rsquo;s users:
+        students, educators, and researchers. For that purpose we are building on work
+        done by a second partner, the University of &nbsp;Prince Edward Island (UPEI), which has developed a module
+        tying Drupal to Fedora. This spring they are updating the module to work with
+        current Fedora and Drupal releases. If all goes well, we will undergo the
+      necessary Drupal updgrade (to version 6) as well.</p>
+      <p>Finally, to tie everything together, we are building a
+        tool using the brand new OAI-ORE standard which will help audiences find items
+        in our collection (or other collections), &nbsp;and build the Web equivalent of annotated multi-media slide
+        shows. These collections are saved and shared using ORE, a simple,
+        newsfeed-like file, making it possible for us to offer flexibility and service
+      unique on the Web.</p>
+      <h2>References</h2>
+      <p class="ReferencesText">Amazon Web Services. (<a href="../http://aws.amazon.com/">http://aws.amazon.com</a>).
+      Retrieved January 31, 2009.</p>
+      <p class="ReferencesText">Drupal.org | Community Plumbing. (<a
+href="../http://drupal.org/">http://drupal.org</a>).
+      Retrieved January 31, 2009.</p>
+      <p class="ReferencesText">Fedora Commons. (<a
+href="../http://www.fedora-commons.org/">http://www.fedora-commons.org/</a>).
+      Retrieved January 31, 2009.</p>
+      <p class="ReferencesText">Islandora 2008.  &ldquo;Islandora Fedora-Drupal module&rdquo; Blog post: Sep 26, 2008, University of
+        Prince Edward Island Robertson Library. (http://vre.upei.ca/dev/islandora).
+      Retrieved January 31, 2009.</p>
+      <p class="ReferencesText">Morris, Carol Minton. &ldquo;DSpace Foundation and Fedora
+        Commons Receive Grant from the Mellon Foundation for DuraSpace&rdquo;. &nbsp;<i>HatCheck newsletter</i>, Nov 11, 2008.  (<a
+href="../http://expertvoices.nsdl.org/hatcheck/2008/11/11/dspace-foundation-and-fedora-commons-receive-grant-from-the-mellon-foundation-for-duraspace/">http://expertvoices.nsdl.org/hatcheck/2008/11/11/dspace-foundation-and-fedora-commons-receive-grant-from-the-mellon-foundation-for-duraspace/</a>).
+      Retrieved February 25, 2009.</p>
+      <p class="ReferencesText">NLNZ 2003.  National Library of New Zealand.&ldquo;Metadata Extraction Tool&rdquo;. (<a href="../http://www.natlib.govt.nz/services/get-advice/digital-libraries/metadata-extraction-tool">http://www.natlib.govt.nz/services/get-advice/digital-libraries/metadata-extraction-tool</a>),
+      created 2003. Retrieved January 31, 2009.</p>
+      <p class="ReferencesText">RubyFedora/ActiveFedora (the Ruby and Fedora code
+        developed for this project). (<a href="../http://projects.mediashelf.us/projects/show/active-fedora">http://projects.mediashelf.us/projects/show/active-fedora</a>/).
+      Retrieved January 31, 2009.</p>
+      <p class="ReferencesText">Zumwalt, Matt. &ldquo;Preview of ActiveFedora DSL&rdquo;. Blog
+        post: Oct 6, 2008. <i>The Media Shelf.</i> (<a href="../http://yourmediashelf.com/blog/2008/10/06/preview-of-activefedora-dsl/">http://yourmediashelf.com/blog/2008/10/06/preview-of-activefedora-dsl/</a>).
+      Retrieved January 31, 2009.</p>
+<!-- InstanceEndEditable --> </div>
+  			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->Davidow, A., Fedora, Drupal, and Cloud Computing for a Low-Cost, Sustainable DAM<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2009: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2009/papers/<!-- #BeginEditable "URL" -->davidow/davidow.html
+				 <!-- #EndEditable --></p>
+	</div>
+</div>
+  <!--htdig_noindex-->
+  
+  <div id="sidebar">
+    <div id="side-nav">
+      <ul id="side-nav-list">
+        <li id="workshops"><a href="../../workshops/index.html" class="menu">Workshops</a></li><li id="sessions"><a href="../../sessions/index.html" class="menu">Sessions</a></li><li id="speakers"><a href="../../speakers/index.html" class="menu">Speakers</a></li><li id="interactions"><a href="../../interact/index.html" class="menu">Interactions</a></li><li id="demonstrations"><a href="../../demos/index.html" class="menu">Demonstrations</a></li><li id="events"><a href="../../events/index.html" class="menu">Events</a></li><li id="exhibits"><a href="../../exhibit/index.html" class="menu">Exhibits</a></li><li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li><li id="pc"><a href="../../thanks/index.html" class="menu">Committees</a></li><li  id="community"><a href="../http://conference.archimuse.com/" class="menu">Community On-line</a></li>
+      </ul>
+    </div>
+    <div id="search-site">
+<form method="get" id="searchform" action="http://wp.museumsandtheweb.com/">
+<input type="text" class="field" name="s" id="s" placeholder="Search">
+<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+</form>
+    </div>
+        <div id="addthis">
+    <!-- AddThis Button BEGIN -->
+	<script type="text/javascript">var addthis_pub="archimuse";</script>
+	<script type="text/javascript">var addthis_brand = "archimuse";</script>
+	<script type="text/javascript">var addthis_options = 'twitter, facebook, linkedin, delicious, email, digg, favorites, more';</script>
+	<a href="../http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="../../../external.gif?link=http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" alt="Share"/></a><script type="text/javascript" src="../http://s7.addthis.com/js/200/addthis_widget.js"></script><!-- AddThis Button END -->
+</div>
+    
+    <div id="sidebar-links">
+      <ul id="sidebar-links-list">
+        <li><a href="../../../index.html" class="produced-by">produced by<br />
+          <img src="../../images/sidelogo.png" width="144" height="37" alt="AMI logo" /></a></li>
+        <li><a href="../../../index.html">Join our mailing list</a></li>
+        <li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+          <img src="../../images/search.gif" alt="search" width="24" height="25" border="0" /></a></li>
+      </ul>
+    </div>
+    <div id="sidebar-acknowledge">
+
+      <div id="sponsor">
+</div>
+    </div>
+   <!--/htdig_noindex-->
+  </div>
+  <div id="footer">
+    <div id="last-updated"> last updated: <!-- #BeginDate format:Am1a -->October 27, 2010 4:57 PM<!-- #EndDate -->
+      <br />
+[analytics code]<br />
+<div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+    </div>
+    <!--htdig_noindex-->
+    <div id="footer-content">
+      <p>Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E
+        2P3 Canada<br />
+        Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2009";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2008 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				  </script>
+        <br />
+        Copyright &copy; 2009 &ndash; Archives &amp; Museum Informatics &ndash; All
+        rights reserved.<br />
+      </p>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2009/papers/davidow/davidow.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:56:38 GMT -->
+</html>

@@ -1,0 +1,561 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/rigsby/rigsby.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:38 GMT -->
+<head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>Envisioning the E-Quarium: Strategic design planning for the Monterey Bay Aquarium's web site</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onLoad="MM_preloadImages('../../nav/mw2001_nav_registeron.gif','#943398414283');MM_preloadImages('../../nav/mw2001_nav_workshopson.gif','#943398455733');MM_preloadImages('../../nav/mw2001_nav_sessionson.gif','#943398500450');MM_preloadImages('../../nav/mw2001_nav_speakerson.gif','#943398534416');MM_preloadImages('../../nav/mw2001_nav_demoson.gif','#943398577050');MM_preloadImages('../../nav/mw2001_nav_exhibiton.gif','#943398612066');MM_preloadImages('../../nav/mw2001_nav_eventson.gif','#943398640266');MM_preloadImages('../../nav/mw2001_nav_beston.gif','#943398663166');MM_preloadImages('../../nav/mw2001_nav_keydateson.gif','#943398701050');MM_preloadImages('../../nav/mw2001_nav_seattleon.gif','#943398731383');MM_preloadImages('../../nav/mw2001_nav_sponsoron.gif','#943398934733')">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.register','document.register','../../nav/mw2001_nav_registeron.gif','#943398414283')"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"></a> 
+        <br>
+        <a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.workshops','document.workshops','../../nav/mw2001_nav_workshopson.gif','#943398455733')"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"></a> 
+        <br>
+        <a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sessions','document.sessions','../../nav/mw2001_nav_sessionson.gif','#943398500450')"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"></a> 
+        <br>
+        <a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.speakers','document.speakers','../../nav/mw2001_nav_speakerson.gif','#943398534416')"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"></a> 
+        <br>
+        <a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.interact','document.interact','../../nav/mw2001_nav_interacton.gif','#943398534416')"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"></a> 
+        <br>
+        <a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.demos','document.demos','../../nav/mw2001_nav_demoson.gif','#943398577050')"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"></a> 
+        <br>
+        <a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.exhibits','document.exhibits','../../nav/mw2001_nav_exhibiton.gif','#943398612066')"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"></a> 
+        <br>
+        <a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.events','document.events','../../nav/mw2001_nav_eventson.gif','#943398640266')"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"></a> 
+        <br>
+        <a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.best','document.best','../../nav/mw2001_nav_beston.gif','#943398663166')"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"></a> 
+        <br>
+        <a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.dates','document.dates','../../nav/mw2001_nav_keydateson.gif','#943398701050')"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"></a> 
+        <br>
+        <a href="../../seattle/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.seattle','document.seattle','../../nav/mw2001_nav_seattleon.gif','#943398731383')"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"></a> 
+        <br>
+        <a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sponsor','document.sponsor','../../nav/mw2001_nav_sponsoron.gif','#943398934733')"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"></a> 
+        <br>
+        <br>
+        <br>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"></a> 
+        <br>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br>
+        158 Lee Avenue<br>
+        Toronto, Ontario<br>
+        M4E 2P3 Canada<br>
+        info@ archimuse.com<br>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br>
+            A&MI</font></a> </span></td>
+        </tr>
+      </table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class='verysmall'>Published: March 15, 2001.<br>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated:&nbsp;"+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"><br>
+      <!-- #BeginEditable "Body" --> 
+
+      <h1 class="PaperTitle">Envisioning the E-Quarium: Strategic design planning 
+
+        for the Monterey Bay Aquarium's web site</h1>
+
+      <h2 class="Author">Lauralee Alben, AlbenFaris Inc., Michael Rigsby, Monterey 
+
+        Bay Aquarium, USA</h2>
+
+      <h1 class="abstractTitle">Abstract</h1>
+
+      <span class="AbstractText">This presentation focuses on the strategic design 
+
+      planning and vision creation process for the E-Quarium, the online complement 
+
+      to the Monterey Bay Aquarium. More than six months of informed investigation 
+
+      and analysis resulted in an ambitious redesign of the web site, which launched 
+
+      in October 1999. The aquarium and AlbenFaris worked in close partnership 
+
+      in a collaborative development process that included visitor research, establishment 
+
+      of a clear strategic vision, a set of goals and content objectives, identification 
+
+      of target audiences, scenario planning, competitive analysis, site definition 
+
+      and design. As a result, the new E-Quarium exemplifies the relevance of 
+
+      grounded design practice.case study, this is a thoughtful weaving of the process, perspectives and 
+
+      experiences the designers gained from understanding the aquarium's structure, 
+
+      mission and culture and the needs of the aquarium's key audiences. The inclusion 
+
+      of experts in marine biology and conservation, exhibition design and technology 
+
+      as members of the development team provided inspiration and insights beyond 
+
+      the normal boundaries of interactive design. This 
+
+      presentation is also a journey into the wonder of kelp forests and the deep 
+
+      sea-habitats showcased in the aquarium exhibits and the online E-Quarium. 
+
+      Both the physical aquarium and the E-Quarium have a profound effect on visitors, 
+
+      inspiring and informing them about the wonders of the oceans. And both serve 
+
+      as catalysts, making visitors aware of ocean conservation issues and encouraging 
+
+      them to join with the Monterey Bay Aquarium in the cause of ocean conservation. 
+
+      </span>
+
+      <p class=AbstractText>Keywords Strategy, web site, visitor research, interactive 
+
+        design, scenario planning, goal planning, collaborative design, multimedia, 
+
+        competitive analysis, online surveys</p>
+
+      <h1>INTRODUCTION</h1>
+
+      <p class=normal>Widely acclaimed as the most innovative aquarium in the 
+
+        world, the Monterey Bay Aquarium was founded in 1978 by marine biologists 
+
+        and Hewlett-Packard co-founder David Packard. With a mission to inspire 
+
+        conservation of the oceans, the aquarium maintains cutting-edge conservation 
+
+        research programs for threatened sea otters and for bluefin tuna and other 
+
+        open ocean fishes. Since 1984, it has attracted more than 27 million visitors 
+
+        and has set attendance records among U.S. aquariums. It has pioneered 
+
+        living exhibits of jellies, open ocean animals and deep sea creatures. 
+
+        Aquarium education programs welcome more than 90,000 students and teachers 
+
+        each year.</p>
+
+      <p class=normal>In late 1997 the Monterey Bay Aquarium committed to a major 
+
+        redesign and expansion of its existing E-Quarium web site. In developing 
+
+        new projects, the aquarium places a high value on both internal teamwork 
+
+        and involving visitors in the design process by identifying and meeting 
+
+        their needs and expectations. For this project, the aquarium selected 
+
+        AlbenFaris Inc. as its design partner because of their high-quality interaction 
+
+        design and because it recognized them as a firm with whom the aquarium 
+
+        could work in a close, collaborative partnership. This partnership, along 
+
+        with efforts of a large team, launched the new E-Quarium in October 1999.</p>
+
+      <h1>THE E-QUARIUM VISION</h1>
+
+      <p class=BlockQuote>&quot;People see us a trusted guide; they sense that 
+
+        we care. Let's find new ways to reach their hearts and minds and move 
+
+        them to become more connected with the oceans.&quot; </p>
+
+      <p class=BlockQuoteAuthor>Julie Packard, Executive Director</p>
+
+      <p class=normal>A culmination of more than six months of intensive investigation 
+
+        and analysis, the overall vision for the E-Quarium crystallized into an 
+
+        inspiring context that informed the site design. The E-Quarium was designed 
+
+        to become &quot;Your Ocean Link&quot;-a trusted guide to ocean information. 
+
+        The E-Quarium reflects the aquarium's commitment to cutting-edge exhibits, 
+
+        scientific accuracy and educational innovations. It also incorporates 
+
+        the latest advances in web design and e-commerce.<br>
+
+      </p>
+
+      <p class=MsoCaption><img src="rigsby_albenfig1.jpg" border="0" width="400" height="299" alt="Figure 1. Site vision and relationships"><br>
+
+        Figure 1. Site vision and relationships</p>
+
+      <p class=normal>The vision statement called for the site to create relationships 
+
+        with visitors at several different levels. At its core, the site would 
+
+        connect visitors with the aquarium and with the aquarium's mission to 
+
+        inspire ocean conservation. </p>
+
+      <p class=normal>The Monterey Bay Aquarium is a regional aquarium, focusing 
+
+        on the marine life and marine conservation issues of the Monterey Bay 
+
+        National Marine Sanctuary (the largest and richest of the nation's protected 
+
+        marine areas.) Thus, the second ring of connection was to sanctuary. Beyond 
+
+        these waters lie the world's oceans, and, since the web site would have 
+
+        global reach, the next ring of connection would be to the greater oceans 
+
+        beyond Monterey Bay. </p>
+
+      <p class=normal>At the outer ring, tying together all the others, were the 
+
+        visitors themselves. Therefore, the goal was to design ways to make meaningful 
+
+        connections between our visitors and the ocean, visitors and the aquarium 
+
+        and among visitors themselves.</p>
+
+      <h1>VISITOR NEEDS AND GOALS</h1>
+
+      <p class=BlockQuote>&quot;I am 11 years old. I have already written to the 
+
+        President about protecting dolphins because they are my favorite animals. 
+
+        He wrote me back saying that he would do something to help them. I love 
+
+        your aquarium so much that I went there to celebrate my birthday. I think 
+
+        you could make it even better though if you put a section where people 
+
+        could complain about any marine mammals that they think are being treated 
+
+        unfairly.&quot;</p>
+
+      <p class=BlockQuoteAuthor>Leor Friedman, San Francisco</p>
+
+      <p class=BlockQuote>&quot;We need to build a site that starts you out in 
+
+        third grade and then grows with you.&quot; </p>
+
+      <p class=BlockQuoteAuthor>Steve Webster, Marine Science Advisor</p>
+
+      <p class=normal>The initial phase of the multiyear project involved creating 
+
+        a strategic plan that would guide the team through the development of 
+
+        the site. We began by conducting internal research at the aquarium. Through 
+
+        ongoing conversations with the aquarium's Internet Producer, and the extensive 
+
+        review of aquarium publications and documents, the designers became immersed 
+
+        in the aquarium's structure and culture. We then began a series of in-depth 
+
+        interviews with aquarium staff and volunteers to identify the desires, 
+
+        concerns and perceived opportunities of key departments and work groups. 
+
+      </p>
+
+      <p class=normal>From this research, we defined five main target audiences: 
+
+        children in grades K-12, their parents, K-12 teachers, adults age 25-55 
+
+        without children, and aquarium members. Aquarium volunteers and members 
+
+        of the Press were targeted as secondary audiences.</p>
+
+      <p class=normal>Based on the audiences we wished to reach, we then began 
+
+        a period of visitor research. We created an online demographic survey 
+
+        to determine who was using the existing site, how they were using it and 
+
+        what features or content they would like or expect to find on the site. 
+
+        Concurrently, we conducted in-depth interviews with members of each audience 
+
+        group. We also reviewed two-year's worth of unsolicited visitor ideas, 
+
+        comments and suggestions from the existing site, to find commonalties 
+
+        in what our existing online audience was asking for. We then identified 
+
+        the strategic opportunities inherent in our findings.</p>
+
+      <p class=normal>Among the key demographic findings was that 30% of the visitors 
+
+        to the existing site were teenagers-one of our primary target audiences. 
+
+        This large percentage, despite fact that teenagers don't typically visit 
+
+        the physical aquarium, spoke to the tremendous opportunity for the new 
+
+        site. We also found that 56% of those in the survey had visited the aquarium 
+
+        between two and five times, while 27% had never visited the aquarium. 
+
+        These results pointed to both the possibilities of strengthening the bond 
+
+        with existing visitors and making them more deeply aware of and involved 
+
+        in marine conservation, as well as the opportunity to reach large numbers 
+
+        of new visitors. </p>
+
+      <p class=MsoCaption><img src="rigsby_albenfig2.jpg" border="0" width="400" height="301" alt="Figure 2. Needs/benefits analysis"><br>
+
+        Figure 2. Needs/benefits analysis</p>
+
+      <p class=normal>Based on staff interviews and the results of our audience 
+
+        research, we identified both key aquarium goals and visitors' needs. We 
+
+        then created a needs/benefits analysis to position the site content to 
+
+        best serve both the aquarium and its visitors.</p>
+
+      <h1>SITE DEFINITION</h1>
+
+      <p class=BlockQuote>&quot;The aquarium is one of the best, well thought 
+
+        through, most complete exhibits of local marine biology that there could 
+
+        possibly be. The aquarium is at the top if its class and the web site 
+
+        should be too. The site is going to have to be wildly creative, innovative 
+
+        and technologically advanced to get me to visit it often.&quot;</p>
+
+      <p class=BlockQuoteAuthor>Steve Shimek, marine biologist and aquarium member</p>
+
+      <p class=normal>During the site definition phase, we conducted an analysis 
+
+        of the aquarium's existing site and a competitive analysis of other aquarium, 
+
+        zoo, museum, and conservation sites, comparing content and technology. 
+
+        We identified areas of improvement for the new site and opportunities 
+
+        to extend the site beyond what others were currently offering.</p>
+
+      <p class=normal>We also looked at the aquarium's core values and brand identity, 
+
+        and the desirable attributes for the new site as expressed during aquarium 
+
+        staff interviews and matched these with the characteristic strengths of 
+
+        the web medium. From this, we created a list of design attributes for 
+
+        the site to guide us during later development. These included building 
+
+        a site that was informative, interactive, fluid, that could be kept current, 
+
+        and that could grow and evolve easily over time.</p>
+
+      <p class=normal>Informed by our visitor interviews, we mapped out four scenarios 
+
+        (one for each of the target audiences) to predict how visitors might interact 
+
+        and move through the site. These included a ten-year-old kid who visited 
+
+        the E-Quarium with his mom in order to research his sea otter report; 
+
+        an adult with out kids who was planning an aquarium visit; an aquarium 
+
+        member who visited the Member section and stayed up-to-date on the current 
+
+        events at the aquarium; and a teacher planning a unit on marine science 
+
+        and a field trip.</p>
+
+      <p class=MsoCaption><img src="rigsby_albenfig3.jpg" border="0" width="400" height="312" alt="Figure 3. Visitor scenario planning"><br>
+
+        Figure 3. Visitor scenario planning</p>
+
+      <p class=normal>With the results of our research, we created a vision statement 
+
+        for the new site, detailed the scope of the project, and created a preliminary 
+
+        site architecture. We created several prototypes, conducted usability 
+
+        tests and a final design that continues to evolve today.</p>
+
+      <h1>THE E-QUARIUM LAUNCH</h1>
+
+      <p class=normal>In the presentation, we will also take a tour through the 
+
+        new E-Quarium, showing how the strategic design planning is reflected 
+
+        in the end result, and how both the site content and design are expressions 
+
+        of the vision statement.</p>
+
+      <p class=MsoCaption><img src="rigsby_albenfig4.jpg" width="400" height="503" alt="Figure 4. Final web page design for habitats path"><br>
+
+        Figure 4. Final web page design for habitats path</p>
+
+      <p class=normal>The design, informed by over one hundred and forty people 
+
+        from aquarium staff, members and volunteers as well as E-Quarium visitors 
+
+        from around the world, reflects our best attempts to meet everyone's needs 
+
+        and desires. If the E-Quarium e-mail is any indication, the site is reaching 
+
+        people's hearts and minds as they join with the Monterey Bay Aquarium 
+
+        in conserving the world's oceans. </p>
+
+      <p class=BlockQuote>&quot;We are all feeling very happy and hopeful because 
+
+        we could find out there are still in our world people like you, that love 
+
+        life and work so hard and efficiently for its protection. Thank you for 
+
+        the beautiful feeling you gave us, and also for the great contribution 
+
+        to my children's education.&quot;</p>
+
+      <p class=BlockQuoteAuthor>Carlos, Brazil</p>
+
+      <p class=MsoCaption><img src="rigsby_albenfig5.jpg" width="400" height="345" alt="Figure 5. Final home page design for the E-Quarium"><br>
+
+        Figure 5. Final home page design for the E-Quarium</p>
+
+      <h1>REFERENCES</h1>
+
+      <p class=ReferencesText><span class="ReferencesText">The Monterey Bay Aquarium 
+
+        E-Quarium web site</span></p>
+
+      <p class=ReferencesText><span class="ReferencesText"><a href="http://www.montereybayaquarium.org/" target="new">http://www.montereybayaquarium.org</a></span></p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/rigsby/rigsby.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:38 GMT -->
+</html>

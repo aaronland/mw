@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/the-museum-digital-experience-considering-the-visitors-journey/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:51:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>The Museum Digital Experience: Considering the Visitor&#8217;s Journey | MWA2015: Museums and the Web Asia 2015</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/mw-theme/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mwa2015.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/wp-emoji.js?ver=5.6","twemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/twemoji.js?ver=5.6"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='../../wp-content/themes/twentyeleven/blockscb8b.css?ver=20190102' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index7cc7.html?p=547' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embedb379.json?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fthe-museum-digital-experience-considering-the-visitors-journey%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed07a4?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fthe-museum-digital-experience-considering-the-visitors-journey%2F&amp;format=xml" />
+</head>
+
+<body class="paper-template-default single single-paper postid-547 wp-embed-responsive single-author two-column right-sidebar">
+<div id="page" class="hfeed">
+
+<style type="text/css">
+branding.img { height: auto; display: block; width: 100%; }
+#image  { position:relative;z-index:10;  }
+#text   { position:absolute; z-index:100; }
+#site-description { font-weight: normal; color: #fff; margin: 0 20px 20px 0;}
+#site-title a { color: #fff; }
+#site-title { margin-right: 20px; }
+</style>
+
+<header id="branding" role="banner">
+<hgroup>
+	<div id="text">
+<h1 id="site-title"><span><a href="../../index.html" rel="home">MWA2015: Museums and the Web Asia 2015</a></span></h1>
+<h2 id="site-description">The conference of Museums and the Web in Asia | October 5-8 | Melbourne, Australia</h2>
+	</div>
+</hgroup>
+
+			
+<div id="image"><a href="../../index.html"><img src="../../wp-content/uploads/2014/10/Melbourne-MWA2015.jpg" width="1000" height="250" alt="Museums and the Web Asia 2015" /></a></div>
+			
+			
+										
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-10"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="../../local-info/index.html">Local Info</a></li>
+	<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+	<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-16"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="../../exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="../../advertising-guildlines/index.html">Advertising Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="../../attending/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="../../workshop-program/index.html">Workshops</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../hobart-deep-dive/index.html">Hobart Deep Dive</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="../../attendees/index.html">Attendees</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<div id="primary">
+<div id="content" role="main">
+<article id="post-547" class="post-547 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">The Museum Digital Experience: Considering the Visitor&#8217;s Journey</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/cmdevine/">Catherine Devine</a>, Microsoft, USA</p>
+<h2>Abstract</h2>
+Museums, and many other organizations, tend to approach digital projects from the perspective of individual channels. They propose an app, a website, an interactive. This makes sense for organizations.  
+
+However, visitors don’t think in channels. Visitors expect a single, unified experience across all of their interactions. Visitors don’t even distinguish physical and digital experiences, to them it is all one experience, and they expect that to flow seamlessly from one to the other. 
+
+They buy their tickets in one channel and pick up in another. They indicate interests in one channel, such as website, and expect that to carry through to other channels, such as an app. 
+
+This expectation requires Museums to think differently when initiating digital projects. It requires Museums to think about the larger ecosystem that these digital initiatives exist in.
+
+This paper proposes how to bring this thinking to Museums as new digital projects are initiated, with practical examples of how to apply this thinking.</p>
+<p><b>Keywords:</b> experience, visitor centric, journey, digital</p>
+<h2>Introduction</h2>
+<p>As digital became more mainstream, many Museums developed websites, digital interactives, and in more recent years social presences and apps. These are all ubiquitous digital channels now in all aspects of life, and Museums continue to identify many creative and interesting ideas leveraging these channels. However, have we lost sight of their purpose, and how they fit into a bigger picture?</p>
+<p>More recently, there has been a trend to establish digital teams in Museums focusing on digital strategies and the implementation of digital initiatives. These are important organizations to allow the institution to focus, develop expertise, and facilitate change. However, ultimately digital is not different to the rest of the Museum, and is far more tightly integrated than it may appear. Digital strategy is just strategy. Digital experiences are just experiences. For a limited time, the need to champion digital is important, however ultimately digital needs to be tightly integrated into the mainstream Museum to have the greatest transformational impact.</p>
+<p>Digital experiences are not distinct from regular experiences. Visitors experience Museums, and those experiences comprise digital elements as well as physical elements. Visitors don’t distinguish. We’ve extended the existing visitor experience with additional channels, in the form of digital, but fundamentally it is the same experience we are building on. Our thinking has evolved from the early days of projects that initiate building an app, for example, considered independently of its larger context, to thinking about how digital augments the visitor experience and selecting the right digital solution for that experience. Sometimes that is an app and sometimes it isn’t. The most successful digital initiatives are those that make sense in the real-world journey and experience your visitor is already taking, and fits seamlessly with that experience.</p>
+<p>Understanding visitor journey also means understanding that a visitor’s experience doesn’t start and end with a physical visit to the Museum. The visitor’s experience starts before they arrive, exists during the visit and extends after they leave. It starts with anticipating, planning and discovering. The experience doesn’t end when the visitor leaves.</p>
+<p>Thinking about extending the visitor journey with digital channels also requires understanding where your visitors physically are at various stages of the journey, and the digital channels and content types that make the most sense at each stage. A journey may comprise many digital channels, designed to fit specific stages and information needs and types and contexts. They do not expect multiple digital experiences, but one seamless experience with information that hands off from one channel to another and that makes sense for what they need at each stage. Visitors expect information when they want it, how they want it, and specific to the purpose.</p>
+<p>This paper explores the seamless integrated physical/digital journey; before, during and after the visit, that considers where visitors are, what they’re doing and considers digital channels and solutions designed to fit that need integrated over the end to end experience.</p>
+<h2>History</h2>
+<h3>Starting out with Individual Digital Initiatives</h3>
+<p>Museums have always experimented with technology and have been early adopters of digital initiatives. These have included the establishment of websites in the 1990s, digital interactives throughout the in-Museum experience, and embracing apps and a social presence in more recent years. In many Museums, there are many individual initiatives across many teams to adopt these kinds of technologies, as well as a strong culture to experiment with emerging technologies. These efforts have often been championed by enthusiastic early adopters.</p>
+<p>However, in many instances these initiatives have been technology first initiatives. That is, the initiative is driven from the desire to experiment with a new technology rather than the need to address some organizational or visitor need. They are innovative, however sometimes they don’t fit into that larger context, and never become part of the mainstream Museum. Outside of the Museum space, the history of technology in all verticals has many examples of why technology should not be implemented for technology’s sake. Technology should be implemented because it contributes to some larger organizational goal. As a result, initiatives such as these are at risk of becoming disconnected or adjacent to the rest of the Museum, rather than an integral part of the Museum.</p>
+<h3>Establishment of Digital Teams</h3>
+<p>In the last few years, there has been a movement towards the establishment of digital teams to champion the cause of digital, increase the digital profile within the Museum, and achieve resource efficiencies in the development of digital content and applications. While dedicated digital teams have been helpful in raising the profile of the need to think digitally in Museums, they have not yet achieved full integration into the mainstream Museum. They have, however, made significant advances and a focus on digital has provided Museum’s with organizational capacity and focus in digital.</p>
+<h3>The Standalone Nature of Digital Initiatives</h3>
+<p>However, even with the establishment of digital teams, many digital initiatives stand alone from each other. That is, projects are framed in terms of apps, websites, kiosks, Apple Watch apps, Google Glass apps. These initiatives are typically are self-contained within a single channel.</p>
+<p>These initiatives are still missing that larger context of why? Do digital initiatives that are self-contained within one channel make sense. Or is there a lost opportunity there? Framing initiatives in this manner, by channel, misses out on some of the opportunities that digital can really afford.</p>
+<h2>The Concept of Journey</h2>
+<h3>Visitors do not experience you in a single channel</h3>
+<p>The reality is that visitors don’t experience the Museum in a single channel. Visitors don’t see Museums in terms of channels, they see the Museum as a single entity. The digital experience of your visitors doesn’t start and end in the website. The same is true of apps, all of your visitor’s digital interactions with the Museum don’t start and end in an app. The idea that everything happens in one channel doesn’t exist, and it is not just the case for Museums. This is a more general trend.</p>
+<p>The United States Digital Service (2015), a group tasked with transforming federal government digital services in the United States, has as the second imperative in their Digital Services Playbook the concept of addressing the whole experience from start to finish.</p>
+<p>Allegra Burnette and other authors from Forrester Research (2015) state in their “Digital Customer Service Trends 2015” report that 2015 sees a shift from beyond mobile to a broader view of the digital customer experience.</p>
+<p>Ray Wang (2015) of Constellation Research states in his book, <em>Disrupting Digital</em>, that digital transformation is about delivering authentic experiences and outcomes, not just products and services.</p>
+<p>Visitors engage in a journey with the Museum that transcends time, place, channel, device and context. And they expect a seamless handoff between channels and devices, as they experience the Museum in all of these contexts.</p>
+<p><em>Time</em> – they interact with you at many different times of the day, not only when the Museum is open.</p>
+<p><em>Place</em> – they interact with you at home, in the subway, at coffee shops, in the Museum, in their cars &#8211; and their informational needs differ depending on where they are, and what they need at that time.</p>
+<p><em>Channel</em> – they interact with you on apps, social, websites, mobile web and any other channel that is available.</p>
+<p><em>Device</em> – they move between devices constantly – tablets, smartphones, wearables, desktops.</p>
+<p><em>Context</em> – they interact in lots of different contexts and they don’t want more information than they need in each context. Standing in the Museum they might be trying to find a restroom, sitting in Starbucks with a friend they may be looking up ticket prices. They don’t need to be presented with every possible piece of data, only what they need.</p>
+<h3>Micro Moments and Interactions</h3>
+<p>When we think of a visitor journey we tend to think of it as a continual sequence, such as a road trip across the country. However, this series of interactions does not occur as one continual sequence but rather a series of many individual moments, or “I …” moments.</p>
+<p>“I wonder when the Museum is open?”, “How do I get there?”, “I’m lost”, “I wonder how old that dinosaur was that I saw yesterday”, “Let me post photos of our visit on Facebook,” “Where can I get coffee?”</p>
+<p>Ted Schadler (2015) discusses this concept in his book, <em>Mobile Mindshift</em>.</p>
+<h3>Movement between channels and devices</h3>
+<p>The visitor’s journey with the Museum transitions between channels, as they move from website to app to social to website. The visitor’s journey also exists on many devices, whether it be tablet, smartphone, smartwatch, browser. Visitors reach out to the nearest device that is handy to them and they expect you, the Museum, to be there, because their expectations are influenced by standards that exist in the general world, not just what is the norm in the Museum world. And visitors are constantly moving between channels and between devices.</p>
+<h3>Journey that extends beyond the in-Museum experience</h3>
+<p>It’s also key to remember that visitors experience of the Museum is not limited to the time they are in the Museum. It requires us to extend our thinking beyond the in Museum experience to the idea of a journey with a “before /during /after” component. Before the visit, during the visit, and after the visit. Sometimes this doesn’t apply to all visitor segments, with some segments existing entirely online and never physically visiting the Museum.</p>
+<h3>Journey also extends beyond Museum owned digital channels</h3>
+<p>Often, we think in terms of digital channels that are controlled by the Museum. But the entire journey is influenced by digital channels outside of the Museum’s control. When visitors are looking for directions, they’re looking for you on Google Maps; they don’t necessarily look on your website. When they’re looking for somewhere to eat near the Museum, they’re looking on Open Table. When they’re looking to see what to see at the Museum, or what others found interesting, they’re looking on Yelp. It’s easy to forget these channels, because we don’t control them, but they are a key part of the journey that the visitor takes with us and we need to consider them in the same way that we do our own channels.</p>
+<h3>There is no one journey &#8211; different journeys for different segments</h3>
+<p>Journeys also exist for different segments. There is no one journey for a Museum, and the types of journeys vary depending on the visitor segment. Local visitors experience differently to tourists. Families experience differently to couples. Educators and their students have completely different journeys. Visitors who are entirely online experience very differently again. Even within segments there there is no one journey.</p>
+<h3>Digital and physical worlds are the same world</h3>
+<p>Understanding the idea of visitors experiencing the Museum as a journey, moving among channels, devices and properties in a series of many micro-moments, and experiencing it differently from other visitor segments, we notice one fundamental underlying assumption: we assume that all interactions are digital. Just as visitors see the Museum as one entity, not separate channels, visitors also see the digital and physical or “brice and mortar” elements of the Museum as a single entity. They don’t think of your digital components and the rest of the Museum as being separate. So, we need to extend the concept from just being a digital journey to being a journey that hands off seamlessly between digital and physical channels to become one single journey. In reality the journey is not a digital journey, but a journey. The physical/digital worlds are completely integrated in the eyes of visitors, with digital representing components of that experience.</p>
+<p>What does this mean? This can mean something as simple as expecting that a physical exhibit object they are looking at can be found on mobile web to gain more information while they stand in front of it. It could mean that if they speak to staff that those staff are as aware of what they’ve done online with the Museum as they have offline. They can see that they purchased a membership online, and be able to provide them information about it, for example. In a more sophisticated example, they can identify that they’re more interested in Space than Dinosaurs and build this knowledge into the face to face communication.</p>
+<h3>What does this mean for how we think about digital initiatives?</h3>
+<p>We’re now talking about quite a sophisticated model, much more sophisticated than the development of individual initiatives. Importantly, this sophistication allows for digital to be much more part of the mainstream Museum experience, as well as leveraging digital in a way that meaningfully augments the visitor experience.</p>
+<p>Visitors expect a single unified experience across all their interactions with you, a continuity and consistency of experience, information relevant to the context, and a seamless transition or handoff from one channel to another, whether that be digital or physical.</p>
+<p>In addition, they want to be recognized as a unique individual across every point of contact they have with you, with an awareness of the relationship that has occurred in other channels. And as a Museum, you want to understand the sequence and set of interactions that are coming from a unique person, to inform your own strategies.</p>
+<p>But first, let’s look at a more tangible example of this concept.</p>
+<h3>Before Visit</h3>
+<p>A family of four has relatives coming into town for Thanksgiving. They are considering a trip to the Museum for the day after Thanksgiving.</p>
+<p>One evening, they go to the website using their iPad to research hours, costs, and what’s on that may be interesting. A couple of days later they come back to purchase tickets, while in their office at lunchtime. They’ll expect to be able to access those tickets on their mobile phone on the day of their visit. And they might email customer service to ask about whether they can bring strollers.</p>
+<p>The night before the visit they’ll come back to the website on their iPad to find out information on directions, entrances. And on the day of the visit while driving into the city, they use their phone to get directions on Google Maps, and to investigate more about what to see.</p>
+<h3>During Visit</h3>
+<p>On arriving at the Museum, they pull out their phones to access their tickets. Then they’re inside the Museum and having no idea how to get to what they want to see, or maybe even what they want to see, they download Explorer (app) to find their way around, learn about what they’re seeing and be inspired about what to see next. They are notified digitally that the Space Show starts in 15 minutes and provided turn-by-turn directions to that exhibit. While in the Museum, they experience exhibitions, including those with digital interactives. They stumble across special exhibitions for which they haven’t purchased tickets, and change their tickets on their phone so they can access them.</p>
+<p>They start to think about what to do for lunch, visit the café, look for restrooms. As they walk around the Museum, they find things that they like, photograph them and share them with family and friends.</p>
+<h3>After Visit</h3>
+<p>They leave the Museum when it closes, and look on Open Table to find nearby places to eat.</p>
+<p>When they get home they continue to think about things that they saw and look for more information on them online. They share exhibits that they saw and post photos on Facebook and social channels.</p>
+<p>A few days later the Museum reaches out to them to follow up on their visit, possibly offers them a membership in exchange for their tickets, suggests some programs that they may find interesting based on what they experienced during their visit.</p>
+<p>You can see that in the course of this experience there are a number of interesting dynamics:</p>
+<ul>
+<li>The journey spans a significant period of time from days or weeks prior to visiting, through to days and weeks after visiting;</li>
+<li>There are gaps in the journey – it is not one single time continuum, it is many micro moments;</li>
+<li>They change from one device to another throughout the course of the experience: starting on an iPad, going to a desktop, going to a mobile phone for many of the interactions, interacting with digital interactives on site, going back to iPad, desktop, phone;</li>
+<li>There are many different contexts that they experience throughout the journey – from driving in a car looking for directions, to sitting at home in the evening posting photos on Facebook;</li>
+<li>There are physical and digital channels that they interact with;</li>
+<li>They interact with digital properties outside of those managed by the Museum.</li>
+</ul>
+<h3>Concept of Omni-Channel</h3>
+<p>This approach is known as omni-channel thinking. From the perspective of the visitor, all of the channels have converged in their mind and they expect a unified experience. Now digital initiatives need to be about implementing journeys, rather than single channel initiatives. Omni-channel thinking allows us to create experiences that cause differences in channels to vanish and visitors to easily move between channels.</p>
+<p>The retail vertical were early thinkers in this space when they appreciated that the shopping experience did not start and end in a store. Originally, the view was that only a small percentage of sales were occurring online, and even fewer in mobile, and therefore that those channels weren’t important. Many retail organizations had online businesses and in-store businesses that were quite separate organizationally. The thinking developed to recognize that most in-store transactions were influenced by digital channels, and these businesses needed to be much more integrated. It’s not that online was less important, but rather a crucial step in influencing in-store sales. And customers expected to be able to see products online, be able to go to a store and try it out, go back online to see the full variety of colors and sizes, and then to go back to the store to purchase or continue the purchase online. It resulted in cross channel products such as purchase online, pick up in store.</p>
+<p>In addition, customers expected to be identified as the same person by the organization whether they were online or instore. They became frustrated when that didn’t occur, and it didn’t for a while as most digital retail businesses used separate systems to in-store systems. Or they expected to be able to return in-store something that they bought online, or vice versa, and they couldn’t because they were handled by different warehouses. Ultimately, retail also recognized that customers expected more digital tools to be available to support the in store experience. Customers expected to be able to save things that they saw as they walked around a store, find out additional product information such as fabric, cleaning methods.</p>
+<p>Michael Burgess, President of Hudson Bay Company Digital, which includes Saks Fifth Avenue, said in his Keynote, “Key Digital Trends in Omni-Channel Retail” presented at the Chief Digital Officer Summit in New York in April 2015, that a high proportion of in store sales have been influenced digitally. Digital is now the new flagship. Even though the purchase doesn’t necessarily occur on digital, specifically mobile, it doesn’t mean that digital channels are not key.</p>
+<p>While Museums are not in the retail vertical, it is important to remember that many of our visitors experience us in this concept of journey. Visitor expectations are heavily influenced by their digital experiences in the rest of their lives, and they expect that seamless transition where you will know who they are and understand the entire relationship regardless of the channels they’ve interacted with you on.</p>
+<p>This is easier said than done, and sometimes the organizational structure makes it difficult to think of the visitor holistically in all of their relationships with the Museum, and in all the interactions they have in the course of a visit. This contributes to disconnected experiences, and friction in the experience. We need to think holistically in a way that creates continuity, handoff, and consistency between channels. Visitors are not concerned with how you’re organized, they are only concerned with what they are trying to do.</p>
+<h2>Implications of Journey for Developing Digital Initiatives</h2>
+<p>I’d like to propose a different way of thinking about digital initiatives. Recognizing the idea of omni-channel and visitor journey requires us to significantly change how we approach the development of digital initiatives. Our thinking needs to move from thinking about developing individual standalone initiatives, such as apps, to developing integrated solutions that move seamlessly between many digital and physical channels to facilitate a seamless experience.</p>
+<p>We no longer should be thinking “we need an app”, and should now be thinking “what is the journey?”. Thinking journey first, will then tell you where the app falls into the journey, and what the app needs. When you think this way, you may still end up with needing an app, and probably many other things, but the features that you ultimately develop in the app are now framed differently. It is now “how does the app fit into the context of the journey you’ve defined”. Thinking this way will allow you to identify holes in the journey that are not being fulfilled, which will in turn drive digital requirements on your roadmap. Digital initiatives are now framed in the context of the overall experience and where they fit in rather than individual initiatives for features, products or channels.</p>
+<p>Thinking in terms of journey effects how you think about everything – channel roadmaps, project features, Museum systems architecture, content strategy, development, design, testing, deployment, requirements. It’s a business first or requirements first approach, rather than a channel first. The Inside Intercom Blog (2015) describes this as we are designing systems not destinations. Apps and websites are no longer the destination but part of a larger experience and context.</p>
+<p>Technologies that don’t work well together hinder the creation of digital experiences, and introduce friction into the experience. Relying on channel specific technologies without thinking about how to handoff between channels results in disjointed interactions with customers.</p>
+<h3>Continuity</h3>
+<p>When thinking about journey, rather than individual channels, the opportunities to create a continuity of experience becomes evident. There needs to be a smooth transition from one channel to another. The tickets that were bought on a laptop need to be available on the phone when your visitor need them, ideally effortlessly. When architecting systems, we need to ensure that information can be accessed in the channels that need them. Features need to be thought of cross-channel. If you’re planning a self guided Museum tour at home on your desktop, that feature needs to continue to the app so you can access it when you’re actually in the Museum.</p>
+<h3>Identity</h3>
+<p>Continuous identity across channels is key. How do you architect for continuous identity through the journey so that you can provide info that people need in each channel? Someone’s membership card purchased at point of sale needs to be accessible in an app, mobile web or web and probably all three.</p>
+<p>This also allows you to understand that a person in one channel is a person in a different channel which allows you to piece together how they actually experience the Museum. This is key to enriching Constituent Relationship Management (CRM) data that provides the Museum with a deeper understanding of visitor behavior and expectations.</p>
+<h3>Consistency</h3>
+<p>How do you ensure consistency of information and consistency of brand? Design efforts are now not just about design in an app, or a single channel, but how do you create continuity of design across channels. As with features, you now need to think about design in a cross-channel manner.</p>
+<p>And it’s not only design but content. Content needs to be consistent across channel. The Museum all needs to be telling the same story in every channel. But it can’t just be the same content, it also needs to be presented in a manner that makes sense for each channel, and the context of that phase of the journey.</p>
+<h3>What about mobile first? Or mobile only? Responsive design trends.</h3>
+<p>Luke Wroblewski championed the Mobile First movement. This was about thinking about designing for mobile first, rather than desktop first. This is still valid thinking. It was followed at various points by the mobile only moment, everything should only exist in mobile. There was Ethan Marcotte’s responsive design movement. And there have been digital first movements. These are all valid, but valid only from the perspective of individual channels. If the journey dictates a mobile web component, then it should absolutely be mobile first. Some features should only be mobile only. Some channels will be mobile first, and some part of the journey will be digital first, but the whole journey or experience can’t be digital only or mobile first. It’s about how that channel fits into an overall journey, and the context in which that channel is used.</p>
+<h2>Expanding Journey to Experience</h2>
+<p>Now that we understand the idea that digital initiatives exist in a larger context that supports an overall journey, with individual channels delivering pieces of that journey, we need to take this up a level and understand that the real value is in transforming the journey into an experience. Once you’ve reduced the friction in the journey with disconnected channels, then you can drive engagement with an experience that delights visitors.</p>
+<p>We discussed earlier the concept of segments, of different visitor types experiencing the Museum differently. Even within a single segment, everyone is different. The real differentiator of experience from journey is personalization and context. That is a journey that is tailored specifically to each individual, effectively reducing each of your visitors to a segment of one. Every individual effectively experiences the Museum differently in a way that is authentic and personalized to them. Ray Wang (2015) in his book, <em>Disrupting Digital</em>, says that digital channels are ideal for delivering this mass personalization at scale.</p>
+<h3>Personalization and Context</h3>
+<p>Personalization is a function of who you the visitor are, what you care about, but also where you physically are. Are you at home? On the subway? In front of the Blue Whale? In the parking lot? In a coffee shop?</p>
+<p>Websites were originally a one stop shop which provided everything you would ever need to know about the Museum, but now people expect to only get the right information at the right time in the right channel. And with so much information coming at people from so many directions the ability to narrow their options is key, and narrow them to something that they feel is personally relevant, which you can do if you understand them. Personalizaton allows you to provide a very tailored experience.</p>
+<p>Visitors don’t necessarily want to know about gems if they are here to see dinosaurs. But we also don’t want to limit them to things they know they are interested in, we also want to inspire them with relevant information. If they are here to see the dinosaurs, then we want to help them understand that dinosaurs had feathers, and that the current living ancestor of dinosaurs are birds. So we want to inspire them to explore deeper into birds. If they are interested in meteorites, we want to inspire them to look at gems, earthquakes.  We have the concept of related content to extend their experience into something that they see adds value, and recommended content which can be based on self identified interests as well as based on what other people like you are looking at.</p>
+<p>Ray Wang (2015) discusses that relevance is key and that context allows you to drive mass personalization at scale. He also discusses right time relevancy – delivery of the right info at the right time using the right mode for the right situation with the right priority.</p>
+<h2>The Future</h2>
+<p>Finally, what is the future? Now that we have digital initiatives framed in the concept of the visitor’s journey, and extended to creating engaging experiences that are personalized and contextual. And our digital initiatives planned and delivered from this perspective. What next?</p>
+<p>That there is a next, and always a next, is why it is so important to evolve from standalone initiatives. It allows you to create a platform that you can build on and scales to visitor expectations.</p>
+<p>The future is in understanding intent, being able to anticipate what the visitor wants to do next, being predictive. You’re extending the idea of seamless handoff between channels in a personalized way to anticipating what a visitor wants to do next, maybe even before they know it. Ray Wang (2015) discusses the idea of intention driven experiences – anticipating and predicting what the customer expects next. Visitors want you to anticipate and solve their problems.</p>
+<h2>Summary</h2>
+<p>Museums needs to evolve from individual, typically disconnected initiatives to interconnected journeys where apps, web, social and other existing and emerging digital channels handoff seamlessly from one to another to support how a visitor experiences the Museum. Framed by how visitors travel through their experience with the Museum before/during/after, but also understanding that the journey does not only involve digital channels but an integration with physical and digital. Expanding thinking into creating the experience that you want for your visitors that is personalized and contextualized and with an eye to the future to understanding intent, and anticipating visitor’s next need.</p>
+<p>Key to this is framing projects and digital initiatives in this larger context, to ensure that they serve some larger purpose as well as progressing the integration of digital into the mainstream Museum.</p>
+<h2>References</h2>
+<p>Burgess, Michael (2015). Key Digital Trends in Omni-Channel Retail. Chief Digital Officer Summit, New York, 2015. http://nyc.cdosummit.com/</p>
+<p>Burnette, Allegra; Costa, Tony; Laufer, Deanna, Buley, Leah (2015). Digital Customer Experience Trends 2015. Forrester Research https://www.forrester.com/Digital+Customer+Experience+Trends+2015/fulltext/-/E-res115773</p>
+<p>Inside Intercom (2015). Design Futures 1: Creating Systems Not Destinations. https://blog.intercom.io/design-futures-1-creating-systems-not-products/</p>
+<p>Rose, Robert; Johnson, Carla (2015). Experiences: The 7th Era of Marketing. Content Marketing Institute<br />
+http://www.amazon.com/Experiences-The-7th-Era-Marketing/dp/0985957646</p>
+<p>Schadler, Ted (2014). The Mobile Mind Shift: Engineer Your Business to Win in the Mobile Moment. Forrester Research. https://solutions.forrester.com/mobile/landing-61Q6-3202PZ.html</p>
+<p>Solis, Brian (2015). What’s The Future of Business. Changing the Way Businesses Create Experiences http://wtfbusiness.com</p>
+<p>Wang, Ray (2015). Disrupting Digital Business: Create an Authentic Experience in the Peer-to-Peer Economy. Harvard Business Review Press. http://www.amazon.com/Disrupting-Digital-Business-Peer-Peer/dp/1422142019</p>
+<p>United States Digital Service (2015). U.S. Digital Services Playbook. https://playbook.cio.gov/</p>
+<p>United States Digital Service (2015). Digital Government: Building a 21st Century Platform to Better Serve the American People.<br />
+https://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html</p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+. "The Museum Digital Experience: Considering the Visitor&#8217;s Journey." <i>MWA2015: Museums and the Web Asia 2015</i>. Published August 15, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mwa2015.museumsandtheweb.com/paper/the-museum-digital-experience-considering-the-visitors-journey/<br /><br /><hr>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://mwa2015.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><hr>
+<h3 class="widget-title">Global sponsor</h3>
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a>
+
+<h3 class="widget-title">Platinum sponsor</h3>
+<a title="MailChimp" href="http://nonprofits.mailchimp.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a>
+
+<h3 class="widget-title">Gold sponsor</h3>
+<a title="AARNet" href="http://www.aarnet.edu.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/AARNet-250-75.jpg" alt="AARNet" /></a>
+
+<h3 class="widget-title">Silver sponsors</h3>
+<a title="CV" href="http://www.creative.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CV-250-75.jpg" alt="CV" /></a>
+<a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<h3 class="widget-title">Bronze sponsors</h3>
+<a title="Ruckus" href="http://www.ruckuswireless.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/ruckus-250-75.jpg" alt="Ruckus" /></a>
+
+<a title="CoM" href="http://www.melbourne.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CoM-250-75.jpg" alt="CoM" /></a>
+
+<a title="Lumicom" href="http://lumicom.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/lumicom-250-75.jpg" alt="CoM" /></a>
+
+<a title="Tomizone" href="http://tomizone.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/tomizone-250-75.jpg" alt="Tomizone" /></a>
+
+<h3 class="widget-title">Partner</h3>
+<a title="MV" href="http://museumvictoria.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/mv-250-100.jpg" alt="MV" /></a>
+
+<div style="text-align:right;"><a href="../../sponsorship-opportunities/index.html">become a sponsor</a></div>
+<hr></div>
+		</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/search?q=%40museweb+OR+%23museweb+OR+%23mwa2015" data-widget-id="519731970960400384">Tweets about "@museweb OR #museweb OR #mwa2015"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br />
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-5" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br />
+703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info@museumsandtheweb.com</p></div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+
+			
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/the-museum-digital-experience-considering-the-visitors-journey/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:52:00 GMT -->
+</html>

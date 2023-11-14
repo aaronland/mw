@@ -1,0 +1,815 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2008-papers.dwt" codeOutsideHTMLIsLocked="true" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2008/papers/astudillo/astudillo.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:58:12 GMT -->
+<head>
+
+<!-- InstanceBeginEditable name="HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2008: Paper: Astudillo, H., et al., Contexta/SR: A multi-institutional semantic integration platform</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2008: Proceedings: Astudillo, H., et al., Contexta/SR: A multi-institutional semantic integration platform" />
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Keywords" -->
+<meta name="Keywords" content="digital repositories, semantic Web, integration, context, linked data, mw, mw2008, museums and the web, matw, 2008, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Description" -->
+<meta name="Description" content="Museums and the Web 2008: the international conference for culture and heritage on-line" />
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2007" />
+<!-- InstanceEndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<!-- InstanceBeginEditable name="charset" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="../../css/mw2008.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/papers.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/mw2008-noNews.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+</head>
+<body  onload="initImgRotation()">
+<div id="container">
+  <div id="header" onclick="location.href='../../index.html';" style="cursor:pointer;"> </div>
+  <!--htdig_noindex-->
+  <div id="top-nav">
+    <ul id="top-nav-list">
+      <li><a href="../../register/index.html">Register</a></li>
+      <li><a href="../../dates/index.html">Key Dates</a></li>
+      <li><a href="../../sescal/index.html">Schedule</a></li>
+      <li><a href="../../local/index.html">Local Info</a></li>
+    </ul>
+    <!--/htdig_noindex-->
+  </div>
+  <div id="header-photo"> 
+	 <!-- InstanceBeginEditable name="header-photo" --> <img src="astudillo.fig3-t.png"  height="132" width="229" alt="MW-photo" /> <!-- InstanceEndEditable --></div>
+<div id="print-title">
+	<h1>Museums and the Web 2008: the international conference for culture and heritage on-line</h1>
+	<h2>produced by Archives &amp; Museum Informatics</h2>
+	<h3>site at http://www.archimuse.com/mw2008/</h3>	 
+</div> 
+ <div id="date"> <a href="../../sescal/index.html">April 9-12, 2008</a><br />
+    <a href="../../local/index.html">Montr&eacute;al, Qu&eacute;bec, Canada</a> </div>
+  <div id="title">
+    <h1> 
+		<!-- InstanceBeginEditable name="PageTitle" --> Contexta/SR: A multi-institutional semantic integration platform <!-- InstanceEndEditable --> </h1>
+  </div>
+  <!--htdig_noindex-->
+  <div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> <!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+      <h2 class="Author"><a href="../../bios/au_440016030.html">Hern&aacute;n Astudillo</a>, <a href="../../bios/au_440016420.html">Pablo Inostroza</a>, and <a href="../../bios/au_440016419.html">Claudia L&oacute;pez</a>,
+        Universidad T&eacute;cnica Federico Santa Mar&iacute;a, Chile</h2>
+      <h3 class="AbstractTitle">Abstract</h3>
+      <p class="AbstractText">Museums and archives have the goal of making available
+        cultural heritage knowledge to more users. To reach this objective, it is a key
+        challenge to integrate the information spread across many institutions. This
+        information is related to cultural artifacts which bear witness to some
+        circumstances relevant to a context: political, historical, social, etc. An
+        integrated view of these common circumstances would give the final users a
+        unique and rich experience. CONTEXTA/SR is a platform that takes advantage of
+        the information resident in heterogeneous and distributed repositories of cultural
+        heritage to enrich a common image of the world. This platform, based on
+        Semantic Web technologies, is guided by some basic principles: extensibility,
+        to allow new developments over a set of provided capabilities; progressive
+        enrichment of original data through a series of transformations that use the
+        Web as a source of information; and consideration of the final user as an
+        information enrichment agent.</p>
+      <p class="keywords">Keywords: digital repositories, semantic Web, integration,
+        context, linked data</p>
+      <h1>Cultural Repositories: How To Integrate Circumstances?</h1>
+      <p>Archives and museums record information about artifacts that bear witness to a political, historical or social context. This information from several institutions is inherently interlaced by the mentioned context, although these links are not explicit because of institutional barriers.</p>
+      <p>  Often, people who visit on-line museums and archives are more interested in the circumstances that artifacts are witness to, than in the artifacts themselves. Then, queries requesting &ldquo;pictures of Victoria Square at Gonz&aacute;lez Videla&rsquo;s government,&rdquo; &nbsp;referring to the context of artifacts, become more valuable.</p>
+      <p>With the rise of Information Technologies, cultural institutions have started to digitalize the artifacts they keep, saving a digital representation of artifacts and also some metadata that describe their context. However, the fact that each institution uses its own technology and tools to manage the information makes inter-institutional contextualization a persistent problem.</p>
+      <p> There have been varied efforts to integrate heterogeneous heritage repositories. A na&iuml;ve approach consists in a syntactic search engine that allows the search of keywords in the aggregated set of artifacts&rsquo; descriptions.</p>
+      <p>In this article the CONTEXTA/SR platform is introduced. Its goal is to provide unified access to heritage digital repositories, boosting the circumstances in which the digital artifacts are immersed.</p>
+      <p> The structure of this paper is as follows. The second section will introduce a case study that will act as a reference for the examples given throughout this article. The third section will expose the technological background and other projects that try to solve the presented problem using similar technologies to ours. The fourth section will present the CONTEXTA/SR platform and the key principles that guide its architecture. The fifth section will briefly describe the main repositories and components of the architecture. The sixth section will expose the platform as the nucleus of a software ecosystem. The next to last section will describe the processes of ingesting and auditing artifacts and their circumstances. Finally, the last section will present some conclusions and discussions.</p>
+      <h1>Example for Discussion </h1>
+      <p>To anchor our discussion and examples, we present a typical record (shown in Table 1) taken from the Margot Loyola Fund for Traditional Culture and Music (FML).</p>
+      <table>
+        <tr>
+          <th>Unit of information</th>
+          <td>MLP/CR03-03</td>
+        </tr>
+        <tr>
+          <th>Document type</th>
+          <td>SM</td>
+        </tr>
+        <tr>
+          <th>Title</th>
+          <td>El Clavel</td>
+        </tr>
+        <tr>
+          <th>Singer</th>
+          <td>Ch&aacute;vez, Juanita</td>
+        </tr>
+        <tr>
+          <th>Documenter</th>
+          <td>Loyola, Margot</td>
+        </tr>
+        <tr>
+          <th>Country of Publication</th>
+          <td>Chile</td>
+        </tr>
+        <tr>
+          <th>Place of the event</th>
+          <td>Linares</td>
+        </tr>
+        <tr>
+          <th>Thematic descriptors</th>
+          <td>Traspuesta, cueca, guitarra, fiestas</td>
+        </tr>
+        <tr>
+          <th>Byte size</th>
+          <td>3208345</td>
+        </tr>
+        <tr>
+          <th>MIME type</th>
+          <td>audio/mpeg</td>
+        </tr>
+      </table>
+      <p class="caption">Table 1: Typical register from Margot Loyola Fund</p>
+      <h1>Technological Background and Related Work</h1>
+      <p>The case study shows that in the cultural heritage domain it
+        is very relevant to consider the circumstances of artifacts when answering
+        interesting queries. A common strategy used to discuss a concept without
+        ambiguities is to give it a unique identifier. Then, if the individual &ldquo;Margot
+        Loyola&rdquo; has a unique ID, it would be possible to refer to her from anywhere
+        without confusion. </p>
+      <p>The infrastructure used to assign unique identifiers at a
+        World scale exists: it is the Web. In the Web, each resource is identified by a
+        unique global identifier known as a  URI (Uniform Resource Identifier). In the
+        past years, this technological infrastructure has been considered as the
+        enabler to describe relationships not just between digital documents, but also
+        between concepts that do not necessarily have a digital representation. This is
+        the key idea behind Semantic Web.</p>
+      <p>The Semantic Web (Berners-Lee, 2001) is an initiative not
+        only to use the Web as a medium to human consumption, but also to allow
+        computer interactions. The more sites that make available their data in a
+        machine understandable format, the more interesting the Web applications
+        become. These applications benefit by the distributed and aggregated data.</p>
+      <p>The key technological support to do this is the RDF data
+        model. This model considers as an atom of information, a statement that
+        contains a source node, a property arc and a target node. At least the first
+        two must be identified by URIs.</p>
+      <p>The Semantic Web vision also relies on artificial
+        intelligence knowledge formalizations known as ontologies. An ontology is a
+        specification of a conceptualization (Gruber, 1993). It can be viewed as a
+        conceptual model that has logic formalizations which rigorously describe the
+        world. However, heavyweight constructs of ontologies that enable complex
+        inferences are not very helpful when there are high volumes of data dispersed
+        across many geographical locations.</p>
+      <p>In the last years, the Semantic Web is mainly considered as
+        the &ldquo;glue&rdquo; to integrate heterogeneous data across the Web using the following
+        metaphor: concepts of the real world - which may have or may not have digital
+        representation - have URIs.  It is possible to create a network of concepts
+        through the Web using &ldquo;semantic properties&rdquo; which also have URIs. This simple
+        but powerful model, also known as the Web of Data, allows us to use the Web not
+        just as a set of documents interrelated through hyperlinks, but also as a
+        semantic network of concepts.</p>
+      <p>DBpedia project (Auer, 2007; <a href="http://dbpedia.org/">http://dbpedia.org/</a>)
+        demonstrates the power behind the Web of Data approach. In this project, the
+        structured metadata that it is possible to extract from Wikipedia articles is
+        consolidated in an RDF data store. It can even be integrated with other sources
+        of RDF on the Web, such as Geonames, DBLP and others. Moreover, in Dbpedia,
+        URIs are provided for the concepts that Wikipedia articles describe: these
+        concepts have semantic relations to concepts also identified by URIs. These
+        uniquely identified concepts can be referred to from any chunk of data, in the
+        same way that we can refer to any Web page from any Web page. DBpedia follows
+        principles of Linked Data initiative
+        (<a href="http://www4.wiwiss.fu-berlin.de/bizer/pub/LinkedDataTutorial/">http://www4.wiwiss.fu-berlin.de/bizer/pub/LinkedDataTutorial/</a>), whose goal is
+        to publish RDF data on the Web and to interlink data between different sources
+        of information.</p>
+      <p>In the context of cultural heritage, there are some
+        interesting projects that use Semantic Web technologies. MuseumFinland
+        (Hyv&ouml;nen, 2005; <a href="http://www.museosuomi.fi/">http://www.museosuomi.fi/</a>) is a semantic portal for publishing
+        heterogeneous collections. It makes extensive use of Semantic Web technologies.
+        One of the main contributions of this work was the idea of differentiating the
+        syntactic interoperability from the semantic interoperability. Unfortunately,
+        MuseumFinland does not expose the knowledge it integrates in a &ldquo;dereferenceable
+        way&rdquo;. Thus, although it uses Semantic Web constructs, the concepts and
+        artifacts it describes are not browsable or searchable in the Linked Data
+        sense. The same group has recently made interesting contributions on how to
+        model relevant content of cultural heritage using events and situations
+        (Junnila, 2007; <a href="http://nsdl.org/">http://nsdl.org/</a>).</p>
+      <p>The National Science Digital Library (NSDL) (Lagoze, 2005)
+        has considered Semantic Web techniques to expose rich relationships among the
+        artifacts they keep. It bases its platform on FEDORA, a digital object
+        repository. FEDORA allows  the associating of  RDF metadata to each digital
+        object it keeps. Moreover, the RDF data is indexed in a dedicated data store,
+        and these statements are accessible through a provided component. However, this
+        approach considers digital objects as first class entities. For this reason,
+        any update to the RDF graph of relationships has to be done through the digital
+        object API, with the overhead that this implies.</p>
+      <h1>The Architecture of CONTEXTA/SR</h1>
+      <p>CONTEXTA/SR is a platform whose goal is to semantically
+        integrate cultural heritage heterogeneous information, using Semantic Web
+        Technologies. To achieve this, there is  a series of phases that we consider:</p>
+      <ul>
+        <li>Integration
+          at a technological level: generally, each museum or archive uses its own
+          technology and tools to manage its information. In this phase, it is
+          necessary to execute a process that exports the original data into a
+          technologically compatible format.</li>
+        <li>Integration
+          at a semantic level: even if the previous step was successfully made, it
+          is possible that the contents of each original institution still remain
+          isolated. Then, the more important step when integrating is to achieve
+          semantic interoperability. In this phase, it is necessary to agree on a
+          common vocabulary and map original constructs to it. </li>
+        <li>Integration
+          at a social level: once information is semantically integrated, it is
+          the final user who could enrich it, as in the case of successful social
+          Web applications such as last.fm, del.icio.us, flickr, among others.</li>
+      </ul>
+      <p>There are some
+        basic principles we have defined in order to achieve the integration at the
+        three above-mentioned levels. These principles guided the definition of the
+        architecture of the platform:</p>
+      <ul>
+        <li>Center
+          on provision of services more than on particular applications</li>
+        <li>Define
+          circumstances of digital artifacts as first class entities</li>
+        <li>Consider
+          the user as an agent of information enrichment</li>
+        <li>Use
+          standard and not proprietary formats</li>
+        <li>Give importance to auditing the integrated contents</li>
+      </ul>
+     <a name="fig1" id="fig1"></a><p class="caption"><a href="astudillo-fig1.html"><img src="astudillo.fig1.jpg" alt="Figure 1" width="460" height="399" /></a></p>
+      <p class="caption"><a href="astudillo-fig1.html">Fig 1: The architecture of
+        CONTEXTA/SR</a></p>
+      <p>Figure 1
+        shows a high level view of CONTEXTA/SR architecture. The main blocks
+        are:</p>
+      <ul>
+        <li>Source repositories with digital representations and
+          their metadata.</li>
+        <li>RDF Catalog internally divided into several
+          repositories, each of them for a particular task. This catalog
+          could be viewed as a semantic graph, having some nodes out of the
+          catalog control.</li>
+        <li>Main auxiliary components: these are dedicated to
+          specific functionalities. Some of the components of primary
+          relevance are the Ingester, the Auditor and the Expert Feeder.</li>
+      </ul>
+      <p>First
+        we describe the primary repositories of the RDF catalog and the
+        ontologies that we use to model the information stored there. Then
+        we briefly describe the components that achieve the integration of
+        distributed resources.</p>
+      <h2>The RDF Catalog</h2>
+      <h3>How We Model Artifacts And Their
+        Circumstances</h3>
+      <p>Using
+        Semantic Web technologies in CONTEXTA/SR implies that almost
+        everything is a resource. This means both digital representations of
+        artifacts distributed across the cultural institutions and the
+        circumstances they witness are resources. Then, we deliberately
+        concentrate our modeling efforts in three dimensions: ontologies to
+        describe artifacts, ontologies to describe circumstances, and social
+        ontologies.</p>
+      <ul>
+        <li><b>Ontologies for digital artifacts.</b>These describe low-level features
+          of digital documents, such as byte size and MIME type. In
+          figure 2 it is possible to see the case study example
+          represented using a simple ontology of artifacts.</span></li>
+      </ul>
+      <p class="caption"><a name="fig2" id="fig2"></a><a href="astudillo-fig2.html"><img src="astudillo.fig2.jpg" alt="Figure 2" width="395" height="128" class="caption" /></a></p>
+      <p class="caption"><a href="astudillo-fig2.html">Fig 2: Example of a unit of
+        information that uses concepts from an ontology of artifacts</a></p>
+      <ul>
+        <li><b>Ontologies for circumstances.</b>These ontologies are related to
+          the circumstances of an artifact. For this reason, the greater
+          modeling efforts are related to these. There are efforts to
+          develop a unified model for representing digital artifacts and
+          their circumstances. CIDOC/CRM (<a
+                 href="http://cidoc.ics.forth.gr/">http://cidoc.ics.forth.gr/</a>)
+          is an ontology that we considered, but we did not choose it
+          because its hierarchy of classes was very complex. Also, it is
+          not linked with widespread ontologies such as FOAF
+          (<a href="http://www.xmlns.com/foaf/spec/">http://www.xmlns.com/foaf/spec/</a>), W3C Geo Ontology (<a
+                 href="http://www.w3.org/2003/01/geo/">http://www.w3.org/2003/01/geo/</a>),
+          the Music Ontology (<a href="http://musicontology.com/">http://musicontology.com/</a>) or the Event
+          Ontology (<a href="http://motools.sourceforge.net/event/event.html">http://motools.sourceforge.net/event/event.html</a>). We
+          based our main ontology on the ISAD(G) (General International
+          Standard Archival Description) standard (ISAD(G), 2000), which
+          describes how to prepare archival descriptions. An ontology
+          based on ISAD(G) constructs was combined with several
+          widespread ontologies, such as Music Ontology, W3C Geographic
+          Ontology, FOAF Ontology and others. ISAD(G) is a very detailed
+          ontology specialized for the heritage domain. Also, it is
+          possible to consider it as the glue between the other
+          lightweight ontologies. The widespread ontologies we use allow
+          us to reuse the knowledge of experts in each particular
+          domain. Figure 3 shows the case study with concepts from
+          ISAD(G) and other ontologies used to model circumstances.</span></li>
+      </ul>
+      <p class="caption"><a name="fig3" id="fig3"></a><a href="astudillo-fig3.html"><img src="astudillo.fig3.jpg" alt="Figure 3" /></a></p>
+      <p class="caption"><a href="astudillo-fig3.html">Fig 3: Example of a unit of
+        information that use concepts from ontologies of circumstances</a></p>
+    <ul>  
+	<li><b>Social ontologies:</b>These ontologies model the
+        context of the use of the artifacts and their circumstances.
+        Some of the selected ontologies are FOAF for descriptions of
+        persons and the Tag ontology for tags managing. Figure 4
+        shows the case study enriched with social information.</span></li>
+      </ul>
+      <p class="caption"><a name="fig4" id="fig4"></a><a href="astudillo-fig4.html"><img src="astudillo.fig4.jpg" alt="Figure 4" /></a></p>
+      <p class="caption"><a href="astudillo-fig4.html">Fig 4: Example of a unit of
+        information that use concepts from social ontologies</a></p>
+
+      <h3>The Repositories</h3>
+      <p>We
+        have explained how the data was modeled; it is possible to
+        describe briefly the repositories where the instances are stored.</p>
+      <ul>
+        <li><b>Repository of artifacts metadata.</b>This repository stores the low
+          level properties of the digital representation of an
+          artifact. It is in this repository that  the byte size or
+          MIME type properties of a digital document are registered.</span></li>
+        <li><b>Repository of circumstances.</b>The relations between the
+          digital representation of an artifact, the artifact itself,
+          and its circumstances are stored in this repository. In
+          this data store the URIs for &ldquo;Margot Loyola&rdquo;, &ldquo;Talca&rdquo;, &ldquo;El
+          Clavel&rdquo; (song) and their relations are stored.</span></li>
+        <li><b>Pending repository.</b>The data that has been
+          ingested but not yet audited is stored in this repository,
+          while waiting to be integrated to the circumstances
+          repository. The role of this repository will be better
+          explained in the next section related to the ingesting and
+          auditing processes.</span></li>
+        <li><b>Repositories of statistics of use.</b>This repository registers the
+          use statistics to provide the recommendation services
+          which enrich the final user&rsquo;s experience. Unlike previous
+          repositories, this one is relational. This is to
+          facilitate the development of algorithms and calculations
+          needed to compute recommendations. </span></li>
+      </ul>
+      <p>Above all these repositories, there is an abstraction
+        layer called &ldquo;catalog access&rdquo;. This is implemented as a
+        component that allows treating all the underneath data as a
+        unique integrated RDF graph. It provides capabilities for
+        executing SPARQL queries and performing semantic browsing
+        through all the stored resources: digital artifacts,
+        circumstances and social information.</p>
+      <h2>The Main Components</h2>
+      <p>As Figure 1 shows, there is a series of components
+        above the RDF catalog. These components are fundamental for
+        integrating the distributed repositories. In these
+        components, the logic needed in order to achieve the semantic
+        integration is embedded. Next, the more important components
+        are briefly described:</p>
+      <ul>
+        <li><b>Ingester.</b> This component generates RDF chunks of
+          information from the particular data of an institution.
+          It takes as input the XML files that contain the
+          serialized data from the source repositories and
+          produces as output an RDF graph connected with the
+          already-stored circumstances.</li>
+        <li><b>Auditor.</b> This component provides capabilities for
+          approving the data stored in the pending repository and
+          transferring the information to the circumstances
+          repository. Also, it has features for rejecting some
+          invalid data.</li>
+        <li><b>Expert feeder.</b>This component provides
+          capabilities for directly feeding the circumstances
+          repository, without using the ingesting process.</span></li>
+        <li><b>Social components.</b>The users,
+          recommendations, tagging and evaluation components
+          provide capabilities for accessing users&rsquo; profiles
+          and the statistical information about the use that
+          these users give to the data. This kind of
+          information may complement the semantic information
+          that is already stored with emergent social
+          knowledge. In this paper, we do not deeply discuss
+          this topic that is significant on its own. In &nbsp;the work of steve.museum (Wyman, et al., 2006)
+          it is possible to see the potential of considering
+          social information in the cultural heritage domain.</li>
+      </ul>
+      <h2>The
+        Ingesting and Auditing Processes</h2>
+      <p>In Figure 5 it is possible to see the workflow of
+        the ingesting process.</p>
+      <p class="caption"><a name="fig5" id="fig5"></a><a href="astudillo-fig5.html"><img src="astudillo.fig5.jpg" alt="Figure 5" width="400" height="179" /></a></p>
+      <p class="caption"><a href="astudillo-fig5.html">Fig
+        5: Workflow of the ingesting process</a></p>
+      <p>First there is an XML chunk of information exported
+        from the database of a local institution. We assumed that
+        local repositories have a method to export to XML as a
+        precondition at a syntactic integration level. This is
+        true in almost all current databases. </p>
+      <p>Once the XML file enters the ingester component it
+        is necessary to convert it into an RDF representation. In
+        reference to the common ontologies described above, the
+        vocabularies become semantically uniform. This is
+        possible because the Ingester has a set of XSLT
+        templates, one for each admitted data format. In other
+        words, for each repository that wants to be integrated to
+        CONTEXTA/SR, there has to be an XSLT template that
+        transforms the data from its local format to the common
+        vocabulary. The development of this XSLT template is a
+        hard task that consists in mapping the original source
+        constructs to the ontological constructs introduced
+        previously. This task requires a great deal of human
+        effort for successful integration.</p>
+      <p>Once the transformation to RDF is realized, a graph
+        is produced. This graph is totally disconnected from the
+        circumstances registered in the platform repositories,
+        and hence, to the world. In order to link the nodes in
+        the output graph to existing nodes on the CONTEXTA/SR
+        semantic repository, or even to nodes on the global
+        Semantic Web, filtering stages are necessary. In this
+        process each stage produces a more refined and richer RDF
+        graph than the previous one. For example, next we describe
+        two filters illustrated in Figure 5.</p>
+      <ul>
+        <li><b>Filter of Equivalent Labels.</b>This filter recognizes
+          all concepts that have rdfs:label or foaf:name
+          labels identical to some concepts already registered
+          in the circumstances repository. Hence, the new
+          graph is attached to the existing circumstances
+          graph.</span></li>
+        <li><b>DBPedia filter.</b>This filter links some
+          concepts of the incoming graph to global concepts
+          of the DBpedia Project introduced in the Related
+          Work section. For instance, if the graph has a
+          concept of type geo:SpatialThing that has a label
+          &ldquo;Talca&rdquo;, it is possible to ask the SPARQL Endpoint
+          of DBpedia if there is something of type
+          geo:SpatialThing called &ldquo;Talca&rdquo;. In fact, this
+          query would return a resource with URI <a href="http://dbpedia.org/resource/Talca">http://dbpedia.org/resource/Talca</a>. After
+          identifying this fact, the incoming graph is
+          connected to a DBpedia concept. This is an example
+          of how by accessing structured data on the Semantic
+          Web it is possible to integrate local data with a
+          global knowledge of the world.</span></li>
+      </ul>
+      <p>Note that input from museums and
+        archives repositories enrich or feed an image of the
+        world, maintained both in the circumstances repository
+        and in the global Semantic Web. Once all the filters
+        have been processed, the output of the ingesting
+        process is an RDF graph connected with circumstances
+        stored in CONTEXTA.</p>
+      <p>All the described processes are
+        automatically done. Obviously, this could generate some
+        relevant semantic problems; for instance:</p>
+      <ul>
+        <li>If the filter of Equivalent Labels
+          is used, &ldquo;Margot Loyola P.&rdquo; would  be identified
+          as a different person from &ldquo;Margot Loyola&rdquo;</li>
+        <li>If the information in an original
+          repository is not complete enough, as is
+          expected, some completely false &ldquo;facts&rdquo; could be
+          concluded: e.g. Linares is a city of Chile and
+          also a city of Spain. If input data does not
+          consider the country, then the filtering could
+          result in erroneous conclusions. </li>
+      </ul>
+      <p>These are just two examples of a
+        great number of similar situations that could happen
+        when automating the semantic enrichment process. It
+        would not be appropriate that all of these new
+        possible confusing circumstances be stored
+        immediately in the global repository of
+        circumstances. This is when the pending repository
+        and the auditing process become relevant.</p>
+      <p>Once the new RDF statements are
+        stored in the pending repository, these statements
+        will not be validated until an expert human auditor
+        approves them. When faced with this situation the
+        auditing component provides capabilities to edit the
+        pending RDF. In future stages of the project we will
+        give Natural Language Processing (NLP) facilities to
+        the auditing component. This way, the human expert
+        will receive valuable help when evaluating
+        statements, suggesting possible errors or
+        redundancies. For instance, a similarity analysis
+        could suggest that &ldquo;Margot Loyola&rdquo; and &ldquo;Margot Loyola
+        R.&rdquo; could be, in fact, two names for the same person.</p>
+      <p>Once the data are validated by the
+        auditing component, they become linked to the already
+        stored circumstances. It is at this point that
+        persistent URIs for artifacts, digital representation
+        and circumstances are created. Because we are
+        following the principles of the Linked Data
+        initiative, these new URIs become &ldquo;dereferenceable&rdquo;;
+        therefore, they become part of the global Semantic
+        Web.</p>
+      <p>Another component that is relevant
+        to ingesting and auditing processes is the Expert
+        Feeder. When new data enter the Ingester, these data
+        are enriched thanks to the filters that access extern
+        sites and, mainly, the existing circumstances in the
+        repository. This means that the more circumstances
+        that are stored in the CONTEXTA/SR catalog, the more interesting
+        relationships appear. We called Expert Feeding to the
+        process of populating circumstances directly, without
+        an ingesting process. Generally these circumstances
+        correspond to thesaurus or ontologies instances
+        available on the Web. For instance, the GeoNames
+        service has made available all its RDF geographic
+        data as a downloadable <span
+                          class="HTMLconformatoprevioCar">dump (<a
+                          href="http://download.geonames.org/export/dump/">http://download.geonames.org/export/dump/</a>).</span> Also, GeoNames provides an on-line service to access
+        its data on-demand from the Internet. In terms of
+        efficiency, maybe it is a good idea to download the
+        dump and load it into the RDF catalog using the
+        Expert Feeder component.</p>
+      <p>There is another usual situation
+        when analyzing the domain of a particular
+        institution. Most of the time, cultural institutions
+        have their own thesaurus or ontologies for their very
+        restricted domain. However, this knowledge could be
+        capitalized globally. For example, the MLF has
+        developed a thesaurus of native dialects and
+        languages from South America. This knowledge must be
+        added to the circumstances base. Then if we want to
+        query for music sung in &ldquo;Mapudung&uacute;n&rdquo; (a language of
+        Chilean natives), we will obtain more relevant
+        answers.</p>
+      <h1>Towards
+        an Ecosystem of Applications</h1>
+      <p>CONTEXTA/SR is a platform that
+        provides a set of services acting as semantic
+        middleware for the integration of digital
+        repositories. The architecture is flexible enough to
+        allow the development of interesting applications
+        serving as a core of functionalities.</p>
+      <p>In particular, the provision of a
+        SPARQL endpoint and dereferenceable URIs at the
+        catalog level allows the development of &ldquo;semantic
+        mashups&rdquo;. Semantic mashups are Web applications that
+        use RDF data from several sources and combine the
+        information  in useful ways. Figure 6 shows an
+        example of a Web application that was developed using
+        semantic mashups. In particular, the data from
+        CONTEXTA/SR, DBpedia (<a href="http://dbpedia.org/">http://dbpedia.org/</a>), GeoNames
+        (<a href="http://www.geonames.org/">http://www.geonames.org/</a>) and the Google Maps
+        service (<a href="http://maps.google.com/">http://maps.google.com/</a>) were linked to support
+        an application where the context of the artifacts is
+        explicit. This rich application was developed in a
+        simple way, reusing data and services that already
+        exist.</p>
+      <p class="caption"><a name="fig6" id="fig6"></a><a href="astudillo-fig6.html"><img src="astudillo.fig6.jpg" alt="Figure 6" width="400" height="352" /></a></p>
+      <p class="caption"><a href="astudillo-fig6.html">Fig
+        6: Screenshot of the web application based on
+        semantic mashups</a></p>
+      <p>As well as the facilities to make
+        semantic mashups, other Web services are included for
+        common tasks. This has great potential because
+        CONTEXTA/SR&rsquo;s core has capabilities for high
+        value-adding, such as recommendations, users&rsquo;
+        profiling, among others. In a nutshell, CONTEXTA/SR
+        provides a series of capabilities that developers of
+        cultural applications can profit from. There could be
+        a series of applications that &ldquo;survive&rdquo; thanks to the
+        provided core, like a software ecosystem.</p>
+      <h1>Discussion
+        and Conclusions</h1>
+      <p>We have presented the initial
+        architecture of the CONTEXTA/SR platform as a
+        solution for integrating distributed and
+        heterogeneous repositories of cultural heritage. At
+        this stage of the project, two archives have been
+        integrated in our framework, acting as a proof of
+        concepts. However, we are conscious of the complexity
+        of the problem we are facing. We have to develop more
+        filters and give more capabilities to the auditing
+        and expert feeder components to prove that this
+        solution work scales with more institutions.</p>
+      <p>Also, we need to devote part of our
+        efforts to developing rich clients that demonstrate
+        the power of our approach. An ingester client, an
+        expert feeder client and a heritage explorer Web
+        application are in development. Particularly, the
+        explorer Web application will demonstrate the power
+        that the social dimension has in the domain of
+        cultural heritage.</p>
+      <p>In a nutshell, we have presented a
+        very modular approach to integrate distributed
+        repositories of cultural heritage. The edges of our
+        development have been the extensibility of the
+        platform and the semantic enrichment of the data. The
+        former has been achieved by providing a set of
+        services that any developer can profit from. The
+        latter has been accomplished by clearly defining the
+        ingesting and auditing processes. It is important to
+        stress that although we could have a sophisticated
+        automated process to semantically enrich the data, we
+        still consider that  human intervention is absolutely
+        necessary. In our architecture, the Expert Feeder and
+        the Auditor reflect this.</p>
+      <h2>Acknowledgments</h2>
+      <p class="AcknowedgementsText">Javier Pereira, Victor Codocedo,
+        Marcelo Aliquintuy and Cecilia Astudillo have
+        significantly collaborated in the discussion of the
+        ideas presented in this paper.</p>
+      <h2>References</h2>
+      <p class="ReferencesText">Auer,
+        S., C. Bizer, J. Lehmann, J. Kobilarov, R. Cyganiak,
+        and Z. Ives (2007). DBpedia: A Nucleus for a Web of
+        Open Data. <i>Proceedings of the 6th International
+        Semantic Web Conference and 2nd Asian Semantic Web
+        Conference (ISWC/ASWC2007), Busan, South Korea, 4825</i>: 715--728, 2007.</p>
+      <p class="ReferencesText">Berners-Lee,
+        T., J. Hendler and O. Lassila  (2001). The Semantic
+        Web. <i>Scientific American, 284(5)</i>, pp. 34-43, May
+        2001.</p>
+      <p class="ReferencesText">Gruber,
+        R. (1993). A translation approach to portable
+        ontologies. <i>Knowledge Acquisition</i>, 5(2):199-220, 1993.</p>
+      <p class="ReferencesText">Hyv&ouml;nen,
+        E., E. M&auml;kel&aacute;, M.Salminen, A. Valo, K. Viljanen, S.
+        Saarela, M. Junnila and S. Kettula (2005).
+        MuseumFinland--Finnish museums on the semantic web. <i>Web
+        Semantics: Science, Services and Agents on the World
+        Wide Web</i>,
+        Vol. 3, No. 2-3. (October 2005), 224-241.</p>
+      <p class="ReferencesText">ISAD(G)
+        (2000). <i>ISAD(G) General International
+        Standardization Archival Description, 2nd edition</i>, ISBN 0-9696035-5-X,
+        International Council on Archives, Ottawa 2000.</p>
+      <p class="ReferencesText">Junnila
+        M., E. Hyv&ouml;nen and M. Salminen (2007). Describing and
+        Linking Cultural Semantic Content by Using Situations
+        and Actions. In: K. Robering (Ed.). <i>Information
+        Technology for the Virtual Museum</i>. LIT Verlag,
+        Berlin., Oct, 2007.</p>
+      <p class="ReferencesText">Lagoze,
+        C., D.B. Krafft, S. Jesuroga, T. Cornwell, E.J.
+        Cramer,  and E. Shin (2005). An information network
+        overlay architecture for the NSDL. P<i>roceedings of
+        the 5th ACM/IEEE-CS Joint Conference on Digital
+        Libraries (Denver, CO, USA, June 07 - 11, 2005)</i>. JCDL '05. ACM, New
+        York, NY, 384-384. </p>
+      <p class="ReferencesText">Wyman, B., et al. (2006). &quot;Steve.museum: An Ongoing Experiment in Social Tagging, Folksonomy, and Museums,&quot;        in J. Trant and D. Bearman (eds.). Museums and the Web 2006: Proceedings, Toronto: Archives &amp; Museum Informatics, published March 1, 2006 at <a href="http://www.archimuse.com/mw2006/papers/wyman/wyman.html">http://www.archimuse.com/mw2006/papers/wyman/wyman.html</a></p>
+      </ul>
+	  <!-- InstanceEndEditable --> </div>
+  				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->Astudillo, H., et al., Contexta/SR: A multi-institutional semantic integration platform<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2008: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2008. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2008/papers/<!-- #BeginEditable "URL" -->astudillo/astudillo.html <!-- #EndEditable --></p>
+</div>
+  <!--htdig_noindex-->
+  
+  <div id="sidebar">
+    <div id="side-nav">
+      <ul id="side-nav-list">
+        <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+        <li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+        <li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+        <li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+        <li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+        <li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+        <li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+        <li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+        <li id="pc"> <a href="../../thanks/index.html" class="menu">Committees</a></li>
+      </ul>
+    </div>
+    <div id="search-site">
+<form method="get" id="searchform" action="http://wp.museumsandtheweb.com/">
+<input type="text" class="field" name="s" id="s" placeholder="Search">
+<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+</form>
+    </div>
+    <div id="sidebar-links">
+      <ul id="sidebar-links-list">
+        <li><a href="../../../index.html" class="produced-by">produced by<br />
+          <img src="../../images/sidelogo.png" width="144" height="37" alt="AMI logo" /></a></li>
+        <li><a href="../../../index.html">Join our mailing list</a></li>
+        <li><a href="http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+          <img src="../../images/search.gif" alt="search" width="24" height="25" border="0" /></a></li>
+      </ul>
+    </div>
+    <div id="sidebar-acknowledge">
+      <p><img src="../../images/PCH-logo.png" alt="PCH" width="160" height="22" /><br />
+        Presented  in conjunction with the<br />
+        Department of Canadian Heritage through the <a href="http://www.chin.gc.ca/" target="_blank">Canadian
+      Heritage Information Network (CHIN)</a> and <a href="http://www.pch.gc.ca/progs/pcce-ccop/index_e.cfm" target="_blank">Canadian Culture Online (CCO)</a>.</p>
+      <div id="sponsor">
+ <p>Sponsored by<br />
+   <a href="../../exhibit/ex_335001860.html">Interwoven</a> and <a href="../../exhibit/ex_335001863.html">Interflow</a></p>
+</div>
+    </div>
+   <!--/htdig_noindex-->
+  </div>
+  <div id="footer">
+   <div id="last-updated">published April 9, 2008<br />
+	 last updated:
+	   <!-- #BeginDate format:Am1a -->October 27, 2010 10:14 PM<!-- #EndDate --><br />
+      <div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+    </div>
+    <!--htdig_noindex-->
+    <div id="footer-content">
+      <p>Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E
+        2P3 Canada<br />
+        Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2008";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2008 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				  </script>
+        <br />
+        Copyright &copy; 2008 &ndash; Archives &amp; Museum Informatics &ndash; All
+        rights reserved.<br />
+      </p>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2008/papers/astudillo/astudillo.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:58:12 GMT -->
+</html>

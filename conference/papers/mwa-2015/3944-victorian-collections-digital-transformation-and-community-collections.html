@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/victorian-collections-digital-transformation-and-community-collections/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:56:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Victorian Collections: Digital Transformation and Community Collections | MWA2015: Museums and the Web Asia 2015</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/mw-theme/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mwa2015.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/wp-emoji.js?ver=5.6","twemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/twemoji.js?ver=5.6"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='../../wp-content/themes/twentyeleven/blockscb8b.css?ver=20190102' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexa102.html?p=764' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed882a.json?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fvictorian-collections-digital-transformation-and-community-collections%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed0c56?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fvictorian-collections-digital-transformation-and-community-collections%2F&amp;format=xml" />
+</head>
+
+<body class="paper-template-default single single-paper postid-764 wp-embed-responsive single-author two-column right-sidebar">
+<div id="page" class="hfeed">
+
+<style type="text/css">
+branding.img { height: auto; display: block; width: 100%; }
+#image  { position:relative;z-index:10;  }
+#text   { position:absolute; z-index:100; }
+#site-description { font-weight: normal; color: #fff; margin: 0 20px 20px 0;}
+#site-title a { color: #fff; }
+#site-title { margin-right: 20px; }
+</style>
+
+<header id="branding" role="banner">
+<hgroup>
+	<div id="text">
+<h1 id="site-title"><span><a href="../../index.html" rel="home">MWA2015: Museums and the Web Asia 2015</a></span></h1>
+<h2 id="site-description">The conference of Museums and the Web in Asia | October 5-8 | Melbourne, Australia</h2>
+	</div>
+</hgroup>
+
+			
+<div id="image"><a href="../../index.html"><img src="../../wp-content/uploads/2014/10/Melbourne-MWA2015.jpg" width="1000" height="250" alt="Museums and the Web Asia 2015" /></a></div>
+			
+			
+										
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-10"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="../../local-info/index.html">Local Info</a></li>
+	<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+	<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-16"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="../../exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="../../advertising-guildlines/index.html">Advertising Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="../../attending/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="../../workshop-program/index.html">Workshops</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../hobart-deep-dive/index.html">Hobart Deep Dive</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="../../attendees/index.html">Attendees</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<div id="primary">
+<div id="content" role="main">
+<article id="post-764" class="post-764 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">Victorian Collections: Digital Transformation and Community Collections</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/forbeshawkins/">Forbes Hawkins</a>, Museum Victoria, Australia, <a target="_blank" href="https://www.museumsandtheweb.com/member/Cameron Auty/">Cameron Auty</a>, Museums Australia Victoria, Australia, <a target="_blank" href="https://www.museumsandtheweb.com/member/bensor/">Belinda Ensor</a>, Museums Australia (Victoria), Australia</p>
+<h2>Abstract</h2>
+Victorian Collections is an online collection management system, collection documentation training program and support service, that is provided free of charge for use by community-based collecting organisations across the state of Victoria in Australia. Funded by the Victorian State Government and launched in 2010, Victorian Collections has enabled volunteers and staff from hundreds of community organisations to begin the process of documenting and digitising their collection information.
+
+Victorian Collections serves the community museum sector but has also helped to steer non-museum organisations such as veterans groups and religious organisations towards focusing on their heritage collections. Now in its fifth year, almost 60,000 collection records from a wide variety of small to medium-sized organisations are publicly accessible from the Victorian Collections website. That list grows daily.
+
+The Victorian Collections project has brought rapid and substantial digital transformation to hundreds small community organisations that previously had little capacity for online engagement beyond participation on social media. With some now beginning to experiment with related technologies such as mobile in-gallery experiences, we can now say that digital transformation is occurring across every tier of the Victorian heritage sector - from small town historical societies right up to the capital city galleries. It's not just for the big guys any more!
+
+Following on from the paper "Victorian Collections: Measuring the Impact of a Digital Community Museum Project", presented by Forbes Hawkins at MWA2013 in Hong Kong, this new presentation will examine how digital transformation is altering the practise and radically shifting the outlook for a substantial portion of community-based collections organisations within Victoria.</p>
+<p><b>Keywords:</b> digital,transformation,community,collections,small,museum</p>
+<h2>The Victorian Heritage Sector Prior to 2010</h2>
+<p>In 1984, Roger Trudgeon delivered a seminal report on the Victorian museum sector to the Ministry of Arts. The report surveyed 233 of the documented 310 museums in the State and offered data on the shape of the sector as well as recommendations for the future. The report led to the creation of the Museums Unit and the Museums Advisory Board (Webber et al, 2011) and became, as Trudgeon imagined it might, &#8220;the start of a new era for museums in Victoria&#8221; (Trudgeon, 1984). Thirty-one years on, we can see the impact of this report in shaping the Victorian museum sector.</p>
+<p>Of the 233 surveyed museums (which excludes the large agencies such as Museum Victoria and the National Gallery of Victoria), 34% of organisations were in the process of documenting their collection. Trudgeon concluded that &#8220;the cataloguing of museum collections in Victoria is in rather a chaotic state, that there is an urgency about the carrying out of cataloguing and that museum volunteers who have the intimate knowledge of their collections must be encouraged to record that knowledge before it is too late&#8221; (Trudgeon, 1984). He makes several recommendations, including the ongoing commitment to develop and distribute a recommended uniform catalogue system that is adaptable to computer processing.</p>
+<p>In the following decade the sector moved forward rapidly, as documented in Freeman&#8217;s <em>The Victorian Museum Survey Report 1992</em>. Notably, the number of documented museums grew from 330 to 621 (Freeman, 1992). Freeman also reflects on the Museum Resource Service cataloguing scheme, which was implemented in 1986 following Trudgeon’s recommendation. Freeman notes that 70% of surveyed museums were now documenting their collections, but only 8% were using computerised cataloguing systems (Freeman, 1992).</p>
+<p>In 1993, a partnership between Commonwealth, State and Territory governments, the Cultural Ministers Council, created Australian Museums Online (AMOL), a service that was launched online in 1995. By 2001, AMOL held almost 600,000 item-level records from across the country (<a href="http://web.archive.org/web/20010410203753/http:/amol.org.au/search97cgi/s97_cgi.exe">http://web.archive.org/web/20010410203753/http://amol.org.au/search97cgi/s97_cgi.exe</a>).</p>
+<p>As a result, Martin Hallett of Creative Victoria was able to obtain a more detailed assessment of the collections held in Victoria. The long list of museums, compiled by Museums Australia (Victoria), put the number of museums in Victoria at 740 (Webber et al, 2011).</p>
+<p>In 2005 AMOL, which had been managed by the Powerhouse Museum since 1998, became the Collections Australia Network (Hart &amp; Hallett 2011). When funding was withdrawn in 2011, CAN ceased operation. Over this same period the Royal Historical Society of Victoria developed a shared online catalogue, hosting the data for historical societies across the state. Commercial cataloguing programs, such as Vernon Systems <em>eHive</em>, also provided opportunities for online digital cataloguing.</p>
+<h2>Victorian Collections Development</h2>
+<p>Forbes Hawkins and Meredith Blake presented a comprehensive exploration of the development of Victorian Collections in their 2013 paper (Blake &amp; Hawkins 2013). This summary builds on that paper, with information updated to 2015.</p>
+<p>Victorian Collections grew out of many of the sector initiatives discussed in the previous section. Research had shown that there was a need for the creation of a centralised, publically accessible collection management system in order to ensure data security, drive collaboration between heritage groups and raise public awareness of heritage collections.</p>
+<p>A partnership between Museum Victoria and Museums Australia (Victoria), Victorian Collections received seed funding from the Collaborative Internet Innovation Fund, a Victorian Government initiative that sought to support government agencies, industry and community groups to innovate using “Web 2.0” technologies. As discussed in Hawkins and Blake (2013), Victoria’s experiences of a lack of data security during the Black Saturday bushfires were a key driver behind the project.</p>
+<p>Building on past experience, MV and MA(Vic) set out to</p>
+<ul>
+<li>Develop and host a sustainable, freely available collection management system for use by Victorian heritage collecting organisations</li>
+<li>Expose information about Victorian heritage to the public in an engaging and interactive manner</li>
+<li>Assist Victorian heritage collecting organisations to adopt sound and sustainable data management practices</li>
+</ul>
+<p>Early in the development phase, MA(Vic) surveyed the program’s potential constituents, and discovered the following barriers that needed to be taken into account when planning the form of the website and project:</p>
+<ul>
+<li>A large percentage of potential user organisations were staffed mostly or solely by volunteers, largely elderly and lacking ICT skills and familiarity</li>
+<li>The current state of collection management was varied, but many organisations weren’t currently using any form of digital collection information system</li>
+<li>ICT resources, including computers, digital imaging hardware and internet connections were often ageing or non-existent</li>
+<li>Many organisations had no existing online presence</li>
+</ul>
+<p>A new collection information system was developed, rather than using an existing piece of software. The development team at Museum Victoria designed Victorian Collections to be web based, removing the need for software downloads or purchases.</p>
+<p>A key challenge in the early life of the project was to keep the system simple enough for users of varied capacity while still making it advanced enough for users with some collection management experience. In order to allow new users to pick the system up smoothly, the cataloguing fields were based on MA(Vic)’s <em>Small Museums Cataloguing Manual </em>(Blake &amp; Hawkins 2013), already in use for paper and spreadsheet based catalogues in many museums and galleries across the state.</p>
+<h3>Victorian Collections Training Program</h3>
+<p>A key part of the success of Victorian Collections is its face-to-face training program. Identified early in the development phase as a way to overcome some of the issues identified in the user survey, the training program was rolled out with the launch of the system and continues to see strong uptake.</p>
+<p>MA(Vic) provides training sessions in basic collection management, digitisation and the use of Victorian Collections, delivered both in Melbourne and regionally. Holding up to 20 training sessions annually, the training team travel roughly 4500km a year. Each session caters for 5-15 attendees, runs for a full day, and is charged at a nominal cost to cover catering. Since the launch of the training program over 1000 people have been trained, and a similar number again visited by Victorian Collections staff. These sessions allow for a number of key developments:</p>
+<ul>
+<li>Face-to-face contact gives the trainers an environment in which to identify barriers for individuals to uptake of the program, such as lack of ICT skills or resistance to online cataloguing.</li>
+<li>Similarly, attendees can voice concerns and suggest improvements, which the trainers feed back to the development team</li>
+<li>Group sessions build networks. Each session is usually attended by members of 3-4 organisations from a region or specialisation. This network building is a key factor in the capacity of Victorian Collections&#8217; small team to service such a large constituency</li>
+</ul>
+<p>Since its launch, Victorian Collections has grown very successfully. The first 20,000 objects were catalogued from 2010 up to to 2013. At October 2015 this number has grown to over 65,000, and growth continues.</p>
+<h3>The Victorian Heritage Sector in 2015</h3>
+<p>5 years of engagement with the state heritage sector through Victorian Collections has allowed MA(Vic) and MV to build a more comprehensive picture of the levels of participation and digitisation.<strong> </strong></p>
+<p>From 2010 estimates of roughly 740 collecting organisations, MA(Vic) internal research now counts 1164 collecting organisations in the state of Victoria. Recognition of additional collecting organisations improves the picture of the levels of volunteer effort that drives the sector. It is estimated that the data saved into Victorian Collections represents a total volunteer input of over 60,000 hours. Volunteering Victoria estimates that $153 million is contributed by Victorians to arts and heritage through volunteering a year (<a href="http://volunteeringvictoria.org.au/wp-content/uploads/2014/12/Volunteering-key-statistics-17-Feb-15.pdf">http://volunteeringvictoria.org.au/wp-content/uploads/2014/12/Volunteering-key-statistics-17-Feb-15.pdf</a>).</p>
+<p>This increased number of organisations reflects better lines of communication, and a more inclusive picture of collecting organisations and the collections that they hold. In a later section of this paper, we discuss the impact of digitisation and training on the broadening of the sector.</p>
+<p>Public engagement with online heritage within Victorian Collections has begun to grow exponentially during the life of the program. Analytics of visitation to Victorian Collections shows user sessions growing steadily until the end of 2013, and then doubling annually in 2014 and 2015. Victorian Collections now hosts 20,000 sessions a month. The same pattern of exponential online growth and engagement can be seen in usage of similar forums such as Trove (<a href="http://trove.nla.gov.au/system/stats?env=prod">http://trove.nla.gov.au/system/stats?env=prod</a>).</p>
+<p>This clearer picture of the state shows that the cultural landscape is evolving rapidly as bricks and mortar institutions continually position and reposition themselves within the digital space. Today, large operational budgets, dominating presence and historical brand recognition are no longer indicative of an ability to reach an audience. Media corporations have discovered that a bedroom blogger can create an impact on a scale that would have seemed unimaginable only a few years ago. It is conceivable that this levelling of the playing field will become apparent within the community museum sector also. Perhaps in future, a small country or specialist museum with a big idea will be able to create an impact on a scale that would normally be associated with a much larger organisation.</p>
+<p>Community-based museums are custodians for a significant proportion of our cultural heritage. Within the state of Victoria alone, Martin Hallett estimates the number of cultural artefacts held by community museums to be somewhere around the 10 million mark (Hallett, 2014). From this perspective, a collective transformation, both digital and cultural, of the community museums sector becomes a highly desirable goal to work towards. The emergence of community museums within the digital space will surely present new opportunities for researchers working within larger museums and tertiary institutions, overcoming the impracticality of accessing such physically separated collections.</p>
+<h2>Digital and Cultural Transformation</h2>
+<p>Digital transformation is a concept that even now remains challenging to well-funded larger organisations. It seems reasonable then to assume that the concept is also challenging – in some cases unfamiliar – to many community museums around the world, most of which are staffed by casual volunteers without museum industry backgrounds. These organisations are less likely to be engaged with professional networks, and with little access to funding for conference attendance or professional development there is scarce opportunity for staff to contribute to conversations regarding digital access and engagement. Those that are able to participate are in any case likely to lack the funding and expertise required to implement change.</p>
+<p>It is within that type of environment that Victorian Collections has emerged as an effective platform for digital transformation within Victoria. Organisations that join are provided with an industry standard collection management system, training, online collections and phone and email support, for free and on an ongoing basis. As these digital transformations filter through the community collecting sector, they drive a host of cultural changes. Breaking the barrier of distance means that previously isolated organisations can now benefit directly from the curatorial and collection management expertise of full time staff and industry advisors involved with the project. Organisations involved with the project inherit a direct engagement with the global museum community via the Museum Victoria and Museums Australia (Victoria) partnership, and cultural changes are becoming evident in areas such as ideas of ownership, best practice and community connectedness.</p>
+<p>Cultural change can sweep through a community museum or collecting organisation with or without Victorian Collections. However for an organisation that may have never had an online presence or access to free, professional assistance, the cultural transformation may be unexpected and rapid. Having thousands of collection items available in Victorian Collections and, in some cases, subsequently aggregated via external services such as Trove, exposes collecting organisations to many online enquiries and requests each year. This kind of public engagement – often with a younger audience – can put pressure on limited volunteer resources and push the boundaries of traditional museum volunteer roles.</p>
+<p>Such challenges are accompanied however by a high degree of satisfaction. Several larger museums and cultural institutions are beginning to use Victorian Collections to source loan materials, adding to the feeling that all the collecting organisations in the State are becoming more relevant, connected, supported and visible. The Victorian Collections Cataloguing Awards, awarded at the Victorian Museum Awards since 2013, recognise high quality cataloguing and celebrate and showcase these collections to the wider sector. The acknowledgement of the vast contribution that is made by volunteers and community organisations is an important part of the strategy to welcome these organisations further into the sector.</p>
+<p>Victorian Collections has driven a cultural shift within the sector, broadening the boundaries past museums, galleries and historical societies. Partnerships with veterans groups such as the Returned Services League, school archives, church groups and multicultural groups has resulted in an opening up of the Victorian collecting sector that is truly culturally transformative. The welcoming to the sector of small, non-traditional organisations whose core business is not necessarily related to their collections adds incredible value. Not only does it allow highly significant collections to surface online, it assists in developing a better picture of our distributed State heritage, provides capacity building and encourages the strengthening of networks of like-minded and geographically linked communities.</p>
+<p>It also affects how we work together to advocate to government at all levels. Strengthening the sector’s connection to local, state and national governments allows us to present a strong case for the outcomes and impact of creative industry investment.</p>
+<p>The development of Victorian Collections has provided a new and extremely effective channel for facilitating the exchange of information and ideas through every tier of the Victorian Museum sector. Participating organisations now have a greatly heightened awareness of other related organisations, and the new and open access to each other’s collection data encourages a cross pollination of ideas and inspiration, stimulating discussion about principles and standards. Those with adequate resources to attend conferences and participate directly in conversations regarding issues such as digitisation, ownership and copyright are able to bring back ideas to be fed into the system.</p>
+<p>The two organisations responsible for Victorian Collections, Museum Victoria and Museums Australia (Victoria) have benefited greatly from the project. Both organisations have a long history of providing leadership and support for regional and specialist museums across Victoria. Victorian Collections has enabled them a broader, more direct and more visible level of day to day engagement. Expertise in collection systems, web and database development, collection management, policy development, professional writing and curatorial processes feed directly into the technical development of Victorian Collections and provide benefits that trickle down to the smallest country historical societies.</p>
+<h2>The Future</h2>
+<p>Victorian Collections will continue to innovate and explore ways in which its unique reach can be leveraged to strengthen the growth of the sector. A number of strategic options are currently under discussion amongst the development teams at Museum Victoria and Museums Australia (Victoria), and in the coming years the following ideas are likely to be central to Victorian Collections’ discussions and planning.</p>
+<h3>Strategies to Improve Search and Utilisation of Collection Data</h3>
+<p>The nascent digital transformation of many community museums within Victoria, and the concentration of a significant proportion of their collection data within a single system present an interesting possibility.</p>
+<p>The Victorian Collections information management system has been deliberately designed so as to preserve the independence of the individual organisations managing their data within the system. When signed in to the information system, users are restricted to viewing only the records belonging to their own organisation.</p>
+<p>When accessing the public Victorian Collections website however, users may run a search on records belonging to multiple organisations. The records returned within the search results have implied relationships through the use of common terminology or identical place/person names. This relationship is ephemeral, existing within the context of that search. The accuracy of these implied relationships depends very much on the accuracy and completeness of records, level of consistency in vocabulary and naming and descriptive style. This experience is similar to that provided by a basic content aggregation system or internet search engine, which is usually adequate. Sometimes, however, a user may require the sort of result set that can only be built from more structured data.</p>
+<p>The fact that Victorian Collections is a single system that holds a concentration of collection data belonging to hundreds of organisations existing within shared geographical and cultural contexts means that, in theory, it should be possible to enable data structuring that enables users to search collection records across organisations with a greater degree of accuracy than is possible within standard data aggregation or indexing systems.</p>
+<p>Measures that may help accomplish this include:</p>
+<ul>
+<li>enabling organisations to explicitly reference records from another organisation within their own</li>
+<li>enabling the sharing of reference records (people, places, etc.)</li>
+<li>encouraging the use of controlled vocabularies and minimum datasets</li>
+</ul>
+<p>Such measures would need to be implemented in a way that both recognises and maintains the independence and integrity of individual organisations, and the level of ability of the authors. The challenge would be to encourage data integrity and consistency without becoming overly prescriptive. The success of Victorian Collections has been part due to it being extremely simple to learn and use, and this will need to be maintained.</p>
+<h3>A Distributed Museum</h3>
+<p>Whilst Victorian Collections might be viewed simply as an aggregation of collection data belonging to hundreds of independent collections, from a strategic perspective we see a benefit in viewing it as something more cohesive.</p>
+<p>Within Victorian Collections, we see the emergence of a network of previously isolated community museums, all existing within the same geographical region and sharing a common cultural context, presenting their collection data together on a single website. Generally, each organisation takes a fairly narrow focus, researching and documenting the cultural history of the immediate community to which they belong.</p>
+<p>However, the more we are able to enhance the links between these organisations so that the broader regional cultural contexts become more clear, the more our audiences may begin to interact with Victorian Collections as if it were a single “distributed” museum. By enabling organisations to inter-relate their collection data and collaborate together on the construction of narratives, we will strengthen their connection to their shared cultural context. In this way, Victorian Collections may prove to be a powerful resource with a broad but highly granular scope, allowing us to view aspects of Victorian material culture from a wide angle perspective but with the ability to zoom down to a macro lens view.</p>
+<p>Key to achieving this aim is to enable each organisation to become loosely coupled, strengthening their bonds with other organisations whilst continuing to develop and work at their own pace towards their individual strategic aims. Promoting a shared awareness and more direct level of engagement amongst the constituents, reaching an agreement on shared documentation standards and controlled vocabularies and implementing mechanisms to encourage an adherence to those standards are all essential.</p>
+<h2>Conclusion</h2>
+<p>The ongoing transformation of the community collecting sector in Australia is a vital interest. An ageing volunteer base, vulnerability to natural disasters and varying levels of ICT competence and resourcing can leave community collections vulnerable to neglect, loss or damage. Victorian Collections is leading the way in Victoria, securing and sharing these collections through a comprehensive program of data collection and museum skills training. Projects such as this will continue to question and redefine the relationships between metro and regional organisations, between large and small museums and between the public and the keepers of knowledge. As technology advances and drives new ways of approaching museology the conversations begun here will be part of a necessary cultural shift. Distributed collections – catalogued, secured and shared – are already forming the core of a valuable state resource, and their growth becomes a key indicator of the health of the sector.</p>
+<h2>Acknowledgements</h2>
+<p>Martin Hallett, Jonny Brownbill, Tim Hart, Laura Miles, Dimity Mapstone, Meredith Blake, Peta Knott, Georgia Melville, Euan McGillivray</p>
+<h2>References</h2>
+<p>Australian Museums Online (AMOL). Consulted August 31, 2015. <a href="http://web.archive.org/web/20010410203753/http:/amol.org.au/search97cgi/s97_cgi.exe">web.archive.org/web/20010410203753/http://amol.org.au/search97cgi/s97_cgi.exe</a></p>
+<p>Bautista, S. and A. Balsamo, Understanding the Distributed Museum: Mapping the Spaces of Museology in Contemporary Culture. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2011: Proceedings</em>. Toronto: Archives &amp; Museum Informatics. Published March 31, 2011. Consulted September 1, 2015. <a href="http://conference.archimuse.com/mw2011/papers/understanding_distributed_museum">conference.archimuse.com/mw2011/papers/understanding_distributed_museum</a></p>
+<p>Freeman, K. <em>The 1992 Victorian Museum Survey Report</em>. Melbourne: Museums Association of Australia, Victorian Branch, Arts Victoria.</p>
+<p>Hawkins, F. &amp; M. Blake, “Victorian Collections: Measuring the Impact of a Digital Community Museum Project”. In, N. Proctor &amp; R. Cherry (eds). <em>Silver Spring, MD: Museums and the Web</em>. Published October 17, 2013. Consulted September 1, 2015. <a href="http://mwa2013.museumsandtheweb.com/paper/victorian-collections/">mwa2013.museumsandtheweb.com/paper/victorian-collections/</a></p>
+<p>Hallett, M, &amp; T. Hart. (2011). “Australian Museums and the Technology Revolution.” In D. Griffin &amp; L. Paroissien (eds.). <em>Understanding Museums – Australian Museums and Museology</em>.” Canberra: National Museum of Australia, 1-7. Consulted August 31, 2015. <a href="http://nma.gov.au/research/understanding-museums/_lib/pdf/Understanding_Museums_whole_2011.pdf">nma.gov.au/research/understanding-museums/_lib/pdf/Understanding_Museums_whole_2011.pdf</a></p>
+<p>Trudgeon, R. (1984). <em>Museums in Victoria : a report to the Honourable Race Mathews, M.L.A., Minister for Arts, on the Victorian Museums survey conducted in 1982/​83</em>. Melbourne: Victorian Ministry for the Arts.</p>
+<p>Trove. Consulted August 31, 2015. <a href="http://trove.nla.gov.au/system/stats?env=prod">trove.nla.gov.au/system/stats?env=prod</a></p>
+<p>Volunteering Victoria. (2015). “Key facts and statistics about volunteering in Victoria”. Consulted August 31, 2015. <a href="http://volunteeringvictoria.org.au/wp-content/uploads/2014/12/Volunteering-key-statistics-17-Feb-15.pdf">volunteeringvictoria.org.au/wp-content/uploads/2014/12/Volunteering-key-statistics-17-Feb-15.pdf</a></p>
+<p>Webber, Et al. (2011). “Drawing people together: the local and regional museum movement in Australia”. In D. Griffin &amp; L. Paroissien (eds). <em>Understanding Museums – Australian Museums and Museology</em>. Canberra: National Museum of Australia, 1-9. Consulted August 31, 2015. <a href="http://nma.gov.au/research/understanding-museums/_lib/pdf/Understanding_Museums_whole_2011.pdf">nma.gov.au/research/understanding-museums/_lib/pdf/Understanding_Museums_whole_2011.pdf</a></p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+. "Victorian Collections: Digital Transformation and Community Collections." <i>MWA2015: Museums and the Web Asia 2015</i>. Published September 1, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mwa2015.museumsandtheweb.com/paper/victorian-collections-digital-transformation-and-community-collections/<br /><br /><hr>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://mwa2015.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><hr>
+<h3 class="widget-title">Global sponsor</h3>
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a>
+
+<h3 class="widget-title">Platinum sponsor</h3>
+<a title="MailChimp" href="http://nonprofits.mailchimp.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a>
+
+<h3 class="widget-title">Gold sponsor</h3>
+<a title="AARNet" href="http://www.aarnet.edu.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/AARNet-250-75.jpg" alt="AARNet" /></a>
+
+<h3 class="widget-title">Silver sponsors</h3>
+<a title="CV" href="http://www.creative.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CV-250-75.jpg" alt="CV" /></a>
+<a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<h3 class="widget-title">Bronze sponsors</h3>
+<a title="Ruckus" href="http://www.ruckuswireless.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/ruckus-250-75.jpg" alt="Ruckus" /></a>
+
+<a title="CoM" href="http://www.melbourne.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CoM-250-75.jpg" alt="CoM" /></a>
+
+<a title="Lumicom" href="http://lumicom.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/lumicom-250-75.jpg" alt="CoM" /></a>
+
+<a title="Tomizone" href="http://tomizone.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/tomizone-250-75.jpg" alt="Tomizone" /></a>
+
+<h3 class="widget-title">Partner</h3>
+<a title="MV" href="http://museumvictoria.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/mv-250-100.jpg" alt="MV" /></a>
+
+<div style="text-align:right;"><a href="../../sponsorship-opportunities/index.html">become a sponsor</a></div>
+<hr></div>
+		</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/search?q=%40museweb+OR+%23museweb+OR+%23mwa2015" data-widget-id="519731970960400384">Tweets about "@museweb OR #museweb OR #mwa2015"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br />
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-5" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br />
+703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info@museumsandtheweb.com</p></div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+
+			
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/victorian-collections-digital-transformation-and-community-collections/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:56:39 GMT -->
+</html>

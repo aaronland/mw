@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2007-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/ellis-d/ellis-d.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:29:24 GMT -->
+<head>
+<!-- #BeginEditable "HeadPageTitle" --><title>Archives &amp; Museum Informatics: Museums and the Web 2007: Papers: Ellis, D., et al., The Service Oriented Museum Web</title><!-- #EndEditable -->
+<!-- #BeginEditable "metaTitle" -->
+
+
+
+
+
+
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2007" /><!-- #EndEditable -->
+<!-- #BeginEditable "Keywords" -->
+
+
+<meta name="Keywords" content="software design, service oriented architecture, Web 2.0, museum service, articles, papers, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" /><!-- #EndEditable -->
+<!-- #BeginEditable "Description" -->
+
+
+<meta name="Description" content="Museums and the Web 2007: the international conference for culture and heritage on-line" /><!-- #EndEditable -->
+<!-- #BeginEditable "copyright" -->
+
+
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2007" /><!-- #EndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="../../css/mw2007.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="../../css/mw2007-noNews.css" type="text/css"  media="print, screen" />
+	<link rel="stylesheet" href="../../css/papers.css" type="text/css"  media="print, screen" />
+
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+</head>
+<body  onload="initImgRotation()">
+	<div id="container">
+		<div id="header" onclick="location.href='../index.html';" style="cursor:pointer;">
+		</div>
+		<div id="top-nav">
+			<ul id="top-nav-list">
+				<li><a href="../../register/index.html">Register</a></li>
+				<li><a href="../../dates/index.html">Key Dates</a></li>
+				<li><a href="../../sescal/index.html">Schedule</a></li>
+				<li><a href="../../local/index.html">Local Info</a></li>
+			</ul>
+		</div>
+		<div id="header-photo">
+			<a href="../../images/credits.html">
+			<!-- InstanceBeginEditable name="header-photo" -->
+			<img src="ellis-d.figure1-t.png" alt="MW-photo" name="img1" id="img1" height="132" width="229" />
+			<!-- InstanceEndEditable -->	
+			</a>
+		</div>
+		<div id="date">
+			April 11-14, 2007<br />
+			San Francisco, California
+		</div>
+		<div  id="title">
+			<h1> 
+				<!-- InstanceBeginEditable name="PageTitle" -->The
+				Service Oriented Museum Web				<!-- InstanceEndEditable -->
+   			</h1>
+		</div>
+		<div id="main-content">
+		  <div id="callout">          </div>
+		  <div id="intro-paragraph">
+				<!-- #BeginEditable "IntroParagraph" -->
+                <h2 class="PaperTitle">David Ellis, Gavin Foster, Ray Shah and Petar Bojkov,
+			      Think Design Inc, USA</h2>
+                <h3 class="AbstractTitle">Abstract </h3>
+                <p class="abstractText">Before describing
+				    our vision for a distributed service oriented museum Web,  we assess
+				    the projects nexhibition (An On-line Exhibition tool), steve.museum (An
+				    Artwork tagging tool), Pachyderm (an open source museum presentation
+				    manager) and other open source products of interest to museums.  At
+				    first sight, one might choose to see these as distinct, stand-alone products
+				    that require some investment to utilise effectively.  We argue the
+				    case for breaking down these tools into their constituents and exposing
+				    their functionality through a distributed API such as SOAP.</p>
+				  <p class="abstractText">The paper explores
+				    how previously monolithic systems can instead be seen as re-usable components.
+				    Such services may include calendaring event programming/publishing; collections
+				    management systems; the tagging and analysis tools of steve; and the
+				    on-line exhibition generating tools of nexhibition and Pachyderm.  This
+				    model empowers Web developers with the services to construct a rich set
+				    of functionality without necessarily having to learn how to implement
+				    these services in-house.</p>
+				  <p class="abstractText">We envisage a service
+				    market whereby vendors will offer out services such as those discussed.  Museums
+				    will be able to pick and choose the services and offerings and may even
+				    choose to host services themselves. This will consolidate running costs,
+				    and increase the available range of services, and  ensure the effective
+				    utilisation of I.T. Infrastructure by museums.</p>
+				  <p class="keywords">Keywords: software design,
+				    service oriented architecture, Web 2.0, museum service</p>    				
+  				<!-- #EndEditable -->		  </div>
+				<!-- #BeginEditable "BodyText" --> 
+				 
+				  <h1>Introduction</h1>
+				  <p>Software engineering for a long time has moved toward
+				    the production of re-usable software components.  The advent of
+				    Object Oriented Programming has helped  programmers produce higher
+				    quality software that is easier to maintain.  The emergence of best
+				    practices allows the production of software that reuses both components
+				    and  common design patterns (Gamma et al. 1995).  </p>
+				  <p>With the advent of the Web in the 1990s, people were
+				    able to start producing their own content.  Later, scripting languages
+				    like PERL, PHP and ASP enabled Web developers to make dynamic Web sites.  At
+				    first, &#8220;Web scripting languages&#8221; such as PHP facilitated
+				    the production of &#8220;one-time&#8221; use code, as many less experienced
+				    developers found it was easy to produce dynamic Web pages.  Now,
+				    many programming languages for the Web allow developers to work within
+				    frameworks that have been proven effective (e.g. Jakarta Struts, Java
+				    Server Faces, Ruby on Rails, Cake PHP).</p>
+				  <p>More recently, a number of technologies that have
+				    enabled the production of distributed service components have come about,
+				    most notably the SOAP standard (Box et al. 2000).  This shift in
+				    the function of the Web gives developers access to an array of useful
+				    tools, that are hosted and maintained externally.</p>
+				  <p>Now with Web 2.0 (O'Reily 2005) firmly in place, we
+				    find the number of Web services and the uses of these growing daily.  Mashups
+				    (Mashup) are typical examples of how Web services can be used to enrich
+				    a Web site utilizing external resources.  An excellent example can
+				    be found at (<a href="../http://www.housingmaps.com/" target="_blank">http://www.housingmaps.com/).</a></p>
+				  <p>We are proposing that
+				      the Museum community think carefully about their Web sites and
+				      their I.T. Infrastructure.  What might look like a one-time development
+				      task could be a reusable service that can be utilized by a number of
+				      applications.  Both internal and external entities could use these
+				      services and effectively reduce future development and maintenance
+				      costs.  Before implementing a service, a check should be made
+				      to see if similar usable implementations already exist.  If either
+				      the component or the design of the component can be reused, it should
+				      be.  With the ever-growing adoption of open source software, this
+				      is a serious consideration for any museum.  If many museums use
+				      the same software or services, maintenance costs are reduced via economy
+				      of scale.</p>
+				  <p>Section 2 discusses some
+				      of the well-known principles of good software design and also best
+				      practices regarding the production of a quality service component,
+				      whether distributed or otherwise. Section 3 discusses how the museum
+				      community might host and make use of services both in-house and externally.
+				      Section 4 discusses the disadvantages of distributing components over
+				      a LAN and the Internet: we give some suggestions on how to avoid these
+				      problems.  </p>
+				  <h1><strong>Principles</strong></h1>
+				  <p style="margin-bottom: 6pt;">The first principle of
+				    good programming is what is commonly referred to as &#8220;Loose Coupling&#8221;(Gamma
+				    et al. 1995). Loose coupling describes programming
+				    components that are not dependent on each other.  For example, one
+				    might have a Web site that takes credit card payments via Paypal.  One
+				    way to design such a system is to include some code to process the Paypal
+				    (<a href="../http://www.paypal.com/" target="_blank">http://www.paypal.com</a>)
+				    payments.  We subsequently discover that we need to use another
+				    payment provider, e.g. WorldPay (<a href="../http://www.worldpay.com/" target="_blank">http://www.worldpay.com</a>).  But
+				    the existing system is now tightly coupled to Paypal, and the code that
+				    achieves this must be duplicated and adapted for the site to accept WorldPay
+				    payments.  The principle of loose coupling tells us that the system
+				    should have been designed to work with the abstract concept of a payment
+				    provider, with the implementation details that differ between payment
+				    providers being hidden behind a common interface or API used within the
+				    system.  Applying the loose coupling principle reduces the amount
+				    of work required to make modifications to the system.</p>
+				  <p style="margin-bottom: 6pt;">This
+				      brings us to the next point, the issue of an API (Applications Programming
+				      Interface).  This is the abstraction layer that enables programmers
+				      to build on existing systems and &#8220;stand on the shoulders of giants&#8221;.  Without
+				      this idea we would not have the computer systems we have today.  The
+				      most commonly used APIs are found in operating systems (e.g. Microsoft
+				      Windows/Unix).  These APIs allow programmers to write to files
+				      on the disk without needing detailed knowledge of the internal disk
+				      management.  When we design software, we may want to enable other
+				      people to use the base functionality again in other products.  Several
+				      common products with the same API allow the component that uses
+				      the API to be moved between implementations. &#8211;In
+				      the Java world, there are many application containers. If software
+				      is written against the standard API, we are free to move between vendors
+				      and our software will still work (in theory).  </p>
+				  <p>We have covered the design practices that make &#8220;software
+				    as a service&#8221; possible, but we are missing the details of how the
+				    service-consumer communicates with the service-provider.  This is
+				    simple if the programming constructs are all written in the same programming
+				    language and are all on the same machine.  But there are many reasons
+				    why this is often not the case.  </p>
+				  <ul>
+				    <li>Newer
+				      programming languages usually offer many benefits over
+				      older ones. The more recently a system was developed, the more likely
+				      it will have been programmed in a different language to older (legacy)
+				      systems still in use.</li>
+				    <li>The
+				      common programming language of a development team may not
+				      be optimal for implementing a new feature, so a different language
+				      is used. </li>
+				    <li>The
+				      service is being offered over the Internet.</li>
+			    </ul>
+				  <p>If the service-consumer
+				    and service-provider are to talk to each other without knowledge of programming
+				    languages, or even if they are on different machines, an appropriate
+				    messaging format is needed.  This idea is not new: COM+(MS COM+)
+				    and CORBA (CORBA) have been around since 1993.  Newer messaging
+				    formats such as SOAP and REST are of interest because of their text based
+				    (xml in the case of soap) protocol, which can be easily deciphered by
+				    humans.</p>
+				  <p>The ideas we have mentioned
+				      so far have been around for quite some time in the software development
+				      world. They have recently become particularly relevant in the Web development
+				      world with the advent of Web applications and software-as-a-service,
+				      developed using scripting languages such as PHP and ASP. The historical
+				      usage of these programming languages in solving simpler problems may
+				      have contributed to Web developers being slow to recognize and adopt
+				      existing good design practices, as they failed initially to spot the
+				      applicability of such practices to new paradigms, or were just not
+				      aware of such practices in the first place. The development of Web
+				      programming frameworks based on sound design principles such as Java
+				      Struts, Java Server Faces and CGI::Application for PERL, among others,
+				      along with general awareness raising within the Web development sphere,
+				      has helped in improving this situation. </p>
+				  <p>A newer twist in the ideas
+				    of loose coupling has been the introduction of aspect oriented programming
+				    (AOP Alliance) techniques and libraries.  The idea is to separate
+				    cross-cutting concerns within your code: a <em>cross-cutting
+				    concern</em> is secondary functionality
+				    that affects various parts of a program.   One can then
+				    re-introduce them declaratively: this means that a separate declaration
+				    is made to apply the secondary functionality.</p>
+				  <p>Examples of cross cutting concerns are transactional
+				    code, logging code or security interception.    </p>
+				  <p>One might decide that all methods of our service that
+				    retrieve information from the database should be optimized for read-only
+				    transactions, and all others be wrapped in a read-write transaction.  It
+				    might be that all methods that save data to the database should be declared &#8220;secure&#8221; and
+				    therefore require relevant privileges to be used.  We can test our
+				    code without transactions and without security and apply these &#8220;concerns&#8221; separately,
+				    without tainting the core function of the service.  Before, we had
+				    to think about all these concerns at once. We are now able to slice them
+				    up and let our Aspect Oriented Engine &#8220;weave&#8221; them back together.  Good
+				    AOP libraries provide code generation  of
+				    an exceptional quality, both in style and efficiency, so there is no
+				    problem with performance.  AspectJ (<a href="../http://aspectj.com/" target="_blank">http://aspectj.com</a>) for Java,
+				    and PHPAspect (<a href="../http://www.phpaspect.com/" target="_blank">http://www.phpaspect.com</a>) for PHP are excellent examples
+				    of this paradigm.</p>
+				  <p class="caption"><img src="ellis-d.figure1.png" alt="Figure 1" height="149" width="386" /></p>
+				  <p class="caption">Fig
+				      1: AOP DIAGRAM </p>
+				  <p>Figure 1 shows an example of how one might apply AOP
+				    to a software project.  The method&#8217;s really complicated task
+				    is wrapped by aspects of security and is placed within a transaction.  The
+				    aspects represent layers of the program, separating out concerns that
+				    are not directly related to the operational task.</p>
+				  <p>With AOP, programmers can write cleaner code that
+				    only concentrates on the functionality they are writing and does not
+				    force them to deal with other concerns.  This also helps in the
+				    testability of your code, because you can test the core task and each
+				    concern in isolation, making locating bugs quicker.</p>
+				  <p>The final recent advancement worth noting was born
+				    in the Java world (although applies to any programming language).  It
+				    is called <strong>Dependency Injection</strong> or <strong>Inversion
+				    Of Control</strong> (Fowler 2004).  Examples
+				    of Inversion Of Control (IoC) containers include <strong>Spring</strong> for
+				    Java, and the PHP <strong>Garden project</strong>.  The
+				    idea here is to inject programming objects or services into other programming
+				    constructs, so that objects do not need to explicitly carry information
+				    on how to acquire their dependencies.  This
+				    again, encourages good design because it is very easy to switch out components
+				    that support the same interface.  When it comes to testing, we can
+				    replace &#8220;real&#8221; objects with &#8220;fake&#8221; or &#8220;mock&#8221; objects
+				    that emulate the real service.  It may be that testing with a real
+				    remote payment system incurs a charge: it would be nice to swap this
+				    out and replace it with a fake local version during the test period.</p>
+				  <h1>Museum Web Services</h1>
+				  <p>When we think about museums and what services we could
+				    offer, we immediately see huge opportunity for reuse of software and
+				    service offerings.  Many museum Web sites already offer services
+				    that are not formally exposed by a standard mechanism.  Examples
+				    of these are the portcullis service of the parliamentary archives (<a href="../http://www.portcullis.parliament.uk/" target="_blank">http://www.portcullis.parliament.uk</a>),
+				    and the American Revolution site that provides access to its collection
+				    (<a href="../http://amrevonline.org/" target="_blank">http://amrevonline.org</a>),
+				    among others.  These are Web sites that are closely coupled to the
+				    search and retrieval logic, but one could imagine a well-defined separation
+				    enabling a great number of usages from the same retrieval engine.</p>
+				  <p>We already have one example of a service that museums
+				    can offer: search and retrieval of collection data.  This leads
+				    us to the discussion of standards.  If we were to implement such
+				    a system for a museum like the New York Historical Society, then another
+				    museum might implement a second version.  Users of these services
+				    would need to write two different versions of code that does the same
+				    thing.  We propose the introduction of a well-documented standard
+				    for such services.  Concerns that are not directly related to the
+				    task at hand also need to be taken care of, such as security and access
+				    control.</p>
+				  <p>In addition to this, there are many more services
+				    that can can be offered to or utilized by museums.  We see the functionality
+				    offered by our own open source on-line exhibition system <strong>Nexhibition
+				    (</strong><a href="../http://www.nexhibition.com/" target="_blank">http://www.nexhibition.com</a>)
+				    as one such service.  This service allows the collation of a number
+				    of images from a collection into a database which in turn allows an on-line
+				    exhibition to be created.  Users are also able to write narrative
+				    around the images.  Our original design for this system was very
+				    monolithic as there didn't seem any need to do it any other way.    As
+				    we revisit the design, we are able to see the benefits
+				    of employing a distinct separation of the constituent components.  We
+				    have built a service that allows the search and retrieval of images,
+				    a service that allows one to assemble images from our retrieval engine
+				    and other sources into a structured exhibition, and we have provided
+				    some work flow to aid in the publication of exhibitions.  Whilst
+				    the services exist, they cannot be separated and are very much interwoven.  In
+				    our ideal Nexhibition, we would build a system that allows these modules
+				    to be composed and used many times, in different software products.</p>
+				  <p>The steve.museum  project (<a href="../http://steve.museum/" target="_blank">http://steve.museum</a>)
+				    was built from the ground up with Web services in mind.  Stakeholders
+				    in the project realized the potential, the need and the architectural
+				    significance of providing a <strong>Tagging Service</strong>.  It
+				    allowed the developers to more easily respond to changes in the way the
+				    software is used, and allows future development to more easily fit-in
+				    to the architecture.  It has been an assumption from the outset
+				    that the same steve engine will
+				    be used to drive many tools, from tagging interfaces to search
+				    engines and analysis tools.  </p>
+				  <p>The Pachyderm (<a href="../http://pachyderm.org/" target="_blank">http://pachyderm.org</a>)
+				    project is an open source project that allows the generation of flash
+				    based exhibitions.  Whilst they don't expose any of their own code
+				    as services, the project certainly makes use of a distributed service
+				    based architecture.  In particular, the asset repositories are accessed
+				    via a distributed service interface.  The compilation engine could
+				    be run on a separate machine, enabling the use a variety of tools to
+				    author the content.  It might also be possible to share data access
+				    and business logic among a number of presentation engines (we could consider <strong>html</strong> or <strong>flash,</strong> among
+				    others).</p>
+				  <p>Other suggestions of services: </p>
+				  <ul>
+				    <li>A
+				      shopping service &#8211; Museums could offer rights to sell digital
+				      images of items and provide search and shopping services
+				      for them.</li>
+				    <li>Event
+				      Information &#8211; Events going on in museums could be queried and
+				      displayed on third party Web sites. </li>
+			    </ul>
+				  <p>There are many more opportunities to expose functionality
+				    as a distinct service. We simply need to be mindful as they present themselves.</p>
+				  <h1>The Design Of A Service Oriented, Loosely Coupled Online Exhibition
+				    Environment (Nexhibition Next Generation).</h1>
+				  <p>We have many ideas for the next generation open source
+				    product Nexhibition. We want to reduce dependencies on specific software
+				    products and design an application that is flexible and re-usable.  Whenever
+				    we see an opportunity to factor out a common service that could/is used
+				    else where, we will take it.</p>
+				  <p class="caption"><a name="Fig2" id="Fig2"></a><a href="../http://edit.archimuse.com/mw2007/papers/ellis-d/ellis-d.fig2.html" target="_blank"><img src="ellis-d.figure2.jpg" alt="Fig 2" width="400" border="0" /></a></p>
+				  <p class="caption"> Fig
+				      2: services required to achieve Nexhibitions  aims</p>
+				  <p>Nexhibition is a system that allows different types
+				    of users to assemble assets from a number of collections in order to
+				    produce on-line exhibitions.  We need a Collection of objects and
+				    their associated images; we need a way to manage work flow as exhibitions
+				    are passed between users for approval and editing stages; we might also
+				    need some tagging of the images we display. Finally, we need a service
+				    that assembles assets into exhibitions that can be displayed on-line.  The five
+				    APIs required to support these services are depicted in the diagram.  We
+				    have not specified which collections management system we are going to
+				    use, nor have we said which work-flow, tagging or exhibition manager
+				    implementation we are using. We have simply expressed that we need a service that
+				    supports those APIs.  Accessing CMS
+				    data through a common API means our new software is not dependent on
+				    a particular brand of CMS.</p>
+				  <p>In the same way that data specifications are being
+				    standardized, such as with Dublin core (Dublin Core) and CDWA lite (CDWA),
+				    we propose that a number of external service APIs
+				    also be standardized.  All vendors would produce API spec compliant
+				    software, open source or proprietary.  This would allow us to easily
+				    add CMS resources and upgrade exhibition managers.  This approach
+				    requires support from both the community and vendors themselves.  In
+				    the Request For Comments (Ellis et al. 2007), we examine options for
+				    the instantiation of standards bodies to house and vet these specification
+				    documents. </p>
+				  <h2>Disadvantages and Coping Strategies</h2>
+				  <p>We have looked at the evolution of good software design
+				    and discussed how we can extend these ideas to a distributed service
+				    architecture.  Whilst loose coupling makes software easier to maintain,
+				    there are a number of inherent problems when we move to a distributed
+				    model.  When programming in a distributed environment, we must assume
+				    a level of uncertainty when it comes to contacting services over a network:
+				    this is exaggerated on larger networks such as the Internet.  We
+				    are now relying on a number of assumptions: the Internet connection between
+				    us and the server is operating at a reasonable level of service at the
+				    moment; the server itself is under a reasonable load; the server is able
+				    to serve our request in a timely manner.  Our code needs to be able
+				    to take account of these conditions, and be able to respond accordingly.</p>
+				  <p>We find that the service is in the hands of a third
+				    party, and clients of the service provider are now dependent on a third
+				    party&#8217;s state.  If the service is taken down for maintenance
+				    or there is a security breach, clients of the service are directly affected.  When
+				    designing the implementation of software that uses external services,
+				    all of these concerns need to be considered and appropriate measures
+				    must be put in place.  Some systems may not be able to function
+				    if an external dependency is down. Some might be able simply to shut
+				    off that particular part of the system or temporarily replace it with
+				    another similar service.  When operating a service, good communication
+				    of events goes a long way to its success.</p>
+				  <p>Even if the service is always available and is as
+				    efficient as possible, it might not be enough.  Latency requirements
+				    for a Web site may be unachievable, depending on the service being offered.  It
+				    may be that it is simply impossible to maintain a tolerable service level
+				    using a distributed Internet based service.  If this is the case,
+				    it may be possible to improve performance by introducing some caching
+				    on the client system.</p>
+				  <h1>Closing
+				      Remarks</h1>
+				  <p>We began by discussing
+				    some of the principles behind good software design.  Loose Coupling
+				    of software components has been a driving force made popular in (Gamma
+				    et al. 1995).  A further extension to loosely coupled components resulted in
+				    the transformation into a distributed (often Internet-based) environment,
+				    with technologies such as CORBA, DCOM, and later REST and SOAP, emerging.</p>
+				  <p>Secondly, we addressed the museum-based Web sites
+				    and software we are aware of and  have worked with, and we began
+				    to think about these in a service-oriented way.  We hope others
+				    will start to produce reusable software components that offer services
+				    to their peers.  Indeed, we encourage readers to produce and run
+				    Web services as well as make use of them.</p>
+				  <p>It isn't all plain sailing, and we have talked about
+				    some of the inherent problems faced when building any kind of distributed
+				    system, especially with Web services.  The advice is to keep it simple
+				    and assume that it will break at some point: indeed, failing conditions should be tested
+				    and reproduce-able.</p>
+				  <p>If the community begins to move this way, we have
+				    some interesting economic possibilities with brokers offering services
+				    and consumers paying to use them.  If we think about the mechanics
+				    of this now, as a community, it will drive vendors and other participants
+				    to commit more fully.</p>
+				  <h2>Acknowledgments</h2>
+				  <p class="AcknowedgementsText">Thanks to Joshua Archer from the Pachyderm
+				    team for his insight into the project.  Thanks to David Bearman
+				    for his suggestions and guidance with the paper. </p>
+				  <h1>References</h1>
+				  <p class="ReferencesText">AOP
+				      Alliance. <a href="../http://aopalliance.sourceforge.net/" target="_blank">http://aopalliance.sourceforge.net/</a></p>
+				  <p class="ReferencesText">Box,
+				      D., D. Ehnebuske,  G.Kakivaya,  A.Layman,  N. Mendelsohn,  H.
+				      Nielsen,  S. Thatte, and D. Winer(2000).  &quot;Simple Object
+				      Access Protocol (SOAP) 1.1&quot;. May 2000, <a href="../http://www.w3.org/TR/2000/NOTE-SOAP-20000508" target="_blank">http://www.w3.org/TR/2000/NOTE-SOAP-20000508</a>.</p>
+				  <p class="ReferencesText">Cerami
+				      Ethan (2002).  Web Services Essentials Distributed Applications
+				      with XML-RPC, SOAP, UDDI and  WSDL.  O'Reily 2002.</p>
+				  <p class="ReferencesText">CDWA:
+				      <a href="../http://www.getty.edu/research/conducting_research/standards/cdwa/index.html" target="_blank">http://www.getty.edu/research/conducting_research/standards/cdwa/index.html</a></p>
+				  <p class="ReferencesText">Dublin
+				      Core: http://dublincore.org/</p>
+				  <p class="ReferencesText">Ellis,
+				      David et al.  The Museum Software Foundation Request for Comments,
+				      2007. Circulated electronically</p>
+				  <p class="ReferencesText">Fowler,
+				      Martin (2004). Dependency Injection. <a href="../http://www.martinfowler.com/articles/injection.html" target="_blank">http://www.martinfowler.com/articles/injection.html</a></p>
+				  <p class="ReferencesText">Gamma
+				      E,  R. Helm,  R. Johnson, J. Vlissides (1995).  Design
+				      Patterns, Elements of Reusable Object-Oriented Software. Addison-Wesley,
+				      xv, 395</p>
+				  <p class="ReferencesText">New
+				      York Historical Society &#8211; American Revolution: <a href="../http://amrevonline.org/" target="_blank">http://amrevonline.org</a></p>
+				  <p class="ReferencesText">Nexhibition:
+				      The Nexhibition Project, <a href="../http://www.nexhibition.com/" target="_blank">http://www.nexhibition.com/</a></p>
+				  <p class="ReferencesText">(Pachyderm).  The
+				      Pachyderm Project, <a href="../http://www.pachyderm.org/" target="_blank">http://www.pachyderm.org/</a></p>
+				  <p class="ReferencesText">Open
+				      Collection:  <a href="../http://www.opencollection.org/" target="_blank">http://www.opencollection.orgtion </a></p>
+				  <p class="ReferencesText">O'Reily,
+				      Tim (2005).  What Is Web 2.0? Design Patterns and Business Models
+				      for the Next Generation of Software . <a href="../http://www.oreillynet.com/pub/a/oreilly/tim/news/2005/09/30/what-is-web-20.html" target="_blank">http://www.oreillynet.com/pub/a/oreilly/tim/news/2005/09/30/what-is-web-20.html</a></p>
+				  <p class="ReferencesText">Parliamentary
+				      Archives Search: <a href="../http://www.portcullis.parliament.uk/" target="_blank">http://www.portcullis.parliament.uk</a>, Parliamentary </p>
+				  <p class="ReferencesText">REST:
+				      Representational State Transfer. <a href="../http://en.wikipedia.org/wiki/REST" target="_blank">http://en.wikipedia.org/wiki/REST</a></p>
+				  <p class="ReferencesText">Mashup.  http://en.wikipedia.org/wiki/Mashups</p>
+				  <p class="ReferencesText">SOA:  Service-oriented
+				      architecture. <a href="../http://en.wikipedia.org/wiki/Service-oriented_architecture" target="_blank">http://en.wikipedia.org/wiki/Service-oriented_architecture</a></p>
+				  <p class="ReferencesText">Steve:  Steve.museum.  <a href="../http://www.steve.museum/" target="_blank">http://www.steve.museum</a></p>
+		  <!-- #EndEditable -->
+				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Ellis, D.,
+				    et al., The Service Oriented Museum Web<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2007: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics, published March 1, 2007  Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+http://www.archimuse.com/mw2007/papers/<!-- #BeginEditable "URL" -->ellis-d/ellis-d.html
+		  <!-- #EndEditable --></p>
+				<p class="references"><em><!-- InstanceBeginEditable name="Editorial Note" -->Editorial Note<!-- InstanceEndEditable --></em> </p>
+	  </div>
+<div id="sidebar">
+			<div id="side-nav">
+				<ul id="side-nav-list">
+					    <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+						<li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+						<li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+						<li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+						<li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+						<li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+						<li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+						<li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+				</ul>
+			</div>
+			<div id="search-site">
+				<form method="post" action="../http://search.archimuse.com/cgi-bin/htsearch">
+					<input type="hidden" name="format" value="builtin-long" />
+					<input type="hidden" name="method" value="and" />
+					<input type="hidden" name="config" value="htdig-mw2007" />
+					<input type="hidden" name="restrict" value="" />
+					<input type="hidden" name="exclude" value="" />
+					<input type="text" size="20" name="words" value="" id="searchmw" />
+					<input type="image" src="../../images/searchmw2007.gif" id="searchbox" name="search" />
+				</form>
+			</div>
+				<div id="sidebar-links">
+				<ul id="sidebar-links-list">
+					<li><a href="../../../index.html" class="produced-by">produced by<br />
+					    <img src="../../images/sidelogo.gif" width="144" height="37" alt="AMI logo" /></a></li>
+					<li><a href="../../../index.html">Join our mailing list</a></li>
+					<li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+					<img src="../../../external.gif?link=http://www.archimuse.com/ami.images/search.gif" alt="search" width="24" height="25" /></a></li>
+				</ul>
+		  </div>
+		</div>
+		<div id="footer">
+		  <div id="last-updated">
+          published: April 11, 2007<br />
+			last updated:<!-- #BeginDate format:Am1a -->October 28, 2010 12:23 PM<!-- #EndDate -->
+		        <div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+		  </div>
+			<div id="footer-content">
+				Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E 2P3 Canada<br />
+				Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+				
+				<script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2007";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2007 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				</script>	
+
+		<br />
+				Copyright &copy; 2006 - Archives &amp; Museum Informatics - All rights reserved.<br />
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/ellis-d/ellis-d.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:29:26 GMT -->
+</html>
+					

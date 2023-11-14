@@ -1,0 +1,896 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2007-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/desrochers/desrochers.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:30:36 GMT -->
+<head>
+<!-- #BeginEditable "HeadPageTitle" -->
+  <title>Archives &amp; Museum Informatics: Museums and the Web 2007: Papers: Desrochers, P.and B. Thurgood, JPEG2000 Implementation at Library and Archives Canada</title><!-- #EndEditable -->
+<!-- #BeginEditable "metaTitle" -->
+  <meta name="title" content="Archives &amp; Museum Informatics: Museums and the Web 2007" /><!-- #EndEditable -->
+<!-- #BeginEditable "Keywords" -->
+  <meta name="Keywords" content="articles, papers, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" /><!-- #EndEditable -->
+<!-- #BeginEditable "Description" -->
+  <meta name="Description" content="Museums and the Web 2007: the international conference for culture and heritage on-line" /><!-- #EndEditable -->
+<!-- #BeginEditable "copyright" -->
+  <meta name="copyright" content="Archives &amp; Museum Informatics, 2007" /><!-- #EndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="../../css/mw2007.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="../../css/mw2007-noNews.css" type="text/css"  media="print, screen" />
+	<link rel="stylesheet" href="../../css/papers.css" type="text/css"  media="print, screen" />
+
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+</head>
+<body  onload="initImgRotation()">
+	<div id="container">
+		<div id="header" onclick="location.href='../index.html';" style="cursor:pointer;">
+		</div>
+		<div id="top-nav">
+			<ul id="top-nav-list">
+				<li><a href="../../register/index.html">Register</a></li>
+				<li><a href="../../dates/index.html">Key Dates</a></li>
+				<li><a href="../../sescal/index.html">Schedule</a></li>
+				<li><a href="../../local/index.html">Local Info</a></li>
+			</ul>
+		</div>
+		<div id="header-photo">
+			<a href="../../images/credits.html">
+			<!-- InstanceBeginEditable name="header-photo" -->
+       <img src="desrochers-fig-1-t.jpg" alt="MW-photo" name="img1" width="229" height="132" id="img1" /> <!-- InstanceEndEditable -->	
+			</a>
+		</div>
+		<div id="date">
+			April 11-14, 2007<br />
+			San Francisco, California
+		</div>
+		<div  id="title">
+			<h1> 
+				<!-- InstanceBeginEditable name="PageTitle" -->
+       JPEG2000 Implementation at Library and Archives Canada <!-- InstanceEndEditable -->
+   			</h1>
+		</div>
+		<div id="main-content">
+		  <div id="callout">          </div>
+		  <div id="intro-paragraph">
+				<!-- #BeginEditable "IntroParagraph" -->
+        <!-- #EndEditable -->		  </div>
+				<!-- #BeginEditable "BodyText" -->
+      <h2 class="Author">Pierre Desrochers and Brian Thurgood, Library and Archives
+        Canada, Canada</h2>
+      <p class="URL"><a href="../http://www.collectionscanada.ca/" target="_blank">http://www.collectionscanada.ca</a></p>
+      <p class="AbstractTitle">Abstract</p>
+      <p class="AbstractText">JPEG2000 is a relatively new international standard
+        for image compression developed by the Joint Photographics Experts Group
+        (JPEG). It was developed to provide the advantages of advanced wavelet
+        compression to institutions that have digital archives while eliminating
+        the concerns associated with proprietary compression and file formats.
+        JPEG2000 allows cultural institutions such as Library and Archives Canada
+        to preserve culturally significant digital objects using lossless compression
+        while providing higher performance and new features not possible in other
+        file format types. This paper discusses the initiation, planning and
+        implementation of the pilot project for JPEG2000 at Library and Archives
+        Canada. What is the scope of the pilot project? If we are to implement
+        JPEG2000 as a multiphased project, what are the implementation stages?
+        If we convert images to the new format, how many and what type of images
+        are converted? What are the higher performance and new features of JPEG2000
+        that are not possible with other file formats types? What are the risks
+        assumed with implementing JPEG2000 in a cultural institution? What are
+        the significant advantages of using this image compression standard for
+        the Web? How cost effective and relevant is JPEG2000 to museums?</p>
+      <p class="keywords">Keywords: digital collection, JPEG2000, Library and Archives Canada, archiving, image</p>
+      <h2>Introduction</h2>
+      <p>This paper will present a high-level background overview of JPEG2000, and its features and&nbsp; describe the implementation of the pilot project at Library and Archives Canada (LAC). While some of the key terms for JPEG200 will be explained, this is not a detailed exercise in describing JPEG2000 or digital perservation. Further reading on these topics can be obtained at the end of this paper in the references. Some basic understanding on the part of the reader of image formats, Web access, and metadata are assumed. This paper will provide key information on our lessons learned, and can be used, at a basic level, as an implementation tool for JPEG2000. It is the intention of the authors to provide a quick overview in this paper, and have specific details discussed in the mini-workshop in San Francisco. There we will have the opportunity to answer questions relating to cultural institutions, archives, and digital libraries. This will cover issues such as large-scale image conversions, file storage questions, metadata, advantages of new technology, known risks, disadvantages and advantages of JPEG2000, cost, and the issue of relevance to cultural institutions.</p>
+      <h2>Library and Archives Canada Background</h2>
+      <p>LAC, which brings together the collections of the former National Archives of Canada and the former National Library of Canada, contains the shared documentary heritage of all Canadians. As a small sampling, the collection includes books and publications; the official records of government; architectural drawings, plans and maps going back to the 16th century; short and full-length films, documentaries, in black and white and in colour, going back to 1897; photographic images from the 1840s to the present; broadcast recordings; video and sound recordings; the largest collection of Canadian sheet music in the world; philately; textual documents from various individuals and groups who have contributed to Canada&rsquo;s development; periodicals, microfilms, manuscripts and theses; and documentary art and portraits of over one million Canadians going back to 1689. For further information see Library and Archives Canada (2006).</p>
+      <p>This collection issues from LAC&rsquo;s mandate (as indicated in the <em>Library and Archives Act)</em></p>
+      <p class="BlockQuote">to acquire and preserve the documentary heritage;&nbsp; to make that heritage known to Canadians and to anyone with an interest in Canada and to facilitate access to it;&nbsp; to be the permanent repository of publications of the Government of Canada and of government and ministerial records that are of historical or archival value; to facilitate the management of information by government institutions;&nbsp; to coordinate the library services of government institutions; and to support the development of the library and archival communities.</p>
+      <p>Under this institutional mandate, and as part of the transformation of both institutions into LAC, the Digital Collection Catalytic Initiative (DCCI) was created. Its goal was outlined in <em>Directions for Change</em></p>
+      <p class="BlockQuote">LAC will acquire for access, preserve for longterm access, describe for access, digitize for access, drive policy toward access, innovate with technology for access, and ensure that the ways in which we provide access effectively meet users&rsquo; needs.&nbsp; (see Library and Archives Canada 2006).</p>
+      <p>The DCCI&rsquo;s mandate was further elaborated in <em>Digital information at Library and Archives Canada: An overview of progress and issues</em></p>
+      <p class="BlockQuote">Along with examining significant digital policy and resourcing issues, the DCCI has identified that the institution must develop corporate and robust technical capacities, standards and best practices for acquiring, managing, preserving and making accessible Canada&rsquo;s digital documentary heritage. Working with operational areas throughout LAC, the group is developing functional requirements and projects for the implementation of systems which can better acquire and manage our wealth of digital content. Library and Archives Canada (2005, 7) &nbsp;</p>
+      <h1>JPEG2000 Background</h1>
+      <p>JPEG2000 is a relatively new international imaging standard based on the Embedded Block Coding with Optimized Truncation (EBCOT) wavelet multimedia compression technique developed by the Joint Photographics Experts Group (JPEG) and jointly approved by the International Standards Office (ISO) and International Telecommunication Union (ITU) as ISO/IEC 154441:2000, see Gormish (2006), Sanchez and Basu (2003). The standard is divided into 12 parts. Part 1 of the standard was developed for still images. Parts 2 to 6 discuss motion JPEG2000, conformance standards, and reference software (in C and Java) and compound image formats such as for facsimiles and document imaging (i.e. PDF). Part 7 was proposed but was later abandoned. Parts 8 to 11 discuss security interactive protocols, volumetric imaging (3D), wireless applications, and base media file formats (such as motion JPEG).</p>
+      <p>This new standard is partially based on our urgent needs for improvements in compression algorithms for lossless and near lossless compression, and also on our need to establish a new common standard for interchangeable image decoding in browsers, digital photography, printing, digital libraries, ecommerce, remote sensing and other multimedia implementations.</p>
+      <p>As Acharya (2005) state in their introduction to JPEG2000, analog data (such as raw audio or uncompressed TIFFs) require a very large storage capacity. Consider that one second of low resolution analog colour video, captured at 30 frames per second in 640x480 pixels (24 bits per colour pixel) can correspond to 250 megabits (again, per second) of storage. Even with affordable storage, LAC cannot digitize all content in analog format without, at some point, running out of storage. LAC expects to increase the size of its digital collection by one to two petabytes per year. Compression is needed to minimize the cost needed to maintain large collections, and by inference, to transmit this collection over the Web.</p>
+      <p>JPEG2000 compression works on the basic notion that all data contains redundancies. As an example, the previous sentence contains six a&rsquo;s, five t&rsquo;s, and four e&rsquo;s, each of which are redundancies which can be eliminated with data compression. As an example of redundancy reduction techniques, the older JPEG uses Decrete Cosine Transform (DCT) whereas JPEG2000 uses Discrete Wavelet Transform (DWT).</p>
+      <h2>Lossless and Lossy Compression</h2>
+      <p>JPEG2000, as with other file formats (such as TIFF), offers both a lossless and a lossy compression. As Taubman (2002, 5) states, the former is intended to minimize the bits required to represent the original image sample <strong>without any loss of information</strong>. The latter, again as stated by Taubman (2002, 6) is intended to minimize the number of bits required to represent the original image sample, <strong>with an allowable level of distortion</strong>. This essentially means that for lossy compression, non significant information (or redundant information) that would be kept in a lossless format, is dropped, further compressing the data. This process is irreversible, unlike lossless compression, where an original can be reconstructed from the compressed digital object. One can easily see why lossless compression is particularly useful for keeping archival quality copies in your digital collection.</p>
+      <h2>Compression Performance and Measurement</h2>
+      <p>Compression ratio (also known as percentage of reduction), distortion and human perception are some of the common tools used for measuring compression performance in JPEG2000. The compression ratio is defined by Acharya (2005) as the ratio of the number of bits needed to represent the initial data versus the number of bits needed to represent the compressed data. For our implementation, it was expressed as a percentage (-56%) and as a ratio (2:1). For measuring distortion, LAC used the common tool known as the Peak Signal to Noise Ratio (PSNR) as expressed in decibels (dB). As indicated by Taubman (2002, 6), images with a PSNR value of 30 dB or more are reconstructed correctly without a significant loss of information.&nbsp; A large part of the compression performance measurement is based on the human perception. If we perceive that the reconstructed data (image) contains no perceptible distortion, when compared to the original image, then we can surmise that it has achieved its intended goal.</p>
+      <h2>Breakdown of JPEG2000 Features</h2>
+      <p>Some of the features of JPEG2000 are summarized by Sanchez and Basu (2003) and JPEG committee (2004b). They indicate that JPEG2000 offers better efficiency in compression, greater possibilities in lossless compression, capabilities in decoding with different output resolutions, Region Of Interest coding (parts of the image can be encoded and transmitted with a better quality than with an entire image), and protected image security (watermarking, labeling and encryption). One of the key features for Web accessibility is that, when coupled with an image server backend, JPEG2000 serves the documents to the client in the older JPEG format. This&nbsp; allows the browser to download only the necessary bits needed to display the image, and at screen resolution. This minimizes data transmission over the Web, while still serving high-quality images to the end user.</p>
+      <h1>Implementation and Project Planning</h1>
+      <p>As mentioned previously, JPEG2000 is a pilot project initiated by the Digital Collections Catalytic Initiative within LAC. The project was initiated to demonstrate that JPEG2000 was a viable option as a replacement for preservation and access formats at LAC. Phase 1 began on April 1<sup>st</sup>, 2006, and was to be completed by March 31st 2007.</p>
+      <p>Here are some of the high-level outcomes and milestones that were identified for the first phase.</p>
+      <ul>
+        <li>Demonstrate a production level commercial-off-the-shelf (COTS) JPEG2000 server;</li>
+        <li>Demonstrate JPEG2000 as a new imaging system to deliver LAC&rsquo;s digitized images;</li>
+        <li>Demonstrate the efficiency of JPEG2000 in creating smaller file sizes and lower storage costs;</li>
+        <li>Provide profiles for still photographic images and bound textual documents;</li>
+        <li>Demonstrate the benefits of JPEG2000 wavelet transform to improve compression performance over JPEG and other formats;</li>
+        <li>Demonstrate network efficiencies;</li>
+        <li>Propose a system architecture to support JPEG2000 Image Server;</li>
+        <li>Document the mechanism/framework for LAC Web tools to participate in the JPEG2000 implementation.</li>
+      </ul>
+      <p>The second phase will consist of the implementation and large-scale automated migration of the digital collection to JPEG2000 and the assessment of current LAC digitization workflow practices. It will also indicate possible best practices for the deployment of JPEG2000.&nbsp;</p>
+      <h3>Implementation</h3>
+      <p>The following hardware was selected to run the compression test in the pilot project:</p>
+      <ul>
+        <li>HP BL25p 2.2GHz Dual Core 2P</li>
+        <li>Two (2) DualCore AMD Opteron processors Model 275, 2.2 GHz standard
+          (2 supported)</li>
+        <li>1MB Level 2 cache per core/2MB total</li>
+        <li>Three (3) 2048 MB (Standard) of PC3200 DDR SDRAM 400 MHz (Total 6GB)</li>
+        <li>Four (4) PCIX Gigabit embedded ports (two (2) NC7781 and one (1) dual NC7782)</li>
+        <li>Mirrored 36GB 15 K Universal HD</li>
+        <li>One (1) additional 10/100 NIC dedicated to iLO Management</li>
+        <li>Smart Array 6i Controller (integrated on system board)</li>
+      </ul>
+      <p>The following software was tested during the pilot project:</p>
+      <ul>
+        <li><strong>Aware Windows-based Tool</strong><br />
+        This tool was used to generate various JPEG2000 files within a GUI interface.</li>
+        <li><strong>Aware J2K Viewer</strong><br />
+        The J2K viewer is designed to demonstrate the capabilities of the Aware JPEG2000 SDK for compressing, decompressing, and interactively viewing large images.</li>
+        <li><strong>Aware Batch command-line decoder and encoder</strong><br />
+        The j2kdriver program provides a complete command-line interface to the entire set of the Aware development environment functions. Additionally, this command-line tool was used to embed the Metadata Object Description Schema (MODS) XML file within the XML box of the JPEG2000 file.</li>
+        <li><strong>Kakadu Command-line decoder and encoder</strong><br />
+        Kakadu Version 5.2.2 command line program generated various JPEG2000
+          files used to assist in the evaluation of both compressed and non-compress
+        images.</li>
+        <li><strong>Luratech command-line tool</strong><br />
+        The jp2clt.exe command line program was used to generated various JPEG2000 files.</li>
+        <li><strong class="listwithbullets">Adobe Graphics Engine</strong><br />
+        This program was used to create baseline JPEG 2000 files</li>
+        <li><strong>Image Servers</strong><br />
+        The Aware Image Server application is tightly integrated with the Apache TomCat Web Server (V. 5.5.17). The Aware Image Server places very specific demands on the Apache TomCat Server. Minor memory adjustments (allocation of 1 GB of RAM) were required to improve performance of the Aware Image Server. The Luratech JPEG2000 Image Server also required minor adjustments in memory management to run successfully (memory allocation of 256 MB).</li>
+        </ul>
+      <p>The above software and hardware cost amounted to about $US 25,000 for the software, and about $US 15,000 for the hardware.</p>
+      <h3>File Size Compression</h3>
+      <p>Our initial assumption was based on the production of a reversible lossless JPEG2000 file without any compression that would be used as the primary file to dynamically generate JPEG files from the Aware Image Server. The Aware Image Server effectively proved that decoding from lossless JPEG2000 files was both inefficient and memory intensive. Our next choice was to determine how much compression should be used in the production/access master files. Since LAC will continue to produce and retain the uncompressed TIFF file along with a lossless JP2 file produced by our digitization efforts, there was no need for the production/access master to be completely lossless; near visually lossless could be acceptable.</p>
+      <p>To evaluate the effect of compression on the visual appearance of the images, file size reduction, target compression, actual compression and peak signal-to-noise ratios, a series of 24 uncompressed TIFF images were selected, representing a number of imaging classes from the primary LAC collection. For each image, 14 variants were generated using different compression ratios and JPEG2000 parameters. All images were compressed to 8, 4, 2, 1, 0.75, 0.67, 0.5, 0.32, and 0.25 bits per pixel, which corresponds to compression ratios of 32:1. Two wavelet transforms the I-97 and the R5-3 were also evaluated. The evaluations focused on subjective image quality clues, attributes of the record, and specifically for textual documents, the legibility of the text. Some of the team members evaluated the images by printing out specific areas for further analysis. As a result of these evaluations and from the decoding performance data, the decision was made to use 8:1 compression for the production/access master. This provided a balance between file size and image quality. Higher compression ratios were also acceptable depending on the imagery class, but we found little added benefit in the reduction of the file size.</p>
+      <h3>Progression Order and Resolution Levels</h3>
+      <p>Many types of progressive transmissions are supported by the JPEG2000 standard. Progressive transmission is extremely desirable for receiving images over a low bandwidth communication link. As more data is received, the rendition of the image improves in some fashion. The JPEG2000 standard supports progression in four dimensions: Quality, Resolution, Spatial Location, and Component. We examined various progressive code orders and determined that for LAC usage requirements, either LRCP (Layer resolution level component position) or RLCP (Resolution level layer component position) was suitable. The recommended progressive orders ensure that the imagery can be reconstructed based on various image qualities or based on the requirement to display the whole image in different resolution levels. The Aware Image Server does not support all variations of progression orders; it uses a resolution (quality minor progression) and tiles for efficiency as the default. It should be noted that image resolution quality improved very quickly with the baseline profile of JPEG2000.</p>
+      <p>Additionally, the Aware JPEG2000 Image server application also placed
+        specific demands on the method of compression employed. The first consideration
+        was the number of resolution levels by which an image would be compressed.
+        The numbers of compression levels are based on the desired thumbnail
+        size and full size of the image. It was recommended by Aware that it
+        was more efficient to allow the Aware codec to determine resolution levels
+        in automatic mode. Allowing Aware to automatically provide various resolution levels based on the original dimensions of the image size in pixels provides an optimum number of resolution image thumbnails (average number of resolution levels generated were 5). For a sample image of 3,784 pixels by 5,700 pixels, the smallest resolution level would be 120 pixels in length by 180 pixels in width.</p>
+      <h3>Layers</h3>
+      <p>The actual layer bitrates can be adjusted to meet specific program requirements. Experience from other users of JPEG2000 has shown that the range of bitrates from 0.05 through to 2.0 bits per sample may be effectively covered using a large number of layers when working with large image files. It was also noted that the number of layers should be reduced somewhat when working with smaller images. This confirmed our observations that it was perfectly acceptable for specific types of imagery to have higher compression ratios of up to 32:1&nbsp; while some types of collection materials (such as cartographic materials) had visual artefacts at compression ratios of just over 8:1. To offset the cost of large file sizes and provide a balance for various types of imagery, a range of 10-25 multiple layers should be included to facilitate progressive transmission at a variety of resolutions. We also observed that providing complete rate scalability (up to 50 layers) has slight overhead.</p>
+      <h3>Tiles and Precincts</h3>
+      <p>Accessing spatial regions for manipulation or display is one of the most frequently requested tasks when working with digital images. The simplest method to provide access to spatial regions of the image is for the encoder to tile the image. Tiles over 256 by 256 samples have been shown to provide almost no compression performance impact. However, studies have shown that tiles compress less efficiently and introduce artefacts at the tile&rsquo;s boundary at low bitrates. Alternatively, JPEG2000 also supports the use of precincts that provides a repetitive mechanism for enabling spatial access to the compressed data. As with resolution and quality progressions, spatial locations are an important feature of JPEG2000. With this type of progression, imagery can be received in approximately raster fashion, from top to bottom. This can be very useful in memory-constrained applications.</p>
+      <p>We generated a series of test images with tiles and precincts. Images were evaluated with a tile sized ranging from 256 by 256, 512 by 512, and 1024 by 1024. In images that had precincts, the precinct size was 256 by 256 for the two highest resolution levels, then 128 by 128 for the remaining levels. It was found that the Aware codec preferred tile sizes at 512 by 512, which resulted in significant performance gains compared to both precincts and small tile sizes. As a result of the demands of the Aware codec, the profile recommends the use of tile sizes set to 512 by 512. Additionally, we recommend that the tile X and Y origins, as well as the image X and Y origins, be set to 0.</p>
+      <h3>JPEG2000 Codestream Parameter Profiles</h3>
+      <p>Codestream parameter profiles are used to maximize the representation of lossy and lossless compressed images by media type. These media types can benefit by compressed at optimum levels. These media types are described by Taubman (2002) :</p>
+      <ul>
+        <li><strong class="listwithbullets">Natural:</strong> Photographic images.</li>
+        <li><strong class="listwithbullets">Text:</strong> Scanned or computer generated text.</li>
+        <li><strong class="listwithbullets">Graphics:</strong> Scanned or computer generated graphics.</li>
+        <li><strong class="listwithbullets">Compound:</strong> Images which contain a mixture of all of the above.</li>
+      </ul>
+      <p>Note that images discussed in Part 1 of JPEG200 are Natural media types, and that LAC evaluated all media types during the pilot phase. The profiles were obtained by comparative results from using sample images (see Figure 1 and Figure 2). The JPEG2000 codestream in the production of the preservation master and the production/access master files contains a single component 8 bit image with the same image size as its corresponding TIFF file.&nbsp; The preservation master file uses a R-53 reversible wavelet transform with 6 decomposition levels, 25 multiple layers, with a progression order of RLCP.&nbsp; Codestreams are titled at 512 by 512 with no use of precincts or containing Regions Of Interest. The production master file uses an I-97 lossy wavelet transform at an 8:1 compression ratio.</p>
+      <p class="caption"><a name="Fig1" id="Fig1"></a><a href="desrochers-fig1.html"><img src="desrochers-fig-1-thumb.jpg" alt="Fig 1" width="400" height="213" border="0" /></a></p>
+      <p class="caption">Fig 1: Examples of images used for comparative codestreams</p>
+      <p class="caption"><a name="Fig2" id="Fig2"></a><a href="desrochers-fig2.html"><img src="desrochers-fig-2-thumb.jpg" alt="Fig 2" width="400" height="233" border="0" /></a></p>
+      <p class="caption">Fig 2: Examples of images used for comparative codestreams</p>
+      <table border="1" cellspacing="0" cellpadding="0" style="margin-left:29.4pt;border-collapse:collapse;border:none;">
+        <tr>
+          <th>
+            Parameter</th>
+          <th>
+            Value</th>
+        </tr>
+        <tr>
+          <td>
+            SIZ marker segment</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            Profile</td>
+          <td>
+            Rsiz=2 (Profile 1)</td>
+        </tr>
+        <tr>
+          <td>
+            Image size</td>
+          <td>
+            Same as primary file &ndash; TIFF, JPEG</td>
+        </tr>
+        <tr>
+          <td>
+            Tiles</td>
+          <td>
+            512 x 512 (Section 3.4)</td>
+        </tr>
+        <tr>
+          <td>
+            Image and tile origin</td>
+          <td>
+            XOsiz = YOsiz = XTOsiz = YTOsiz = 0</td>
+        </tr>
+        <tr>
+          <td>
+            Number of components</td>
+          <td>
+            Csiz = 1</td>
+        </tr>
+        <tr>
+          <td>
+            Bit depth</td>
+          <td>
+            Ssiz =8</td>
+        </tr>
+        <tr>
+          <td>
+            Subsampling</td>
+          <td>
+            XRiz = YRsiz = 1</td>
+        </tr>
+        <tr>
+          <td>
+            Marker Locations</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            COD, COC, QCD, QCC</td>
+          <td>
+            Main header only</td>
+        </tr>
+        <tr>
+          <td>
+            COD/COC marker segments</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            Progression order</td>
+          <td>
+            RLCP</td>
+        </tr>
+        <tr>
+          <td>
+            Number of decomposition levels</td>
+          <td>
+            N<sub>L =</sub> 6 or automatic</td>
+        </tr>
+        <tr>
+          <td>
+            Number of layers</td>
+          <td>
+            Multiple (recommended 25 layers)</td>
+        </tr>
+        <tr>
+          <td>
+            Code-block size</td>
+          <td>
+            xcb=ycb=6</td>
+        </tr>
+        <tr>
+          <td>
+            Code-block style</td>
+          <td>
+            SPcod, SPcoc = 0000 0000</td>
+        </tr>
+        <tr>
+          <td>
+            Transformation</td>
+          <td>
+            I9-7 irreversible filter</td>
+        </tr>
+        <tr>
+          <td>
+            Precinct size</td>
+          <td>
+            Not used (Aware Image Server preferred)</td>
+        </tr>
+        <tr>
+          <td>
+            Compressed File Size</td>
+          <td>
+            Recommended at 1 bit per pixel</td>
+        </tr>
+      </table>
+      <p class="caption">Table 1: JPEG2000 Production/Access Master Codestream Profile for Newspapers/Microfilm/Textual</p>
+      <table border="1" cellspacing="0" cellpadding="0" style="margin-left:29.4pt;border-collapse:collapse;border:none;">
+        <tr>
+          <th>            Parameter</th>
+          <th>            Value</th>
+        </tr>
+        <tr>
+          <td>
+            SIZ marker segment</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            Profile</td>
+          <td>
+            Rsiz=2 (Profile 1)</td>
+        </tr>
+        <tr>
+          <td>
+            Image size</td>
+          <td>
+            Same as primary file &ndash; TIFF, JPEG</td>
+        </tr>
+        <tr>
+          <td>
+            Tiles</td>
+          <td>
+            512 x 512 (Section 3.4)</td>
+        </tr>
+        <tr>
+          <td>
+            Image and tile origin</td>
+          <td>
+            XOsiz = YOsiz = XTOsiz = YTOsiz = 0</td>
+        </tr>
+        <tr>
+          <td>
+            Number of components</td>
+          <td>
+            Csiz =3</td>
+        </tr>
+        <tr>
+          <td>
+            Bit depth</td>
+          <td>
+            Ssiz =24</td>
+        </tr>
+        <tr>
+          <td>
+            Subsampling</td>
+          <td>
+            XRiz = YRsiz = 1</td>
+        </tr>
+        <tr>
+          <td>
+            Marker Locations</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            COD, COC, QCD, QCC</td>
+          <td>
+            Main header only</td>
+        </tr>
+        <tr>
+          <td>
+            COD/COC marker segments</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            Progression order</td>
+          <td>
+            RLCP</td>
+        </tr>
+        <tr>
+          <td>
+            Number of decomposition levels</td>
+          <td>
+            N<sub>L =</sub> 6 or automatic</td>
+        </tr>
+        <tr>
+          <td>
+            Number of layers</td>
+          <td>
+            Multiple (recommended 25 layers)</td>
+        </tr>
+        <tr>
+          <td>
+            Code-block size</td>
+          <td>
+            xcb=ycb=6</td>
+        </tr>
+        <tr>
+          <td>
+            Code-block style</td>
+          <td>
+            SPcod, SPcoc = 0000 0000</td>
+        </tr>
+        <tr>
+          <td>
+            Transformation</td>
+          <td>
+            I9-7 irreversible filter</td>
+        </tr>
+        <tr>
+          <td>
+            Precinct size</td>
+          <td>
+            Not used (Aware Image Server preferred)</td>
+        </tr>
+        <tr>
+          <td>
+            Compressed File Size</td>
+          <td>
+            Recommended at 1 bit per pixel</td>
+        </tr>
+      </table>
+      <p class="caption">Table 2: JPEG2000 Production/Access Master Codestream Profile for Colour Images/Photographs/Fine Art/Prints/Drawings/Maps</p>
+      <table border="1" cellspacing="0" cellpadding="0" style="margin-left:29.4pt;border-collapse:collapse;border:none;">
+        <tr>
+          <th>
+            Parameter</th>
+          <th>
+            Value</th>
+        </tr>
+        <tr>
+          <td>
+            SIZ marker segment</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            Profile</td>
+          <td>
+            Rsiz=2 (Profile 1)</td>
+        </tr>
+        <tr>
+          <td>
+            Image size</td>
+          <td>
+            Same as primary file &ndash; TIFF, JPEG</td>
+        </tr>
+        <tr>
+          <td>
+            Tiles</td>
+          <td>
+            1024 x 1024 (Section 3.4)</td>
+        </tr>
+        <tr>
+          <td>
+            Image and tile origin</td>
+          <td>
+            XOsiz = YOsiz = XTOsiz = YTOsiz = 0</td>
+        </tr>
+        <tr>
+          <td>
+            Number of components</td>
+          <td>
+            Csiz = 3</td>
+        </tr>
+        <tr>
+          <td>
+            Bit depth</td>
+          <td>
+            Ssiz = 24</td>
+        </tr>
+        <tr>
+          <td>
+            Subsampling</td>
+          <td>
+            XRiz = YRsiz = 1</td>
+        </tr>
+        <tr>
+          <td>
+            Marker Locations</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            COD, COC, QCD, QCC</td>
+          <td>
+            Main header only</td>
+        </tr>
+        <tr>
+          <td>
+            COD/COC marker segments</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            Progression order</td>
+          <td>
+            RLCP or LRCP</td>
+        </tr>
+        <tr>
+          <td>
+            Number of decomposition levels</td>
+          <td>
+            N<sub>L</sub> = 6 or automatic</td>
+        </tr>
+        <tr>
+          <td>
+            Number of layers</td>
+          <td>
+            Multiple (recommended 10-25 layers)</td>
+        </tr>
+        <tr>
+          <td>
+            Code-block size</td>
+          <td>
+            xcb=ycb=6</td>
+        </tr>
+        <tr>
+          <td>
+            Code-block style</td>
+          <td>
+            SPcod, SPcoc = 0000 0000</td>
+        </tr>
+        <tr>
+          <td>
+            Transformation</td>
+          <td>
+            R5-3 reversible filter</td>
+        </tr>
+        <tr>
+          <td>
+            Precinct size</td>
+          <td>
+            Not used (Aware Image Server preferred)</td>
+        </tr>
+        <tr>
+          <td>
+            Compressed File Size</td>
+          <td>
+            Recommended at 8 bits per pixel</td>
+        </tr>
+      </table>
+      <p class="caption">Table 3: JPEG2000 Archival Master Codestream Profile for Colour Images/Photographs/Fine Art/Prints/Drawings</p>
+      <table border="1" cellspacing="0" cellpadding="0" style="margin-left:29.4pt;border-collapse:collapse;border:none;">
+        <tr>
+          <th>            Parameter</th>
+          <th>            Value</th>
+        </tr>
+        <tr>
+          <td>
+            SIZ marker segment</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            Profile</td>
+          <td>
+            Rsiz=2 (Profile 1)</td>
+        </tr>
+        <tr>
+          <td>
+            Image size</td>
+          <td>
+            Same as primary file &ndash; TIFF, JPEG</td>
+        </tr>
+        <tr>
+          <td>
+            Tiles</td>
+          <td>
+            1024x1024</td>
+        </tr>
+        <tr>
+          <td>
+            Image and tile origin</td>
+          <td>
+            XOsiz = YOsiz = XTOsiz = YTOsiz = 0</td>
+        </tr>
+        <tr>
+          <td>
+            Number of components</td>
+          <td>
+            Csiz = 3</td>
+        </tr>
+        <tr>
+          <td>
+            Bit depth</td>
+          <td>
+            Ssiz = 24</td>
+        </tr>
+        <tr>
+          <td>
+            Subsampling</td>
+          <td>
+            XRiz = YRsiz = 1</td>
+        </tr>
+        <tr>
+          <td>
+            Marker Locations</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            COD, COC, QCD, QCC</td>
+          <td>
+            Main header only</td>
+        </tr>
+        <tr>
+          <td>
+            COD/COC marker segments</td>
+          <td>&nbsp;          </td>
+        </tr>
+        <tr>
+          <td>
+            Progression order</td>
+          <td>
+            RLCP or LRCP</td>
+        </tr>
+        <tr>
+          <td>
+            Number of decomposition levels</td>
+          <td>
+            N<sub>L</sub> = 6 or automatic</td>
+        </tr>
+        <tr>
+          <td>
+            Number of layers</td>
+          <td>
+            At least 10 to a maximum of 25</td>
+        </tr>
+        <tr>
+          <td>
+            Code-block size</td>
+          <td>
+            xcb=ycb=6</td>
+        </tr>
+        <tr>
+          <td>
+            Code-block style</td>
+          <td>
+            SPcod, SPcoc = 0000 0000</td>
+        </tr>
+        <tr>
+          <td>
+            Transformation</td>
+          <td>
+            R5-3 reversible filter</td>
+        </tr>
+        <tr>
+          <td>
+            Precinct size</td>
+          <td>
+            Not used (Aware Image Server preferred)</td>
+        </tr>
+        <tr>
+          <td>
+            Compressed File Size</td>
+          <td>
+            Recommended at 8 bits per pixel</td>
+        </tr>
+      </table>
+      <p class="caption">Table 4: JPEG2000 Archival Master Codestream Profile for Cartographic Images</p>
+      <h4>Metadata</h4>
+      <p>The ever-increasing demand for preservation quality images, along with the need for their associated metadata, is now forcing institutions to focus on the need to manage these resources over the long term. JPEG2000 introduces the concept of metadata bundles within the file format itself, permanently associating the various metadata elements with the image in one digital object. The JPEG2000 file is XML compliant, allowing metadata elements to be appended and extracted from the file. JPEG2000 files can support several types of metadata boxes, which include the following:</p>
+      <ul>
+        <li>Intellectual Property Box: used for carrying intellectual property rights information about the image(s) in the file (archival based collection materials).</li>
+        <li>XML Box: used for vendor specific information in XML format. (e.g. MODS)</li>
+        <li>URL Box: used for including an URL that can be used by the application to acquire more information.</li>
+        <li>UUID Box: User defined metadata boxes that can be used for any other information LAC deems important to be associated with the file.</li>
+      </ul>
+      <p>The use of the above metadata boxes will have a significant impact on the digitization workflow within LAC and has the potential to address the need to manage and preserve digital objects over time.</p>
+      <p>The recommended minimum set of metadata that can be used to identify some of the key elements that would provide direct links to the LAC main catalogues and provide the minimum level of metadata for resource discovery at the file level are shown in Table 5.</p>
+      
+        <table f>
+          <tr>
+            <th>
+              Content</th>
+            <th>
+              Intellectual Property</th>
+            <th>
+              Instantiation</th>
+          </tr>
+          <tr>
+            <td>
+              <p>Title</p>
+              <p>Subject</p>
+              <p>Description</p>
+              <p>Type</p>
+              <p>Source</p>
+              <p>Relation</p>
+              <p>Coverage</p></td>
+            <td>
+              <p>Creator</p>
+              <p>Publisher</p>
+              <p>Contributor</p>
+              <p>Rights</p></td>
+            <td>
+              <p>Date</p>
+              <p>Format</p>
+              <p>Identifier</p>
+              <p>Language</p></td>
+          </tr>
+        </table>
+        <p class="caption">Table 5. Minimum Set of Metadata Elements.</p>
+      <p>Current tests have shown that a full MODS record can be appended and extracted from the JPEG2000 file. Additionally, the Aware Image Server does support the viewing of the metadata from the XML boxes within the file.</p>
+      <h1>JPEG2000 on the Web</h1>
+      <h2>Performance Issues</h2>
+      <p>The JPEG2000 to JPEG image converter as a standalone conversion server was the subject of the stress and performance tests described in this document (one of the key components of the LuraTech and Aware Image Content Server). It converts images from JPEG2000 (which is used for storage inside the Image Content Servers) to achieve the highest possible image quality at minimum storage requirements, to legacy JPEG what can be displayed by any standard Web browser.</p>
+      <p>Main measurements are Time to first byte (TTFB) and Time To Last Byte (TTLB), which are proportional to the conversion speed and are indicators for the load times the user experiences. Please note that the number of client requests is not equal to the number of concurrent users. Depending on user behaviour, the number of concurrent users is much higher than the number of concurrent requests.</p>
+      <p>Based on our test scenarios, the Aware Image Server is more efficient in serving out images at standard resolutions. Comparable results are also obtained when comparing full zooming functionality with the Zoomify&trade; product.</p>
+      <h2>Number of Concurrent Users</h2>
+      <p>It is important to distinguish between concurrent requests (the number of parallel conversion processes handled by the server) and concurrent users&nbsp; (the number of users viewing a Web page generated by the Image Content Server at the same time).</p>
+      <p>The number of concurrent requests is limited by the number of Web server threads. This is a server tuning issue that has implications for server performance, but does not limit the number of concurrent users. The maximum number of concurrent users depends on user behaviour and the expected response time. Every user generates one or more requests from time to time, but does not cause a constant server load. Based on our test scenarios, it would appear that performance demands increase dramatically beyond 175 concurrent users, requiring some consideration of how we create the architecture for future JPEG2000 image servers.</p>
+      <h2>Conclusion</h2>
+      <p>The possibility of lossless coding is of vital interest for some applications, such as image archiving and Trusted Digital Repositories (TDR) that hold vast numbers of images. JPEG2000 provides both lossy and lossless versions of the same image. They can both be easily accessible in the same codestream, thus eliminating the need for multiple downloads and providing for a simplified method for data management, storage and access.</p>
+      <p>Current tests have shown that file sizes can be reduced significantly without loss to image quality. The average file size reductions for archival masters are in the range of 2:1. For production access masters files, the average reduction ratio is 20:1. Additional derivative files for other LAC Web content and services are no longer required, providing further savings. Further richness is provided within the file format by offering metadata (MODS) records within the file format itself, thus permanently associating the metadata elements with the image in one object.</p>
+      <p>During 2005-2006 LAC digitized approximately 5.8 million images, representing 150 terabytes of storage on various physical formats. As of July, 2006, LAC has on-line over 2.4 million electronic publications, 27 million Web pages comprising 1.2 terrabytes of information, 24 terrabytes of digital copies of analog originals, 47,000 electronic theses comprised of 32.5 terrabytes. We also maintain over 779 terrabytes of off-line (dark archives) storage. Furthermore, only about 1% to 3% of the total Government of Canada output is archived at LAC (see Library and Archives Canada 2005). Adopting JPEG2000 in a lossless form to replace the current TIFF file format as a preservation file format could provide a 30 to 50% savings in storage, processing, file derivative creation and transmission costs.</p>
+      <h2>References</h2>
+      <p class="ReferencesText">Acharya, Tinku (2005). JPEG2000 standard for image compression concepts, algorithms and VLSI architectures.</p>
+      <p class="ReferencesText">Robert Buckley, Xerox Innovation Group and Roger
+        Sam, Business Development 
+        Executive (2006), JPEG 2000 Profile for the National Digital Newspaper
+         Program, Library of Congress, Office of Strategic Initiatives, April
+        27, 
+        2006.</p>
+      <p class="ReferencesText">Colyer, Greg, and Richard Clark (2003). &ldquo;Guide to the practical implementation of JPEG2000.&rdquo; Technical Report, British Standards Institution, <a href="../http://www.jpeg.org/jpeg2000guide/" target="_blank">http://www.jpeg.org/jpeg2000guide/</a>.</p>
+      <p class="ReferencesText">Gormish, Michael (2006). JPEG2000 Gormish Notes on the family of standards and it&rsquo;s
+        usage. 2006, last updated, 19 Oct 2006. consulted December 22, 2006.
+        <a href="../http://www.rii.ricoh.com/~gormish/jpeg2000.html" target="_blank">http://www.rii.ricoh.com/~gormish/jpeg2000.html</a></p>
+      <p class="ReferencesText">JPEG committee (2004a). JPEG2000. 2004, consulted December 12, 2006. <a href="../http://www.jpeg.org/jpeg2000/index.html" target="_blank">http://www.jpeg.org/jpeg2000/index.html</a>.</p>
+      <p class="ReferencesText">&mdash;. (2004b). JPEG2000 F.A.Q. 2004, consulted December 12, 2006.<a href="../http://www.jpeg.org/.demo/FAQJpeg2k/index.htm" target="_blank"> http://www.jpeg.org/.demo/FAQJpeg2k/index.htm</a>.</p>
+      <p class="ReferencesText">Kalfatovic, Martin R. (2002). Creating a winning online exhibition a guide for libraries, archives, and museums.</p>
+      <p class="ReferencesText">Library and Archives Canada (2004). Guidelines on Computer File Types, Interchange Formats and Information Standards. 2004, last updated, 29Mar2006. consulted December 12, 2006. <a href="../http://www.collectionscanada.ca/informationmanagement/002/0070023017e.html" target="_blank">http://www.collectionscanada.ca/informationmanagement/002/0070023017e.html</a>.</p>
+      <p class="ReferencesText">&mdash;. (2005). Digital information at Library and Archives Canada: An overview of progress and issues.</p>
+      <p class="ReferencesText">&mdash;. (2006). Directions for Change 2006, last updated, 06 Sep 2006. consulted December 20, 2006. <a href="../http://www.collectionscanada.ca/aboutus/016/indexe.html" target="_blank">http://www.collectionscanada.ca/aboutus/016/indexe.html</a>.</p>
+      <p class="ReferencesText">Man, Hong, Alen Docef, and Faouzi Kossentini (2005a). &ldquo;Performance Analysis of the JPEG2000 Image Coding Standard.&rdquo; Multimedia Tools and Applications 26 (1): 27&ndash;57 (May).</p>
+      <p class="ReferencesText">&mdash;. (2005b). &ldquo;Performance Analysis of the JPEG2000 Image Coding Standard.&rdquo; Multimedia Tools Appl. 26 (1): 27&ndash;57.</p>
+      <p class="ReferencesText">Puglia, Steven, Jeffrey A. Reed, Erin Rhodes,
+        and U.S. National Archives and Records Administration (2005). Technical
+        Guidelines for Digitizing Archival Materials for Electronic Access: Creation
+        of Production Master FilesRaster Images. 2004, last updated June 2004
+        10:37:59 EST. consulted December 12, 2006. <a href="../http://www.archives.gov/research/arc/digitizing-archival-materials.pdf" target="_blank">http://www.archives.gov/research/arc/digitizing-archival-materials.pdf</a></p>
+      <p class="ReferencesText">Sanchez, Victor, and Anup Basu (2003). The JPEG2000
+        Image Compression Standard. 2003, last updated, 20 Feb, 2003. consulted
+        January 21, 2007.  <a href="../http://webdocs.cs.ualberta.ca/~anup/Courses/604/NOTES/slide_jpeg2000.pdf" target="_blank">http://www.cs.ualberta.ca/~anup/Courses/604/NOTES/slide_jpeg2000.pdf</a></p>
+      <p class="ReferencesText">SantaCruz, Diego, Touradj Ebrahimi, and Joel Askelof (2001). JPEG2000 still image coding versus other standards. 2001, last updated Monday, 26Feb2001 10:37:59 EST. consulted December 12, 2006. <a href="../http://www.jpeg.org/public/wg1n1816.pdf">http://www.jpeg.org/public/wg1n1816.pdf</a>.</p>
+      <p class="ReferencesText">Taubman, David S. (2002). JPEG2000 image compression fundamentals, standards, and practice.</p>
+      <p class="ReferencesText">Wikipedia (2006a). Blade Server &mdash; Wikipedia, The Free Encyclopedia. 2006, last updated Monday, 31 Dec 2006 04:05:00 EST. consulted January 13, 2007. <a href="../http://en.wikipedia.org/wiki/Bladeserver">http://en.wikipedia.org/wiki/Blade
+          server</a>.</p>
+      <p class="ReferencesText">&mdash;. (2006b). JPEG2000 &mdash; Wikipedia, The Free Encyclopedia. 2006, last updated Monday, 11 Dec 2006 12:28:00 EST. consulted December 12, 2006. <a href="../http://en.wikipedia.org/wiki/JPEG2000">http://en.wikipedia.org/wiki/JPEG2000</a>.</p>
+      <p class="ReferencesText">&mdash;. (2006c). Tagged Image File Format &mdash; Wikipedia, The Free Encyclopedia. 2006, last updated Monday, 16:51, 18Dec2006 16:51:00 EST. consulted December 29, 2006. <a href="../http://en.wikipedia.org/wiki/TaggedImageFileFormat">http://en.wikipedia.org/wiki/Tagged
+          Image File Format</a>.</p>
+      <p class="ReferencesText">Yeung, Tim Au, Minister of Public Works and Government
+        Services, and Canadian Heritage Information Network (2004). Digital Preservation:
+        Best Practice for Museums. 2004, last updated, 07 Oct 2004. consulted
+        December 20, 2006. <a href="../http://www.chin.gc.ca/English/Digital_Content/Digital_Preservation/bestpractice.html" target="_blank">http://www.chin.gc.ca/English/Digital_Content/Digital_Preservation/bestpractice.html</a></p>
+      <p>&nbsp;</p><!-- #EndEditable -->
+				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Desrochers, P.and B. Thurgood, JPEG2000 Implementation at Library and Archives Canada<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2007: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics, published March 1, 2007  Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+http://www.archimuse.com/mw2007/papers/<!-- #BeginEditable "URL" -->desrochers/desrochers.html <!-- #EndEditable --></p>
+				<p class="references"><em><!-- InstanceBeginEditable name="Editorial Note" -->Editorial Note<!-- InstanceEndEditable --></em> </p>
+	  </div>
+<div id="sidebar">
+			<div id="side-nav">
+				<ul id="side-nav-list">
+					    <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+						<li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+						<li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+						<li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+						<li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+						<li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+						<li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+						<li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+				</ul>
+			</div>
+			<div id="search-site">
+				<form method="post" action="../http://search.archimuse.com/cgi-bin/htsearch">
+					<input type="hidden" name="format" value="builtin-long" />
+					<input type="hidden" name="method" value="and" />
+					<input type="hidden" name="config" value="htdig-mw2007" />
+					<input type="hidden" name="restrict" value="" />
+					<input type="hidden" name="exclude" value="" />
+					<input type="text" size="20" name="words" value="" id="searchmw" />
+					<input type="image" src="../../images/searchmw2007.gif" id="searchbox" name="search" />
+				</form>
+			</div>
+				<div id="sidebar-links">
+				<ul id="sidebar-links-list">
+					<li><a href="../../../index.html" class="produced-by">produced by<br />
+					    <img src="../../images/sidelogo.gif" width="144" height="37" alt="AMI logo" /></a></li>
+					<li><a href="../../../index.html">Join our mailing list</a></li>
+					<li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+					<img src="../../../external.gif?link=http://www.archimuse.com/ami.images/search.gif" alt="search" width="24" height="25" /></a></li>
+				</ul>
+		  </div>
+		</div>
+		<div id="footer">
+		  <div id="last-updated">
+          published: April 11, 2007<br />
+			last updated:<!-- #BeginDate format:Am1a -->October 28, 2010 12:23 PM<!-- #EndDate -->
+		        <div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+		  </div>
+			<div id="footer-content">
+				Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E 2P3 Canada<br />
+				Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+				
+				<script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2007";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2007 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				</script>	
+
+		<br />
+				Copyright &copy; 2006 - Archives &amp; Museum Informatics - All rights reserved.<br />
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/desrochers/desrochers.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:30:36 GMT -->
+</html>
+					

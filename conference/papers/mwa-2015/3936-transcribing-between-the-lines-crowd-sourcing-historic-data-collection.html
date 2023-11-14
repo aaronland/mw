@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/transcribing-between-the-lines-crowd-sourcing-historic-data-collection/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:55:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Transcribing between the lines: crowd-sourcing historic data collection | MWA2015: Museums and the Web Asia 2015</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/mw-theme/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mwa2015.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/wp-emoji.js?ver=5.6","twemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/twemoji.js?ver=5.6"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='../../wp-content/themes/twentyeleven/blockscb8b.css?ver=20190102' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index6a35.html?p=526' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed6d3f.json?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Ftranscribing-between-the-lines-crowd-sourcing-historic-data-collection%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embedda6f?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Ftranscribing-between-the-lines-crowd-sourcing-historic-data-collection%2F&amp;format=xml" />
+</head>
+
+<body class="paper-template-default single single-paper postid-526 wp-embed-responsive single-author two-column right-sidebar">
+<div id="page" class="hfeed">
+
+<style type="text/css">
+branding.img { height: auto; display: block; width: 100%; }
+#image  { position:relative;z-index:10;  }
+#text   { position:absolute; z-index:100; }
+#site-description { font-weight: normal; color: #fff; margin: 0 20px 20px 0;}
+#site-title a { color: #fff; }
+#site-title { margin-right: 20px; }
+</style>
+
+<header id="branding" role="banner">
+<hgroup>
+	<div id="text">
+<h1 id="site-title"><span><a href="../../index.html" rel="home">MWA2015: Museums and the Web Asia 2015</a></span></h1>
+<h2 id="site-description">The conference of Museums and the Web in Asia | October 5-8 | Melbourne, Australia</h2>
+	</div>
+</hgroup>
+
+			
+<div id="image"><a href="../../index.html"><img src="../../wp-content/uploads/2014/10/Melbourne-MWA2015.jpg" width="1000" height="250" alt="Museums and the Web Asia 2015" /></a></div>
+			
+			
+										
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-10"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="../../local-info/index.html">Local Info</a></li>
+	<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+	<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-16"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="../../exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="../../advertising-guildlines/index.html">Advertising Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="../../attending/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="../../workshop-program/index.html">Workshops</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../hobart-deep-dive/index.html">Hobart Deep Dive</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="../../attendees/index.html">Attendees</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<div id="primary">
+<div id="content" role="main">
+<article id="post-526" class="post-526 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">Transcribing between the lines: crowd-sourcing historic data collection</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/nkearney/">Nicole Kearney</a>, Museum Victoria, Australia, <a target="_blank" href="https://www.museumsandtheweb.com/member/elyw/">Elycia Wallis</a>, Museums Victoria, Australia</p>
+<h2>Abstract</h2>
+Archival field diaries are an invaluable source of scientific and historic data, providing insights into species’ past abundance and distribution, references to significant people and events, and personal descriptions of historic expeditions.
+Despite the wealth of information they contain, they are an underutilised resource because they are inaccessible in their original state. As hand-written documents they are hard to read, and they are often uncatalogued. This means that neither their contents nor their very existence is searchable. 
+In this paper, we will explore the evolving field of online transcription, with a particular emphasis on archival field diaries. Using Museum Victoria’s recent transcription projects as key case studies, we will discuss the transcription platforms available, the standards required for success, and, most importantly, what we are doing to capture all the data.</p>
+<p><b>Keywords:</b> field books, crowd-sourcing, digitization, biodiversity, transcription, taxonomic referencing</p>
+<h2>Introduction</h2>
+<p>For hundreds of years, naturalists, scientists and collectors have explored the natural world and documented their discoveries. This documentation has often taken the form of diaries written in the field during expeditions, or as an adjunct to other work or adventures. Many of these diaries have since found their way into museum collections, but can also be found in Archives and Libraries.</p>
+<p>These diaries contain descriptions of new discoveries and frontiers, personal accounts of the trials and wonders experienced, and references to historically-significant people, places and events. They are also filled with scientific data: historic observations of animals, plants, rocks and fossils. Field diaries also provide rich contextual information, such as animal behaviour, interactions between individuals and species, habitat descriptions, weather conditions and past field techniques and collecting methods. Most importantly, diarists are often meticulous in their recordings and ensure that each observation is accompanied by a date and location, the two key pieces of information that make an observation useful to science.</p>
+<p>The data locked away in historic field diaries is of great use to modern scientists. It can provide invaluable insights into species’ past abundance and distribution. This information can be used to more effectively plan future biological surveys and to inform threatened species management (e.g. Rowe, 2014). Data in diaries from collecting expeditions can be used to clarify specimens’ provenance and to re-find localities (Thomer, 2014). Historic occurrence records, such as those found in field diaries, are also starting to be recognised as a critical baseline for climate change studies (e.g. Hill, <em>et al.</em>, 2012; Moritz, <em>et al.</em>, 2008; Tingley et al, 2012). The value of these primary source materials, produced by our earliest field naturalists, cannot be underestimated.</p>
+<p>Despite the wealth of information they contain, field books are an underutilised resource (Sheffield, 2011). Written as personal records, they exist only as physical documents, as a single hard copy, stored in a single location. Anecdotally, very few museums have a centralised procedure for storing, preserving or cataloguing field diaries. Many field diaries have simply remained associated with the science collections they refer to. These are often uncatalogued, their very existence known only to a few staff members. Some field diaries make their way into history or library departments, and many end up in museum archives. Scattered across departments, the field book collections of most museums remain undiscovered.</p>
+<p>Historic field books are not just hard to find, they are hard to read. Many are penned in scripts no longer used today. Their legibility is further reduced by the fact that these documents were not neatly written at a desk; they were scribbled in the field, often in less-than-favourable conditions. As handwritten documents, their contents can’t be searched. Even when digitised, handwriting is unreadable by computers. Even the neatest, most consistent handwriting resists OCR (optical character recognition). With their treasure troves of data hidden within unsearchable text, field diaries are often simply ignored and forgotten.</p>
+<p>Developing an efficient method for digitising and transcribing field notes is critical for capturing the data they contain, and not just for historic field notes. While a few scientists are beginning to record their field data digitally, most still use pencil and paper. In 2015, <em>all </em>scientific curators at the American Museum of Natural History expressed a desire to digitize and preserve their field notebooks, reporting that these documents contain the most important data from their work (Steeves, 2015).</p>
+<h2>Case Study: The field diaries of A. Graham Brown</h2>
+<p>Ten years ago, a Curator in Museum Victoria’s history collection discovered a box of diaries within the museum’s bird mount store. The box was labelled “Estate of A. Graham Brown – note books.” It contained five hand-written field diaries and six folders of sightings records. Arthur Graham Brown is one of Victoria’s most eminent ornithologists, president of the Royal Australian Ornithological Union and an Honorary Associate of Museum Victoria.</p>
+<p>Soon after their discovery, the significance of Graham Brown’s diaries was recognised by both our science and history curators. Brown kept meticulous records of his bird observations and his diaries and made repeated expeditions to locations of great conservation interest to our museum, such as the Grampians National Park. The historic occurrence records contained Brown’s diaries could be compared with our recent survey data to study changes in species distribution and abundance over time. In order for this research to proceed, however, the diaries (and the data they contained) needed to be made more accessible. Thus began a project to digitise and transcribe the Graham Brown field diaries.</p>
+<h3>Cataloguing</h3>
+<p>The first step in the Graham Brown field diary project was to catalogue the contents the box. We created an object record for each diary in our collection management database and linked these to the biographical record for the author. These records contain numerous searchable fields, making the records of the diaries discoverable by all who use Museum Victoria’s internal database. We would eventually make the diaries discoverable by a much wider audience, but first we needed to digitise them.</p>
+<h3>Digitisation</h3>
+<p>Museum Victoria has been digitising published material in our library collection since 2010, when we began contributing to the Biodiversity Heritage Library (BHL) (Chmiel, 2011; Wallis &amp; Matthews, 2014). Digitising unpublished material was new for us, but the method was the same. Our digitisation equipment consists of two digital SLR cameras (Canon 6D) mounted on a book scanning platform (Atiz Bookdrive Pro). We use three lenses (focal length 50mm, 85mm and 100mm), which can be manually changed to allow for imaging documents up to A2 size. Larger items, including fold-outs, are photographed separately on a flat-bed platform. The built-in lighting consists of four LED floodlights, giving a near daylight colour temperature light. The pages are turned manually to minimise damage. The images of each page were then cropped and colour-matched to the original. All of this work was completed by our in-house digitisation volunteers.</p>
+<p>The high-quality scans were then uploaded into Museum Victoria’s image management database and, once every page had an image record, the images were shared across into our collection database and linked to the new object records. We now had a complete digitised and discoverable version of each diary. The next step was to transcribe the diaries and make the contents searchable.</p>
+<h3>Choosing a transcription tool</h3>
+<p>A number of organisations around the world have had great success using crowd-sourced volunteers to transcribe hand-written material online. Transcription projects using online volunteers include, among others, the <em>Field Book Project</em> (http://www.mnh.si.edu/rc/fieldbooks/), <em>Transcribe Bentham</em> (http://blogs.ucl.ac.uk/transcribe-bentham/), <em>What’s on the Menu?</em> (http://menus.nypl.org/), <em>Citizen Archivist</em> (http://www.archives.gov/citizen-archivist/transcribe/), <em>Pitch in!</em> (http://www.slq.qld.gov.au/about-us/pitch-in/transcribe), <em>Notes from Nature</em> (http://www.notesfromnature.org/), <em>Operation War Diary</em> (http://www.operationwardiary.org/) and <em>Old Weather</em> (http://www.oldweather.org/).</p>
+<p>The transcription platforms used for these projects are almost as varied as the projects themselves. Most are now more complex than a simple free text field for transcribers to type into. Some provide formatting tools for volunteers to mark up their transcribed text. For example, <em>Transcribe Bentham</em> uses TEI (Text Encoding Initiative) XML tags; <em>WikiSource </em>uses a special syntax called <em>Wikitext</em> or <em>Wiki markup</em>. Some transcription software also provide annotation tools, allowing transcribers to make use of wiki-style syntax to tag key words within the text, such as people’s names, place names, or names of species, e.g. <em>FromThePage</em> (http://beta.fromthepage.com/), <em>WikiSource </em>(https://en.wikisource.org/wiki/Main_Page) and the <em>Public Records Office Victoria</em> (PROV) semantic wiki (http://wiki.prov.vic.gov.au/index.php/Transcribe). The tags can be labelled to separate different types of data, e.g [taxon], [date], [location] and the tagged terms can then be extracted to form a data set.</p>
+<p>This method of data mining can be very effective when the connected pieces of data are close together in the text, such as on a specimen label. It becomes problematic when that connected data is spread across several pages of a document, such as in a long diary entry. This can be complicated further when, as is often the case in diary entries, a single mention of a date and location apply to multiple sightings. It seemed to us that, for our project, data mining using annotation would require a great deal of manual input and validation. Surely it would be more efficient to simply compile the data into a table during the transcription process.</p>
+<p>Transcribing data into a table with pre-determined fields is exactly what is done by organisations involved in the mass digitisation and transcription of specimen labels, such as <em>iDigBio</em> (https://www.idigbio.org/) and <em>Notes from Nature</em> (http://www.notesfromnature.org/#/). In these projects, specimens are photographed and their hand-written labels are transcribed into a table, usually in the form of a user-friendly online template. The Atlas of Living Australia (ALA), in conjunction with the Australian Museum, launched their volunteer transcription portal (now called <em>DigiVol)</em> in 2010 (Flemons &amp; Berents, 2012). It was built specifically for transcribing specimen labels and is used for this purpose by the Smithsonian, the US National Herbarium, the South African National Biodiversity Institute, the Vermont Center for Ecostudies, the Australian National Insect Collection and the University of Melbourne Herbarium. Like records of sightings, records of specimens held in museum collections are scientifically useless unless the identification of the species is accompanied by a date and location for the collecting event. <em>DigiVol</em>’s templates are designed to collect this data; the same data we wanted to collection for each sighting in our field diaries.</p>
+<p><em>DigiVol</em> has now expanded their transcription service, creating templates for transcribing collection registers, survey sheets and field diaries. Their field diary template consists of two sections: a box for transcribing the verbatim text, and a table for collecting sightings data (scientific name, common name, date, location). The <em>DigiVol</em> staff kindly added an addition field for our project: a field for collecting mentions of people and organisations (name, date, location). This customised template allows volunteers to transcribe each page of the diary, while simultaneously recording all elements of the data required by both our history and science curators.</p>
+<h3>Establishing transcription standards</h3>
+<p>The most successful transcription projects are those that provide their transcribers with clear and detailed instructions. For online transcription projects, where face-to-face training is not an option, instructions usually take the form of written guidelines or tutorials. As transcription projects vary enormously in their content, format and style, a specific transcription tutorial is usually produced for each project.</p>
+<p>There is no right method of transcribing; how a document is transcribed will depend on the intended audience and purpose of the transcription. For example, the aim of the New York Public Library’s <em>What&#8217;s on the menu?</em> is to create a “database of dishes” (http://menus.nypl.org/). Volunteers are instructed only to transcribe things you can eat, drink or smoke, to ignore all other text (menu, headings, restaurant names, etc) and to convert text into individual dishes (“Clams, stewed or fried” becomes “Stewed clams, Fried clams”). Similarly, the aim of Zooniverse’s <em>Operation War Diary</em> is to create an index of the people mentioned in First World War documents (http://www.operationwardiary.org/#/). Volunteers place tags throughout the pages (names, dates, times, locations) and transcribe only this information.</p>
+<p>The aim of our project was to preserve the integrity of our field diaries. Our curators wanted a transcription that would faithfully represent every textual aspect of the manuscript. This is called a “diplomat transcription”. Most transcription projects follow “semi-diplomatic” principles, varying in the extent to which they follow an author’s formatting, correct spelling and grammatical errors and spell out abbreviations.</p>
+<p>We asked our transcribers to produce an exact copy of the original, following the author’s formatting (line breaks, page breaks, etc). In the absence encoding tags on <em>DigiVol</em>, the volunteers had to manually mark-up words that were underlined or crossed out. While some of <em>DigiVol</em>’s templates included buttons for adding symbols (e.g. ♀, ♂), these were not currently available on their field book templates. The volunteers were therefore encouraged to use Alt codes (Alt Numpad input method) to input these and other symbols. We also asked that our volunteers transcribe the exact common and scientific names used by the author, rather than out-dated names with currently accepted ones. The importance of capturing the original wording of an occurrence record (the verbatim name term) was highlighted by Thomer <em>et al.</em> (2012).</p>
+<p>Anything added by a transcriber in the interest of clarity and readability (corrections, clarifications, valid species names, etc) was added between square brackets. Transcribers were also asked to use the verbatim names and locations used by the author into the data collection table. Transcribers could add notes about the pages they had transcribed in a separate comments field. This ensured that the transcribers’ additions were clearly distinguishable from the author’s original text.</p>
+<h3>Building an online community</h3>
+<p>We uploaded the first Graham Brown diary onto DigiVol on a Friday afternoon. We had arranged for two of our in-house volunteers to start the transcription the following week. Once they had tested the process using our online tutorial (and we had ironed out any issues), we planned to promote the project externally in the hope of attracting some online transcribers.</p>
+<p>By Monday morning, however, the diary was already 20% transcribed. Existing volunteer transcribers already registered with DigiVol were racing through it. As we looked through their work, we noticed that the volunteers had not just been transcribing, they had been communicating. They had asked questions, provided answers and shared ideas. An online community had already formed around our little project.</p>
+<p>One feature of DigiVol is that volunteers can contact each other directly or start online forums about particular topics. These topics range from requests for help deciphering an individual word, to suggestions about how to improve the online template. As administrators, we received notifications of forum posts and were able to view the transcribed pages online. This meant that issues and errors were picked up quickly. Being able to directly communicate with our transcribers allowed us keep them updated about the project’s progress, encourage their participation on the next diary, and, most importantly, to personally thank them for their work.</p>
+<p>Not all crowd-sourcing platforms facilitate communication between volunteers, and many online projects struggle to build a functioning community. For example, Thomer <em>et al</em>. (2012) used WikiSource as their online platform. While they were able to take advantage of its existing wiki-community, their attempts to engage with their volunteers fell on deaf ears. They were not even able to discover the names of their “mystery annotators” for the purpose of acknowledgment. DigiVol volunteers must enter an email address when they sign up. This may dissuade some potential volunteers from contributing, but for others the thriving online community is an attractant in itself (Flemons, <em>et al.</em>, 2015; Prater, 2015).</p>
+<h3>Validation</h3>
+<p>Our communication with the online community helped us with another key part of the project: finding a volunteer able, and willing, to check the work of his/her peers. DigiVol transcriptions benefit from a two-step process: once a volunteer has transcribed a task, they submit it for validation. It is then checked by a validator, someone who double checks the transcriptions and ensures that the data has been correctly copied into the sightings/mentions table.</p>
+<p>Validation (sometimes called reviewing) is part of the process of many online transcription portals, but who does this validation work varies between projects. <em>DigiVol</em> validators must be selected and assigned to a project by the project administrator. They are usually experienced volunteer transcribers who have shown great attention to detail. To ensure consistency we chose to only have one validator per project. Other transcriptions do not have such a rigorous validation process. Anyone can validate transcribed pages on the Smithsonian Transcription Center (https://transcription.si.edu/), but only once they have set up an account and provided their email address (account-holding is optional for transcribers). This means that while each page is only checked by one person, there can be many people validating a single diary. There is no validation process in the <em>Operation War Diary</em> project (http://www.operationwardiary.org/#/). Rather, numerous volunteers annotate/transcribe each page, with each new pair of eyes hopefully picking up something the others have missed.</p>
+<p>The validator we selected for the Graham Brown diaries was a volunteer transcriber who stood out early on in our project: her work was excellent and she was an active participant in the online forums, answering questions raised by others and offering insightful and considered solutions to issues we haven’t even thought of. We were very fortunate that she agreed to work as the validator for our first diaries, and has continued to work in this role on our subsequent projects.</p>
+<h3>Preparing the transcriptions for display</h3>
+<p>It took five months for 46 online transcribers and our single validator to complete the transcriptions of the five Graham Brown field diaries. It was then a matter of extracting the verbatim transcripts from DigiVol and creating a clean version in Word. We then replaced the line breaks, page breaks and other formatting tags inserted by the volunteers with the actual formatting. The five final documents, each an exact page-by-page match the original, were then uploaded into our collection database and linked to the object records for the diaries. The diaries were now discoverable and searchable within our internal systems, accessible by any staff member. But in order for the diaries to be truly accessible, they needed to be online.</p>
+<h3>Bringing the field diaries to the world</h3>
+<p>The Biodiversity Heritage Library (BHL) is the world’s largest online repository of biodiversity literature and archival materials. The Australian component of BHL (BHL-Au) is managed by Museum Victoria and funded by the Atlas of Living Australia (http://www.ala.org.au/). To date, BHL-Au has digitised and uploaded over 500 rare books and historic journals. This represents an addition of over 133,000 pages of Australia’s published biological heritage to the massive BHL corpus of nearly 47 million pages. If our unpublished field diaries were to be accessible to the global biodiversity community, BHL is where they needed to be.</p>
+<p>The process of uploading digitised items onto BHL involves first passing them through a custom-built metadata collection tool produced by the Smithsonian Institution Libraries, called Macaw. Macaw allows users to manage the scanned pages of “book-like things” via a web browser and to input page-level metadata. The result is a complete digital version of the item that can then be exported to other systems, such as the Internet Archive and the BHL.</p>
+<p>It is only over the past couple of years that the BHL has started to accept field notes and other unpublished material into its system. Unpublished material presents a problem, as the upload process requires a MARC record (MA chine-Readable Cataloguing Record, the uniquely-labelled computer-readable record containing the bibliographic data elements) for the item. In order to get around this problem, our librarians created a record for the unpublished diaries that has enough MARC elements filled to make a valid record, which they then suppressed in their system so that it would not be shared into catalogues viewable by external parties.</p>
+<p>The original field diaries and the transcripts were now ready to be shared with the world. The completed items, along with their attached metadata, were first uploaded into the Internet Archive (the online repository and scanning partner for the BHL). They were then harvested across into BHL, along with several derivatives produced by the Internet Archive, including the OCR produced for each page file (more on this below).</p>
+<p>Museum Victoria’s first digitised field diaries and their transcriptions appeared in BHL in August 2015. Their contents are now discoverable, accessible and searchable by anyone, be they a scientist studying the impact of climate change on Victorian birds, a historian researching past presidents of the Royal Australasian Ornithologists Union, or an online volunteer proud to see their work online.</p>
+<h2>Future Directions</h2>
+<h3>How to best display transcriptions online?</h3>
+<p>There is no doubt that the Biodiversity Heritage Library (BHL) is where our digitised field diaries belong. As well as providing intuitive search tools, various view options, and access to a massive online community, the BHL website provides a beautiful user interface for viewing historic literature. However, BHL does not (yet) provide the option of viewing a hand-written document alongside its transcription. Being able to simultaneously scroll through the two documents would greatly enhance the user experience. The romance of the originals – historic scripts, whimsical sketches, fingerprints, ink smudges, printed photographs, pressed flowers and feathers – are all lost in the typed, black and white (albeit legible and searchable) transcriptions.</p>
+<p>The option of viewing an original document alongside its transcribed text is possible in a number of transcription portals, including the one produced by the Smithsonian, The Smithsonian Transcription Center (https://transcription.si.edu/). This is also possible on the DigiVol website, but the pages are only viewable by DigiVol account holders. However, the audience of these websites are online volunteers undertaking transcription, not the larger biodiversity community who seek to use the content.</p>
+<p>In the absence of a side-by-side viewing option in BHL or in the Internet Archive, we have uploaded each transcription as a second volume of its original. However, there may be another possibility for displaying the transcribed text and original document concurrently, one that would use existing functionality on the BHL website. We propose that each page of the transcription be copied into the existing OCR field for the corresponding page of the original. “View/hide OCR” is an existing option above the page view for every digitised page in BHL. Selecting it opens a side bar that is populated with automatically-generated text. It is well accepted that OCR generated from handwriting is poor. “When you try to feed handwriting to OCR, you get a lot of gibberish” (Brumfield, 2013). This is certainly the case for the OCR generated from the relatively neat hand of Graham Brown. This side bar could certainly be of more use if it were populated with our human-generated transcriptions. Our request for this change in functionality was favourably received by BHL and we hope that the option will be available in the near future.</p>
+<h3>Making the most of the data</h3>
+<p>Another outcome we are working toward is the taxonomic referencing of the thousands of legacy occurrence records extracted from the field diaries: the matching of the species names used in the diaries with the currently accepted scientific names. A scientific name is the name uniquely assigned to a species. Despite there being only a single scientific name per species, these names can change over time as new information about a species is uncovered. Modern genetic work has resulted in dramatic changes in our understanding of phylogenetic relationships, with many species being merged, split and renamed. This means that the names used by our historic authors can be quite different from the names we use today.</p>
+<p>Taxonomic referencing ensures that data attached to out-dated names can be connected to the modern name. This crucial next step in our project will ensure that the information in the diaries is discoverable and accessible. And now that the field diaries are catalogued in our collection database, taxonomic referencing will allow us to link historic contextual data to specimens in our collection. Graham Brown’s five field diaries yielded 5611 animal sightings, complete with date and location data. These occurrence records will increase our understanding of past species’ distribution and abundance, and inform future survey work and management efforts.</p>
+<p>Brown also made mention of 547 people and organisations. Many, such as ornithologists Graham Pizzey and Frank Knight, are historically significant in their own right. Their names in the diaries can be linked to the biographical records for their names in our collection database, which will ensure that this information will be available for future research. These sorts of links invariably lead to future discoveries.</p>
+<h2>A Word about Online Volunteers</h2>
+<p>We uploaded our first field diary onto DigiVol in November 2014. It was the first of many. At the time of writing (August 2015), we had uploaded fourteen diaries and the volunteers had completely transcribed ten of these. A total of 65 online volunteers have contributed to our transcriptions. Of these, only one third have worked on more than one diary, with some completing only a single page of transcription. A small number of dedicated volunteers have worked on all 10, with some diaries being over 50% transcribed by a single volunteer.</p>
+<p>The contribution made by our online volunteers is invaluable, but it is extremely difficult to quantify. This is because field diaries are highly variable in their length, format and legibility. Measures such as the number of words transcribed per hour are diary-specific and can only be used to estimate the time it will take to transcribe a similar work by the same author. Estimates for future projects will take also need to take into account the transcribing rates of individual volunteers, which vary enormously based on their experience, time available, attention to detail, and interest in the project.</p>
+<p>In our experience the two most reliable factors in determining the (relative) rate at which a transcription project will proceed are 1) legibility of the handwriting, and 2) the volunteers’ interest in the content. Graham Brown had beautiful handwriting and his diaries were a joy to read. He wrote the dates in the margins, underlined all species names and provided an index of locations at the end of each diary. His diary entries were filled with fascinating descriptions of his travels and the birds he encountered, interspersed with photographs and details of his own life. By the time they had finished transcribing his diaries (in record time), the volunteers had become quite attached to the (then) young ornithologist, and so had we.</p>
+<p>Starting with such an easy-to-transcribe project allowed us to gain experience and develop procedures, while the online transcription seemed to run itself. Our subsequent transcription projects were differed greatly in their legibility and content, and initially the transcription process was excruciatingly slow. A few volunteers struggled through scrawled notes and dry content, but most dropped off. We soon found, however, that by putting a little effort into promotion and support, we could make the diaries both easier to transcribe and more interesting.</p>
+<p>People work best when they feel that their work has value. This is particularly true for volunteers. We ensure that we put effort into writing an introduction, highlighting the reputation of the author, the significance of the particular diary to be transcribed, and the value of the content to both scientists and historians. We also used mailing lists and other contacts to promote the new project to volunteers who had worked on our previous projects. Finally we wrote blog posts about each new author, including scanned images from the diaries and links to the transcription portal, and shared these posts via our social media channels (Kearney, 2015a,b). In each of these communications we emphasised that this crucial work would not be possible without the contribution of volunteers.</p>
+<p>Throughout this process, we kept a close eye on the transcriptions, contacting volunteers individually to welcome them to the project and to provide them with feedback. We updated the tutorials to include newly-encountered issues and common errors, produced lists of frequently-used names and places, and kept the volunteers informed of these developments. While this level of support was time consuming, it greatly increased the numbers of volunteers recruited and retained, the rate of the transcription, and the quality of the final transcription. We also found that the additional effort was only necessary when uploading the first diary by a new and difficult-to-read author.</p>
+<p>The DigiVol administration, based at the Australian Museum, seeks to recognise and reward the hard work of its volunteers in a number of ways. These include appreciation awards, public honour boards, personal achievement pages, virtual reward badges, and “how you’re making a difference” reports. However, in a recent DigiVol survey most volunteers stated that the honour board was not important to them. Rather, the strongest motivational drivers given for their volunteering on DigiVol were an interest in “natural history and cultural museum collections”, “doing something worthwhile” and “making a contribution in the field of biodiversity” (Flemons <em>et al.,</em> 2015).</p>
+<p>These drivers are certainly strong. DigiVol has just attracted its 1000<sup>th</sup> volunteer transcriber (Faber, 2015) and their current recruitment rate is about fifty new volunteers per month (DigiVol Admin Newsletter, July 2015). These volunteers are highly skilled, with a great deal of professional and life experience. Fifty-three percent are over fifty and forty-one percent have a postgraduate degree. In order to appeal to this growing volunteer workforce, the value of the work and the impact it will have on our current understanding of biodiversity cannot be understated.</p>
+<h2>Conclusion</h2>
+<p>Now that we have established a successful and efficient procedure for digitising, transcribing and data-mining field diaries, and for making these diaries and their transcriptions available online, we plan to continue this work. As news of our project spreads around our museum (and beyond), historic field diaries are coming out of the woodwork. These include uncatalogued diaries from our own museum as well as surprises from outside: after we started transcribing the diaries of Allan McEvey, one of his retired assistants made a donation containing photographs from the expeditions we had just transcribed and one of her own field diaries. These diaries will soon start their journey towards being discoverable and accessible. Who knows what insights we will glean from these treasures?</p>
+<h2>Acknowledgements</h2>
+<p>Rebecca Carland was the Curator who rediscovered the box of Graham Brown field diaries and sent us tumbling into the world of transcription. Her dedication and passion for these historic documents have fuelled this project since day one. She and Dr Karen Rowe provided us with essential background information and assisted with the transcription tutorials and templates.</p>
+<p>The digitisation side of this project ran seamlessly because of the super-efficient BHL team at Museum Victoria: Hayley Webster (Manager, Museum Victoria Library), Cerise Howard (Digitisation Coordinator), Jim Healey (Technical Support Officer), and our wonderful digitsation volunteers: Bob Griffith, Heidi Griffith, Susan Halliwell, Jade Koekoe, Alan Nankervis and Tiziana Tizian.</p>
+<p>The team at DigiVol were extremely helpful and generous with their time, particularly Rhiannon Stephens and Paul Flemons at the Australian Museum. We also thank the Atlas of Living Australia for funding both BHL-Australia and DigiVol.</p>
+<p>Finally, we are immensely grateful to the 65 online volunteers, particularly Teresa Van Der Heul and Catherine Cowan who did a significant portion of the transcription work. Erin Headon, our volunteer validator, single-handedly reviewed every page of this project. It is her meticulous attention to detail that has given us such a consistent and high-quality transcription. She worked tirelessly, completing the validation of the final diary only a week after the volunteers finished transcribing it. We cannot thank her enough.</p>
+<h2>References</h2>
+<p>Brumfield, B. (2013). Improving OCR Inputs from OCR Outputs? <em>Collaborative Manuscript Transcription Blog</em>. February 14, 2013. Consulted August 3, 2015. http://manuscripttranscription.blogspot.com.au/2013/02/improving-ocr-inputs-from-ocr-outputs.html</p>
+<p>Chmiel, K. (2011). BHL launch.<em> MV Blog</em>. July 14, 2011. Consulted August 3, 2015. http://museumvictoria.com.au/about/mv-blog/jul-2011/bhl-launch/</p>
+<p>Faber, M. (2015). DigiVol reaches 1000 volunteers and more! <em>ALA Blog</em>. July 13, 2015. Consulted August 3, 2015. http://www.ala.org.au/blogs-news/digivol-reaches-1000-volunteers-and-more/</p>
+<p>Flemons, P. &amp; P. Berents. (2012). “Image based Digitisation of Entomology Collections: Leveraging volunteers to increase digitization capacity.” In V. Blagoderov &amp; V.S. Smith (eds). <em>No specimen left behind: mass digitization of natural history collections</em>. ZooKeys 209: 203–217.</p>
+<p>Flemons, P. <em>et al</em>. (2015). DigiVol: A new way of volunteering. Presentation for <em>Ignite Volunteering Conference</em>, June 1, 2015. Consulted August 12, 2015. http://www.volunteering.com.au/wp-content/uploads/2015/06/Paul-Flemons-DigiVol-a-new-way-of-volunteering-CFV-Conference-2015.pdf</p>
+<p>Hill, A. <em>et al.</em> (2012). “The notes from nature tool for unlocking biodiversity records from museum records through citizen science.” <em>Zookeys</em> 209, 219–233. August 4, 2015. http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3406478/</p>
+<p>Kearney, N. (2015a). Transcribing field diaries. <em>MV Blog</em>. March 19, 2015. Consulted August 4, 2015. 2015. http://museumvictoria.com.au/about/mv-blog/mar-2015/transcribing-historic-field-diaries-/</p>
+<p>Kearney, N. (2015b). Read our historic field diaries online. <em>MV Blog</em>. August 14, 2015. Consulted August 14, 2015. http://museumvictoria.com.au/about/mv-blog/aug-2015/read-our-historic-field-diaries-online/</p>
+<p>Moritz, C. <em>et al</em>. (2008). “Impact of a century of climate change on small-mammal communities in Yosemite National Park, USA.” <em>Science</em> 322 (5899), 261-264.</p>
+<p>Prater, L. (2015). <em>DigiVol: Volunteers making a difference</em>. AM Blog, 25 Jun 2015 http://australianmuseum.net.au/blogpost/museullaneous/digivol-volunteers-making-a-difference Accessed 3 August 2015</p>
+<p>Rowe, K. C. <em>et al</em>. (2014). “Spatially heterogeneous impact of climate change on small mammals of montane California.”<em> Proceedings of the Royal Society B: Biological Sciences</em> 282 (1799).</p>
+<p>Sheffield, C. <em>et al</em>. (2011). “Merging Metadata: Building on Existing Standards to Create a Field Book Registry<em>.</em>” <em>Libreas: Library Ideas</em> 7, 66–74. Consulted August 4, 2015. http://www.libreas.eu/ausgabe18/texte/08sheffield.htm</p>
+<p>Steeves, V. (2015). The Next Frontier of Stewardship: the Value of Field Books in a Digital Age. <em>Field Book Project Blog</em>, Smithsonian Institute. March 19, 2015. Consulted August 14, 2015. http://nmnh.typepad.com/fieldbooks/beyond-the-field-book-project/</p>
+<p>Tingley, M.W. <em>et al.</em> (2012). The push and pull of climate change causes heterogeneous shifts in avian elevational ranges. <em>Global Change Biology</em> 18 (11), 3279–3290.</p>
+<p>Thomer, A. (2014). Sourcing Primary Materials: Notes from A Workshop. <em>So You Think You Can Digitize Blog</em>. April 1, 2014. Consulted August 3, 2015. https://soyouthinkyoucandigitize.wordpress.com/2014/04/01/resourcing-primary-materials-notes-from-a-workshop/</p>
+<p>Thomer, A. <em>et al.</em> (2012). “From documents to datasets: A MediaWiki-based method of annotating and extracting species observations in century-old field notebooks.” <em>Zookeys</em> 209, 235–253.</p>
+<p>Wallis, E. &amp; Matthews, D. (2014). Collaborating locally, contributing globally: the Biodiversity Heritage Library in Australia. Paper presented at <em>VALA2012</em>, Melbourne, February 6 – 9, 2012. Consulted August 3, 2015. http://www.vala.org.au/direct-download/vala2012-proceedings/441-vala2012-session-14-wallis-paper/file</p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+. "Transcribing between the lines: crowd-sourcing historic data collection." <i>MWA2015: Museums and the Web Asia 2015</i>. Published August 14, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mwa2015.museumsandtheweb.com/paper/transcribing-between-the-lines-crowd-sourcing-historic-data-collection/<br /><br /><hr>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://mwa2015.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><hr>
+<h3 class="widget-title">Global sponsor</h3>
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a>
+
+<h3 class="widget-title">Platinum sponsor</h3>
+<a title="MailChimp" href="http://nonprofits.mailchimp.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a>
+
+<h3 class="widget-title">Gold sponsor</h3>
+<a title="AARNet" href="http://www.aarnet.edu.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/AARNet-250-75.jpg" alt="AARNet" /></a>
+
+<h3 class="widget-title">Silver sponsors</h3>
+<a title="CV" href="http://www.creative.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CV-250-75.jpg" alt="CV" /></a>
+<a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<h3 class="widget-title">Bronze sponsors</h3>
+<a title="Ruckus" href="http://www.ruckuswireless.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/ruckus-250-75.jpg" alt="Ruckus" /></a>
+
+<a title="CoM" href="http://www.melbourne.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CoM-250-75.jpg" alt="CoM" /></a>
+
+<a title="Lumicom" href="http://lumicom.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/lumicom-250-75.jpg" alt="CoM" /></a>
+
+<a title="Tomizone" href="http://tomizone.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/tomizone-250-75.jpg" alt="Tomizone" /></a>
+
+<h3 class="widget-title">Partner</h3>
+<a title="MV" href="http://museumvictoria.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/mv-250-100.jpg" alt="MV" /></a>
+
+<div style="text-align:right;"><a href="../../sponsorship-opportunities/index.html">become a sponsor</a></div>
+<hr></div>
+		</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/search?q=%40museweb+OR+%23museweb+OR+%23mwa2015" data-widget-id="519731970960400384">Tweets about "@museweb OR #museweb OR #mwa2015"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br />
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-5" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br />
+703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info@museumsandtheweb.com</p></div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+
+			
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/transcribing-between-the-lines-crowd-sourcing-historic-data-collection/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:55:16 GMT -->
+</html>

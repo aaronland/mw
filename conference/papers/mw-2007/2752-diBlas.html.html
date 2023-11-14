@@ -1,0 +1,709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2007-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/diBlas/diBlas.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:29:26 GMT -->
+<head>
+<!-- #BeginEditable "HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2007: Paper: di Blas, et al., Instant Multimedia: A New Challenge For Cultural Heritage</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2007" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Keywords" -->
+<meta name="Keywords" content="low-cost multimedia, fast development, user experience, storytelling, design, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Description" -->
+<meta name="Description" content="Museums and the Web 2007: the international conference for culture and heritage on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2006" />
+<!-- #EndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="../../css/mw2007.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="../../css/mw2007-noNews.css" type="text/css"  media="print, screen" />
+	<link rel="stylesheet" href="../../css/papers.css" type="text/css"  media="print, screen" />
+
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+</head>
+<body  onload="initImgRotation()">
+	<div id="container">
+		<div id="header" onclick="location.href='../index.html';" style="cursor:pointer;">
+		</div>
+		<div id="top-nav">
+			<ul id="top-nav-list">
+				<li><a href="../../register/index.html">Register</a></li>
+				<li><a href="../../dates/index.html">Key Dates</a></li>
+				<li><a href="../../sescal/index.html">Schedule</a></li>
+				<li><a href="../../local/index.html">Local Info</a></li>
+			</ul>
+		</div>
+		<div id="header-photo">
+			<a href="../../images/credits.html">
+			<!-- InstanceBeginEditable name="header-photo" -->
+			<img src="diBlas.fig2-t.jpg" alt="MW-photo" name="img1" width="229"  height="132" id="img1" />
+			<!-- InstanceEndEditable -->	
+			</a>
+		</div>
+		<div id="date">
+			April 11-14, 2007<br />
+			San Francisco, California
+		</div>
+		<div  id="title">
+			<h1> 
+				<!-- InstanceBeginEditable name="PageTitle" --><span class="PaperTitle">'Instant
+				Multimedia': A New Challenge For Cultural Heritage</span><!-- InstanceEndEditable -->
+   			</h1>
+		</div>
+		<div id="main-content">
+		  <div id="callout">          </div>
+		  <div id="intro-paragraph">
+				<!-- #BeginEditable "IntroParagraph" -->
+				<h2 class="Author">Nicoletta Di Blas, HOC-DEI, Politecnico di Milano, Italy;
+				  Davide Bolchini, Universit&agrave; della Svizzera Italiana, Lugano, Switzerland;
+				  and Paolo Paolini, HOC-DEI &amp; Universit&agrave; della Svizzera Italiana</h2>
+				<h3 class="AbstractTitle">Abstract</h3>
+				<p class="abstractText">Cultural Heritage is traditionally associated with
+				  long-term values and stable (i.e. not rapidly changing) content; consequently,
+				  we are used to thinking that 'editorial products' associated
+				  with it have a long life and deserve a long-term, well-planned effort.
+				  Most museum catalogues, publications, Web sites and multimedia applications
+				  follow this pattern: they need sizable development time, significant effort
+				  and proportionately significant financial resources.</p>
+				<p class="abstractText">Recently, a new necessity is slowly emerging, for
+				  a number of reasons: budget is shrinking, new opportunities
+				  of communication are springing up, technologies and devices
+				  are rapidly changing. Therefore, a new approach can be considered: 'instant
+				  multimedia' (analogous
+				  to 'instant books') means that in a short span of time and
+				  with little budget a good quality multimedia application must
+				  be produced, possibly aiming for several technological channels
+				  (from Web, to mobile devices, to iPod, to information points,
+				  to iPhone ...).</p>
+				<p class="abstractText">This investigates the concept of instant multimedia
+				  and to identify its basic constituents. Furthermore the paper illustrates
+				  a specific paradigm, OneThousandandOneStory, consisting of a design pattern,
+				  a workflow, a production method and finally an engine, to generate applications.
+				  The paradigm produces high-quality applications that can be delivered as
+				  CD-Roms, Information Points, Web sites, Podcasts and, very soon, phone
+				  applications. It has been used to generate 11 instant multimedia applications
+				  for a variety of partners, including museums, ministries, research teams,
+				  and academic institutions. It has been used by College students and, from
+				  January 2007, more than three thousand high-school students in Italy will
+				  use it to generate their own multimedia narratives about culture and history
+				  in their territory.</p>
+				<p class="keywords">Keywords: low-cost multimedia, fast development, user
+				  experience, storytelling, design</p>
+		  <!-- #EndEditable -->		  </div>
+				<!-- #BeginEditable "BodyText" -->
+                <h2 class="PaperTitle">1. Introduction And Motivation</h2>
+                <p>Sometimes interesting ideas stem from the least expected situations. In
+    October 2005, we at HOC-LAB at Politecnico di Milano were asked to develop,
+    in a very short time (approximately one month), an interactive application
+    on CD-ROM for an exhibition about Bramantino (a Renaissance painter quite
+    active in Lombardia, the region of Milan) that was about to be opened at
+    the Pinacoteca Ambrosiana (in cooperation with the National Gallery of London).</p>
+  <p>Given the very short lead-time, we had to speed up the production process
+    in two respects: cutting down design and programming, and cutting down (time
+    and cost of) the preparation of the content. Let us focus on the latter,
+    i.e. content production, first. Since the exhibition had already printed
+    its own catalogue, and there was neither time nor money to reproduce it in
+    an interactive way, we decided to meet the exhibition's curator to interview
+    him for a couple of hours and then use the interview as the basis for the
+    application's content. Our original idea was to use the format of <strong>interview</strong>:
+    in a number of projects, and especially for Learning@Europe (see Di Blas &amp;
+    Poggi, 2006), we had already strongly relied upon interviews as an effective
+    way to gather high quality content quickly, and also as a format for delivering
+    textual content that could be too cumbersome otherwise. After analyzing what
+    we had, we realized that in this case it would not be possible to make a
+    'multimedia interview' (we had experience with text-based interviews) without
+    using video-taking, and that was too expensive for this production. Moreover,
+    since a large number of pictures had to be used (all related to the pictures
+    in display and referenced by the curator), we wanted to use them in a proper
+    way, but we did not want to end up with a pure slide-show (not even if accompanied
+    by an audio comment).</p>
+  <p>Turning our attention now to the issue of design, basic choices were again
+    taken almost by accident: the curator turned out to be a magic storyteller
+    who kept us spell-bound for 2 hours. Under the influence of this interview,
+    we tried to retain the 'flavor' of what we had experienced, offering to our
+    users the possibility of 'listening to the tales' told by the curator. However,
+    we had to accommodate the need for variable user experiences, ranging from
+    visitors who would not spend more than a few minutes to play with technology,
+    to visitors who could spend 20 minutes or more. An additional requirement
+    to consider at the same time was Web technology (for on-line users) and CD-Roms
+    (for visitors attending the exhibition), as well as podcasting as a future
+    option.</p>
+  <p>The solution was to break the narrative into 8 <strong>topics</strong>: for each topic
+    we would have a short version and a longer version, the latter consisting
+    of a set of sub-topics (4 for each topic), as shown in Fig.1.</p>
+  <p class="caption"><a href="diBlas.fig1.pdf"><img src="diBlas.fig1.gif" alt="editorial plan" width="400" height="200" border="0" /></a></p>
+  <p class="caption">Fig 1: The Bramantino's application editorial plan (<a href="diBlas.fig1.pdf">pdf</a>) </p>
+  <p>In terms of the 'user experience' we had the following options in mind:
+    the user could focus on the main topics only (short version); the user could
+    focus on one topic and its details; the user could get everything (long version);
+    the user could just pick up the item of his/her interest (either a topic
+    or sub-topic).</p>
+  <p>The final decision was about the <strong>medium</strong> for each item; i.e. for each 'topic' or 'subtopic'.
+    Again we took a pragmatic decision: an 'audio' reading of a short text coupled
+    with visual communication; i.e. a set of flash animations highlighting details.
+    This choice ensured quality (i.e. impact for the user) at the same time as
+    low cost, since the audio was obtained by 'reading' a text rather than directly
+    editing (in audio and/or in video) the interview. </p>
+  <p>The production experiment was extremely successful. The interview's transcript
+    was done, adjustments and additions were made in record time (by asking the
+    curator very specific questions, in order to integrate missing pieces of
+    information), and in 3 days all the texts were ready (for audio recording)
+    in final version. When the exhibition opened, on December 5<sup>th</sup> 2005,
+    the CD-Rom was shown in the installation (putting the narrative in a loop)
+    and also distributed, with great appreciation from the public.</p>
+  <p class="caption"><img src="diBlas.fig2.jpg" alt="Fig 2: Bramantino&rsquo;s application: the home page" width="400" height="221" /></p>
+  <p class="caption">Fig 2: Bramantino's application: the home page</p>
+  <p>From the Bramantino exhibition we learned some lessons, the most important
+    of which was the following: cutting down costs and time, without significantly
+    affecting the quality of the communication, is a strategic direction, rather
+    than an accident. </p>
+  <p>There are several reasons to consider this a strategy, rather than an accident,
+    for the whole field of Cultural Heritage:</p>
+  <ul>
+    <li>Assuming that a fixed budget is available (for a given period of time),
+      it is better both for users and for cultural institutions to produce several
+      low-cost productions, rather than a few expensive ones. More issues can
+      be covered, rather than fewer.</li>
+    <li>Small, lean, low cost, productions can be targeted to different niches
+      of potential users, and/or can deal with several niches of content.</li>
+    <li>Small, fast productions allow a cultural institution to react quickly
+      to fresh needs or to catch new opportunities presented by exhibitions,
+      technology, external events, etc.</li>
+    <li>Multimedia productions tend to become obsolete (or at least, not tuned
+      to current user expectations) quite quickly; this is a major problem for
+      large productions that can't be easily redone, while is a minor problem
+      for small low-cost productions that can more easily be discarded or redone.</li>
+  </ul>
+  <p>On the basis of the above considerations, we have developed a different
+    strategy with respect to our past (see for example Di Blas, Paolini, Poggi
+    2004), focusing on low-cost, fast production, possible service to multiple
+    purposes (e.g. interactive information point, self-running information point,
+    portable guide, podcasting...). </p>
+  <p>For this class of applications we coined the term <strong>instant multimedia</strong>,
+    evoking the concept of 'instant books', i.e. applications of good quality
+    that can be put on the market in a short time. Besides the above considerations,
+    we had an additional requirement: to spend less time on info-architecture
+    and design in order to focus on 'deep content'; i.e. the
+    'cultural message', rather than using resources for high-end content (e.g.
+    high-quality video, 3D graphics, etc.). In this way, we felt, the impact
+    on the user could be deeper.</p>
+  <h2>2. The Instant Multimedia Package</h2>
+  <p>In order to make instant multimedia 'real', an <strong>instant multimedia package</strong> is
+    needed, consisting of a few elements:</p>
+  <ul>
+  <li> An <strong>instant
+      design pattern</strong>: an appropriate pattern or predefined solution (Folmer
+      et al., 2006; Paolini et al., 1999; van Duyne et al., 2002; Welie &amp; Traetteberg,
+      2000) that can be completed (reliably and quickly) by a simple adaptation
+      to the specific needs of the production currently under way.</li>
+  <li>An <strong>instant
+      workflow pattern</strong>: the plan of activities is predefined; it must simply
+      be adapted to the specific needs of the current production.</li>
+  <li> An <strong>instant
+      content production method</strong>: the method for producing content must be
+      already defined and easily applicable in most circumstances.</li>
+  <li> An <strong>instant
+      multimedia technology</strong>: an easy-to-use and reliable software application
+      must be available to support the efficient generation and publication (possibly
+      on different channels) of the application.</li>
+  </ul>
+  <p>Different styles of instant multimedia can be obtained by using different
+    packages, or at least different design patterns. Instant multimedia can be
+    considered also an outpost version
+    of the (so called) CMS's, <strong>Content Management Systems</strong>: systems where
+    content is inserted (through data entry of some complexity), and publishing
+    is almost automatic. Some CMS's prefer flexibility, 'info-architecture power',
+    interface personalization, etc. The consequences are more flexible design,
+    more time to configure the system and to put it in place, and more complex
+    data entry. Instant multimedia emphasizes speed and low cost, therefore less
+    flexible design, very simple data entry, little control over the interface,
+    etc.</p>
+  <p>There are other examples of systems that we consider half-way between traditional
+    CMS's and Instant Multimedia. The 'Medina' effort (Garzotto, 2006) and 'Pachyderm' (LaMar
+    et al., 2005; Samis, 2005) are examples of this trend: a standardization
+    of design concepts and layout that allows fast production of quality applications.</p>
+  <p>In the next two sections we will describe a specific
+    Instant Multimedia package, directly derived from the Bramantino exhibition,
+    that we called <strong>OneThousandandOneStory</strong>.</p>
+  <p>In Section 3 we describe the design pattern,
+    the workflow and the content production method; in Section 4 we describe
+    the technology; i.e. the engine that supports data entry and generates the
+    final applications. </p>
+  <h2>3. OneThousandandOneStory</h2>
+  <p><strong>OneThousandandOneStory</strong> is an instant multimedia package developed by the
+    HOC laboratory of Politecnico di Milano. (It will be also demonstrated in
+    a special session of Museums and the Web 2007.) In different versions it
+    has been used for building 11 applications (as of January 07), for different
+    clients and purposes: promotion of HOC activities, in museums (Pinacoteca
+    Ambrosiana, Museo Archeologico di Milano), in the ministry of Tourism of
+    Syria, in ministries of the Mediterranean area, in the Dean's office of Politecnico
+    di Milano. As of January 07, OneThousandandOneStory is being considered by
+    other cultural institutions (e.g. the Herman Hesse Museum near Lugano, Switzerland)
+    and by other national initiatives (in cooperation with the Italian Ministry
+    for Cultural Heritage); it is also the basis for a national competition involving
+    nearly 3,000 high school students from 10 different Regions. It has also
+    been used by students at USI (University of Italian Switzerland) as a basis
+    for content authoring exercises. Figures 3, 4 and 5 display some screenshots
+    from the Archeological Museum of Milan application, with some examples of
+    the related narratives.</p>
+  <p class="caption"><img src="diBlas.fig3.gif" alt="Fig 3: The Roman section of the Archeological Museum of Milan: the home page" width="400" height="230" /></p>
+  <p class="caption">Fig 3: The Roman section of the Archeological Museum of
+    Milan: the home page </p>
+  <p class="caption"><img src="diBlas.fig4.jpg" alt="Fig 4: the tower" width="300" height="227" /></p>
+  <p class="caption">Fig 4: the tower </p>
+  <p class="BlockQuote">&quot;...In the museum gardens a tower is conserved,
+      tied to a line of walls that back in time surrounded the city. It was emperor
+      Maximian that, at the end of the III century A.D., decided to enlarge the
+      city walls, in which an extraordinary polygonal tower, with 24 faces, was
+      included. Frescoes can still be seen in its inner walls, dating back to
+      the XV century, when the tower was transformed into a chapel inside the
+      monastery...&quot; </p>
+  <p class="caption"><img src="diBlas.fig5.jpg" alt="Fig 5: the cup" width="250" height="258" /></p>
+  <p class="caption">Fig 5: the cup </p>
+  <p class="BlockQuote">&quot;...The cage cup housed at the archaeological
+      museum is considered one of the most rare archaeological findings from
+      the late Roman Empire. What makes the cup so unique, apart from its aesthetic
+      value, is the manufacturing technique, that remains a secret even for nowadays
+      glass manufacturers. The technique refers to glass openwork and was mastered
+      by very few experts in the Antiquity&quot; </p>
+  <h2>The First 3 Components Of This Instant Multimedia Package</h2>
+  <h3>3.1 The Design Pattern</h3>
+  <p>The design pattern for OneThosusandandOneStory is a generalization of what
+    we have used for the Bramantino exhibition described in section 1. In the
+    generalization process we had a few requirements in mind:</p>
+  <ul>
+  <li>The
+    information architecture had to support engagement and to raise interest,
+    rather than provide information. </li>
+  <li>The
+    pattern had to be content-independent, i.e. able to transmit various kinds
+    of content.</li>
+  <li>The
+    pattern had to be suitable for different technological channels: i.e. Web,
+    CD-Rom, and mobile devices (iPod overall, but also mobile phones).</li>
+  <li> The pattern
+    had to support different user experiences: e.g. quick overview, 'get everything', 'dig
+    deeper', information point, play lists (for iPod, for example), etc.</li>
+  <li>The
+    information architecture had to be simple for the author (in order
+    to speed up customization and adaptation) but at the same time capable
+    of supporting different user experiences.</li>
+  </ul>
+  <p>The design pattern we came up with is very simple indeed, but it is apparently
+    able to satisfy the above requirements:</p>
+  <ul>
+  <li> We
+    chose a narrative style, based on visualization and audio, rather than on
+    text.</li>
+  <li> As
+    far as content goes, the format is versatile, covering a wide range of possibilities:
+    describing sections of museums, exhibitions, cultural tourism destinations,
+    tourists' days in cities, technical projects, university curricula, etc.</li>
+  <li>By
+    carefully separating the data entry process from application generation,
+    we can support CD-Rom, Web sites and podcasting. Versions for other mobile
+    devices (e.g. iPhones) are underway.</li>
+  <li> We can support
+    quick interactive tours (4-6 minutes), complete narratives (20-30 minutes),
+    exploration of a complete subject (4-6 minutes), play in a loop (for information
+    points), play as a play-list, etc.</li>
+  <li> The
+    information architecture is strikingly simple. An application is broken up
+    in
+    &quot;topics&quot;, each one being assigned 1 minute at most: the optimal number of
+    topics is between 4 and 8. For each topic a 'dig-deeper' option is offered,
+    with a number of sub-topics, ranging again between 4 and 8, and with allocation
+    of at most 1 minute each. Each topic or subtopic is allocated an audio narrative
+    (determining the amount of time required) and a number of still images (with
+    range between 3 and 6 suggested). Pictures can be substituted (in the
+    'professional version' only) by video and/or animations.</li>
+  </ul>
+  <h2>3.2 The Workflow</h2>
+  <p>The workflow is divided into 10 major steps.</p>
+  <h3>W1: Gathering Of The &quot;Raw&quot; Material And A General Idea (1-2 Hours)</h3>
+  <p>The preliminary actions are quite simple: focusing on the subject, talking
+    loosely with the expert, collecting the pictures already available, consulting
+    the text already available (if any).</p>
+  <p>At the end of this step the generic idea of the narrative is made clear
+    and agreed between the project staff and the expert.</p>
+  <h3>W2: Editorial Plan (1-2 Hours)</h3>
+  <p>The project staff, together with the expert, transforms the general idea
+    into a precise plan; i.e. identifies each topic and subtopic. The editorial
+    plan may be revised when the content is actually produced (see below), but
+    it is better to start the content production with a precise idea of the envisioned
+    outcome.</p>
+  <h3>W3: Visual Communication (3-8 Hours)</h3>
+  <p>In the 'professional' version of the format we can accommodate different
+    kinds of visual communication, including flash animations, videos, slideshows
+    of images (including power point presentations) etc. In the simplest version
+    (like, for example, the one we provide for schools) we only allow still images:
+    they are played in a sequence with the audio.</p>
+  <p>In our format there is no strict synchronization between the images and
+    the audio: images are meant to be <em>evocative</em> (rather than identifying
+    or descriptive) of the topic. This lack of strict synchronization allows
+    great freedom for the author, and also cuts down time and cost. Strict synchronization
+    can be simulated by carefully placing images in the proper order, in order
+    to get them along with the audio at the right moment (more or less, of course).</p>
+  <h3>W4: Writing The Narratives (8-16 Hours)</h3>
+  <p>This is a crucial step. A text must be produced, for each topic or subtopic:
+    the time depends on the technique of production (see the corresponding paragraph).
+    Each piece (topic or subtopic) needs something between 90 and 120 words;
+    we can estimate the time for production of the first version of text at between
+    15 minutes and 25 minutes each: a 6-topic narrative (with an average of 5
+    subtopics each) has 36 narrative elements (audio pieces), and can therefore
+    take something between 540 minutes and 900 minutes, plus some additional
+    editorial time.</p>
+  <h3>W5: From Text To Audio (4-8 Hours)</h3>
+  <p>Our experience shows that it is better to make a revision with registered
+    audio, rather than with just the textual narratives. Recording 36 fragments
+    of 1 minute each may take varying times, according to whether a professional
+    studio (as we suggest) is used, or an in-house production is used.</p>
+  <h3>W6: First Version: Putting The Pieces Together (2 Hours)</h3>
+  <p>Using the engine, in order to create the first version, the following pieces
+    must be inserted:</p>
+	<ul>
+  <li> all
+    the texts of the stories and subtopics (including the titles for the users
+    of each element)</li>
+  <li> the
+    images (including captions)</li>
+  <li> the
+    audio files</li>
+	</ul>
+  <p>Partial or global previews allow an easy check of the partial work </p>
+  <h3>W7: Quality Check (2-4 Hours)</h3>
+  <p>The overall impact of the result must be checked when all the content is
+    there. Checking may find trivial mistakes (e.g. wrong picture, fault in the
+    text, etc.) or discover flaws in cultural quality and completeness. The thoroughness
+    of this test depends, obviously, on the level of perfection being sought,
+    and also on the concrete possibility for improvements (depending on available
+    resources). </p>
+  <h3>W8: Revising Text And Audio (4-8 Hours)</h3>
+  <p>According to the observations of W7, the texts can be improved, and consequently
+    a new session of audio recording and editing may be necessary.</p>
+  <h3>W9: Revising Visual Communication (1-4 Hours)</h3>
+  <p>Critical evaluation of the pictures may involve shifting them around and/or,
+    most important of all, selecting other pictures to reinforce the visual communication.</p>
+  <h3>W10: Final Version (2 Hours)</h3>
+  <p>The revised audio files, texts and pictures (with captions) can be inserted
+    and, after a quick check, the generation can be accomplished: a Web version,
+    a CD-ROM version and a set of files for pod-casting can be generated in one
+    step.</p>
+  <p>From the above workflow we can see that more or less <strong>28 hours is the
+      minimum amount</strong> of time needed, while <strong>56 hours is the maximum</strong>.
+      These rough estimates, of course, can't be taken as scientific determination,
+      but rather are the results of our experience over several developments.</p>
+  <h2>3.3 Content Production</h2>
+  <p>One key ingredient for an instant multimedia package, in order to be successful,
+    is a fast and reliable way to produce content. 'Fast'
+    means little time and little budget; 'reliable' means quality, at the level
+    needed for the type of production. As far as content production goes, there
+    are three key ingredients of <strong>OneThousandandOneStory</strong>: transcribed interviews
+    (with transcription and subsequent reading by professional speakers), evocative
+    images, and professional speakers.</p>
+  <h4><strong><em>Interviews</em></strong> </h4>
+  <p>We use interviews with highly competent people to get the texts that later
+    will generate audio. The reasons in favor of transcribed interviews are several:</p>
+  <ul>
+  <li>
+    a couple of hours all the basic content can be obtained; videotaped interviews
+    or audio interviews (when the original recording has to be used) take much
+    more time and more preliminary work, often with an inferior result.</li>
+  <li> Competent
+    people, when properly interviewed, can tell wonderful stories, often much
+    more engaging than those obtained by written contributions (that would take
+    also too much time).</li>
+  <li> Experts,
+    when engaged in a discussion, tend to use the terms and the tone most suitable
+    for transformation into a narrative that is engaging.</li>
+  </ul>
+  <h4><strong><em>Evocative Images</em></strong></h4>
+  <p>The audio narrative is the driving force to keep the user absorbed; images
+    add an emotional aspect, rather than providing strictly rational information.
+    The advantages are several:</p>
+  <ul>
+  <li> The
+    attention of the user is kept focused on what is being said.</li>
+  <li> Even
+    abstract subjects or concepts can be conveyed by the narratives, with images
+    only emotionally enriching the presentation.</li>
+  <li> The
+    choice of images can be delayed or modified at will, without need to rework
+    the production.</li>
+  <li> Strict
+    synchronization (between images and audio comment) can be avoided, again
+    greatly simplifying production and reducing costs.</li>
+  </ul>
+  <h4><strong><em>Professional Narrators</em></strong></h4>
+  <p>We prefer professionals to the use of 'author speakers', such as the curator,
+    for example. Although speeches by authors can be very emotional, they are
+    more difficult to organize, more expensive (due to editing costs), and often,
+    for 25-30 minutes of audio, of inferior quality.</p>
+  <h2>4. OneThousandOneStory: Technology</h2>
+  <p>Aapplication engine is the cornerstone of the instant multimedia approach.
+      Through the engine a number of advantages can be obtained:</p>
+  <ul>
+  <li> The
+      workflow can focus the main effort on content production, rather than on
+      technology and implementation. Resources can therefore be easily spent
+      for content revision, evaluation, testing, and quality assurance.</li>
+  <li> The
+      design team does not have to take any technological decisions (software
+      architecture, databases, programming language) and does not have to invest
+      a penny in implementation.</li>
+  <li> The
+      competencies required in the production team mainly concern cultural heritage,
+      communication, content, semiotics, domain-knowledge, rather than technology.</li>
+  </ul>
+  <p class="caption"><img src="diBlas.fig6.gif" alt="Fig 6: The engine OneThousandandOneStory: editorial plan ( left) and content ( right)" width="400" height="193" /></p>
+  <p class="caption">Fig 6: The engine <strong>OneThousandandOneStory</strong>: editorial plan
+    ( left) and content ( right) </p>
+  <p>The engine (<strong>Milleeunastoria</strong> in Italian and <strong>OneThousandandOneStory</strong> in
+      English) has been developed in a number of different versions by HOC-lab
+      in the year 2006. It has been used, so far, by the staff of the laboratory,
+      by high school students and by college students. In January 2007 thousands
+      of students started using it for the competition Policultura (http://www.policultura.it);
+      the engine has been made available to schools around Italy.</p>
+  <p class="caption"><img src="diBlas.fig7.gif" alt="Fig 7: The architecture for the QST engine" width="360" height="366" /></p>
+  <p class="caption">Fig 7: The architecture for the QST engine </p>
+  <p>Figure 7 summarizes the main functional architecture for
+      the QST engine. The most important components of the engine are Data Entry,
+      Preview and Generation.</p>
+  <ul>
+  <li> <strong>Data
+      Entry</strong> <br />
+  A simple panel of controls allows the user to edit the editorial plan (i.e. the
+structure in topics and subtopics), to enter content for each element (i.e. title,
+text, images with captions and audio file), and to perform all needed changes.     </li>
+<li> <strong>Preview</strong> <br />
+  <p>A simple mechanism allows the user to immediately check the quality of one
+    element (topic or sub-topic) or of the whole application, by simulating it
+    in an interactive version.</p>
+</li>
+    <li> <strong>Generation</strong> <br />
+    Only at the end the whole application is production generated for the different
+channels.     </li>
+</ul>
+  <p>In order to avoid technicalities for the development team,
+      in the current version the engine is provided as a Web service. The production
+      team remotely inserts data and looks at previews; when the work is complete,
+      the generated application (that can be quite sizable) is available on the
+      server. The generation of the applications (for the different channels)
+      takes virtually no time.</p>
+  <h2>5. Conclusions And Future Work</h2>
+  <p>Instant multimedia could become a pervasive phenomenon for Cultural Heritage:
+    numerous small, good quality applications made available for different channels
+    and supporting different user experiences. Users today are more likely to
+    pay attention to small applications, possibly available on their mobile devices,
+    rather than to 'consume' large, expensive applications.</p>
+  <p>In order to make this vision real, the Cultural Heritage community needs
+    reliable Instant Multimedia Packages, possibly evolved from current Content
+    Management Systems or from efforts like Pachiderm (LaMar et al., 2005; Samis,
+    2005), MEDINA (Garzotto, 2006) and similar applications. We hope that in
+    the near future cultural institutions willing to develop a new lean and low-budget
+    application will be allowed to choose among a dozen  different options,
+    in terms of format, technology, user experience, etc.</p>
+  <p>HOC-LAB (and its partner, TEC-LAB) are committed to the following developments:</p>
+  <ul>
+    <li>Further improving (in terms of usability) the engine of <strong>OneThousandandOneStory</strong> and
+      making it available as open source Software,</li>
+    <li>Developing new versions of this engine in order to support different
+      technologies (iPhone, for example),</li>
+    <li>Developing a family of new engines in order to support different design
+      patterns and different user experiences.</li>
+  </ul>
+  <p>Most important of all, we are working together with cultural institutions
+    to make instant multimedia more widely used, and to provide more satisfactory
+    experiences for users.</p>
+  <h1>References</h1>
+  <p class="ReferencesText">Di Blas, N., P. Paolini, C. Poggi (2005). &quot;A Virtual
+    Museum where Students can Learn&quot;. In L. Tan Wee Hin &amp; R. Subramaniam
+    (eds). E-learning and Virtual Science Centers. Idea Group Inc., U.S.A. 308-326.</p>
+  <p class="ReferencesText">Di Blas N., C. Poggi (2006). &quot;3D for Cultural Heritage
+    and Education: Evaluating the Impact&quot;. In D. Bearman &amp; J. Trant (Eds.)
+    Museums and the Web, Selected Papers from an International Conference. Toronto,
+    Canada: Archives &amp; Museum Informatics,141-150. Also available at <a href="../http://www.archimuse.com/mw2006/papers/diblas/diblas.html" target="_blank">http://www.archimuse.com/mw2006/papers/diblas/diblas.html</a></p>
+  <p class="ReferencesText">Folmer, E., M. van Welie, and J. Bosch (2006). &quot;Bridging Patterns - an approach to bridge
+    gaps between SE and HCI&quot;. Journal of Information and Software Technology.
+    Volume 48, Issue 2, 69-89, February 2006.</p>
+  <p class="ReferencesText">Garzotto, F. (2006). MEDINA three years later: Towards
+    &quot;Enterprise Frameworks&quot; for Cultural Tourism Web Applications. In D. Bearman
+    &amp; J. Trant (Eds.) Museums and the Web, Selected Papers from an International
+    Conference. Toronto: Archives &amp; Museum Informatics, 173-184. Also available
+    at <a href="../http://www.archimuse.com/mw2006/papers/garzotto/garzotto.html" target="_blank">http://www.archimuse.com/mw2006/papers/garzotto/garzotto.html</a></p>
+  <p class="ReferencesText">LaMar, Michelle, et al. Architecting the Elephant:
+    Software Architecture and User Interface Design for Pachyderm 2.0, in J.
+    Trant and D. Bearman (eds.). <em>Museums and the Web 2005: Proceedings</em>,
+    Toronto: Archives &amp; Museum Informatics, published March 31, 2005 at <a href="../http://www.archimuse.com/mw2005/papers/laMar/laMar.html" target="_blank">http://www.archimuse.com/mw2005/papers/laMar/laMar.html</a></p>
+  <p class="ReferencesText">Paolini, P., F. Garzotto, D. Bolchini and S. Valenti
+    (1999). 'Modelling by Pattern' of Web Applications. In Peter P.S. Chen (Eds).
+    Proc. of Advances in Conceptual Modeling (ER'99). Workshops on Evolution
+    and Change in Data Management, Reverse Engineering in Information Systems,
+    and the World Wide Web and Conceptual Modeling, Paris, France, November 15-18,
+    1999.</p>
+  <p class="ReferencesText">Samis, P. (2005). &quot;Just Add Elephants: Breeding and
+    Browsing Rich Media Educational Resources at the San Francisco Museum of
+    Modern Art&quot;. Studies in Communication Sciences. Vol. 5, Number 1, Summer
+    2005.</p>
+  <p class="ReferencesText">van Duyne, D.K., J.A. Landay, and J.I. Hong (2002).
+    The Design of Sites: Patterns, Principles, and Processes for Crafting a Customer-Centered
+    Web Experience. (Paperback) Addison Wesley, 2002.</p>
+  <p class="ReferencesText">Welie, M. and H. Traetteberg (2000). &quot;Interaction patterns in user interfaces&quot;.
+    In Proceedings of the Seventh Pattern Languages of Programs Conference. (Monticello,
+    IL, Aug. 13-16, 2000). <a href="../http://jerry.cs.uiuc.edu/~plop/plop2k/proceedings/Welie/Welie.pdf" target="_blank">http://jerry.cs.uiuc.edu/~plop/plop2k/proceedings/Welie/Welie.pdf</a>.</p>
+	<!-- #EndEditable -->
+				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> di Blas, N.
+				    et al., <span class="PaperTitle">'Instant Multimedia': A
+				    New Challenge For Cultural Heritage</span><!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2007: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics, published March 1, 2007  Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+http://www.archimuse.com/mw2007/papers/<!-- #BeginEditable "URL" -->diBlas/diBlas.html
+				 <!-- #EndEditable --></p>
+				<p class="references"><em><!-- InstanceBeginEditable name="Editorial Note" -->Editorial Note<!-- InstanceEndEditable --></em> </p>
+	  </div>
+<div id="sidebar">
+			<div id="side-nav">
+				<ul id="side-nav-list">
+					    <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+						<li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+						<li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+						<li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+						<li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+						<li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+						<li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+						<li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+				</ul>
+			</div>
+			<div id="search-site">
+				<form method="post" action="../http://search.archimuse.com/cgi-bin/htsearch">
+					<input type="hidden" name="format" value="builtin-long" />
+					<input type="hidden" name="method" value="and" />
+					<input type="hidden" name="config" value="htdig-mw2007" />
+					<input type="hidden" name="restrict" value="" />
+					<input type="hidden" name="exclude" value="" />
+					<input type="text" size="20" name="words" value="" id="searchmw" />
+					<input type="image" src="../../images/searchmw2007.gif" id="searchbox" name="search" />
+				</form>
+			</div>
+				<div id="sidebar-links">
+				<ul id="sidebar-links-list">
+					<li><a href="../../../index.html" class="produced-by">produced by<br />
+					    <img src="../../images/sidelogo.gif" width="144" height="37" alt="AMI logo" /></a></li>
+					<li><a href="../../../index.html">Join our mailing list</a></li>
+					<li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+					<img src="../../../external.gif?link=http://www.archimuse.com/ami.images/search.gif" alt="search" width="24" height="25" /></a></li>
+				</ul>
+		  </div>
+		</div>
+		<div id="footer">
+		  <div id="last-updated">
+          published: April 11, 2007<br />
+			last updated:<!-- #BeginDate format:Am1a -->October 28, 2010 12:23 PM<!-- #EndDate -->
+		        <div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+		  </div>
+			<div id="footer-content">
+				Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E 2P3 Canada<br />
+				Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+				
+				<script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2007";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2007 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				</script>	
+
+		<br />
+				Copyright &copy; 2006 - Archives &amp; Museum Informatics - All rights reserved.<br />
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/diBlas/diBlas.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:29:32 GMT -->
+</html>
+					

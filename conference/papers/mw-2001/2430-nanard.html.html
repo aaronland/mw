@@ -1,0 +1,1147 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/nanard/nanard.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:51 GMT -->
+<head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>OPALES: An Environment for Sharing Knowledge among Experts Working on Multimedia Archives</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onLoad="MM_preloadImages('../../nav/mw2001_nav_registeron.gif','#943398414283');MM_preloadImages('../../nav/mw2001_nav_workshopson.gif','#943398455733');MM_preloadImages('../../nav/mw2001_nav_sessionson.gif','#943398500450');MM_preloadImages('../../nav/mw2001_nav_speakerson.gif','#943398534416');MM_preloadImages('../../nav/mw2001_nav_demoson.gif','#943398577050');MM_preloadImages('../../nav/mw2001_nav_exhibiton.gif','#943398612066');MM_preloadImages('../../nav/mw2001_nav_eventson.gif','#943398640266');MM_preloadImages('../../nav/mw2001_nav_beston.gif','#943398663166');MM_preloadImages('../../nav/mw2001_nav_keydateson.gif','#943398701050');MM_preloadImages('../../nav/mw2001_nav_seattleon.gif','#943398731383');MM_preloadImages('../../nav/mw2001_nav_sponsoron.gif','#943398934733')">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.register','document.register','../../nav/mw2001_nav_registeron.gif','#943398414283')"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"></a> 
+        <br>
+        <a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.workshops','document.workshops','../../nav/mw2001_nav_workshopson.gif','#943398455733')"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"></a> 
+        <br>
+        <a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sessions','document.sessions','../../nav/mw2001_nav_sessionson.gif','#943398500450')"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"></a> 
+        <br>
+        <a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.speakers','document.speakers','../../nav/mw2001_nav_speakerson.gif','#943398534416')"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"></a> 
+        <br>
+        <a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.interact','document.interact','../../nav/mw2001_nav_interacton.gif','#943398534416')"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"></a> 
+        <br>
+        <a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.demos','document.demos','../../nav/mw2001_nav_demoson.gif','#943398577050')"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"></a> 
+        <br>
+        <a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.exhibits','document.exhibits','../../nav/mw2001_nav_exhibiton.gif','#943398612066')"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"></a> 
+        <br>
+        <a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.events','document.events','../../nav/mw2001_nav_eventson.gif','#943398640266')"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"></a> 
+        <br>
+        <a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.best','document.best','../../nav/mw2001_nav_beston.gif','#943398663166')"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"></a> 
+        <br>
+        <a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.dates','document.dates','../../nav/mw2001_nav_keydateson.gif','#943398701050')"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"></a> 
+        <br>
+        <a href="../../seattle/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.seattle','document.seattle','../../nav/mw2001_nav_seattleon.gif','#943398731383')"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"></a> 
+        <br>
+        <a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sponsor','document.sponsor','../../nav/mw2001_nav_sponsoron.gif','#943398934733')"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"></a> 
+        <br>
+        <br>
+        <br>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"></a> 
+        <br>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br>
+        158 Lee Avenue<br>
+        Toronto, Ontario<br>
+        M4E 2P3 Canada<br>
+        info@ archimuse.com<br>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br>
+            A&MI</font></a> </span></td>
+        </tr>
+      </table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class='verysmall'>Published: March 15, 2001.<br>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated:&nbsp;"+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"><br>
+      <!-- #BeginEditable "Body" --> 
+
+      <p class=PaperTitle>OPALES: An Environment for Sharing Knowledge among Experts 
+
+        Working on Multimedia Archives</p>
+
+      <p class=Author>Henri Betaille, Marc Nanard, Jocelyne Nanard, LIRMM, France</p>
+
+      <p class=AbstractTitle>Abstract</p>
+
+      <p class=AbstractText>INA, the 'Institut National de l'Audiovisuel' 
+
+        keeps records of national TV and radio production as French patrimonial 
+
+        archives. They are mainly accessed by specialists for research purposes, 
+
+        and by TV producers for inserting archive segments within new productions.</p>
+
+      <p class=AbstractText>INA and several others partners have initiated an 
+
+        R&amp;D project, OPALES, to develop a distributed environment which enhances 
+
+        experts' private work on multimedia archives and enables collaborative 
+
+        knowledge work on the Web. The challenge is to advance knowledge by building 
+
+        digital communities of experts who add value to the archival dataset by 
+
+        annotating items. The environment supports users working on multimedia 
+
+        archives, preserves their data in private workspaces, and helps them to 
+
+        share expertise. Each end-user accesses information within a private workspace. 
+
+        Any document (annotation as well as archive) is handled as a private copy 
+
+        which can virtually be annotated, indexed, linked to other information, 
+
+        edited to be inserted into new documents, and so on. Direct anchoring 
+
+        of annotations within audio or video is supported.</p>
+
+      <p class=AbstractText>To manage information and knowledge sharing, OPALES 
+
+        introduces the notions of an 'authoring point of view' which 
+
+        identifies annotation categories and of a 'reading point of view' 
+
+        which specifies which categories of annotations a reader wants to see. 
+
+        Any added piece of information always has an author and an 'authoring 
+
+        point of view.' To enable knowledge sharing, any user can 'export' 
+
+        a point of view to make some part of the elaborated knowledge available 
+
+        to others. Exporting a point of view consists of indexing it into the 
+
+        shared ontology to enable other experts to retrieve it easily and import 
+
+        it into their workspaces. A 'reading point of view' defines 
+
+        how a document is enhanced by annotations when presented. It is a mix 
+
+        of imported points of view. For instance, a researcher on sociology may 
+
+        'import' ('borrow') the knowledge previously elicited 
+
+        and exported by economists, politicians, ethnologists, and so on, to better 
+
+        understand a document or to improve the relevance of queries. The selected 
+
+        annotations and links are displayed with the document. To enable computer 
+
+        activity using shared information, the system provides a mechanism for 
+
+        handling an extensible ontology, including point of view dependant aspects. 
+
+        It provides support for indexing and for searching in annotated documents.</p>
+
+      <p class=AbstractText>The paper presents the features of OPALES, describes 
+
+        the mixing of points of view on video archives, and discusses some issues 
+
+        raised by knowledge sharing among experts.</p>
+
+      <p class=AbstractText><b>Keywords </b>Video annotation. Video indexing. 
+
+        Private workspaces. User communities. Knowledge sharing.</p>
+
+      <h1>Introduction</h1>
+
+      <p class=normal>This paper presents a national initiative currently underway 
+
+        in France to develop a new service at INA. It aims to support work on 
+
+        video archives. The expected result is a step towards knowledge creation 
+
+        through digital communities of experts exchanging their expertise and 
+
+        makin<span class="Normal">g their work available to others. Their common 
+
+        work improves knowledge of the archives, thus leading to added value.</span></p>
+
+      <p class=normal><span class="Normal">This service relies upon three interdependent 
+
+        and integrated features:</span></p>
+
+      <ul>
+
+        <li> <span class="Normal">an improved information retrieval system, with 
+
+          more precise recall for most users</span></span></li>
+
+        <li class="normal"><span class="normal"> private workspaces in which users work seamlessly 
+
+          with private documents, archives documents and annotations of their 
+
+          own or of other users.</span></li>
+
+        <li class="normal"><span class="normal"> a computer supported collaborative environment which 
+
+          enables distant users who do not know each other, but have the same 
+
+          concerns, to cooperate and to share the result of their work.</span></li>
+
+      </ul>
+
+      <p class=normal>The project is intended to apply mainly to video and audio 
+
+        archives.</p>
+
+      <p class=normal>The paper first introduces the context of the work, presenting 
+
+        the origin of the video archives and the project. Then the role of the 
+
+        Web in facilitating distant exploration and annotation of video is presented. 
+
+        The focus is placed first on the features available in private workspaces, 
+
+        then on the sharing of knowledge among users. The notion of point of view 
+
+        is described from both the author's and the reader's side.</p>
+
+      <h1>Working on multimedia archives</h1>
+
+      <p class=normal>Many projects deal with video archives analysis (Chang 97, 
+
+        Houghton 99). Very few rely on humans for such a task. For instance, the 
+
+        Informedia project at CMU (Hauptmann 95, Olligschlaeger 99) relies on 
+
+        automated approaches such as language recognition and image recognition 
+
+        to produce on line overviews of audiovisual documents. The OPALES project 
+
+        has a quite different purpose and strategy: it aims to enhance the relevance 
+
+        and the level of detail that already exist in the indexing, with added 
+
+        metadata contributed by users working on the video.</p>
+
+      <h1>Video archive storage policy in France</h1>
+
+      <p class=normal>The systematic collection of books by National Libraries 
+
+        is now routine. Most great nations keep a record of all of their published 
+
+        information in libraries, and already a part of this is available in digital 
+
+        libraries. By contrast, most movies, TV programs, and radio productions 
+
+        are still collected only by producers. As a consequence, this costly collection 
+
+        effort is often limited only to documents which have great value and a 
+
+        high probability of being reused, either frequently or within a short 
+
+        time. Often the cultural or the patrimonial value of a document is not 
+
+        the main criterion in deciding on its preservation for the long term. 
+
+        Such behavior is explicable in terms of market economy, but it causes 
+
+        much of the history of the audiovisual life of the country to be lost. 
+
+        Therefore, in the future it will not be accessible to researchers studying 
+
+        the evolution of our society. This is why France enacted a law in 1992 
+
+        making it mandatory that any information producer deposit all published 
+
+        production into a specialized national institution: the Bibliothèque Nationale 
+
+        de France for printed documents, the Centre National de la Cinématographie 
+
+        for films, and the 'INAThèque' of the Institut National de l'Audiovisuel 
+
+        (INA) for audiovisual production broadcast on TV or radio.</p>
+
+      <p class=normal>This policy for audiovisual archives is even older, although 
+
+        it was initially limited only to the production of national TV. INA was 
+
+        created in 1975 to store the archives of national channels and make its 
+
+        collection available to producers and researchers. At the time of its 
+
+        creation, it inherited all the archives of the earliest national broadcasting 
+
+        company. It now deals with more than one and a half billion hours of TV 
+
+        and radio and more than one billion still pictures stored on more than 
+
+        fifty miles of shelves. Currently INA has started to convert a part of 
+
+        its collection to digital format; about 300 000 hours of radio and 200 
+
+        000 hours of TV are completed, making it now one of the largest repositories 
+
+        of audio-video archives (Auffret, 2000). Nevertheless, note that INA is 
+
+        just the archivist, not the copyright owner of all the deposited documents. 
+
+        It often just operates as a central clearing house between buyers and 
+
+        information owners. Most of its services are related to indexing and searching 
+
+        for relevant information in this huge quantity of audiovisual data.</p>
+
+      <h1>INA as a service provider</h1>
+
+      <p class=normal>In addition to its storage function, INA is also in charge 
+
+        of promoting cultural heritage by proposing many services to clients. 
+
+        Basically, INA serves as a patrimonial archive. Archives are accessed 
+
+        mainly by specialists; for instance, by TV producers wanting to insert 
+
+        archive segments into a new production: perhaps a brief recall of historic 
+
+        facts within the news. Also, it is well known that journalists use archives 
+
+        to prepare and maintain biographies of most famous people, ready to be 
+
+        broadcast within a few minutes whenever needed. Documentary film series 
+
+        also take advantage of INA's archive.</p>
+
+      <p class=normal>One less visible application concerns the study of our cultural 
+
+        heritage. Many domain experts (historians, sociologists, economists...), 
+
+        and even teachers, novelists and movie producers study audiovisual archives 
+
+        for research purposes: to better understand some events, to elicit their 
+
+        relationships, as well as to catch authentic tiny details of a past way 
+
+        of life in order to produce more realistic stories. These people typically 
+
+        are the target users of the new service developed in the OPALES project. 
+
+        It is now a challenge for INA to take advantage of the Web to provide 
+
+        better service to these users in order that the institution, as a whole, 
+
+        benefit from their work.</p>
+
+      <h1>The OPALES project</h1>
+
+      <p class=normal>In fall 1999, the French Ministry of the Economy initiated 
+
+        the OPALES project within the PRIAM national R&amp;D planning program. 
+
+        OPALES is an acronym for 'Outils pour des Portails AudiovisueLs Éducatifs 
+
+        et Scientifiques' (i.e.: 'Tools for Audiovisual Portals for 
+
+        Education and Science'). Project evaluation is scheduled during the 
+
+        fall of 2001. OPALES aims to develop a distributed environment which boosts 
+
+        private expert work on multimedia archives and provides support for collaborative 
+
+        knowledge construction on the Web. Several institutions and research labs 
+
+        and an industrial partner participate in its elaboration and evaluation. 
+
+        The final system is not specifically dedicated to INA: some similar institutions 
+
+        dealing with patrimonial archives are interested in it and collaborate 
+
+        in the project. The MSH 'Maison des Sciences de l'Homme' 
+
+        in Paris, the 'Cité des Sciences et de l'Industrie', the 
+
+        CNDP 'National Center for Distance Learning', and the BPS 'Program 
+
+        and Service Bank' of the 5<sup>th</sup> TV Channel, as well as INA, 
+
+        provide both video archives and expert users to work on them. In the first 
+
+        experimental stage of the project, the corpus has been limited to copyright 
+
+        free documents in order to make experimental work cheaper.</p>
+
+      <h1>The OPALES project and the Web</h1>
+
+      <p class=normal>OPALES is a private Web portal, open only to registered 
+
+        users. Currently, access is restricted to project staff. It supports expert 
+
+        users' activities when working on multimedia archives, preserves their 
+
+        data in private workspaces, and helps them share expertise. Each end-user 
+
+        accesses information within a private workspace. Any document (annotation 
+
+        as well as archive) is handled as a private copy which can be virtually 
+
+        annotated, indexed, linked to other information, edited to be inserted 
+
+        into new documents, and so on. Direct anchoring of annotations within 
+
+        audio or video is supported. Elicited expertise may remain private in 
+
+        one's workspace or be shared. A shared ontology, coupled with indexing 
+
+        and search techniques (Chein 98) based on conceptual graphs, is used to 
+
+        handle semantically rich annotations.</p>
+
+      <h1>Overview of private workspaces</h1>
+
+      <h2>Exploring video archives on the Web</h2>
+
+      <p class=normal>Until now, end users working on INA's video archives 
+
+        needed to look physically at videotapes, either in the INA building or 
+
+        in their institution using purchased copies. Digital video on the Web 
+
+        and secure transactions now make it possible for the users to work from 
+
+        anywhere and for INA to drastically reduce access costs. A large part 
+
+        of users' work online consists of querying the archive base and then 
+
+        exploring retrieved video sequences to decide which parts are the most 
+
+        relevant. Efficient online work requires fast response time, something 
+
+        which is not currently a strength of video on the Web. Therefore, it has 
+
+        been necessary first to develop specific tools to enable rapid searching 
+
+        of video. Typically, users need to look quickly at video contents and 
+
+        explore them at variable levels of detail, not simply to <i>play</i> parts 
+
+        of the videos. Video players are not relevant for this service because 
+
+        they are designed for playing, not for exploring. VideoPlayer or QuickTime 
+
+        rely on stored video: they support immediate seeking, but on the Web, 
+
+        their use is restricted to very short movies. RealPlayer uses streaming. 
+
+        It allows playing a portion of a video before receiving its entire contents. 
+
+        It is well suited for live video on the Web, but does not provide real-time 
+
+        exploration features. Video summaries like image albums enable rough overviews 
+
+        but are not sufficient for exploring videos at a detailed level. A special 
+
+        'videoExplorer' tool (Nanard, 2001) has been designed and developed 
+
+        at LIRMM in order to minimize information transmission between the server 
+
+        and the client station. The explorer server quickly delivers on-demand 
+
+        computed short overviews of any part of a video at any level of detail. 
+
+        A very simple interaction method is used to seek the overview from the 
+
+        client station and select new segments to explore. This technique enables 
+
+        users quickly to observe videos at any level of detail and to focus on 
+
+        any relevant part, as precisely as at the frame level. Its external appearance 
+
+        and interaction method is very similar to that of a video player.</p>
+
+      <h2>Working in private spaces on the Web</h2>
+
+      <p class=normal>OPALES provides its users with support for private workspaces. 
+
+        One of the expectations of the project is to induce a feeling of ownership 
+
+        in users' work in order to attract clients, keep them, and make it 
+
+        harder for them to go on working elsewhere. In contrast to most Web sites 
+
+        and portals which enable either passive reading of documents or creation 
+
+        of private sites, OPALES supports active reading of documents. Active 
+
+        reading consists of directly working on documents as if they were private; 
+
+        for instance, directly annotating or editing them. In an active reading 
+
+        environment, the reader does not distinguish between interacting with 
+
+        an archival document and interacting with private notes. Such annotation 
+
+        features are proposed in many systems, but very few are actually effective.</p>
+
+      <p class=normal>In OPALES, any document displayed on the user's screen 
+
+        is always a virtual private copy. When a user selects a document to be 
+
+        displayed, automatically the server brings back both the document itself 
+
+        and all the references to the annotations previously attached to this 
+
+        document by the user, plus those explicitly imported, in context, from 
+
+        the shared knowledge bank. Since annotation contents are first class objects, 
+
+        they are handled exactly like other documents. One can annotate annotations 
+
+        at will, thus inducing a private hypermedia structure over the set of 
+
+        documents.</p>
+
+      <p class=normal>Users can also prepare private documents, including edited 
+
+        segments from archives. For instance, suppose a history teacher prepares 
+
+        a course, including in it selected relevant archival sequences as illustrations, 
+
+        with private comments added on the sound track and with some minor graphical 
+
+        enhancements such as indicating names of persons directly on images. Such 
+
+        documents are handled in OPALES simply as edit lists dynamically interpreted 
+
+        when displayed. They are rebuilt from the archives at playing time. Thus 
+
+        any annotation of the included segments anchored in the archives becomes 
+
+        available also from the private document, including notes created later.</p>
+
+      <p class=normal>Users can also flatten documents to use them outside of 
+
+        the OPALES environment, but in this case they lose all links to the OPALES 
+
+        environment. Flattening a document also triggers the evaluation of the 
+
+        copyrights of included archival segments.</p>
+
+      <h2>Annotating documents and videos</h2>
+
+      <p class=normal>An annotation results from an explicit user action. One 
+
+        'annotates' a document by linking to it metadata that we call 
+
+        the 'annotation contents'. In essence, an annotation references 
+
+        the annotated document. Annotations as such are described separately from 
+
+        the annotation contents by a RDF descriptor. There is no restriction on 
+
+        the nature and contents of the annotation or on the annotated document. 
+
+        Anchoring can be done into the annotated document. Internally it uses 
+
+        an Xpointer notation (<a href="http://www.w3c/" target="new">http://www.w3c</a>). 
+
+        Anchoring into video documents internally relies upon a very simple SMIL 
+
+        description (<a href="http://www.w3c/" target="new">http://www.w3c</a>) 
+
+        of archival movies that just takes into account the actual segmentation 
+
+        that occurs when indexing the archive in the database. All of the precise 
+
+        anchoring is expressed as time-coded segments, enabling anchors to overlap 
+
+        where there is suitable enabling stratification (Smith 92) of annotations.</p>
+
+      <p class=normal>It is important to note the asymmetry introduced in OPALES 
+
+        by using hypermedia typed links. By nature, annotation links are different 
+
+        from other links. A link to a document is not necessarily an annotation 
+
+        link. For instance, it may just be a 'citation' link. Annotation 
+
+        links result from a user explicit annotation action which internally creates 
+
+        the RDF descriptor and registers it in the database. Navigation links 
+
+        are handled in a more classical manner. For instance, the annotation contents 
+
+        can be an HTML document with links to other documents; such links are 
+
+        not considered as defining annotations since they do not result from an 
+
+        annotation action.</p>
+
+      <p class=normal>Annotations are objects in the sense of OO programming. 
+
+        Specific editors are available for each class of annotation. Among them, 
+
+        on the simplest side, a simple text editor or a XML/HTML editor enables 
+
+        users to produce documents; at the opposite extreme, a specific NCG 'Nested 
+
+        Conceptual Graph' editor enables users to attach semantically rich 
+
+        and computable (Mugnier 2000) descriptions of documents as indexing annotations.</p>
+
+      <h1>Overview of knowledge sharing in OPALES</h1>
+
+      <p class=normal>Interest in private workspaces would be very limited if 
+
+        they did not communicate. Therefore, the most important aspect of OPALES 
+
+        is its support for knowledge sharing among user communities. It enables 
+
+        any users to export part of their work and to import into their own workspace 
+
+        exported parts of other users' work. The OPALES basic belief is that 
+
+        the more shared metadata bound to a document, the greater the value of 
+
+        that document to users. Typically, exporting and importing annotations 
+
+        provide mechanisms for sharing knowledge and thus eliciting shared knowledge</p>
+
+      <h1>Lesson learned from the Web</h1>
+
+      <p class=normal>The Web currently is the largest shared information structure 
+
+        in the world. Studying the evolution from the poorest HTML1 to the XML 
+
+        based language family provides a rich set of lessons.</p>
+
+      <p class=normal>The most important requirement to enable large-scale collaboration 
+
+        is rigorously to define a simple but powerful shared language, and then 
+
+        support its extensibility. Lack of rigor quickly leads to the Tower of 
+
+        Babel phenomenon. Paradoxically, limited power of expression of a language 
+
+        combined with a lack of extensibility produces the same effect. Simplicity, 
+
+        precision and extensibility are required to enable large-scale collaboration.</p>
+
+      <p class=normal>To accommodate this observation in knowledge sharing , OPALES 
+
+        provides its users with a very precise but extensible ontology (Gruber 
+
+        1993, <span lang=FR>Staab 2000)</span>, and with very simple rules to 
+
+        support its evolution. An 'archive' ontology is provided to 
+
+        define precisely all of the vocabulary used in the actual indexing of 
+
+        archival documents. But OPALES aims at capturing new expertise that, by 
+
+        nature, does not yet belong to this ontology. Therefore, it is necessary 
+
+        to provide mechanisms to extend the ontology at will. This is not an easy 
+
+        task; it is even an extremely risky one. The chosen solution relies on 
+
+        'private and sharable' extensions of the ontology.</p>
+
+      <p class=normal>Since any extension of the ontology and of the document 
+
+        indexing remains private, it has no consequence on the archive base and 
+
+        cannot introduce messy structures that would be troublesome for other 
+
+        users. On the other hand, if a subgroup of users trusts a given set of 
+
+        extensions, they can use it as a dynamically shared extension to the ontology, 
+
+        just for themselves. The OPALES knowledge-sharing engine enables users 
+
+        to work with dynamically extensible ontology and indexing of documents.</p>
+
+      <p class=normal>The notion of 'point of view' in OPALES is the 
+
+        key for dynamically managing private and shared extensions, indexing, 
+
+        and annotations, and as a consequence, for building and managing digital 
+
+        communities of experts who add value to the archive.</p>
+
+      <h1>The central notion of 'points of view' in OPALES</h1>
+
+      <p class=normal>Since OPALES is a private workspace strongly dedicated to 
+
+        supporting digital communities of experts, the management of dynamically 
+
+        evolving virtual communities is a major component of the system. We have 
+
+        chosen to permit the free creation of communities and free access to them. 
+
+        A user may create a community just by specifying a concern. We call it 
+
+        a 'point of view'. That user just has to write an informal document 
+
+        to define the concern and to index it formally in terms of the shared 
+
+        ontology.</p>
+
+      <p class=normal>In OPALES, any piece of information has a descriptor which 
+
+        identifies its 'point of view'. A point of view is not at all 
+
+        an index of the document, but rather a mark that denotes which category 
+
+        of users might be concerned with this information. Points of view have 
+
+        some weak similarities with 'newsgroups,' but it would be erroneous 
+
+        to push the metaphor too far. For instance, consider annotations of a 
+
+        politician's speech: one user may annotate it from an 'economist's 
+
+        point of view' evaluating long term consequences; another may do 
+
+        it from a 'rhetoric expert's point of view' discussing 
+
+        the speech structure; whilst yet another may focus on details of hand 
+
+        motion and face expression from a 'psychology expert's point 
+
+        of view'. Other psychology experts could be interested in retrieving 
+
+        documents annotated by colleagues in their virtual community. By declaring 
+
+        an annotation with this point of view, the annotator locates it within 
+
+        the concern of this virtual community.</p>
+
+      <p class=normal>Points of view induce an <i>a posteriori</i> classification 
+
+        of users based on their stated concerns. Tagging each piece of data with 
+
+        the author's point of view implicitly defines a partition of information 
+
+        spaces. It is stored in the 'workspaces' database. There is 
+
+        no need to use a partition since the formal indexing by points of view 
+
+        enables the NCG search engine (Chein, 1998) automatically to determine 
+
+        the location of the point of view, especially its specialization (Mugnier, 
+
+        2000)</p>
+
+      <p class=normal>A point of view is either private or public. A private point 
+
+        of view makes sense only for its owner. It can be used as a kind of private 
+
+        classification system, with a personal vocabulary. A point of view becomes 
+
+        public if its owner 'exports' it, making its description and 
+
+        indexing visible to other users. As a consequence, public points of view 
+
+        are retrieved like any other documents, thus enabling users to be aware 
+
+        of declared public points of view that are close to their concerns.</p>
+
+      <p class=normal>Using points of view is quite simple. Any editor window 
+
+        is assigned a default point of view which tags any new document created 
+
+        in this window. The user may assign to it any other point of view, private 
+
+        as well as public, retrieved either from a favorite point of view list, 
+
+        or from a search of existing ones close to the query. If no point of view 
+
+        matches the query, the user may create one and export it: the query already 
+
+        is a good base for starting to index the point of view. It just has to 
+
+        be informally described more precisely. Since points of view are attached 
+
+        to the window rather than to the user, one may easily handle several points 
+
+        of view, private or public, in a workspace.</p>
+
+      <p class=normal>Since all pieces of information have a point of view, any 
+
+        extension done to the ontology also has a 'point of view'. Extensions 
+
+        can be private or public. In this case, other users can share it. OPALES 
+
+        also supports regulation mechanisms for points of view, especially 'moderator 
+
+        approved points of view' that are suitable for asserting the consistency 
+
+        of extensions done to the ontology.</p>
+
+      <p class=normal>OPALES points of view have been designed to enable knowledge 
+
+        sharing. Any displayed document has a 'reader point of view' 
+
+        that specifies enhancements by annotations, indexing, ontology extensions, 
+
+        and so on. The readers' point of view is distinct from the author's, 
+
+        since they may also enjoy reading information stored with other points 
+
+        of view to get a wider understanding of a document; but the readers have 
+
+        no reason to place any writings in such points of views. They read from 
+
+        a point of view that combines several authorial points of view, but write 
+
+        from their own. For instance, let us suppose that a sociologist studies 
+
+        the speeches of a politician in order to write an essay on 'tricks 
+
+        to convince crowds'. This user would benefit from importing into 
+
+        the workspace the points of view of the 'psychologist expert' 
+
+        who has analyzed the details of hand motion as well as those of the 'rhetoric 
+
+        expert', but has no reason to write in those points of view if the 
+
+        user's current writing does not concern these virtual communities.</p>
+
+      <p class=normal>Any window has a 'reader's current point of view' 
+
+        that is built as a list of imported points of view. When a document is 
+
+        delivered in this window, the system also delivers and displays the document's 
+
+        list of <i>public</i> annotations that have been created in the points 
+
+        of view currently included in the reader's point of view. .This enables 
+
+        users to browse any of these annotations and recursively annotate them.</p>
+
+      <p class=normal>The reader's point of view also acts on the search 
+
+        engine. First, during the query preparation, it filters and expands the 
+
+        ontology to help the user choose the proper vocabulary. Second, the search 
+
+        engine takes into account both the actual indexing done on archive and 
+
+        also any public indexing done with the points of view included in the 
+
+        reader's current point of view. This enables both writing far more 
+
+        precise queries which are domain dependent, and retrieving very short 
+
+        segments matching such queries, since annotations can be anchored freely 
+
+        and precisely into the video archives.</p>
+
+      <p class=normal>Museums keep track of our history and culture. The Web can 
+
+        help them make the past available to all. The most important thing is 
+
+        not simply to show remarkable crafts, but to make their impact on our 
+
+        culture understandable. Museums are like icebergs; the part of collections 
+
+        made visible is rather small. Museums also preserve huge and rich material 
+
+        in storage, but in most cases, it is poorly used and difficult to study. 
+
+        This typically is the case with huge amounts of digital information that 
+
+        contains a quite continuous record of our social evolution. Paying museum 
+
+        staff to exploit these resources efficiently is far beyond museum budgets. 
+
+        Other solutions are needed. OPALES is one of the solutions. It relies 
+
+        on collaborative work on the Web.</p>
+
+      <p class=normal>Beyond the well-known role of the Web in information access, 
+
+        a far more important application domain is emerging: collaborative and 
+
+        distance work. The effectiveness of Web users' work is now greater 
+
+        than most analysts of the last decade could have imagined. Breaking encryption 
+
+        keys that were supposed to require mainframes for centuries of work has 
+
+        taken months owing to the shared distributed power of home computers. 
+
+        Dealing with freely distributed collective knowledge is a great challenge 
+
+        for the new century. The Semantic Web project initiated by Tim Berners-Lee 
+
+        (Berners-Lee 1998) bets on the power and efficiency of freely organized 
+
+        collaboration. Several other initiatives propose techniques for distributed 
+
+        annotation of Web pages based on a RDF schema, to improve the efficiency 
+
+        of search engines (Kahan 2000). On a smaller scale, OPALES bets on mixing 
+
+        distributed work within a centralized environment. The choice depends 
+
+        on the need for a well-balanced solution. Letting users do freely what 
+
+        they want has obviously been a success with the Web: a reliable structure 
+
+        has slowly emerged. But in smaller environments, this strategy lacks statistical 
+
+        regulation mechanisms, so it is known to run out of control easily. Constraining 
+
+        users in order to enforce controlled structures requires external force. 
+
+        It never works in open environments. The solution is a balance in which 
+
+        users both feel free but easily find attractive clusters where their expertise 
+
+        is recognized and can be cumulated with others.</p>
+
+      <p class=normal>The point of view mechanism in OPALES is easy to use. It 
+
+        is sufficiently free to allow everyone to use it at will, without any 
+
+        regulation mechanism. But by its nature, it leads to the formation of 
+
+        virtual user groups within which knowledge can be elicited in a consistent 
+
+        manner, relying on small and local extensions of a shared ontology. This 
+
+        feature enables people working on the same topics to cumulate their efforts. 
+
+        Furthermore, the 'reader's current point of view' provides 
+
+        the means to trigger interdisciplinary work by importing knowledge from 
+
+        other domains for better understanding.</p>
+
+      <p class=normal>OPALES currently is a tool for experts, mainly because exploring 
+
+        the storerooms of museums is not yet for end users. But expert work has 
+
+        results which usually are presented to end users. Currently the corpus 
+
+        chosen to bootstrap OPALES contains, among others things, a rich collection 
+
+        of documents about the history of modern mathematics, especially hundreds 
+
+        of hours of records of work meetings of the Bourbaki group. As an example, 
+
+        exploring and annotating these historic documents will benefit the 'archaeology' 
+
+        of science by providing a better understanding of the evolution of this 
+
+        discipline, and will make these enhanced documents accessible to a larger 
+
+        audience.</p>
+
+      <h1>References</h1>
+
+      <p class=ReferencesText>Auffret G. (2000<i>) Structuration de documents 
+
+        audiovisuels et publication electronique</i>, Phd thesis, Université de 
+
+        technologie de Compiègne, France</p>
+
+      <p class=ReferencesText>Berners-Lee, T. Semantic Web Road map, <a href="http://www.w3.org/DesignIssues/Semantic.html" target="new">http://www.w3.org/DesignIssues/Semantic.html</a>, 
+
+        1998</p>
+
+      <p class=ReferencesText>Chang, S.F. <i>et al</i>. (1997), VideoQ: An automated 
+
+        content-based video search system using visual cues. In Proc. <i>ACM Multimedia'97</i>, 
+
+        pp. 313-324.</p>
+
+      <p class=ReferencesText>Chein, M., Mugnier, M.L., &amp; Simonet., (1998), 
+
+        G. Nested Graphs: A Graph-based Knowledge Representation Model with FOL 
+
+        Semantics, <i>in Proc. 6th International Conference on Principles of Knowledge 
+
+        Representation and Reasoning (KR'98),</i> pp. 524-534, Morgan Kaufmann 
+
+        Publishers.</p>
+
+      <p class=ReferencesText>Gruber, T.R. (1993), Toward principles for the design 
+
+        of ontologies used for knowledge sharing. In Nicola Guarino and Roberto 
+
+        Poli (eds),<i> Formal Ontology in Conceptual Analysis and Knowledge Representation</i>, 
+
+        Kluwer. On line: <a href="http://ksl-web.stanford.edu/knowledge-sharing/papers/onto-design.rtf">http://ksl-web.stanford.edu/knowledge-sharing/papers/onto-design.rtf</a>.</p>
+
+      <p class=ReferencesText>Hauptmann, A. and Smith, M. (1995), Text, Speech, 
+
+        and Vision for Video Segmentation: The Informedia Project, <i>AAAI Fall 
+
+        1995 Symposium on Computational Models for Integrating Language and Vision, 
+
+        1995</i>. See also: <a href="http://www.informedia.cs.cmu.edu/" target="new">http://www.informedia.cs.cmu.edu/</a></p>
+
+      <p class=ReferencesText>Houghton, R. (1999), Named Faces: Putting Names 
+
+        to Faces. <i>IEEE Intelligent Systems Magazine</i>, Vol. 14, No. 5, pp. 
+
+        45-50.</p>
+
+      <p class=ReferencesText>Kahan, J., Koivunen, M.R., Prud'Hommeaux, E., 
+
+        &amp; Swick R.R. Annotea: An Open RDF Infratructure for Shared Web Annotations.</p>
+
+      <p class=ReferencesText>Mugnier, M.L. Knowledge Representation and Reasonings 
+
+        Based on Graph Homomorphism, in Proc. 9th International Conference on 
+
+        Conceptual Structures (ICCS 2000).</p>
+
+      <p class=ReferencesText><a name="_Hlt503609309">Nanard, M., Nanard, J., 
+
+        &amp; Payet, D. (2001), Design rationale of a Video Explorer<i>, In ACM 
+
+        conference CHI'2001</i>, Seattle, Washington.</a></p>
+
+      <p class=ReferencesText>Olligschlaeger, A., Hauptmann, A. (1999), Multimodal 
+
+        Information Systems and GIS: The Informedia Digital Video Library, <i>ESRI 
+
+        User Conference</i> 1999.</p>
+
+      <p class=ReferencesText><span lang=FR>Staab, S., Erdmann, M., Maedche, A., 
+
+        &amp; Decker, S. (2000), An Extensible Approach for Modeling Ontologies 
+
+        in RDF(S), <i>Workshop on Semantic Web associated to ECDL'2000</i>.</span></p>
+
+      <p class=ReferencesText>Smith, A., &amp; Davenport, G. (1992); The Stratification 
+
+        System: A Design Environment for Random Access Video. <i>In ACM workshop 
+
+        on Networking and Operating System Support for Digital Audio and Video</i>, 
+
+        San Diego, California.</p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/nanard/nanard.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:51 GMT -->
+</html>

@@ -1,0 +1,957 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+
+
+<!-- Mirrored from www.museumsandtheweb.com/mw99/papers/klevan/klevan.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:50:38 GMT -->
+<head>
+
+        <title>Archives & Museum Informatics: MW99 - paper</title>
+
+        <script language = "JavaScript">
+
+
+
+<!--
+
+
+
+// Detect if browser is Netscape 3 + or IE 4 +.
+
+bName = navigator.appName;
+
+bVer = parseInt(navigator.appVersion);
+
+    if ((bName == "Netscape" && bVer >= 3) || 
+
+        (bName == "Microsoft Internet Explorer" && bVer >= 4)) br = "n3"; 
+
+    else br = "n2";
+
+
+
+// Create image objects, preload all active and inactive images.
+
+    if (br== "n3") { 
+
+     
+
+    img2on = new Image();
+
+    img2on.src = "../../nav/mw99_nav_registeron.gif";
+
+    img3on = new Image();
+
+    img3on.src = "../../nav/mw99_nav_workshopson.gif";
+
+    img4on = new Image();
+
+    img4on.src = "../../nav/mw99_nav_demonstrationson.gif";
+
+    img5on = new Image();
+
+    img5on.src = "../../nav/mw99_nav_sessionson.gif";
+
+    img6on = new Image();
+
+    img6on.src = "../../nav/mw99_nav_speakerson.gif";
+
+    img7on = new Image();
+
+    img7on.src = "../../nav/mw99_nav_exhibiton.gif";
+
+    img8on = new Image();
+
+    img8on.src = "../../nav/mw99_nav_sponsoron.gif";
+
+    img9on = new Image();
+
+    img9on.src = "../../nav/mw99_nav_beston.gif";
+
+    img10on = new Image();
+
+    img10on.src = "../../nav/mw99_nav_eventson.gif";
+
+    img11on = new Image();
+
+    img11on.src = "../../nav/mw99_nav_keydateson.gif";
+
+        img12on = new Image();
+
+    img12on.src = "../../nav/mw99_nav_neworleanson.gif";
+
+
+
+     
+
+        img2off = new Image();
+
+    img2off.src = "../../nav/mw99_nav_registeroff.gif";
+
+    img3off = new Image();
+
+    img3off.src = "../../nav/mw99_nav_workshopsoff.gif";
+
+    img4off = new Image();
+
+    img4off.src = "../../nav/mw99_nav_demonstrationsoff.gif";
+
+    img5off = new Image();
+
+    img5off.src = "../../nav/mw99_nav_sessionsoff.gif";
+
+    img6off = new Image();
+
+    img6off.src = "../../nav/mw99_nav_speakersoff.gif";
+
+    img7off = new Image();
+
+    img7off.src = "../../nav/mw99_nav_exhibitoff.gif";
+
+    img8off = new Image();
+
+    img8off.src = "../../nav/mw99_nav_sponsoroff.gif";
+
+    img9off = new Image();
+
+    img9off.src = "../../nav/mw99_nav_bestoff.gif";
+
+    img10off = new Image();
+
+    img10off.src = "../../nav/mw99_nav_eventsoff.gif";
+
+    img11off = new Image();
+
+    img11off.src = "../../nav/mw99_nav_keydatesoff.gif";
+
+    img12off = new Image();
+
+    img12off.src = "../../nav/mw99_nav_neworleansoff.gif";
+
+    }
+
+
+
+// Function to "activate" images.
+
+function imgAct(imgName) {
+
+    if (br == "n3") {
+
+    document[imgName].src = eval(imgName + "on.src");
+
+    }
+
+}
+
+
+
+// Function to "deactivate" images.
+
+function imgInact(imgName) {
+
+    if (br == "n3") {
+
+    document[imgName].src = eval(imgName + "off.src");
+
+    }
+
+}
+
+
+
+// -->
+
+
+
+</script>
+
+<meta name="description" content="In Search of Meaningful Events: Curatorial Algorithms and Malleable Aesthetics, an essay by Andy C. Deck">
+
+<meta name="keywords" content="andyland,andyman,interactivity,politics,interface,art,censorship,public sphere,java,drawing,white board">
+
+</head>
+
+<body bgcolor="#FFFFFF" background="../../../conferences/conferences_bg.html">
+
+<table border="0" cellpadding="5">
+
+
+
+<tr>
+
+<td valign="TOP" width="135">
+
+
+
+
+
+<a href="../../index.html"><center><img src="../../mw99.gif" width=112 height=155 alt="Museums and the Web 1999" border="0"></center></a><p>
+
+
+
+
+
+
+
+
+
+<a href = "../../workshops/index.html" onmouseover = "imgAct('img3')"  onmouseout = "imgInact('img3')" target="_top">
+
+<img name= "img3" src="../../nav/mw99_nav_workshopsoff.gif" width=125 height=15 border=0 alt="Workshops"></a><br>
+
+
+
+<a href = "../../sessions/index.html" onmouseover = "imgAct('img5')"  onmouseout =
+
+"imgInact('img5')" target="_top">
+
+<img name= "img5" src="../../nav/mw99_nav_sessionsoff.gif" width=125 height=15
+
+border=0 alt="Sessions"></a><br>
+
+
+
+<a href = "../../speakers/index.html" onmouseover = "imgAct('img6')"  onmouseout = "imgInact('img6')" target="_top">
+
+<img name= "img6" src="../../nav/mw99_nav_speakersoff.gif" width=125 height=15 border=0 alt="Speakers"></a><br>
+
+
+
+<a href = "../../demos/index.html" onmouseover = "imgAct('img4')"  onmouseout = "imgInact('img4')" target="_top">
+
+<img name= "img4" src="../../nav/mw99_nav_demonstrationsoff.gif" width=125 height=15 border=0 alt="Demonstrations"></a><br>
+
+
+
+<a href = "../../exhibit/index.html" onmouseover = "imgAct('img7')"  onmouseout = "imgInact('img7')" target="_top">
+
+<img name= "img7" src="../../nav/mw99_nav_exhibitoff.gif" width=125 height=15 border=0 alt="Exhibit"></a><br>
+
+
+
+
+
+
+
+<a href = "../../events/index.html" onmouseover = "imgAct('img10')"  onmouseout = "imgInact('img10')" target="_top">
+
+<img name= "img10" src="../../nav/mw99_nav_eventsoff.gif" width=125 height=15 border=0 alt="Events"></a><br>
+
+
+
+<a href = "../../best/index.html" onmouseover = "imgAct('img9')"  onmouseout = "imgInact('img9')" target="_top">
+
+<img name= "img9" src="../../nav/mw99_nav_bestoff.gif" width=125 height=15 border=0 alt="Best of the Web"></a><br>
+
+
+
+
+
+
+
+<br>&nbsp;<br>
+
+
+
+<a href="http://www.archimuse.com/"><img src="../../../nav/nav_ami.html" width=135 height=25 alt="Home" border=0></a><br>
+
+
+
+<font size="-2">Archives & Museum Informatics<br>
+
+
+
+
+
+2008 Murray Ave.,<br>
+
+Suite D<br>
+
+Pittsburgh, PA<br>
+
+15217 USA<p>
+
+<p>
+
+<a href="../../../mw98/index.html">info@museumsandtheweb.com</a><br>
+
+<a href="http://www.archimuse.com/">www.archimuse.com</a><p></font>
+
+<p>
+
+<font size="-2">Join our <a href="../../../index.html">Mailing List</a>.<p></FONT>
+
+<font size="-2">
+Published: March 1999.<br /></font>
+
+<script language="JavaScript">
+
+<!--
+
+document.write("<FONT SIZE='-2'>"+"Updated:&nbsp;"+document.lastModified);
+
+// -->
+
+</script>
+
+
+</td>
+
+
+
+<td width="450" valign="TOP">
+
+<img src="../papers.gif" width=325 height=66 alt="Papers" border="0"><p>
+
+
+
+<h3>Creating an Interactive Student Medium for Learning about the Holocaust</h3>
+
+
+
+<b><a href="../../bios/au_6425.html">David Klevan</a></b> and <b><a href="../../bios/au_1315.html">Arnold Kramer</a></b>, United States Holocaust Memorial Museum, USA<p>
+
+ 
+
+<h3>Background</h3>
+
+
+
+The project grew out of the Museum's commitment to provide electronic access to its resources for students at the District of Columbia public high schools. <p>
+
+
+
+We wanted to make a system that served multiple functions, including:
+
+
+
+<ul>
+
+	<li>A resource for students which they could use inside the classroom and at home.<p>
+
+	<li>A model for good teaching methodology … to speak to teachers by example. <p>
+
+	<li>An evolving site to which users could contribute for the benefit of its entire community of users.
+
+</ul>
+
+
+
+The DC schools were planning to wire all schools for the Internet and wanted access to the Museum via this new resource.  The web offered the Museum the opportunity to build a system that would serve DC and other schools that wished to participate.  The then Director of the Museum's Education Department was enthusiastic about exploring how the Museum's education mission could be expanded and developed through the use of the web.<p>
+
+
+
+The Museum resource should provide the framework for the historical narrative. At the same time, it should promote active learning by engaging users with the investigative process and illuminating a hierarchy of ideas with its structure.<p>
+
+ 
+
+<h3>Interdepartmental Team Building</h3>
+
+
+
+As with all web projects within the Museum, we assembled a team of specialists from across the institution was assembled. In this case including: the Education Department as project owner, the Learning Center Content Team (which has extensive experience in building historical content for a large multimedia system), the Office of the Historian at the Museum (for vetting), a graphic artist, Outreach Technology (builder of web tools and sites), and the Museum's attorney (copyright issues). In addition, the Museum contracted with a high school teacher with extensive experience in teaching about the Holocaust to serve as design consultant, mentor to the teachers participating in the pilot projects, and consultant to the pedagogical components of the project. <p>
+
+
+
+The project represents a successful experiment in learning how the principles of classroom teaching might be refashioned for the web environment. Along the way, most of the participants had to reconsider the roles that they were accustomed to playing in more traditional classroom environments.<p>
+
+ 
+
+	</td>
+
+</tr>
+
+</table>
+
+
+
+<table border="0" cellpadding="5">
+
+
+
+<tr>
+
+<td valign="TOP" width="135">&nbsp;
+
+
+
+</td>
+
+
+
+<td width="450" valign="TOP">
+
+
+
+<h3>The Plan</h3>
+
+
+
+<h4>I. goals / content</h4>
+
+
+
+The site is comprised of three components:<p>
+
+
+
+<ol>
+
+	<li>A base of structured information clearly organized in text pages supported by a variety of media illustrations. 
+
+	<li>A set of high-level educational activities intended to encourage students to reflect on the text. 
+
+	<li>A communications system embedded within the website that enables students to send and receive messages among themselves, with their teachers, and with the Museum. The message system allows teachers to request that students accomplish tasks within the site and report their finding via the message system. Most important, all messages are maintained in a searchable database. With use, the site becomes annotated.
+
+</ol>
+
+
+
+We were especially interested in discovering how the site would evolve as its users added their observations, comments, and stories. What tangents of discussion would unfold among students of differing ages, experiences, classes, and cultures as they talked about by the history of the Holocaust and their reactions to it? <p>
+
+
+
+The content was based on the collections of the Museum with a particular emphasis on images (maps, photos, artifacts) that support the historical narrative presented in the Museum's main exhibition. The Museum had already published a text called Tell Them We Remember (Bachrach, 1994) for students aged 12-18. We wanted to make a resource that could be useful to students who came with varying degrees of interest and commitment.  <p>
+
+ 
+
+<h4>II. The web environment -</h4>
+
+
+
+The debate about the value of building a web based program included the following arguments.<p>
+
+
+
+Limitations:
+
+
+
+<ul>
+
+	<li><b>A computer screen does not deliver much content in the traditional sense.</b><br>
+
+	A screen delivers about 1/10th the content of an open book. If the goal is simply to deliver information, no technology has yet improved on the book for literate audiences.<p>
+
+	<li><b>In spite of the Internet's support of browsing, books are still faster and easier to browse than the Internet.</b><br>
+
+Moving on the Internet involves following paths and possibilities that have been laid out for you in advance. The sequence that you follow may be unique, but except where you leave a site to access another, you follow links that have been previously determined. <p>
+
+	<li><b>Communication on the Internet is one way, intermittent, usually written, and fairly impersonal.</b> <br>
+
+The Internet poses little immediate threat to the Socratic method, the classroom teacher, and face to face communication. <p>
+
+	<li><b>The Internet continues to be a relatively slow method of delivery. </b><br>
+
+Once you have a book in your hands, you can move through it quickly. Moving through some Internet sites can be a navigational headache that is intensified by slow connections. <p>
+
+</ul>
+
+
+
+These problems can also be viewed as strengths: 
+
+<ul>
+
+	<li><b>It does not deliver much content in the traditional sense.</b> <br>
+
+
+
+A nested hierarchical structure can deliver cogent content at any level that a user chooses. The Outreach site, on its top level, can be reduced to five pages. Each of those high level pages has a group of subordinate concepts attached. Each level is designed to speak at a particular level of generality. Moving down the hierarchy represents a commitment by the user. By its structure, the website can deliver meaningful content to users who express differing levels of commitment. <p>
+
+	<li><b>Navigational options take advantage of the lack of clutter to focus on details. </b><br>
+
+
+
+A printed page of a newspaper allows a reader to scan a very large amount of information very quickly. A web page expressing one idea or displaying one photograph helps a user to focus. <p>
+
+	<li><b>Navigational rigidity.</b> <br>
+
+
+
+The menu is part of the message. It describes the structure of the information being presented. It should be clearly visible. It is like an abstract. We teach structure implicitly. Each path has presumed merit. <p>
+
+
+
+That pace and direction are controlled by the student means that there is a greater likelihood for them to skip the things they understand (or don't understand) and focus on the things that are new to them. (One of the significant findings of the pilot study was that teachers had to adjust to a shifted paradigm where they were collaborators with their students rather than authorities.)<p>
+
+	<li><b>There is both a public and private quality to web interaction.</b><br>
+
+One faces the computer alone.  But written communications require prior thought and composition, promoting internalization of concepts. <p>
+
+The enforced delay of asynchronous email communications invests the user in the process, requires commitment, and adds the suspense of unpredictable human interactions.<p>
+
+	<li><b>The Internet is slow.</b> <br>
+
+
+
+Clicking on an option represents a willing investment. As long as its not too slow, an extra moment to regard each page as it appaears may not hurt.  Have something on each page that is worth attention. <p>
+
+
+
+Build menu structures that allow an intuitive understanding of relationships.  With a couple of clicks you can get most anywhere on the site.
+
+</ul>
+
+
+
+The web has unique strengths -
+
+
+
+<ul>
+
+	<li><b>Internet hyperlinks provide ready access to depth and breadth.</b>  <br>
+
+
+
+The site contains more than 500 pages, including: <br>
+
+
+
+<blockquote><table>
+
+<tr>
+
+	<td align="RIGHT">50</td>
+
+	<td>text pages</td>
+
+</tr>
+
+<tr>
+
+	<td align="RIGHT">135</td>
+
+	<td>documentary photographs</td>
+
+</tr>
+
+<tr>
+
+	<td align="RIGHT">35</td>
+
+	<td>maps</td>
+
+</tr>
+
+<tr>
+
+	<td align="RIGHT">45</td>
+
+	<td>chronologies</td>
+
+</tr>
+
+<tr>
+
+	<td align="RIGHT">75</td>
+
+	<td>personal stories</td>
+
+</tr>
+
+<tr>
+
+	<td align="RIGHT">35</td>
+
+	<td>artifacts</td>
+
+</tr>
+
+<tr>
+
+	<td align="RIGHT">60</td>
+
+	<td>glossary terms</td>
+
+</tr>
+
+<tr>
+
+	<td align="RIGHT" valign="TOP">5</td>
+
+	<td>activity&nbsp;areas&nbsp;for&nbsp;reflection&nbsp;and&nbsp;synthesis&nbsp;of&nbsp;content</td>
+
+</tr>
+
+<tr>
+
+	<td align="RIGHT">70</td>
+
+	<td>sound files</td>
+
+</tr>
+
+</table></blockquote><p>
+
+	<li><b>Structures can be scalable.</b> <br>
+
+
+
+If structure works, then you can add to it. A page can locate the user in the web environment and provide jump off points to a set of related activities while maintaining the continuity of place. <p>
+
+	<li><b>Multi-media shifts emphasis from print.</b> <br>
+
+
+
+Sound, film clips focus on maps, pictures accommodate a variety of learning styles.  Media can provide nuance that generalized text cannot.<p>
+
+
+
+	<li><b>Computers do some things very fast.</b> <br>
+
+
+
+The site is dynamic based upon materials added by the Museum as well as by materials added by users. This dynamic quality gives the site the sense of an evolving community. <p>
+
+
+
+</ul>
+
+  
+
+<h3>The Realization </h3>
+
+
+
+Each of the 50 text pages that form the spine of the hard content segment of the project is built on a single template<p>
+
+
+
+<center><img src="klevan-figure1.gif" width=400 height=593 alt="base text screen" border="0"><p></CENTER>
+
+
+
+The template is designed to be recognizably consistent and so that each page will print on a single 8.5x11 inch sheet if teachers wish to make hard copy. <p>
+
+
+
+The top of each page is a menu map<p>
+
+
+
+<center><img src="klevan-figure2.gif" width=400 height=77 alt="image map menu" border="0"></center><p>
+
+
+
+with five main topics across the top and subtopics attached to each of the main topics displayed. Users can reach any page in the system in two clicks without ever backing up. Repetition of this menu bar on every page facilitates easy navigation and establishes a sense of location for the user.<p>
+
+
+
+The narrative is divided into five sections: Nazi Rule, Jews in Germany, The "Final Solution", Nazi Camps, Rescue and Resistance. These five headings correspond to five frequently asked questions about the Holocaust: 
+
+
+
+<ol>
+
+	<li>Who were the Nazis, and what did they believe? <p>
+
+	<li>Who were the Jews and what was their life like in Germany before World War II? <p>
+
+	<li>How did the Nazis annihilate the Jews of Europe?<p> 
+
+	<li>What were the camps like, and who did the Nazis imprison within them? <p>
+
+	<li>Did anyone resist the Nazis or aid their victims? <p>
+
+</ol>
+
+
+
+Each of the five sections has its own introductory chapter, and links to seven or eight subsections related to the main section topic. The text template pages each contain inline photographs and maps (all clickable for enlargement and caption text) and jump off buttons to <b>chronology</b> data relating to the current page, <b>personal stories</b> (audio of survivor testimony with photos), <b>artifacts</b>, <b>glossary</b> of terms (presented in text and audio), and for each of the top level pages, <b>issues</b>.  Every text page includes a timeline that provides a broad chronological context for the current page's topic.  Issues are on-line activity modules intended to stimulate critical thinking about the material and to raise questions as a basis for discussion among students and their teachers. The media display pages (personal stories, glossary, artifacts, documentary photos, and maps) are also delivered within a consistent template which shows the image, descriptive text, streaming audio where appropriate, and forms for note-taking and for sending messages.<p>
+
+
+
+<center><img src="klevan-figure3.gif" width=400 height=606 alt="page displaying documentary photo and send-message form" border="0"></center><p>
+
+ 
+
+<h4>Communication Mechanism - An On-line Database </h4>
+
+
+
+In addition to the variety of media used to convey the historical content of the web site, we added a communication mechanism to facilitate learning through the spontaneous or prompted transfer of ideas among students, teachers, and Museum personnel. Throughout the web site text input box options forms are available.  Messages<p>
+
+
+
+<center><img src="klevan-figure4.gif" width=400 height=567 alt="message form" border="0"></center><p>
+
+
+
+can be addressed to individuals (your teacher, the Museum historian) or to groups (your class or a class at a different school).  Users do not need their own Internet email accounts.  Each student and teacher is maintained as a registered user of the system.  Messages are maintained in a threaded structure<p>
+
+
+
+<center><img src="klevan-figure5.gif" width=400 height=663 alt="threaded message screen" border="0"></center><p>
+
+
+
+within a searchable database.  Teachers have the ability to view all messages sent by their students and the museum web administrators have the ability to view all messages in the system.  Responses to student queries by Museum staff are searchable by all.  The database is an evolving content resource accessible to all users.  It is the place where thinking about the issues happens, where collaborations are worked out, where questions are asked.  It can be a classroom.<p>
+
+
+
+To begin a class's participation in the project, teachers create an account for each of their students.  Although the accounts can only be opened at participating schools, once registered students and teachers can login from school or home and access all aspects of the system via the login screen<p>
+
+
+
+<center><img src="klevan-figure6.gif" width=400 height=388 alt="login screen" border="0"></center><p>
+
+
+
+<h4>Education and On-line Activities </h4>
+
+
+
+The conceptualization of this project centered on our desire to construct a web resource that would be useful for ordinary classroom teachers and students.  Our challenge was to develop modules that were interactive, pedagogically sound, and a useful model of good teaching practice. The content and pedagogical focus of the modules was developed through the cooperation of a Museum historian, Museum educator, and a classroom teacher consultant. <p>
+
+
+
+The modules allowed us the opportunity to expand the site content beyond the base text and to provide focus for students using the site to explore specific historical issues.  We began by considering what strengths the museum brought to educational endeavors and what strengths the web offered.  Almost any museum's success rests on its collections and exhibitions, as well as the expertise of its professional staff. Our educational modules had to expose students to the primary source documentation that comprise the Museum collections, and connect students, if possible, with Museum professionals.<p>
+
+
+
+The non-linear mode of research and learning made possible in a web environment is how most visitors act in most museums. The United States Holocaust Memorial Museum is different from many museums (but somewhat typical of history museums) in that it features exhibitions that are primarily narrative in design and in which artifacts and other media are used to illustrate a story with a beginning, middle, and an end.  Because they convey the history of events in sequence, these exhibitions frequently require the visitor to progress in a linear fashion in order to understand the historical narrative. Integrating the information from the Museum's exhibitions into non-linear education modules was challenging since we wanted to maintain the historical integrity of the narrative.<p>
+
+
+
+All of the education modules rest on the practice of examining primary source documentation in order to explore questions and draw conclusions about the history.  To help users to address these questions, the modules reframe the content of the larger site.<p>
+
+
+
+Modules begin with a brief historical introduction and a primary question to address.  Additional core questions provide steps that will help students answer the primary question. In order to answer the core questions, students are given several primary source materials and three or four corresponding resource analysis questions.  After examining the documentary evidence and answering the resource analysis questions, students may then formulate answers to the core questions and reach a conclusion regarding the primary question.  Although modules may be explored in a linear fashion, students may choose to examine the sources in any order they please and answer the core questions in any order.<p>
+
+
+
+An alternative module structure begins with a brief historical introduction and several core questions.  Rather than directly linking specific media to each of the core questions, this module provides links to six pieces of documentary evidence<p>
+
+
+
+<center><img src="klevan-figure7.gif" width=400 height=567 alt="opening screen of activity module" border="0"></center><p>
+
+
+
+After examining these materials, students are challenged to construct an historical timeline that organizes the evidence into a meaningful story.<p>
+
+
+
+<h3>Pilot Tests </h3>
+
+
+
+<h4>The First Pilot:</h4>
+
+
+
+During the winter/spring semester of 1996, seven social studies teachers and approximately 280 students at a New Jersey high school tested and evaluated the student outreach web site in its prototype stage.<p>
+
+
+
+The teachers' lesson plans for using the site usually covered two to three weeks of activity, and students worked in pairs or small groups from six to fifteen class periods using the site. Prior to introducing the site to their students, teachers familiarized themselves with the system and addressed questions to the museum web administrator, the site programmer, and an education liaison via email. During the study, students had the opportunity to address questions to a museum historian via the web-enabled database. The database allowed all users of the site to view both the students' questions and the historian's responses to facilitate communal learning. <p>
+
+
+
+Students' responses indicated that the site was a useful learning tool. The ability to pose questions to a museum historian, access documentary photographs, images of artifacts, ID cards, and survivor testimony were all cited as positive features of the site. Beyond the content, students praised the organization of information within the site. Pre/post tests indicated increases in student content knowledge in both taught and untaught material. Similar tests showed a substantial increase in students' attitudes about Internet use and history museums as learning tools. <p>
+
+
+
+Teachers reported changes in both the content that they taught and the methods they used in the classroom. The dynamic and wide-ranging information available through the web site affected what teachers were able to ask of their students, and as a result, it affected the interest and accomplishments of the students. Teachers reported the need for more pre-lesson planning time than usual before using the web site. Their classroom activities were more student-centered and required the teacher to function as facilitator of knowledge acquisition. Teachers reported that students were more thoughtful and engaged in higher level thinking operations and problem solving more often as a result of using the web site. As a result of this dynamic, teachers had to rely on new assessment methods such as examining the quality of thinking demonstrated in student-generated on-line communications.  <p>
+
+  
+
+
+
+<h4>The Second Pilot: </h4>
+
+
+
+The second pilot involved seven schools from across the United States including:
+
+
+
+<ul>
+
+	<li>Flemington, New Jersey <p>
+
+	<li>Washington, D.C. <p>
+
+	<li>Vancouver, Washington <p>
+
+	<li>Paris, Texas <p>
+
+	<li>Cincinnati, Ohio <p>
+
+	<li>Enid, Oklahoma <p>
+
+	<li>Richmond, California <p>
+
+</ul>
+
+
+
+In this study, teachers were asked to identify their goals to students.  Students, during the logon and logoff procedures, evaluated themselves in terms of their accomplishments in relation to their teacher's goals. <p>
+
+
+
+The following information comes from the teacher survey, student logoff questionnaires, and student feedback to their teachers:<p>
+
+
+
+<b>1. How did the use of on-line resources effect faculty planning, teaching, and assessment of student learning?</b> <p>
+
+
+
+Teachers reported that they planned open-ended assignments, arranged activities to engage students personally with the history, allowed for student self-pacing, and found themselves acting more as mentors and guides than as the primary source of information. <p>
+
+
+
+The complexity of the site and the nature of the Internet offered potential distractions for students.  Some teachers acknowledged the need to provide students with a clear process for working on-line and the opportunity for students to coach their peers through the process.  Frequently, teachers found that they had planned insufficient time for exploration of the site. <p>
+
+ 
+
+Reports from teachers on how previous Holocaust lessons differed from lessons designed around the website include: 
+
+
+
+<ul>
+
+	<li><strong>Confidence in self-directed learning:</strong>  Teachers exhibited a growing awareness that students are able and enjoy directing their own activity and they can be productive in learning this way.<p>
+
+	<li><strong>Independent avenues of broad, open inquiry:</strong> The more open-ended the questions, the more engaged students were in using the site to find information and in using the variety of multimedia resources available there.  Teachers assisted students with questioning skills, coaching, and guidance.<p>
+
+	<li><strong>Student-generated focus for lessons:</strong>  Teachers developed responsiveness to creating assignments based on student interests due to the enthusiasm and curiosity they observed in students on this topic using the site.<p>
+
+	<li><strong>Self and peer evaluation: </strong> Teachers reported increasing awareness of the importance of setting goals for students to use in evaluating their own progress and then reminding them to do those self checks.<p>
+
+	<li><strong>Need for built-in mechanisms of periodic evaluation and reflection throughout on-line learning process:</strong>  Teachers who asked students to reflect daily on what they were learning found it an effective way to monitor student progress as well as a method for helping students take more responsibility for their learning. The logon/logoff procedures were specifically designed to focus students on setting and reviewing progress toward objectives each day.<p>
+
+	<li><strong>Emphasis on collaborative work:</strong>  Teachers reported an increasing awareness of the value of grouping students to support learning differences and to be able to coach students when they need it. <p>
+
+	<li><strong>Shift in teacher responsibilities to emphasize individual research and communication skills; facilitator:</strong>  Teachers noticed the need to monitor communication with experts and others on-line and to coach students in effective and appropriate communication skills. <p>
+
+</ul>
+
+
+
+<b>2. How did the use of on-line resources affect the process used by students to learn about the Holocaust?</b> <p>
+
+
+
+Some teachers reported significant gains in the student learning process. Students generally elaborated ideas on their own, took more initiative and were interested in learning about the Holocaust. Teachers felt that it was important to give students time to explore their interests and questions through the site.  The site provokes questions, and allows students to address them through research.  Most students were motivated to learn by the self-directed environment.  Small groups of students sharing a computer added a cooperative dimension to student experience.  Some teachers reported a new spirit of cooperation, mutual respect and teamwork developing with more time on task. Contact with Museum staff was highly motivating for students. <p>
+
+Since most students used the site at their schools and had limited access time, they had to make careful plans for how to use the site.  Although the activity modules provided clear learning goals through a progression of focused questions, the amount of time to address these questions was often too lengthy for many students.<p>
+
+<b>3. How did the use of on-line resources affect student content knowledge of the Holocaust?</b> <p>
+
+Students at all achievement levels showed gains in knowledge about the Holocaust.  Teachers reported significant gains in other student outcomes as a result of using the site, such as: increasing student confidence, amount of in-depth learning, comfort with technology, comfort with group work, use of research skills, on-line student-student communication, use of primary sources and questioning.  Of special interest, evaluation reports indicated that the use of multimedia resulted in significant gains in learning for medium and low achieving students.<p>
+
+Student outcomes were generally better when they were given a goal, and then allowed to elaborate on the assignment and choose how to complete it. Several teachers reported that when students knew exactly what was expected of them, they could take initiative. This gave the teacher time to work with less motivated or less capable students.  In addition, students showed significant knowledge gains in materials not covered directly by their teachers.  This suggests the site's potential for incidental or user initiated learning.<p>
+
+<b>4. What features of the Student Outreach site affected student learning about the Holocaust?</b> <p>
+
+As in the first pilot, students reported positively on the clarity of the web site's organizational structure, the wide variety of topics, the breadth of information, and the use of multimedia. By far, the audio clips of personal testimonies and the opportunity to communicate with Museum staff were the most highly valued elements of the site, followed by artifact images and documentary photographs. Some students expressed interest in real time chat opportunities both to reduce the lag time and to increase the feeling of intimacy when communicating with Museum staff and survivors. Student critiques reflected interests in the unique media elements that provided personal connections to the history. They asked for expanded survivor testimonies with more detail about the survivors' experiences and more opportunities for interactions with survivors through the site. They also requested that we increase the number of visual images, audio, and if possible, video on the site. <p>
+
+Students viewed the site as a useful introduction to Holocaust history, but some students wanted more depth and detail on specific issues of interest. Contrary to the notion that teenagers do not read text, students requested that we elaborate the captions provided for photographs and other images, as well as the brief glossary definitions. This reflected the web site's shortcomings as an in-depth research tool. Students who were interested in targeted research also requested the addition of a hyper-linked topical index or a search engine; we have since added a site map. There was universal criticism of the timeline feature.  It was too static and graphically too compressed. <p>
+
+ 
+
+
+
+<h3>Conclusion: Elements of Effective Enhanced Student Experiences
+
+On-line </h3>
+
+
+
+Our experience developing and piloting the Student Outreach website supports the following conclusions about effective enhanced student experiences in an on-line environment. 
+
+
+
+<ol>
+
+	<li><b>Content is king.</b> Access to a broad scope of varied, authoritative, unique, and authentic information was paramount to the success of this web site. Depth of content should complement breadth of topic. Teachers and students particularly valued the opportunity to interact with primary source materials and requested more. An archive of artifacts, photographs, audio, and video will enhance the research usefulness of any education site, as will a library, bibliographic information or links to other reliable, accurate and authoritative on-line resources. <p>
+
+	<li><b>Person-to-person communication</b> (asynchronous and "real time") between students, teachers, museum staff, and other experts results in a continually evolving, personal, interesting, and ultimately, highly motivating site for student learning.  Student and teacher training, clearly defined learning objectives, and the messaging interface all contribute to the educational worth of this component.  Interaction with museum staff should include on-line "office hours" for technical support and educational interaction. <p>
+
+	<li><b>Interactive multimedia</b> can be used to provide contextual relationships between elements of the site content. This provides important learning cues for students in an otherwise non-linear environment. The importance of interactive media was sharply illustrated by the failure of the timeline as a component of the Student Outreach web site. Because it was not interactively integrated with the other media of the site, it could not effectively help users to understand chronological trends during the Holocaust, nor could it reinforce relationships between timeline events and specific text, visual and graphic site components. <p>
+
+	<li><b>Consistent design</b> elements enhance ease of navigation, student learning, and confidence in the technology. <p>
+
+	<li><b>Staff development</b> opportunities and technology training are crucial in order for teachers to successfully integrate on-line learning in their classrooms. This includes the development of on-line seminars for teachers who wish to use the site, standard models for lesson plans and student projects, and the assistance of group leaders or mentors among teachers using the site.  An on-line guide can also introduce teachers and students to site navigation and research functions.
+
+</ol>
+
+
+
+<p>
+
+
+
+<b>References</b><p>
+
+<font size="-1">Text used as the basis of the website: Bachrach, Susan D., <i>Tell Them We Remember:  The Story of the Holocaust</i>, Little Brown & Co., New York 1994<p>
+
+Evaluation comments are from the study: Davis, Dr. Hilarie Bryce and Fernekes, Dr. William R., <i>United States Holocaust Memorial Museum Student Outreach Site</i>, 1997</font>
+
+
+
+
+
+</td>
+
+</tr>
+
+</table>
+
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+</body>
+<!--/htdig_noindex-->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw99/papers/klevan/klevan.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:50:38 GMT -->
+</html>
+
+

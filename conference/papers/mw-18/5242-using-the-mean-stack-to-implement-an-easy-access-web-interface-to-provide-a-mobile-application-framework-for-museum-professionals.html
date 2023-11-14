@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw18.mwconf.org/paper/using-the-mean-stack-to-implement-an-easy-access-web-interface-to-provide-a-mobile-application-framework-for-museum-professionals/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:28:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<script src="https://use.typekit.net/yhd3uya.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Introducing socio-technical changes through “Mobile First” in the Museum Application Domain &#8211; MW18: Museums and the Web 2018</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; Introducing socio-technical changes through “Mobile First” in the Museum Application Domain Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw18.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='cookie-notice-front-css'  href='../../wp-content/plugins/cookie-notice/css/front.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='spacexchimp_p005-bootstrap-tooltip-css-css'  href='../../wp-content/plugins/social-media-buttons-toolbar/inc/lib/bootstrap-tooltip/bootstrap-tooltipe6e5.css?ver=4.67' media='all' />
+<link rel='stylesheet' id='spacexchimp_p005-frontend-css-css'  href='../../wp-content/plugins/social-media-buttons-toolbar/inc/css/frontende6e5.css?ver=4.67' media='all' />
+<style id='spacexchimp_p005-frontend-css-inline-css'>
+
+                    .sxc-follow-buttons {
+                        text-align: center !important;
+                    }
+                    .sxc-follow-buttons .sxc-follow-button,
+                    .sxc-follow-buttons .sxc-follow-button a,
+                    .sxc-follow-buttons .sxc-follow-button a img {
+                        width: 64px !important;
+                        height: 64px !important;
+                    }
+                    .sxc-follow-buttons .sxc-follow-button {
+                        margin: 5px !important;
+                    }
+                  
+</style>
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login287b.css?ver=1604077068' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-conference/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-conference/style3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<script id='cookie-notice-front-js-extra'>
+var cnArgs = {"ajaxUrl":"https:\/\/mw18.mwconf.org\/wp-admin\/admin-ajax.php","nonce":"ccedfb3d0d","hideEffect":"fade","position":"bottom","onScroll":"0","onScrollOffset":"100","onClick":"0","cookieName":"cookie_notice_accepted","cookieTime":"31536000","cookieTimeRejected":"2592000","cookiePath":"\/","cookieDomain":"","redirection":"0","cache":"0","refuse":"0","revokeCookies":"0","revokeCookiesOpt":"automatic","secure":"1","coronabarActive":"0"};
+</script>
+<script src='../../wp-content/plugins/cookie-notice/js/front.min9e1e.js?ver=1.3.2' id='cookie-notice-front-js'></script>
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script src='../../wp-content/plugins/social-media-buttons-toolbar/inc/lib/bootstrap-tooltip/bootstrap-tooltipe6e5.js?ver=4.67' id='spacexchimp_p005-bootstrap-tooltip-js-js'></script>
+<!--[if lt IE 9]>
+<script src='https://mw18.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index9910.html?p=1545' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed5a4f.json?url=https%3A%2F%2Fmw18.mwconf.org%2Fpaper%2Fusing-the-mean-stack-to-implement-an-easy-access-web-interface-to-provide-a-mobile-application-framework-for-museum-professionals%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed249c?url=https%3A%2F%2Fmw18.mwconf.org%2Fpaper%2Fusing-the-mean-stack-to-implement-an-easy-access-web-interface-to-provide-a-mobile-application-framework-for-museum-professionals%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-conference/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-1545 wp-embed-responsive cookies-not-set">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+			<div class="site-branding">
+				<a href="../../index.html" class="custom-logo-link" rel="home" itemprop="url"><img width="80" height="80" src="../../wp-content/themes/mw-conference/images/mw-logo-red-sm.png" class="custom-logo" alt="" itemprop="logo" /></a>			
+			</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p><a href="../../index.html" rel="home">MW18: Museums and the Web 2018</a><span>Vancouver, Canada &#8211; April 18-21 2018</span></p>
+								<form class="search-form" role="search" method="get" action="https://mw18.mwconf.org/">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-container"><ul id="menu-menu" class="primary-menu"><li id="menu-item-464" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-464"><a href="http://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-6"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="../../faq/index.html">Conference FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-514"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382"><a href="../../local-information-and-accommodation/index.html">Hotel and Accommodation</a></li>
+	<li id="menu-item-1132" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1132"><a href="https://www.tourismvancouver.com/museums-and-the-web/">Local Information</a></li>
+	<li id="menu-item-1991" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1991"><a href="../../museum-crawl/index.html">Museum Crawl</a></li>
+	<li id="menu-item-403" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-403"><a href="../../travel-requirements/index.html">Canadian Travel Requirements</a></li>
+	<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="../../volunteering/index.html">Volunteering</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../scholarships/index.html">Scholarships</a></li>
+</ul>
+</li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-38"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43"><a href="../../call-for-proposals/index.html">Call for Proposals</a>
+	<ul class="sub-menu">
+		<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+		<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	</ul>
+</li>
+	<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-75"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="../../advertising/index.html">Advertising</a></li>
+	<li id="menu-item-1133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1133"><a href="../../exhibiting-information/index.html">Exhibit Hall Information</a></li>
+</ul>
+</li>
+<li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-95"><a href="../../index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-542"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-2887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2887"><a href="../../presentations/index.html">Presentations</a></li>
+	<li id="menu-item-2973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2973"><a href="../../papers/index.html">Papers</a></li>
+	<li id="menu-item-467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-96"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2790"><a href="../../glami-finalists/index.html">GLAMi Finalists</a></li>
+	</ul>
+</li>
+	<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="../../mwx/index.html">MWX 2018</a></li>
+</ul>
+</li>
+</ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+		<section id="page-hero">
+		<div class="background"> </div>
+	</section>
+
+	<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];		    
+	jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw18.mwconf.org/wp-content/themes/mw-conference/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-1545" class="post-1545 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">Introducing socio-technical changes through “Mobile First” in the Museum Application Domain</h1>
+
+<p><a target="_blank" href="https://www.museweb.net/member/baumga_pa/">Tobias Baumgaertner</a>, University of Passau, Germany</p>
+
+<h2>Abstract</h2>
+The idea of supporting a certain group of people in the Museum Application Domain by offering information systems is well established. In the past all considerations regarding information delivery were centered solely on the customer endpoint. From early audio guides, through video screens, to interactive information panels— that point of view has never changed. The content and interfaces have been directed towards the patron in an on-premise setting. 
+The introduction of smart mobile devices has transformed societal perception permanently. The demand and the possibilities of offers today keep growing rapidly on a daily basis. The visitor is no longer limited to their role as a consumer, but becomes a co-creator of the museum experience. Therefore it is mandatory to engage museum professionals to adapt their strategies and implement those changes—especially members of small and medium sized institutions, who are often challenged by the speed of change and in dire need of support. 
+This paper focuses on encapsulating concepts purposed to reduce the stress of taking the first steps towards technological advances in the Museum Application Domain. Mediating the socio-technical changes is pivotal, as well as to impart them to all members of an institution. 
+Hence this paper is directed towards directors and leaders of small and medium-sized museums. It discusses the implications of a Mobile First approach as an entry point for adapting an overall digital strategy.</p>
+<p><b>Keywords:</b> Mobile First, Museum, MAD, BYOD, Web, Framework, Information Systems</p>
+<h2><strong>Introduction</strong></h2>
+<p>The availability of smart mobile devices as we appreciate today began with the introduction of the iPhone by Apple Inc. in 2007 (Apple Inc., 2007). Since then smartphone penetration has expanded on a global scale. Today, ten years later, one third of the global population owns a smartphone. The rates in Western Europe (65%) and North America (64%) have doubled since 2012 and are close to twice of the global average (Statista, 2017).</p>
+<p>These handheld devices unfold their full potential only in combination with broadband Internet access. People are enabled to consume digital content independent of time and location. While the rate of mobile website delivery in Europe and America has just reached 40%, due to high consumption rates in emerging markets like Asia and Africa, over half of global Web pages are served to mobile phones in 2018 (Statista, 2018).</p>
+<p>This momentum has permanently altered many aspects of our daily routines, both private and business related. The omnipresence of information offerings has created a ubiquitous, internationally connected pool of information.</p>
+<p>Recently, museums have started to deploy information technology to aid in fulfilling their responsibility of “preserving, interpreting, and promoting the natural and cultural inheritance of humanity” as described in the Code of Ethics published by the International Council of Museums (ICOM, 2004).</p>
+<p>The term <em>Museum Automation</em> dates back 50 years to the first IBM conference on Museum Computing at the Metropolitan Museum of art in 1968. At that time, advances in digital data storage were discussed, as that made it possible to switch from paper-based to digital systems. One key benefit that was emphasized in particular was the increased shareability of data (Stam, 1996). Even in regard to mobile technologies, the museum domain was among the pioneers. The first short-distance radio-operated handheld audio guide was introduced during an exhibition in 1952 at Stedelijk Museum in Amsterdam, the Netherlands (Othman et al., 2011).</p>
+<p>However, with growing capabilities of memory and computing power, the approach of how to utilize digital media has changed over time. The associated terms &#8220;digitization&#8221; and &#8220;digitalization&#8221; are often not clearly distinguished, yet they have significantly different meanings.</p>
+<p>When digital archiving first was possible, the concept of <em>digitization</em> was used to translate analogical available records into their digital counterparts, thus being understood merely on a descriptive level. Later, when digital storage made it possible to create digital representations of physical objects by using photography or 3D-Scanning, <em>digitalization</em> is expressed on the representational level. (Jones, 2008). Today <em>digital transformation</em> goes even further than that and implies structural and social diversification (Abolhassan, 2017).</p>
+<p>That introduces novel issues, which many institutions were blindsided by, especially in the nonprofit periphery. It simply was not necessary to establish and comply with wholesome digital strategies to fulfill growth rates. However, those were mandatory to ensure economic success on the free market. Processes did not require museum-owned infrastructure to interact with information systems of other institutions, since they were only deployed on-demand and where they saw fit, since there were no supply chains that had to be maintained (Gassler and Grace, 1980; Farahani et al., 2017).</p>
+<p>Today globalization, customer demand, and technological advances have caught up, and the requirements, as well as the very role of the museum, have been fundamentally transformed (Richardson, 2011).</p>
+<p>The potential risk of falling back in old thinking patterns needs to be avoided. An overall conceivable plan following a single strategy that allows for new and existing processes to be aligned needs to be established (Baumgärtner and Lehner, 2017a). In this paper, the reasoning in favor of implementing a Mobile First strategy is expressed. A reference is set to derive a conceptual foundation for a software framework for mobile applications in the Museum Application Domain (MAD).</p>
+<p>That framework should enable museum professionals to roll out mobile applications to their visitors without forcing them to implement technical components on their own, thus giving them the opportunity to concentrate on the content creation process rather than technical issues associated with that endeavor.</p>
+<p>The upcoming sections describe the benefits associated with mobile platform and discuss the inherent issues. Then, the role of data processing in modern app development and deployment options are emphasized. Subsequently, after the situation is described, the conceptual foundation is presented. Finally, the implications and the layout for further research are presented.</p>
+<h2><strong>Benefits of mobile technologies in the MAD</strong></h2>
+<p>To start out, the <em>mobile platform</em> must be recognized, and its capabilities need to be displayed. Other than well-established information technology that may include stationary screens and static or interactable panels, the user is not bound to the spacial restrictions when on a mobile device. The first widely available mobile solutions granting that freedom in the MAD were audio guides. They aided in intensifying the exhibition experience by supplying the visitor with additional information throughout their visit. It enabled rudimentary customization to the visitor, as they could skip certain parts, adjusting the tour to their needs and interests on the go (Zimmermann et al., 2003).</p>
+<p>Yet those still have not changed one key aspect of the visitor interface. The museum oversees both equipment and content. With smart mobile devices, most commonly smartphones, that stipulation was removed. Content can now be prepared to be delivered to devices that the visitors are carrying anyway. The strategy of utilizing customer-owned devices is summarized by the term of <em>bring your own device,</em> or BYOD for short. It has been introduced to the mobile domain by Intel in 2009 (Compeau et al., 2013). They argue that devices and services should no longer be perceived as a solidified unit. That opens up interesting opportunities. The most obvious one is that costs for the institution associated with acquisition and maintenance of hardware can be minimized.</p>
+<p>However, certain challenges are spawned. The capabilities of the new mobile devices create enormous leeway. In conceptual planning, that makes it hard to pass on certain functionality when starting the design with the device in mind, and without any initial boundaries. In the past, those were set by the unit, which determined the use-case. Video screen installations as well as audio guides, among others, have designated content they can support. Smartphones, on the other hand, are capable of supporting each existing task, and even more. They possess the ability to substitute every single multimedia channel that previously had to be addressed on its own. That wide design space makes it is difficult to select appropriate functionality and content. In further development steps, apps might then support a wide range of features on the technical end. But no benefit will be created without having concepts in place to ensure content availability once the application is deployed to the public audience.</p>
+<p>Museum professionals, therefore, have to rethink their content creation process. Most importantly, the direction needs to be inverted. Starting design from the desired functionality and information scope, rather than devices capability, is the first step. The ability to do that is dependent on the awareness of the correlation of needed data and channel used. For example, the requirements for text length differ, depending on its designated purpose. A poster sets different restrictions than a printed handout or a book. That is true for digital content as well. A smartphone needs to be approached in a different way than a video screen or tablet installation. Establishing this perception is of great importance. The next step is to realize that just because content is readily available, it might not be suited for its deployment on mobile devices. This is the reason to apply the Mobile First paradigm.</p>
+<p>This term was first used in 2009 by Luke Wroblewski, a former Yahoo! design architect (Wroblewski, 2011). Others followed, and since Google CEO Eric Schmidt used the phrase in 2010 at the Mobile World Congress keynote, the term gained more and more traction (Hamblen, 2010). Its central idea is to think of the mobile channel first when it comes to digital content creation (Reed, 2013). In the MAD, especially institutions with little to no established digital infrastructure can benefit from that approach. It enables them to offer digital visitor support, without excessive difficulty or expensive setup. At the same time, they are able to learn how to operate an important digital channel, curate data, and gather insight on their visitors.</p>
+<p>The most central part is how data is treated. As laid out before, museums per se are no strangers to data collection and management. However, not every institution has taken the step towards digital records just yet. The theoretical foundation for structured data within the museum application domain is the inter-institutional exchange for a scientific discourse. In the long run, the use of CIDOC CRM and LIDO can provide a basis for knowledge sharing and management (Baumgärtner and Lehner, 2017a). In practice however, the general collection and preparation of data is almost always closely coupled to visitor engagement. It is more easily addressed to file data in a certain way, when the delivery channel is visible from the beginning. Entering data into a structured database for potential use in the undisclosed future is not as attractive as if the immediate connection to the final result is indicated. An app-page about to be deployed is more tangible than a row in a database. That can help to encourage the museum professional to track information and knowledge more carefully, and in a more goal-oriented way. The implications that emerge from mobile platforms can thus aid to lay a foundation for an overall digital strategy to grow upon.</p>
+<p>To round up the complete information flow that takes place after the entry, the delivery channel to the visitor is to be discussed. There are threefold possibilities to deliver mobile apps to the end-users’ system, namely native, hybrid, and the Web. The native approach looks at the target platform and follows the associated guidelines. The apps are then installed on the chosen system. Since the two major systems on the market, Apple’s iOS and Google’s Android, are not compatible, the development process has to be performed twice to grant availability. Alternatively, a Web app can be deployed. That Web app is basically represented by a website with traits comparable to those of native apps. Hence, they are delivered via the device’s Web browser, which reduces the development efforts, as Web technologies are widely standardized and can be delivered independently from the underlying system. The hybrid app tries to combine the positive properties of the previous two apps by being developed in a way that the application can be maintained as a single entity before being transformed to suit the target system (Heitkötter et al., 2013).</p>
+<p>The issues of the early Web, especially concerning mobile access, were very restrictive. That is the reason why functionality that required a fair amount of pre-loaded data or access to hardware components needed further support. Today that still might apply to certain applications, but most routinely used mechanisms like GPS or long-term memory can be accessed via the phones&#8217; browsers. Contrary to the notion at the beginning of the mobile revolution, the Web is not dead (Matuska, 2014; Metz, 2016). An additional benefit from the end-user point of view is the reduced time to interaction. While the natively delivered applications need to be downloaded and installed before they can be used, the Web delivery happens almost instantly. Furthermore, most use cases that are to be implemented do not even need to access hardware components that remain reserved to native apps in the first place.</p>
+<p>Mobile first should focus on delivering the experience via the Web as far as possible. This way the distribution of digital offerings to a broad variety of mobile devices can be achieved with little effort, and at the same time, at reduced maintenance efforts.</p>
+<h2><strong>Concept: </strong><strong>The mobile app framework </strong></h2>
+<p>That status quo raises many challenges as the mobile domain sets special conditions. The interference of the underlying concepts can quickly be overwhelming if they have to be approached without any guidance. However, many of these problems can be taken out of the equation when the number of available options is deliberately reduced. Available knowledge from other domains must not be ignored and can be helpful indicators. By packaging the desired functionality bundled with a sound and standardized technological foundation, and well established best practices, the focus can be shifted mostly to the content creation process. Removing most of the decision making in the early stages can be tremendously helpful for leadership in the endeavor of implementing a digital strategy within their institution. The reduction of exposure to the technical aspects is equally important.</p>
+<p>The goal is to be providing a framework to aid with the development of mobile applications and lead the effort towards an integrated digital strategy. It should offer a guided environment where options are limited, in order to perpetuate the original intent without getting carried away by following the infinite possibilities. Concurrently, compatibility with existing systems must be ensured, as well as the interoperability with further information systems in later stages of the digital endeavor. As described before, structured data can reduce the time of the editorial process once the purpose is clearly communicated. However, the format is not important in the beginning, as long as it can be accessed later in a standardized way.</p>
+<p>That calls for a grounded environment, which does not allow for too much variance, while at the same time being flexible enough to allow for a range of predefined use cases. That creates benefits for both user groups. The content creator can follow the clear structure to ensure data quality, while on the other side, the consumer can get used to a certain look and feel, and thus learn to interact with the application more quickly. Another benefit of setting strict restrictions for the data endpoint is the correspondence with the delivery aspects. The perceived performance on the customer side can be maintained only if nothing unexpected is served.</p>
+<p>As there is no direct competition, certain general aspects of mobile development do not apply in the MAD. An app offered by a certain institution is not subject to being replaced, unlike a generic application that is easily exchanged with a functional equivalent, i.e. an app for the weather forecast. Thus, a museum application does not need to be extraordinarily fancy to distinguish itself—it is unique to a certain institution by design, while use cases remain the same throughout the domain. That also raises the importance of a seamless experience. The same user interfaces and interaction models can be used by different institutions without causing any problem.</p>
+<p>The presentation layer can be encapsulated and follo their corresponding input fields on the respective backend user interface. The input and presentation of the data in question can be closely aligned to each other. The process of development can be broken down to entering data and linking pages at the click of a button. That leads to perfect aligning between data and design.</p>
+<p>An app in the MAD shall not draw attention away from the exhibition anyway, but rather act in the background to serve as a navigation tool, while supplying additional information on demand without being too pushy. Furthermore, it should emphasize entertainment value, creating long-term engagement, and channels for connecting audiences and target groups. Molding the use cases to fit these socio-technical requirements can be achieved by paying strong attention to the educational role of the museum. The main goal is to perpetuate knowledge about the content an exhibition is centered on.</p>
+<p>The insights helpful for the realization of those goals are well examined in electronic learning, or E-Learning, and stem from the field of Information Systems. Schmitz et al. (2012) examined existing literature that is concerned with M-Learning and information delivery on small mobile devices.</p>
+<p>As a key milestone, location-based services have been attractive in the tourist industry long before smartphones were widely available (Berger, 2001). In a setting where no clear path is available, or in an outdoor area were orientation can be especially tricky, providing navigational aid is of extra importance.</p>
+<p>Insights from gamification and edutainment approaches that combine the appeal of small games with the educational values to enable game-based learning can help to establish engagement (Jayasinghe and Dharmaratne, 2013). Engaging outside stakeholders, especially within the field of education, to participate in a common digital relation can be arranged as well (Delen and Krajcik, 2017). For example, giving teachers the opportunity to create apps that target topics within the museum that are tailored exactly towards their curriculum may raise the students’ interest for engaging with the exhibition.</p>
+<p>Following these insights, a conceptual foundation is proposed in the form of a framework that is providing a basis to question existing processes, create awareness, and enable alignment to the newly adopted strategy. The main difference between the suggested framework and existing content management systems (CMS) is the clear focus on the end-user functionality centered on the app creation process. It serves museum professionals as an introduction to digital strategies tailored towards the socio-technical changes using a mobile-first approach. The mobile platform offers an entry point, since the advantages can easily be communicated to both ends.</p>
+<p>An integrated framework that acts as a tool for the museum professional can create awareness and buffer many of the issues presented here. In that manner, the disruption is reduced, and the transition process is streamlined by providing all the components necessary, but only revealing an essential subset to the museum professional.</p>
+<h2><strong>Conclusion and next steps</strong></h2>
+<p>Apps certainly are attractive to many organizations because of the broad appeal and the possibilities they offer. In an environment where the visitor carries their own device, a BYOD strategy can be implemented. Content must be prepared so that it can be accessed using personal devices. This helps to overcome access restrictions, which especially prevent small and medium-sized institutions from establishing digital media support for their audience. Furthermore, added benefits can be discovered. Museums can establish a bidirectional relationship with their visitors.</p>
+<p>Museums gathered early experimental information technology and mobile devices, but missed the transition to establishing a centralized strategy, and settled for insulated solutions that might fit individual needs in specific settings at one point in time but ignore the bigger picture. Some might not have started yet, while others already draw huge audiences.</p>
+<p>The most recent attraction in the MAD that has been celebrated by millions is attributed to Google’s Arts and Culture project—and it&#8217;s selfie app. It offers the ability to match a picture of oneself to a portrait painting that shows similar facial features (Schleifer, 2018). Individually designed software like that may always allow for certain advantages, and offer unique new ways to experience certain interactions.</p>
+<p>The insights presented in this paper lay the foundation for prototypical implementation of a framework that can provide basic standardized functionality to small and medium-sized institutions. The goal of the suggested tool is not to substitute for original functionality like in the Google example, but rather, to offer an entry point for those who struggle to keep up.</p>
+<p>The idea of user centric design is often not appropriated to the full extent. There is almost always a strong focus on the end-user, but little thought is put towards the customer experience value chain, which highlights the interaction necessary on the creator’s side to prepare data for the end user interface (Baumgärtner and Lehner, 2017b).</p>
+<p>Another indicator for beginning on the wrong side of the tracks is the initial perspective. Doerfling and Gross (2011) address the possible negative effects of ignoring the end user in technical development processes. Baumgärtner and Lehner (2017a) describe why it is necessary to change the focus from the technical point of view towards the human needs for support throughout the development process of information systems especially regarding “interfaces and data structures […, that] revolve around objects, actors, and events.”</p>
+<p>Following the insights briefly summarized, the framework should offer the possibility to create content within the three main categories: information pages, museum tours, and educational games. It should eliminate the effort of creating unique functionalities, designs, and data models, while producing apps with a clear focus on content, revolving around the institution in question. The experience should extend the physical museum space, and open up the opportunities that are often forfeited by small and medium-sized institutions due to a lack of know-how, strategy and perseverance.</p>
+<p>This enables institutions and their members to participate in the digital world, preparing them for the socio-technical changes ahead. Efforts can be redirected towards a common goal, reaching digital independence and sovereignty, and developing the ability to identify and articulate their own needs and wishes regarding their digital future.</p>
+<p>The next step is to provide a proof of concept, and create a prototype for discussing further development among visitors, museum professionals, and computer scientists that share the same ideals of shared and open information access. The suggested system needs to provide a sound structure. The way to ensure this is to apply a design science research approach. Hevner et al. (2004) describes it as “a build-and-evaluate process with the goal of producing a set of artifacts”. Since building a tool that must fulfill the requirements of multiple user groups of the MAD, its design is to be handled as an ongoing process, involving iterative evaluation and refinement of the created artifacts&#8221; (Hevner et al. 2004).</p>
+<p>The first prototype can be appointed to test the interactive end-to-end user experience. To aid institutions and museum professionals in utilizing more of the benefits that mobile apps offer, the objective is to package the technical layers like program libraries and HTTP communication behind a tool that is easy to use and deploy.</p>
+<h2><strong>References</strong></h2>
+<p>Abolhassan, F. (2017). <em>The Drivers of Digital Transformation.</em> Switzerland: Springer International Publishing.</p>
+<p>Apple Inc. (2007). Apple Reinvents the Phone with iPhone. Press Release. Consulted March 05 , 2017 at apple.com. Available https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/</p>
+<p>Baumgärtner, T. &amp; F. Lehner (2017a). &#8220;The technical aspects of museum information vs. the museum professionals point of view: a conceptual change of perspective on data processing.&#8221; <em>Museums and the Web: Selected papers from Museums and the Web</em><em> 2017</em>. Pittsburgh: Archives &amp; Museum Informatics. 251-56. Available <a href="https://mw17.mwconf.org/paper/the-technical-aspects-of-museum-information-infrastructure-vs-the-museum-professionals-point-of-view-a-conceptual-change-of-perspective-of-data-processi/">https://mw17.mwconf.org/paper/the-technical-aspects-of-museum-information-infrastructure-vs-the-museum-professionals-point-of-view-a-conceptual-change-of-perspective-of-data-processi/.</a></p>
+<p>Baumgärtner, T. &amp; F. Lehner (2017b). &#8220;Entwicklung mobiler Applikationen im Anwendungsbereich von Museen – CustomerExperience Value Chain.&#8221; <em>HMD &#8211; Praxis der Wirtschaftsinformatik, 54</em>, pp. 808–8\20.</p>
+<p>Berger, S., H. Lehmann, &amp; F. Lehner (2001). &#8220;Location Based Services in the Tourist Industry.&#8221; <em>Information Technology &amp; Tourism, </em>5(4), 243-56.</p>
+<p>Compeau, J., N.R.  Haggerty, &amp; R. Chandrasekhar (2013). &#8220;Intel Corp. &#8211; Bring Your Own Device.&#8221; <em>Harvard Business Review &#8211; Case Study</em>, 1-15.</p>
+<p>Delen, I. &amp; J. Krajcik (2017). &#8220;Using Mobile Devices to Connect Teachers and Museum Educators.&#8221; <em>Res Sci Educ</em>(47), 73 -96.</p>
+<p>Farahani, P., C. Meier, &amp; J. Wilke (2017). &#8220;Digital Supply Chain Management Agenda for the Automotive Supplier Industry.&#8221; <em>Shaping the Digital Enterprise</em>, 157-72.</p>
+<p>Hamblen, M. (2010). &#8220;Google CEO preaches &#8216;mobile first.'&#8221; Consulted October 15, 2017. Available https://www.computerworld.com/article/2520954/mobile-wireless/google-ceo-preaches&#8211;mobile-first-.html.</p>
+<p>Heitkötter, H., S. Hanschke, &amp; T.A. Majchrzak (2013). &#8220;Evaluating Cross-Platform Development Approaches for Mobile Applications.&#8221; <em>International Conference on Web Information Systems and Technologies. WEBIST 2012, 140</em>,120-38.</p>
+<p>ICOM. (2004). &#8220;Code of Ethics.&#8221; Consulted October 10, 2017. Available http://icom.museum/the-vision/code-of-ethics/1-museums-preserve-interpret-and-promote-the-natural-and-cultural-inheritance-of-humanity/.</p>
+<p>Jayasinghe, U. &amp; A. Dharmaratne (2013). &#8220;Game based learning vs. gamification from the higher education students&#8217; perspective.&#8221; <em>2013 IEEE International Conference on Teaching, Assessment and Learning for Engineering (TALE)</em>, 683-88.</p>
+<p>Marty, F. &amp; K. Burton Jones (2008). <em>Science, Encyclopedia of Library and Information: Museum Informatics, People, Information and Technology in Museums.</em> New York: Routledge Taylor &amp; Francis Group.</p>
+<p>Matuska, N. (2014). &#8220;The Web Is Not Dead.&#8221; Consulted May 20, 2017. Available: https://www.wired.com/insights/2014/02/web-dead/.</p>
+<p>Metz, C. (2016, 04 20). &#8220;Wait! The Web Isn’t Dead After All. Google Made Sure of It.&#8221; Consulted May 16, 2017. Available https://www.wired.com/2016/04/wait-web-isnt-really-dead-google-made-sure/.</p>
+<p>Othman, M. K., H. Petrie, &amp; C. Power (2011). &#8220;Engaging Visitors in Museums with Technologie: Scales for the Measurement of Visitor and Multimedia Guide Experience.&#8221; <em>Human-Computer Interaction &#8211; INTERACT 2011, 4</em>, 92-9.</p>
+<p>Reed, D. (2013). &#8220;Do you add, multiply — Or see mobile first?&#8221;<em>Journal of Direct, Data and Digital Marketing Practice, 3</em>.</p>
+<p>Richardson, J. (2011). &#8220;Rethinking Museums for the Digital Age.&#8221; Consulted November 22, 2017 at museumnext.com. Available https://www.museumnext.com/2011/08/rethinking-museums-digital-age/</p>
+<p>Schleifer, T. (2018). &#8220;People love Google’s new feature that matches your selfie to a famous painting.&#8221; Consulted January 30, 2018 Available https://www.recode.net/2018/1/14/16890826/google-arts-and-culture-selfie.</p>
+<p>Scott Gassler, R., &amp; R. Grace (1980). &#8220;The economic functions of nonprofit enterprise: The case of art museums.&#8221; <em>Journal of Cultural Economics, 4</em>(1), 19–32.</p>
+<p>Stam, D. (1996). &#8220;Spiders across the stars – A Web-based Model for Providing Access to Multi-institutional Museum Information.&#8221; <em>Archives and Museum Informatics, 10</em>(4), pp. 374–384.</p>
+<p>Statista. (2017). &#8220;Smartphone user penetration as percentage of total global population from 2014 to 2020.&#8221; Consulted October 24, 2017. Available https://www.statista.com/statistics/203734/global-smartphone-penetration-per-capita-since-2005/.</p>
+<p>Statista. (2018). &#8220;Mobile internet traffic as percentage of total web traffic as of January 2018, by country.&#8221; Consulted February 02, 2018. Available https://www.statista.com/statistics/430830/share-of-mobile-internet-traffic-countries/</p>
+<p>Wroblewski, L. (2011). &#8220;Mobile First.&#8221;www.lukew.com. Consulted October 15, 2017. Available https://www.lukew.com/resources/mobile_first.asp.</p>
+<p>Zimmermann, A., A. Lorenz, &amp; M. Specht. (2003). &#8220;User Modeling in Adaptive Audio-Augmented Museum Environments.&#8221; <em>International Conference on User Modeling</em>, 403-7.</p>
+<p>&nbsp;</p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+Baumgaertner, Tobias. "Introducing socio-technical changes through “Mobile First” in the Museum Application Domain." <i>MW18: MW 2018</i>. Published February 15, 2018. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw18.mwconf.org/paper/using-the-mean-stack-to-implement-an-easy-access-web-interface-to-provide-a-mobile-application-framework-for-museum-professionals/<br /><br />
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><h2 id="Gold" class="widget-title">Gold Sponsor</h2>
+<a title="TixTrack" href="http://www.tixtrack.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/tixtrack-250-75.jpg" alt="TixTrack" /></a>
+<h2 id="silver" class="widget-title">Silver Sponsor</h2>
+<a title="Axiell" href="http://www.axiell.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/axiell-250-75.jpg" alt="Axiell" /></a>
+<a title="Piction" href="https://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<a title="Brightcove" href="https://www.brightcove.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/bc-250-75.jpg" alt="Brightcove" /></a>
+<h2 id="bronze" class="widget-title">Bronze Sponsors</h2>
+<a title="Quartex" href="http://www.quartexcollections.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/quartex-250-75.jpg" alt="Quartex" /></a>
+<a title="alley interactive" href="http://www.alleyinteractive.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ai-250-75.jpg" alt="alley interactive" /></a>
+<a title="ideum" href="http://www.ideum.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ideum-250-75.jpg" alt="ideum" /></a>
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/netx-250-75.jpg" alt="Netx" /></a>
+<a title="Four Kitchens" href="http://fourkitchens.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/4K-250-75.jpg" alt="Four Kitchens" /></a>
+<h2 id="conference-partner" class="widget-title">Conference Partners</h2>
+<a title="VAG" href="http://vanartgallery.bc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/VAG-250-75.jpg" alt="VAG" /></a>
+<a title="MOA" href="http://moa.ubc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/moa-250-75.jpg" alt="MOA" /></a>
+<h2 id="conference-supporter" class="widget-title">Conference Supporters</h2>
+<a title="BCMA" href="http://museumsassn.bc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/BCMA-250-75.jpg" alt="BCMA" /></a>
+<a title="NGX" href="http://ngxinteractive.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ngx-250-75.jpg" alt="NGX" /></a>
+<a title="EDM" href="http://edmstudio.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/edm-250-75.jpg" alt="EDM" /></a>
+<a title="Olson" href="http://olsonvisual.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/olson-250-75.jpg" alt="Olson" /></a></div></section><section id="text-3" class="widget widget_text">			<div class="textwidget">
+<ul class="sxc-follow-buttons">
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://www.facebook.com/museweb/"
+                                        
+                                        title="Facebook"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/facebook.png"
+                                            alt="Facebook"
+                                        />
+                                    </a>
+                              </li>
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://twitter.com/museweb"
+                                        
+                                        title="Twitter"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/twitter.png"
+                                            alt="Twitter"
+                                        />
+                                    </a>
+                              </li>
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://www.linkedin.com/company/10246519/"
+                                        
+                                        title="LinkedIn"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/linkedin.png"
+                                            alt="LinkedIn"
+                                        />
+                                    </a>
+                              </li>
+</ul>
+
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+
+		<!-- Cookie Notice plugin v1.3.2 by Digital Factory https://dfactory.eu/ -->
+		<div id="cookie-notice" role="banner" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Cookie Notice" style="background-color: rgba(0,0,0,1);"><div class="cookie-notice-container" style="color: #fff;"><span id="cn-notice-text" class="cn-text-container">We use cookies to ensure that we give you the best experience on our website. Please read our cookie policy and, if you continue to use the site, acknowledge that you accept the terms and conditions of use. </span><span id="cn-notice-buttons" class="cn-buttons-container"><a href="#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button bootstrap" aria-label="Ok">Ok</a><a href="https://www.museumsandtheweb.com/cookie-policy/" target="_blank" id="cn-more-info" class="cn-more-info cn-button bootstrap" aria-label="Read more">Read more</a></span><a href="javascript:void(0);" id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" aria-label="Ok"></a></div>
+			
+		</div>
+		<!-- / Cookie Notice plugin --></body>
+
+<!-- Mirrored from mw18.mwconf.org/paper/using-the-mean-stack-to-implement-an-easy-access-web-interface-to-provide-a-mobile-application-framework-for-museum-professionals/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:28:23 GMT -->
+</html>

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw17.mwconf.org/paper/creating-the-smart-museum-the-intersection-of-digital-kiosks-web-and-native-mobile/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 22:06:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Creating the smart museum: the intersection of digital strategy, kiosks and mobile &#8211; MW17: Museums and the Web 2017</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Creating the smart museum: the intersection of digital strategy, kiosks and mobile Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw17.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login3822.css?ver=1604077128' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-twentysixteen/style3ce7.css?ver=20201208' media='all' />
+<style id='twentysixteen-style-inline-css'>
+
+		/* Custom Link Color */
+		.menu-toggle:hover,
+		.menu-toggle:focus,
+		a,
+		.main-navigation a:hover,
+		.main-navigation a:focus,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.social-navigation a:hover:before,
+		.social-navigation a:focus:before,
+		.post-navigation a:hover .post-title,
+		.post-navigation a:focus .post-title,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.site-branding .site-title a:hover,
+		.site-branding .site-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-footer a:hover,
+		.entry-footer a:focus,
+		.comment-metadata a:hover,
+		.comment-metadata a:focus,
+		.pingback .comment-edit-link:hover,
+		.pingback .comment-edit-link:focus,
+		.comment-reply-link,
+		.comment-reply-link:hover,
+		.comment-reply-link:focus,
+		.required,
+		.site-info a:hover,
+		.site-info a:focus {
+			color: #e55747;
+		}
+
+		mark,
+		ins,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.widget_calendar tbody a,
+		.page-links a:hover,
+		.page-links a:focus {
+			background-color: #e55747;
+		}
+
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
+		textarea:focus,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.menu-toggle:hover,
+		.menu-toggle:focus {
+			border-color: #e55747;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation li:hover > a,
+			.main-navigation li.focus > a {
+				color: #e55747;
+			}
+		}
+	
+</style>
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src='https://mw17.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index9f30.html?p=1216' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed0c84.json?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fcreating-the-smart-museum-the-intersection-of-digital-kiosks-web-and-native-mobile%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed293c?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fcreating-the-smart-museum-the-intersection-of-digital-kiosks-web-and-native-mobile%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-twentysixteen/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-1216 wp-custom-logo wp-embed-responsive">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+					<div class="site-branding">
+						<a href="../../index.html" class="custom-logo-link" rel="home"><img width="240" height="240" src="../../wp-content/uploads/2017/02/cropped-mw-final.png" class="custom-logo" alt="MW17: Museums and the Web 2017" /></a>					</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p> MW17: Museums and the Web 2017 <span>Cleveland Ohio - April 19-22</span></p>
+								<form class="search-form" role="search" method="get" action="#">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-1-container"><ul id="menu-menu-1" class="primary-menu"><li id="menu-item-3074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3074"><a href="https://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-88"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580"><a href="../../local-information-and-accommodation/index.html">Local Information and Accommodation</a></li>
+	<li id="menu-item-1917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1917"><a href="../../faqs/index.html">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-172"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-475"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-108"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="../../call-for-proposals/index.html">Call for Proposals</a></li>
+	<li id="menu-item-494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-135"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-1689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1689"><a href="../../advertising/index.html">Advertising</a></li>
+</ul>
+</li>
+<li id="menu-item-573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-573"><a href="../../program/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-2972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2972"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-3023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3023"><a href="../../select-session-slides/index.html">Presentations</a></li>
+	<li id="menu-item-1760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1760"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2968"><a href="../../glami-winners/index.html">GLAMi Winners</a></li>
+		<li id="menu-item-2963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2963"><a href="../../glami-nominees/index.html">GLAMi Nominees</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2894"><a href="../../mwx/index.html">MWX 2017</a></li>
+	<li id="menu-item-1252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1252"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="../../committees/index.html">Committees</a></li>
+</ul>
+</li>
+<li>
+    <form role='search' method='get' class='search-form' action='http://mw17.mwconf.org/'>
+	<label>
+	<span class='screen-reader-text'>Search for:</span>
+	<input type='search' class='search-field' placeholder='Search &hellip;' value='' name='s' />
+	</label>
+	<button type='submit' class='search-submit'>
+	<span class='screen-reader-text'>Search</span></button>
+	</form>    
+	</li></ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+	
+<section id="page-hero">
+	<div class="background"> </div>
+</section>
+<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];
+    jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw17.mwconf.org/wp-content/themes/mw-twentysixteen/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-1216" class="post-1216 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">Creating the smart museum: the intersection of digital strategy, kiosks and mobile</h1>
+
+<p><a target="_blank" href="http://www.museumsandtheweb.com/member/JonathanLeeAAM/">Jonathan Lee</a>, Asian Art Museum, USA, <a target="_blank" href="http://www.museumsandtheweb.com/member/mpaddon/">Mark Paddon</a>, Guidekick, Inc., USA</p>
+<h2>Abstract</h2>
+The last two years has seen a growing number of experiments in contextually aware digital experiences in museums. However, most are stand-alone experiences (mobile, Web, signage) isolated from other digital projects and the core visitor experience.
+
+In 2016 The Asian Art Museum in San Francisco partnered with Guidekick to embark on an ambitious digital strategy to create an interconnected suite of visitor services across mobile, touch displays, digital signage, and the Web. This paper starts with a comprehensive look at the Asian Art Museum's digital strategy process, then presents a case study for the digital wayfinding experience from inception through initial public rollout. The findings are discussed to show the success of each platform independently as well as consider how usage is compounded when a visitor session is passed between platforms (for example, delivering wayfinding directions from a touch kiosk to a location-aware native mobile app). We’ll also explore the museum's perspective on overcoming organizational challenges along the way.</p>
+<p><b>Keywords:</b> Contextual digital experience, digital strategy, kiosk, mobile web, wayfinding, product development</p>
+<h2>Background: Asian Art Museum</h2>
+<h3>The museum</h3>
+<p><span style="font-weight: 400;">The museum’s history starts with Avery Brundage, a former Olympian, industrialist, International Olympic Committee president and major collector of Asian Art. In the late 1950s, Brundage looked to donate his vast art collection, which he started “in shoeboxes under beds.” (Busch, 1968). In 1958, the Society of Asian Art was founded in San Francisco with the goal of securing his collection for the city; a year later, Brundage agreed to donate the first part of his collection to San Francisco on the condition that the city build a new museum to house it. In 1960, city voters passed a bond measure to build a facility, which opened in June 1966 as a wing of the de Young Museum in Golden Gate Park. Brundage made two additional donations to the city (1969 and 1975), totaling over 7,700 objects.</span></p>
+<figure id="attachment_1141" aria-describedby="caption-attachment-1141" style="width: 301px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1141" src="../../wp-content/uploads/2017/01/01-Asian-Art-Museum_wing-at-DeYoung.jpg" width="301" height="382" /><figcaption id="caption-attachment-1141" class="wp-caption-text">Figure 1: Photo. Asian Art Museum Wing at the de Young. Source: Asian Art Museum</figcaption></figure>
+<p>As the Asian Art Museum’s collection continued to grow, it was clear a new location was required. In 1988, Mayor Diane Feinstein unveiled a revitalization plan for the Civic Center that included relocating the museum to the former Main Library. A fundraising campaign was launched in 1995 for the $160 million renovation project, and the new Asian Art Museum opened in 2003.</p>
+<p>Today, the museum’s collection includes more than 18,000 objects from seven regions: South Asia, The Persian World &amp; West Asia, Southeast Asia, The Himalayas and the Tibetan Buddhist World, China, Korea and Japan.  It is currently the largest museum in the United States exclusively devoted to Asian art.</p>
+<h3>The historic building</h3>
+<figure id="attachment_1142" aria-describedby="caption-attachment-1142" style="width: 398px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1142" src="../../wp-content/uploads/2017/01/02-Main-Libarary-Exterior.png" width="398" height="279" /><figcaption id="caption-attachment-1142" class="wp-caption-text">Figure 2: Photo. Main Library Exterior. Source: San Francisco Public Library</figcaption></figure>
+<p><span style="font-weight: 400;">The former Main Library, the Asian Art Museum’s home since 2003, is a world-famous Beaux-Arts building designed by George Kelham in 1917. Beaux-Arts architecture combines Roman, Greek, and Renaissance features with trimmings of garlands, shells, and floral motifs etched into stone and masonry.</span></p>
+<figure id="attachment_1420" aria-describedby="caption-attachment-1420" style="width: 340px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1420" src="../../wp-content/uploads/2017/01/Loggia-looking-east.jpg" width="340" height="474" /><figcaption id="caption-attachment-1420" class="wp-caption-text">Figure 3: Photo. View of entrance to Great Hall from the loggia. Source: San Francisco Public Library.</figcaption></figure>
+<p><span style="font-weight: 400;">The central focus of Kelham’s design was the Great Hall, the library’s card catalog room located at the top of a grand staircase and surrounding loggia. The size and grandeur were intended to “give library patrons the feeling of entering and leaving a temple of learning as they ascended and descended into the card catalog room” (Counce &amp; Stress, 2016).</span></p>
+<figure id="attachment_1144" aria-describedby="caption-attachment-1144" style="width: 399px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1144" src="../../wp-content/uploads/2017/01/04-Main-Library-Reading_room.jpg" width="399" height="319" /><figcaption id="caption-attachment-1144" class="wp-caption-text">Figure 4: Photo. Main Library Reading Room. Source: San Francisco Historical Photograph Collection</figcaption></figure>
+<p>A spacious reading room—measuring 195 feet in length with 32 foot ceilings—featured rows of desks and shelves to store over 25,000 volumes. Consequently, the building’s ornate design resulted in visitor circulation and flow issues, prompting librarians to complain that Kelham’s design prioritized form over function.</p>
+<p>In 2000, renowned Italian architect Gae Aulenti, a specialist in the adaptive reuse of historical structures into new museum spaces (including the conversion of a Paris train station into the Musee d’ Orsay in 1986) was selected to convert the former library into the museum’s new home. Adaptive reuse refers to the “process of reusing an old site or building for a purpose other than which is was designed for” (Wikipedia, 2017) and considers conservation, historic preservation, and environmental factors as part of the planning process. Aulenti’s vision included the creation of a piazza (North &amp; South Court), an open public space in the library’s unused brick-lined light wells, and dividing the reading room into two floors, effectively increasing the display space to over 185,000 square feet. The new Asian Art Museum opened in March 2003 with a rededication ceremony held in the Great Hall, renamed Samsung Hall.</p>
+<p>In March 2016, the museum announced a transformation project that adds a 9,300 square foot pavilion and rooftop gallery behind Samsung Hall, showcasing contemporary art and programs. Internally referred to as<em> the</em> <i><span style="font-weight: 400;">Museum Transformation Project</span></i>, the new pavilion and rooftop gallery are scheduled to open in late 2018.</p>
+<h2>Setting the museum&#8217;s digital strategy</h2>
+<p><span style="font-weight: 400;">Prior to joining the Asian Art Museum, I spent five years as a digital strategist for consumer, technology and healthcare brands, advising on consumer, business-to-business (B2B), and enterprise initiatives. Each engagement commenced with a discovery process, challenging me to understand organizational attitudes towards digital and determine what success meant for executives (responsible for financing the work) and the staff (responsible for using the digital solutions), who almost always had different expectations. The process consists of three key activities, beginning with research (Stakeholder Interviews and Industry Analysis), followed by synthesis (key learnings), and finally, the Digital Recommendation &amp; Roadmap. Each process step is considered below.</span></p>
+<h3>Stakeholder Interviews</h3>
+<p><span style="font-weight: 400;">Stakeholder interviews are a critical step in securing organizational trust: proactively reaching out to managers, introducing yourself, and scheduling meetings demonstrates a willingness to collaborate and listen. A manager’s relationship to digital may be more oversight than daily practice, so it’s important to seek the perspectives of the staff responsible for managing/using digital tools and solutions as well. While this step is officially called stakeholder interviews, it should really be called a &#8220;listening tour,&#8221; as listening should be your main focus during the meeting.</span></p>
+<p>Interviews should consider the following topics:</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The interviewee&#8217;s title, tenure and role. Tenure is important to gauge organizational attitudes regarding digital—are the attitudes recent or historical?</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The role of digital in their day-to-day responsibilities. Is it content management of visitor experiences, or using enterprise software? Your questions should be tailored to each scenario.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Their impression of digital at the museum, including current challenges. Can the interviewee be considered a future digital advocate, success story, or potential barrier?</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Their ideas for future digital opportunities, for both staff (enterprise software solutions) and visitors (digital experiences).</span></li>
+</ul>
+<p><span style="font-weight: 400;">During my first six weeks at the museum, I scheduled interviews with over two dozen staff members to understand the current state of digital. It was clear that executives and staff had different digital expectations: whereas executives were most interested in shiny new toys—virtual reality, augmented reality and mobile gaming—that could demonstrate digital leadership to board members and potential donors, the staff simply wanted more efficient tools and solutions to do their jobs. Additionally, staff expressed “technology fatigue” due to the numerous digital solutions that had been launched over the years that failed to gain traction (for example, there was multiple versions of file sharing in place—Google Docs, Smartsheets, Sharepoint, Outlook365— without any governance). They questioned whether or not they should invest time in my digital strategy if they would result in new solutions with the same fate.</span></p>
+<h3>Industry analysis</h3>
+<p><span style="font-weight: 400;">Industry analysis compares an organization’s current digital landscape with its peers, enabling it to self-identify as an industry leader, follower, or somewhere in between. The scope of analysis depends on organizational goals: do they want to optimize their entire digital ecosystem, or do they simply need to replace their current website? Analysis for the former requires a comprehensive review of digital experiences (e.g., website, mobile audio guide, in-gallery interpretation, online collection) across multiple organizations, while the latter requires evaluation of three to five similar digital experiences.</span></p>
+<p>Industry Analysis requires three steps:</p>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Identification of Evaluation Criteria;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Compiling a list of Best-In-Class Digital Organizations;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Creation of an Evaluation Matrix.</span></li>
+</ol>
+<p><strong>Step one: identifying evaluation criteria</strong><br />
+Once you have determined the scope of your analysis, choose your evaluation criteria: aside from design, usability, and content, what other features are important to consider? For example, a museum website should be mobile-friendly, include integrated social features and have a simple ticketing process. Aside from digital experience and industry best practices, your final criteria list should include specific goals/objectives that resonate with executives and staff—be sure to review your stakeholder interview notes for these items.</p>
+<p><strong>Step two: compiling a list of best-in-class digital organizations and evaluation matrix</strong><br />
+Next, identify the best-in-class digital organizations and experiences in your field. To start, consult industry-focused publications, white papers, websites, influencer blogs, and Web searches (e.g, “top digital museum experiences 2016”). Ask staff about their favorite digital experiences. Create an evaluation matrix to document your analysis; ideally, three to five digital organizations and/or experiences should be rated against four to eight evaluation criteria. Be sure to include your organization’s existing digital experiences on the matrix as well.</p>
+<p>The evaluation should include the following:</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A rating of each criteria on a scale of 1 (low) to 5 (high), including corresponding screenshots and a rating explanation;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">An overall summary (a short paragraph) of findings for each digital experience.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Evaluation is most effective when you can interact with each experience online or in-person; if the experiences are not accessible, find an online case study or video walkthrough. Consider replacing experiences if you don’t have enough material for an effective review.</span></p>
+<figure id="attachment_1149" aria-describedby="caption-attachment-1149" style="width: 459px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1149" src="../../wp-content/uploads/2017/01/05-Sample-Ratings-Matrix.png" width="459" height="166" /><figcaption id="caption-attachment-1149" class="wp-caption-text">Figure 5: sample Ratings Matrix. Source: Jonathan Lee, Asian Art Museum</figcaption></figure>
+<p>After extensively researching online museum experiences and attending Museums and the Web (MW) 2015, I started to understand the current state of cultural institutions: after years of data fragmentation across digital experiences, museums looked to centralize data delivery across digital experiences—websites, in-gallery interpretation, mobile—via creation of custom application protocol interfaces (API). I attended presentations by The Getty, Cleveland Museum of Art, Cooper-Hewitt, and Dallas Museum of Art, who, along with a handful of other museums, were leading the industry into the new age of data delivery. I was ecstatic that the Asian Art Museum would be a digital follower for the foreseeable future, as we’d be able to benefit from the best practices and learnings provided by these leaders.</p>
+<p>Given the Asian Art Museum’s digital challenge, I performed a digital landscape analysis of three industry leaders: The Cleveland Museum of Art (CMA), Canadian Museum for Human Rights (CMHR), and Cooper Hewitt, all of which had recently made sizable investments in new digital interpretation approaches that demonstrated how museums could use dynamic digital experiences to reach, attract, and engage new audiences. I started by reviewing system and data delivery diagrams (available in MW2014 and MW2015 white papers), then moved to their online and in-gallery interpretive experiences.</p>
+<figure id="attachment_1150" aria-describedby="caption-attachment-1150" style="width: 561px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1150" src="../../wp-content/uploads/2017/01/06-Dallas-Museum_of-Art.png" width="561" height="305" /><figcaption id="caption-attachment-1150" class="wp-caption-text">Figure 6: Photo: Dallas Museum of Art System Diagram (Oberoi &amp; Arnold, 2015).</figcaption></figure>
+<p><span style="font-weight: 400;">There was a lot to learn from each institution: In the case of the Cooper-Hewitt, they delivered on their aspiration of providing visitors with a memorable onsite visit (via the Pen, Collection Browser and Immersion Room) as well as post-visit, via their personalized collection browsing history website. For the CMA, Gallery One provided visitors with a suite of digital interpretation approaches that had users physically, intellectually, and socially engaged. At the CMHR, their focus on accessibility took on a digital focus and priority, with creation of alternate tactile controls for interactive media (e.g., alternate buttons instead of touchscreen). The digital leadership provided by these museums was transformative for the industry, and a victory that could be shared and modeled by peers. </span></p>
+<h3>Key Learnings</h3>
+<p>Key Learnings synthesize stakeholder interviews and industry analysis into a formal presentation for executives and key project stakeholders. Along with digital findings, the presentation reflects the organizational attitudes, workflow/process issues and culture challenges mentioned during stakeholder interviews that may impact your digital strategy. Digital transformation is an organizational initiative whose success is dependent on quite a few non-digital factors; expressing potential organizational/technology/staff barriers helps align expectations and ensures you receive the right support and permission from project stakeholders when you hit potential roadblocks.</p>
+<p>Key Learnings can be presented in a variety of different ways—employee testimonials, a “top five” list, data/infographics or a standard report of findings—but must always take the form of a high-level, executive-style summary (additional supporting material can be included in an Appendix). For my presentation, I adopted a Today/Tomorrow format, describing current organization challenges (<i><span style="font-weight: 400;">Today) </span></i><span style="font-weight: 400;">and learnings, followed by a statement of how digital can be part of the solution (</span><i><span style="font-weight: 400;">Tomorrow</span></i><span style="font-weight: 400;">). My goal was to position digital as an integral part of the museum’s future.</span></p>
+<figure id="attachment_1158" aria-describedby="caption-attachment-1158" style="width: 561px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1158" src="../../wp-content/uploads/2017/01/07-Sample_Digital-Landscape.png" width="561" height="284" /><figcaption id="caption-attachment-1158" class="wp-caption-text">Figure 7: screenshot of Key Learning #1, from the the Asian Art Museum’s digital report update (2016). Source: Jonathan Lee, Asian Art Museum</figcaption></figure>
+<p><strong><em>Key Learning #1: digital experiences</em></strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Today:</strong> we have an extensive digital footprint;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Learning:</strong> decentralization has resulted in a crowded and inefficient digital ecosystem;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Tomorrow:</strong> a strategic content management approach can simplify the digital ecosystem and improve efficiency.</span></li>
+</ul>
+<figure id="attachment_1160" aria-describedby="caption-attachment-1160" style="width: 561px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1160" src="../../wp-content/uploads/2017/01/08-Screenshots-for-Digital-Report.png" width="561" height="363" /><figcaption id="caption-attachment-1160" class="wp-caption-text">Figure 8: screenshot of Key Learning #2, from the Asian Art Museum’s digital report. Source: Jonathan Lee, Asian Art Museum</figcaption></figure>
+<p><strong><em>Key Learning #2: brand experience: visual</em></strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Today:</strong> we have a strong visual brand identity;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Learning:</strong> the museum presents inconsistent design across visitor experiences;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Tomorrow:</strong> a commitment to brand governance and cross-department collaboration will facilitate uniformity.</span></li>
+</ul>
+<figure id="attachment_1161" aria-describedby="caption-attachment-1161" style="width: 560px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1161" src="../../wp-content/uploads/2017/01/09-Screenshots-and-Content.png" width="560" height="383" /><figcaption id="caption-attachment-1161" class="wp-caption-text">Figure 9: screenshot of Key Learning #3, from the Asian Art Museum’s digital report. Source: Jonathan Lee, Asian Art Museum</figcaption></figure>
+<p><strong><em>Key Learning #3: brand experience: conten</em>t</strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Today:</strong> we have invested in a wealth of informative content;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Learning:</strong> voice, tone, and content are uneven across visitor experiences;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Tomorrow:</strong> an investment in content creation and optimization must be made in parallel with our digital transformation.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Key Learnings were initially shared with the executive team, followed by a presentation to the staff. Both audiences were unaware of the impact that our decentralized organizational approach had on the quality of our visitor experiences and digital solutions. Over the next few weeks, a few staff members stopped by to thank me for the presentation and ask how they could get involved. It was inspiring to see the staff’s interest in digital; successful transformation relies on the right attitudes to change and sustain over time.</span></p>
+<h3>Digital Recommendation</h3>
+<p><span style="font-weight: 400;">If the Stakeholder Interviews, Industry Analysis and Key Findings are the &#8220;s</span><span style="font-weight: 400;">o what&#8221;</span><span style="font-weight: 400;"> of the presentation, then the Digital Recommendation &amp; Roadmap is the &#8220;now what&#8221;</span><span style="font-weight: 400;">—the broad digital vision and actionable steps (initiatives/tactics) to transformation. The Digital Recommendation is your sales pitch to the organization and can influence your eventual success or failure. Like Apple commercials and their product launch presentations, it’s important that your presentation is big, dynamic, and extremely memorable.</span></p>
+<p><strong><em>Step one: defining a digital recommendation</em></strong><br />
+During my evaluation of the Cooper-Hewitt, CMA, and CMHR, I noted that they had all started their digital transformation with a unique digital proposition for their visitors:</p>
+<p><span style="font-weight: 400;">Cooper Hewitt’s Digital Manifesto (Chan and Cope, 2015):</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Permission to play</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Digital learning by watching</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensure a “look up” experience</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Allow a “persistence of visit” </span></li>
+</ul>
+<p><span style="font-weight: 400;">The Cleveland Museum of Art (Alexander, Barton &amp; Goeser, 2013):</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Gallery One’s innovative blend of art and technology invites visitors to connect actively with the art on view through exploration and creativity. Designed for visitors of all ages, both novice and seasoned, the technology interfaces inspire visitors to see art with greater depth and understanding, sparking experiences across the spectrum from close looking to active making and sharing. </span></li>
+</ul>
+<p><span style="font-weight: 400;">Canadian Museum of Human Rights (</span><a href="https://humanrights.ca/"><span style="font-weight: 400;">https://humanrights.ca</span></a><span style="font-weight: 400;">):</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Creating inspiring encounters with human rights, we will engage Canadians and our international visitors in an immersive, interactive experience that offers both the inspiration and tools to make a difference in the lives of others.</span></li>
+</ul>
+<p><span style="font-weight: 400;">&#8220;Digital Values&#8221; act as framework for digital experience strategy and development, while providing the staff with an easy way to understand the museum’s approach to digital. Feeling inspired by these institutions, I prepared a list of Digital Values for the Asian Art Museum to guide both visitor and staff experiences.</span></p>
+<h2>The Asian Art Museum&#8217;s Digital Values (2015)</h2>
+<p><i><span style="font-weight: 400;">“6 to 106” Rule</span></i><br />
+Digital experiences are intuitive and simple-to-use, whether you are six or 106 years old. Usability will be inspired by existing paradigms and styles (e.g., Google, Apple, Instagram, Facebook), providing users with a familiarity and confidence when using our digital experiences.</p>
+<figure id="attachment_1168" aria-describedby="caption-attachment-1168" style="width: 560px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1168" src="../../wp-content/uploads/2017/01/Screen-Shot-2017-01-31-at-8.52.37-PM.png" width="560" height="370" /><figcaption id="caption-attachment-1168" class="wp-caption-text">Figure 10: screenshot of the Masterpieces Seated Buddha interpretive prototype, currently available online (http://masterpieces.asianart.org/ and in our China: Before 960 gallery. Source: Jonathan Lee, Asian Art Museum</figcaption></figure>
+<p><i><span style="font-weight: 400;">Layered Content</span></i><br />
+Digital experiences provide users with insightful, on-demand content based on their level of interest. Website content will focus on actionable information, while interpretive content will be considered in multiple levels, from an object’s feature to historical/cultural context.</p>
+<p><i><span style="font-weight: 400;">Accessibility</span></i><br />
+Digital experiences will be accessible for all, regardless of age, ability or audience. Onsite and online experiences will consider visual, auditory, cognitive, and physical limitations, while selected content will be multilingual for our diverse audience.</p>
+<p><i><span style="font-weight: 400;">Universal-First</span></i><br />
+Digital experiences will be platform and device agnostic, as well as available both onsite and online. HTML5 will be considered for all experiences, with custom application development recommended when necessary. Online experiences will be designed with a mobile-first approach, ensuring progressive enhancement across devices.</p>
+<p><em>Complementary</em><br />
+Digital experiences will be complementary to the viewing experience and not interfere with a visitor’s observation of an object.</p>
+<p><span style="font-weight: 400;">Over the past year, these Digital Values have been used by our director/CEO and development (fundraising) as key points in describing our digital transformation goals. I have (re)introduced the Digital Values each time I have been asked to present to the board of directors and staff as a reminder of our intentions/objectives. Coincidentally, some of these values have started to resonate beyond digital—the “6 to 106” Rule, Accessibility, and Universal-First have become aspirations for departments such as exhibition design, guest experience, facilities, and curatorial as we reconsider the museum’s visitor experience as part of the Museum Transformation Project.</span></p>
+<h2>Digital Roadmap</h2>
+<p>The Digital Roadmap is a high-level calendar of digital initiatives/tactics, providing transparency across the organization and setting expectations for executives and the staff. For executives, the Digital Roadmap reassures the board of directors and donors that the museum is staying on track with its digital vision; for the development team, it allows planning for fundraising and grant proposals. Staff can follow the Digital Roadmap to stay up-to-date with progress and know when to expect new digital experiences to be implemented.</p>
+<p>When developing the Digital Roadmap, it’s important to temper the expectations of key stakeholders with the needs of implementing a sustainable technology landscape—the two are often in conflict, with the short-term “shiny new toys” often prioritized over a long-term, digital transformation strategy. For example, the more time you focus on creating an augmented reality experience, the less time you have to focus on creating the right digital infrastructure. This challenge is never easy to balance and requires the permission and trust from the organization to get things done right.</p>
+<p><em>Step one: defining Digital Transformation priorities<br />
+</em>To prepare the Asian Art Museum’s Digital Roadmap, I identified three Digital Transformation pillars (categories) to guide innovation over the next four years (2015-2018):</p>
+<h4><span style="font-weight: 400;">(1) Digital Infrastructure</span></h4>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Focuses digital investment on establishing a flexible technology infrastructure that can adapt with evolving technology and audience (staff/visitor) needs;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Consolidates organization data, processes/workflows and knowledge management, minimizing employee on-boarding and increasing efficiency.</span></li>
+</ul>
+<p><span style="font-weight: 400;">(2) Content Management &amp; Delivery</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Security collects and distributes data between the digital infrastructure—Data Asset Management System (Cortex), Collection (TMS), Ticketing/E-Commerce (Siriusware)—and audience experiences, ensuring content consistent and up-to-date;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Facilitates decentralization of technology solutions, enabling departments to easily manage content across digital experiences.</span></li>
+</ul>
+<p><span style="font-weight: 400;">(3) Visitor Experiences</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Bifurcates digital experiences into reusable frameworks and content (API), enabling frameworks to be deprecated independently of content management—thereby adapting to audience needs faster and cheaper;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensures a shared museum experience (design, usability and content) across all digital channels;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Allows visitors to access relevant content on their preferred device and format.</span></li>
+</ul>
+<p><span style="font-weight: 400;">As mentioned previously, digital transformation is an organizational initiative that is dependent on many non-digital factors, namely organizational behaviors and attitudes, digital literacy, and financial investment. The digital transformation I proposed would be ambitious for any organization, let alone a museum that only recently identified the value of digital strategy. As a follow-up to the transformation categories, I included a page entitled “The fine print,”  which expressed my rules for success:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The management team must prioritize the digital transformation and lead organizational change within their departments;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The museum must invest in ongoing hardware and software solutions as well as training and support;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The museum must provide additional resourcing and staffing across digital, IT, design, and content creation/editing roles;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Departments must incorporate technology solutions within their day-to-day responsibilities and commit to regular content updates to visitor experience content (e.g., website, Online Collection, education resources).</span></li>
+</ul>
+<p><span style="font-weight: 400;">Over the years, I’ve launched dozens of digital experiences, and a new solution wasn’t guaranteed usage or adoption—usability, training, ongoing support and relevance was missed in many instances, resulting in an overall project underperformance or failure. As much as the Asian Art Museum challenged me to create a digital strategy, I wanted to challenge the executives and key project stakeholders to make sure they were committed to transformation.</span></p>
+<p><i><span style="font-weight: 400;">Step two: identifying digital initiatives/tactics</span></i><br />
+Once the Digital Transformation Pillars are in place, the next step is to identify related digital initiatives/tactics. Each initiative/tactic should be assigned an organizational readiness value—High, Medium, Low—based on potential success factors including current organizational attitudes/behaviors, digital literacy, and staffing (will you need additional team members across departments to oversee the new digital solutions?). You can simply ask yourself: <i><span style="font-weight: 400;">in the current situation, how well am I set up to succeed? </span></i><span style="font-weight: 400;">Initiatives/tactics ranked “High” could be commenced immediately, while “Medium” and “Low” may have delayed lead-times (due to dependencies which should be listed) and extended production timelines.</span></p>
+<p>When assigning organizational readiness values, it’s important to be critical of the organization and realistic when defining conditions are required for success. Communicating potential digital transformation challenges and barriers can be a wake-up call for organizations that feel they are only a few digital solutions away from change, and if you fail to set expectations from the start, you will be accountable for any resulting failures. Also, in the case of requiring new staff, it’s important to identify needs prior to commencing work, so that executives are aligned with the effect of Digital Transformation.</p>
+<figure id="attachment_1175" aria-describedby="caption-attachment-1175" style="width: 460px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1175" src="../../wp-content/uploads/2017/01/Screen-Shot-2017-01-31-at-8.59.21-PM.png" width="460" height="613" /><figcaption id="caption-attachment-1175" class="wp-caption-text">Figure 11: Visitor Experience initiatives table for the Asian Art Museum’s digital report. Source: Jonathan Lee, Asian Art Museum</figcaption></figure>
+<p><i><span style="font-weight: 400;">Step three: designing a Visual Digital Roadmap</span></i><br />
+These Digital Initiatives/Tactics summaries were partnered with a Visual Digital Roadmap that considered the next four years of of digital transformation (2015-2018), extending through the projected completion of the Museum Transformation Project in 2018.</p>
+<figure id="attachment_1176" aria-describedby="caption-attachment-1176" style="width: 719px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1176" src="../../wp-content/uploads/2017/01/11-Visual-Digital_Roadmap.png" width="719" height="444" /><figcaption id="caption-attachment-1176" class="wp-caption-text">Figure 12: Visual Digital Roadmap (2015-2018) for the Asian Art Museum’s Digital Report. Source: Jonathan Lee, Asian Art Museum</figcaption></figure>
+<p>The Visual Digital Roadmap captures the full scope of digital transformation, identifying parallel timelines and dependencies. Consequently, Digital Transformation Pillars was expanded to include Related Digital Initiatives/Tactics, each accompanied with a short description.</p>
+<figure id="attachment_1177" aria-describedby="caption-attachment-1177" style="width: 720px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1177" src="../../wp-content/uploads/2017/01/12-Visitor-Exp-Recommendations.png" width="720" height="478" /><figcaption id="caption-attachment-1177" class="wp-caption-text">Figure 13: Visitor Experiences recommendation from Visual Digital Roadmap (2015-2018) for the Asian Art Museum’s Digital Report. Source: Jonathan Lee</figcaption></figure>
+<p><i><span style="font-weight: 400;">Visitor Experience: current status</span></i><br />
+Overall, the Asian Art Museum has remained on target with digital transformation initiatives/tactics, which can be attributed to the staff’s commitment and accurate consideration of organizational readiness.</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The <strong>website</strong> (<a href="http://www.asianart.org/">http://www.asianart.org</a>) has introduced new features, including the expandable information panel, new home page, and exhibition microsite, with attention turned to new website planning. Planning for a new website, which consolidates multiple properties, is currently underway and scheduled for launch in 2018.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The new <strong>Online Collection</strong> (<a href="http://onlinecollection.asianart.org/">http://onlinecollection.asianart.org</a>) was launched in January 2016, with the browsable collection galleries frequently used by curators.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The museum is currently collaborating with a <strong>mobile app</strong> partner on a near-field communication (NFC) test &amp; learn initiative, which will inform the museum’s mobile app strategy (currently in planning).</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><span style="font-weight: 400;">The <strong>Wayfinding Experience</strong>, created by Guidekick (<a href="http://www.guidekick.co/">http://www.guidekick.co/</a>) debuted at the museum this past January, enabling visitors to search for a museum point-of-interest and receive turn-by-turn directions. The museum will look to integrate wayfinding on mobile devices later this year.  </span></span><i><span style="font-weight: 400;">Note: part two of this presentation will focus on the Wayfinding Experience as a case study.</span></i></li>
+<li style="font-weight: 400;">A <strong>Digital Signage</strong> test &amp; learn is currently underway, leveraging Nixplay technology (<a href="http://www.nixplay.com/"><span style="font-weight: 400;">http://www.nixplay.com</span></a><span style="font-weight: 400;">) and focusing on Public Tour promotion near the Information Desk.</span></li>
+</ul>
+<h2>Considering behavior change</h2>
+<p>Behavior change is the most critical factor for transformation, whether organizational or digital. However, it’s impact is hard to plot on a timeline, as there’s no way to quantify how long it will take an organization or visitors to welcome change. BJ Fogg, a behavior scientist who founded the Persuasive Tech Lab at Stanford University, has created a formula for behavior change (Fogg, 2016) that considers motivation, abilities, and triggers to influence change.</p>
+<figure id="attachment_1181" aria-describedby="caption-attachment-1181" style="width: 440px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1181" src="../../wp-content/uploads/2017/01/13-BJFogg-Model.png" width="440" height="334" /><figcaption id="caption-attachment-1181" class="wp-caption-text">Figure 14: BJ Fogg’s Behavior Model (FBM) Source: http://behaviormodel.org</figcaption></figure>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Motivation can take the form of sensation (pleasure/pain), anticipation (hope/fear), belonging (social acceptance/rejection);</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ability factors include time, money, physical effort, and routines; the key to success is meeting people where they are at through familiar paradigms;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Triggers act as prompts and call-to-actions; triggers can facilitate, spark, and signal change and lead individuals to a change of desired behaviors.</span></li>
+</ul>
+<p>Basically, the harder something is to do, the more motivation it requires; alternately, the easier something is to do, the less motivation it requires. However, behaviors can be influenced by triggers, affecting the motivation/ability required.</p>
+<p><span style="font-weight: 400;">For the Asian Art Museum, digital transformation starts with the staff, but also influences the museum/brand, visitors, and finally, the community. For the staff, the main motivation is to deliver on the museum’s mission of “serv(ing) as a bridge of understanding between Asia and the United States” by “sparking connections across cultures and through time, igniting curiosity, conversation and creativity.” (</span><a href="http://www.asianart.org/"><span style="font-weight: 400;">http://www.asianart.org/</span></a><span style="font-weight: 400;">, 2017). This mission can be accomplished through digital solutions and the analog opportunities afforded through day-to-day efficiencies. In regards to ability factors, these have been addressed for staff and visitors through the guiding Digital Values—specifically the “6 to 106” Rule, Accessibility, and Universal First. Finally, triggers are the stories that are made possible by digital transformation:</span></p>
+<figure id="attachment_1183" aria-describedby="caption-attachment-1183" style="width: 561px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1183" src="../../wp-content/uploads/2017/01/14B-Digital-Narrative_Slide2.png" width="561" height="380" /><figcaption id="caption-attachment-1183" class="wp-caption-text">Figure 15: Digital narrative slides from the Asian Art Museum’s digital report. Source: Jonathan Lee, Asian Art Museum.</figcaption></figure>
+<figure id="attachment_1182" aria-describedby="caption-attachment-1182" style="width: 559px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1182" src="../../wp-content/uploads/2017/01/14A-Digital-Narrative-Slide.png" width="559" height="364" /><figcaption id="caption-attachment-1182" class="wp-caption-text">Figure 15: digital narrative slides from the Asian Art Museum’s digital report. Source: Jonathan Lee, Asian Art Museum</figcaption></figure>
+<p>These slides concluded the presentation with an aspirational tone. Over the past year, the Digital Recommendation, Values, and Roadmap have continued to gain fidelity, while best practices were added to Industry Analysis. The Asian Art Museum is still in the process of catching up with its peers, but we are in a better position now that we have committed to a defined plan.</p>
+<h2>The Digital-Optimized Visitor Experience</h2>
+<p>In the past six months our ongoing industry research, discussions with strategic partners and conference attendance has led to our vision for a <em>Digital-Optimized Visitor Experience,</em> which connects digital transformation initiatives/tactics into a single network, delivering a personalized digital experience to visitors based on their location (where they are), preferences (what they like), time of day and relationship with the museum (e.g., first time visitor, member, donor, etc.). It considers digital as an integrated ecosystem that involves Mobile, Wayfinding, Digital Signage and Customer Relationship Management (CRM).</p>
+<p><span style="font-weight: 400;">The </span><span style="font-weight: 400;"><em>Digital-Optimized Visitor Experience </em></span><span style="font-weight: 400;">is</span><span style="font-weight: 400;"> a digital “concierge” that empowers the visitor during their museum journey, from discovery to ticket purchase, followed by their visit (orientation, wayfinding, interpretation) and follow-up recommendations (podcasts, future exhibitions, membership). Alternating between mobile, digital signage, and touchscreen/monitor displays, visitors receive relevant information and suggestions based on their location both inside and outside the museum. E</span>xamples include in the following:</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">When the visitor is outside the museum, the mobile app promotes upcoming exhibitions and programs; once a ticket is purchased, the app displays visit information;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">After the visitor enters the museum and has their ticket scanned, the mobile app suggests tours and programs, as well as wayfinding;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Upon entering the galleries, the app provides interpretation as their audio guide, media player, and augmented reality viewer;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Once the visitor leaves the museum, they receive membership prompts and recommendations for podcasts and upcoming exhibitions and programs based on their interests (captured via online survey and spatial analytics).</span></li>
+</ul>
+<p><img loading="lazy" class="alignnone wp-image-1184" src="../../wp-content/uploads/2017/01/15A-DOVE.png" alt="" width="559" height="292" /> <img loading="lazy" class="alignnone wp-image-1185" src="../../wp-content/uploads/2017/01/15B-DOVE.png" alt="" width="560" height="291" /></p>
+<figure id="attachment_1186" aria-describedby="caption-attachment-1186" style="width: 560px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1186" src="../../wp-content/uploads/2017/01/15C-DOVE.png" width="560" height="289" /><figcaption id="caption-attachment-1186" class="wp-caption-text">Figure 16: Digital-Optimized Visitor Experience slides, from the Asian Art Museum’s presentation to staff (2016). Source: Jonathan Lee, Asian Art Museum</figcaption></figure>
+<p><span style="font-weight: 400;">The </span><em><span style="font-weight: 400;">Digital-Optimized Visitor Experience</span></em><i> </i><span style="font-weight: 400;">has generated much excitement for our board of directors, executives, and staff, likely taking us through the full Digital Transformation timeline (2018) to bring to life. However, we have taken steps to get started, focusing on mobile app strategy and wayfinding in the past year.</span></p>
+<p>One area where we hoped to provide digital leadership within the industry is in creating an accessible wayfinding experience. With museums starting to embrace digital solutions outside of galleries, wayfinding and digital signage have become two important areas of investment. In the past year, we have been inspired by the wayfinding experiences of the Natural History Museum and Field Museum.</p>
+<p><span style="font-weight: 400;">After meeting Guidekick at MW2016 and reviewing their work for the Fine Arts Museums of San Francisco, we discussed the possibility of collaborating on a touchscreen-enabled digital wayfinding kiosk that could help new visitors find their way around our historic building, which was previously San Francisco’s Main Library. </span></p>
+<h2>Case study: the digital wayfinding kiosk</h2>
+<p>The building: wayfinding challenges</p>
+<p><span style="font-weight: 400;">Although Gae Aulenti successfully transformed Kelham’s spacious building into a collection of warmly lit and intimate spaces, adaptive reuse of the building limited her ability to address the visitor circulation and flow issues, originally expressed by librarians. </span></p>
+<figure id="attachment_1190" aria-describedby="caption-attachment-1190" style="width: 524px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1190" src="../../wp-content/uploads/2017/01/16-First-Floor-Galleries.png" width="524" height="303" /><figcaption id="caption-attachment-1190" class="wp-caption-text">Figure 17: first floor Galleries. Source: Asian Art Museum</figcaption></figure>
+<p>The first floor special exhibition galleries include three spaces, called Osher, Hambrecht, and Lee, connected via North Court, with the Education Resource Center occasionally used as a fourth gallery. Exhibitions are designed to begin in Osher and continue through Hambrecht and Lee; physical signage is used to reinforce the visitor path.</p>
+<p>With more than 2,000 objects currently on view, the second and third floor collections galleries feature a horseshoe-shaped floor plan surrounding Samsung Hall, with elevators and escalators positioned at opposite ends of the building (a second elevator is available near the west entrance to Samsung Hall).</p>
+<figure id="attachment_1192" aria-describedby="caption-attachment-1192" style="width: 526px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1192" src="../../wp-content/uploads/2017/01/17-Collection-Gallery-Path.png" width="526" height="495" /><figcaption id="caption-attachment-1192" class="wp-caption-text">Figure 18: collection gallery desired visitor path. Source: Asian Art Museum</figcaption></figure>
+<p>The recommended visitor path starts as visitors step off the escalator and into the third floor South Asian galleries, continuing clockwise around the horseshoe to the <span style="font-weight: 400;">Chinese Galleries before 960</span><i><span style="font-weight: 400;">.</span></i><span style="font-weight: 400;"> Visitors can take the elevators or stairs to the second floor Chinese Galleries after 960, then walk counterclockwise around the horseshoe and finish in the Japanese galleries. Since the recommended visitor path begins and ends at the escalators, visitors who use the elevator or stairs must travel around the building a second time to reach the South Asia galleries or return to the first floor.</span></p>
+<p>While a digital solution cannot solve physical circulation and flow issues, it can provide a layer of interpretation to help route visitors to their destination more efficiently and confidently.</p>
+<h2>Project development</h2>
+<p>The Asian Art Museum’s digital transformation relies on collaborating with strategic partners to handle design and development capabilities. Following a conversation with Guidekick at MW2016, we invited them to the museum to discuss the wayfinding opportunity.</p>
+<p>Guidekick (<a href="http://www.guidekick.co/">http://www.guidekick.co</a>) creates digital experiences for museums and cultural attractions. Some of their other partners include Hearst Castle, the Legion of Honor, and the de Young Museum. Their de Young app was the first to offer dynamic mapping and indoor location tracking (Robson et al., 2016).</p>
+<p>At the core of their technology are interactive 3D maps that allow visitors to easily explore and understand multi-floored museums or historic sites. The mapping is particularly valuable for complex and unorthodox spaces, like ours.</p>
+<p>In early discussions with Guidekick it became clear we could apply the 3D mapping and wayfinding to other experiences, not just our mobile app. We shared a vision to offer a cohesive visitor digital experience across platforms, and because the museum was still under contract with a legacy mobile app provider, we started by developing a large touchscreen kiosk.</p>
+<p>We imagined physical touchscreen kiosks that visitors could use to explore a map and decide where they wanted to go. This would be the entry point to the ecosystem that would provide immediate value to visitors (museum overview, points of interest, navigation) while also serving as a primary tool to help market the mobile app and onboard users. The app would remember what was accessed on the kiosk, provide directions, and ultimately a deeper level of interpretive content.</p>
+<h2>The touchscreen-enabled digital wayfinding kiosk</h2>
+<h3>Pre-production</h3>
+<p>The Asian Art Museum tasked Guidekick with creating wayfinding software to take advantage of two 55-inch touchscreen kiosks. The kiosk software was developed over a six-month period starting in July 2016. It went through three rounds of formal usability testing and 14 rounds of design iteration.</p>
+<p><span style="font-weight: 400;">We started by defining our goals and the specific visitor needs around them (Klein et al., 2016). The project had several key objectives:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Allow visitors to quickly get a complete overview of museum art-focused offerings (Exhibitions, Collection Galleries, Masterpieces) and public spaces;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Provide turn-by-turn directions to points-of-interests (POI);</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Provide content in multiple languages, initially targeting the City of San Francisco’s Language Access Ordinance (LAO);</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Offer other accessibility features (e.g., text size, contrast, etc.).</span></li>
+</ul>
+<p><span style="font-weight: 400;">Next, we began looking at other wayfinding kiosks that were available and paid special attention to projects in other industries. Some of our biggest influencers on what works (and what doesn’t) included Westfield and Nordstrom’s. We took away several key points:</span></p>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">If the kiosk is against a wall or in the corner, it won’t get used;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Don’t try to assemble your own hardware;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Keep the experience quick and simple: three taps or less.</span></li>
+</ol>
+<p>The museum wanted to promote exhibitions, feature each collection, show event spaces, and present all of the amenities onsite. We needed to convey all of this information while keeping everything clear and concise. We also needed to design it in a way that would be future proof and stay current for an ever-changing physical environment.</p>
+<h2>A different type of browsing</h2>
+<p>On mobile, the primary experience Guidekick provides is based around exploration. As visitors explore the museum they are able to engage and learn about what’s around them. For the kiosk, we knew it would have to be the opposite. The first question is “What’s available to me?”, and the second question is &#8220;How do I get there?”</p>
+<p>It would also need to be an experience that’s quick to use. Since only one person can use it at a time, they would need to get their information and immediately make way for the next visitor.</p>
+<p>We began the project with a simple philosophy put forward in Knapp’s and Zeratsky’s &#8220;Sprint&#8221;: “Create a prototype with just enough quality to evoke honest reactions from customers” (Knapp et al., 2016), and iterated from there. Below are some early concept mockups paired with the final result; they illustrate some key design decisions and their evolution over time:</p>
+<p><em>Introduction/attract screen</em><br />
+It was important to figure out how to create an attract screen to let a visitor know the screen was interactive. We also had to allow them to select a language and begin a new session. We experimented with several user flows and ultimately concluded one step is better than two, only selecting a language.</p>
+<p>The original demo animation, to draw user attention, involved the map rotating and moving about the screen. While it looked impressive, it ultimately confused users. The final experience has a virtual finger tapping through to demo the experience in the same way a person would.</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" class="alignnone wp-image-1194" src="../../wp-content/uploads/2017/01/18-Early-Version-of-Sequence.jpg" alt="" width="526" height="296" /></p>
+<figure id="attachment_1195" aria-describedby="caption-attachment-1195" style="width: 526px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1195" src="../../wp-content/uploads/2017/01/19-Final-Intro_Sequence.jpg" width="526" height="395" /><figcaption id="caption-attachment-1195" class="wp-caption-text">Figures 19-20: an early version and the final version of the intro sequence. Source: Guidekick</figcaption></figure>
+<h4>Map tutorial</h4>
+<p>Another important attribute to the experience was the user understanding how map interaction works. They would need to know the map is sliced into three floors and that they can move between them. We also knew this would be an important tutorial for the future, as the museum’s mobile app behaves in a similar way.</p>
+<p><img loading="lazy" class=" wp-image-1197" src="../../wp-content/uploads/2017/01/20B-Final_Version-Floor-Selector.jpg" width="525" height="394" /></p>
+<figure id="attachment_1196" aria-describedby="caption-attachment-1196" style="width: 526px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1196" src="../../wp-content/uploads/2017/01/20A-Early-Mockup-of-floor.jpg" width="526" height="296" /><figcaption id="caption-attachment-1196" class="wp-caption-text">Figures 21-22: an early version and the final version of the floor selector screen. Source: Guidekick</figcaption></figure>
+<h4>Content browsing</h4>
+<p>One of the most complex attributes we needed to design was the content layout and interaction with the map.</p>
+<p>We knew the primary use case would be to find an item of interest, select it, and then see the location highlighted on the map (the alternative would have been to explore the map and tap on each icon to inspect what it was (something we wanted to avoid). This made the creation of menu interface a necessity.</p>
+<p>Content is broken down into tabs that define different categories of places within the museum. Banner items represent different points of interest within the museum. Tapping on a banner displays content about it and then transitions the map to reveal its location.</p>
+<p>One critical user testing discovery was confusion around the menu content and its association with the floors of the museum. Testers expected everything on the menu to be located on the first floor (the default), even though exhibitions in the menu might be shared across many floors. They also expect these to be located on the map by default.</p>
+<p>Our solution used colors and corresponding map icons to denote which banner items are on the floor currently elected. Testing proved this adjustment solved the conceptual problem.</p>
+<p><img loading="lazy" class=" wp-image-1200" src="../../wp-content/uploads/2017/01/21B-Final-Version-of-UI.jpg" width="526" height="296" /></p>
+<figure id="attachment_1199" aria-describedby="caption-attachment-1199" style="width: 523px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1199" src="../../wp-content/uploads/2017/01/21A-Early-Version-of-UI.jpg" width="523" height="294" /><figcaption id="caption-attachment-1199" class="wp-caption-text">Figure 23-24: an early version and the final version of the UI menu layout. Source: Guidekick</figcaption></figure>
+<h4>Content view</h4>
+<p><span style="font-weight: 400;">Unlike a mobile app with deeper interpretive content, the kiosk needed to relay a quick summary of important information. It would have to present text and visual content to the user that describes a point of interest. In early testing, one obstacle we experienced was clearly associating the content view with the map location. The final solution was to animate a line that connects to a highlighted area of the map. It draws the eye and clearly builds a mental connection.</span></p>
+<p><img loading="lazy" class="alignnone wp-image-1201" src="../../wp-content/uploads/2017/01/22A-Early-Version_Content_Detail.jpg" alt="" width="525" height="295" /></p>
+<p>&nbsp;</p>
+<figure id="attachment_1202" aria-describedby="caption-attachment-1202" style="width: 523px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1202" src="../../wp-content/uploads/2017/01/22B-Final-Version-Content-Detail.jpg" width="523" height="294" /><figcaption id="caption-attachment-1202" class="wp-caption-text">Figures 25-26: an early version and the final version of the UI menu layout (note the colored outline). Source: Guidekick</figcaption></figure>
+<h4>Indoor wayfinding</h4>
+<p><span style="font-weight: 400;">We also wanted to create a dynamic indoor navigation mode that would guide a visitor to their intended destination. This mode would not only have to provide the shortest path but also offer an accessible route. Directions would need to be human-readable and offered in multiple languages. While technically challenging, this was conceptually straightforward. Below you can see the design remained more or less unchanged. The biggest obstacle was the visitors’ attempts in remembering long or complex routes. While we’ve worked to make this as clear as possible, the mobile app allows visitors to take their directions with them.</span></p>
+<p><img loading="lazy" class=" wp-image-1204" src="../../wp-content/uploads/2017/01/23B-Final-Indoor-Navigation.png" width="525" height="295" /></p>
+<figure id="attachment_1203" aria-describedby="caption-attachment-1203" style="width: 525px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1203" src="../../wp-content/uploads/2017/01/23A-Early-Indoor-Navigation.jpg" width="525" height="295" /><figcaption id="caption-attachment-1203" class="wp-caption-text">Figures 27-28: An early mockup and the final version of indoor navigation. Source: Guidekick</figcaption></figure>
+<h4>User testing</h4>
+<p>Guidekick, with support from the museum, conducted two rounds of usability testing with the public and one round of usability testing with museum staff. At this point in the process we were focused on validation, measurement, and iteration (Klein et al., 2016).</p>
+<p>The Asian Art Museum&#8217;s social media team distributed a post on Facebook and Twitter to recruit testers. The post linked to a Google survey that gave further details, collected contact information, and asked some basic questions about their experience. The museum generously offered testers free admission, two passes for a future day, and a $20 visa gift card.</p>
+<figure id="attachment_1205" aria-describedby="caption-attachment-1205" style="width: 525px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1205" src="../../wp-content/uploads/2017/01/24-AAM-Social-Media.png" width="525" height="340" /><figcaption id="caption-attachment-1205" class="wp-caption-text">Figure 29: Asian Art Museum social media post soliciting testers. Source: Asian Art Museum</figcaption></figure>
+<p><span style="font-weight: 400;">Because the purpose of the kiosk was wayfinding, it was important we recruited testers who were not familiar with the museum layout. We were happily surprised a good number of respondents had never been to the museum (but they were following the museum on social media).</span></p>
+<h2>Testing results</h2>
+<p><span style="font-weight: 400;">Our first round of usability testing gave us the most direct feedback on our design assumptions that were in fact not clear. Here are some of our most important initial findings: </span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">100% had not interacted with masterpiece icons until prompted to by testing staff;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">75% thought main menu items were tied to current floor (in fact they listed content on multiple floors);</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">75% confused by what “spaces” meant;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">50% expected main menu items to be shown on map.</span></li>
+</ul>
+<figure id="attachment_1206" aria-describedby="caption-attachment-1206" style="width: 524px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1206" src="../../wp-content/uploads/2017/01/25-Trello-Board.png" width="524" height="293" /><figcaption id="caption-attachment-1206" class="wp-caption-text">Figure 30: Trello board snapshot of organized testing feedback. Source: Guidekick</figcaption></figure>
+<p><span style="font-weight: 400;">Subsequent user testing yielded much more specific points of confusion, a sign we were on the right track, as we tested through several more iterations.</span></p>
+<figure id="attachment_1207" aria-describedby="caption-attachment-1207" style="width: 526px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1207" src="../../wp-content/uploads/2017/01/26-Kiosk-for-First-Time.jpg" width="526" height="300" /><figcaption id="caption-attachment-1207" class="wp-caption-text">Figure 31: Staff using kiosk for the first time. Video available (https://www.youtube.com/watch?v=CYey2ieNpM4) Source: Guidekick</figcaption></figure>
+<p><strong>Bringing everything together</strong></p>
+<p><span style="font-weight: 400;">At the time of this paper, the kiosk is live but the mobile app and Web experience are in development. We plan to have significant progress and findings for our conference presentation at Museums and the Web 2017.</span></p>
+<p>The kiosk, serving as the entry point, helps onboard visitors to the mobile app. It gives a preview of the 3D mapping expected to be found in the app, passes download links to mobile phones, and synchronizes navigation instructions. If in a navigational state on the kiosk, you can pass off the directions to the app with &#8220;deep linking.&#8221;</p>
+<p><span style="font-weight: 400;">The app itself serves as the personal companion for the visitor. It includes the following:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Indoor positioning with point-to-point navigation</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Multimedia interpretive content of the collections</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Events and museum information</span></li>
+</ul>
+<p><span style="font-weight: 400;">The Web experience, on the official website, delivers a simplified version of the mapping experience on desktop Web browsers. It allows visitors to become familiar with the space and download the app, but does not offer features like indoor navigation.</span></p>
+<h2>Our results</h2>
+<figure id="attachment_1209" aria-describedby="caption-attachment-1209" style="width: 526px" class="wp-caption alignnone"><img loading="lazy" class=" wp-image-1209" src="../../wp-content/uploads/2017/01/27-Children-Using-Kiosk.jpg" width="526" height="395" /><figcaption id="caption-attachment-1209" class="wp-caption-text">Figure 32: children interacting with the wayfinding kiosk. Source: Guidekick</figcaption></figure>
+<p><span style="font-weight: 400;">We’ve seen early signs of success for the first two weeks of public placement of a single touch kiosk. In 14 days of usage the kiosk has had over 1,000 sessions with a daily average at 19% of museum visitors engaging with the experience.</span></p>
+<figure id="attachment_1210" aria-describedby="caption-attachment-1210" style="width: 572px" class="wp-caption alignnone"><img loading="lazy" class=" size-full wp-image-1210" src="../../wp-content/uploads/2017/01/Screen-Shot-2017-01-31-at-9.58.19-PM.png" width="572" height="350" /><figcaption id="caption-attachment-1210" class="wp-caption-text">Figure 33: daily wayfinding kiosk usage since being placed in South Court in January 2017</figcaption></figure>
+<p>Another exciting finding has been of language usage. Of all sessions, so far 25% have been Chinese users (Simplified and Traditional). 10% has been Spanish and 65% English. This has validated our decision to support localized content on the first version.</p>
+<p>One of the biggest obstacles of usage is having a single screen limited to one visitor at a time. Because of this, we expect the maximum possible amount of users on a given eight hour operational day being no more than 100-200 sessions. To solve this we will be rolling out additional kiosk screens in the museum.</p>
+<h2>Conclusion</h2>
+<p><span style="font-weight: 400;">The next 18 months will see the Asian Art Museum solidify its rollout of wayfinding kiosks, a new mobile app, Web updates, and digital signage. We will continue to update and present on our progress.</span></p>
+<p><span style="font-weight: 400;">It’s important that we think about the full technology ecosystem of a museum. New digital offerings must solve important problems for the institution and its visitors. By making them consistent and working together, we can further enhance their reach and opportunity for success. Creating a digital strategy and roadmap, earning institutional trust, and a holistic interconnected design are three pillars to a successful technology rollout.</span></p>
+<h2>References</h2>
+<p><span style="font-weight: 400;">Alexander, J., J. Barton, &amp; C, Goeser. (2013). &#8220;</span><span style="font-weight: 400;">Transforming the Art Museum Experience: Gallery One.&#8221; <em>MW 2013: </em></span><span style="font-weight: 400;"><em>Museums and the Web 2013</em>. Published April 2013. Consulted January 17, 2017. Available </span><a href="http://mw2013.museumsandtheweb.com/paper/transforming-the-art-museum-experience-gallery-one-2/"><span style="font-weight: 400;">http://mw2013.museumsandtheweb.com/paper/transforming-the-art-museum-experience-gallery-one-2/</span></a></p>
+<p><span style="font-weight: 400;">Asian Art Museum. (n.d.). </span><span style="font-weight: 400;">Our Mission</span><i><span style="font-weight: 400;">. </span></i><span style="font-weight: 400;">Last Updated 2017. Consulted January 22, 2017. Available </span><a href="http://www.asianart.org/about/"><span style="font-weight: 400;">http://www.asianart.org/about/</span></a></p>
+<p><span style="font-weight: 400;">Busch, N. (1968). &#8220;</span><span style="font-weight: 400;">Avery Brundage: Olympian of Asian Art</span><i><span style="font-weight: 400;">.&#8221;</span></i><span style="font-weight: 400;"><em> Reader’s Digest</em> October 1968, 5-6.</span></p>
+<p><span style="font-weight: 400;">Canadian Museum of Human Rights. (n.d.). </span><span style="font-weight: 400;">About.</span><i> </i><span style="font-weight: 400;">Last updated 2017.</span> <span style="font-weight: 400;">Consulted January 22, 2017. Available </span><a href="https://humanrights.ca/about"><span style="font-weight: 400;">https://humanrights.ca/about</span></a></p>
+<p><span style="font-weight: 400;">Chan, S, &amp; A, Cope, (2015). &#8220;</span><span style="font-weight: 400;">Strategies Against Architecture: interactive media and transformative technology at Cooper Hewitt.&#8221; <em>MW2015: </em></span><span style="font-weight: 400;"><em>Museums and the Web 2015.</em> Published April 2015. Consulted January 17, 2017. Available </span><a href="http://mw2015.museumsandtheweb.com/proposal/strategies-against-architecture/"><span style="font-weight: 400;">http://mw2015.museumsandtheweb.com/proposal/strategies-against-architecture/</span></a></p>
+<p><span style="font-weight: 400;">Counce, T-M. &amp; S. Stress. (2016). &#8220;</span><span style="font-weight: 400;">An architecture tour of the Asian Art Museum</span><i><span style="font-weight: 400;">.&#8221; </span></i><span style="font-weight: 400;">Audio and Text. Asian Art Museum, San Francisco, California.</span></p>
+<p><span style="font-weight: 400;">Fogg, B.J. (2016). &#8220;</span><span style="font-weight: 400;">What Causes Behavior Change?&#8221; BJ Fogg&#8217;s Behaviol Model. </span><span style="font-weight: 400;">Last updated 2016. Consulted January 22, 2017. Available </span><a href="http://behaviormodel.org/index.html"><span style="font-weight: 400;">http://behaviormodel.org/index.html</span></a></p>
+<p><span style="font-weight: 400;">Klein, L. (2016). </span><i><span style="font-weight: 400;">Build better products: a modern approach to building successful user-centered products</span></i><span style="font-weight: 400;">. Brooklyn, NY: Rosenfeld Media, 183.</span></p>
+<p><span style="font-weight: 400;">Knapp, J., J. Zeratsky, &amp; B, Kowitz. (2016). </span><i><span style="font-weight: 400;">Sprint:how to solve big problems and test new ideas in just five days</span></i><span style="font-weight: 400;">. New York: Simon &amp; Schuster, 170.</span></p>
+<p><span style="font-weight: 400;">Oberoi, S. &amp; K. Arnold. (2015). &#8220;</span><span style="font-weight: 400;">New Architectures for Online Collections and Digitation.&#8221; <em>MW2015: </em></span><span style="font-weight: 400;"><em>Museums and the Web 2015</em>. Published January 31, 2015. Consulted January 17, 2017. Available </span><a href="http://mw2015.museumsandtheweb.com/paper/new-architectures-for-online-collections-and-digitization/"><span style="font-weight: 400;">http://mw2015.museumsandtheweb.com/paper/new-architectures-for-online-collections-and-digitization/</span></a></p>
+<p><span style="font-weight: 400;">Robson, T., G. Castro, M. Paddon, &amp; A. Beaman. (2016). &#8220;</span><span style="font-weight: 400;">The de Young Museum App by Guidekick as a model for collaborative development, technological innovation, and visitor behavior insight.&#8221;</span><span style="font-weight: 400;"> <em>MW2016: Museums and the Web 2016</em>. Published January 28, 2016. Consulted January 18, 2017. Available </span><a href="http://mw2016.museumsandtheweb.com/paper/the-de-young-museum-app-by-guidekick-as-a-model-for-collaborative-development-technological-innovation-and-visitor-behavior-insight/"><span style="font-weight: 400;">http://mw2016.museumsandtheweb.com/paper/the-de-young-museum-app-by-guidekick-as-a-model-for-collaborative-development-technological-innovation-and-visitor-behavior-insight/</span></a><br />
+<span style="font-weight: 400;">Wikipedia (n.d.). </span><span style="font-weight: 400;">Adaptive Reuse. </span><span style="font-weight: 400;">Consulted January 20, 2017. Available </span><a href="https://en.wikipedia.org/wiki/Adaptive_reuse"><span style="font-weight: 400;">https://en.wikipedia.org/wiki/Adaptive_reuse</span></a></p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+Lee, Jonathan and Mark Paddon. "Creating the smart museum: the intersection of digital strategy, kiosks and mobile." <i>MW17: MW 2017</i>. Published February 1, 2017. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw17.mwconf.org/paper/creating-the-smart-museum-the-intersection-of-digital-kiosks-web-and-native-mobile/<br /><br /><hr>
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h2><p class="must-log-in">You must be <a href="../../wp-login43b6.html?redirect_to=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fcreating-the-smart-museum-the-intersection-of-digital-kiosks-web-and-native-mobile%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- .comments-area -->
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="text-7" class="widget widget_text">			<div class="textwidget"><h2 class="widget-title">Community Conveners</h2>
+<p><a title="Wezit" href="https://wezit.io/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/wezit-250-75.jpg" alt="Wezit" /></a><br />
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a></p>
+<h2 id="gold-sponsor" class="widget-title">Platinum Sponsor</h2>
+<p><a title="Microsoft" href="http://aka.ms/museweb" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/Microsoft-250-75.jpg" alt="Microsoft" /></a><br />
+<!-- <a title="Izi Travel" href="http://www.izi.travel" target="_blank" rel="noopener"><img src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/izi-250-75.jpg" alt="Izi Travel" class="sponsor-img sponsor-top" /></a> --></p>
+<h2 id="gold-sponsor" class="widget-title">Gold Sponsor</h2>
+<p><a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a></p>
+<h2 id="bronze-sponsor" class="widget-title">Bronze Sponsors</h2>
+<p><a title="MailChimp" href="https://mailchimp.com/resources/guides/mailchimp-for-nonprofits/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a><br />
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/netx-250-75.gif" alt="Netx" /></a><br />
+<a title="PatronTech" href="http://patrontechnology.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/patron-250-75.jpg" alt="PatronTech" /></a></p>
+<h2 id="conference-sponsor" class="widget-title">Conference Sponsors</h2>
+<p><a title="CMA" href="http://clevelandart.org/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/cma-250-75.jpg" alt="CMA" /></a><br />
+<a title="Rock &amp; Roll" href="http://www.rockhall.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/rrhf-250-75.jpg" alt="Rock &amp; Roll" /></a></p>
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+</body>
+
+<!-- Mirrored from mw17.mwconf.org/paper/creating-the-smart-museum-the-intersection-of-digital-kiosks-web-and-native-mobile/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 22:09:04 GMT -->
+</html>

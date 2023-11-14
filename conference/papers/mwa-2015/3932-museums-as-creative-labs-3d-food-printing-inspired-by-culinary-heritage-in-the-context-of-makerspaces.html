@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/museums-as-creative-labs-3d-food-printing-inspired-by-culinary-heritage-in-the-context-of-makerspaces/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:52:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Museums as creative labs: 3D food printing inspired by culinary heritage in the context of makerspaces | MWA2015: Museums and the Web Asia 2015</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/mw-theme/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mwa2015.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/wp-emoji.js?ver=5.6","twemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/twemoji.js?ver=5.6"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='../../wp-content/themes/twentyeleven/blockscb8b.css?ver=20190102' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexe3b6.html?p=487' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed39e5.json?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fmuseums-as-creative-labs-3d-food-printing-inspired-by-culinary-heritage-in-the-context-of-makerspaces%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed1282?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fmuseums-as-creative-labs-3d-food-printing-inspired-by-culinary-heritage-in-the-context-of-makerspaces%2F&amp;format=xml" />
+</head>
+
+<body class="paper-template-default single single-paper postid-487 wp-embed-responsive single-author two-column right-sidebar">
+<div id="page" class="hfeed">
+
+<style type="text/css">
+branding.img { height: auto; display: block; width: 100%; }
+#image  { position:relative;z-index:10;  }
+#text   { position:absolute; z-index:100; }
+#site-description { font-weight: normal; color: #fff; margin: 0 20px 20px 0;}
+#site-title a { color: #fff; }
+#site-title { margin-right: 20px; }
+</style>
+
+<header id="branding" role="banner">
+<hgroup>
+	<div id="text">
+<h1 id="site-title"><span><a href="../../index.html" rel="home">MWA2015: Museums and the Web Asia 2015</a></span></h1>
+<h2 id="site-description">The conference of Museums and the Web in Asia | October 5-8 | Melbourne, Australia</h2>
+	</div>
+</hgroup>
+
+			
+<div id="image"><a href="../../index.html"><img src="../../wp-content/uploads/2014/10/Melbourne-MWA2015.jpg" width="1000" height="250" alt="Museums and the Web Asia 2015" /></a></div>
+			
+			
+										
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-10"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="../../local-info/index.html">Local Info</a></li>
+	<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+	<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-16"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="../../exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="../../advertising-guildlines/index.html">Advertising Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="../../attending/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="../../workshop-program/index.html">Workshops</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../hobart-deep-dive/index.html">Hobart Deep Dive</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="../../attendees/index.html">Attendees</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<div id="primary">
+<div id="content" role="main">
+<article id="post-487" class="post-487 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">Museums as creative labs: 3D food printing inspired by culinary heritage in the context of makerspaces</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/Kaja Antlej/">Kaja Antlej</a>, <a target="_blank" href="https://www.museumsandtheweb.com/member/artech05/">Angelina Russo</a>, University of Canberra, Australia</p>
+<h2>Abstract</h2>
+In 2012 the Australian National Museum led a project called Urban Farming and the Agricultural Show which explored how agricultural shows, helped to shape understandings of the relationships between food, people and place. At the same time (2013) they released Food Stories, a program of digital content creation and publication which allowed audiences to share their food stories. Both initiatives represented a relatively traditional approach to the interpretation of food production and culinary heritage. 
+
+The introduction of 3D food printing brings another dimension to the curatorial and outreach endeavour. A 3D food printer is a special 3D printing system which enables the construction of parts using edible materials mainly from viscous materials (e.g. cheese, paté, dough, chocolate) and powdered substances (e.g. sugar).
+
+In this paper we explore how a museum can be used as a laboratory for engaging audiences in new food production and resultant interpretations of culinary heritage. A traditional cuisine is a rich source of creativity, as evidenced through the recent 3D food printing projects. See ChefJet, Foodini, Bocusini, Pancake Bot, Barilla's 3D pasta printer at EXPO 2015 and many other initiatives. However, 3D food printing in a museum context has yet to be explored. 
+
+Additionally, the potential of 3D food printing for the creative reinterpretation of culinary heritage is discussed in a context of burgeoning makerspaces, many of which are located in community spaces and equipped with rudimentary digital fabrication facilities. We underpin our paper by considering the opportunities afforded museums to act as creative laboratories, providing makerspaces which engage audiences in digital fabrication with access to significantly more expensive highly specialised equipment such as 3D food printers. This premise is supported by cases from NEW INC, the New Museum (NY) museum-led incubator which demonstrate the potential for museums to act as laboratories.</p>
+<p><b>Keywords:</b> makerspaces, 3D food printing, culinary heritage, social networks, community, active participation</p>
+<h1><strong>Introduction</strong></h1>
+<p>The preparation and consumption of local and global foods has never been more topical than it is today. Food security and nutrition issues explored at a global level (EXPO 2015: Feeding the Planet, Energy for Life), while the skills and practices associated with domestic food preparation are the subject of multiple reality TV-programs. Popular locally produced programs such as My Kitchen Rules and Master Chef (Bodey, 2015) are part of global franchises while, in the UK, The Great British Bake-off 2014 grand final drew more audience numbers (12.3 million) than the World Cup final (12.1 million) (Malnick, 2014). At the same time, new museums specifically dedicated to food and communities, but not affiliated with food industry, such as MOFAD (Museum of Food and Drink), are also arising (Merritt, 2015).</p>
+<p>In 2012 the Australian National Museum led a project entitled “Urban Farming and the Agricultural Show” which explored how agricultural shows helped to shape understandings of the relationships between food, people and place. In the following year (2013) they released “Food Stories”, a program of digital content creation and publication, which allowed audiences to share their food stories. In terms of re-use of heritage and creative participation of audiences, both initiatives represent a relatively traditional approach to the interpretation of food production and culinary heritage.</p>
+<p>In this paper we explore opportunities for museums to become creative labs pursuing creative reinterpretations of cultural content through the use of new digital fabrication technologies. 3D food printing is one of those technologies.</p>
+<p>3D food printing (Cohen et al., 2009), first introduced in 2006 (Lipson &amp; Kurman, 2013) is bringing another dimension to the curatorial endeavor. A 3D food printer is a special 3D printing system which enables the construction of parts using edible materials mainly from viscous materials (e.g. cheese, paté, dough, chocolate) and powdered substances (e.g. sugar).</p>
+<p>In this research we explore how a museum can be used as a laboratory for engaging audiences in new food production and resultant reinterpretations of culinary heritage. A traditional cuisine is a rich source of creativity, as evidenced through the recent 3D food printing projects. See Foodini (Molitch-Hou, 2015), ChefJet (Ngo, 2015), Bocusini (Biggs, 2015), Pancake Bot (Senese, 2015), Barilla&#8217;s 3D pasta printer at EXPO 2015 (Alec, 2015), Australian project EdiPulse (Khot et al., 2015) and many other initiatives.</p>
+<p>However, the potential of 3D food printing for the creative reinterpretation of culinary heritage in a context of a makerspace (Dougherty, 2013) in a museum at which visitors can be creatively engaged, has yet to be explored. Many burgeoning makerspaces, equipped with rudimentary digital fabrication facilities, are located in community spaces and science/cultural centers. Due to their rich resources, makerspaces are also entering into museums.</p>
+<p>In New York, NEW INC, the first museum-led incubator, demonstrates the potential for museums to act as creative laboratories. This innovative platform was established by the New Museum in 2013 to support creative professionals not only with their lab-like co-working space, but also with resources from the New Museum’s collection of contemporary art.</p>
+<p>Additionally, a few examples of 3D food printing in museums have already been introduced. For instance, in Sydney by Vivid Ideas 2013 and through the Eat the Collection project at the Powerhouse Museum (Museum of Applied arts and Sciences) collaborated with ten creative industry professionals on re-use of some of the museum objects (Kinski, 2013). During the public event, their reinterpretations were 3D printed in chocolate and visitors were invited to eat them.</p>
+<h2><strong>Culinary heritage of Slovenian Australians</strong></h2>
+<p>Throughout 2015 we conducted a research project exploring how digital technologies can aid younger generations of Slovenian Australians to preserve and communicate Slovenian culinary heritage in Australia. The central aim of the research was to explore how their creative participation in culinary heritage could enhance notions of identity as Slovenian Australians. Culinary heritage has long been connected with notions of identity and together they form an important part of intangible heritage and a universal way of bringing people together.</p>
+<p>Throughout the course of the research, 18 in-depth interviews were conducted among members (all generations and ages) of Slovenian ethnic groups in Australian cities. It was discovered that, for many of them, traditional Slovenian cuisine is still an important part of their lives. Since most traditional Slovenian dishes (especially desserts) require a great deal of preparation time, together with advanced cooking skills and knowledge, they are usually prepared by members of the older generations (mothers, grandmothers) for family gatherings during holidays or other special events. Therefore, it was decided that a Slovenian dessert would be chosen as a test case for creative reinterpretation through 3D printing.</p>
+<h1><strong>A creative reinterpretation of culinary heritage: A 3D printed Slovenian potica </strong></h1>
+<p><em>Potica</em> is one of the most typical Slovenian festive cakes. Among <em>gibanica</em> and <em>štruklji</em>, it is one of the most popular desserts also by Slovenian migrants in Australia. <em>Potica</em> (Figure 1) is made from a bread dough and filling such as walnut, tarragon, poppy seed and cottage cheese. It forms a large hollow cylinder and when cut, every slice has a nut-roll style shape.<br />
+<img src="https://slovenianaustraliancookhub.files.wordpress.com/2015/08/antlej-russo_figure1-web.jpg" alt="Figure 1: Slices of a poppy seed potica made by Jožica Koštrica, a Slovenian-Australian cooking expert from Canberra (Photo: Kaja Antlej). " width="600" /></p>
+<p>Figure 1: Slices of a poppy seed <em>potica</em> made by Jožica Koštrica, a Slovenian-Australian cooking expert from Canberra (Photo: Kaja Antlej).</p>
+<p>The characteristic <em>potica</em> has a central spiral, but through 3D food printing, <em>potica</em> can be created in a multitude of different shapes and can incorporate forms inspired by other Slovenian motifs (Razboršek, 1992) such as hearts, plants and flowers.</p>
+<p>Using <em>potica</em> as a test case, we explored the notion that museum visitors could creatively engage in the reinterpretation of the dessert by accessing digital fabrication technologies through museum makerspaces. The research hypothesized that participants in a museum (e.g. Immigration Museum) could use a special app to design their own image of a <em>potica</em> slice. The newly created image could be generated into a 3D model (Figure 2) and prepared for 3D printing. Since a two material (two syringes) 3D printer is needed, we propose to use Scientist 3D printer or a similar machine from Seraph Robotics, together with their software for generating multi-material print jobs from a single standard STL file. This 3D printer also represents a further development of a Fab@Home model 2, which was successfully used for 3D printing a prism-shaped cookie with a chocolate letter “C” in the interior (Lipton, et al., 2010).<br />
+<img src="https://slovenianaustraliancookhub.files.wordpress.com/2015/08/antlej-russo_figure2.jpg" alt="Figure 2: Visualisation of a 3D printed &lt;em&gt;potica&lt;/em&gt; cake (concept) (3D model: Kaja Antlej; texturisation and rendering: Nina Oman). " width="600" /></p>
+<p>Figure 2: Visualization of a 3D printed <em>potica</em> cake (concept) (3D model: Kaja Antlej; texturization and rendering: Nina Oman).</p>
+<h1><strong>Conclusions and Further Work</strong></h1>
+<p>The conceptual framework for creative reinterpretation of culinary heritage is one which requires further investigation. While conceptually, a 3D model of <em>potica </em>can be created and print files produced, there is much testing of dough and filling which would need to be carried out. The opportunity to use museum collection knowledge to aid this experimentation offers a unique opportunity to bring together collections, culinary heritage and digital fabrication in a new space of investigation and innovation. We contend that museum visitor engagement in the process of experimentation would go some way towards modelling how museum makerspaces can enact the notion of a creative laboratory. However, we underpin our work by considering the opportunities afforded museums to act as creative laboratories, providing makerspaces which engage audiences in digital fabrication with access to significantly more expensive highly specialized equipment such as 3D food printers.</p>
+<h1>Acknowledgements</h1>
+<p>The research has been made possible through the support of an Australian government 2015 Endeavour Research Fellowship (Postdoctoral Research) of Kaja Antlej at the Centre for Creative and Cultural Research, Faculty of Arts and Design, University of Canberra under supervision of Professor Angelina Russo and provided by the Australian Government Department of Education.</p>
+<h1>References</h1>
+<p>Antlej, K. (2015). “Inspired by Tradition: Exploring 3D Food Printing”. <em>Slovenian Australian Cook Hub</em>, May 19, 2015. Consulted August 7, 2015. Available at <a href="https://slovenianaustraliancookhub.wordpress.com/2015/05/19/inspired-by-tradition-exploring-3d-food-printing/" target="_blank">https://slovenianaustraliancookhub.wordpress.com/2015/05/19/inspired-by-tradition-exploring-3d-food-printing/</a></p>
+<p>Antlej, K., M. Kos &amp; J. Horvat (2013). “3D-tehnologije kot podpora muzejski razstavi industrijskega oblikovanja (<em>3D Technologies as a Support for Industrial Design Museum Exhibition</em>).” Doctoral thesis, University of Ljubljana.</p>
+<p>Antlej, K., &amp; S. J. Mächtig (2008). “<em>Razvoj industrijsko oblikovanega izdelka z uporabo 3D tehnologij</em> (The Development of an Industrially Designed Product through the Use of 3D Technologies).” Masters thesis, University of Ljubljana.</p>
+<p>Alec (2015). “Pasta maker Barilla to show off its 3D pasta printer at the Milan EXPO 2015”. 3ders, May 5, 2015. Consulted August 7, 2015. Available at <a href="http://www.3ders.org/articles/20150505-pasta-maker-barilla-to-show-off-its-3d-pasta-printer-at-the-milan-expo-2015.html" target="_blank">http://www.3ders.org/articles/20150505-pasta-maker-barilla-to-show-off-its-3d-pasta-printer-at-the-milan-expo-2015.html</a></p>
+<p>Biggs, J. (2015). “Bocusini Will 3D Print Your Food Like A Fine Robotic Pastry Chef”. <em>TechCrunch</em>, May 18, 2015. Consulted August 7, 2015. Available at <a href="http://techcrunch.com/2015/05/18/bocusini-will-3d-print-your-food-like-a-fine-robotic-pastry-chef/" target="_blank">http://techcrunch.com/2015/05/18/bocusini-will-3d-print-your-food-like-a-fine-robotic-pastry-chef/</a></p>
+<p>Bodey, M. (2015). “MKR cooks TV’s second best audience of 2015”. <em>The Australian, Business Review</em>, May 5, 2015. Consulted August 10, 2015. Available at <a href="http://www.theaustralian.com.au/business/media/mkr-cooks-tvs-second-best-audience-of-2015/story-e6frg996-1227336467108" target="_blank">http://www.theaustralian.com.au/business/media/mkr-cooks-tvs-second-best-audience-of-2015/story-e6frg996-1227336467108</a></p>
+<p>Cohen D.L., Lipton, J., Cutler, M., Coulter, D., Vesco, A. &amp; Lipson, H. (2009). “Hydrocolloid Printing: A Novel Platform for Customized Food Production.” In <em>Solid freeform fabrication proceedings, 20th Solid Freeform Fabrication Symposium (SFF’09)</em>. Austin, Texas. 807–818. Consulted August 7, 2015. Available at <a href="http://creativemachines.cornell.edu/sites/default/files/SFF09_Cohen1_0.pdf" target="_blank">http://creativemachines.cornell.edu/sites/default/files/SFF09_Cohen1_0.pdf</a></p>
+<p>Dougherty, D. (2013). &#8220;The Maker Mindset.&#8221; In M. Honey &amp; D. E. Kanter (ed.).<em> Design, Make, Play: Growing the Next Generation of STEM Innovators</em>. New York: Routledge, 7–11.</p>
+<p>Društvo ljubiteljev potice. Consulted August 10, 2015. Available at <a href="http://www.potice.si/" target="_blank">http://www.potice.si/</a></p>
+<p>EXPO 2015. Consulted August 7, 2015. Available at <a href="http://www.expo2015.org/en" target="_blank">http://www.expo2015.org/en</a></p>
+<p>Khot, R.A., R. Pennings &amp; F. F. Mueller (2015). “EdiPulse: Supporting Physical Activity with Chocolate Printed Messages”. In B. Begole, J. Kim, K. Inkpen &amp; W. Woo (eds.). <em>Proceedings of the 33rd Annual ACM Conference Extended Abstracts on Human Factors in Computing Systems, Seoul, CHI 2015 Extended Abstracts, Republic of Korea</em>, <em>April 18 &#8211; 23, 2015</em>. 1391–1396. Consulted August 7, 2015. Available at <a href="http://exertiongameslab.org/wp-content/uploads/2011/07/edipulse_wip_chi2015.pdf" target="_blank">http://exertiongameslab.org/wp-content/uploads/2011/07/edipulse_wip_chi2015.pdf</a></p>
+<p>Kinski, K. (2013). “Eat the Collection @ The Powerhouse Museum”. <em>Design Federation</em>, May 10, 2013. Consulted August 7, 2015. Available at <a href="http://www.designfederation.net/events-exhibitions/eat-the-collection-the-powerhouse-museum/">http://www.designfederation.net/events-exhibitions/eat-the-collection-the-powerhouse-museum/</a></p>
+<p>Lipson, H. &amp; M. Kurman (2013). <em>Fabricated: The New World of 3D Printing.</em> Indianapolis: John Wiley &amp; Sons, 134.</p>
+<p>Lipton, J., D. Arnold, F. Nigl, N. Lopez, D.L. Cohen, N. Noren, &amp; H. Lipson (2010). “Multi-Material Food Printing with Complex Internal Structure Suitable for Conventional Post-Processing.” In <em>Solid freeform fabrication proceedings, 21st Solid Freeform Fabrication Symposium (SFF’10)</em>. Austin, Texas. 809–815. Consulted August 7, 2015. Available at <a href="http://creativemachines.cornell.edu/sites/default/files/69-Lipton-Mutlimaterial food printing Final.pdf" target="_blank">http://creativemachines.cornell.edu/sites/default/files/69-Lipton-Mutlimaterial%20food%20printing%20Final.pdf</a></p>
+<p>Malnick, E. (2014). “BBC&#8217;s Bake Off draws greater audience than World Cup final”. <em>The Telegraph</em>, October 9, 2014. Consulted August 12, 2015. Available at <a href="http://www.telegraph.co.uk/culture/tvandradio/great-british-bake-off/11150740/More-tune-into-Great-British-Bake-Off-than-World-Cup-final.html" target="_blank">http://www.telegraph.co.uk/culture/tvandradio/great-british-bake-off/11150740/More-tune-into-Great-British-Bake-Off-than-World-Cup-final.html</a></p>
+<p>Merritt, E. (2015). “Beyond the Walls: A conversation with Peter Kim about creating a museum of food and community”, <em>Museum</em>, May/June, 2015, 43–49.</p>
+<p>Molitch-Hou, M. (2015). “The Foodini 3D Food Printer Hits Kickstarter!”, 3D Printing Industry, March 31, 2014. Consulted August 7, 2015. Available at <a href="http://3dprintingindustry.com/2014/03/31/3d-printer-foodini-food-kickstarter/" target="_blank">http://3dprintingindustry.com/2014/03/31/3d-printer-foodini-food-kickstarter/</a></p>
+<p>National Museum of Australia. <em>Food Stories.</em> Consulted August 7, 2015. Available at <a href="http://www.nma.gov.au/online_features/food_stories" target="_blank">http://www.nma.gov.au/online_features/food_stories</a></p>
+<p>National Museum of Australia. <em>Urban Farming and the Agricultural Show</em>. Consulted August 7, 2015. Available at <a href="http://www.nma.gov.au/online_features/urban_farming_agricultural_show/home" target="_blank">http://www.nma.gov.au/online_features/urban_farming_agricultural_show/home</a></p>
+<p>NEW INC. Consulted August 7, 2015. Available at <a href="http://www.newinc.org/" target="_blank">http://www.newinc.org/</a></p>
+<p>Ngo, D. (2015). “3D Systems unveils ChefJet 3D printers for those with a sweet tooth”, <em>CNET</em>, January 7, 2015. Consulted August 7, 2015. Available at <a href="http://www.cnet.com/products/3d-systems-chefjet-3d-printer/" target="_blank">http://www.cnet.com/products/3d-systems-chefjet-3d-printer/</a></p>
+<p>Razboršek, I. (1992). <em>Slovenska krasilna umetnost.</em> Celje: Mohorjeva družba.</p>
+<p>Senese, M. (2015). “Custom Flapjacks are Finally Here: PancakeBot Comes to Kickstarter”. Make:, April 8, 2015. Consulted August 7, 2015. Available at <a href="http://makezine.com/2015/04/08/pancakebot-kickstarter/" target="_blank">http://makezine.com/2015/04/08/pancakebot-kickstarter/</a></p>
+<p>Seraph Robotics. Consulted August 10, 2015. Available at <a href="http://www.scientist3d.com/" target="_blank">http://www.scientist3d.com/</a></p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+. "Museums as creative labs: 3D food printing inspired by culinary heritage in the context of makerspaces." <i>MWA2015: Museums and the Web Asia 2015</i>. Published August 14, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mwa2015.museumsandtheweb.com/paper/museums-as-creative-labs-3d-food-printing-inspired-by-culinary-heritage-in-the-context-of-makerspaces/<br /><br /><hr>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://mwa2015.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><hr>
+<h3 class="widget-title">Global sponsor</h3>
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a>
+
+<h3 class="widget-title">Platinum sponsor</h3>
+<a title="MailChimp" href="http://nonprofits.mailchimp.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a>
+
+<h3 class="widget-title">Gold sponsor</h3>
+<a title="AARNet" href="http://www.aarnet.edu.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/AARNet-250-75.jpg" alt="AARNet" /></a>
+
+<h3 class="widget-title">Silver sponsors</h3>
+<a title="CV" href="http://www.creative.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CV-250-75.jpg" alt="CV" /></a>
+<a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<h3 class="widget-title">Bronze sponsors</h3>
+<a title="Ruckus" href="http://www.ruckuswireless.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/ruckus-250-75.jpg" alt="Ruckus" /></a>
+
+<a title="CoM" href="http://www.melbourne.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CoM-250-75.jpg" alt="CoM" /></a>
+
+<a title="Lumicom" href="http://lumicom.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/lumicom-250-75.jpg" alt="CoM" /></a>
+
+<a title="Tomizone" href="http://tomizone.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/tomizone-250-75.jpg" alt="Tomizone" /></a>
+
+<h3 class="widget-title">Partner</h3>
+<a title="MV" href="http://museumvictoria.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/mv-250-100.jpg" alt="MV" /></a>
+
+<div style="text-align:right;"><a href="../../sponsorship-opportunities/index.html">become a sponsor</a></div>
+<hr></div>
+		</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/search?q=%40museweb+OR+%23museweb+OR+%23mwa2015" data-widget-id="519731970960400384">Tweets about "@museweb OR #museweb OR #mwa2015"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br />
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-5" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br />
+703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info@museumsandtheweb.com</p></div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+
+			
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/museums-as-creative-labs-3d-food-printing-inspired-by-culinary-heritage-in-the-context-of-makerspaces/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:52:42 GMT -->
+</html>

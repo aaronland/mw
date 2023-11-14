@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mw2015.museumsandtheweb.com/paper/data-driven-augmented-reality-for-museum-exhibits-and-lost-heritage-sites/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:43:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Data-driven enriched exhibits using augmented reality | MW2015: Museums and the Web 2015</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/mw-theme/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mw2015.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MW2015: Museums and the Web 2015 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW2015: Museums and the Web 2015 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw2015.museumsandtheweb.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-loginf76f.css?ver=1604079583' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='../../wp-content/themes/twentyeleven/blockscb8b.css?ver=20190102' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index03b0.html?p=905' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embede7c2.json?url=https%3A%2F%2Fmw2015.museumsandtheweb.com%2Fpaper%2Fdata-driven-augmented-reality-for-museum-exhibits-and-lost-heritage-sites%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed9555?url=https%3A%2F%2Fmw2015.museumsandtheweb.com%2Fpaper%2Fdata-driven-augmented-reality-for-museum-exhibits-and-lost-heritage-sites%2F&amp;format=xml" />
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	</head>
+
+<body class="paper-template-default single single-paper postid-905 custom-background wp-embed-responsive single-author two-column right-sidebar">
+<div id="page" class="hfeed">
+
+<style type="text/css">
+branding.img { height: auto; display: block; width: 100%; }
+#image  { position:relative;z-index:10;  }
+#text   { position:absolute; z-index:100; }
+#site-description { font-weight: normal; color: #fff; margin: 0 20px 20px 0;}
+#site-title a { color: #fff; }
+#site-title { margin-right: 20px; }
+</style>
+
+<header id="branding" role="banner">
+<hgroup>
+	<div id="text">
+<h1 id="site-title"><span><a href="../../index.html" rel="home">MW2015: Museums and the Web 2015</a></span></h1>
+<h2 id="site-description">The annual conference of Museums and the Web | April 8-11, 2015 | Chicago, IL, USA</h2>
+	</div>
+</hgroup>
+
+								
+<div id="image"><a href="../../index.html"><img src="../../wp-content/uploads/2014/03/cropped-chicago.jpg" width="1000" height="250" alt="Museums and the Web 2015" /></a></div>
+			
+			
+										
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-9"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-650" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-650"><a href="../../news/index.html">News</a></li>
+	<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+	<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="http://www.museumsandtheweb.com/conferences/">Conferences</a></li>
+</ul>
+</li>
+<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-25"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-563" class="ppr-rewrite menu-item menu-item-type-post_type menu-item-object-page menu-item-563"><a href="https://www.museweb.net/registration/">Registration</a></li>
+	<li id="menu-item-3256" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3256"><a href="../../attending/index.html">Rates</a></li>
+	<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="../../local-information/index.html">Conference Hotel</a></li>
+	<li id="menu-item-3263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3263"><a href="../../attending/local-eat-and-see/index.html">Local &#8211; Eat and See!</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="../../getting-around/index.html">Getting Around</a></li>
+	<li id="menu-item-458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-458"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-24" class="ppr-rewrite menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../call-for-proposals/index.html">Call for Proposals</a></li>
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+	<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	<li id="menu-item-416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-416"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+	<li id="menu-item-419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-23"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-562" class="ppr-rewrite menu-item menu-item-type-post_type menu-item-object-page menu-item-562"><a href="https://www.museweb.net/exhibitor-registration/">Exhibitor Registration</a></li>
+	<li id="menu-item-560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-560"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-561"><a href="../../exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-395"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-665" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665"><a href="../../advertising-guildlines/index.html">Advertising Guildlines</a></li>
+</ul>
+</li>
+<li id="menu-item-426" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-426"><a href="../../conference/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-559"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-3471" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3471"><a href="../../mwx/index.html">MWX 2015</a></li>
+	<li id="menu-item-601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-3276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3276"><a href="../../workshop-program/index.html">Workshops</a></li>
+	<li id="menu-item-1438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1438"><a href="../../best-of-the-web/index.html">Best of the Web</a>
+	<ul class="sub-menu">
+		<li id="menu-item-3451" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3451"><a href="../../best-of-the-web-winners/index.html">Best of the Web Winners</a></li>
+		<li id="menu-item-1436" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1436"><a href="../../best-of-the-web-nominees/index.html">Best of the Web Nominees</a></li>
+		<li id="menu-item-1437" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1437"><a href="../../best-of-the-web-criteria/index.html">Best of the Web Criteria</a></li>
+	</ul>
+</li>
+	<li id="menu-item-558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-558"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-427" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-427"><a href="../../committees/index.html">Committees</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<div id="primary">
+<div id="content" role="main">
+<article id="post-905" class="post-905 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">Data-driven enriched exhibits using augmented reality</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/RobWarren/">Rob Warren</a>, Big Data Institute, Canada, <a target="_blank" href="https://www.museumsandtheweb.com/member/dfevans/">David Evans</a>, University of Derby, UK, <a target="_blank" href="https://www.museumsandtheweb.com/member/MChenDerby/">Minsi Chen</a>, University of Derby, UK, <a target="_blank" href="https://www.museumsandtheweb.com/member/m4farrel/">Mark Farrell</a>, Dalhousie University, Canada, <a target="_blank" href="https://www.museumsandtheweb.com/member/dmayles/">Daniel Mayles</a>, University Of Derby, UK</p><h2>Abstract</h2>
+We review the possibilities, pitfalls, and promises of recreating lost heritage sites and historical events using augmented reality and "Big Data" archival databases. We define augmented reality as any means of adding context or content, via audio/visual means, to the current physical space of a visitor to a museum or outdoor site. Examples range from simple prerecorded audio to graphics rendered in real time and displayed using a smartphone.
+
+Previous work has focused on complex multimedia museum guides, whose utility remains to be evaluated as enabling or distracting. We propose the use of a data­-driven approach where the exhibits' augmentation is not static but dynamically generated from the totality of the data known about the location, artifacts, or event. For example, at Bletchley Park, reenacted audio conversations are played within rooms as visitors walk through them. These can be called "virtual contents," as the audio recordings are manufactured. Given that a number of documentary sources, such as meeting minutes, are available concerning the events that occurred within the site, a dynamic computer-generated script could add to the exhibits.
+
+Visitors' experiences can therefore react to their movements, provide a different experience each time, and be factually correct without requiring any expensive redesign. Furthermore, the use of a data-driven approach allows for the updating of exhibits on the fly as researchers create or curate new data sources within the museum. If artifacts need to be removed from an exhibit, pictures, descriptions, or three-dimensional printed copies can be substituted, and the augmented reality of visitor experience can adapt accordingly.</p>
+<p><b>Keywords:</b> Augemented Reality, Linked Data Driven, Virtual Exibits, Story Line Generation</p>
+<div class="page" title="Page 1">
+<div class="layoutArea">
+<div class="column">
+<h2>1. Introduction</h2>
+<p>In this paper, we explain how museum exhibits can be made interactive and non-fatiguing for visitors using augmented reality and archival databases. The goal is to create links between the visitor’s immediate surroundings, as affected by his or her actions, and information held by the museum. Previous work has focused on complex multimedia museum guides, whose utility remains to be evaluated as enabling or distracting (Rogers et al., 2015). This is of particular concern given our broad definition of augmented reality as any means of adding context or content, via any audio/visual means, to the current physical space of the visitor. We believe that this definition captures the range of techniques that may be used to supplement the physical space; examples range from simple prerecorded audio to graphics rendered in real time and displayed using a smartphone.</p>
+<div class="page" title="Page 2">
+<div class="layoutArea">
+<div class="column">
+<p>We propose the use of a data-driven approach where exhibits’ augmentation is not static but dynamically generated from the totality of the data known about the location of artifacts, events connected with them, and visitor behavior. For example, at Bletchley Park, reenacted audio conversations are played within rooms as visitors walk through them. Given that a number of documentary sources, such as meeting minutes, are available concerning the events that occurred within the site, a dynamic computer-generated script could add to the exhibits.</p>
+<div class="page" title="Page 2">
+<div class="layoutArea">
+<div class="column">
+<p>Therefore, visitors’ experiences can be tailored to their movements and behaviour, providing a different experience each time. This can be done whilst ensuring anything presented to the visitor is factually correct, and be done without requiring expensive redesign. Furthermore, the use of this data-driven approach allows for the updating of exhibits on-the-fly as researchers create or curate new data sources within the museum. If artifacts need to be removed from an exhibit, pictures, descriptions or three-dimensional printed copies can be substituted, and the augmented reality of visitor experience can adapt accordingly.</p>
+<div class="page" title="Page 2">
+<div class="layoutArea">
+<div class="column">
+<p>In this paper, we present a method to build these data-driven augmented reality exhibits and apply it to three case studies. The first entails creating bespoke biographies of Joseph Wright of Derby, an eighteenth-century painter closely associated with the Enlightenment. Next, we examine the application of the technique outdoors, using it to convey information about Croxden Abbey, a ruined heritage site in the English Midlands. Finally, we examine the house of Anne Frank, combining the surviving structures and documents with the knowledge about its contents contained within her diary to form multiple alternative arrangements of the objects within the room exhibits.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>This paper is organized as follows: Section 2 begins by summarising previous work, whilst Section 3 describes our methodology and how it may be applied to various items of different media. Section 4 demonstrates this methodology by applying it to the three case studies outlined above; Section 5 concludes.</p>
+<div class="page" title="Page 2">
+<div class="layoutArea">
+<div class="column">
+<h2>2. Previous work</h2>
+</div>
+</div>
+</div>
+<div class="page" title="Page 2">
+<div class="layoutArea">
+<div class="column">
+<p>Exhibits design has enjoyed a long tradition, dating back to the Middle Ages (Taxén, 2004), of creating displays to convey information. The idea of using databases and outside information to drive the behaviour of exhibits is not completely new. The exhibit created by Kelly et al. (Kelly, 2014) makes use of the data extracted from archival documents to plot the routes taken by convict ships. The Great Map at the National Maritime Museum can, among other inputs, react to real-time AIS tracking of ships outside the museum (Chiles &amp; Blaser, 2014). The <a href="http://www.fortyork.ca/featured-attractions/exhibits-menu.html">Watertable</a> exhibit at Fork York, Canada, represents the shoreline as where it was during the exhibit period using a LED-based shoreline on the ground that also reacts to local wind conditions.</p>
+<div class="page" title="Page 3">
+<div class="layoutArea">
+<div class="column">
+<p>Other uses of sensors have been reviewed in the Storyteller system, in which a cell phone guides a visitor through a museum using a series of way points realised by hardware beacons (Hart &amp; Brownbill, 2014). A similar system using a GPS-enabled cellphone was used to make a virtual guide of Marseilles that would narrate and represent the city it as it was in different time periods (Dupuy, 2014). The goal of applying these technologies to exhibit design is to avoid the ongoing problem of visitor fatigue (Davey, 2005) through the creation of exhibits that engage the visitor using the right amount of dynamism and information.</p>
+<p>A precondition for these approaches to work is the existence of a strong technology component within the culture of the museum and the availability of the data in a digital format. Punzalan and Butler (2014) have cited some concern that digitization sometimes proceeds without a clear plan, and Royston and Delafond (2014) speak of the necessity of using a “computer club” approach to the use of digital methods since this is no longer an IT department competence.</p>
+<div id="attachment_1045" style="width: 310px" class="wp-caption alignleft"><a href="../../wp-content/uploads/2015/01/rmuseum.png"><img aria-describedby="caption-attachment-1045" loading="lazy" class="size-medium wp-image-1045" src="../../wp-content/uploads/2015/01/rmuseum-300x139.png" alt="Figure 1: A virtual exhibit of picture frames drawn from the        Rijksmuseum collection." width="300" height="139" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/rmuseum-300x139.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/rmuseum-500x231.png 500w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/rmuseum.png 632w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1045" class="wp-caption-text">Figure 1: A virtual exhibit of picture frames drawn from the<br />Rijksmuseum collection</p></div>
+<div class="page" title="Page 3">
+<div class="layoutArea">
+<div class="column">
+<p>Museums such as the <a href="https://www.rijksmuseum.nl/">Museum of the Netherlands</a> have embraced a Linked Open Data approach that allows for the use of its data holdings both within and without of the museums. The virtual exhibit in figure 1 is a simulated gallery created dynamically for a certain historical period. The <a href="http://www.rmg.co.uk/national-maritime-museum">National Maritime Museum</a> in Greenwich, England, similarly makes its collection information available through an <a href="http://collections.rmg.co.uk/page/76fd680cdfa46b8848f3a719e15a6772.html">API</a> that allows for the querying of artifacts based on arbitrary conditions, such as the metal composition of a propeller on display. We believe that the availability of this content and these data is an opportunity for augmented reality that should be seized by museums.</p>
+<div class="page" title="Page 3">
+<div class="layoutArea">
+<div class="column">
+<h2>3. Proposed method</h2>
+<p>We advocate a method that is straightforward to apply for curators who are familiar with their collections. This is important, as curation skills and knowledge are valuable. Furthermore, this method may be applied piecemeal, permitting a small amount of exhibit customization at the beginning of a project. The method is as follows:</p>
+<div class="page" title="Page 4">
+<div class="layoutArea">
+<div class="column">
+<ol>
+<li>Survey physical artifacts to determine interaction points (i.e., the places where the visitor’s movement interacts with material)</li>
+<li>Select mechanisms to detect visitors’ arrival at these interaction points: location (indoor, outdoor, image-assisted), actions, in-game behaviour, and so on</li>
+<li>Map these mechanisms to the artifacts and select, for each interaction, an appropriate method of playout</li>
+</ol>
+<div class="page" title="Page 4">
+<div class="layoutArea">
+<div class="column">
+<p>We now explain in more detail.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page" title="Page 4">
+<div class="layoutArea">
+<div class="column">
+<h3>3.1 Surveying artifacts</h3>
+<p>This stage requires a good understanding of the collection. The goal is to find <em>interaction points</em> that provide links between visitor behaviour and the objects to be exhibited. This must be done with thought for the story that the exhibit should tell and the tone that should be struck.</p>
+<p>Importantly, a single object may suggest multiple interaction points. The nature of these depends on the type of object in question. We imagine at least the following:</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page" title="Page 4">
+<div class="layoutArea">
+<div class="column">
+<h4>3.1.1 Audio recordings</h4>
+<p>The interaction points for an audio recording relate to where it should be heard by visitors in order to enhance their experience. This may correspond to a physical space, such as where a visitor enters the location (actual or reconstructed) where the recording was made. However, interaction points may correspond to a series of actions on the part of the visitor. For example, if a metal blade was manufactured using a particular technique, sounds may be played when a visitor has picked up a hammer and held it next to an appropriate anvil.</p>
+<h4>3.1.2 Pictures and paintings</h4>
+<p>A picture may have an interaction point at the location the picture depicts, that where it was taken, that where it is displayed, or elsewhere that refers to it. Other possibilities include patterns of attention or interaction with objects depicted in the picture or information about patrons or clients of the artist. The interaction points for a painting are similar, with some relating to more abstract concepts of style, technique, and historical context having more potential prominence. For example, visitor proximity to displays of pigment ingredients may be of interest.</p>
+</div>
+</div>
+</div>
+<div class="page" title="Page 5">
+<div class="layoutArea">
+<div class="column">
+<h4>3.1.3 Text</h4>
+<p>Textual material may have interaction points corresponding to locations mentioned explicitly, those that are implied, or scenes that are similar (such as a museum on a riverbank connecting with Mark Twain’s descriptions of the Mississippi). In these cases, the interaction point will be visitors being in those locations. The text may also reference other artifacts within the collection, again explicitly, implicitly, by style, or through some common element such as date or reference to a particular individual. In these cases, the interaction points will involve the other artifact, such as being in its location, examining it, or interacting with it in some other way.</p>
+<h3>3.2 Visitor action detection</h3>
+<p>This stage entails detecting visitor behaviour that will be linked to interaction points. Such detection may involve physical attributes of the visitor, such as location, dwell time, or direction of attention. Furthermore, the behaviour of interest may be a series of these actions.</p>
+<div class="page" title="Page 5">
+<div class="layoutArea">
+<div class="column">
+<p>These techniques assume that the visitor has a physical presence within a solid exhibit. With “virtual exhibits” this will not be the case, and different methods of detection must be used. Fortunately, in such virtual settings any means of interaction will be through software, and so user behaviour is necessarily available for analysis. For example, a web-based presentation will involve requests to the Web server, so these may be recorded to establish the pattern of visitor behaviour.</p>
+<div class="page" title="Page 5">
+<div class="layoutArea">
+<div class="column">
+<p>Similarly, user interaction with an immersive game-like experience will necessitate processing of information from controllers. Consumer-grade devices such as <a href="http://www.microsoft.com/en-us/kinectforwindows/">Kinect</a> and <a href="https://www.oculus.com/">Oculus Rift</a> are capable of enabling intuitive interactions with virtual reality by sensing users’ actions.</p>
+<div class="page" title="Page 5">
+<div class="layoutArea">
+<div class="column">
+<p>When presented with an accurately reconstructed virtual environment, virtual visitors can produce interaction data useful for understanding the space utilization of an exhibition. Furthermore, virtual and physical visitors can be connected by coupling their interactions. Enabling virtual visitors to interact with those physically present at a exhibition can potentially unify the experience for both types of audience and provide each with a similar data-driven experience. The virtual gallery of figure 1 can be customized to certain tastes and historical eras by a simple <a href="http://blog.muninn-project.org/node/80">modification of the query of the underlying art catalogue</a>.</p>
+<div class="page" title="Page 5">
+<div class="layoutArea">
+<div class="column">
+<h3>3.3 Interaction point-object mapping</h3>
+<p>This entails creating links between the interaction points found within the museum’s collection and the physical reification of the exhibit as reflected in user behaviour. These links form the focus for exhibit customization, ensuring that any such is confined to one logical part of the process rather than scattered in an ad hoc fashion. The simplest result might be non-repetitious background events that occur within the exhibit, such as conversations or Morse code transmissions, that are derived from messages in the museum’s collection and triggered by visitor movement.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2>4. Case studies: Our methodology in action</h2>
+<div class="page" title="Page 6">
+<div class="layoutArea">
+<div class="column">
+<p>Here we describe the use of our methodology in three situations, in each case linking data about museum collections, historical artifacts, or archaeological ruins to actions of visitors in order to create interactive exhibits that are not exhausting.</p>
+<p>It should be noted that these case studies are examples only. Far more sophisticated exhibits could be constructed using the same methodology.</p>
+<div class="page" title="Page 6">
+<div class="layoutArea">
+<div class="column">
+<h3>4.1 Biographies of Joseph Wright</h3>
+<p><a href="http://en.wikipedia.org/wiki/Joseph_Wright_of_Derby">Joseph Wright of Derby</a>, one of the preeminent painters of the eighteenth century, was born in Derby in about 1735. He is known for his use of shadow and depictions of the Enlightenment. His connection with Derby means that <a href="http://www.derbymuseums.org/">Derby Museums</a> is the custodian of perhaps the largest collection of Joseph Wright material in the world (Fineran, 2005), including housing <a href="http://www.derbymuseums.org/institute/">The Joseph Wright Institute</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Currently there is no link between the displayed paintings of Wright and the other information held by the museum, particularly that which is biographical. This forms a perfect opportunity for augmentation. Although visitors may make connections themselves, their museum visits will be enriched if they are helped to do so in a non-exhausting way. This case study illustrated how this might be done by constructing, for each visitor, a bespoke biography of Wright based on the order in which that visitor viewed his paintings. This ensures an intimate connection between the facts of the biography and the experience of the visitor.</p>
+<div class="page" title="Page 6">
+<div class="layoutArea">
+<div class="column">
+<p>We approach this through a straightforward application of the method described in section 3.</p>
+<div class="page" title="Page 6">
+<div class="layoutArea">
+<div class="column">
+<p><strong>Forming interaction points:</strong> The most visible artifacts that concern us are Wright’s paintings, and visitors interact with a painting by looking at it. This means that each painting on display has one interaction point, namely visitor proximity. This is a strict subset of the interaction points described in section 3.1.2.</p>
+<p>At the same time, the museum is in possession of biographical material. A subset can be organized into a series of event descriptions with accompanying dates (whilst simplistic, one can think of this as the “gateway” to deeper understanding of Wright’s life, career, and historical context). Each of these events has “interest” as its interaction point; a visitor either wants to know about the event or does not.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page" title="Page 6">
+<div class="layoutArea">
+<div class="column">
+<p><strong>Mechanism construction:</strong> Implementation is focused on detecting visitor interest in specific paintings and constructing an ordered list of these for each visitor. This is based on proximity detection; along with Derby Museums, we are currently experimenting with commercial solutions such as <a href="https://developer.apple.com/ibeacon/">iBeacon</a> to determine what functions well <em>in situ</em>.</p>
+<div class="page" title="Page 7">
+<div class="layoutArea">
+<div class="column">
+<p>There is no need to detect behaviour associated with the biographical information, as visitors do not interact with it.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page" title="Page 7">
+<div class="layoutArea">
+<div class="column">
+<p><strong>Mapping to objects:</strong> The mapping between visitor actions and objects is straightforward. The paintings’ interaction points are the physical behaviour of visitors, so these links are made necessarily. Each painting tends to have its date of creation known, so the resulting list of these is used to identify biographical entries that correspond to the paintings visited. These entries are ordered by the sequence of visits. This creates a mapping between the paintings (the “physical reification of the exhibit” referred to in section 3.3) and the interaction points of the biographical entries. Given this series of biographical entries, construction of the bespoke biography is a matter of automated text composition.</p>
+</div>
+</div>
+</div>
+<div class="page" title="Page 7">
+<div class="layoutArea">
+<div class="column">
+<h3>4.2 Recreating Croxden Abbey</h3>
+<p>Croxden Abbey is situated near the town of Uttoxeter, United Kingdom. The site comprises a number of buildings of Cistercian architecture that were constructed throughout the twelfth and thirteenth centuries. However, the ruination of the abbey that began in the mid-sixteenth century has by now reduced the site to a number of isolated church walls and arches. Locations such as Croxden embody the rich historical significance of its surrounding region. <a href="https://www.english-heritage.org.uk/daysout/properties/croxden-abbey/">English Heritage</a> is one of the main stakeholder organisations responsible for the preservation and management of heritage architectures in England, and they disseminate <a href="http://services.english-heritage.org.uk/ResearchReportsPdfs/094-2009WEB.pdf">survey reports on sites such as Croxden Abbey</a> containing detailed accounts of the sites’ rich history. Due to Croxden’s connection to Staffordshire, many related records can also be found in regional libraries such as the <a href="http://www.staffordshire.gov.uk/leisure/archives/williamsalt/home.aspx">William Salt Library</a>.</p>
+<p>In comparison to indoor exhibits, outdoor heritage sites offer a limited extent of textual and visual materials. Nonetheless, the stone walls and foundations that remain at the site are the central attraction to visitors. From a technical perspective, this site also posts an interesting challenge, as it is completely situated in the rural wilderness.</p>
+</div>
+</div>
+</div>
+<div class="page" title="Page 7">
+<div class="layoutArea">
+<div class="column">
+<p><strong>Forming interaction points:</strong> In the case of Croxden Abbey, the key interaction points revolve around its architectural remains. The most prominent vertical structure standing is a section of walls belonging to the destroyed church. In addition, the relatively intact foundations can reveal the expansive size formerly occupied by the abbey. Visitors can also find a number of bulletin boards and tablets containing text and paintings describing the key historical significance of the site.</p>
+<p>We assumed that photography is one of the main activities visitors undertake when walking through heritage sites. With geotagging facilities, the combination of image content and GPS coordinates provide useful information to identify a visitor’s location and view orientation. On the virtual spectrum, the experience of virtual tourism has been enriched through the recreation of lost heritage and ruins in virtual reality (Laycock et al., 2008; Lercari et al., 2011). This enables virtual visitors to travel through time and</p>
+<div id="attachment_1046" style="width: 310px" class="wp-caption alignleft"><a href="../../wp-content/uploads/2015/01/croxden_abbey_overview.jpg"><img aria-describedby="caption-attachment-1046" loading="lazy" class="size-medium wp-image-1046" src="../../wp-content/uploads/2015/01/croxden_abbey_overview-300x258.jpg" alt="Figure 2: The floor plan of Croxden Abbey was registered to the satellite view of the site in Google Earth (Google Inc.)." width="300" height="258" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/croxden_abbey_overview-300x258.jpg 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/croxden_abbey_overview-1024x880.jpg 1024w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/croxden_abbey_overview-349x300.jpg 349w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/croxden_abbey_overview.jpg 1060w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1046" class="wp-caption-text">Figure 2: The floor plan of Croxden Abbey was registered to the satellite view of the site in Google Earth (Google Inc.)</p></div>
+<p>appreciate the heritage artifacts in their original state. Linking the virtual and physical space using the mechanism of augmented reality can enrich the experience of actual visitors at these historical locations as they view the site through the lenses of a camera.</p>
+</div>
+</div>
+</div>
+<div class="page" title="Page 8">
+<div class="layoutArea">
+<div class="column">
+<p><strong>Mechanism construction:</strong> Croxden Abbey, being an outdoor heritage site, all but eliminates the possibility of using purposely built sensing infrastructure for visitor tracking. Consequently, we must rely on the sensing capability of mobile devices (e.g., cell phones, tablets) carried by visitors. The outdoor environment is advantageous for GPS-based location services, so GPS coordinates can be used to “tag” a virtual model of the abbey. This enables us to link the physical and virtual spaces using a common coordinate system. As shown in figure 2, a scaled floor plan was overlaid over a satellite image of the site in order to map out the physical dimension and location of each individual building within the abbey. Using this method, we can register the virtually recreated abbey to its physical location by pinning various key features using their corresponding coordinates.</p>
+<div id="attachment_1047" style="width: 310px" class="wp-caption alignright"><a href="../../wp-content/uploads/2015/01/croxden_ar.jpg"><img aria-describedby="caption-attachment-1047" loading="lazy" class="size-medium wp-image-1047" src="../../wp-content/uploads/2015/01/croxden_ar-300x225.jpg" alt="Figure 3: An in-situ visualization of the Croxden Abbey's main church using augmented reality." width="300" height="225" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/croxden_ar-300x225.jpg 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/croxden_ar.jpg 1024w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/croxden_ar-400x300.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1047" class="wp-caption-text">Figure 3: An in situ visualization of the Croxden Abbey&#8217;s main church using augmented reality</p></div>
+</div>
+</div>
+</div>
+<p><strong>Mapping to objects:</strong> The main customizable features here are the architectural remains, which can be replaced with fully reconstructed virtual models. Through the use of visual augmented reality, the virtual models can be visualized in situ. Figure 3 shows an augmented view of the Croxden Abbey site when viewed from the remains of the church wall. In this case, the main church was recreated by an artist using related paintings and textual references describing the architectural features of the iconic church. When exploring the site in virtual reality, visitors can register their locations and views within the virtual space. For visitors who are physically present at the site, a geotagged photo can be used to retrieve the corresponding component of the virtual model. This was used to achieve the initial registration for the augmentation of the abbey.</p>
+<div class="page" title="Page 9">
+<div class="layoutArea">
+<div class="column">
+<h3>4.3 Anne Frank House</h3>
+<p>The <a href="http://www.annefrank.org/">Anne Frank House</a> is a museum dedicated to the memory of Anne Frank, who hid from the Nazi occupation of Holland in a hidden section of an office building for over two years. Some of the museum exhibits attempt to reconstruct the life of the people who hid in it during that period based on some pictures, the memory of witnesses, and documents salvaged before the authorities removed the contents of the hiding place. The reconstruction is therefore the result of a process that aggregates these sources of information and materializes them into a display for public consumption.</p>
+<div class="page" title="Page 9">
+<div class="layoutArea">
+<div class="column">
+<p>The creation and augmentation of an exhibit using a data-driven approach is limited by the availability of the information and, in the case of a physical exhibit, the technology available to augment the physical objects. Anne’s slippers are known to have been stored mostly in her room according to her August 4, 1943, diary entry, yet only limited interactivity is possible with such an artifact. However, she is reading <em><a href="http://en.wikipedia.org/wiki/Trygve_Gulbranssen">Beyond Sing the Woods</a></em> according to her October 20, 1942, entry, mostly in her room. Of course, the interaction can be over the course of several hours or weeks, and the exhibit can be manually changed by staff according to a schedule that is created using data, though of course the manpower costs of doing so are high: the nighttime slipper might be missing from the bedroom early in the morning or late in the evening.</p>
+<div class="page" title="Page 10">
+<div class="layoutArea">
+<div class="column">
+<p><strong>Forming interaction points:</strong> Points of interaction with the visitors are difficult in this context. The treatment of someone’s personal effects can be an emotional topic, and Anne Frank’s eventual death at the Bergen-Belsen concentration camp, make it doubly so. The available interaction points lie primarily in the possibilities of linguistics interpretation, environmental noise generation, and the temporal behaviours of exhibit artifacts.</p>
+<p>Given the international draw of the museum, not all visitors have the same linguistic background, and reasonable attempts are made by museums to provide interpretations in alternate languages for accessibility reasons. We note that in some cases, it may be possible to have some artifacts accommodate these translation needs.</p>
+<p>Time is a powerful and interpretive neutral control that the visitors can exercise over the exhibit. It allows for a fuller experience in that the same exhibit represents a longer list of events and enables the visitor to focus on an era of interest. In some cases, the exhibit’s artifacts themselves are able to make use of these interaction requests.</p>
+<p>Environmentally, the Secret Annex was a hidden portion of a building located in what was then and is now the centre of Amsterdam. From within the rooms, murmurs of everyday life such as traffic, weather, and wartime noises could be heard. Most of this information is readily available from external sources, such as traffic volumes on street, weather reports, and Anne Frank’s own diary (she reports an American bomber crashing on March 23, 1944).</p>
+<p>Artifacts such as posters and picture frames can also react to this time component in that their content must be resilient to anachronistic errors: a poster cannot be displayed before it was published. Similarly, it must, at a minimum, be relevant to the current scene if its state cannot be completely authenticated using historical documents.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page" title="Page 10">
+<div class="layoutArea">
+<div class="column">
+<p><strong>Mechanism construction:</strong> Given the sensitive nature of the subject, a very restricted number of changes can be affected to the exhibits within the secret annex. The specific interaction points we chose to explore with this exhibit were time and language of interpretation. Language can be simply selected using a button panel, an iBeacon visitor badge or a cellphone.</p>
+<p>Time is an interesting component in that we can choose not only how it will affect the exhibit’s artifacts but also how we will affect the exhibit’s explicit concept of time. Certainly, the patrons can be provided with a “time dial” button with which to select a point within the two years during which the Anne Frank family lived in the Annex.</p>
+<p>Another solution is the linking of the internal exhibit date to the current date with any appropriate time gap for a reasonable calendering alignment. This allows the visitor to experience a particular day within the life of her family without necessarily requiring visitor input.</p>
+</div>
+</div>
+</div>
+<div class="page" title="Page 11">
+<div class="layoutArea">
+<div class="column">
+<p>Lastly, we consider the potential of a periodic change in the exhibit internal clock that is not historic in nature. Put simply, any randomized or arbitrary behaviour of the artifacts is changed on a set basis (let us assume daily) to ensure that the exhibit does not grow stale for visitor visiting often.</p>
+<div class="page" title="Page 11">
+<div class="layoutArea">
+<div class="column">
+<p><strong>Mapping mechanisms to objects:</strong> Time affects most if not all of the objects of the exhibits, through limited historical knowledge about their state may prevent us from having known behaviours for all points within a time line. Similarly, translation of some content is not always possible without professional and deep contextual knowledge. The exhibit at the museum is the result of firsthand accounts and of the contents of the annex that were saved when the building was being demolished. The movement of these artifacts and their placement changed over time according to their acquisition and Anne’s moods. These are partially documented through interviews, her diaries, documents salvaged from the annex, and photographs of the location.</p>
+<p>We review here a subset of objects to which behaviours can be assigned based on time- and language-based interaction points: posters, books, and environmental sounds. For demonstrative purposes, we also review the case of a photo frame to highlight some of the potential in mining relationships within museum archival data sets.</p>
+<p>Anne Frank kept pictures of both movie stars and friends on the walls of her room within the Secret Annex, with the arrangement of pictures, postcards, and posters changing over time. The lack of consistent positive placement and instance information gives us some leeway in automating their appearance at different temporal points, provided that they concur with the recorded placement and acquisitions recorded by Anne Frank in her diary and other records.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Through the use of projection and video screens, the change in posters can be simulated at low cost, and the retrieval of additional depictions can be done through automated means. As the actual posters recovered from the Annex are limited, additional materials can be retrieved from archival databases provided that their publication date does not conflict with their likely chronological availability in Holland. As an example, <a href="http://blog.muninn-project.org/node/81">we provide a detailed guide to retrieving film star poster data</a> from <a href="http://dbpedia.org/">DBpedia</a> for film stars of the era.</p>
+<div class="page" title="Page 11">
+<div class="layoutArea">
+<div class="column">
+<p>Hence, there exists a large number of <em>possible</em> poster combinations that are entirely reasonable to have existed given Anne Frank’s tastes. Slight periodic changes in location on the wall and in the specific choice of posters shown allows the exhibit to be refreshed over time by making small cosmetic changes without altering the historical significance overall.</p>
+<p>A similar process is possible with the books that Anne Frank read and that would have been present within the Annex. At times, her diary documents their location—for example, reading <em>Beyond Sing the Woods</em> in her room on October 20, 1942. These entries provide specific locations for the books on specific days, and in absence of this information a certain amount of randomized placement can take place.</p>
+<p>Books can also support an interpretive mechanism for multiple languages; in many cases they have been translated, and alternate language title and cover art information is available through <a href="http://www.gutenberg.org/wiki/Gutenberg:Offline_Catalogs">online Linked Open Data</a> databases. While Anne Frank’s Cissy van Marxveldt <em>Joop ter Heul</em> books were never translated from Dutch, she also read <em>Beyond Sing the Woods,</em> which was itself translated from Norwegian into thirty other languages. This allows for the cosmetic modification of some of the book covers within an exhibit so that they are recognizable by visitors in their own language.</p>
+<div class="page" title="Page 12">
+<div class="layoutArea">
+<div class="column">
+<div id="attachment_1049" style="width: 310px" class="wp-caption alignleft"><a href="../../wp-content/uploads/2015/01/pictureFrame.png"><img aria-describedby="caption-attachment-1049" loading="lazy" class="size-medium wp-image-1049" src="../../wp-content/uploads/2015/01/pictureFrame-300x284.png" alt="Figure 4: The set of allowable relationships that identify which person could appear within a picture frame." width="300" height="284" srcset="https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/pictureFrame-300x284.png 300w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/pictureFrame-1024x970.png 1024w, https://mw2015.museumsandtheweb.com/wp-content/uploads/2015/01/pictureFrame-317x300.png 317w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1049" class="wp-caption-text">Figure 4: The set of allowable relationships that identify which person could appear within a picture frame</p></div>
+<p>Lastly, we consider the hypothetical case of the framed photograph to highlight another means of freshening exhibits by cosmetically changing some of the content using known social-networking information. Anne Frank did keep pictures <a href="http://en.wikipedia.org/wiki/List_of_people_associated_with_Anne_Frank">of family, friends and the Dutch Royal Family</a> in her collection. Deliberately keeping the depiction of a person near oneself is due to an affection, in most case positive, to that person. While posters represent a relevance or interest in the depiction of the poster, a framed picture is usually reserved for a stronger affection relationship.</p>
+<div class="page" title="Page 12">
+<div class="layoutArea">
+<div class="column">
+<p>Figure 4 represents part of Anne Frank’s social network, which includes known family links and friendships as obtained from DBpedia, Wikipedia’s Linked Open Data database. Withstanding the fact that the social relationship must not be anachronistic, any previous relative or friend could possibly be contained within a photo frame. Hence, as represented in figure 4, Anne Frank could have had a picture of her grandparents on her dresser</p>
+<div id="attachment_1051" style="width: 160px" class="wp-caption alignright"><a href="../../wp-content/uploads/2015/01/OttoFrank.png"><img aria-describedby="caption-attachment-1051" loading="lazy" class="size-thumbnail wp-image-1051" src="../../wp-content/uploads/2015/01/OttoFrank-150x150.png" alt="Figure 5: A virtual picture frame belonging to Anne Frank, showing her father Otto Frank." width="150" height="150" /></a><p id="caption-attachment-1051" class="wp-caption-text">Figure 5: A virtual picture frame belonging to Anne Frank, showing her father Otto Frank</p></div>
+<p>because of family links, but would not have had a picture of her step-niece Sylvia since she was not born at that time.</p>
+<div class="page" title="Page 13">
+<div class="layoutArea">
+<div class="column">
+<p>The result is that by querying for both the social network of the person and the temporality of the relationship, we can build socially and culturally aware pieces for the recreation that can behave as an aesthetic prop (figure 5) within the exhibit, while constantly taking on new representations to keep the exhibit &#8220;fresh&#8221; over time or at different points in time.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="page" title="Page 13">
+<div class="layoutArea">
+<div class="column">
+<h2>5. Conclusion</h2>
+<p>The use of data-driven exhibit design is an effective means to enliven static display with small dynamic components that react either to the visitors interests or the passage of time. The results is a more engaging design with costs kept at a manageable level.</p>
+<p>In closing, we applaud authors such as Royston and Delafond (2014) who are pushing bleeding-edge Agile development and Ludden (2014), who wrote at length about the value of Big Data within museums. However, we do feel the need to point out that the primary requirement of the methods we are proposing is a solid and well-thought-out data management infrastructure. It is a great irony that some museums see public API as primarily a publicity tool or as a modern-day curiosity that is not being used internally by the museum staff for day-to-day operations.</p>
+<div class="page" title="Page 13">
+<div class="layoutArea">
+<div class="column">
+<h2>Acknowledgements</h2>
+<p>The authors would like to thank <a href="http://www.derbymuseums.org/">Derby Museums</a> for allowing us access to their Joseph Wright collection and for providing expert knowledge whenever we had questions. The 3D model reconstruction of Croxden Abbey shown in figure 3 was made by Jon Pledger of the University of Derby.</p>
+<div class="page" title="Page 14">
+<div class="layoutArea">
+<div class="column">
+<h2>References</h2>
+<p>Chiles, L., &amp; L. Blaser. (2014). &#8220;The great map.&#8221; In N. Proctor &amp; R. Cherry (eds.). <em>Museums and the Web 2014</em>, Silver Spring, MD. Museums and the Web.</p>
+<p>Davey, G. (2005). &#8220;What is museum fatigue?&#8221; <em>Visitor Studies Today</em> 8(3):17–21.</p>
+<p>Dupuy, A. (2014). &#8220;Digital extension of the museum of Marseilles – towards a global museum built both in the real and the digital world.&#8221; In N. Proctor &amp; R. Cherry (eds.). <em>Museums and the Web Asia 2014</em>, Silver Spring, MD. Museums and the Web.</p>
+<p>Fineran, J. (2005). <em>An Illustrated Who’s Who of Artists in Derbyshire</em>, first edition. John Fineran.</p>
+<p>Hart, T., &amp; J. Brownbill. (2014). &#8220;Storyteller – World War One: Love and sorrow – a hybrid exhibition mobile experience.&#8221; In N. Proctor &amp; R. Cherry (eds.). <em>Museums and the Web Asia 2014</em>, Silver Spring, MD. Museums and the Web.</p>
+<p>Hogarty, S. B., &amp; B. Ferguson. (2014). &#8220;The immersive period room: Historic and contemporary approaches to interactive storytelling.&#8221; In N. Proctor &amp; R. Cherry (eds.). <em>Museums and the Web 2014</em>, Silver Spring, MD. Museums and the Web.</p>
+<p>Kelly, L. (2014). &#8220;Gamifying the museum: educational games for learning.&#8221; In N. Proctor &amp; R. Cherry (eds.). <em>Museums and the Web Asia 2014</em>, Silver Spring, MD. Museums and the Web.</p>
+<p>Laycock, R. G., D. Drinkwater, &amp; A. M. Day. (2008). &#8220;Exploring cultural heritage sites through space and time.&#8221; <em>J. Comput. Cult. Herit.</em> 1(2):11:1–11:15.</p>
+<p>Lercari, N., E. Toffalori, M. Spigarolo, &amp; L. Onsurez. (2011). &#8220;Virtual heritage in the cloud: New perspective for the virtual museum of Bologna.&#8221; In <em>VAST11: The 12th International Symposium on Virtual Reality, Archaeology and Intelligent Cultural Heritage.</em></p>
+<p>Ludden, J. (2014). &#8220;An introduction to digital strategies for museums.&#8221; In N. Proctor &amp; R. Cherry (eds.), <em>Museums and the Web Asia 2014</em>, Silver Spring, MD. Museums and the Web.</p>
+<p>Punzalan, R., &amp; B. Butler. (2014). &#8220;Valuing our scans.&#8221; In N. Proctor &amp; R. Cherry (eds.), Museums and the Web 2014, Silver Spring, MD. Museums and the Web.</p>
+<div class="page" title="Page 15">
+<div class="layoutArea">
+<div class="column">
+<p>Rogers, K., U. Hinrichs, &amp; A. Quigley. (2015). &#8220;It doesn’t compare to being there: In-situ vs. remote exploration of museum collections.&#8221; In M. Dörk, M. Whitelaw, S. M. Drucker, &amp; F. Kräutli (eds.). <em>The Search Is Over! Exploring Cultural Collections with Visualization Workshop, DL2015</em>.</p>
+<p>Royston, C., &amp; S. Delafond. (2014). &#8220;How to introduce digital transformation to a museum.&#8221; In N. Proctor &amp; R. Cherry (eds.). <em>Museums and the Web Asia 2014</em>, Silver Spring, MD. Museums and the Web.</p>
+<p>Taxén, G. (2004). &#8220;Introducing participatory design in museums.&#8221; In <em>Proceedings of the Eighth Conference on Participatory Design: Artful Integration: Interweaving Media, Materials and Practices,</em> volume 1, PDC 04, 204–213, New York, NY, USA. ACM.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+. "Data-driven enriched exhibits using augmented reality." <i>MW2015: Museums and the Web 2015</i>. Published January 30, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw2015.museumsandtheweb.com/paper/data-driven-augmented-reality-for-museum-exhibits-and-lost-heritage-sites/<br /><br /><hr>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://mw2015.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="text-5" class="widget widget_text">			<div class="textwidget"><hr>
+<h3 class="widget-title">Global sponsor</h3>
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2014.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a>
+
+<h3 class="widget-title">Platinum sponsor</h3>
+<a title="MailChimp" href="http://nonprofits.mailchimp.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a>
+
+<h3 class="widget-title">Gold sponsor</h3>
+<a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/03/PictionLogo_blue.jpg" alt="Piction" /></a>
+
+<h3 class="widget-title">Bronze sponsors</h3>
+<a title="L2" href="http://www.lynch2.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/l2-250-75.jpg" alt="l2" /></a>
+
+<br /><a title="Exablox" href="http://www.exablox.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2013.museumsandtheweb.com/wp-content/uploads/2013/04/exablox-250x75.jpg" alt="Exablox" /></a>
+
+<br /><a title="Ruckus" href="http://www.ruckuswireless.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/ruckus-250-75.jpg" alt="Ruckus" /></a>
+
+<div style="text-align:right;"><a href="../../sponsorship-opportunities/index.html">become a sponsor</a></div>
+<hr></div>
+		</aside><aside id="text-4" class="widget widget_text">			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/search?q=%40museweb+OR+%23museweb+OR+%23mw2015" data-widget-id="450031569302867968">Tweets about "@museweb OR #museweb OR #mw2015"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-3" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br />
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-2" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br />
+703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info@museumsandtheweb.com<br /><br />
+Header Image: Chicago skyline at sunrise <br />© Daniel Schwen / Wikimedia Commons / CC-BY-SA-3.0 / GFDL
+</p></div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+
+			
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mw2015.museumsandtheweb.com/paper/data-driven-augmented-reality-for-museum-exhibits-and-lost-heritage-sites/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:44:16 GMT -->
+</html>
+<!-- Dynamic page generated in 0.108 seconds. -->
+<!-- File not cached! Super Cache Couldn't write to: wp-content/cache/supercache/mw2015.museumsandtheweb.com/paper/data-driven-augmented-reality-for-museum-exhibits-and-lost-heritage-sites/18440462506264692232c384.02067291.tmp -->

@@ -1,0 +1,804 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2009-papers.dwt" codeOutsideHTMLIsLocked="true" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2009/papers/schroyen/schroyen.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:56:27 GMT -->
+<head>
+<!-- InstanceBeginEditable name="HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2009: Paper: Schroyen, J., et al., The Design of Context-Specific Educational Mobile Games</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2009: Proceedings" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="Keywords" -->
+<meta name="Keywords" content=", paper, research, MW2009, conference, museum, museums and the web, mw, matw, museums &amp; the web, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online, world wide web, www, web site, website, museum web site, museum website, howto,  conferences, professional papers, peer-reviewed, peer reviewed, peer review, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="Description" -->
+<meta name="Description" content="Museums and the Web 2009: the international conference for culture and heritage on-line" />
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2009" />
+<!-- InstanceEndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<!-- InstanceBeginEditable name="charset" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="../../css/mw2009.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/papers.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/mw2009-noNews.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+</head>
+<body>
+<div id="container">
+  <div id="header" onclick="location.href='../../index.html';" style="cursor:pointer;"> </div>
+  <!--htdig_noindex-->
+  <div id="top-nav">
+    <ul id="top-nav-list">
+      <li><a href="../../register/index.html">Register</a></li>
+      <li><a href="../../dates/index.html">Key Dates</a></li>
+      <li><a href="../../sescal/index.html">Schedule</a></li>
+      <li><a href="../../local/index.html">Local Info</a></li>
+    </ul>
+    <!--/htdig_noindex-->
+  </div>
+  <div id="header-photo"> 
+	 <!-- InstanceBeginEditable name="header-photo" --> <img src="schroyen.t.png"  height="132" width="229" alt="MW-photo" />
+	 <!-- InstanceEndEditable --></div>
+<div id="print-title">
+	<h1>Museums and the Web 2009: the international conference for culture and heritage on-line</h1>
+	<h2>produced by Archives &amp; Museum Informatics</h2>
+	<h3>site at http://www.archimuse.com/mw2009/</h3>	 
+</div> 
+ <div id="date"> <a href="../../sescal/index.html">April 15-18, 2009</a><br />
+    <a href="../../local/index.html">Indianapolis, Indiana, USA</a> </div>
+  <div id="title">
+    <h1> 
+		<!-- InstanceBeginEditable name="PageTitle" -->The Design of Context-Specific Educational Mobile Games
+
+		<!-- InstanceEndEditable --> </h1>
+  </div>
+  <!--htdig_noindex-->
+  <div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+
+		  <h2 class="Author"><a href="../../bios/au_440016863.html">Jolien Schroyen</a>,
+		    <a href="../../bios/au_435014693.html">Kris Luyten</a>, <a href="../../bios/au_435014692.html">Kris Gabri&euml;ls</a>, <a href="../../bios/au_435015359.html">Karel Robert</a>, <a href="../../bios/au_435014695.html">Dani&euml;l Teunkens</a>, <a href="../../bios/au_435015360.html">Karin Coninx</a>, <a href="../../bios/au_440016876.html">Eddy Flerackers</a>, Expertise Centre for Digital Media &ndash; Hasselt
+		  University &ndash; tUL &ndash; IBBT, Belgium; and <a href="../../bios/au_435014694.html">Elke Manshoven</a>, Provincial
+		  Gallo-Roman Museum, Belgium</h2>
+	    <h3 class="AbstractTitle">Abstract</h3>
+		<p class="AbstractText">In the past decades, the use of mobile guides as tools to
+		  enrich the visitors' experience has found its way into many museums and
+		  cultural tourist sites. The applicability, effect and behavior of these kinds
+		  of technologies, however, remain hard to assess. Moreover, every museum or
+		  cultural tourist site has its own specific context according to which a mobile
+		  guide implementation should be tailored. We created a generic mobile guide
+		  framework that aids in the realization of context-specific mobile guides. In
+		  the ARCHIE project, we used this framework to develop a mobile museum game for
+		  youngsters visiting a museum during a school trip. In this game, collaborative
+		  learning plays an important role: we use our mobile guide to support and even
+		  stimulate social interaction. Large-scale evaluations have shown the potential
+		  power of our approach to increase the attractiveness of museum learning and
+		  heritage education for this target group. Based on our experiences in designing
+		  and evaluating our mobile game, we propose a set of basic guidelines that steer
+		  the realization of educational mobile games for youngsters. </p>
+		<p class="keywords">Keywords:&nbsp; mobile
+		  guides, design guidelines, heritage education, social interaction, games,
+		  personalization</p>
+	<!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+	    <h2 class="PaperTitle">Introduction</h2>
+	    <p>Over the last decades, museums spent a noticeable amount
+		    of effort to shift their focus from an exclusively object-centered approach to
+		    a visitor-centered approach (Galani, 2005). Apart
+		    from preserving and exhibiting their collections, museums attach more and more
+		    importance to improving the visitor's overall experience of the presentation.
+		    One of the strategies applied to improve the visitor's experience, is the
+		    introduction of (interactive) mobile guides. These are used not only in various
+		    sorts of museums (history, arts, science, open-air, gardens and zoos ...), but also in the cultural tourist sector. The
+		    popularity and acceptance of handheld guides as tools to enrich the experience
+		    have increased significantly over the last couple of years. The strengths of
+		    this technology are clear: it allows the dynamic presentation of information
+		    without interfering with the physical space, it provides the opportunity to
+		    access a wide range of interactive media (audio, video, text, photo, games ...)
+		    and it enables visitors to browse information at their own pace and according
+		    to their own interests. The applicability and effect of this kind of technology
+		    however remain hard to assess, as well for museums as for cultural tourist
+		    sites. The range of possibilities that can be implemented with this technology
+		    makes it also difficult to predict what the best use is. Furthermore, every
+		    museum or cultural tourist site has its own specific context according to which
+		    mobile guide implementation should be tailored. Content presentation
+		    (narrative, thematic ...), location (indoor or outdoor,
+		    proximity of the objects ...), scale (duration of an average visit, extent of
+		    the museum or site), target groups... all are components of the complex
+	    context that constitutes a visit or tour. </p>
+	    <p>To meet the difficulties that museums or cultural tourist
+		    sites encounter when preparing and developing their mobile guides, we propose
+		    in this paper a generic though flexible software framework for their development. This framework supports three core services that contribute
+		    to the overall visitor experience in accordance with the context of the visit:
+		    personalization, communication and location-detection. On top of the software
+		    framework, several mobile guides can be developed. The communication service
+		    accounts for an important but still too often neglected aspect of museum visits;
+		    namely the social aspect. Since a museum visit is predominantly a social
+		    activity, the overall experience is strongly influenced by the social dynamics
+		    at work among visitors. Our mobile guide offers solutions to support and even
+	    stimulate interaction and communication between visitors.&nbsp;&nbsp;&nbsp; </p>
+	    <p>In the ARCHIE project, we used the software framework to
+		    develop &ndash; among other things &ndash; a mobile museum game for youngsters visiting a
+		    museum during a school trip. We present this museum game as a case study of the
+		    usage of our mobile guide framework for the design of context-specific
+		    educational mobile games for school groups. Large-scale evaluations have shown
+		    the potential power of our approach to both enhance the motivation and increase
+		    the attractiveness of museum learning and heritage education for this target
+		    group. Based on our experiences in designing and evaluating the mobile game, we
+		    propose a set of basic guidelines that steer the realization of educational
+		    mobile games for youngsters. These guidelines are applicable for both museums
+	    and the cultural tourist sector. </p>
+	    <h2>Evolution in the Usage of Mobile Guides</h2>
+	    <p>Over the years we have seen a clear evolution in the way
+		    mobile guides are used within a museum or cultural tourist context. At first,
+		    most mobile guides only offered additional information that was linked to the
+		    presented objects, monuments and other artifacts, much like the audio guides
+		    you can still find today. The important difference now is that mobile guides
+		    can also present (interactive) multimedia data to the visitor. In the evolution
+		    this medium has gone through, &nbsp;we identified the following three categories of mobile
+		    guides, based on &nbsp;literature
+	    research on this topic and existing practices in mobile guides.</p>
+	    <p>The first kind of mobile guide that goes clearly beyond
+		    the scope of traditional audio guides is the adaptive guide. These guides allow
+		    the user interface and content to be adapted to the context-of-use. One of the
+		    first attempts to develop adaptive guides was the Cyberguide project (Abowd et al., 1997). The PEACH project (Graziola et al., 2005) focused on content adaptation based
+		    on the user's location, interests and the history of interaction between the
+		    user and the system. In a later phase, several mobile guide implementations
+		    acknowledged the importance of narrative interfaces that allow the user to get
+		    immersed better in the stories told by the exhibits. Imagine, for example, a
+		    virtual character telling his story with a particular connection to the
+		    physical environment or objects the story is about, thus focusing the attention
+		    of the visitor on that physical environment.&nbsp; Lim and Aylett (2007) present a mobile guide in which the
+		    story presentation is adapted, based on the user's interests and opinions. In Riedl and Young (2006), the authors present a graph-based
+		    structure to describe how several &rdquo;story parts'' can be dynamically composed to
+	    form one integrated story for the visitor. </p>
+	    <p>While early mobile museum guides only targeted the
+		    individual visitor and thus neglected the social aspects of a visit, in the
+		    last few years several ways of supporting interaction and collaboration were
+		    explored. The Sotto Voce project (Woodruff et al., 2001) introduces an
+		    'eavesdropping' system that allows visitor-pairs to synchronize their audio
+		    tracks with one another. Another approach is to explore collaborative visiting
+		    through a combination of a PDA-based physical visit, a virtual visit and a Web-based
+	    visit (Brown et al., 2003). A next generation of mobile guides uses collaborative
+		    games to improve the museum visit and stimulate interaction. In the Cicero
+		    project (Laurillau &amp; Patern&ograve;,
+		    2004), visitors collect clues to solve a puzzle, shared with various
+		    co-visitors. The CoCicero project (Dini, Patern&ograve; &amp; Santoro,
+		    2007) enhances the cooperation phase of Cicero by allowing the mobile device to
+		    exploit a stationary large display that can be seen and discussed by an entire
+		    team of visitors. The 'Mystery in the Museum' game, however, takes
+		    collaborative learning up to the next level: players not only contribute to a
+		    shared puzzle, but also are actually stimulated to exchange and discuss
+	    information (Cabrera et al., 2005).&nbsp;&nbsp;&nbsp; </p>
+	    <p>The work we present in this paper contributes to the
+		    aforementioned evolution in the usage of mobile guides. The ARCHIE museum game
+		    prototype, developed in cooperation with the Gallo-Roman museum of Tongeren (Province of Limburg), considers social
+		    interaction and collaboration between pupils to be the basic principle of the
+		    museum experience. Instead of aiming for a tool that offers the entire museum
+		    content to the visitor - be it by means of an adaptive system or not - we focus
+		    on conveying the key stories of the museum content through interaction:
+		    interaction between visitors, but also interaction with the museum environment
+		    and interaction with the mobile guide. How these interactions can be supported
+		    and stimulated by mobile guides built on our software framework is described in
+	    the following section. </p>
+	    <h2>A Framework for Context-Aware Mobile Guides</h2>
+	    <p>When asked about their motivation to visit a museum, most
+		    people indicate learning as the primary reason (Falk &amp; Dierking,
+		    2000; PGRM, 2005). In their model of learning in a museum, Falk and Dierking take the context of the learning experience into
+		    account. According to this contextual model, the interactions and experiences
+		    visitors have in a museum are all influenced by three interweaving contexts:
+		    the personal context, the socio-cultural context and the physical context (Fig.
+		    1). Depending on the way these three contexts are shaped for a certain visitor,
+		    learning becomes a unique process for that visitor. The main objective of the
+		    museum is then to provide the optimal conditions to stimulate this learning
+	    process. </p>
+	    <p class="caption"><img src="schroyen.fig1-thumbnail.jpg" alt="figure 1" width="500" height="254" /></p>
+	    <p class="caption">Fig. 1: Contextual model of learning as proposed by Falk
+        &amp; Dierking (2000)</p>
+	    <p>We believe this model offers a basis to adequately assess
+		    the usage of mobile guides in any given museum or cultural tourist site. The
+		    software framework we created for the ARCHIE project was inspired by the three
+		    interweaving contexts of the Falk and Dierking model:
+		    the framework translates and connects support for each of the three contexts
+		    into one unified framework. An overview of this framework is shown in Fig. 2.
+		    It consists of a set of three core services on top of which an arbitrary
+		    interface can be deployed. We describe below how each of the three contexts can
+		    be supported by a mobile guide and which solutions are provided by our software
+	    framework. </p>
+	    <p class="caption"><img src="schroyen.fig2-thumbnail.jpg" alt="figure 2" width="500" height="338" /></p>
+	    <p class="caption">Fig. 2: ARCHIE framework overview</p>
+	    <h3>The personal context&nbsp; </h3>
+	    <p>Mobile guides offer the opportunity to tailor the
+		    presentation to the personal context of the visitors. Depending on their
+		    knowledge and abilities or preferences and interests, it is possible to adapt
+		    the interface and the presented content. Even visitors themselves can be put in
+		    charge of the offered content and activities: they can steer the presentation
+		    towards their personal learning style and interests. The museum or cultural
+		    tourist site remains in control, however, about the extent to which its content
+	    is adaptable.</p>
+	    <p>Another possibility using mobile guides is to tune the
+		    design and content to a specific target group. Experienced visitors who
+		    particularly seek in-depth information through a museum or cultural tourist
+		    visit benefit from a mobile guide that allows digging deeper and deeper into
+		    the presented content. Youngsters, on the other hand, are more likely to prefer
+		    an (inter)active mobile game in which they  can
+		    autonomously explore the environment to a traditional guided tour.&nbsp; The strategy of tuning design and
+		    content to the target group can clearly pay off to make museum visits more
+		    attractive, especially for visitor groups that are traditionally difficult to
+	    win over, like youngsters.</p>
+	    <p>In the software framework we developed, we support several
+		    types of personalization. On the highest level, multiple graphical user
+		    interfaces are provided, all with &nbsp;access to the same content but providing different
+		    presentations, and different in the way the visitors interact with them. The
+		    interface we developed for youngsters visiting a museum on a field trip offers
+		    a collaborative and interactive game that stimulates children to explore both
+		    the mobile guide and the museum environment. The interface oriented towards
+		    adults, who are generally less inclined to engage in playful learning, focuses
+		    on information delivery in various ways. This means a more fine-grained
+		    personalization is implemented in the interface for adults. According to their
+		    profile, both the presentation style and the content that is offered during the
+		    visit can differ. The interface can be designed in such a way that no content
+		    is excluded from either; the focus on which content is presented first can
+		    differ, however. Since it is not practical to have visitors fill in a survey
+		    before starting the actual visit to obtain their &nbsp;profiles, our system starts out
+	    with a specific, typifying profile which is adapted gradually during the visit.</p>
+	    <h3>The physical context</h3>
+	    <p>The physical context refers to the design and architecture
+		    of the environment, such as orientation, construction, and lay-out of the
+		    exhibit and the display of the objects and artifacts. The visitors&acute; learning is
+		    influenced by their sense of orientation, safety, control over and insight in
+		    the spatial exposition. The potential surplus value of mobile guides to support
+		    the physical context is clear and has been widely discussed in literature.
+		    Visitors have their guides always within their reach, and their freedom of
+		    movement is maintained. Localization technologies on mobile guides allow a
+		    clear match between the content on display in the environment and the content
+		    shown by the mobile guide. As a result, visitors can be triggered to
+	    attentively examine the exposition in a new way. </p>
+	    <p>Our software framework considers the physical context in
+		    two different ways. First, we use localization technologies to detect objects,
+		    monuments and other artifacts that are in the vicinity of the visitor. When the
+		    visitor approaches an object or area of interest, a notification is sent via
+		    the mobile device, and the appropriate presentation is &nbsp;loaded. Another application of
+		    localization is tracking the trails followed by the visitors to learn in what areas
+	    they wander around for a long time.</p>
+	    <p>Second, we explicitly acknowledge the various possible
+		    interactions of the visitors with the mobile guide and the physical
+		    environment. These interactions provide a basis for the design of the
+		    presentations on the mobile device. For example, the information presented by
+		    the mobile device depends on the location of the visitors and what can be
+		    perceived in the physical world, but also on the location of fellow visitors.
+	    In this way, interaction between companions is stimulated. </p>
+	    <h3>The socio-cultural context</h3>
+	    <p>The socio-cultural context accounts for the socio-cultural
+		    mediation and facilitation of learning during a visit. Companions want to share
+		    their experiences with each other and discuss their impressions. These
+		    conversations between visitors not only are inevitable, but also contribute
+		    greatly to the learning experience. Morrissey (2002) even argues that social
+		    interaction not only promotes, but also is a prerequisite for intellectual,
+		    social, personal and cultural development. Although we believe mobile guides
+		    can be designed to support social interaction and communication, most existing
+	    mobile guides tend to isolate visitors from their companions. </p>
+	    <p>We specifically designed our mobile guide framework not just
+		    to support, but even to stimulate social interaction.
+		    We implemented a server application that keeps track of the different groups of
+		    visitors. During the visit, the system allows visitors to communicate with
+	    other visitors in the same group in two different ways:</p>
+	    <ul>
+	      <li><span class="listwithbullets" style='font-family:Symbol;
+'><span style='font:7.0pt &quot;Times New Roman&quot;'></span></span>a direct communication style that is voice-based
+	      and uses Voice-over-IP (VOIP), a sort of walkie-talkie system;</li>
+      <li><span class="listwithbullets" style='font-family:Symbol;
+'><span style='font:7.0pt &quot;Times New Roman&quot;'></span></span>an indirect communication style that consists of
+        the exchange between mobile guides of other types of data related to the
+        content and interface. </li>
+          </ul>
+	    <p>It remains however a challenge to develop concepts and
+		    content for mobile guides that are tailored to a specific target group, that
+		    are location-aware and that stimulate conversation, discussion and
+		    collaboration. In the following section we describe how we tried to address
+		    this challenge in the design of an educational mobile museum game for
+	    youngsters on a field trip.&nbsp; </p>
+	    <h2>Case Study: the ARCHIE Museum Game</h2>
+	    <p>One of the prototypes we developed during the ARCHIE
+		    project is a museum game, built on top of the mobile guide framework described
+		    above. The target group of this educational mobile game consists of
+		    schoolchildren, aged 12 to 14, on a field trip. The Provincial Gallo-Roman
+		    museum conducted an extensive survey in 2005 (PGRM, 2005) to find out about the
+		    interests of their (potential) visitors and to determine in which way they want
+		    to learn about the museum collection. According to this survey, youngsters are
+		    highly interested in games and interactive media. We decided to use these
+		    interests in order to enrich their museum visit. Our main goal was to develop a
+		    mobile museum game that focuses on conveying the key messages of the museum
+		    narrative and that provided a fun and interactive museum experience. To obtain
+		    this goal, we chose to develop several independent games which each focus on a
+		    specific key chapter of the museum narrative. These seemingly independent games
+		    are tied together by the overall museum story, which covers the history of
+		    people living in the local region from Neanderthal times up to the fall of the
+		    Roman Empire. We developed and evaluated three prototype games played in teams
+		    of three to four youngsters: a farming game, a trading game and a Roman game (Fig.
+	    3). </p>
+	    <p class="caption"><img src="schroyen.fig3-thumbnail.jpg" alt="figure 3" width="500" height="202" /></p>
+	    <p class="caption">Fig. 3: Screenshots of the prototype games: the trading
+	    game (left), the farming game (middle) and the Roman game (right)</p>
+	    <p>The museum game is actually an interface that makes use of
+		    several core services of the mobile guide framework. Personalization is
+		    supported on the level of both the target group and the individual. First, the
+		    museum game is explicitly developed for the target group of youngsters on a
+		    school trip. The game concept, interactions, graphical design and content are
+		    all closely tuned to this target group by means of our user-centered design
+		    approach. Second, each player gets to adapt his or her own personal avatar
+	    which accompanies him or her throughout the entire museum game. </p>
+	    <p>The localization service is used to determine when each
+		    game has to be started; namely when all team members are near the physical
+		    presentation of the corresponding museum narrative. Matching the content of the
+		    mobile guide to the museum presentation on game-level instead of object-level
+		    allows youngsters to autonomously explore the museum environment in search of
+		    certain artifacts on display or even for detailed characteristics of these artifacts
+	    (Fig. 4). </p>
+	    <p class="caption"><img src="schroyen.fig4-thumbnail.jpg" alt="figure 4" width="500" height="202" /></p>
+	    <p class="caption">Fig. 4: Interaction with the museum </p>
+	    <p>The communication service makes it possible for team members
+		    to interact with each other in various ways, depending on the game logic and
+		    the corresponding museum content. When team members are stimulated to split up to
+		    each fulfill a specific task, they can communicate directly with each other via
+		    the walkie-talkie system to negotiate about the appropriate solutions for their
+		    tasks and/or to help each other solve questions. Indirect communication is
+		    carried out by the exchange of game-related data between PDA's that stimulate
+		    for instance face-to-face communication and transfer of information,
+	    problem-solving strategies and division of tasks (Fig. 5). </p>
+	    <p class="caption"><img src="schroyen.fig5-thumbnail.jpg" alt="figure 5" width="500" height="232" /></p>
+	    <p class="caption">Fig. 5: Youngsters are stimulated to exchange information</p>
+	    <p>To assess the museum game, we organized extensive
+		    evaluations with the target group. The main goal was to test the usability of
+		    the prototypes and to check whether the games obtained the desired results.
+		    Does the museum game indeed provoke social interaction and interaction with the
+		    museum environment? Do youngsters learn about the key messages of the museum
+		    narrative by playing the games? Since the target museum was closed to the
+		    public, due to current expansion activities, we were unable to test our
+		    prototypes in the museum. Therefore we visited several secondary schools in the
+		    province of Limburg to organize user tests in a simulated museum environment: posters
+		    of museum objects and &ndash; if on hand &ndash; some replicas that convey museum content
+		    were displayed. Three prototypes have been tested, one at a time: the trading
+		    game (tested by 68 pupils), the farming game (tested by 92 pupils), and the
+		    Roman game (tested by 137 pupils). We intended to reach a wide range of the
+		    envisioned target group and thus tested a mix of pupils from general as well as
+		    technical and vocational secondary education. All participants were between 12
+	    and 16 years old (Fig. 6).</p>
+	    <p class="caption"><img src="schroyen.fig6-thumbnail.jpg" alt="figure 6" width="500" height="366" /></p>
+	    <p class="caption">Fig. 6: User tests</p>
+	    <p>The school groups were divided into teams of 3-4 players,
+		    and every player received a PDA. During the test, the players were observed and
+		    the user interactions on the PDA were logged to analyze the course of the game.
+		    After the game, the pupils were asked to fill in a questionnaire regarding
+		    computer usage, usability and playability of the game, learning results and
+		    motivation. Although over 75% of the pupils declared that they had never used a
+		    PDA before, the same amount said it was (very) easy to use. All functionalities
+		    of the game interface, for example using the walkie-talkie system or scrolling
+		    through the game landscape, were gradually picked up by trial and error and by
+	    discussing them with their peers. This indicates the high learnability of our mobile game.</p>
+	    <p>The observations proved that our goals concerning
+		    interaction were reached. There was generally a good balance between looking at
+		    the screen and looking at the simulated museum exhibit. Furthermore, the games
+		    clearly provoked collaboration and social interaction among the players. We
+		    even noticed that interaction was induced not only by the game sequences that
+		    were deliberately designed to stimulate collaboration and discussion, but also
+		    by some other aspects of the game design, such as the creation of their own
+		    personal avatar in the beginning of the game (Fig. 7) or the funny visuals and
+		    audio tracks. With regard to the learning of the main messages of the museum
+		    content, the questionnaires showed that on average 70-75% of the participants
+	    answered the questions relating to the key content of the museum correctly. </p>
+	    <p class="caption"><img src="schroyen.fig7-thumbnail.jpg" alt="figure 7" width="500" height="149" /></p>
+	    <p class="caption">Fig. 7: Avatar and team</p>
+	    <p>The observed behavior and the questionnaire certainly
+		    confirmed the enhanced motivation of the youngsters. Over 90% indicated that
+		    they liked the games. When asked what they think about the idea of using a PDA
+		    as a guide throughout the museum, 85-90% selected &ldquo;great, it makes a museum
+		    visit a lot more fun&rdquo;. This proves these mobile games are an ideal tool to
+		    stimulate and motivate youngsters to visit a museum or heritage institution.
+		    This is especially true for pupils of technical and vocational secondary
+		    schools who are typically less motivated to visit a traditional museum or to
+		    learn about history or heritage in a traditional way. By means of our framework
+		    and our well thought-out game design, we can increase the attractiveness of
+		    museum learning and heritage education for this target group that is often
+	    difficult to reach by the educational staff of museums and heritage sites. </p>
+	    <h2>The Design of Educational Mobile Games</h2>
+	    <p>Based on our experiences in designing and evaluating our
+		    mobile game, we propose a set of basic guidelines that steer the realization of
+		    educational mobile games for youngsters. These guidelines are applicable for
+		    both museums and the cultural tourist sector. The main guidelines we present
+		    below relate to the design process and the involvement of the end-user
+		    throughout this process, designing game concepts that act as good learning
+		    environments, designing for social interaction and collaborative learning, and the
+	    importance of an evocative graphical design. </p>
+	    <h3>1. Follow a User Centered Design Process</h3>
+	    <p>The conception of a mobile guide requires a design process
+		    that tunes the presentation and behavior of the mobile guide to the target user
+		    group and to the message the museum or cultural tourist site wants to convey.
+		    An appropriate design process runs through different phases, starting from user
+		    analysis and concept generation towards implementation and evaluation. We argue
+		    for a User Centered Design (UCD) approach, which involves the end-users of a
+		    product throughout the development lifecycle, from planning through evaluation,
+		    in order to guarantee a positive user experience, including&nbsp; usability, accessibility and
+		    functionality (Moore &amp; Redmond-Pyle, 1995). At Museums and the Web 2007
+		    (Van Loon et al., 2007) we described our initial implementation of a UCD
+		    process. We will point out some of the most important aspects of this process
+	    here in the form of a few guidelines. </p>
+	    <h4>Work with a multidisciplinary team </h4>
+	    <p>ISO 13407 (1999) standardizes human- and user-centered
+		    design approaches and recommends the involvement of a multidisciplinary team.
+		    In our case this team consists of two computer scientists, a graphical designer,
+		    and a historian with a background in education, working in close collaboration
+		    with delegates from the museum staff. In this way the different perspectives
+		    and concerns of all the stakeholders involved will be accounted for throughout
+	    the entire development lifecycle, and will result in a better product.</p>
+	    <h4>Use the appropriate tools to communicate in a multidisciplinary team</h4>
+	    <p>A multidisciplinary team typically encompasses persons from
+		    diverse backgrounds and with a different jargon, and therefore it is not always
+		    easy for them to &nbsp;understand each other. In a UCD approach, several
+		    artifacts are created throughout the different stages in the development
+		    process (Haesen et al., 2008). These generally
+		    comprehensible artifacts, such as user task models, storyboards and paper
+		    prototypes, are concrete and tangible results of the different development
+		    stages and facilitate communication amongst the team members and with the
+	    museum staff.</p>
+	    <h4>Get to know your users</h4>
+	    <p>It is important to get acquainted thoroughly with the
+		    needs and expectations of the target group (user analysis). What are they
+		    interested in? How do they prefer to learn? What does their ideal educational
+		    field trip look like? What are their expectations towards a mobile museum game?
+		    Target group surveys and focus groups or brainstorm sessions helped us in
+		    providing good insight in the target group. Regular user tests in different
+	    phases of the development process helped us to stay on track. </p>
+	    <h4>Plan user testing early in the design process</h4>
+	    <p>The testing and evaluation of the evolving system by
+		    future users is probably one of the most important steps in the UCD process,
+		    and unfortunately it is also the step which is often neglected. Designers
+		    quickly assume that if they and their colleagues can use the system and find it
+		    attractive, others will too. Furthermore, they prefer to avoid evaluating
+		    because it adds to development time and costs money. But without evaluation,
+		    designers cannot be sure that their system will be usable. Therefore, we
+		    involved the future users from an early phase of the development process
+		    onwards to check whether their needs were being met. Users can already be
+		    involved after the realization of the first paper prototypes, before any
+		    functionality has been integrated. The results of these user tests can be used
+		    to steer the further development process. Such an iterative design process
+	    allows gradual fine-tuning of the system for future users.</p>
+	    <h3>2. Create game concepts that act as good learning environments</h3>
+	    <p>The starting point of this guideline is the question posed
+		    by J.P. Gee (2003):&ldquo;Why are youngsters willing to put so much time and effort
+		    in learning to play extremely complex video games?&rdquo; According to Gee, the
+		    answer must be found in the &ldquo;good principles of learning built into its design&rdquo;
+	      that fit in with the skills needed for &ldquo;the modern, high-tech, global world
+		    today's children and teenagers live in&rdquo; (Gee, 2003, p. 6-7). Following the
+		    insights articulated by Gee, the characteristics that constitute games as
+		    optimal learning environments are described by Sandford &amp; Williamson (2005). We built on these characteristics to create our game
+	    concepts and design guidelines. </p>
+	    <h4>Aim for game functionalities and content that can be learned by playing</h4>
+	    <p>Youngsters do not always want to be aware of the fact that
+		    they are learning. To promote unconscious learning, it is important to gradually
+		    increase the complexity of the user interactions or tasks instead of providing
+		    users with manual-like dry information about the PDA functionalities or game
+		    logic. Step by step, players will acquire these skills by themselves. Furthermore,
+		    instead of explicitly lecturing about content, it is possible to aim for game
+		    concepts that reflect the key messages of the museum or site in such a way that
+	    the content is learned simply by playing the game. </p>
+	    <h4>Aim for a truly interactive experience</h4>
+	    <p>To have a real game experience, the players have to feel
+		    that they are in control: their choices and actions determine the outcome. The
+		    players must be allowed to create their own experience by exploring their
+	    actions and the specific effects they cause. </p>
+	    <h4>Enhance the commitment of the players to the content on display </h4>
+	    <p>The players' experience can be enhanced
+		    by providing a virtual character or avatar that has a part in the games
+		    or stories offered through the mobile guide. When a close match between the
+		    mobile guide and the physical presentation is obtained, these virtual
+		    characters or avatars allow players to identify with the messages of the museum
+	    or institution and even to relive a certain episode of the content. </p>
+	    <h4>Provide a clear challenge for each target group</h4>
+	    <p>To increase the motivation of the players, it is important
+		    to propose a challenge that is rather difficult, but doable. Support the
+		    players by providing the tools and information necessary to meet the
+		    challenges, but do this in such a way that the players still have to discover
+		    how to use these clues. By gradually increasing the complexity of the
+	    challenges posed, the current level of skills of the players can be raised. </p>
+	    <h3>3. Design for social interaction</h3>
+	    <p>There are two reasons to consider social interaction in
+		    the design of educational mobile games for youngsters. First, youngsters attach
+		    great importance to their social network, their peers. Certainly when visiting
+		    a museum or cultural tourist site on a field trip, youngsters want to share
+		    this experience with their classmates. Second, communication and interaction with
+		    peers improves the learning effect. Children remember better those insights
+		    they discover while discussing and interacting with their peers (Falk &amp; Dierking, 2000). There are several ways to design mobile
+	    games specifically to support social interaction. </p>
+	    <h4>Design for teams rather than individual players</h4>
+	    <p>Gaming as a team, certainly when in competition with other
+		    teams, causes a spontaneous feeling of solidarity among team members, and with
+		    that comes natural group communication. Because of the difficulty of sharing
+		    one device among multiple players, it is advisable to give each team member his
+		    own PDA, but there are ways to maintain and even stimulate the team spirit via
+		    the mobile guide. Avatars or virtual characters of the different team members, for instance, can be visualized on the PDA,
+		    players can be consequently addressed as a group, and various collaborative
+		    activities can be built in. This contributes to creating a truly shared
+	    experience at the museum or cultural tourist site. </p>
+	    <h4>Create collaborative learning moments</h4>
+	    <p>To create a collaborative learning experience, it is
+		    necessary to deliberately create group interactions during the games &ndash; times
+		    when the messages of the museum or institution are discussed, when information
+		    is transferred among players, when opinions are expressed... Depending on the
+		    type of content and the game concept, numerous ways of communication are
+		    possible: role-playing sequences, aiming for the consent of the whole group
+		    about certain game decisions, searching for problem-solving strategies, arguing
+	    for or against a certain opinion.... </p>
+	    <h4>Trigger communication through humor</h4>
+	    <p>Humorous and surprising elements in the graphical design,
+		    the audio tracks or the presented content evoke laughter and comments by the
+		    players. This natural verbal and nonverbal communication enhances the shared
+	    experience youngsters have and stays in their memories. </p>
+	    <h3>4. Value the graphical design of the user interface</h3>
+	    <p>The importance of the graphical design to attract and
+		    maintain the attention of pupils on the presented content can hardly be
+		    overrated. Strive for a subtle match between the graphical interface and the
+		    physical presentation so that the design reflects the presented content. This
+		    close match between the mobile guide and the physical presentation can also be
+		    exploited to stimulate interaction with the real artifacts and objects on
+		    display. The PDA can trigger the players to explore their surroundings,
+		    discover detailed aspects of the &ldquo;real&rdquo; objects and steer their gaze towards
+	    the most interesting parts of the collection. </p>
+	    <h2>Conclusion</h2>
+	    <p>Determining the appropriate way to introduce mobile ICT
+		    solutions in museums and the cultural tourist sector remains a difficult and
+		    complex process. We stress the importance of allowing for the context of the
+		    visit and for the different technological solutions to support this context, to
+		    enhance visitor experience. Depending on the significance and the
+		    interpretation the target museum, institution or site attaches to the personal,
+	    physical and socio-cultural context, the mobile application can vary. </p>
+	    <p>The resulting wide scope of possibilities in the
+		    deployment of mobile guides for museums and the cultural tourist sector reveals
+		    a strong need for further guidance with regard to the realization of mobile ICT
+		    solutions. To meet this demand, we are currently setting up an expertise centre
+		    that includes a demo- and test-infrastructure in which prototypes of different
+		    institutions can be tested and evaluated. The main goal is to offer support in
+		    the assessment of mobile ICT solutions and to serve as a test environment in
+		    which novel ICT applications can be deployed, experienced and evaluated. Fig. 8
+		    shows an overview of how such a demo- and test-infrastructure could function.
+		    The target environment (any given museum or cultural tourist site) can be
+		    simulated by means of projections on large screens, computer screens embedded
+		    in movable display cases, ambient sound, and other interactive systems. This
+		    simulated environment allows development of realistic mobile solutions, tuned not
+		    only to the target environment but also to the target visitor group, by means
+	    of user tests. </p>
+	    <p class="caption"><img src="schroyen.fig8-thumbnail.jpg" alt="figure 8" width="500" height="358" /></p>
+	    <p class="caption">Fig. 8: Simulated museum environment to evaluate and demonstrate
+	    mobile ICT solutions</p>
+	    <p>The demonstration of early prototypes in such an
+		    infrastructure entails important surplus value in the increased involvement of
+		    all stakeholders (visitors, museum staff, decision makers and developers) in an
+		    early stage of the development of a mobile guide. This infrastructure also
+		    gives us the opportunity to refine and steer the guidelines proposed above and
+		    to verify mobile guide solutions in different contexts. In this way, the centre
+		    allows us to offer full support for the development process of a mobile ICT
+	    application for museums and the cultural tourist sector.</p>
+	    <h3>Acknowledgements</h3>
+	    <p class="AcknowedgementsText">Part of the research at EDM is funded by the
+		    European Regional Development Fund and the Flemish government. We would like to
+		    thank Heleen Van Loon who helped laying the
+		    foundations of this work and Mieke Haesen who shared her expertise in usability testing. We would
+		    also like to thank the following secondary schools for cooperating in the
+		    evaluation process: O.-L.-Vrouwlyceum (Genk), Middenschool Kindsheid Jesu (Hasselt), Technisch Instituut St.-Lodewijk (Genk),
+	    and St.-Franciscuscollege (Heusden-Zolder).</p>
+	    <h2>References</h2>
+	    <p class="ReferencesText">Abowd, G.D., C.G. Atkeson, J. Hong, S. Long, R. Kooper &amp; M. Pinkerton (1997). Cyberguide: a mobile
+		    context-aware tour guide. <i>Wireless
+        Networks</i>, 3(5), 421-433.</p>
+	    <p class="ReferencesText">Brown, B., I. MacColl, M.
+		    Chalmers, A. Galani, C. Randell &amp; A. Steed (2003). Lessons from the lighthouse: collaboration in a shared
+		    mixed reality system. In <i>Proceedings of
+        CHI '03</i>. New York: ACM Press, 577-584.</p>
+	    <p class="ReferencesText">Cabrera, J.S., H.M. Frutos,
+		    A.G. Stoica, N. Avouris, Y. Dimitriadis, G. Fiotakis &amp; K.D. Liveri (2005). Mystery in the museum:
+	    collaborative learning activities using handheld devices. In <i>Proceedings of MobileHCI '05</i>, New York: ACM Press, 315-318. </p>
+	    <p class="ReferencesText">Dini, R., F. Patern&ograve; &amp; C. Santoro (2007). An environment to support
+		    multi-user interaction and cooperation for improving museum visits through
+	    games. In <i>Proceedings of MobileHCI '07</i>, New York: ACM Press, 169-175.</p>
+	    <p class="ReferencesText">Falk, J. &amp; L. Dierking (2000). <i>Learning from Museums: Visitor
+	    Experiences and the Making of Meaning</i>. Walnut Creek: Altamira Press.</p>
+	    <p class="ReferencesText">Galani, A. (2005). <i>Far away is close at hand: An ethnographic
+		    investigation of social conduct in mixed reality museum visits</i>. Unpublished
+	    PhD Thesis, University of Glasgow: Department of Computing Science.</p>
+	    <p class="ReferencesText">Gee, J.P. (2003). <i>What
+	    Video Games Have to Teach Us About Learning and Literacy</i>. <span lang="it" xml:lang="it">New York: Palgrave Macmillan.</span></p>
+	    <p class="ReferencesText"><span lang="it" xml:lang="it">Graziola,
+		    I., F. Pianesi, M. Zancanaro &amp; D. Goren-Bar (2005). </span>Dimensions of adaptivity in mobile systems: personality and people's
+		    attitudes. In <i>Proceedings of IUI '05</i>,
+	    New York: ACM Press, 223-230.</p>
+	    <p class="ReferencesText"><span lang="NL-BE" xml:lang="NL-BE">Haesen,
+		    M., K. Coninx, J. Van den Bergh &amp; K. Luyten (2008). </span>MuiCSer: A Process Framework for Multi-Disciplinary
+	    User-Centered Software Engineering processes. In <i>Proceedings of 2nd Conference on Human-Centred Software Engineering (HCSE 2008)</i>, Pisa, Italy.</p>
+	    <p class="ReferencesText">International Standards Organization (ISO, 1999). <i>ISO 13407. Human Centred Design Process for Interactive Systems</i>. Geneva.</p>
+	    <p class="ReferencesText">Laurillau, Y. &amp; F. Patern&ograve; (2004). Supporting museum co-visits using mobile
+		    devices. In <i>Proceedings of MobileHCI '04</i>, Berlin: Lecture Notes in Computer
+	    Science, 451-455.</p>
+	    <p class="ReferencesText">Lim, M.Y. &amp; R. Aylett (2007). Narrative
+		    construction in a mobile tour guide. In <i>International
+		      Conference on Virtual Storytelling</i>, Berlin: Lecture Notes in Computer Science,
+	    volume 4871, 51-62. </p>
+	    <p class="ReferencesText">Moore, A. &amp; D. Redmond-Pyle (1995). <i>Graphical User Interface Design and
+	    Evaluation: A Practical Process</i>. Upper Saddle River: Prentice Hall PTR.</p>
+	    <p class="ReferencesText">Morrissey, K.A. (2002). Pathways Among Objects and Museum
+		    Visitors. In S.G. Paris (Ed.) <i>Perspectives
+		      on Object-Centered Learning in Museums</i>. Mahwah: Lawrence Erlbaum
+	    Associates, 285-299.</p>
+	    <p class="ReferencesText">Provincial Gallo-Roman Museum (PGRM, 2005). <i>Kwantitatief</i><i> leer- en doelgroepenonderzoek</i>,
+	    Unpublished findings, Tongeren.</p>
+	    <p class="ReferencesText">Riedl, M.O. &amp; R.M. Young
+		    (2006). From linear story generation to branching story graphs. <i>IEEE Computer Graphics and Applications</i>,
+	    26(3), 23-31.</p>
+	    <p class="ReferencesText">Sandford, R. &amp; B.
+	    Williamson (NESTA Futurelab) (2005). <i>Games and learning</i>. Bristol.</p>
+	    <p class="ReferencesText">Van Loon, H., K. Gabri&euml;ls, K. Luyten, D. Teunkens, K.
+	    Robert, K. Coninx &amp; E. Manshoven (2007). Supporting social interaction: A collaborative trading game on pda. In J. Trant &amp; D. Bearman (Eds.) <i>Museums and the Web 2007: Selected papers from an international conference</i>. Toronto: Archives &amp; Museum Informatics, 41-50. Available <a href="../http://www.archimuse.com/mw2007/papers/vanLoon/vanLoon.html">http://www.archimuse.com/mw2007/papers/vanLoon/vanLoon.html</a></p>
+	    <p class="ReferencesText">Woodruff, A., P.M. Aoki, A. Hurst &amp; M.H. Szymanski
+		    (2001). Electronic Guidebooks and Visitor Attention. In <i>Proceedings of 6th International Cultural Heritage Informatics Meeting</i>,
+	    437-454. Retrieved November 2005, from <a href="../http://www2.parc.com/csl/members/woodruff/publications/2001-Woodruff-ICHIM2001-VisitorAttention.pdf">http://www2.parc.com/csl/members/woodruff/publications/2001-Woodruff-ICHIM2001-VisitorAttention.pdf</a></p>
+    <!-- InstanceEndEditable --> </div>
+  			<div id="citation">
+            		
+                <h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->Schroyen, J., et al., The Design of Context-Specific Educational Mobile Games<!-- #EndEditable -->. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2009: Proceedings</em>.
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2009/papers/<!-- #BeginEditable "URL" -->schroyen/schroyen.html
+				 <!-- #EndEditable --></p>
+	</div>
+</div>
+  <!--htdig_noindex-->
+  
+  <div id="sidebar">
+    <div id="side-nav">
+      <ul id="side-nav-list">
+        <li id="workshops"><a href="../../workshops/index.html" class="menu">Workshops</a></li><li id="sessions"><a href="../../sessions/index.html" class="menu">Sessions</a></li><li id="speakers"><a href="../../speakers/index.html" class="menu">Speakers</a></li><li id="interactions"><a href="../../interact/index.html" class="menu">Interactions</a></li><li id="demonstrations"><a href="../../demos/index.html" class="menu">Demonstrations</a></li><li id="events"><a href="../../events/index.html" class="menu">Events</a></li><li id="exhibits"><a href="../../exhibit/index.html" class="menu">Exhibits</a></li><li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li><li id="pc"><a href="../../thanks/index.html" class="menu">Committees</a></li><li  id="community"><a href="../http://conference.archimuse.com/" class="menu">Community On-line</a></li>
+      </ul>
+    </div>
+    <div id="search-site">
+<form method="get" id="searchform" action="http://wp.museumsandtheweb.com/">
+<input type="text" class="field" name="s" id="s" placeholder="Search">
+<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+</form>
+    </div>
+        <div id="addthis">
+    <!-- AddThis Button BEGIN -->
+	<script type="text/javascript">var addthis_pub="archimuse";</script>
+	<script type="text/javascript">var addthis_brand = "archimuse";</script>
+	<script type="text/javascript">var addthis_options = 'twitter, facebook, linkedin, delicious, email, digg, favorites, more';</script>
+	<a href="../http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="../../../external.gif?link=http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" alt="Share"/></a><script type="text/javascript" src="../http://s7.addthis.com/js/200/addthis_widget.js"></script><!-- AddThis Button END -->
+</div>
+    
+    <div id="sidebar-links">
+      <ul id="sidebar-links-list">
+        <li><a href="../../../index.html" class="produced-by">produced by<br />
+          <img src="../../images/sidelogo.png" width="144" height="37" alt="AMI logo" /></a></li>
+        <li><a href="../../../index.html">Join our mailing list</a></li>
+        <li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+          <img src="../../images/search.gif" alt="search" width="24" height="25" border="0" /></a></li>
+      </ul>
+    </div>
+    <div id="sidebar-acknowledge">
+
+      <div id="sponsor">
+</div>
+    </div>
+   <!--/htdig_noindex-->
+  </div>
+  <div id="footer">
+    <div id="last-updated"> last updated: <!-- #BeginDate format:Am1a -->October 27, 2010 4:57 PM<!-- #EndDate -->
+      <br />
+[analytics code]<br />
+<div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+    </div>
+    <!--htdig_noindex-->
+    <div id="footer-content">
+      <p>Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E
+        2P3 Canada<br />
+        Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2009";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2008 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				  </script>
+        <br />
+        Copyright &copy; 2009 &ndash; Archives &amp; Museum Informatics &ndash; All
+        rights reserved.<br />
+      </p>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2009/papers/schroyen/schroyen.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:56:35 GMT -->
+</html>

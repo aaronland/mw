@@ -1,0 +1,676 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+
+<!-- Mirrored from www.museumsandtheweb.com/mw97/speak/alsford.htm by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 19:34:36 GMT -->
+<head>
+
+<title>Papers</title>
+
+</head>
+
+<body bgcolor="CCFFFF">
+
+<font face="ARIAL">
+
+<a href=../mw97toc.html><img src="../mw97logo.gif", border=0" align=Left></a>
+
+<center>
+<h2>Conference Papers</h2>
+</center>
+
+
+<img src=../mw97line.gif>
+
+<center>
+<h4>Museums and the Web: An International
+Conference<br>
+Los Angeles, CA, March 16 - 19, 1997</h4>
+</center>
+
+
+<img src="../mw97line.gif">
+
+
+
+<h3>Jim Blackaby<br>
+Senior Systems Developer <br>
+Office of Technology Initiatives <br>
+United States Holocaust Memorial Museum <br>
+<a href="mailto:jblackaby@ushmm.org">jblackaby@ushmm.org</a><br>
+and<br>
+Beth Sandore <br>
+Coordinator for Imaging Projects <br>
+Digital Library Research Program <br>
+University of Illinois <br>
+<a href="mailto:sandore@uiuc.edu">sandore@uiuc.edu</a><br>
+
+
+</h3>
+ 
+<h2>Building Integrated Museum Information Systems: Practical Approaches to Data Organization and Access</h2>
+Date of creation: <i>February 10, 1997</i><br>
+&#169; Archives &amp; Museum Informatics
+<p>
+<h3><a name="Abstract"><font size="3">Abstract</font></a></h3>
+<p>Ever wish you could put your fingers on all of the information about a specific topic in a museum, regardless of whether it was 
+drawn from the objects collection, exhibit catalogues, the library's holdings, prints and slides collection? Or your interest might 
+even extend beyond a single department. With computerization and public access projects, museums are increasingly called 
+upon to provide information drawn from a great deal of heterogeneous material. The advent of the World Wide Web has placed 
+even more pressure on information holders. </p>
+<p>Museum information has been gathered and described in disparate forms -- either because of the nature of the material or the 
+nature of the data that can be gathered about museum collections. For a variety of reasons -- availability of software, variations 
+in standards, the needs of collections -- heterogeneity can be expected to persist and in many cases, it should be encouraged. In 
+spite of these variations of form, style, emphasis, and content, in reality museum information takes only a few forms -- text, 
+imagery, and occasionally sound. Web publishing enables museums to provide access to this information through innovative 
+means, ranging from exhibits created in hypermedia to samplers of collections, to searchable bodies of text that can be queried 
+directly by the user, with the potential for obtaining results that closely match the searcher's information needs. Search engines 
+that enable querying multiple information sources drawn from diverse formats are changing the nature and the expectations of the 
+role of museum information systems. </p>
+<p>This paper investigates fundamental approaches to constructing integrated museum information systems. A key element in the 
+process of building these systems is the development of a thorough understanding of the data structures and formats within your 
+organization. Also critical is the need to determine how data ought to be stored and shaped, and how a museum would like the 
+data to be displayed, once it is retrieved. Practical examples are drawn from projects in which the authors have participated, 
+including the Oregon Historical Society's Collections Access Project, sponsored by the U. S. Dept. of Education, and the 
+Museum Educational Site Licensing Project, sponsored by the Getty Information Institute, and The United States Holocaust 
+Memorial Museum. An overview is provided of current web and database technology that supports integrated systems 
+development, and consideration is given to the ways in which these technologies match existing information access systems. </p>
+<h3><a name="Organizing"><font size="3">Organizing</font></a><font size="3"> Information: Choosing and Using Database Structures</font></h3>
+<blockquote>
+<h3><a name="Introduction"><font size="3">Introduction</font></a><font size="3"> </font></h3>
+</blockquote>
+<p><font size="3">As information managers, museums differ from other kinds of organizations in the way that they accumulate in disparate forms 
+and in disparate ways contextual materials that give meaning to the objects that they maintain. A history museum might have 
+gathered records about individual objects with the usual descriptions and commentaries, it might at a later date have acquired the 
+business papers of the company that made those objects, and a historian might have done research on an industry of which that 
+company was a part for an exhibit and filed those papers in a vertical file of topics about the collections. An art museum might 
+have sketches and information from sketchbooks and diaries about a painting that was no longer in public view, a file of artist's 
+biographies created by students for a university art history class, and a collection of books about the artist and her circle. All of 
+these resources - the objects, the research, the documents, and the records themselves - come to be part of the fabric of 
+information that gives an object life in a museum. All of these resources shed light on the museum's collections - some more than 
+others, some more independently than others - and while not all are of equal significance, none are discarded by the prudent 
+museum information manager. This diversity makes managing museum information a more difficult proposition than keeping track 
+of the stock of a stationery store or tracking overnight express deliveries or even developing a profile of a consumer's spending 
+habits. The sources of material that museums draw on need not be congruent or even conceived as being related.</font></p>
+<p><font size="3">In most museums, the written information that describes collections takes many forms, may rest in several departments, and may 
+have been gathered at different times for purposes. It is likely that different pieces of information gathered in different ways over 
+time may overlap, and it is equally likely that some parts of existing descriptive information is unique. For example, staff at the 
+Oregon Historical Society discovered that the Library, the Archives, and the Collections departments all possessed some 
+descriptive information about particular companies in Oregon. As the departments discussed the types of information that they 
+had about these entities, they realized that it would be useful for each department to be able to use the other's information 
+because in parts of the organization there were gathered facts about the history of companies and in others, information about 
+the output of those companies. The photo archives had photographs taken of and by them, and oral history included 
+conversations with people related to them. In fact, in some cases, one department might have a very thoroughly documented 
+narrative histories that would benefit all of the departments. If the organization were creating a shared database, to which all 
+departments had access, there was no need for each department to maintain duplicate narratives on particular topics. </font></p>
+<blockquote>
+<h3><font size="3">The </font><a name="Concept"><font size="3">Concept</font></a><font size="3"> of Integrated Information Systems</font></h3>
+</blockquote>
+<p>There are several ways to facilitate the search and retrieval of information that is common to each of the internal information 
+systems that an organization maintains. The first and simplest approach involves creating a high-level menu that lets users choose 
+their database, format their own searches, and requires that they move sequentially from one to the next database, with no 
+integration across systems. Typically, users can adapt to different database command structures. However, the question is not 
+whether they can adapt, but rather whether they want to spend the time doing so. The less time a user needs to spend 
+negotiating search commands, the more time that user will have to spend searching your collections. The second approach 
+involves keeping the information in each of the stand-alone systems that are operating (collections database, library online 
+catalog), and using a search engine to execute sequential searches across those systems, each time formulating a query using the 
+search language that matches the particular system. The drawbacks of this approach include the difficulty of programming a 
+search engine to perform a variety of search queries and to return the results in different formats, and the concerns over exposing 
+internal production systems to potentially high volumes of public use and unwanted hacking. A third approach might involve an 
+organization choosing one database and search engine to serve all of its needs, which would necessitate the translation of several 
+data formats into one (using the lowest common denominator principle), thereby producing a leveling effect on all of the data 
+produced by different departments. While some organizations may be at a point where they are ready to negotiate new contracts 
+for each of their internal database systems, the likelihood of this occurring is rare, as is the probability that all departments might 
+agree to using the same system, due to the specialized format and descriptive needs involved in working with many types of 
+information (e.g., objects, manuscripts, photos). This paper advocates yet a fourth approach-that of the integrated system-a 
+system that can be built to collect metadata from the various legacy systems within an organization to create a new database for 
+public use. This new database is not maintained-the legacy systems still serve as production systems within the museum. Rather, 
+it is a file that can be refreshed on a periodic basis, which can be searched in a variety of ways, through which a museum can 
+establish links among similar types of information across departments, without having to re-structure its internal production 
+systems. The ideal integrated information system would be one which retrieves directly from each production database within 
+and organization, with a minimum of overhead-only the formatting and linking information between similar information across 
+systems. While this ideal is not commercially available today, the realization of this goal is close, given current work on 
+interoperability and semantic retrieval systems.<a href="blackaby2.htm#1"><sup><font size="1"><strong>1</strong></font></sup></a> The premise behind advocating this approach is that there are distinct reasons 
+why the museum community shall maintain a variety of data formats and classification schemes-arguments that are deeply rooted 
+in the need to preserve contextual validity and meaning, and the inability to shoulder the significant economic investment in 
+large-scale conversion or re-creation of existing metadata. </p>
+<blockquote>
+<h3><a name="Visualizing"><font size="3"><b>Visualizing</b></font></a><font size="3"><b> Museum Information in terms of Data Structures</b></font></h3>
+</blockquote>
+<p>In planning to bring disparate pieces of information together through one integrated system, data should not be considered simply 
+in the way it relates to one specific purpose, like a collections catalogue. Data needs to be visualized and prepared so that it is in 
+a format that can be used for many purposes. Materials from such museum activities as exhibits need to be considered so as to 
+be integrated with other information in an organization. Similarly, information about collections that span multiple institutions 
+needs to be incorporated into the mix of resources. Data ought to be organized from the start and considered as a whole in 
+order to accommodate all of these possibilities in developing an integrated system, the digital counterpart to an institution, a side 
+the public may most easily access apart from the physical collections. </p>
+<p>Of course, that is much easier said than done. Museums accumulate, and for all kinds of very good reasons, the materials that 
+they gather are not "organized from the start" or considered as wholes. Excluding for the moment that items within the collection 
+are apt to be information resources for the collection (think of vertical files full of company catalogues or collections of architect's 
+papers or the notes of a 19<sup>th</sup> century horticulturist sketching mushrooms in the wild), the information resources of a museum 
+have developed very distinct ways of being recorded. Several common types can be noted just to serve as reminders of what 
+the task of integration involves:</p>
+<ul>
+<li>Some aspects of museum data systems have depended upon the <b>forms</b> that materials take - bound books utilize different 
+systems than loose papers and both are apt to be different from "objects." Photographs and slides are apt to be specially 
+treated, films, oral history materials (tapes and transcripts), drawings, maps, bound manuscript materials like diaries and 
+ledgers, stamps, coins, botanical specimens, living species - all of these are apt to have developed more or less special 
+methods of recordation. To an extent, the library world has enabled common ways of addressing the needs of different 
+types of artifacts, but that fact does not mean that institutions have found those tools useful or even used them when they 
+were. </li>
+<li>Some of the data that museums have gathered depend exclusively upon <b>topic</b><b><i>.</i></b> Vertical files, scrapbooks, preambles to 
+finding aids, exhibit label copy stored away, and many other information resources and cataloguing aids depend upon 
+generalized topics as their organizing principle. In some cases, these resources may be randomly organized - some curator 
+established a file for "Blacksmithing" in a cabinet full of folders on similar topics, and ever since then any general bit of 
+information on that topic has been stuck in that folder. Some are more systematic - the books of the origins of place 
+names or files of clippings, for instance. Some are intentionally abstract, such as the cataloguing tools that have been 
+developed or adopted by museums to define concepts such as style or use or classification. </li>
+<li>Some data that museums have gathered is intended specifically to establish <b>connections</b> between otherwise disparate 
+materials. Again, some of these efforts are haphazard - scrapbooks, file folders, and ledgers are apt to be used. But, 
+some of them have been more systematic - central files of names, especially for donors or figures of special historical 
+significance, are the most common, but some museums have chronologies that are shared across collections, and some 
+use natural grouping factors such as place names as ways of creating connections, as with post card collections and 
+photograph collections and occasionally collections such as architectural materials. </li>
+</ul>
+<p>Not surprisingly, the formal information systems that museums have developed reflect these different approaches. Museum 
+organization traditionally reflects the form that materials take - the departments of the U.S. Holocaust Memorial Museum include 
+the Archives, the Photo Archives, Oral History, the Library, Film and Video, and Collections (which means all types of objects, 
+often including archival, photographic, and library materials that is perceived as being significant as "objects.") Though other 
+museums may be more or less strictly divided (the splitting apart of all things thinner than a dime except paintings from all things 
+thicker except books is the common structure for small historical societies), divisions along the lines of object form are common. 
+The fact of that practical and political division has done much to encourage "special" ways of recording information about each 
+form. Hybrids exist - library management tools have been adapted to recording data about objects and there are a variety of 
+home-grown approaches to dealing with all of those materials that don't fall clearly under the purview of librarians on the one 
+hand and object curators on the other - but the fact of these hybrids only helps to point towards the fact of the differences. </p>
+<p>To an extent, hierarchical approaches to thinking about museum information ranging from adapting the Dewey Decimal System 
+to the uniform application of the <i>Art and Architecture Thesaurus</i> in all information systems have helped to bridge the divides 
+that prevent different forms of materials from being integrated into a single system. For a time, the Margaret Woodbury Strong 
+Museum used the hierarchical categories described in <i>Nomenclature for Museum Cataloguing</i> to delineate its departments 
+rather than the more traditional forms that materials took, and the Henry Ford Museum has a long history of creative 
+organizational approaches to collections, but such extreme experiments in integration have been rare in historical museums. 
+Natural history collections are often more interesting models in this regard, and art museums where there may be less difference 
+in the form of collections are often organized by topic - usually geographical, chronological, or stylistic similarity. These 
+institutional structures and reliance on standard topical approaches suggest some models for integration that are interesting. Of 
+course, sometimes the form that they take is no more complex than the use throughout a museum of the Library of Congress 
+subject headings as subjects for books, as a data element in recording information about objects, and as a standard vocabulary 
+to describe the content of photographs. </p>
+<p>Similarly interesting have been the electronic tools (primarily) that have developed in recent years to establish relationships within 
+single parts of organizations as well across departments. The relational model now familiar in database tools begins to make itself 
+felt in museums as a consideration as the example of the Oregon Historical Society's realization that when its information holdings 
+were viewed as a whole - apart from departmental divisions - there was a great deal of commonality. Of course, recognizing that 
+the Rose Lumber Company about which the archives has prepared a company history for the finding aid organizing the company 
+papers, for which the photo collection has views, from which the objects collection has artifacts and recorded commentary 
+about the provenance of those artifacts, and so <i>could</i> be related in an organization and actually realizing such integration are two 
+very different things. Beginning to recognize that links could exist is an important step forward.</p>
+<p>Any system that is going to integrate the data that is managed by museums must take into account that there may be as many 
+good reasons for keeping data that has been gathered about collections by form separate as there are for combining it, that there 
+will be hierarchical constructs that may be more or less available and of greater or lesser importance to data managers, and that 
+there may be many more potential relationships within museum data than have been identified or developed. In addition, because 
+administrative structure so often mirrors data structure and compatibility, the problems of integration may take on political 
+overtones not warranted by the data. And finally, because data accumulates in museums, even if the one perfect system could be 
+found to accommodate all users so that integration could be assured as all data entered the institutional systems, the likelihood of 
+working backwards through layers of existing materials is small. On that account, an alternative approach that involves 
+generating metadata from any existing data sources has been followed with considerable success by the authors.</p>
+<blockquote>
+<h3><font size="3">Images and non-textual Media</font></h3>
+</blockquote>
+<p>One of the most appealing aspects of multimedia technology is that it enables museums to extend the way in which they 
+represent their collections by sharing still images, video, and audio with the public. Images and non-textual media can be used in 
+a very flexible manner, but it is important to accommodate their <i>richest</i> use, and render these data <i>once</i> from analog to digital 
+format, using a database (preferably the same one that you are developing for other applications). So, it is important to identify 
+the materials to keep track internally of what you have captured, in what format and condition you captured it, what technical 
+specifications were followed to accomplish the capture, and what type (if any) of changes were made to the digital objects to 
+render them easily usable in your intended applications. For instance, you may capture a digital image of a photograph once by 
+scanning it at a fairly high resolution, storing a master archival file in a lossless format. In order to render the image on the web, 
+you will need to downsize it considerably, and probably change its format to a lossy format. In doing so, you need to remember 
+to do two things: </p>
+<ul>
+<li>document in a database the exact process you followed to capture the image in the archival format; </li>
+<li>devise a filenaming or storing scheme so that you can establish meaningful links between the master filename and the 
+derivative image; </li>
+</ul>
+<p>Filenaming, format, and server storage schemes are necessary, and must be planned in advance. With some formats like TIFF 
+(tagged image file format) it is possible to embed text tags in the image file as searchable identifiers. For example, full or fielded 
+text, images (still and moving), or audio are usually held in multiple departments within an organization-the objects collection, the 
+library, the archives and manuscripts collection, the prints and photographs collection. While there are similarities in handling text 
+documents and multimedia documents, there is one major distinction: whereas text documents are <i>enhanced</i> by images, video, 
+and sound, media objects are usually dependent on text to identify or describe them within the context of a multimedia 
+presentation to users. </p>
+<p>Although storage and delivery of images and multimedia are not linked thematically to metadata, working with multimedia 
+requires careful planning for the amount and types of storage, and the type of computing and networking that will support the 
+effective delivery of media along with text. Images, video, and audio require significantly more storage than text, and ideally they 
+need as high a network bandwidth as possible for reasonable delivery speeds. The experience of those who work with Web and 
+other networked multimedia applications have had to make trade-offs between high image fidelity and the limits of network 
+bandwidth to deliver large files to the user desktop. Typically, images and video may be produced at a high archival quality, then 
+reduced or compressed in size in order to accommodate effective delivery across a network. The types of derivative files that 
+are created out of archival master files need to be somehow linked with the master file. Somewhere in the museum's 
+record-keeping systems a definitive record of these copies ought to be kept. </p>
+<h3><a name="Metadata"><font size="3">Metadata</font></a><font size="3"> as a Solution for Working with Mixed Media</font></h3>
+<p>The approach we find most useful for developing the integrated version of a museum's data resources has been to develop a 
+very simple format for accumulating metadata - a text representation of any data component that is perceived as discrete - an 
+object record, a finding aid, a book catalog card, an entry out of a catalogue, a photo caption, or a collection of specimens. By 
+adding a few administrative fields beyond the text block as well as a way to identify elements from each text block that might be 
+candidates for interpretation with hierarchical tools/approaches, e.g. an indication of an object's classification, and elements likely 
+to be parts of formally defined links, e.g. personal names, and place names, the challenge of giving access to integrated data is 
+greatly simplified. The issues become those of conversion and parsing from native data formats into the metadata container, of 
+providing normalization for those elements that are hierarchical or linked, and of course implementing access to the metadata 
+with a search engine capable of providing satisfactory results, allowing recursive or subsequent queries, generating links, and 
+providing hierarchical access to related materials where appropriate. These are not trivial tasks, but they are greatly simplified by 
+the existence of the single container.</p>
+<p>Of course, nothing is quite so simple. Reducing all data to a single container assumes that there is something like equality among 
+each thing that is the occasion for a record, that there are not vertical relationships between parts, and that data elements reflect 
+things that are kind of comparable. For most "things" a museum keeps track of, these may not be issues. A user seeing a list of 
+items like that noted in the previous paragraph - object, finding aid, book, photo - might be well satisfied with the results of a 
+query against the metadata. Limiting the scope of a search to a particular media, allowing access to related items, offering links 
+to other items would be matters of user's choice. But additional measures seem appropriate to reflect variance in the scale of 
+what a single element of metadata represents. In the case of the Oregon Historical Society, this has taken the form of a relatively 
+simple distinction of data elements that bear parent/child relationships to one another being reflected as such. This allows 
+searches on an item level or on a collection level (or both) to be supported with the ability to move from items to collections and 
+collections to items. In addition, it is clear that some pieces of metadata-especially those involved in hierarchic relationships or 
+which reflect from hierarchic standards-serve more as encyclopedic comments on other data elements than comments on items 
+in the collection. Accordingly, some elements have been designated as "encyclopedic," i.e., the description of what was meant 
+by the term "chest-on-frame" or what was meant by "Pre-Raphaelite" or what constituted the "ponticum series" of 
+rhododendrons - all pieces of data apt to be found in museum information systems, but rarely very accessible to a questioning 
+public.</p>
+<p>Below are examples of metadata from the Archives and the Photographs departments of the U. S. Holocaust Memorial 
+Museum:</p>
+<p align="center"><img src="IMG00001.GIF" align="bottom" width="572" height="205"></p>
+<p align="center"><font size="3">Exhibit 1 A search of the combined Library and Archives collections,</font><font size="4"> </font><font size="3">reprinted with permission of the U. S. Holocaust 
+Memorial Museum.</font></p>
+<p align="center"><img src="IMG00002.GIF" align="bottom" width="572" height="244"></p>
+<p align="center"><font size="3">Exhibit 2 Archives record display in the Inquery system, reprinted with permission of the U. S. Holocaust Memorial Museum.</font></p>
+<p align="center"><img src="IMG00003.GIF" align="bottom" width="572" height="358"></p>
+<p align="center"><font size="3">Exhibit 3 Photograph record display in the Inquery system, reprinted with permission of the U. S. Holocaust Memorial Museum.</font></p>
+<p><font size="3">There are essentially two ways to bring together different data formats and present them to the public as a cohesive 
+collection-either ask everyone to conform (on some level) to one fixed data format, regardless of the type of information, or 
+manipulate the data using innovative database construction techniques that are built into some software programs. The first 
+approach involves normalizing existing data so that it is a consistent format. For example, a large international agency that held 
+metadata in different formats for approximately twenty countries recently converted all of these data into one SGML format. The 
+second, a simple approach - creating a single source for metadata - along with designating parent-child relations and an 
+encyclopedic quality for some instances of that metadata lacks the sophistication of many more ambitious approaches to unifying 
+data. But, considering that it is very simple to implement, it generates surprisingly satisfying results. An example of this approach 
+would involve each department (photographs, objects, archives, library) first generating an output file of data in their native 
+structures, although the complete and identical dataset would not need to be generated. Therefore, information in the collections 
+database about acquisition and physical condition might not be included in the file of metadata that is generated for public 
+searching and viewing.</font></p>
+<h3><a name="Standards"><font size="3">Standards</font></a><font size="3"> Development for Descriptive Metadata</font></h3>
+<p>If you want to share data, between departments, or with other institutions, standards become important. The diversity of 
+approaches across several disciplines poses challenges to the cohesive development of the categories of descriptive metadata 
+for the combination of visual and textual resources in the museum and archival communities. Within the museum community 
+considerable diversity of descriptive work exists due to the uniqueness of collections and the approaches to catalog, organize, 
+describe, and present museum collections. Although this section focuses on standards for describing museums' digital 
+information, the discussion cannot be held in isolation from the considerable prior work that has been done with traditional 
+approaches to creating metadata (cataloging, indexing), as well as established methods for organizing, describing, and classifying 
+collections. It appears that one of the biggest challenges facing museums that already have extensive manually indexed collection 
+systems is using that data effectively without having to re-create or re-format significant portions of it. Bell, in writing about the 
+descriptive work of art curators, comments that while technology has made it feasible to exchange information about art 
+collections, not every curator chooses the same terminology to describe works of art. <a href="blackaby2.htm#2"><sup><font size="1"><strong>2</strong></font></sup></a> This observation is readily extended to 
+all of the disciplines which are encompassed in museum collections-not everyone speaks a common language, even in cases 
+where two museums contain objects and information on the same subjects.</p>
+<p>Several controlled vocabularies and classification schemes have been used or recommended as standards for categorizing the 
+content of original works, such as the <i>Art and Architecture Thesaurus</i> (AAT), the Library of Congress Subject Headings 
+(LCSH), the Thesaurus of Graphic Materials, ICONCLASS, Categories for the Description of Works of Art (CDWA), and 
+<i>Nomenclature for Museum Cataloguing</i>. The list of approaches to organizing and describing objects, media, and text is 
+extensive, and it represents the myriad of perspectives on manual classification and description. The schemes vary depending on 
+the focus of the organization and may not be adequate to serve the needs of all museums. It is understandably difficult to define 
+areas of these schemes that have common meaning, given the diversity of museum collections. Work toward developing 
+descriptive standards in this area, particularly in the arts, has been under way for some time. The Visual Resources Association 
+(VRA) has developed a list of "core categories" for describing visual resources which covers information about the original 
+object, its creator(s) and the surrogate digital image. <a href="blackaby2.htm#3"><sup><font size="1"><strong>3</strong></font></sup></a><sup> </sup>The VRA core categories were developed so that they reference the 
+corresponding MARC cataloging fields, and so that they correspond to the Categories for the Description of Works of Art, 
+developed by the VRA and a number of museum professional groups. The VRA core also takes into account the use of 
+controlled vocabulary subject and name terms. The work of this group addresses an overarching framework of three general 
+categories of image file description, including two categories that are used to describe the original object and who created it, and 
+a category of information used to describe the surrogate or digital file for the object:</p>
+<p>Object Categories </p>
+<blockquote>
+<p>Object Type/ Techniques/ Materials/ Dimensions/ <br>
+Titles/ Larger Entity Names/ Dates/ Subjects/ <br>
+Repository Name/ Repository Number/ Notes</p>
+</blockquote>
+<p>Creator Categories </p>
+<blockquote>
+<p>Nationality/ Culture</p>
+</blockquote>
+<p>Surrogate Categories </p>
+<blockquote>
+<p>Image Type/ Image Owner/ Image Owner Number/ Source </p>
+</blockquote>
+<p>OCLC (Online Computer Library Center), in collaboration with the CNI (Coalition for Networked Information), has sponsored 
+a series of workshops over the past two years that have focused on the development of a core of elements that can be used as 
+metadata to describe digital information. In 1995 a group of thirteen elements, labeled the "Dublin Core" was developed by this 
+group. <a href="blackaby2.htm#4"><sup><font size="1"><strong>4</strong></font></sup></a></p>
+<table width="95%">
+<tbody><tr><td width="15%">Subject: </td><td width="50%">The topic addressed by the work. </td></tr>
+<tr><td width="15%">Title </td><td width="50%">The name of the object. </td></tr>
+<tr><td width="15%">Author </td><td width="50%">The person(s) primarily responsible for the intellectual content of the object. </td></tr>
+<tr><td width="15%">Publisher </td><td width="50%">The agent or agency responsible for making the object available in its current form. </td></tr>
+<tr><td width="15%">Other Agent </td><td width="50%">The person(s), such as editors, transcribers, and illustrators who have made other significant 
+intellectual contributions to the work. </td></tr>
+<tr><td width="15%">Date </td><td width="50%">The date of publication. </td></tr>
+<tr><td width="15%">Object type </td><td width="50%">The genre of the object, such as novel, poem or dictionary.</td></tr>
+<tr><td width="15%">Form </td><td width="50%">The physical manifestation of the object, such as PostScript file or Windows executable file. </td></tr>
+<tr><td width="15%">Identifier </td><td width="50%">String or number used to uniquely identify the object. </td></tr>
+<tr><td width="15%">Relation </td><td width="50%">Relationship to other objects. </td></tr>
+<tr><td width="15%">Source </td><td width="50%">Objects, either print or electronic, from which this object is derived, if applicable. </td></tr>
+<tr><td width="15%">Language </td><td width="50%">Language of the intellectual content. </td></tr>
+<tr><td width="15%">Coverage </td><td width="50%">The spatial location and/or temporal duration characteristics of the object</td></tr>
+</tbody></table>
+<p align="center">Exhibit 4: The Dublin Core Elements <a href="blackaby2.htm#5"><sup><font size="1"><strong>5</strong></font></sup></a></p>
+<p>The Dublin Core represented the first attempt at developing a common group of elements that could be used consistently to 
+describe networked information resources. This core was expanded upon earlier this year at a second metadata workshop held 
+in Warwick, England. The goal of the Warwick conference was to develop a framework for deploying electronic resource 
+description. Dempsey and Weibel note that the utility of the Dublin Core lies in its simplicity and its flexibility:</p>
+<blockquote>
+<blockquote>
+<p>The Dublin Core is intended to fill the niche between the terseness of the unstructured full-text 
+web indexes and the structured description of more complex models such as MARC. It is 
+intended to be sufficiently rich to support useful fielded retrieval but simple enough not to require 
+specialist expertise or extensive manual effort to create. <a href="blackaby2.htm#6"><sup><font size="1"><strong>6</strong></font></sup></a></p>
+</blockquote>
+</blockquote>
+<p>A significant outcome of the Warwick conference on metadata deployment was a proposed convention for embedding metadata 
+in HTML (Hypertext Markup Language) .<a href="blackaby2.htm#7"><sup><font size="1"><strong>7</strong></font></sup></a><sup><font size="1"><strong> </strong></font></sup>On September 23 and 24, OCLC and CNI hosted a workshop on metadata for 
+networked images. The goal of this conference was "…to promote convergence among alternative approaches to describing 
+images and image databases in networked environments." <a href="blackaby2.htm#8"><sup><font size="1"><strong>8</strong></font></sup></a> The outcome of the conference was a shared realization that images 
+and text documents could be described in similar ways, with a recommendation for slight revision of the existing Dublin Core. <a href="blackaby2.htm#9"><font size="1"><strong>9</strong></font></a></p>
+<h3><a name="Textual"><font size="3">Textual</font></a><font size="3"> Metadata Formats </font></h3>
+<p><font size="3">Metadata can take on one of two formats-structured or unstructured. Examples of structured metadata can be found in many of 
+the collections management systems that were built in the 1970's and 1980's. The MARC cataloging record consists of 
+structured metadata, with specific fields, set field delimiters and other tags. The previous section reviewed standards for working 
+with structured metadata. However, there is an increasing need to be able to work effectively with unstructured information. 
+Examples of unstructured metadata include full-text documents like collection catalogs, journal articles, telephone directories, or 
+training handbooks. HTML (Hypertext Markup Language) represents one set of standards that accommodate text formatting 
+for delivery and display across the Web, such as whether the title is bold or italicized, where the line and paragraph breaks 
+occur, or the beginning and end of a document. HTML is limited, however in its inability to convey the content and meaning of 
+the elements within a full text document. SGML (Standard Generalized Markup Language) represents another set of standards 
+that support the identification of content elements in full text, such as the author, title, or subject of a work. Museums, libraries, 
+publishers, and archives have developed SGML DTD's that can accommodate the kinds of different content of the information 
+that these institutions handle. The work of the AITF (Art Information Task Force) and other groups has led to the development 
+of an SGML DTD for museum information. The results of project CHIO (Cultural Heritage Information Online) will prove 
+interesting since they will prove the feasibility of the use of the CIMI DTD as well as the use of a Z39.50 client to enable a 
+search across the participating institutions who have provided metadata about their collections using this particular DTD. </font><a href="blackaby2.htm#10"><sup><font size="1"><strong>10</strong></font></sup></a><font size="3"> 
+Similarly, work in the archival field has resulted in a DTD for creating SGML marked up finding aids. </font><a href="blackaby2.htm#11"><sup><font size="1"><strong>11</strong></font></sup></a></p>
+<h3><a name="Database"><font size="3">Database</font></a><font size="3"> Models </font></h3>
+<p><font size="3">Once the desired museum information is identified, the next step in creating an integrated system is to determine the structure of 
+the database in which that information will be stored. The purpose of constructing a database with such great care is to ensure 
+that all of the important relationships are firmly established within and between data elements and record types at the outset, so 
+that these relationships can be fully exploited as the database grows. Worthington and Robinson emphasize the role of the 
+database in their definition-- "The necessary feature which characterizes a database is its capacity not merely to store data items 
+but also to record meaningful bindings or relationships among those items and to support multiple perspectives on both the data 
+and their bindings." </font><a href="blackaby2.htm#12"><sup><font size="1"><strong>12</strong></font></sup></a><font size="3"> Worthington and Robinson identify essentially two fundamental types of database models that exist-the 
+hierarchical or network model, and the relational model. The hierarchical model imposes a tree-like data structure, similar to a 
+classified catalog, where super-categories subsume lesser or more specific categories of information. A collection arranged 
+according to the Dewey Decimal system which originally presumed to organize all known information, represents a hierarchical 
+model. The strength of hierarchical models is that they support a clear delineation of the relationships between the information 
+elements in a collection. Geographic areas present a good example of effective use of hierarchies. For example, it is easily 
+agreed that North America is the continent where one can find the United States, wherein one can locate the state of Illinois, and 
+more specifically the city of Chicago. Hierarchical data models were employed in virtually all of the library online systems of the 
+1970's and 1980's, and many of the museum collections databases of that same time period as well as the tools that were 
+developed in support of museum information such as <i>Nomenclature</i> and <i>The Art and Architecture Thesaurus</i>. However, their 
+chief weakness lies in the fact that they do not support multiple relationships between or among data elements, at different levels. </font></p>
+<p><font size="3">The relational data model uses tables in which attributes for a particular entity type are defined, with specific values that are 
+assigned to that entity. Relationships between entities are indicated by either duplicating the attributes, or by establishing links 
+between one table and the table with the shared attributes. Relational database software is the most commonly available 
+commercial database product today (e.g., Microsoft Access, Foxpro). A theatre costume and set design database provides an 
+interesting example of a relational database implementation at the University of Illinois. Several tables were set up within one 
+Microsoft Access database, one for costumes and set descriptions, one for information from the theatrical productions such as 
+reviews and cast lists, and one for technical notes on how images of the sets and costumes were produced. Relationships 
+between entities that needed to share attributes were established in the database software. For instance, in an indexing record 
+for a costume design for the character Portia from the Shakespeare play Merchant of Venice was linked to the entity in the 
+production table that contained the information about that particular production. </font></p>
+<p><font size="3">Many existing software solutions for bringing together diverse formats of metadata operate on the relational database model, 
+because more flexible relationships among data elements can be established once the data is moved from a hierarchical into a 
+relational database structure, without corrupting the integrity of the original format of the data. Most of the search engines 
+available, however, tend to favor hierarchical models because they treat a set of data as a whole without many ways to establish 
+relations between database parts.</font></p>
+<h3><a name="Search"><font size="3">Search</font></a><font size="3"> Engines</font><font size="1"> </font></h3>
+<p><font size="3">Creating a system that enables users to retrieve information across various existing systems and data formats has benefits and 
+drawbacks. The benefit is that information across departments can be brought together in a meaningful way without the user 
+having to move physically (or virtually) from one collection to another. The drawback stems from the fact that the merging of 
+data in different formats inherently dilutes hierarchical control and poses the challenge of working with multiple formats for 
+information. For example, a search in a hierarchically organized collections database for all objects created by a particular artist 
+retrieves a result that will only change if the museum adds another work created by that artist to the database. However, the 
+same search across a combined file of objects, manuscripts, photographs, and library materials for materials by or about a 
+particular artist might produce a very different, less predictable result, depending on the search engine, the way in which the 
+merged data is structured and indexed, and the way in which the query is executed across the existing data. While this 
+collocation of information is a boon for the user, one could say that it might play tricks on the minds of conscientious indexers, 
+curators, and catalogers. It is important to note here that a number of studies have indicated that professional indexers, expert 
+searchers, and naïve users rarely choose the same words to describe the same information. </font><a href="blackaby2.htm#13"><sup><font size="1"><strong>13</strong></font></sup></a><font size="3"> Some basic examples of the 
+currently popular types of search engines may provide the reader with a deeper understanding of the ways in which search 
+engines affect the ultimate results of a query. Numerous examples of virtually all of these systems can be found on the Web.</font></p>
+<p><font size="3">Turtle and Croft </font><a href="blackaby2.htm#14"><sup><font size="1"><strong>14</strong></font></sup></a><font size="3"> point out that there are essentially three types of information retrieval models that are currently in use: </font></p>
+<ul>
+<li><font size="3">Exact match: user input is searched against the database for matching terms or phrases. This type of system forms the 
+basis of many commercial systems, including collections databases, and library online catalogs like OCLC (Online 
+Computer Library Center);</font><font size="4"> </font></li>
+<li><font size="3">Vector space models: user queries or documents are viewed as vectors in high-dimension vector space, with distance 
+being the measure of similarity between documents. Use of this model is mainly confined to experimental systems, such as 
+the VIBE (Visual Information Browsing Environment) at the University of Pittsburgh </font><a href="blackaby2.htm#15"><sup><font size="1"><strong>15</strong></font></sup></a><font size="3">;</font><font size="4"> </font></li>
+<li><font size="3">Probabilistic retrieval models: use statistical methods to estimate the probability that a document satisfies a user's query. A 
+number of Web search engines, including Lycos, and Infoseek, incorporate probabilistic retrieval models. The commercial 
+software Inquery, developed at the University of Massachusetts at Amherst, uses the probabilistic model. </font><a href="blackaby2.htm#16"><font size="1"><strong>16</strong></font></a></li>
+</ul>
+<p><font size="3">Exact match search systems are the most prevalent on the commercial market. They operate best with indexing or cataloging 
+records (fielded and terse data), and can accommodate hierarchical control structures such as thesauri or other classification 
+schemes. Search terms can be truncated and stemmed, boolean and proximity operators can be employed to increase the 
+likelihood that a user's query will find matching information in the database. Since the vector space model is mainly in an 
+experimental stage, it will not be discussed further in this context. Statistical methods are increasingly being employed to enhance 
+the retrieval of information that is similar to that requested in a user's query, but may not otherwise be related to the search terms 
+in a database. The probabilistic retrieval model is one statistical method that has been applied to the searching of full text 
+documents and for databases with a combination of formats (which are essentially treated as full text). </font></p>
+<h3><font size="3">The </font><a name="Museum"><font size="3">Museum</font></a><font size="3"> Educational Site Licensing Project</font></h3>
+<p><font size="3">There are a number of useful examples of the development of metadata for the description of images that are currently accessible 
+on the Web. The Museum Educational Site Licensing Project (MESL) is an important effort that is now serving as a testbed to 
+determine how this and other descriptive metadata is presented and used. </font></p>
+<p><font size="3">The MESL was initiated in February, 1995 with partial sponsorship from the Getty Information Institute and MUSE Educational 
+Media. The goal of the project is to test the feasibility of developing site licensing arrangements between museums and 
+educational institutions in the United States. Seven U. S. universities are collaborating with six museums and the Library of 
+Congress to provide networked access to over 8,000 images and their corresponding text descriptions. Faculty in Art History, 
+and other arts and humanities disciplines are using the images for classroom teaching. The images and text are mounted locally 
+by each of the seven universities. The project has a two-year duration. MESL participants include: </font></p>
+<table width="100%">
+<tbody><tr><td width="50%"><font size="3"><strong>Universities </strong></font></td><td width="50%"><font size="3"><strong>Museums </strong></font></td></tr>
+<tr><td width="50%"><font size="3">American University </font></td><td width="50%"><font size="3">Fowler Museum of Cultural History (UCLA) </font></td></tr>
+<tr><td width="50%"><font size="3">Columbia University</font></td><td width="50%"><font size="3">George Eastman House </font></td></tr>
+<tr><td width="50%"><font size="3">Cornell University </font></td><td width="50%"><font size="3">Harvard University Art Museums </font></td></tr>
+<tr><td width="50%"><font size="3">University of Illinois at Urbana-Champaign</font></td><td width="50%"><font size="3">Library of Congress </font></td></tr>
+<tr><td width="50%"><font size="3">University of Maryland</font></td><td width="50%"><font size="3">The Museum of Fine Arts, Houston </font></td></tr>
+<tr><td width="50%"><font size="3">University of Michigan</font></td><td width="50%"><font size="3">National Gallery of Art </font></td></tr>
+<tr><td width="50%"><font size="3">University of Virginia</font></td><td width="50%"><font size="3">National Museum of American Art</font></td></tr>
+</tbody></table>
+<p><font size="3">The primary goal of the project is to "define the terms and conditions under which digitized museum images and information can 
+be distributed over campus networks for educational use." </font><a href="blackaby2.htm#17"><sup><font size="1"><strong>17</strong></font></sup></a><font size="3"> Related objectives include: </font></p>
+<ol>
+<li><font size="3">Develop, test and evaluate procedures and mechanisms for the collection and dissemination of museum images and 
+information; </font></li>
+<li><font size="3">Propose a framework for a broadly-based system for the distribution of museum images and information on an on-going 
+basis to the academic community; </font></li>
+<li><font size="3">Document and communicate experience and discoveries of the project; </font><a href="blackaby2.htm#17"><sup><font size="1"><strong>18</strong></font></sup></a></li>
+</ol>
+<p><font size="3">Critical among these goals has been the development and testing of standards for image information and its related text. A 
+practical approach was adopted from the outset to generate data from existing museum sources. The text descriptive information 
+for the images supplied by museums was drawn from a combination of their exhibition catalogs and their collections maintenance 
+databases. In order to provide some means of searching across structured data fields from different systems and museums, the 
+participating museums and universities developed a structured data dictionary and used that as a guide for the export of 
+information from their collections databases. Museums had to extract data from their existing collections systems or other 
+databases and re-format it, mapping discrete elements of their data to the structured data dictionary fields. The MESL data 
+dictionary contains thirty-two fields, with some of these being repeatable. The elements of the Dublin Core, where applicable, 
+can be found. The goal of the data dictionary was to represent the types of elements that museum curators and art historians felt 
+were critical to the identification of images. These elements include data such as artist/creator, title, date, subject, description 
+accession number, material, type of art work. However, in mapping existing data structures into a new, common denominator 
+data structure, not every museum provided the same depth of descriptive information, and it was difficult to discern commonly 
+employed standards in museum artifact classification, due to the uniqueness of the materials that museums collect. Therefore, the 
+level of subject analysis, and the method of classification employed may differ radically from one museum to another. For 
+example, the Fowler Museum of Cultural History has a rich collection of Peruvian artifacts. Their descriptive information for the 
+Peruvian materials will undoubtedly include more specific terms than that of another museum that does not have an in depth 
+collection in this area. </font></p>
+<p><font size="3">The retrieval possibilities, however, are impressive. At the University of Illinois, the images are accessible through a Web site 
+that is restricted to the University community, in accordance with the terms of the site license agreement. Users can either 
+browse creator and title lists within a museum, or they can submit a search using a Web form, which is submitted to an SQL 
+(Structured Query Language) search engine. Perhaps the most significant aspect of mounting this database is that users can 
+search within one museum, or across all seven of the museums simultaneously. The search in the SQL search engine retrieves 
+words or phrases that match the user's search terms, across eight of the thirty-two possible fields. The following example search 
+for the terms "bridge" AND "painting" AND "monet" retrieves images which have in their text descriptions these three words, 
+occurring anywhere in the eight fields which are searched by the SQL engine. The search retrieves eight matches in a thumbnail 
+and brief text record list:</font></p>
+<p align="center"><font size="4"><img src="IMG00004.GIF" align="bottom" width="530" height="343"></font></p>
+<p><font size="3">Exhibit 5 Search Results, bridge AND painting AND monet; MESL Search, University of Illinois at Urbana-Champaign 
+(thumbnail image and text description of Claude Monet's Waterloo Bridge, Gray Day reprinted with permission of the National 
+Gallery of Art, Washington, DC) </font></p>
+<p><font size="3">The terms in the search are truncated, with an implicit boolean AND inserted between the terms, unless otherwise specified. The 
+terms, adjusted for truncation and boolean operators, are then posted for keyword matches against seven of the thirty-two 
+possible data dictionary fields within an SQL table. The matches that are returned are based on the occurrence of those terms 
+within the fields searched. The user has several display options, including a view of a medium and a full-size version of the digital 
+image, and a view of the complete indexing record for the item. While there are challenges to what the library world knows as 
+consistent subject access, the example search suggests that the descriptive text that is supplied by the museums can be stored 
+and manipulated to produce some very useful and interesting retrieval results for users.</font><font size="4"> </font></p>
+<p><font size="3">The MESL group recognizes that using structured data, and the process of museums extracting specific information from their 
+existing collections databases can be cumbersome. Museums are also using unstructured full text, and SGML (standard 
+generalized markup language) with a DTD (document type definition) developed for either museum or archival information, such 
+as those provided by the CIMI (Computer Information for Museum Interchange) group and by the library and archival 
+community, which has developed the EAD (encoding for archival description) DTD.</font></p>
+<h6><a name="Conclusion"><font size="3">Conclusion</font></a></h6>
+<p><font size="3">The most impressive aspect of the array of possibilities before museums today - the search engines, database standards, 
+reasoned approaches, digital images, and digital data - is that museums actually have developed <i>feasible approaches</i> to 
+represent in meaningful ways the collections and the information that they manage. It may not be getting much easier to do, but 
+there are possibilities. The success of the MESL project, the success of those few instances where search engines have been 
+employed in either actual or test situations for museums, and the lively conversations that have developed in the museum 
+community about providing meaningful public access to museum information indicate our progress. While the use of the web for 
+these efforts has perhaps had only an indirect effect, the fact that the web has compelled museums to revisit the ways that they 
+distribute information to the public and the tools that have been developed to support the kinds of things the web is used for has 
+shaped the way that museums work in ways that we are only just beginning to see.</font></p>
+<p><a name="1"><sup><font size="2"><strong>1</strong></font></sup></a><font size="3"> "Digital Libraries Computation Cracks Semantic Barriers Between Databases," <i>Science</i> Volume 272 (June 7, 1996).<br>
+</font><a name="2"><sup><font size="3"><b>2</b></font></sup></a><font size="3"> Bell, Lesley Ann. "Gaining access to visual information: Theory, analysis, and practice of determining subjects-a review of the 
+literature with descriptive abstracts." <i>Art Documentation</i> Vol. 13, no. 2 (Summer, 1994), p. 89.<br>
+</font><a name="3"><sup><font size="3"><b>3</b></font></sup></a><font size="3"> Visual Resources Association. "</font><a href="https://web.archive.org/web/20030206080009/http://www.vra.oberlin.edu/core.htm"><font size="3">VRA Core Categories</font></a><font size="3">", August, 1996.</font><font size="4"> <br>
+</font><a name="4"><sup><font size="3"><b>4</b></font></sup></a><font size="3"> Weibel, Stuart, Jean Godby, Eric Miller, and Ron Daniel. "</font><a href="https://web.archive.org/web/20030206080009/http://www.oclc.org:5046/oclc/research/conferences/metadata/dublin_core_report.html"><font size="3">OCLC/NCSA Metadata Workshop Report</font></a><font size="3">." March, 1995. </font><br>
+<a name="5"><sup><font size="3"><b>5</b></font></sup></a><font size="3"> </font><a href="https://web.archive.org/web/20030206080009/http://purl.org/metadata/dublin_core_element"><font size="3">Dublin Core Metadata Element Set: Reference Description</font></a><font size="3">. August 29, 1996.<br>
+</font><a name="6"><sup><font size="3"><b>6</b></font></sup></a><font size="3"> Dempsey, Lorcan and Stuart L. Weibel. "</font><a href="https://web.archive.org/web/20030206080009/http://www.dlib.org/dlib/july96/07/weibel.html"><font size="3">The Warwick Metadata Workshop: A Framework for the Deployment of Resource 
+Description</font></a><font size="3">." D-Lib Magazine, July/August, 1996. <br>
+</font><a name="7"><sup><font size="3"><b>7</b></font></sup></a><font size="3"> Weibel, Stuart (reported by). "</font><a href="https://web.archive.org/web/20030206080009/http://www.oclc.org:5046/~weibel/html-meta.html"><font size="3">A Proposed convention for embedding metadata in HTML</font></a><font size="3">." June 2, 1996. <br>
+</font><a name="8"><sup><font size="3"><b>8</b></font></sup></a><font size="3"> "</font><a href="https://web.archive.org/web/20030206080009/http://purl.oclc.org/metadata/image"><font size="3">CNI/OCLC Metadata Workshop</font></a><font size="3">." September 24-25, 1996, OCLC, Dublin, Ohio, USA).<br>
+</font><a name="9"><sup><font size="3"><b>9</b></font></sup></a><font size="3"> Weibel, Stuart and Eric Miller. "</font><a href="https://web.archive.org/web/20030206080009/http://www.dlib.org/dlib/january97/oclc/01weibel.html"><font size="3">Image Description on the Internet: A Summary of the CNI/OCLC Image Metadata 
+Workshop</font></a><font size="3">" D-Lib Magazine (January 1997).<br>
+</font><a name="10"><sup><font size="3"><b>10</b></font></sup></a><font size="3"> Project CHIO demonstrates the use of two international standards cited in the CIMI Standards Framework: SGML and 
+Z39.50. CHIO Structure. The project appears to be unfolding in two segments-the first which demonstrates the use of an 
+SGML DTD among participating museums to mark up their descriptive metadata, and the second which involves the 
+development of a Z39.50 search client that will enable the search and retrieval of similar information across the online databases 
+of the participating institutions. Supported by the Dept. of Commerce (TIIAP program) and the NEH. CIMI (</font><a href="https://web.archive.org/web/20030206080009/http://www.cimi.org/cimi/CHIO.html"><font size="3">Consortium for 
+the computer interchange of museum information</font></a><font size="3">).<br>
+</font><a name="11"><sup><font size="3"><b>11</b></font></sup></a><font size="3"> Pitti, Daniel V. "</font><a href="https://web.archive.org/web/20030206080009/http://sunsite.berkeley.edu/FindingAids/"><font size="3">Finding Aids for Archival Collections</font></a><font size="3">." 1996).<br>
+</font><a name="12"><sup><font size="3"><b>12</b></font></sup></a><font size="3"> Worthington, Bill and Brian Robinson. "The medium is not the message: mixed mode document technology." In Mary Feeney 
+and Shirley Day (eds.) Multimedia Information. New York: Bowker and Sauer, 1991, p. 56.<br>
+</font><a name="13"><sup><font size="3"><b>13</b></font></sup></a><font size="3"> See, for example, the discussion in Dumais, Susan T. "Improving the retrieval of information from external sources." 
+<i>Behavior Research Methods, Instruments, &amp; Computers.</i> 23(2) (1991) p. 229.<br>
+</font><a name="14"><sup><font size="3"><b>14</b></font></sup></a><font size="3"> Turtle, Howard R. and W. Bruce Croft. "A comparison of text retrieval models." The Computer Journal. Vol. 35(3) (1992), 
+279.<br>
+</font><a name="15"><sup><font size="3"><b>15</b></font></sup></a><font size="3"> </font><a href="https://web.archive.org/web/20030206080009/http://www.lis.pitt.edu/~viri/viri.html"><font size="3">VIBE system home page</font></a><font size="3">.<br>
+</font><a name="16"><sup><font size="3"><b>16</b></font></sup></a><font size="3"> Information about the Inquery full text retrieval system can be found at the </font><a href="https://web.archive.org/web/20030206080009/http://ciir.cs.umass.edu/info/ciirinfo.html"><font size="3">Center for Intelligent Information Retrieval</font></a><font size="3"> at the 
+University of Massachusetts at Amherst.<br>
+</font><a name="17"><sup><font size="3"><b>17</b></font></sup></a><font size="3"> Getty Art History Information Program. "</font><a href="https://web.archive.org/web/20030206080009/http://www.ahip.getty.edu/mesl/about/goals.html"><font size="3">Museum Educational Site Licensing Project. Goals and Objectives</font></a><font size="3">." February 22, 
+1995. </font><br>
+<a name="18"><sup><font size="3"><b>18</b></font></sup></a><font size="3"> Getty Art History Information Program. "</font><a href="https://web.archive.org/web/20030206080009/http://www.ahip.getty.edu/mesl/about/goals.html"><font size="3">Museum Educational Site Licensing Project. Goals and Objectives</font></a><font size="3">." February 22, 
+1995. </font></p>
+<p><a href="https://web.archive.org/web/20030206080009/http://images.grainger.uiuc.edu/default.htm"><font size="3">Return to Digital Imaging Initiative Home Page</font></a></p>
+
+
+</p>
+
+<hr>
+<font size="-1">Date of creation: <i>February 10, 1997</i><br>
+&#169; Archives &amp; Museum Informatics
+
+
+<p>Copyright Archives & Museum Informatics, 1997 </p>
+<!--FOOT-->
+<p>
+<img src=../mw97line.gif>
+<p>
+<center>
+<table border=1>
+<tr>
+<td align="CENTER" valign="MIDDLE">
+<a href="../../index.html"><img src="../../a%26mi.images/a%26mi.html" width=99
+height=30 border=0
+alt="Archives & Museum Informatics"></a>
+</td>
+
+<td align="CENTER" valign="MIDDLE">
+<a href="../mw97toc.html"><img src="../mw97.gif" width=40 height=30 border=0
+alt="Museums and the Web"></a>
+<td>
+<a href="../mw97regi.html#register">Register</a>
+</td>
+
+<td>
+<a href="../mw97exop.html#EO">Exhibit</a>
+</td>
+
+<td>
+<a href="../mw97spop.html#sponsorship">Sponsor</a>
+</td>
+
+<td>
+<a href="../mw97glnc.html#glance">Program</a>
+</td>
+
+</table>
+<p>
+<img src=../mw97line.gif>
+<p>
+<i>Last modified: February 28, 1997<br>
+This file can be found below http://www.archimuse.com</i><br>
+Send questions and comments to
+<a href="../../mw98/index.html">info@museumsandtheweb.com</a></I>
+
+</center>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'http://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "http://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+</body>
+
+<!-- Mirrored from www.museumsandtheweb.com/mw97/speak/alsford.htm by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 19:34:36 GMT -->
+</html>

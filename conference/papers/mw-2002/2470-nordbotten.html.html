@@ -1,0 +1,1388 @@
+<html><!-- #BeginTemplate "/Templates/mw2002-papers.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2002/papers/nordbotten/nordbotten.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:15 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" -->
+
+	<title>MW2002: Papers: Exhibits on Demand - Project Goals and Approach</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=en">
+
+	<meta name="DC.Format" content="text/html">
+
+	<meta name="DC.language" content="ISO 8859-1">
+
+	<meta name="DC.Title" content="Exhibits on Demand - Project Goals and Approach">
+
+	<meta name="htDig.keywords" content="Virtual exhibits, multimedia database management, metadata,
+
+Information retrieval, Query processing">
+
+	<meta name="keywords" content="Virtual exhibits, multimedia database management, metadata,
+
+Information retrieval, Query processing">
+
+	<meta name="DC.Subject" content="Virtual exhibits, multimedia database management, metadata,
+
+Information retrieval, Query processing">
+
+	<meta name="description" content="Museums world-wide are deploying both virtual exhibits and multimedia collections for use by researchers, educators and the general public. With today?s technology, users searching for thematic information from multiple autonomous sites must perform a series of separate processes to locate a reference list to relevant sites, search each site for relevant information, extract relevant data, and construct a local collection for ?off-line? development of an integrated presentation. The users? problem can be summarized as a need for methods and tools to assist in locating, accessing, and extracting relevant information from multimedia, multi-database systems developed and maintained by autonomous museums.
+
+Two principal problems hinder support for location and access to multiple data sources. First, there is a lack of agreement on how semantically consistent metadata for description of data collections should be created. Thereafter a user-friendly query language and processing system must be developed to support the formulation of search criteria, search in a multi-database space, and integrate and present the search results. 
+
+This paper presents the motivation, goals, and approach taken for a newly started project that aims to develop methods and tools to address these problems by integrating and extending existing methods and tools developed separately for metadata, multimedia, and multi-database management. The primary goal is to develop a system to support dynamic generation of specialized collections as the result of an easy-to-use query language to multiple museum collections, i.e. a system to support exhibits-on-demand.
+
+">
+
+	<meta name="DC.Description" content="Museums world-wide are deploying both virtual exhibits and multimedia collections for use by researchers, educators and the general public. With today?s technology, users searching for thematic information from multiple autonomous sites must perform a series of separate processes to locate a reference list to relevant sites, search each site for relevant information, extract relevant data, and construct a local collection for ?off-line? development of an integrated presentation. The users? problem can be summarized as a need for methods and tools to assist in locating, accessing, and extracting relevant information from multimedia, multi-database systems developed and maintained by autonomous museums.
+
+Two principal problems hinder support for location and access to multiple data sources. First, there is a lack of agreement on how semantically consistent metadata for description of data collections should be created. Thereafter a user-friendly query language and processing system must be developed to support the formulation of search criteria, search in a multi-database space, and integrate and present the search results. 
+
+This paper presents the motivation, goals, and approach taken for a newly started project that aims to develop methods and tools to address these problems by integrating and extending existing methods and tools developed separately for metadata, multimedia, and multi-database management. The primary goal is to develop a system to support dynamic generation of specialized collections as the result of an easy-to-use query language to multiple museum collections, i.e. a system to support exhibits-on-demand.
+
+">
+
+	<meta name="DC.Publisher" content="Archives & Museum Informatics">
+
+	<meta name="DC.Creator" content="Nordbotten, Joan"><!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="><!-- #BeginEditable "script" --><!-- #EndEditable -->
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link rel="stylesheet" href="../../Library/mw2002-paper.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" background="../../images/mw2002.bg.gif" text="#000000" link="#003399" vlink="#660000" onLoad="MM_preloadImages('../../images/register_on.gif','../../images/workshops_on.gif','../../images/sessions_on.gif','../../images/speakers_on.gif','../../images/interact_on.gif','../../images/demos_on.gif','../../images/exhibit_on.gif','../../images/events_on.gif','../../images/best_on.gif','../../images/dates_on.gif','../../images/boston_on.gif','../../images/sponsors_on.gif')">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tr> 
+    <td width="145" align="LEFT" valign="TOP"> 
+      <p><a href="../../index.html"><img src="../../images/mw.gif" width="112" height="155" border="0" alt="/mw/"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('register','','../../images/register_on.gif',1)"><img name="register" border="0" src="../../images/register_off.gif" width="114" height="18" alt="Register"></a><a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('workshops','','../../images/workshops_on.gif',1)"><img name="workshops" border="0" src="../../images/workshops_off.gif" width="114" height="18" alt="Workshops"></a><a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sessions','','../../images/sessions_on.gif',1)"><img name="sessions" border="0" src="../../images/sessions_off.gif" width="114" height="18" alt="Sessions"></a><a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('speakers','','../../images/speakers_on.gif',1)"><img name="speakers" border="0" src="../../images/speakers_off.gif" width="114" height="18" alt="Speakers"></a><a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('interactions','','../../images/interact_on.gif',1)"><img name="interactions" border="0" src="../../images/interact_off.gif" width="114" height="18" alt="Interactions"></a><a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('demonstrations','','../../images/demos_on.gif',1)"><img name="demonstrations" border="0" src="../../images/demos_off.gif" width="114" height="18" alt="Demonstrations"></a><a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('exhibits','','../../images/exhibit_on.gif',1)"><img name="exhibits" border="0" src="../../images/exhibit_off.gif" width="114" height="18" alt="Exhibits"></a><a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('events','','../../images/events_on.gif',1)"><img name="events" border="0" src="../../images/events_off.gif" width="114" height="18" alt="Events"></a><a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('best','','../../images/best_on.gif',1)"><img name="best" border="0" src="../../images/best_off.gif" width="114" height="18" alt="Best of the Web"></a><a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dates','','../../images/dates_on.gif',1)"><img name="dates" border="0" src="../../images/dates_off.gif" width="114" height="18" alt="Key Dates"></a><a href="../../boston/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('boston','','../../images/boston_on.gif',1)"><img name="boston" border="0" src="../../images/boston_off.gif" width="114" height="18" alt="Boston"></a><a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sponsors','','../../images/sponsors_on.gif',1)"><img name="sponsors" border="0" src="../../images/sponsors_off.gif" width="114" height="18" alt="Sponsors"></a><br>
+        <br>
+        <a href="../http://www.archimuse.com/" target="_top"><img src="../../images/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"></a> 
+        <br>
+        <span class="small">Archives &amp; Museum Informatics<br>
+        158 Lee Avenue<br>
+        Toronto, Ontario<br>
+        M4E 2P3 Canada</span></p>
+      <p class="small">info @ archimuse.com<br>
+        <a href="../http://www.archimuse.com/" style="text-decoration: underline">www.archimuse.com</a></p>
+      <table width="74">
+        <tr> 
+          <td> <a href="../http://search.museumsandtheweb.com/search" target="_top"> <img src="../../images/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+          </td>
+          <td valign="MIDDLE"> <a href="../http://search.museumsandtheweb.com/search" style="text-decoration: underline"> 
+            <span class="verysmall">Search<br></span></a> </td>
+        </tr>
+      </table>
+      <p><font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="small">Join 
+        our <a href="../http://search.museumsandtheweb.com/mailinglist/" style="text-decoration: underline"> 
+        Mailing List</a>. <br>
+        <a href="../http://search.museumsandtheweb.com/terms-of-use-privacy/" style="text-decoration: underline"> 
+        Privacy</a>.</span></font> </p>
+       <p><font SIZE='-2' class='verysmall'>published: April, 2002 </font>
+        <!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"analytics scripts updated:&nbsp;"+document.lastModified);
+
+// -->
+      </p>
+   <p><font face="Arial, Helvetica, sans-serif" class="small">© Archives & Museum Informatics, 2002.</font><br>
+  <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Att
+   ribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>      </p>
+    </td>
+    <td width="455" align="LEFT" valign="TOP" class="normal">
+      <p><a href="../../speakers/index.html"><img src="../../images/papers.gif" width="390" height="55" border="0" alt="MW2002: Papers"></a></p>
+     <!-- #BeginEditable "Body of Page" --> 
+
+      <p class=PaperTitle>Exhibits on Demand &#150; Project Goals and Approach</p>
+
+      <p class=Author>Joan C. Nordbotten, University of Bergen, Norway</p>
+
+      <p class=AbstractTitle>Abstract</p>
+
+      <p class=AbstractText>Museums world-wide are deploying both virtual exhibits 
+
+        and multimedia collections for use by researchers, educators and the general 
+
+        public. With today&#146;s technology, users searching for thematic information 
+
+        from multiple autonomous sites must perform a series of separate processes 
+
+        to <i>locate </i>a reference list to relevant sites, <i>search</i> each 
+
+        site for relevant information, <i>extract </i>relevant data, and <i>construct 
+
+        </i>a local collection for &#145;off-line&#146; <i>development</i> of 
+
+        an integrated presentation. The users&#146; problem can be summarized 
+
+        as a need for methods and tools to assist in <i>locating, accessing, and 
+
+        extracting </i>relevant information from multimedia, multi-database systems 
+
+        developed and maintained by autonomous museums.</p>
+
+      <p class=AbstractText>Two principal problems hinder support for location 
+
+        and access to multiple data sources. First, there is a lack of agreement 
+
+        on how semantically consistent metadata for description of data collections 
+
+        should be created. Thereafter a user-friendly query language and processing 
+
+        system must be developed to support the formulation of search criteria, 
+
+        search in a multi-database space, and integrate and present the search 
+
+        results. </p>
+
+      <p class=AbstractText>This paper presents the motivation, goals, and approach 
+
+        taken for a newly started project that aims to develop methods and tools 
+
+        to address these problems by integrating and extending existing methods 
+
+        and tools developed separately for metadata, multimedia, and multi-database 
+
+        management. The primary goal is to develop a system to support dynamic 
+
+        generation of specialized collections as the result of an easy-to-use 
+
+        query language to multiple museum collections, i.e. a system to support 
+
+        exhibits-on-demand.</p>
+
+      <p class=AbstractText>Keywords: Virtual exhibits, multimedia database management, 
+
+        metadata, Information retrieval, Query processing</p>
+
+      <h1>1. Museums on the Web - an informal report from the perspective of information 
+
+        retrieval</h1>
+
+      <p>Museums world-wide have been deploying virtual exhibits onto the Web 
+
+        since the mid 1990s. The basic structure used for virtual exhibits is 
+
+        a set of Web pages consisting primarily of text, images, and links from 
+
+        either the text or images to similar pages or image enlargements, respectively. 
+
+        Virtual exhibits are frequently large, often much more than 100 pages. 
+
+        Given that usage studies of virtual exhibits have shown that the average 
+
+        viewer of an in-house PC-exhibit selects less than 20 pages (Yamada, 1995 
+
+        and Shneiderman, 1989), while a study reported by Nordbotten (2000) found 
+
+        that visitors to a Web-based exhibit selected, on average, less than 10 
+
+        pages, most virtual exhibits contain far more information than an individual 
+
+        visitor will select. </p>
+
+      <p>Most virtual exhibits are <i>self-contained</i> in the sense that a viewer 
+
+        can select only the predefined exhibit pages using predefined links. In 
+
+        some exhibits, for example the &#147;Bhutan Exhibit&#148; at <a
+
+href="../http://www.bhutan.at/" target="_blank">www.bhutan.at</a>, a keyword search 
+
+        facility has been included to aid the viewer to find specific information 
+
+        within the exhibit. If we assume that the purpose of implementing a virtual 
+
+        exhibit is both to inform and to arouse curiosity about the topic, than 
+
+        the self-contained exhibit may not support the later goal, since there 
+
+        is generally no support for retrieving additional information from outside 
+
+        the exhibit page set.</p>
+
+      <p class=MsoBodyText>Many museums, in addition to deploying virtual exhibits, 
+
+        have also made electronic versions of (some of) their collections accessible 
+
+        from their Web site. This makes large quantities of information available 
+
+        to researchers, educators, students, and the general public. However, 
+
+        the electronic collections are not commonly accessible from the virtual 
+
+        exhibits unless the Web site navigation bar contains a link to the collections 
+
+        and is constantly available to the virtual exhibit visitor, as done in 
+
+        the Web site of The State Hermitage Museum at <a
+
+href="../http://www.hermitagemuseum.org/html_En/index.html" target="_blank">http://www.hermitagemuseum.org/html_En/index.html</a>. 
+
+      </p>
+
+      <p class=MsoBodyText>A few examples of electronic museum collections, showing 
+
+        diversity of content themes, include:</p>
+
+      <ul>
+
+        <li class="normal"><span class="normal"> The National Library of Australia&#146;s 
+
+          site, &#147;Picture Australia&#148;, at <a href="../http://www.pictureaustralia.org/" target="_blank">http://www.pictureaustralia.org/</a>, 
+
+          contains numerous sets of pictures clustered by theme,</span></li>
+
+        <li class="normal"><span class="normal">TAMH: Tayside A Maritime History, 
+
+          at <a
+
+href="../http://www.tamh.org/" target="_blank">http://www.tamh.org/</a>, contains 
+
+          a rich set of documents on trade.</span></li>
+
+        <li class="normal"><span class="normal"> <span class=red1>The Sculpture 
+
+          Center's Ohio Outdoor Sculpture Inventory, at </span><b><br>
+
+          </b><span class=normal1><a
+
+href="../http://sculpturecenter.org/oosi/oo.asp" target="_blank">http://sculpturecenter.org/oosi/oo.asp</a>, 
+
+          contains an inventory of Ohio sculpture</span></span></li>
+
+        <li class="normal"><span class="normal">The Virtual Herbarium of The New 
+
+          York Botanical Garden at <a href="../http://www.nybg.org/bsci/cass/" target="_blank">http://www.nybg.org/bsci/cass/</a>, 
+
+          consists of a detailed, formal classification of plants.</span></li>
+
+        <li class="normal"><span class="normal">The Smithsonian American Art Museum 
+
+          in Washington DC, at <a href="../http://americanart.si.edu/study/" target="_blank">http://americanart.si.edu/study/</a>, 
+
+          provides a wealth of images of American art.</span></li>
+
+      </ul>
+
+      <p class=MsoBodyText>The State Hermitage Museum, St. Petersburg, Russia, 
+
+        gives an extensive presentation of the museum and its collections at <a
+
+href="../http://www.hermitagemuseum.org/html_En/index.html" target="_blank">http://www.hermitagemuseum.org/html_En/index.html</a>.</p>
+
+      <p class=MsoBodyText>Various search tools have been made available for these 
+
+        collections, including some combination of:</p>
+
+      <ul>
+
+        <li class="normal"><span class="normal"><i>Find object,</i> given the 
+
+          catalogue number.</span></li>
+
+        <li class="normal"><span class="normal"> <i>Select from list(s),</i> of 
+
+          artists, subjects, and/or dates.</span></li>
+
+        <li class="normal"><span class="normal"> <i>Key word </i>search, for matching 
+
+          viewer specified search terms to terms used in the catalogue title, 
+
+          type, creator, date, and/or description fields. </span></li>
+
+        <li class="normal"><span class="normal"><i>Find similar to input object,</i> 
+
+          for matching a scanned or drawn image, input from outside of the collection, 
+
+          with collection objects, as used by the State Hermitage Museum Web site.</span></li>
+
+      </ul>
+
+      <p class=BlockQuote>a)<i> View similar </i>search, based on matching catalogue 
+
+        descriptions to those of a previously retrieved object.</p>
+
+      <p class=BlockQuote>b)<i> Refine</i> search, for modifying a previous search 
+
+        to expand or restrict the result set.</p>
+
+      <p class=MsoBodyText>The results from a collection search are frequently 
+
+        listed without an apparent order. At least the viewer is frequently not 
+
+        informed of either the lists&#146; total length or of the relevance criteria 
+
+        used to order the result set. For example, a search for <i>&#147;Indian 
+
+        Child*&#148;</i> through the search facility of the Smithsonian American 
+
+        Art Museum at <a
+
+href="../http://americanart.si.edu/study/" target="_blank">http://americanart.si.edu/study/</a> 
+
+        gave a result set, in which the first 3 items were: </p>
+
+      <table width="500" border="0" cellspacing="0" cellpadding="0" class="normal">
+
+        <tr> 
+
+          <td height="11" width="226"> 
+
+            <p><span class="normal">&#147;Woman and Child, showing&#133;&#148;,&nbsp;</span></p>
+
+          </td>
+
+          <td height="11" width="135" class="normal">G. Catlin&nbsp;</td>
+
+          <td height="11" width="139" class="normal">1837-1839?</td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="226" height="22" class="normal">&#147;Buried Far Away, Cocapah&#148;,</td>
+
+          <td width="135" height="22" class="normal">F. Rinehart</td>
+
+          <td width="139" height="22" class="normal">1899</td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="226" height="10"> 
+
+            <p><span class="normal">&#147;Assiniboin Woman and child&#148;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+          </td>
+
+          <td width="135" height="10"> 
+
+            <p class="normal">G. Catlin&nbsp;&nbsp;</p>
+
+          </td>
+
+          <td width="139" height="10"><span class="normal">1832</span></td>
+
+        </tr>
+
+      </table>
+
+      <p class=MsoBodyText>If the collection consists of images, the results commonly 
+
+        contain a list of thumbnail images, linked to a larger version of the 
+
+        image, plus an annotation giving the artist/creator, date, title, and 
+
+        perhaps location. If the collection consists of documents, the titles 
+
+        are listed and linked to the full text. Associations/relationships between 
+
+        the objects in the result set are not given, even though it is likely 
+
+        that there is a relationship between objects and documents describing 
+
+        them, particularly if the object has been used in an exhibit.</p>
+
+      <h2>1.1 Information retrieval problems</h2>
+
+      <p class=MsoBodyText>The search strategies outlined above have a number 
+
+        of well-known problems based on the nature of communication and the mismatch 
+
+        between the knowledge level and language of the viewer and that of the 
+
+        creator of the collection. Another problem area lies in the (lack of) 
+
+        sophistication of the software search engines. For example: </p>
+
+      <ul>
+
+        <li class="normal"><span class="normal"> Search by catalogue number assumes 
+
+          that the viewer has access to the catalogue. Given that the information 
+
+          in the electronic DB is frequently a version of the catalogue, there 
+
+          may be little new information to be attained.<br>
+
+          <br>
+
+          </span></li>
+
+        <li class="normal"><span class="normal"> Selection from a list of artists, 
+
+          subjects, and/or dates, assumes that the viewer knows the content and 
+
+          time frame of the collection, something that is an unrealistic assumption 
+
+          for general public viewers, particularly when the selection list consists 
+
+          of the formal taxonomy for the collection.<br>
+
+          <br>
+
+          </span></li>
+
+        <li class="normal"><span class="normal">Key word search requires a language 
+
+          match between the user/viewer and the collection creator, which is seldom 
+
+          found.<br>
+
+          <br>
+
+          </span></li>
+
+        <li class="normal"><span class="normal"> Matching a scanned or drawn image 
+
+          input object from outside of the collection, with collection objects 
+
+          requires a level of software sophistication that is not generally available 
+
+          today (2002), except in very specific applications, such as fingerprints 
+
+          or retina images.<br>
+
+          <br>
+
+          </span></li>
+
+        <li class="normal"><span class="normal">Retrieving similar objects, based 
+
+          on matching catalogue descriptions, commonly gives a high number of 
+
+          matched objects unless the extended search is limited to only a few 
+
+          of the catalogue characteristics. This function must be accompanied 
+
+          with a &#147;refine results&#148; function.</span></li>
+
+      </ul>
+
+      <p class=MsoBodyText>These problems are well documented in the information 
+
+        retrieval literature, as presented by Kowalski &amp; Maybury (2000) and 
+
+        Baeza-Yates &amp; Ribeiro-Neto (1999). There are also strategies for improving 
+
+        information retrieval from document collections that should be adapted 
+
+        to the more complex problem of information retrieval from multimedia museum 
+
+        collections.</p>
+
+      <h2>1.2 Result presentation</h2>
+
+      <p class=MsoBodyText>Presentation of the results of an information search 
+
+        as an unordered list only indicates that each retrieved object has some 
+
+        relation to the selection criteria. This can be ok, if the user simply 
+
+        wants a list of all objects in a particular category, for example by a 
+
+        given artist. However, there is more information about the result collection 
+
+        available that could be utilized in presentation of the result set. Simple 
+
+        orderings could be by artist, chronologically by date of the objects, 
+
+        or by subject, style, or material. In addition, combining ordering criteria 
+
+        may give the viewer even more information.</p>
+
+      <p class=MsoBodyText>Again, from information retrieval research and practice, 
+
+        the results can be ordered by relevance to the search criteria, assuming 
+
+        that multiple criteria are given and/or there is an importance/relevance 
+
+        distinction between matches in the title, keywords, and description of 
+
+        the objects.</p>
+
+      <p class=MsoBodyText>Finally, the observed sites do not provide cross-referencing 
+
+        between collections, for example from an image collection to a document 
+
+        collection or to presentation within a virtual exhibit. Providing these 
+
+        links could significantly increase the information about the objects in 
+
+        the result set.</p>
+
+      <h1>2. Designing virtual exhibits on demand:  applying a database management 
+
+        perspective</h1>
+
+      <p>Museum exhibits, and their virtual counterparts, are crafted &#146;by 
+
+        hand&#146; on a case-by-case basis and include only a small portion of 
+
+        the museum&#146;s real and electronic collections. Development of an exhibit 
+
+        takes months and several man-years of effort. The resulting exhibit is 
+
+        static in the sense that users cannot extend or tailor the content for 
+
+        their own special needs; for example, to form a specialized exhibit as 
+
+        an element in an educational context. Supporting user-developed exhibits, 
+
+        or specialized user defined collections, requires user access to the underlying 
+
+        data collections, possibly from multiple museums, as well as tools for 
+
+        search, retrieval, and presentation. </p>
+
+      <p class=MsoBodyText>Museums maintain, and have made available on the Internet, 
+
+        an increasingly diverse set of electronic multimedia databases. As high 
+
+        quality recording and scanning equipment becomes affordable, document 
+
+        and image collections are being supplemented with audio, video, film, 
+
+        and 3D collections. Parallel digitalization activities have led to the 
+
+        development of sets of separate but related electronic data collections 
+
+        or databases. Given that museums house overlapping collections, the result 
+
+        is a large set of inter-related, Internet accessible multimedia, multi-database 
+
+        systems.</p>
+
+      <p class=MsoBodyText>Two principal problems hinder support for location 
+
+        and access to multiple data sources. </p>
+
+      <ol>
+
+        <li> First, there is a lack of agreement on how semantically consistent 
+
+          metadata for description of museum collections should be created.<br>
+
+          <br>
+
+        </li>
+
+        <li> Thereafter, a query language and processing system must be developed 
+
+          to support the formulation of search criteria, search in a multi-database 
+
+          space, and integration and presentation of search results.</li>
+
+      </ol>
+
+      <p class=MsoBodyText>Our project aims to develop methods and tools to address 
+
+        these problems by integrating and extending existing methods and tools 
+
+        developed separately for metadata, multimedia, and multi-database management. 
+
+        Our interest lies in developing methods and tools for assisting development 
+
+        of virtual exhibits from a collection of underlying multimedia databases.</p>
+
+      <h2>2.1 A user scenario</h2>
+
+      <p class=MsoBodyText>A student or teacher wishes to locate information on 
+
+      </p>
+
+      <p class="BlockQuote"><i class="BlockQuote">the use of precious metals and 
+
+        gems in royal jewelry in Europe during the middle ages.</i></p>
+
+      <p class=MsoBodyText>Relevant information is located in national museums, 
+
+        as well as national archives, libraries, and collections maintained for 
+
+        the royal families. </p>
+
+      <p class=MsoBodyText>Using current Internet search engines, our user must 
+
+        perform the following tasks: </p>
+
+      <ul>
+
+        <li class="normal"><span class="normal">Select one or more Internet search 
+
+          engines.<br>
+
+          <br>
+
+          </span></li>
+
+        <li class="normal"><span class="normal"> Enter the words of the above 
+
+          requirement statement (keywords) as search criteria for the search engine, 
+
+          which will:<br>
+
+          </span></li>
+
+        <li class="normal"><span class="normal"> Match the keywords to site indexes 
+
+          created from site names and descriptions, and </span></li>
+
+        <li class="normal"><span class="normal"> Return a list of (assumed) relevant 
+
+          Web sites. </span></li>
+
+        <li class="normal"><span class="normal"> Use the result reference list 
+
+          to access a sub-set of the sites. At each site: </span></li>
+
+        <li class="normal"><span class="normal">Search via established links to 
+
+          locate relevant data, and/or </span></li>
+
+        <li class="normal"><span class="normal"> Use the local search systems 
+
+          for database access. </span></li>
+
+        <li class="normal"><span class="normal">Finally, the user must construct 
+
+          a coherent presentation of the retrieved data and information, perhaps 
+
+          as a new virtual exhibit.</span></li>
+
+      </ul>
+
+      <p class=MsoBodyText>Known problem points in the above scenario:</p>
+
+      <ul>
+
+        <li class="normal"><span class="normal">There are a number of search engines 
+
+          available, each giving a different set of responses to a query. For 
+
+          example: the above query retrieved 31 sites using &#147;Ask Jeeves&#148; 
+
+          and 101 when using &#147;Google&#148;. There were 6 references in the 
+
+          first 20 that were found (in different locations) in the 2 result sets 
+
+          and no references to museum collections.</span></li>
+
+        <li class="normal"><span class="normal">Internet search engines use indexes 
+
+          of Web (html) sites but are not capable of searching underlying multimedia 
+
+          databases.</span></li>
+
+        <li class="normal"><span class="normal"> The user search terms may not 
+
+          match the descriptors &#150; <i>metadata</i> &#150; of relevant sites, 
+
+          and</span></li>
+
+        <li class="normal"><span class="normal">There is little or no standardization 
+
+          of collection descriptions (metadata), leading to </span></li>
+
+        <li class="normal"><span class="normal"> The retrieved site lists may 
+
+          contain many irrelevant &#145;hits&#146;, i.e. which were clearly not 
+
+          relevant to the intent of the requirement statement.</span></li>
+
+        <li class="normal"><span class="normal"> Site access from the result is 
+
+          an easy but tedious process, giving at best a mixed result consisting 
+
+          of segments of divers Web exhibits, and data from various museum collections.</span></li>
+
+        <li class="normal"><span class="normal">There is no uniform retrieval 
+
+          format to structure the collected information.</span></li>
+
+        <li class="normal"><span class="normal">There is no tool to aid construction 
+
+          of a new collection, as part of a document or perhaps a new virtual 
+
+          exhibit.</span></li>
+
+      </ul>
+
+      <p class=MsoBodyText>The problems can be summarized as a need for methods 
+
+        and tools to aid users in <i>locating, accessing, extracting, and presenting 
+
+        </i>relevant information from multimedia, multi-database systems developed 
+
+        and maintained by autonomous museums.</p>
+
+      <h2>2.2 Current status in multimedia, multi-database management</h2>
+
+      <p class=MsoBodyText>There are a number of theories, methods, tools, and 
+
+        IT systems that can be extended to provide a solution for accessing autonomous 
+
+        multimedia, multi-database systems.</p>
+
+      <h3>Resource Location &amp; Metadata development</h3>
+
+      <p>Location of relevant data and information requires that metadata describing 
+
+        the semantic content of each collection be made available in a <i>standardized 
+
+        </i>format that supports <i>semantic integration</i> [Bearman and Trant 
+
+        1998]. There are numerous metadata standardization activities in process, 
+
+        perhaps best known are the development efforts behind Dublin Core in which 
+
+        there are 13 working groups including one with museum representatives. 
+
+        The Dublin Core effort began from the requirements of the Digital Library 
+
+        community and proposals for extension to other cultural application areas 
+
+        have been made, for example in [Bearman et al, 1999]. Other metadata proposals, 
+
+        developed for museum collection description include CIDOC [Doerr 1998] 
+
+        and the Warwick Framework [Lagoze1996]. Proposals for description of the 
+
+        semantic content of general multimedia can be found in [Lu 1999, Marcus 
+
+        1996, Subrahmanian 1998, and Wu et.al  2000].</p>
+
+      <p>The Dublin Core proposal (1999) consists of 13 basic metadata elements 
+
+        for describing aspects of media objects or resources. Controlled vocabularies 
+
+        are recommended for certain descriptive values; for example, for subject 
+
+        and type. However, it is well known that the use of controlled vocabularies 
+
+        for developing collection metadata/indexes requires trained users since 
+
+        the vocabulary seldom matches that of general public users [Hillman 2001]. 
+
+        This problem is also well known in the information retrieval community 
+
+        where much research has gone into linguistic based methods for selecting 
+
+        descriptive document terms and establishing thesauruses to aid the match 
+
+        between user query terms and the collection index terms [Baeza-Yates 1999, 
+
+        Kowalski 2001]. The problem is also well known in the multi-database research 
+
+        community where a structural analysis of database schemas has been the 
+
+        dominant approach for synonym resolution [Elmagarmid et.al 1999].</p>
+
+      <h3>Data access and retrieval</h3>
+
+      <p>As noted above, Internet search engines retrieve lists of Web site URLs 
+
+        after matching the user key word request with site indexes constructed 
+
+        from the metadata available to the search engine via crawler activity. 
+
+        No actual data is returned to the users who must then continue the search 
+
+        using the URL list and the established links on the referenced Web sites.</p>
+
+      <p>Multimedia database management systems, including document retrieval 
+
+        systems, also use a keyword-based search, but can also return actual resources 
+
+        (multimedia or document objects). These systems can also search for resources 
+
+        <i>similar to</i> a given resource, perhaps from the response to an initial 
+
+        keyword search [Baeza-Yates 1999, Kowalski 2001, Lu 1999, and Wu et.al 
+
+        2000]. The problem with current approaches is that the search engine is 
+
+        specialized to one data type (text, image, video, audio, or spatial), 
+
+        thus requiring multiple queries, one to each data collection. Current 
+
+        Object Relational DB management systems, for example IBM&#146;s DB2, can 
+
+        search for multiple multimedia data types within one database by combining 
+
+        access methods. However, these systems do not address the autonomous multi-database 
+
+        problem.</p>
+
+      <p>Current multi-database systems can search and retrieve data from multiple 
+
+        source databases, but only structured databases managed by relational 
+
+        or object-oriented DB management systems.</p>
+
+      <p>In both the multimedia and multi-database approaches, extensions to SQL3 
+
+        are proposed and used, perhaps with a form interface. The major problem 
+
+        here is also that SQL3 is not a user friendly language as it requires 
+
+        user knowledge of the structure of the underlying database to be searched, 
+
+        an impractical restriction for an environment with a large number of multimedia 
+
+        data collections.</p>
+
+      <h3>Presentation</h3>
+
+      <p>Query results are generally given as a list of titles and/or thumbnail 
+
+        images linked to the objects/resources that are considered relevant to 
+
+        the search query. The list may be ordered by a relevance match between 
+
+        the query terms and the object descriptors. If the result is to be formed 
+
+        as an exhibit, the user must then do so.</p>
+
+      <h2>2.3 A database perspective of exhibit construction</h2>
+
+      <p>Figure 1 shows the main components for a planned ICT (Information and 
+
+        Communication Technology) system for construction of a <i>virtual exhibit 
+
+        </i>from the results of a multi-database query. The lower section of the 
+
+        figure illustrates the multimedia multi-database set, i.e. the environment 
+
+        of interest for retrieving information for an exhibit. Note that the figure 
+
+        shows only the databases for one museum/organization. The databases are 
+
+        assumed to be managed by an object-relational database system (for example 
+
+        Oracle or DB2) containing SQL3 as its access language and search functions 
+
+        for document, image, video, audio, and spatial/3D media objects. A catalog 
+
+        describes the objects in the database set. </p>
+
+      <p class=MsoCaption><img src="nordbotten-fig1.gif" width="397" height="238"><br>
+
+        Figure 1: Virtual Exhibit system components</p>
+
+      <p class=MsoBodyText>The upper part of Figure 1 shows the main components 
+
+        of a user interface for retrieving information from the database collection 
+
+        and presentation of the results as a virtual exhibit. </p>
+
+      <h3>Resource Location &amp; Metadata development</h3>
+
+      <p class=MsoBodyText>The interface is based on a semantic model of the object 
+
+        catalogs so that similar objects can be identified in the separate source 
+
+        databases. The ICT implementation of the model is termed the semantic 
+
+        schema and contains a &#145;union&#146; of the local collection metadata 
+
+        as well as term thesauri for the collections. </p>
+
+      <h3>Data access and retrieval</h3>
+
+      <p class=MsoBodyText>The SemQL query language is an extension of SQL3. Based 
+
+        on information from the semantic schema, SemQL is able to construct local 
+
+        queries to those databases that have data relevant to the user query. 
+
+        SemQL also has a user interface that is similar to those used in the advanced 
+
+        search functions of Web search engines with the addition of an interactive 
+
+        dialog system to assist with early refinement of the user query.</p>
+
+      <h3>Presentation</h3>
+
+      <p class=MsoBodyText>A virtual exhibit construction module presents the 
+
+        results of queries to the system. The presentation module can construct 
+
+        a set of Web pages, a topic exhibit, for presentation of the query response. 
+
+        The resulting exhibit can be further modified by refining and resubmitting 
+
+        the SemQL query.</p>
+
+      <h2>2.4 The virtual exhibit project</h2>
+
+      <p>Bergen Museum, in Bergen, Norway, has embarked on a project, described 
+
+        briefly by Ramirez (2001), to establish and publish a number of different 
+
+        multimedia databases implemented by theme and media type. The project 
+
+        has funding from a grant from the Norwegian National Research Foundation 
+
+        (NFR), and the available databases can be found at <a href="../http://museum.uib.no/" target="_blank">http://museum.uib.no</a>. 
+
+        The collection of databases currently includes 3D databases for sculpture 
+
+        and insects, a video database of centipedes, a film database from social 
+
+        anthropology projects, plus various text-document and image databases. 
+
+        At this time, the databases are not inter-connected and are not connected 
+
+        to virtual exhibits. When the first phase of the database set has been 
+
+        implemented, the system is to be integrated with similar systems in other 
+
+        Nordic museums.</p>
+
+      <p>At the Department of Information Science, University of Bergen, we&#146;ve 
+
+        begun a project in cooperation with the Bergen Museum project, described 
+
+        in Nordbotten (2001), to develop tools that can utilize their databases 
+
+        for development of virtual exhibits. The framework for the project is 
+
+        given in Figure 1 above. This project is also supported by NFR and has 
+
+        funding for 6 researchers and graduate students.</p>
+
+      <h3>Project goals</h3>
+
+      <p class=MsoBodyText>The primary <i>project goal </i>is to develop methods 
+
+        and tools for creating &#146;on-demand&#146; virtual exhibits from multiple 
+
+        multimedia systems, as illustrated in Figure 1 above. The new methods 
+
+        and tools are to be an integration and extension of appropriate methods 
+
+        developed separately for metadata, multimedia, and multi-database management.</p>
+
+      <h3>Sub tasks for construction of a system for virtual exhibits on demand</h3>
+
+      <p class=MsoBodyText>The following methods and techniques will be developed 
+
+        in the coming 2 years:</p>
+
+      <ol>
+
+        <li> A semantic model for the metadata required for description of <i>semantic 
+
+          content</i> metadata for museum data collections (databases).<br>
+
+          <br>
+
+        </li>
+
+        <li> A method for integrating the metadata model from task1 with the basic 
+
+          metadata model of Dublin Core, thus supporting interoperability with 
+
+          other systems that use DC technology.<br>
+
+          <br>
+
+        </li>
+
+        <li> A schema structure for storage of the metadata as required from task 
+
+          1.<br>
+
+          <br>
+
+        </li>
+
+        <li> SemQL as an extension of the SQL3 query language and processor to 
+
+          support search by <i>semantic content</i>, as defined in the metadata 
+
+          schema developed in task 3, for electronic museum artifacts stored in 
+
+          multiple databases.<br>
+
+          <br>
+
+        </li>
+
+        <li> An exhibit construction module for presentation of query search results.</li>
+
+      </ol>
+
+      <p>Finally, a prototype system will be constructed and tested to demonstrate 
+
+        the feasibility and utility of above techniques in prototype system for 
+
+        an educational application.</p>
+
+      <p>The prototype will consist of 3 basic sub-systems:</p>
+
+      <ol>
+
+        <li> A<i> metadata system </i>tailored to museum collection users. Initially, 
+
+          the &#147;media abstraction approach&#148; proposed by Marcus and Subrahmanian 
+
+          (1996) and later extended by Subrahmanian (1998) will be used to develop 
+
+          a semantic model for the museum collection. This media abstraction approach 
+
+          outlines a structure for capturing the semantic content of multimedia 
+
+          objects. It has not yet been developed into a working prototype, so 
+
+          that our result can be considered method development. Assuming this 
+
+          is successful, the result will be integrated with the semantic content 
+
+          descriptions as specified in the current Dublin Core standard for description 
+
+          of artifacts.<br>
+
+          <br>
+
+        </li>
+
+        <li> The <i>semantic query language</i> SemQL, based on SQL3+, will be 
+
+          developed. This language will combine the functionality of multimedia 
+
+          and multi-database access as outlined in Baeza-Yates (1999) and Elmagarmid 
+
+          (1999), respectively. In addition, SemQL, will use the semantic schema 
+
+          structure developed under component 1 above. Currently, there is no 
+
+          known query language that combines multimedia search in multi-database 
+
+          systems.<br>
+
+          <br>
+
+        </li>
+
+        <li> A generic <i>exhibit generator</i> will be developed for presentation 
+
+          of SemQL query results. We envision using a book metaphor for concurrent 
+
+          presentation of text and related image with embedded links so that the 
+
+          viewer can zoom from either the text or image presentation resulting 
+
+          in more detailed information presented in both text and image panels.</li>
+
+      </ol>
+
+      <h3>Test and Evaluation</h3>
+
+      <p class=MsoBodyText>Three phases of evaluation are planned:</p>
+
+      <ol>
+
+        <li> <i>Prototype testing</i> will be used to demonstrate the feasibility 
+
+          of combining the above elements into a museum resource retrieval system. 
+
+          <br>
+
+          <br>
+
+        </li>
+
+        <li> <i>Precision &amp; Recall</i> measures, common in document processing 
+
+          systems (Kowalski 2001), will be used for quality testing of SemQL. 
+
+          The test environment will consist of a carefully constructed set of 
+
+          data collections containing the scanned images and descriptive documents 
+
+          for a set of thematically close types of museum objects.<br>
+
+          <br>
+
+        </li>
+
+        <li> <i>Usability testing</i> will be done by eliciting thematic descriptions 
+
+          of presentation exhibits, defined by educators interested in the thematic 
+
+          content of the test databases. These will form the source material for 
+
+          the SemQL query and the presentation model testing.</li>
+
+      </ol>
+
+      <h1>3. Project status</h1>
+
+      <p class=MsoBodyText>The &#147;Virtual Exhibits on Demand&#148; project 
+
+        has 3-year funding from 2002, and consequently is just formally beginning. 
+
+        We have a team of 9 graduate students working together to explore aspects 
+
+        of the design and implementation for the system outlined above and expect 
+
+        that a number of master&#146;s level theses will be developed in addition 
+
+        to a working prototype system that can function as a demonstration system 
+
+        for the concepts and functions described.</p>
+
+      <p class=MsoBodyText>We would appreciate any comments and suggestions that 
+
+        the reader can give.</p>
+
+      <h1>References</h1>
+
+      <p class=ReferencesText>Baeza-Yates,R. &amp; Ribeiro-Neto, B. (1999). <i>Modern 
+
+        Information Retrieval.</i> Addison Wesley.</p>
+
+      <p class=ReferencesText>Bearman, D. and Trant, J. (1998). <i>Unifying Cultural 
+
+        Memory</i>. Information Landscapes for a Learning Society, 1998. And presentation 
+
+        at UK Office of Library Networking Conference, July 1998. Also at <a
+
+href="../http://www.archimuse.com/papers/ukoln98paper/index.html" target="_blank">www.archimuse.com/papers/ukoln98paper/index.html</a></p>
+
+      <p class=ReferencesText>Bearman, D., Miller, E., Rust, G., Trant, J., and 
+
+        Weibel, S. (1999). <i>A Common Model to Support Interoperable Metadata, 
+
+        Progress report on reconciling metadata requirements from the Dublin Core 
+
+        and INDECS/DOI Communities.</i> D-Lib Magazine, Volume 5 Number 1, Also 
+
+        at <a
+
+href="../http://www.dlib.org/dlib/january99/bearman/01bearman.html" target="_blank">http://www.dlib.org/dlib/january99/bearman/01bearman.html</a> 
+
+      </p>
+
+      <p class=ReferencesText>Doer, M. and Dionissiadou, I. (1998). <i>Data Example 
+
+        of the CIDOC Reference Model.</i> Epitaphios GE34604 Benaki Museum, Athens 
+
+        Greece. Also at <a
+
+href="../http://www.geneva-city.ch/musinfo/cidoc/oomodel/epitaphios.htm" target="_blank">http://www.geneva-city.ch:80/musinfo/cidoc/oomodel/epitaphios.htm</a> 
+
+        <a
+
+name="_Hlt517244309"></a> </p>
+
+      <p class=ReferencesText>Dublin Core home site at <a
+
+href="../http://dublincore.org/" target="_blank">http://dublincore.org</a> </p>
+
+      <p class=ReferencesText>Dublin Core Metadata Element Set, V1.1 at <a
+
+href="../http://dublincore.org/documents/1999/07/02/dces" target="_blank">http://dublincore.org/documents/1999/07/02/dces</a> 
+
+        .</p>
+
+      <p class=ReferencesText>Elmagarmid, A., Rusinkiewicz, M., and Sheth, A. 
+
+        (1999). <i>Management of Heterogeneous and Autonomous Database Systems.</i> 
+
+        Morgan Kaufmann.</p>
+
+      <p class=ReferencesText>Hillman, D. (2001) <i>Using Dublin Core. </i><a
+
+href="../http://dublincore.org/documents/usageguide/" target="_blank">http://dublincore.org/documents/usageguide/</a></p>
+
+      <p class=ReferencesText>Kowalski, G.J. &amp; Maybury, M.T. (2000). <i>Information 
+
+        Storage and Retrieval Systems &#150; Theory and Implementation, 2<sup>nd</sup> 
+
+        ed.</i> Kluwer Academic Publishers.</p>
+
+      <p class=ReferencesText>Lagoze, C. (1996). <i>The Warwick Framework - A 
+
+        Container Architecture for Diverse Sets of Metadata.</i>   D-Lib Magazine, 
+
+        July/August 1996. ISSN 1082-9873.</p>
+
+      <p class=ReferencesText><a name="_Hlt517244386"></a><a
+
+href="../http://www.dlib.org/dlib/july96/lagoze/07lagoze.html" target="_blank">http://www.dlib.org/dlib/july96/lagoze/07lagoze.html</a> 
+
+      </p>
+
+      <p class=ReferencesText>Lu, G. (1999) <i>Multimedia Database Management 
+
+        Systems.</i> Artech House, London.</p>
+
+      <p class=ReferencesText>Marcus,S. &amp; Subrahmanian,V.S. (1996). <i>Towards 
+
+        a Theory of Multimedia Database Systems. </i>In Subrahmanian &amp; Jajodia, 
+
+        ed. Multimedia Database Systems. Springer-Verlag, 1996. Pp 1-35.</p>
+
+      <p class=ReferencesText>Nordbotten, J. (2000). Entering Through the Side 
+
+        Door - a Usage Analysis of a Web Presentation. Proc. <i>Int'l Confr.  
+
+        Museums and the Web 2000.</i> Minneapolis, MN, USA.  April 17-19.  Archives 
+
+        &amp; Museum Informatics, 2000. p.145-151. Also at <a
+
+href="../http://www.archimuse.com/mw2000/papers/nordbotten/nordbotten.html" target="_blank">http://www.archimuse.com/mw2000/papers/nordbotten/nordbotten.html</a></p>
+
+      <p class=ReferencesText>Nordbotten, J. (2001). <i>Virtual Exhibits - Theory, 
+
+        methods, and tools for development of virtual exhibits on demand.</i> 
+
+        Project description. At <a
+
+href="../http://www.ifi.uib.no/staff/joan/VM-project/project_description.htm" target="_blank">http://www.ifi.uib.no/staff/joan/VM-project/project_description.htm</a>. 
+
+      </p>
+
+      <p class=ReferencesText>Ramirez, E.A. (2001) Structuralizing Multimedia 
+
+        Data in Museums. The Use of Internet and Video and Scanned 3D Objects 
+
+        for Our Natural History and Science Museums. In Proc. of the ICOM International 
+
+        Conference in Barcelona, July 3, at <a href="../http://www.lib.mq.edu.au/mcm/world/icom2001/ramirez.html" target="_blank"><i>http://www.lib.mq.edu.au/mcm/world/icom2001/ramirez.html</i></a>. 
+
+      </p>
+
+      <p class=ReferencesText>Shneiderman, B., et.al. (1989). Evaluating Three 
+
+        Museum Installations of a Hypertext System.  Journal of the American. 
+
+        Society for Information Science, 40(3), 172-182.</p>
+
+      <p class=ReferencesText>Subrahmanian , V. S.  (1998). Principles of Multimedia 
+
+        Database Systems. Morgan Kaufmann.</p>
+
+      <p class=ReferencesText>Wu, J.K., Kankanhalli, M.S., Llim, J, and Hong, 
+
+        D. (2000) Perspectives on Content-Based Multimedia Systems. Kluwer Academic 
+
+        Publ.</p>
+
+      <p class=ReferencesText>Yamada, S., et.al. (1995).  Development and evaluation 
+
+        of hypermedia for museum education: validation of  metrics. ACM Trans. 
+
+        of Computer-Human Interaction, 2(4), 284-307.</p>
+
+      <h2>Museum sites referenced</h2>
+
+      <p>Bergen Museum, Bergen, Norway, at <a
+
+href="../http://mediabase.uib.no/Imagelib/" target="_blank">http://mediabase.uib.no/Imagelib/</a></p>
+
+      <p>The National Library of Australia &#147;Picture Australia&#148;  at <a
+
+href="../http://www.pictureaustralia.org/" target="_blank">http://www.pictureaustralia.org/</a>.</p>
+
+      <p>The New York Botanical Garden &#147;The Virtual Herbarium&#148; at <a href="../http://www.nybg.org/bsci/cass/" target="_blank">http://www.nybg.org/bsci/cass/</a></p>
+
+      <p><span
+
+class=red1>The Sculpture Center's Ohio Outdoor Sculpture Inventory, at </span><b><br>
+
+        </b><span class=normal1><a href="../http://sculpturecenter.org/oosi/oo.asp"
+
+target="_blank">http://sculpturecenter.org/oosi/oo.asp</a></span></p>
+
+      <p>The Smithsonian American Art Museum in Washington DC, at <a href="../http://americanart.si.edu/study/" target="_blank">http://americanart.si.edu/study/</a>.</p>
+
+      <p>The State Hermitage Museum, St. Petersburg, Russia at <a
+
+href="../http://www.hermitagemuseum.org/html_En/index.html" target="_blank">http://www.hermitagemuseum.org/html_En/index.html</a>.</p>
+
+      <p>TAMH: Tayside A Maritime History, Scotland, at <a href="../http://www.tamh.org/" target="_blank">http://www.tamh.org/</a>.</p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2002/papers/nordbotten/nordbotten.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:48:16 GMT -->
+</html>

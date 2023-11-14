@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw17.mwconf.org/paper/extending-the-e-commerce-experience-lessons-learned-and-the-questions-that-remain/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:58:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Extending the E-Commerce experience: Lessons learned and the questions that remain &#8211; MW17: Museums and the Web 2017</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Extending the E-Commerce experience: Lessons learned and the questions that remain Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw17.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login3822.css?ver=1604077128' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-twentysixteen/style3ce7.css?ver=20201208' media='all' />
+<style id='twentysixteen-style-inline-css'>
+
+		/* Custom Link Color */
+		.menu-toggle:hover,
+		.menu-toggle:focus,
+		a,
+		.main-navigation a:hover,
+		.main-navigation a:focus,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.social-navigation a:hover:before,
+		.social-navigation a:focus:before,
+		.post-navigation a:hover .post-title,
+		.post-navigation a:focus .post-title,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.site-branding .site-title a:hover,
+		.site-branding .site-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-footer a:hover,
+		.entry-footer a:focus,
+		.comment-metadata a:hover,
+		.comment-metadata a:focus,
+		.pingback .comment-edit-link:hover,
+		.pingback .comment-edit-link:focus,
+		.comment-reply-link,
+		.comment-reply-link:hover,
+		.comment-reply-link:focus,
+		.required,
+		.site-info a:hover,
+		.site-info a:focus {
+			color: #e55747;
+		}
+
+		mark,
+		ins,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.widget_calendar tbody a,
+		.page-links a:hover,
+		.page-links a:focus {
+			background-color: #e55747;
+		}
+
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
+		textarea:focus,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.menu-toggle:hover,
+		.menu-toggle:focus {
+			border-color: #e55747;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation li:hover > a,
+			.main-navigation li.focus > a {
+				color: #e55747;
+			}
+		}
+	
+</style>
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src='https://mw17.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index6dad.html?p=989' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed8f43.json?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fextending-the-e-commerce-experience-lessons-learned-and-the-questions-that-remain%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embedb65b?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fextending-the-e-commerce-experience-lessons-learned-and-the-questions-that-remain%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-twentysixteen/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-989 wp-custom-logo wp-embed-responsive">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+					<div class="site-branding">
+						<a href="../../index.html" class="custom-logo-link" rel="home"><img width="240" height="240" src="../../wp-content/uploads/2017/02/cropped-mw-final.png" class="custom-logo" alt="MW17: Museums and the Web 2017" /></a>					</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p> MW17: Museums and the Web 2017 <span>Cleveland Ohio - April 19-22</span></p>
+								<form class="search-form" role="search" method="get" action="#">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-1-container"><ul id="menu-menu-1" class="primary-menu"><li id="menu-item-3074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3074"><a href="https://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-88"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580"><a href="../../local-information-and-accommodation/index.html">Local Information and Accommodation</a></li>
+	<li id="menu-item-1917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1917"><a href="../../faqs/index.html">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-172"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-475"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-108"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="../../call-for-proposals/index.html">Call for Proposals</a></li>
+	<li id="menu-item-494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-135"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-1689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1689"><a href="../../advertising/index.html">Advertising</a></li>
+</ul>
+</li>
+<li id="menu-item-573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-573"><a href="../../program/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-2972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2972"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-3023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3023"><a href="../../select-session-slides/index.html">Presentations</a></li>
+	<li id="menu-item-1760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1760"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2968"><a href="../../glami-winners/index.html">GLAMi Winners</a></li>
+		<li id="menu-item-2963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2963"><a href="../../glami-nominees/index.html">GLAMi Nominees</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2894"><a href="../../mwx/index.html">MWX 2017</a></li>
+	<li id="menu-item-1252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1252"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="../../committees/index.html">Committees</a></li>
+</ul>
+</li>
+<li>
+    <form role='search' method='get' class='search-form' action='http://mw17.mwconf.org/'>
+	<label>
+	<span class='screen-reader-text'>Search for:</span>
+	<input type='search' class='search-field' placeholder='Search &hellip;' value='' name='s' />
+	</label>
+	<button type='submit' class='search-submit'>
+	<span class='screen-reader-text'>Search</span></button>
+	</form>    
+	</li></ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+	
+<section id="page-hero">
+	<div class="background"> </div>
+</section>
+<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];
+    jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw17.mwconf.org/wp-content/themes/mw-twentysixteen/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-989" class="post-989 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">Extending the E-Commerce experience: Lessons learned and the questions that remain</h1>
+
+<p><a target="_blank" href="http://www.museumsandtheweb.com/member/scottsayre/">Scott Sayre</a>, Corning Museum of Glass, USA, <a target="_blank" href="http://www.museumsandtheweb.com/member/lhmann/">Laura Mann</a>, Frankly, Green + Webb USA, USA, <a target="_blank" href="http://www.museumsandtheweb.com/member/rddowden/">Robin Dowden</a>, independent, USA</p>
+<h2>Abstract</h2>
+Outside the cultural sector, e-commerce and e-services have become key components of daily life. While our audience's expectations are increasingly shaped by the online world, museums largely still operate according to a “brick and mortar” model, with revenue generation and transactional workflows managed independently in departmental silos. Like many museums, The Corning Museum of Glass (CMoG) manages a wide number of transactions with its patrons, from admission and glassmaking experience ticketing to class registration, retail sales, and memberships. These functions are supported by several different systems and managed by diverse internal stakeholder groups. As a starting point in developing a more strategic approach to e-commerce, CMoG hosted a summit in October 2016 that brought together seven leaders in the museum e-commerce space (representing six diverse museums) with CMoG’s e-commerce team with staff from IT, digital media, retail, finance, and senior leadership. Our paper synthesizes summit presentations and discussions the key themes and insights that emerged over the two–day event. How might we think about e-commerce less as a series of transactions and more strategically? How do we maximize the opportunities for revenue generation without compromising the collections that we hold in the public trust? What’s really important to our audiences? When and why do you choose to build versus buy software? How can we support a more strategic approach through data-driven decision-making? What staff resources are required to support these new internal processes? What’s the role of mobile in e-commerce? How might e-commerce help fulfill the museum’s mission or expand our brand? The summit provided an unusual opportunity for a sustained conversation with a diversity of perspectives that is relevant for all museums considering the future of e-commerce.</p>
+<p><b>Keywords:</b> e-commerce, online ticketing, online sales, crm, integration, omnichannel</p>
+<h2>Then and now</h2>
+<p><span style="font-weight: 400;">The opportunities for museum e-commerce have existed for more than two decades, with the near simultaneous development of the first websites and the secure socket layer (SSL) </span><span style="font-weight: 400;">encryption certificate by Netscape in 1994 (Miva, 2011), which provided a secure means to transmit data over the Internet. Since that time, museums have explored the far reaches of e-commerce from ticketing to virtual product sales in fits and starts, and with mixed results. Outside the cultural sector, e-commerce and e-services have become key components of daily life and an expectation for a growing majority of our patrons, making up 8.4% of total retail sales in the third quarter of 2016 (</span><span style="font-weight: 400;">U.S. Census Bureau, 2016</span><span style="font-weight: 400;">). Considering these growing expectations and the rapidly changing technical landscape, museums remain challenged about how to effectively allocate resources to remain efficient, effective, and relevant.</span></p>
+<p><span style="font-weight: 400;">Often underestimated because of their nonprofit status, museums are unique, complex business environments that serve a wide range of internal and external audiences with an array of goods and services. And while many museums share similar missions, the functional areas, or departments, they are composed of operate somewhat autonomously with a related set of goals: building collections, supporting scholarship, educating the public, increasing awareness, raising money, attracting visitors, developing programming, selling products, etc. While our audience&#8217;s expectations are shaped by the world of online retail, museums largely still operate according to a “brick and mortar” model, with revenue generation and transactional workflows managed independently in each functional area.</span></p>
+<p><span style="font-weight: 400;">E-commerce technologies have continued to evolve and the scope of the e-commerce function has become more complex, encompassing new requirements such as order fulfillment, electronic ticketing, and new channels, such as mobile. Our internal functional areas often struggle to restructure and redefine themselves to work effectively in serving customers in both the physical and digital realms. </span><span style="font-weight: 400;"> </span></p>
+<p><span style="font-weight: 400;">Central to all of these transitions are the museum’s customers who have little understanding</span><span style="font-weight: 400;">—</span><span style="font-weight: 400;">nor should they</span><span style="font-weight: 400;">—</span><span style="font-weight: 400;">of the inner-workings of the cultural institutions with which they interact. These audiences, awash in their own personal information environments, naturally come to expect the level of personalization and service they receive in other aspects of their daily lives. Museums understand that, if they wish to remain and grow in relevance to these customers, they need to meet them where they are. To do this, museums must begin to take full advantage of everything they know about the customer at both a personal and historical level. Many museum development departments had been facilitating some type of constituent information management prior to the emergence of e-commerce and online transactions. Moving into an online customer transactional space vastly expands the value and application of this practice in a multitude of ways. All of the opportunities and challenges posed by technological change and audience expectations are pressuring museums and, maybe more importantly, the departments within them, to become more agile, integrated, and intentional; to break down silos and take a more strategic approach to e-commerce.</span></p>
+<h2>(re)Defining e-commerce</h2>
+<p><span style="font-weight: 400;">There are many definitions and assumptions related to the scope of e-commerce due to its often siloed nature and historical development. Within The Corning Museum of Glass and the context of this paper, e-commerce is defined as</span><i><span style="font-weight: 400;"> any online transaction where a payment is initiated or modified</span></i><span style="font-weight: 400;">. Reflecting this definition, museum e-commerce includes tickets (admission, exhibition, events, special experiences), services (audio guides, reproduction rights, rentals), retail sales (physical products, artist works, digital products), fundraising (membership, donations, contributions), and registration (classes/workshops, seminars, conferences).</span></p>
+<figure id="attachment_1152" aria-describedby="caption-attachment-1152" style="width: 800px" class="wp-caption alignnone"><img loading="lazy" class="wp-image-1152" src="../../wp-content/uploads/2017/01/CMoGShops.jpg" width="800" height="533" /><figcaption id="caption-attachment-1152" class="wp-caption-text">Figure 1: The Corning Museum of Glass Shops</figcaption></figure>
+<h2>E-commerce at The Corning Museum of Glass</h2>
+<p><span style="font-weight: 400;">The Corning Museum of Glass (CMoG), located in the Finger Lakes region of Upstate New York, is a museum of glass art and science displaying the world’s best collection of art and historical glass spanning 3,500 years. Beyond the collections, public programs, and glass science galleries, the museum offers live demonstrations, hands-on visitor glassmaking activities, studio courses, one of the largest museum retail stores in the U.S., and the world’s foremost research library on the art and history of glass. The museum averages more than 400,000 visitors annually and is the fifth most visited art museum in the state of New York (AAMD, 2016). CMoG manages a wide number of transactions with its patrons, from admission and glassmaking experience ticketing to class registration, retail sales, and memberships. These functions are managed by diverse internal stakeholder groups through several different systems.</span></p>
+<p><span style="font-weight: 400;">Like many museums, The Corning Museum of Glass entered museum e-commerce space through a number of organic, siloed initiatives over the last decade. Realizing the need for a more proactive approach, the museum formed its first e-commerce strategy team in 2016. The team is composed of staff from finance, ticketing, retail, IT, digital media, and the administration. The team, facilitated by Director of Finance Dave Togni and Chief Digital Officer Scott Sayre, had a mandate to define a new integrated approach to e-commerce and develop both a strategic and tactical plan for determining priorities and moving forward. Team members initially came to the table with a deep knowledge of the opportunities and challenges they saw in their specific area, but with little overall consensus on how to arrive at a comprehensive set of priorities. As an initial attempt to identify possible next steps, the team developed a list of items they hoped to see addressed. The resulting list, later distilled down to broader areas of focus, posed its own set of problems since many of the items were interrelated and difficult to prioritize. These areas of focus included the following:</span></p>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A 360</span><span style="font-weight: 400;">°</span><span style="font-weight: 400;"> view of the customer:</span>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Constituent Relationship Management (CRM) integration</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Single sign-on</span></li>
+</ol>
+</li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Opportunities for mobile</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Analytics and analysis </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">New products and services:</span>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Collections integration of products and services</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Digital products </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Digital ticketing</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Alternative payment gateways (Google, Amazon, PayPal, etc.)</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Managing multiple storefronts</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Marketing channels and strategies</span></li>
+</ol>
+</li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">E-commerce team structure and workflow</span></li>
+</ol>
+<p><span style="font-weight: 400;">To broaden our insights, we decided to invite colleagues involved in e-commerce from a range of cultural institutions and host a summit where both the CMoG team and the invited participants could benefit from the presentations and shared discussion. Our goals were to advance our thinking around our key areas of focus and start to develop a shared vocabulary and understanding among the CMoG e-commerce team, a diverse group of staff located in multiple departments. </span></p>
+<h2>Where are the experts?</h2>
+<p><span style="font-weight: 400;">Robin Dowden, a consultant with museum technology experience, was contracted to help identify and recruit participants as well as organize the two-day, on-site event. Upon initiating the search, it quickly became clear that the role of a central “e-commerce manager” was a fictitious assumption on our part. While e-commerce is prevalent in most cultural institutions, its ownership and integration, as at CMoG, varies greatly from one institution to another. This lack of a common structure and management regarding e-commerce also makes it difficult for professionals in the field to find common ground for shared dialog and strategy. Professional organizations such as the Museum Computer Network, American Alliance of Museums, and even the Museum Store Association provide very little in the way of ongoing discussion specific to e-commerce. Interestingly, the Museum Store Association&#8217;s new strategic plan contains no mention of e-commerce or online sales, continuing to focus primarily on the traditional brick and mortar (Museum Store Association, 2016). The Museums and the Web conference and MuseumConnections, a European museum business conference, are the primary venues where e-commerce technology and strategy is addressed. Dowden’s search culminated in identifying museum professionals considered to be leaders in e-commerce space, finding the broadest expertise in administrative level technology positions including chief technology officers, chief digital officers, and directors of digital media.</span></p>
+<h3>Summit participants</h3>
+<p>Seven museum professionals accepted the invitation to attend. Each participant was invited to speak to a specific topic related to one of CMoG’s objectives:</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Leo Ballate, Chief Technology Officer, San Francisco Museum of Modern Art</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">Topic: CRM and Customer Development </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Allegra Burnette, Principal Analyst, Forrester Research</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">Topic: Omnichannel User Experiences </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Catherine Devine, Chief Digital Officer, American Museum of Natural History</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">Topic: Digital Ticketing </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Matthew Majeski, Director, Digital &amp; Emerging Media, The Henry Ford</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">Topic: Collections, Content &amp; Online Revenue </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Diana Pan, Chief Technology Officer, The Museum of Modern Art</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">Topic: The Mobile Experience</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ron Schroer, Manager, eBusiness &amp; Retail Projects, Australian War Memorial</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">Topic: Unified E-Commerce Experience </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Michele Tobin, Museum Retail Consultant, previously Director of the Walker Art Center Shop</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">Topic: Exploring Art and Commerce in Phygital Spaces</span></li>
+</ul>
+<h3>External summit organizers/facilitators:</h3>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Robin Dowden, Independent Museum Consultant</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Laura Mann, Consultant, Frankly, Green + Web</span></li>
+</ul>
+<h2>Summit format</h2>
+<p><span style="font-weight: 400;">The summit took place from October 5 through 7, 2016, with a mix of presentations, in-museum activities, and roundtable discussions. To establish a shared understanding of the current state of e-commerce at CMoG, each participant worked through a series of online and on-site use cases using a Visa gift card to purchase and pick up tickets, reserve a hands-on glassworking activity (figure 2), and purchase retail products. These experiences gave all participants a set of common reference points when discussing challenges and opportunities for CMoG and the overall field. A detailed recap of the summit is being published as a white paper that is in production as of January 2017 (Dowden, 2017). The white paper will be accompanied by video recordings of key summit sessions.   </span></p>
+<figure id="attachment_1148" aria-describedby="caption-attachment-1148" style="width: 800px" class="wp-caption alignnone"><img loading="lazy" class="wp-image-1148" src="../../wp-content/uploads/2017/01/MYOGdouble.jpg" width="800" height="514" /><figcaption id="caption-attachment-1148" class="wp-caption-text">Figure 2: The Corning Museum of Glass &#8220;make your own glass&#8221; activity</figcaption></figure>
+<h3>Key themes</h3>
+<p><span style="font-weight: 400;">While the presentations were intended to address topics noted earlier in this paper, the resulting discussion centered around five key areas: 1) mission-centric strategy; 2) adopting a holistic approach to retail; 3) mobile first; 4) data driven decision making; and 5) allocating resources. The remainder of this paper will explore these topics.</span></p>
+<h3>Theme one: mission-centric strategy</h3>
+<p><span style="font-weight: 400;">A trend identified by a number of the presenters is the movement toward e-commerce becoming more seamlessly intertwined with the institution&#8217;s mission and brand. From scholarly to highly experimental, the vision for where museum e-commerce integrates with other initiatives is transforming the overall fabric of museums and, ultimately, the perception of customers. While some may perceive this as potentially insidious, it can also be seen as a sign of stability and maturity, providing the necessary efficiency in revenue generation to remain relevant and competitive in the changing world.</span></p>
+<blockquote><p>What if the shop brought attendance to the museum rather than the other way around? —Michele Tobin, Museum Retail Consultant</p></blockquote>
+<p><span style="font-weight: 400;">A flagship experimental example of e-commerce expansion of brand is the Walker Art Center’s </span><i><span style="font-weight: 400;">Intangibles</span></i><span style="font-weight: 400;"> project, hailed by the </span><span style="font-weight: 400;">New York Times</span><span style="font-weight: 400;"> as “blurring the boundaries between art, shopping and media,”  this experimental approach to commerce bridged the gap between the physical and digital experience, and connected audiences with artists in new ways (</span><span style="font-weight: 400;">Ryzikmarch, 2015)</span><span style="font-weight: 400;">. The process that created </span><i><span style="font-weight: 400;">Intangibles</span></i><span style="font-weight: 400;"> (figure 3) demonstrates how shifting perspectives can inspire new retail models. To differentiate itself in the digital space, the Walker shop wanted to transcend its operational and financial roots, and venture into the artistic mission. Michelle Tobin described </span><i><span style="font-weight: 400;">Intangibles</span></i><span style="font-weight: 400;"> as an online collection of artist-designed objects with no physical form. With help from Walker curators, artists and designers from various disciplines were invited to create deliberately ephemeral products and then encouraged to manipulate every aspect of the e-commerce platform.</span></p>
+<figure id="attachment_1153" aria-describedby="caption-attachment-1153" style="width: 800px" class="wp-caption alignnone"><img loading="lazy" class="wp-image-1153" src="../../wp-content/uploads/2017/01/Intangibles-1.jpg" width="800" height="459" /><figcaption id="caption-attachment-1153" class="wp-caption-text">Figure 3: Walker Art Center’s Intangibles product page</figcaption></figure>
+<p><span style="font-weight: 400;">A hybrid of digital and physical environments, or what Tobin calls “phygital space,” Walker retail initiated a series of projects to explore how the experiences online and in-store could move from parallel narratives to platforms informing one another. “The artists were told to use the shop’s website as a canvas, which meant everything—the text description, the images, the drop-down menu and pricing—were part of the experience. The product pages are ‘artworks in and of themselves,’ Tobin says” (Stinson, 2015).</span></p>
+<p><span style="font-weight: 400;">Museum retail exists at the tenuous juncture of art and commerce. As a result of the </span><i><span style="font-weight: 400;">Intangibles</span></i><span style="font-weight: 400;"> project, the Walker shop became a gateway for artistic exchange, engaging customers in new ways both onsite and online. While most museums want to have strong brick and mortar and click-to-order business, many struggle to find a strategy that makes sense for them. </span><i><span style="font-weight: 400;">Intangibles</span></i><span style="font-weight: 400;"> worked because it rang true with what the Walker is as an institution.</span></p>
+<figure id="attachment_1151" aria-describedby="caption-attachment-1151" style="width: 800px" class="wp-caption alignnone"><img loading="lazy" class="wp-image-1151" src="../../wp-content/uploads/2017/01/Screen-Shot-2017-01-30-at-1.15.53-PM.jpg" width="800" height="574" /><figcaption id="caption-attachment-1151" class="wp-caption-text">Figure 4: Australian War Memorial Collection page</figcaption></figure>
+<p><span style="font-weight: 400;">Taking a slightly different approach, the Australian War Memorial began offering online sales in the early 2000s, driven primarily by a desire to increase access to the Memorial’s archives and generate revenue from image, film and sound materials, as well as shop products. Currently, The Memorial is much more than its name suggests, combining a shrine, a world-class museum, and a research center with access to extensive archives. The Memorial’s mission is “… to assist Australians to remember, interpret and understand the Australian experience of war and its enduring impact on Australian society.” “Online orders help to drive our preservation priorities,” explained Ron Schroer. These orders provide financial support as well as identify resources of public interest for digitization. The Memorial uses Piction, typically thought of as purely a digital asset management system, to serve as both e-commerce and collections search engine, allowing the Memorial to provide users with a single entry point to collections access and the shopping experience (figure 4). The tension around monetizing collections and the dissemination of information is an issue everyone faces, but when explored from the vantage point of the customer, may lead to interesting and profitable possibilities. Summit participants spoke to a tighter integration and more intimate connection between content and commerce. For CMoG, where an artist-in-residence may be teaching a workshop, have work on view in the collection galleries, and for sale in the shop (both onsite and online), the opportunities are striking.</span></p>
+<blockquote><p>…in short it’s the Web services that allow us to present a unified shopping cart. <i>—</i>Ron Schroer, Australian War Memorial</p></blockquote>
+<p><span style="font-weight: 400;">Museums such as The Henry Ford cover a broad historical landscape and are working to expand their brand. To do this, they are addressing their broader mission by integrating e-commerce within a growing body of digital content and engagement both online and onsite. Matthew Majeski explains, “E-commerce is part of a larger digital strategy driven by contextual content development and storytelling. This includes connecting pre-visit exploration online with in-museum mobile applications and interactives while driving continued engagement post-visit via email, SMS Web, and social media. These efforts will require The Henry Ford to focus on how to continue to monetize the digital transformation for reinvestment into future phases of this mission-focused work.” </span></p>
+<h3>Theme two: holistic approach to retail</h3>
+<h4><i><span style="font-weight: 400;">Visitor-Centric Approach</span></i></h4>
+<p><span style="font-weight: 400;">An overall shift during the past two decades finds museums placing an increased emphasis on the visitor experience. The current trend and emphasis on a visitor-first, mobile-first approach to our websites is finding its way to our remaining institutional silos, notably retail. Just as museums </span><span style="font-weight: 400;">use knowledge of visitors&#8217; motivations to deliver user-focused mobile Web experiences, museum retail best practice is connected to the larger institutional story and focused on the needs of its customer.</span></p>
+<blockquote><p>How will The Henry Ford continue to grow, attract and inspire the ever-evolving “connected consumer” in an increasingly competitive landscape where consumers have more control and options than ever? —Matthew Majeski, The Henry Ford</p></blockquote>
+<p><span style="font-weight: 400;">Taking a customer-centric approach is key to the omnichannel retail experience. </span><span style="font-weight: 400;"> “Omnichannel is a multichannel approach to sales that seeks to provide the customer with a seamless shopping experience whether the customer is shopping online from a desktop or mobile device, by telephone or in a bricks and mortar store” (Rose, 2014).</span><span style="font-weight: 400;"> Much more than a conversation about devices, omnichannel is about customers, where they are in the shopper’s life-cycle, their physical location, and channel preferences. Allegra Burnette, former Creative Director of MoMA’s Digital Media department and currently a principal analyst in the customer experience team at Forrester Research, led the omnichannel discussion. Burnette encouraged taking a holistic approach to retail, one not defined by physical and digital, but more attentive to the complete customer experience. By putting customer needs first instead of arguing business priorities (my department versus yours), museums can change the conversation from being positional to transformational.</span></p>
+<h4><i><span style="font-weight: 400;">Unified shopping cart versus single sign-on</span></i></h4>
+<p><span style="font-weight: 400;">Summit participants discussed the distinction and relative importance of providing online customers with a unified shopping cart and/or single sign-on experience. Priority was given to single sign-on, that is, permitting customers to use one set of login credentials to access multiple applications. While several offer single sign-on, the ability to put all items in a unified cart was unique to the Australian War Memorial. At the Memorial, an online visitor can purchase memberships, retail products, and collections images (offered through the online collections pages) in a single transaction. The concept of a unified shopping cart may appeal to museum stakeholders</span><span style="font-weight: 400;">—</span><span style="font-weight: 400;">who may have an idealized view of customer behaviors</span><span style="font-weight: 400;">—</span><span style="font-weight: 400;">but a unified cart may not support actual customer needs. Schroer observed the Memorial sees a clear use case for membership and retail items in a single transaction, but it’s rare for a visitor to order a collections image and a retail product in the online shop at the same time, underscoring the need for museums to understand the behaviors of their audiences—just as online offerings differ across museums, so too will the use cases for e-commerce. SFMOMA and MoMA explained that they haven’t seen use cases or visitor behavior to justify the investment in a unified shopping cart. At the same time, Leo Ballate explained that customer needs and actual use cases drove SFMOMA’s integration strategy to invest in single sign-on to ensure that members could get their entitlements online.</span></p>
+<p><span style="font-weight: 400;">Attendees agreed on the importance of clear messaging and transparency with customers in the absence of single sign-on or when there are multiple shopping carts. For example, if customers already have an account as a result of purchasing an event ticket, they may be expecting to use the same account to purchase a retail product. Organizations may be reluctant to shine a light on a lack of functionality but, in this case, clear signposting and managing customer expectations are especially important in reducing friction in the e-commerce experience</span><b>.</b></p>
+<h4><i><span style="font-weight: 400;">Eliminating customer pain</span></i></h4>
+<p><span style="font-weight: 400;">Addressing pain points first is a good way to think about priorities. Participants’ museums illustrated the complexity of museum physical and digital environments, among them the American Museum of Natural History (AMNH) where visitors encounter complicated pricing and ticketing selections including timed entry to as many as six exhibitions, films, and special events spread across 1.5 million square feet of public space. Catherine Devine described AMNH’s solution as a “living ticket,” (figure 5) a multi-channel/omnichannel approach to ticketing that does not end with the purchase of a ticket, but is a dynamic component of a museum visit. The living ticket provides flexibility, allowing the visitor to add experiences as they are encountered and enabling on-demand services, activities that previously required a return to the main admissions desk (and potentially a long walk). The goal is to eliminate a visitor pain point by taking the magnitude of the building into consideration.</span></p>
+<figure id="attachment_1147" aria-describedby="caption-attachment-1147" style="width: 800px" class="wp-caption alignnone"><img loading="lazy" class="wp-image-1147" src="../../wp-content/uploads/2017/01/LivingTicketMixed.jpg" width="800" height="449" /><figcaption id="caption-attachment-1147" class="wp-caption-text">Figure 5: American Museum of Natural History’s Living Ticket</figcaption></figure>
+<p><i></i><span style="font-weight: 400;">Eliminating visitor pain points can be viewed as an emphasis on simplification. Devine is trying to reduce the overwhelming number of decisions AMNH visitors are asked to make when they buy tickets. Looking ahead, she described a potential solution where visitors are automatically assigned entry times to exhibitions for when they are likely to enter an exhibition based on data from previous customer experiences.</span></p>
+<p><span style="font-weight: 400;">Diana Pan noted MoMA’s focus has been on reducing barriers to online ticket purchase and this has also led to increasing simplification of the customer experience: they no longer require a login for online ticket purchase. Instead, an account is offered to new customers as a value add at the end of the transaction (which allows them to track order history or get discounts for membership). Pan commented that, for MoMA, the benefits of reducing friction in the online purchase process far outweigh the additional customer data that would come with requiring a login with every online purchase. Similarly, AMNH doesn’t require that you create an account or login for non-member ticket purchases.</span></p>
+<h4><i><span style="font-weight: 400;">Systems and CRM</span></i></h4>
+<p><span style="font-weight: 400;">As museums rethink retail and pursue omnichannel initiatives, they must start by examining their POS constraints, inventory accuracy, digital parity, and 360-degree CRM. Control over these aspects of the business are key to future possibilities. At the top of the list is CRM. While CRM is being used by most if not all of the summit participants institutions, primarily for marketing and member outreach, the integration of these systems with e-commerce is still in play for most. Summit participants arrived with an understanding of the benefits—breaking open silos of customer data, providing greater levels of personalization, shifting to a data-driven analysis—but are still in the early stages of implementing solutions (figure 6). </span></p>
+<p><span style="font-weight: 400;">As Pan (2015) explains “</span><span style="font-weight: 400;">The goal of a 360-degree view would be achieved through the integration of data into the CRM platform from many different Museum channels, such as a member’s visitation history or e-commerce activity. This would give us a more holistic view of a donor’s activity, allowing one to view data on an individual or in aggregate form, such as:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Detailed view of giving history (e.g., lifetime giving, largest gift, year-to-date giving, first transaction amount);</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Effectiveness of marketing campaign and tracking donations by campaign;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">View of relationships among donors;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Special events ticket purchases;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Participation in MoMA educational programs;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">MoMA and MoMA PS1 visitation history;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Retail transactions (both on site and online);</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Individual and aggregate personal preferences and interests;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Gifts and loans of art made to the museum.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Admitting that they currently have about a “270-degree view” of constituents, SFMOMA led the CRM discussion, talking in detail about the systems they implemented prior the opening of the recent expansion. More than a platform for donor and member outreach, SFMOMA is using their CRM and the applications developed around it to engage the larger visitor community. Figuring out how to engage the general visitor and provide a 24/7 presence for a brand asserting openness, appreciation, and generosity was a big driver behind the CRM.</span></p>
+<p><span style="font-weight: 400;">To break down the siloed systems developed around the museum’s constituents and departmental work practices required what Ballate called “sustained encouragement” (operational, financial, and cultural). SFMOMA project leaders recognized that a successful CRM implementation would require a structure for overall governance of resource allocation and data: (1) an Executive Group, responsible for strategic decisions, approvals of project funding, brand-related decisions; (2) a Working Group made up of stakeholders from across the institution focused on tactical decisions and change management; and (3)a User Group responsible for operational decisions, actual implementations, training, and continued promotion of CRM across the institution.</span></p>
+<table>
+<tbody>
+<tr>
+<td><b>Organization</b></td>
+<td><b>Software product</b></td>
+</tr>
+<tr>
+<td><b>American Museum of Natural Histor</b>y</td>
+<td></td>
+</tr>
+<tr>
+<td>Ticketing, Events, Donations</td>
+<td>Tessitura</td>
+</tr>
+<tr>
+<td><b>Australian War Memorial</b></td>
+<td></td>
+</tr>
+<tr>
+<td>Point of Sale</td>
+<td>Advance Retail</td>
+</tr>
+<tr>
+<td>Membership, Donations</td>
+<td>Raiser’s Edge</td>
+</tr>
+<tr>
+<td>Shopping cart</td>
+<td>Piction/Zend-PHP</td>
+</tr>
+<tr>
+<td><b>The Corning Museum of Glass</b></td>
+<td></td>
+</tr>
+<tr>
+<td>Point of Sale</td>
+<td>Counterpoint</td>
+</tr>
+<tr>
+<td>Memberships, Donations, Classes</td>
+<td>Drupal commerce</td>
+</tr>
+<tr>
+<td>Shopping cart</td>
+<td>Magento &#8211;  NRO</td>
+</tr>
+<tr>
+<td>Ticketing, Events</td>
+<td>Outbound</td>
+</tr>
+<tr>
+<td>CRM</td>
+<td>Raiser’s Edge NXT/Salesforce</td>
+</tr>
+<tr>
+<td><b>The Henry Ford</b></td>
+<td></td>
+</tr>
+<tr>
+<td>Point of Sale</td>
+<td>SiriusWare</td>
+</tr>
+<tr>
+<td>Ticketing &amp; Membership</td>
+<td>Accesso Passport</td>
+</tr>
+<tr>
+<td>Shopping cart</td>
+<td>Magento &#8211; Event Network &#8211;</td>
+</tr>
+<tr>
+<td>Donations</td>
+<td>Raiser’s Edge</td>
+</tr>
+<tr>
+<td><b>Museum of Modern Art</b></td>
+<td></td>
+</tr>
+<tr>
+<td>Point of Sale</td>
+<td>Teamwork Retail</td>
+</tr>
+<tr>
+<td>Ticketing</td>
+<td>ACME</td>
+</tr>
+<tr>
+<td>Shopping cart</td>
+<td>IBM Websphere Commerce</td>
+</tr>
+<tr>
+<td>CRM</td>
+<td>Salesforce</td>
+</tr>
+<tr>
+<td><b>San Francisco Museum of Modern Art</b></td>
+<td></td>
+</tr>
+<tr>
+<td>Point of Sale</td>
+<td>WinRetail</td>
+</tr>
+<tr>
+<td>Tickets, Membership, Donations, Events</td>
+<td>Tessitura</td>
+</tr>
+<tr>
+<td>Shopping Cart</td>
+<td>Magento</td>
+</tr>
+<tr>
+<td><b>Walker Art Center</b></td>
+<td></td>
+</tr>
+<tr>
+<td>Shopping cart</td>
+<td>Shopify</td>
+</tr>
+</tbody>
+</table>
+<p>Figure 6: Systems Identified by Summit Participants</p>
+<h3><b><br />
+</b>Theme three: mobile first</h3>
+<p><span style="font-weight: 400;">Along with e-commerce and the omnichannel approach, many museums are rethinking how new mobile platforms can be used to enhance customer experiences. Mobile applications and responsive web design provide new opportunities for both museum customers and frontline staff to engage in more efficient ways and to quickly respond to many types of challenges  </span></p>
+<h4><i><span style="font-weight: 400;">Mobile Point of Sale (POS)</span></i></h4>
+<p><span style="font-weight: 400;">Pan described MoMA’s move to an internally developed iPad-based solution for membership, ticketing, and retail operations as embracing a mobile-first philosophy designed to improve the customer experience while providing maximum flexibility to museum operations. Inspired by the Apple Store model, MoMA aims to provide better customer service, shorten lines, and provide staff with the option to approach visitors as they enter the lobby. In this new model, every MoMA front-line employee is trained to help visitors to complete retail, membership, and ticketing transactions in any combination, eliminating the visitor’s need to bounce between desks for different types of services. Pan was excited to see that MoMA’s new frontline applications are quickly outperforming the old systems, particularly during extremely busy periods when staff take out more iPads. MoMA’s other successes made possible by mobile include the ability to have pop-up shops, as they did at last year’s Art Basel Miami Beach</span><span style="font-weight: 400;">,</span><span style="font-weight: 400;"> and to sell memberships at special events.</span></p>
+<blockquote><p>Cash is a big problem if you want to be mobile.—Diana Pan, MoMA</p></blockquote>
+<p><span style="font-weight: 400;">Beyond the system itself, MoMA staff’s adoption of this new system revealed a new set of challenges. Pan said that &#8220;enabling&#8221; mobile is one thing, but &#8220;being&#8221; mobile comes with a different set of issues. Examples include frontline staff who desire barriers between themselves and the public, and visitors who want nice paper tickets to save as souvenirs of their visit. Then, there is the problem of cash. While the mobile-first philosophy theoretically allowed for the elimination of the front desk, functional requirements still relied upon furniture to facilitate printing and handling cash. Pan believes the advantage of mobile is that it provides maximum flexibility and supports new business opportunities. Ultimately, the physical and human context play a significant role in the speed and degree of mobile adoption.  </span></p>
+<p><span style="font-weight: 400;">The AMNH’s move to digital ticketing also proved challenging. Devine equated the implementation of new digital ticketing solutions at the AMNH to a heart and lung transplant for the museum’s systems. Driven by the need to replace legacy systems, coupled with a digital strategy focused on improving the visitor’s experience, Devine believes the ticketing experience should be invisible, not the thing you remember about your museum visit.</span></p>
+<p><span style="font-weight: 400;">AMNH’s “living ticket,” as described earlier in the paper, allows visitors to buy, change, and pick up tickets on one or multiple channels, all of which remain valid until the barcode is scanned. When combined with AMNH’s Explorer App, the ticket is linked to the experience of getting around the museum. The app knows where you need to be at any given time and provides the information you need to get there. Over the course of a visit, people can add exhibitions, manage or change timed-ticket entry times, and get credit for dollars spent by converting their tickets into a membership.</span></p>
+<blockquote><p>Mobile is the top priority of online retailers. Responsive design ranks at the top of technology efforts.—Allegra Burnette, Forrester Research</p></blockquote>
+<p><span style="font-weight: 400;">Previously, AMNH sold admission tickets online, but visitors had to wait in line at the museum to retrieve them. Today, tickets purchased may be obtained digitally, by e-mail, printed at home, displayed on the mobile Web, Apple wallet, or in the Explorer App. Devine admits this isn’t for everyone and</span><span style="font-weight: 400;">—</span><span style="font-weight: 400;">inspired by the flexibility of the airline experience</span><span style="font-weight: 400;">—</span><span style="font-weight: 400;">believes in providing multiple ways for ticket delivery. From a technical perspective, one responsive set of code serves the museum’s digital ticketing solutions across multiple channels. Devine believes that, under the right circumstances, people </span><i><span style="font-weight: 400;">do </span></i><span style="font-weight: 400;">want to buy mobile. “We have to help people understand how something works to increase adoption among those who are inclined,” says Devine.</span></p>
+<h3>Theme four: data driven decision making</h3>
+<p><span style="font-weight: 400;">In keeping with the larger trend in the sector, the museums represented at the summit are aiming to be more data-driven. They are collecting considerable amounts of data and, in some instances, are using analytics to drive individual decisions but true business intelligence is still in its infancy. </span></p>
+<blockquote><p>We have analytics across the institution—finance is pulling analytics, marketing is pulling analytics, we’re pulling analytics—what we need to get to is a unified business intelligence approach to data. —Matthew Majeski, The Henry Ford</p></blockquote>
+<p><span style="font-weight: 400;">SFMOMA had four key goals to measure the success of its CRM implementation:  </span></p>
+<p><span style="font-weight: 400;">1) Goal: Grow prospect list from 220K to 1.2M</span></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">Currently 800K prospects in CRM</span></i></p>
+<p><span style="font-weight: 400;">2) Goal: Grow online ticket purchases from 2% to 20% of total sales</span></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">Currently between 30% and 40% of overall ticket sales are happening online</span></i></p>
+<p><span style="font-weight: 400;">3) Goal: Increase e-mail communication opt-in from 30K to 500K</span></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">Currently 260K</span></i></p>
+<p><span style="font-weight: 400;">4) Goal: Grow online store purchases by 10%</span></p>
+<p style="padding-left: 30px;"><i><span style="font-weight: 400;">Current increase 100% resulting from targeted email marketing</span></i></p>
+<p><span style="font-weight: 400;">These four data points are continuing to serve as key metrics as SFMOMA assesses performance and adjusts tactics in the first year following reopening. </span></p>
+<p><span style="font-weight: 400;">AMNH used their Web analytics to make the case for the development of their responsive Web presence. When they began considering a responsive site, 11% of their traffic came from mobile, 18% when the project was approved, 34% when it launched, and now 52% of their site traffic is from mobile. Similarly, analytics from their Explorer app told them that virtually all of those who took a tour on the app never made it past the first stop. As a result, they are rethinking the idea of tours in the next version of the app. </span></p>
+<p><span style="font-weight: 400;">For both MoMA and SFMOMA, Monday is a very busy day on their retail e-commerce sites. SFMOMA no longer conducts routine site maintenance on Mondays, and MoMA has shifted their member shopping days to Friday through Monday (they were previously Thursday through Sunday). SFMOMA is also starting to reconsider their opening hours because their visitation data shows that Monday and Tuesday are the lightest days of the week, but the museum is currently closed on Wednesdays.</span></p>
+<p><span style="font-weight: 400;">MoMA is using analytics to monitor where people abandon the transaction in the online store. This has led to a simplifying and streamlining the process to the point of no longer asking for a donation as part of the checkout process.  </span></p>
+<p><span style="font-weight: 400;">The Henry Ford also uses quantitative metrics but recognizes this doesn’t provide a full picture of the customer experience. They are implementing a “voice of the customer” solution to provide qualitative data as well.  </span></p>
+<p><span style="font-weight: 400;">The Australian War Memorial looks at on-site and online sales on a weekly basis to determine what’s popular, what’s trending, and to spot opportunities for new products.  </span></p>
+<h3>Theme five: allocating resources</h3>
+<p><span style="font-weight: 400;">As with any significant initiative, a holistic approach to e-commerce requires an increased investment and reallocation of resources, both human and financial. Elements of this need came up in almost every presentation and discussion throughout the course of the summit. </span></p>
+<h4><i><span style="font-weight: 400;">Buy versus Build</span></i></h4>
+<p><span style="font-weight: 400;">A number of the participants were interested in the philosophy others had regarding buying versus building the various systems required for an integrated approach to e-commerce. </span><span style="font-weight: 400;">Summit participants all fell squarely in the “buy” camp, advocating for “Buy first. Invest in customization and integration. Build as little as possible and only when the return justifies the considerable risk.” </span><span style="font-weight: 400;"> </span></p>
+<blockquote><p>We should not be inventing things from scratch when the rest of the world are inventing them. —Catherine Devine, American Museum of Natural History</p></blockquote>
+<p><span style="font-weight: 400;">Underpinning the buy versus build conversation was the sense that a successful e-commerce strategy depends more on investing in a set of systems that meet your larger institutional objectives rather than trying to develop optimal solutions for any one function. Participants felt that museums often overestimate their need for specialized features and underestimate the time to build custom solutions. Buying delivers the best return on investment, particularly for common business functions like e-commerce where there are many vendors.</span></p>
+<p><span style="font-weight: 400;">Summit participants see greater value in investing in customization of existing software products and in building integrations that allow multiple software systems to communicate. Ballate described SFMOMA’s strategy of investing in an integration layer</span><span style="font-weight: 400;">—</span><span style="font-weight: 400;">owning this piece is of greater value and more sustainable for the museum over the long term. In his example, he described how </span><span style="font-weight: 400;">SFMOMA’s single sign-on is organized around their CRM and integrated with their point-of-sale and e-commerce platforms. The SFMOMA IT and digital departments crafted the vision for this technical architecture and hired agencies with specific product expertise to build the integration layer that connects the commercial software products. But moving forward, SFMOMA will maintain the integration layer internally. </span></p>
+<p><span style="font-weight: 400;">In another example described by Pan, MoMA chose to buy a ticketing solution that supported iOS and cloud-based JSON RESTful API layer, simple technical requirements often missing in the solutions adopted by museums. The eight-month project put MoMA in a loose co-development position with an external company to build custom features and help shape the product. While not how MoMA wants to work all of the time, Pan characterized the decision as the only option that met all of the museum’s requirements which are viewed as critical to future development of MoMA’s technology. </span></p>
+<h4><i><span style="font-weight: 400;">The Emergence of Analysts</span></i></h4>
+<p><span style="font-weight: 400;">Several participants commented that, at their museums, the analytics function is the responsibility of the individual business units and as a result analytics are being done in digital, finance, marketing, and education, among others. Ballate observed that analytics is another area where it is challenging to break out of departmental silos, and the fragmented approach that is the norm doesn’t work well; there is duplication and lack of consistency, and more importantly, no one owns the responsibility for the overall vision and generation of institutional level business intelligence. To address this fragmentation and growing need for centralized analysis, a number of the participants are in the process of hiring staff analysts.</span></p>
+<p><span style="font-weight: 400;">The analyst role is a difficult position for museums to fill. Pan observed that it requires an unusual combination of technical and marketing skills.</span></p>
+<blockquote><p>You have to have both technical knowledge on how to actually … grab data from different databases but have a marketing understanding of why you’re doing that. The combination of the two is a very hard skill set. —Diana Pan, MoMA</p></blockquote>
+<p><span style="font-weight: 400;">Analysts are also in high demand outside the museum sector, which drives competition for hiring. SFMOMA is currently hiring for a new customer intelligence role that will live in marketing. These challenges notwithstanding, analyst business intelligence was seen by most as the next component of the e-commerce ecosystem. </span></p>
+<h2>Conclusion and next steps</h2>
+<p><span style="font-weight: 400;">During her opening remarks, Catherine Devine observed that museums have a lot of experience in content systems, not transactional systems. A simple comparison of museum websites to those of their retail divisions underscores this inexperience, exposing platforms frequently addressed as an afterthought instead of a benefit to be discussed at the beginning of Web design conversations. Museum technologists have long advocated holistic thinking about digital, approaching digital not as a separate entity, but an integral part of our businesses and the experiences of our visitors, both online and onsite. Similarly, closing the gap between our commercial transactions and programmatic agendas in the service of  customer needs is an important step in the transformational change many museums strive for. Making sure we understand e-commerce ROI not just in dollars, but in mission, brand, and guest experiences was a main takeaway for summit participants.</span></p>
+<p><span style="font-weight: 400;">Where do you see museum e-commerce in five years? When posited to summit participants, responses to this question included the following: such complete integration between our business layers to negate the need for the question (Devine); the observation that technology changes too quickly to think five years in the future and yet, total operational stability as new buildings open (Pan); a reversal in retail strategy, driven by e-commerce not brick and mortar business (Tobin); and mature business intelligence tools and methodologies driving strategic business decisions and providing operational stability (Ballate). For CMoG, with a five-year goal to see online sales equal to on-site, convening the summit was a significant step to solidify the partnerships across the institution necessary to achieve that goal.</span></p>
+<p><span style="font-weight: 400;">The initial aim in convening the summit was to expand the CMoG team’s understanding of the opportunities and challenges the museum faced moving forward in the strategic planning process. To this end, the summit proved to be a powerful means of bringing the team together around new shared insights and ideas. One key takeaway is the central role of the user’s experience in shaping the development of the strategic and tactical plan for e-commerce. We came away with an understanding of the strategic importance of assessing all aspects of current transactional practices through the lens of the user journey</span><span style="font-weight: 400;">—</span><span style="font-weight: 400;">from initial touchpoint to fulfillment</span><span style="font-weight: 400;">—</span><span style="font-weight: 400;"> through evaluation and focused analytics. As we were reminded by our colleagues throughout the summit, every aspect of e-commerce, like any transaction, should always start with the user. </span><span style="font-weight: 400;">Winesmith (2016) states this clearly: “Keep the visitor experience at the core of the change. This allows you to explain to departments or staff that in order to reach the agreed goal or to give visitors a particular experience that they will need to spend time, money or resources on the incoming system.”</span></p>
+<p><span style="font-weight: 400;">The summit itself provided great value to all of the participants in developing new relationships and opportunities for a continued dialog into the future. With this success, The Corning Museum of Glass hopes to organize future summits as a forum to continue this important dialog, and to galvanize the future opportunities e-commerce promises for the museum and its visitors.</span></p>
+<h2>Acknowledgements</h2>
+<p><span style="font-weight: 400;">Many thanks to the members of The Corning Museum of Glass E-Commerce Strategy team:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Russel Anthony, </span><span style="font-weight: 400;">Retail E-commerce Specialist</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Steve Bender, Business Development Manager, Steuben and Retail Ecommerce</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Alan T. Eusden, Chief Operating Officer</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Brian Hewitt, UI Architect/Developer, Digital Media</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ryan Langille, Lead Web and Interactive Developer, Digital Media</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Victor Nemard, Senior Merchandise Manager, CMOG Shops Retail</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Scott Sayre, Chief Digital Officer, Digital Media</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">David Togni, Director of Finance, Accounting</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Randy Vargason, IT Manager, Information Technology</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Nick Wilson, Technical Coordinator, The Shops (Retail)</span></li>
+</ul>
+<p><span style="font-weight: 400;">Special thanks to Michelle Padilla for her editing skills.</span></p>
+<h2><b>References</b></h2>
+<p><span style="font-weight: 400;">AAMD Statistical Survey Benchmarking Tool. (2016). &#8220;</span><span style="font-weight: 400;">92a. How many total ticketed admissions?&#8221;</span> <span style="font-weight: 400;">Consulted January 30, 2017. Available </span><a href="https://aamd.org/members/surveys/statistical-survey-2016/results"><span style="font-weight: 400;">https://aamd.org/members/surveys/statistical-survey-2016/results</span></a></p>
+<p><span style="font-weight: 400;">Business Wire. (2015).&#8221;MoMA Design Store Presents The Skateroom at Delano South Beach.&#8221; Published November 4, 2015. Consulted January 30, 2017. Available </span><a href="http://www.businesswire.com/news/home/20151104006474/en/MoMA-Design-Store-Presents-Skateroom-Delano-South"><span style="font-weight: 400;">http://www.businesswire.com/news/home/20151104006474/en/MoMA-Design-Store-Presents-Skateroom-Delano-South</span></a></p>
+<p><span style="font-weight: 400;">Dowden, R., L. Mann, &amp; S. Sayre, S. (2017) &#8220;Corning Museum of Glass 2016 E-commerce Summit.&#8221; <em>White paper summary of the summit. </em>Consulted January 30, 2017<em>.</em> Available </span><a href="http://www.cmog.org/research/2016-ecommerce-summit"><span style="font-weight: 400;">http://www.cmog.org/research/2016-ecommerce-summit</span></a></p>
+<p><span style="font-weight: 400;">MIVA. (2011). &#8220;</span><span style="font-weight: 400;">The History Of Ecommerce: How Did It All Begin?</span><i><span style="font-weight: 400;">&#8221; </span></i><span style="font-weight: 400;">Consulted January 30, 2017.</span><i><span style="font-weight: 400;"> </span></i><span style="font-weight: 400;">Available </span><a href="http://www.miva.com/blog/the-history-of-ecommerce-how-did-it-all-begin/"><span style="font-weight: 400;">http://www.miva.com/blog/the-history-of-ecommerce-how-did-it-all-begin/</span></a></p>
+<p><span style="font-weight: 400;">Museum Store Association. (2016). &#8220;</span><span style="font-weight: 400;">MSA’s New Strategic Plan: A Focused Set of Goals for 2016 – 2019.&#8221; Available </span><a href="https://museumstoreassociation.org/about-msa/msa-2016-2019-strategic-plan/"><span style="font-weight: 400;">https://museumstoreassociation.org/about-msa/msa-2016-2019-strategic-plan/</span></a></p>
+<p><span style="font-weight: 400;">Pan, D. and Manish Engineer. &#8220;The 360-degree view: Why an integrated CRM platform is important in growing a museum’s membership program.&#8221; </span><i><span style="font-weight: 400;">MWA2015: Museums and the Web Asia 2015</span></i><span style="font-weight: 400;">. Published August 21, 2015. Available </span><a href="http://mwa2015.museumsandtheweb.com/paper/the-360-degree-view-why-an-integrated-crm-platform-is-important-in-growing-a-museums-membership-program/"><span style="font-weight: 400;">http://mwa2015.museumsandtheweb.com/paper/the-360-degree-view-why-an-integrated-crm-platform-is-important-in-growing-a-museums-membership-program/</span></a></p>
+<p><span style="font-weight: 400;">Ryzikmarch, M. (2015.) &#8220;</span><span style="font-weight: 400;">For the Walker Art Center, a Shop That Peddles Evanescence</span><span style="font-weight: 400;">.&#8221; Published March 19, 2015. </span><i><span style="font-weight: 400;">New York Times.</span></i><span style="font-weight: 400;"> Consulted January 30, 2017.</span><i><span style="font-weight: 400;"> </span></i><span style="font-weight: 400;">Available</span><i><span style="font-weight: 400;"> </span></i><a href="http://www.nytimes.com/2015/03/19/arts/artsspecial/for-the-walker-art-center-a-shop-that-peddles-evanescence.html"><span style="font-weight: 400;">http://www.nytimes.com/2015/03/19/arts/artsspecial/for-the-walker-art-center-a-shop-that-peddles-evanescence.html</span></a></p>
+<p><span style="font-weight: 400;">Stinson, L. (2015).  &#8220;</span><span style="font-weight: 400;">A Gift Shop That Sells Snapchats, Avatars, and Voicemails.&#8221;Published May 1, 2015. <em>Wired</em>.  Consulted January 30, 2017. Available </span><a href="https://www.wired.com/2015/05/walker-art-center-intangibles/"><span style="font-weight: 400;">https://www.wired.com/2015/05/walker-art-center-intangibles/</span></a></p>
+<p><span style="font-weight: 400;">U.S. Census Bureau. (2016). &#8220;</span><span style="font-weight: 400;">Quarterly Retail E-Commerce Sales, 3rd Quarter 2016</span><span style="font-weight: 400;">.&#8221; Available </span><a href="http://www.census.gov/retail/mrts/www/data/pdf/ec_current.pdf"><span style="font-weight: 400;">http://www.census.gov/retail/mrts/www/data/pdf/ec_current.pdf</span></a></p>
+<p><span style="font-weight: 400;">Rouse, M. (2014). &#8220;What is Omnichannel?&#8221; </span><i><span style="font-weight: 400;">TechTarget</span></i><span style="font-weight: 400;">. Consulted January 30, 2017. Available </span><span style="font-weight: 400;"><a href="http://searchcio.techtarget.com/definition/omnichannel">http://searchcio.techtarget.com/definition/omnichannel</a></span></p>
+<p>Winesmith, K. (2013). &#8220;Open systems, loosely coupled: Creating an integrated museum eCommerce system for the MCA.&#8221; In  N. Proctor &amp; R. Cherry (eds.) Museums and the Web 2013 Proceedings. Consulted January 30, 2017. <a href="http://mw2013.museumsandtheweb.com/paper/open-systems-loosely-coupled-creating-an-integrated-museum-ecommerce-system-for-the-mca/"><span style="font-weight: 400;">http://mw2013.museumsandtheweb.com/paper/open-systems-loosely-coupled-creating-an-integrated-museum-ecommerce-system-for-the-mca/</span></a></p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+Sayre, Scott, Laura Mann and Robin Dowden. "Extending the E-Commerce experience: Lessons learned and the questions that remain." <i>MW17: MW 2017</i>. Published January 31, 2017. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw17.mwconf.org/paper/extending-the-e-commerce-experience-lessons-learned-and-the-questions-that-remain/<br /><br /><hr>
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h2><p class="must-log-in">You must be <a href="../../wp-login2b40.html?redirect_to=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fextending-the-e-commerce-experience-lessons-learned-and-the-questions-that-remain%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- .comments-area -->
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="text-7" class="widget widget_text">			<div class="textwidget"><h2 class="widget-title">Community Conveners</h2>
+<p><a title="Wezit" href="https://wezit.io/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/wezit-250-75.jpg" alt="Wezit" /></a><br />
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a></p>
+<h2 id="gold-sponsor" class="widget-title">Platinum Sponsor</h2>
+<p><a title="Microsoft" href="http://aka.ms/museweb" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/Microsoft-250-75.jpg" alt="Microsoft" /></a><br />
+<!-- <a title="Izi Travel" href="http://www.izi.travel" target="_blank" rel="noopener"><img src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/izi-250-75.jpg" alt="Izi Travel" class="sponsor-img sponsor-top" /></a> --></p>
+<h2 id="gold-sponsor" class="widget-title">Gold Sponsor</h2>
+<p><a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a></p>
+<h2 id="bronze-sponsor" class="widget-title">Bronze Sponsors</h2>
+<p><a title="MailChimp" href="https://mailchimp.com/resources/guides/mailchimp-for-nonprofits/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a><br />
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/netx-250-75.gif" alt="Netx" /></a><br />
+<a title="PatronTech" href="http://patrontechnology.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/patron-250-75.jpg" alt="PatronTech" /></a></p>
+<h2 id="conference-sponsor" class="widget-title">Conference Sponsors</h2>
+<p><a title="CMA" href="http://clevelandart.org/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/cma-250-75.jpg" alt="CMA" /></a><br />
+<a title="Rock &amp; Roll" href="http://www.rockhall.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/rrhf-250-75.jpg" alt="Rock &amp; Roll" /></a></p>
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+</body>
+
+<!-- Mirrored from mw17.mwconf.org/paper/extending-the-e-commerce-experience-lessons-learned-and-the-questions-that-remain/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:58:35 GMT -->
+</html>

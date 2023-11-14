@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+
+<!-- Mirrored from www.museumsandtheweb.com/mw97/speak/eyre.htm by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 19:34:35 GMT -->
+<HEAD>
+
+<title>Museums and the Web 1997: Conference Papers </TITLE>
+
+</HEAD>
+
+<BODY BGCOLOR="CCFFFF">
+
+<FONT FACE="ARIAL">
+
+<A HREF=../mw97toc.html><IMG SRC="../mw97logo.gif", border=0" ALIGN=Left></A>
+
+<CENTER><H3>Conference Papers</H3></CENTER>
+
+<IMG SRC=../mw97line.gif>
+
+<CENTER>
+<H4>Museums and the Web: An International
+Conference<BR>
+Los Angeles, CA, March 16 - 19, 1997</H4>
+</CENTER>
+
+
+<IMG SRC="../mw97line.gif">
+<H3>John Eyre, Senior Project Manager, IIELR</H3>
+
+<H2>Architecture for Online Museums of the Future<BR>
+An Object Server for the Future (ELISE II)</H2>
+
+
+<H3>Introduction</H3>
+
+<P>De Montfort University Library has a long history of being at the
+forefront of providing electronic services to its users. Originally one of
+the first universities to have an electronic catalogue system, the modern
+library has led the way in researching the requirements for providing
+access to the actual text of books in electronic form. </P>
+
+<P>Now within the Division of Learning Development and working closely with
+the recently established International Institute for Electronic Library
+Research (IIELR), the library has secured a string of projects funded
+through various programmes and companies including the European Commission,
+JISC, the British Library, IBM and others. The first notable project was
+ELINOR (Electronic Library Information On-line Retrieval), funded by the
+British Library and IBM, it started in 1991 and established a new library
+at the Milton Keynes campus which provided access to the texts of required
+books via a networked computer system. </P>
+
+<P>At the beginning of 1993 the Library established research links with the
+museum world with an image project funded by the EC and named ELISE
+(Electronic Library Image Service for Europe). The Victoria and Albert
+Museum, IBM, Tilburg University and DMU came together to investigate the
+possibility of providing museum and library images to users via the
+Internet. At that time there was no WEB and the Internet was still the
+domain of academia and the selected few. </P>
+
+<P>The IIELR has been established to take these and other related research
+topics forward; the emphasis is on use of open standards, use of freely
+available Web browsers and provision of easy access to data no matter where
+and how it is held. The ELISE project is now in its second phase and has
+five additional partners. DMU has joined CIMI (the Consortium for Computer
+Interchange of Museum Information) and has been working with this North
+American based group for the past two years, in the areas of SGML, Z39.50
+and access to disparate datasets. </P>
+
+<P>ELISE II is concerned firstly with building a practical and sustainable
+image service, which includes support for user registration and validation,
+copyright management and charging mechanisms and cross database searching.
+</P>
+
+
+<H3>System Requirements</H3>
+
+<P>System design is led by user requirements, and these are shaped by their
+experience and expectations. No longer is it acceptable to provide simple
+terminal type access to minimal glossary text. Modern users are becoming
+more aware of the range of possibilities open to them and more
+sophisticated in using the tools and applying the results of their work.
+With developments in cinema special effects, computer based multimedia,
+speed and price performance of personal computers, quality of screen
+displays and the widespread easy access to the Internet and the
+expectations of modern users, bring significant technical problems. </P>
+
+<P>At the same time as user expectations increase, more sophisticated tools
+to fulfil these aspirations become available. Often the tools lead the way
+and increase expectations. In many ways the requirements for developing new
+systems have become simpler and more universal in their nature. For
+example, everyone now expects to access data via the Internet with the use
+of a Web browser application, which for many users can be easily acquired
+and used free of charge. </P>
+
+<P>Problems occur when new technology appears to offer something today,
+which is actually still in its very early stages of development.
+Intelligence and interaction inside Web browsers was sold to the public
+with the high profile launch of Sun's Java toolkits and later, Microsoft's
+Javascript and other plug-ins. While these tools do offer significant
+opportunities for developers, well-designed applications take a significant
+amount of time to bring to the market, while bad ones can appear much
+quicker. </P>
+
+<P>Another area of system design which has always been a consideration for
+some developers is open standards. Allowing the data in one system to be
+seen in some way by other systems is not a requirement that has had a
+priority for many developers in the past. However, it is one of the major
+areas of concern for current planners. With the world becoming more of a
+global market and the Internet reaching in to every corner, users want to
+be able to locate data wherever it happens to be held. </P>
+
+<P>Search systems need to be able to actively seek out new sources and
+offer them to their users in a way that is transparent and seamless. Users
+do not want to have to decide where to search for something, they typically
+will not know where the objects that they are likely to be interested in
+are held. </P>
+
+<P>Search queries would be better limited by subject domain or geographical
+locations or time to retrieve data or even by whether items are freely
+available or charged for. The actual location of an object is only relevant
+once that object has been identified as being of direct interest to the
+searcher. </P>
+
+<P>The question of access to data, organised by subject domain rather than
+by individual service sites, raises the question of agreed standards of
+data structures within domains and methods of transferring data between
+these sites. Then, a user could search across several domains, for example
+a search for 'flint' might apply to a geographical database or geological
+or even a cultural database. These databases will be designed and
+structured in very different ways and not even consistent within each
+domain. </P>
+
+<P>To summaries, some of the important user requirements for a system that
+can provide access to museum data (and other domains) at a number of remote
+sites: </P>
+
+<UL><LI>Provide the service via the Internet and the World Wide Web.
+
+<LI>Access via a standard user interface - Web Browser.</LI></UL>
+
+<P>Single interface to the whole worlds data. This means more than just
+accepting that a Web browser can find information held anywhere in the
+world. It means that a well specified Web page (or set of pages) should
+provide all that is required to search and retrieve real data from
+databases held at sites all over the world. And, as new sites become
+available they are automatically seen by this Web page. </P>
+
+<P>A level of intelligence in the user interface in order to provide an
+appropriate query interface and comprehensive support for different data
+types returned as part of result sets. This will include structured
+documents as well as unstructured text, images, video and sound. </P>
+
+<P>Methods for refining a search. Apply new terms to previous result sets.
+Direct search terms to specific indexes, fields or access points. For
+example, search for 'Dickens' as a 'Creator' but not as a 'Subject'. </P>
+
+<P>Apply limits to the result set. This can be done by redefining the
+search, but could also be done by applying other filters, such as location
+- by distance from the user or by country, by subject domains, by service
+supplier, by charging mechanisms or by the time it takes to get a return.
+</P>
+
+
+
+
+
+<P>Additionally, data suppliers will be interested in seeing the following
+features catered for: </P>
+<UL><LI>User validation - by individual, group or location.</LI></UL>
+
+<P>Copyright management - by the time individual item level data is
+supplied to the user, it should be accompanied by owner, location and
+access rights information. This may vary depending on who or where the user
+is. Copyright owners will require some reporting and associated fees
+relating to actual or likely use of their materials. </P>
+
+<P>Charging mechanisms - once the user decides to look at an item of informa
+tion, it will be required that a record or charge is made in some manner.
+This could include direct billing to the individual, their group or service
+provider. It could also be supported by monthly or annual bills, or
+pre-paid subscriptions or a number of other models. It is probable that a
+global service would have to support many charging models. </P>
+
+
+<P>Is all this possible or even desirable? The fact is that this is what
+users want and it is what many developers are working towards, so it will
+happen to some extent in many places. For the data provider the amount of
+effort involved in digitising and cataloguing their data will be immense.
+Still, nothing, compared to agreeing standards within, and across domains.
+These difficulties mean that other methods will need to be found in order
+to provide the functionality that the users require. </P>
+
+<P>There is no real requirement for data holders around the world to unite
+and decide on a new and uniform way to specify their catalogues and
+collections. They can not be expected to rebuild their databases using new
+field names and attributes that do not match their requirements, simply to
+conform. </P>
+
+<P>Efforts going on within domains to define agreed attribute sets are
+valid and will prove invaluable in the future, but this work is difficult
+and slow. It is more likely that a short term solution will be found that
+can take a small subset of access points which can be mapped to any
+database structure at a level that can provide global searching. Detailed
+searching would then be a domain or service specific function and might be
+supported by separate Web pages or even down-loadable applications. </P>
+
+
+
+
+
+
+
+<H3>Architecture Design</H3>
+
+<P>The CIMI consortium has been working for some time to provide
+demonstration systems that can demonstrate how data of various types and
+from different places can be accessed from a single user query. The CHIO
+project brought SGML documents, museum wall texts and object records
+together through a standard Web browser interface. Queries from the user
+are processed and passed to various database systems and returns are
+processed and displayed back to the user. Where the browser has additional
+support for SGML documents, the fully structured data can be downloaded and
+browsed. </P>
+
+<P>This demonstration system is to be expanded by the use of standard
+protocols such as Z39.50 which will allow additional externally managed
+datasets to be accessed in the same way. CIMI, working with other partners
+and projects in America and Europe, such as ELISE and Aquarelle, are
+working towards this global access model of information retrieval. </P>
+
+<P>The ELISE project has defined a model which will be the basis for its
+immediate development plans. It is based around an intelligent Web server
+that has functionality to cope with the user and supplier requirements
+mentioned earlier. It will be built as a modular system with expansion in
+mind. </P>
+
+<P>A service can be provided simply, and expanded in a controlled way. A
+Web server with connections to a local database is relatively
+straightforward to set up. The next stage would be to expand the number and
+type of locally managed database systems. Then, using agreed standards and
+controls, make connections to remote datasets. </P>
+
+<P>The standard architecture of the past was to build dedicated
+applications that provided the functionality required by the user as a
+complete system, delivered on discs or tapes. Applications that were
+designed to access remote data would be build using client-server
+technology, where a user interface would be provided which could connect
+over the Internet to the remote server system. These two parts are
+dedicated to each other and do not typically provide any links or
+compatibility with other systems. </P>
+
+<IMG SRC="eyrefig1.gif">
+
+
+<P>The use of the Web and Web browsers has meant that user interfaces can
+be provided by one supplier while the server side can be developed and
+provided by other groups. </P>
+
+
+<P>This is the standard architecture for providing Web access to remote
+databases:</P>
+
+<IMG SRC="eyrefig2.gif">
+
+
+<P>Using this design, the site owner or service provider has complete
+control over what services are provided to users. The design of the Web
+pages, the features that are offered and the databases that can be
+accessed, all have to be designed and produced by the sight owner. However,
+the actual browser software can be provided by any supplier as long as it
+meets the required standards. </P>
+
+<P>The first stage in providing a single user interface, including the
+content and functionality of the interface, to connect to remote databases
+in various locations, will be to use an agreed standard for transmitting
+the query over the network and return the results in an agreed format. The
+current standard being worked with in this area is Z39.50. </P>
+
+<IMG SRC="eyrefig3.gif">
+
+
+<P>A Web service providing a similar Z39.50 connection could build this
+functionality into the server system. </P>
+
+<IMG SRC="eyrefig4.gif">
+<H3>Implications</H3>
+<IMG SRC="eyrefig5.gif">
+
+<P>In this new architecture it can be seen that there is a rather complex
+structure which replaces the previous use of the term Z39.50 Origin
+(client). This can be understood as everything that is required in order to
+process a user request and to translate this into a Z39.50 (or other
+protocol) Query to one or more database systems. </P>
+
+<P>The Web Server which is a standard Web tool and provides the means of
+transferring user queries across the Internet in a well defined and agreed
+manor. The transactions at this level are using HTML with enhancement via
+the possible use of JAVA and Javascript programming. Web servers and
+browsers are available for all major computer platforms and are essentially
+compatible with each other. </P>
+
+<P>In order for developers to take advantage of this generic level of
+Internet access, while enhancing the features provided, they are able to
+concentrate on the server side of the process. The intention of the ELISE
+project is to develop the intelligence and flexibility required, into a
+BROKER package which sits behind the Web server and becomes a client to the
+distributed world of data objects. </P>
+
+<P>In this way the BROKER can be enhanced to take into account results from
+other development work and other projects. User management, copyright and
+charging, thesauri expansion, video streaming, use of different protocol
+layers, can all be considered as enhancements in this tool. </P>
+
+<P>So, how does this architecture manage standard queries and distribute
+them to various databases? </P>
+
+<P>If we start by looking at a possible Web page and see what kinds of
+things might be presented to the user. The process can then be followed
+through the system. </P>
+
+<IMG SRC="eyrefig6.gif">
+
+<H3><I>Figure 6: Possible Web Search Screen</I></H3>
+
+<P>In the first stage system a simple forms based page could be presented
+that has no user validation or database selection options. It simply
+presents a query entry box and an access point selector and applies all
+searches to its locally managed databases. The access point selector should
+provide a list of attributes that are readily understood and that can be
+applied to any kind of data store. This would be a good use of the Dublin
+Core, being an agreed list of such elements. It is not expected that these
+attribute or element names have to appear as fields in all the databases
+supported, simply that the server maps field contents to appropriate access
+points for the purpose of general level search and refinement. </P>
+
+<P>The access point selector should be able to manage multiple selections
+and have an option for selecting all, which would then be interpreted by
+the server as search the global index or search all indices. </P>
+
+<P>The user enters the search term 'Dickens' and applies it to the Access
+Point 'Creator'. These options are fed back to the server in standard HTML
+Forms structure. The server uses the CGI link to pass the search terms to
+the Database Server. This server can handle multiple database models,
+including proprietary systems as well as standard protocols such as Z39.50
+and ODBC. The terms are packaged appropriately and sent to the various
+databases.
+Returns are received by the server, from each of the databases. Some will
+have no hits, some will have hits and report the fact but return no content
+and others will return a number of brief records. It is for the Database
+Server to manage these different types of response and present a consistent
+view back to the user screen. The returns could be presented in the
+form</P>
+
+<P>The search was for 'Dickens' and applied to the 'Creator' access point. </P>
+
+<P>There are: </P>
+	<UL><LI>10 records in the "British Authors" database
+	<LI>200 hits in the "Catalogue of 19th Century Writers"
+	<LI>0 hits in the "Geology of Britain" database</LI></UL>
+
+<P>select one of the above in order to see Brief records É
+or enter more search terms to refine or start a new search É</P>
+
+<P>(the above databases are fictitious) </P>
+
+<P>From this point things would progress as expected. If images or other
+objects are attached to a record then icons would appear with the brief
+record allowing full object files to be retrieved by clicking on them. </P>
+
+<P>It is easy to imagine how the user interface could be enhanced to offer
+more choice for the user and allow for some of the more detailed management
+tasks that service providers will require. New features required at the
+user side are simply implemented at the 'Server-Broker' by adding functions
+in a controlled manor. </P>
+
+<P>In order to gain full advantage of this design, the link to external
+databases needs to be supported. The extended broker has full knowledge of
+the characteristics of the databases under its control. By the use of
+standards such as Z39.50 to transmit the query in an agreed way and the
+Dublin Core to provide high level mapping of data elements, this design can
+very easily cope with feeding queries to compatible systems in remote
+locations. </P>
+
+<P>The system is divided into three distinct sections. Each one separated
+by a heavy line which could represent Internet connections. In order for
+two or more of these systems to communicate with each other, there are
+several possibilities. </P>
+
+<P>An intelligent Web browser could have enough local knowledge to be able
+to communicate with several brokers at the same time. In this case, the
+browser would have to present the query to several brokers and handle the
+returns, whatever their format. This is asking too much from a standard web
+browser, and enhancing a browser to do this would be moving away from the
+concept of using standard tools. </P>
+
+<P>The broker could communicate with other brokers. This appears to be a
+useful option. The broker is sophisticated enough to handle this kind of
+technology. The collections management database could hold information
+about other compatible brokers and where they are. The difficulty comes
+with user authorisation, copyright management and billing requirements.
+Each broker has information relating to these areas, but they may not be
+compatible with each other and moving this data along with queries and
+returns could add significant overhead to the network traffic and
+programming complexity. </P>
+
+<P>The Layer between broker and servers offers the opportunity to connect
+directly to remotely held databases. The broker knows about the locally
+held databases and how to connect to them. It also has information stored
+in the collections management database which allows for user management and
+the other functions described earlier. The broker supports well established
+protocols such as Z39.50 which are technically capable of directly
+accessing any other Z39.50 database wherever it is on the Internet - given
+the appropriate information. All that is required is a paper negotiation
+between service providers. </P>
+
+<P>One service site (A) offers a number of databases to a defined user
+group at negotiated costs and usage rights. Another site (B) offers similar
+services to another grou

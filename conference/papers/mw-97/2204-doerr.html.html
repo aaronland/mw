@@ -1,0 +1,680 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+
+<!-- Mirrored from www.museumsandtheweb.com/mw97/speak/doerr.htm by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 19:34:35 GMT -->
+<head>
+
+<title>Papers </title>
+
+</head>
+
+<body bgcolor="CCFFFF">
+
+<font face="ARIAL">
+
+<a href=../mw97toc.html><img src="../mw97logo.gif", border=0" align=Left></a>
+
+<center><h3>Conference Papers</h3></center>
+
+
+<img src=../mw97line.gif>
+
+<center>
+<h4>Museums and the Web: An International
+Conference<br>
+Los Angeles, CA, March 16 - 19, 1997</h4>
+</center>
+
+
+<img src="../mw97line.gif">
+<h3>Martin Doerr, Irene Fundulaki and Vassilis Christophidis</h3>
+<h2>The specialist seeks expert views: 
+Managing digital folders in the AQUARELLE project</h2>
+September, 1996<br>
+Institute of Computer Science<br>
+Foundation for Research and Technology - Hellas<br>
+
+<h2>Abstract</h2>
+
+<p>The AQUARELLE project will connect researchers and museum specialists in
+order to enable access to information describing and documenting the
+European cultural heritage such as painting, sculptures, historical sites
+and monuments, musical instruments and furniture. One of the main
+objectives of AQUARELLE is to facilitate the creation and dissemination of
+information folders and detailed catalogues. The management of cultural
+information, related to a given theme or activity, in structured
+collections, so-called folders, play a central role in the AQUARELLE
+project.</p>
+
+<p>In this paper we present the folder server and editing environment which
+will support scholars, administrators and conservators to maintain
+secondary SGML documents, that describe, comment and refer the primary
+material (image or text bases etc.) across the European borders. The
+technical challenge of this undertaking is to cater for the diversity in
+specialization, organizational and cultural context, the data integrity and
+the adequate high precision in reference and retrieval through the
+Internet. On the other side, the organization of agreement on shared
+contents and resources at all levels raises also interesting questions. The
+project so far provides first solutions and serves moreover as a forum to
+obtain valid requirements for future extensions.</p>
+
+<h2>1. Introduction</h2>
+
+<p>The WWW attracts more and more the interest of museums and cultural
+organizations as a means to project cultural contents, but as well as to
+exchange information on an international level, addressing not only the
+typical museum visitor but also the professional curator, documentalist or
+scientist of any related discipline. The fact, that cultural spaces of the
+past cross our modern borders, but even more the scattering of cultural
+material objects all over the world, makes the possibility of
+cost-efficient international data-exchange very attractive to the
+professional community. See for instance the various locations of
+"haystacks" by Monet or of the medieval bronze from Benin, Africa (e.g. <a
+href="http://africa.itim.mi.cnr.it/"> http://africa.itim.mi.cnr.it</a>).</p>
+
+<p>Current WWW technology provides the necessary standardization and global
+communication structure, but existing tools are somehow limited to manage
+documents in a professional framework (poor data structures, dangling
+links, ad-hoc search engines, etc.). The AQUARELLE project (TELEMATICS
+Application Program of the European Commission, Project IE-2005 1996),
+relies on the fundamental concept of the Web and intends to provide a
+reliable and precise access to heterogeneous cultural data sources within
+an open federation of organizations for mutual benefit. According to the
+AQUARELLE vision each author of a given information component should be
+able to link directly a part of his own creation to another information
+asset created and updated by another author in the Web. The organization of
+cultural data into structured collections of primary material, called
+"folders" (a translation of the French term "dossiers"), will bring much
+more than a simple access to the existing information: linking and
+commenting relevant pieces of information belonging to different owners
+will add value to the information content itself. The overall AQUARELLE
+architecture is designed to guarantee referential integrity as well as to
+support the adequate high precision in reference and retrieval.</p>
+
+
+
+<p>The AQUARELLE project has identified in an initial feasibility study
+several examples of such folders: sets of pictures collected by a publisher
+to edit a city guide; supporting documentation for exhibition preparation
+by museum curators; collections of information elements on monuments and
+sites at the "Inventaire General" of the French Ministry of Culture (<a
+href="http://aquarelle.inria.fr/Inventaire">
+http://AQUARELLE.inria.fr/Inventaire</a>). Depending on the purpose, these
+collections may need considerable structuring in order to be useful.
+Relations between collected or referred data and opinions, meanings, domain
+knowledge, intended or actual use can be rather complex and will be
+supported by the tools developed in the project. Folders themselves will be
+a subject of data exchange, giving raise to a cooperative environment the
+potential of which yet has to be explored.</p>
+
+<p>The strong involvement of user groups in the project helped to identify
+in a very early stage a series of important requirements specific to the
+professional aspect of the systems to be developed. It was required to
+provide high precision semantic indexing in fine granularity under the
+control of high quality terminology, preferably multilingual, whereas
+access by uncontrolled terms and data-mining aspects were regarded to be of
+secondary importance. Rather than using a fixed data structure, specific
+user groups need the possibility to customize their own data structures in
+the running system on demand. Finally, it was ranked high to have reliable
+metadata, especially on database contents.</p>
+
+<p>AQUARELLE has finished the first design phase and it expects to present
+the first prototype implementation in early spring this year. Being a
+Technical Integration Project, it is going to solve with first priority the
+questions of interoperability and reliability of service, based on SGML (<a
+href="http://www.sil.org/sgml/sgml.html">
+http://www.sil.org/sgml/sgml.html</a>) and Z39.50 (<a
+href="http://lcweb.loc.gov/z3950/agency">
+http://lcweb.loc.gov/z3950/agency</a>) as key standards. This is a major
+subject of the close cooperation with the Consortium for Interchange of
+Museum Information (CIMI <a
+href="http://www.cni.org/pub/CIMI/www/framework.html">
+http://www.cni.org/pub/CIMI/www/framework.html</a>), which has so far
+concentrated its implementation efforts (the CHIO project) more on the
+support of the non-professional user. There is also a cooperation with the
+Getty Information Institute (<a href="http://www.gii.getty.edu/">http://www.gii.getty.edu/</a>) on thesaurus use and multilinguality. </p>
+
+<p>Isolated components of the first prototype exist, and the overall
+component integration  begins in March 1997. Very good progress has been
+made, which allows us to present here a realistic view of the system to be,
+but moreover to discuss aspects of its use.</p>
+
+<p>The current paper concentrates on the folder management and indexing,
+which comes right now into its first prototype stage. Besides the
+description of the technical choices, we address consequences and open
+questions of user procedures and organization, which emerged so far or are
+expected to be outcome of the practical experiences with the system. </p>
+
+<h2>2. The Notion of Folders</h2>
+
+<p>A folder in the sense of AQUARELLE is a container gathering a structured
+collection of specific information (text, image, etc.) and links to other
+documents which relates to a certain theme or an activity. This is
+typically the first step for most scientific work or planning of cultural
+programs. </p>
+
+<p>Obvious themes could be cultural objects or monuments, seen under the
+aspect of construction, material and state, style and artistic expression,
+function and social or political context. More complex themes could be
+historical persons, artist schools or any other organization, places at
+certain periods,  or any kind of performance as theater, music, crafts and
+social events. As folders are seen close to the primary material (called
+archives), wide-spreading themes as "Impressionism" or "Ming Dynasty" are
+rather out of scope. The focus is clearly on setting archive material in a
+context and on the visual aspects of items of the present and the past,
+i.e. we talk about multimedia documents. Opposite to multimedia authoring,
+aesthetic aspects of representation will only be regarded to the degree
+they serve the comprehensiveness of the display. The folders are seen as an
+auxiliary means for the research, documentation, didactic presentation etc,
+and not as the presentation itself. </p>
+
+<p>Folders may also be created or used to support characteristic activities
+of the cultural professional. It may be a documentary service for general
+use, but more typically the preparation of any kind of documentation and
+publication, as exhibitions, traditional books, guides etc. or the planning
+of conservation or restoration activities at a political or technical
+level. Characteristic is the multitude of reasons, why data are referred
+and for which purpose they may be regarded as useful (e.g. as in Principia
+Cybernetica, <a href="http://pespmc1.vub.ac.be/Default.html">
+http://pespmc1.vub.ac.be/Default.html</a>). They may support or contradict
+an opinion, show various stages of a process, sides or phases of a
+building, be unique or of high quality, prototypical or unusual. Such
+hypermedia networks of semantically typed links will provide a real added
+value to data collections, and relieve the user from the cumbersome manual
+maintaining of cross references. We need for this purpose flexible
+structures with an extensible  variety of link types, enriched by free-text
+comments. </p>
+
+<p>Besides that,  rigid data structures are needed for documentation of
+cultural material for  statistical purposes. Statistical analysis needs
+complete data on few data fields from many objects. Metadata about handling
+of cultural material and the folders themselves such as authors, working
+groups, tasks, subtasks, phases and versions require fixed structures as
+well. We see, that neither a pure hypertext approach, nor a conventional
+database schema is appropriate, but a combination of fixed schema for the
+necessary information and extensible structures of explanatory character
+for the optional information. </p>
+
+<p>A question that arises is, who will create all these data structures and
+at which cost. Fortunately, there are some prototypes or examples in the
+field, beginning from the CIDOC Relational Data Model (<a
+href="http://www.cidoc.icom.org/model/relational.model/">http://www.cidoc.icom.org/model/relational.model/</a>)
+and other CIDOC documents, work of the CIMI Consortium, the MDA (<a
+href="http://www.open.gov.uk/mdocassn"
+>http://www.open.gov.uk/mdocassn</a>), until data forms internally in use
+at various organizations. It can be expected, that there will be
+similarities and common "cores" between the needed structures, allowing
+experts or service providers to rapidly customize new ones from suitable
+prototypes. Such procedures are explicitly foreseen by the TEI
+(Text Encoding Initiative), as detailed below. Prototypes also help to
+maintain semantic consistency between the products. Nevertheless, a more
+formal agreement between the users on "core structures", fixed or
+"official" schemata, as well as guidelines for variable structures, will be
+helpful to support interoperability at retrieval and data interchange.
+Obviously such structures will be more purpose-specific than even domain
+specific. </p>
+
+<p>"Core" data structures are not easily or never found, if the domain is
+initially taken too wide, as e.g. with the CIDOC efforts to create a
+minimal data model. The CIDOC Relational Data Model work shows clearly on
+the other side, that a set of relevant  interrelated data and a convention
+on their formal representation can be achieved for a multitude of more
+separate purposes. </p>
+
+<p>Primary and secondary data are in general not public, and quite often
+represent a considerable capital of their owners. Besides data, that will
+be published in the proper sense, we expect that an important part of
+folders and primary data will be shared exclusively between smaller or
+larger working groups and consortia. In particular, folders can refer to
+folders allowing collaborating teams to create composite documents, where
+each partner is owner of his part only. We must note that the target of
+authors' interest may be not a whole folder, but a detail within it.
+AQUARELLE currently discusses to allow for interdocument links directly to
+document parts. </p>
+
+<p>This mutual interlinkage provides the data layer for cooperative work.
+Questions to be clarified in practice are the conditions under which folder
+parts are regarded to be suitable to be referred by others, and which
+changes should be possible, once a reference was made. There may be stages
+of proposals for discussion, drafts, personal official opinions and
+opinions of an organization. References may be to a document only as it was
+at the time the reference was made. They may be tolerant to minor (e.g.
+spelling) corrections or to changes of references therein. Or just the
+opposite, they may refer to a document with the explicit wish that it
+should always be updated to the latest state of knowledge. </p>
+
+<p>Besides the widely discussed and open questions of intellectual rights,
+economic models
+of data sharing would be useful, which allow to make the mutual benefit of
+those putting
+much effort in providing data to those exploiting data more explicit. Many
+good IT solutions may not find their way from research prototypes to real
+use just because of
+that, which is clearly a question out of the scope of  technology providers
+and technology
+funding. </p>
+
+<p>In an interlinked network of documents, there is no clear semantic
+boundary between the interior and exterior of a document. We adopted a
+definition of the unit "folder" motivated by the creatorship - the unit
+someone signs responsible for, an administrative view. Hence ownership and
+access rights are at folder level, as well as spiritual rights. </p>
+
+<p>The state-of-the-art standard to implement the appropriate data
+structures for the above requirements is SGML. Rather than one Document
+Type Definition (DTD), the system is designed to support an open number of
+DTDs. In order to bootstrap the first evaluation phase, and for reasons of
+interoperability from the very beginning, the project starts with the CIMIs
+CHIO (Cultural Heritage Information On-Line) DTD and that of the French
+Ministry of Culture CI ("Classer d'Inventaire"). We briefly comment the two
+different approaches with respect to information structuring and handling.
+</p>
+
+<p>The CHIO DTD takes Text Encoding Initiative (TEI <a
+href="http://etext.virginia.edu/TEI.html">
+http://etext.virginia.edu/TEI.html</a>) as its starting point. One of the
+most important aspect of TEI is that it provides a core of well-established
+SGML techniques for representing hypermedia documents for humanities, in a
+system-independent manner. People can then modify and extent the set of
+basic element definitions (e.g., sections, subsections, lists, footnotes,
+illustrations, bibliographies, etc.) so a specific version of the TEI DTD
+can be designed for a specific domain such as Art descriptions (e.g.,
+personal names, dates, places, etc.). In order to indicate the "museum"
+interest to specific parts of documents, two mechanisms are identified in
+the CHIO DTD: primary or secondary access points used for the description
+of documents profiles to give a scope for (Z39.50) queries. </p>
+
+<p>Primary access points indicating that a given part of the work is
+"about" a particular concept (i.e., a <topic> element) or a particular
+"museum point of view" (i.e., a <context> element). The corresponding tags
+gain their expressive power from SGML attributes, indicating the type of
+information they hold as well as their values. The <topic> element is a
+general way to qualify a part of text as for instance "his is about that
+person ... event, etc" The <context> element gives  more precise museum
+context to elements as for instance "this is bout that  creator ...
+historical context". </p>
+
+ <p>Secondary access points dealing with mentioning of people, places, etc
+which are of interest, but do not form the main topic of discourse. They
+are represented by "ordinary" SGML elements either inherited directly by
+the TEI DTD or invented specially for the CIMI DTD. </p>
+
+<p>The French Ministry of Culture CI DTD is dedicated to territory
+inventory making. It consists of folders that are classified in Content and
+Filling folders. Content folders are used to describe single objects (i.e.,
+artifacts like paintings), individuals (i.e. monuments like churches), sets
+(i.e, cities like Cognac) and collections of objects (i.e.,
+places-hotels-farms).  Filling folders are used to classify the content
+folders and they are organized on a geographical area (e.g., a specific
+commune) or a thematic topic. The approach used in the CI DTD is very
+structural: filling folders can contain each other based on their
+topological relationships and content folders are constructed recursively.
+We must note that opposite to the CIMI DTD quite all elements are caring a
+part of the cultural information described in the documents. </p>
+
+<p>There is on-going work to compare these projects with the AQUARELLE
+specifications. First, it remains open how to map the proposed structures
+to the existing Cultural Databases i.e. the archive servers of the
+AQUARELLE partners. Second, the mapping between information encoded
+according to these DTDs, and Access Points in the AQUARELLE (Z39.50) query
+profile will also be defined. Clearly, the two DTDs have a different
+approach in marking cultural interest of information: a) using a pair of
+specific tag to mark all Access Points (CIMI); b) using an SGML element for
+each Access Point (CI). Finally, SGML folders' modularity and internal and
+external links are subjects that needs further formalization and
+experimentation. </p>
+
+<h3>3. Folder Management Functionality</h3>
+
+<p>Contract to the primary archive servers, folder servers are rare or do
+not exist at all. They are however central to the objectives and
+exploitation of AQUARELLE since they provide indirectly a sophisticated
+user interface tool for discovering and digesting archive information. In
+order to encourage users to switch from classic to digital authoring, the
+folder environment will be provide flexible tools for creating and managing
+folders as well as for searching information and browsing within the
+network of inter-connected folder servers. More precisely the AQUARELLE
+folder server supports the basic functions of: folders authoring and
+publishing to the intended audience, "republishing" updates, withdrawing a
+folder in an "unpublishing" action, classification, indexing and retrieval.
+</p>
+
+<p>We can imagine a typical scenario of folder creation as follows. </p>
+
+<p>he user starts to retrieve via the reader user interface (not described
+in more detail here) data, texts, images, folders, or other objects related
+to her study or research. She may browse through folders and identify other
+objects of interest within them. </p>
+
+<p>She denotes the objects found in a list like the Netscape bookmarks. </p>
+
+<p>She opens the AQUARELLE folder editor. It is a full SGML structured
+editor, working as WYSIWYG (What You See is What You Get) relieving the
+user from the obstacle to learn unintelligible codes spread out over the
+text she writes. She may start with an empty screen, a special template
+containing her usual header information, or a former folder as template.
+The SGML structure guides the user to provide necessary and useful
+information in a defined way. </p>
+
+<p>The user inserts references of the data objects she has marked before in
+the folder. Copies of these data objects will be hold locally as
+appropriate during the editing process to reduce network traffic and the
+dependency from an open connection.  When the folder is stored, references
+and not the copies are saved for reasons of space economy, copyrights and
+to allow for updates in the referred object. If permitted, the user may
+request a copy to be inserted instead. </p>
+
+<p>The folder can be saved at any time and brought back to the editor,
+being accessible only by the author. Saving the folder implies its
+registration on the server. </p>
+
+<p>AQUARELLE will use SGML attributes to denote the wish, that the
+respective tag has to contain words of a controlled vocabulary. For that
+sake, a thesaurus browser is available to assist the user. Terms will be
+"cut and paste" to the folder editor to avoid spelling errors. In case the
+appropriate term cannot be found on the system, the user has the
+possibility to define its own local term. It will be mandatory however to
+link the new term with the next controlled broader term. This link allows
+the query processors to access all information through controlled terms.
+Thesaurus maintainers can use these links to embed local terms into the
+authorities at an appropriate later stage. </p>
+
+<p>The possibility to use controlled and local terms was an important
+requirement of the AQUARELLE user community, expressed as well by other
+working groups (MDA Workshop on Terminology, 11-14 Sept. '96,
+http://www.open.gov.uk/mdocassn). Only the linkage to controlled terms  we
+implement here provides the means to handle consistently controlled and
+local terms. It furthermore facilitates a more efficient gathering of term
+proposals for the authorities in use (see M. Doerr: "Authority Services in
+Global Information Spaces", <a
+href="http://www.ics.forth.gr/proj/isst/Publications/TechnicalReports.html"> http://www.ics.forth.gr/proj/isst/Publications/
+TechnicalReports.html</a>). Current systems do not foresee such a
+functionality. </p>
+
+<p>The user will "cycle" between editing and retrieval until she achieves a
+satisfactory form. In general, more than one editor is foreseen, however
+only one instance can be downloaded for editing at a time, synchronizing
+cooperative editing that way. </p>
+
+<p>Finally, the keyword indexing facility is invoked and the folder is
+submitted for publishing. The keyword indexing proposes to the user words
+in the text as indices for retrieval. The user can accept, reject or alter
+the proposed words. She may further classify the whole folder or parts of
+it by more controlled indexing terms. For publishing, she defines the user
+group, for which the folder will be accessible, and a narrower group, which
+has editing permission - per default the author herself. The precise
+permission scheme is still under discussion. </p>
+
+<p>Once published, the system regards any changes to the folder as a new
+version. A new version can be edited as above, and finally it will be
+exchanged with the previous version. This "republishing" act may eventually
+invalidate references, that other people have already made to this folder.
+Necessarily in this case, a communication will be initiated by the system
+which requests the other user to withdraw her reference. Only after the
+situation is settled, the new version can be installed. This dependency
+from external conditions is also the reason, why after the publishing a new
+version must be introduced in any case. The same happens if the folder is
+withdrawn as a whole in an "unpublishing" act. The precise communication
+procedure on links going to be invalid will be subject to experimentation.
+In any case, it will be a combination of human interaction and system
+enforcement - in case the previous fails. </p>
+
+<p>Besides the folder environment, a separate environment will be setup to
+develop and maintain multilingual thesauri. It will be based on a
+monolingual prototype developed by ICS-FORTH in cooperation with the Getty
+Information Institute. It became absolutely clear in extensive discussions
+with the AQUARELLE users, that
+multiple thesauri will be in use,
+that they need to be semantically interlinked in order to simultaneously
+process queries sent to servers indexed in different languages or thesauri,
+and
+that user groups without thesauri in their native language will start with
+translating foreign thesauri. </p>
+
+<p>This system is capable to maintain simultaneously several thesauri,
+links between them and term translations in various languages. Within
+AQUARELLE it will be further developed to support specific AQUARELLE user
+needs for editing, a simple versioning mechanism, and display and access to
+all subthesauri and versions separately and in combination. Even though
+these are novel features, the users need definitely more. The ideal
+functionality will furthermore comprise distant communication between users
+on the concepts and linkage to be done, utilities for term matching,
+translations, quality control, reconfigurations and data exchange. This
+exceeds the framework of AQUARELLE, and partners of the consortium wish to
+use the experience in AQUARELLE for further focused projects on this issue.
+</p>
+
+<p>Another important aspect, that may be partially clarified in AQUARELLE,
+are the organization and human procedures to achieve thousands of small
+agreements on bunches of terms and links in a reasonable time in
+international teams. It seems, that enabling techniques of electronic
+communication and Computer Supported Cooperative Work (CSCW) will play a
+key role, as well as tools to assess logical consistency of the inner
+structure of thesauri and proposed changes them. </p>
+
+<h3>4. Technical Choices</h3>
+
+<p>One of the basic choices is to follow standard technology at the data
+and communication level, in order to facilitate open access by existing
+systems and future service providers, to guarantee a long life-time of the
+data created in the AQUARELLE environment, and to cater for use by low and
+high-end systems and services. These standards are the WWW (e.g. HTML) for
+access by low-cost systems, SGML for high-quality structuring of
+information and Z39.50 for reliable access among heterogeneous data
+sources. This motivates the architecture chosen as a modular system, with a
+set of inner interfaces, that are standard and open to non-AQUARELLE data
+and systems. </p>
+
+<p><b>figure 1 :1 block diagram of the AQUARELLE architecture</b></p>
+
+
+<p>A block diagram of the AQUARELLE architecture is shown in figure 1. Its
+central module is the access server, which mediates between archive
+databases, folder servers, thesaurus servers and user clients. It is
+responsible for resource discovery, query handling, result management,
+folder publication and one-to-one connection with servers. It also supports
+handling of metadata of documents and guarantees the referential integrity
+of  links between folders. </p>
+
+<p>The user client module of the AQUARELLE user interface, consists of the
+reader system and the authoring editor system.  The reader system allows
+the AQUARELLE end user to access any published folder or folder part. It
+supports folder retrieval through queries as well as browsing through the
+folder hyperlinks. The reader system is implemented with a WWW client
+solution. Either usual HTML clients can be used , or full SGML clients
+(GRIF symposia, etc). Thus, the retrieved SGML folders are presented to the
+user either in units of SGML subdocuments, if the client has the respective
+capability, or as simple HTML pages by transcoding display behavior from
+the original DTD format. </p>
+
+<p>The authoring editor system is an environment suitable for creating and
+modifying structured folders. The GRIF SGML editor (<a
+href="http://www.grif.fr/"> http://www.grif.fr/</a>  was selected as tool
+for folder editing according to the selected specific DTDs (CIMI, CI see
+section 2). During folder editing, the user can add content descriptors
+(semantic information) to folders under the discipline of the DTD. This is
+supported by on-line queries on the thesaurus (Authority Service). </p>
+
+<p>The main components of the folder server are the Local Folder
+Catalogue,and the FTR (Full Text Retrieval System). A dedicated front-end
+coordinates the cooperation of the Local Folder Catalogue and the Full Text
+Retrieval System with the rest of the AQUARELLE architecture. More
+precisely, it maintains communication with the Access Server, accepts the
+queries, interprets them and routes them to Local Folder Catalogue and the
+FTR. It manages storage and retrieval of folder instances. </p>
+
+<p>The Local Folder Catalogue is based on the Semantic Index System
+developed by ICS-FORTH (<a href="http://www.csi.forth.gr/proj/isst/"
+>http://www.csi.forth.gr/proj/isst/</a>), a tool for describing and
+documenting large evolving varieties of highly interrelated data, concepts
+and complex relationships. It consists of a persistent storage mechanism
+based on an object oriented semantic network model. The Local Folder
+Catalogue also provides a navigation interface and a stateful Z39.50
+compatible query protocol. </p>
+
+<p>In the Local Folder Catalogue a local copy (of a part) of the thesaurus
+subject hierarchy, the SGML DTDs and the folder instances are maintained.
+The thesaurus servers in the access server as well as the Local Folder
+Catalogue are based on the SIS and share identical structures but
+eventually different data. The thesaurus servers are designed to support
+query formulation and mediation. As such, they may provide for query
+purposes other thesauri and links between them than those installed on a
+local folder server. The Local Folder Catalogue can be accessed however as
+thesaurus server by itself. The backbone of the Local Folder Catalogue is a
+conceptual model (see figure 2) which describes the basic SGML constructs
+(document logical elements), the basic notions of a thesaurus (Subject
+Hierarchy) as well as the different categories of annotation links
+associating SGML elements with thesaurus terms. </p>
+
+<p>The left part of figure 2 illustrates the SGML metamodel, instances of
+which can be any SGML DTD (such as CIMI or CI). The right part of the
+figure illustrates the thesaurus model which has been developed following
+the standards ISO 2788 (for monolingual thesauri) and the standard ISO 5964
+(for multilingual thesauri). This model can support any thesaurus which
+have been developed according to the above standards (such as AAT or
+MERIMEE). The relations defined in this model are
+``inter-thesaurus-relations'' and ``intra-thesaurus-relations''. The former
+denote all the relations among terms existing in a specific thesaurus (i.e.
+broader term relation BT) while the latter denote the relations between
+terms residing in different thesauri (i.e. equals relation EQ). </p>
+
+
+
+<p><b>figure 2 : Logical Structure of the Local Folder Catalogue</b></p>
+
+<p>In the middle of figure 2 the link talks_about represents the
+association of SGML elements with the thesaurus Subject Hierarchy notions.
+Thus, it is possible to index (at fine granularity) any DTD element using
+related thesaurus terms. For example, the folder_1 and folder_2 in figure 2
+are respectively instances of the CI and CIMI DTD. As we can see, a
+component of folder_1 is indexed by the ``Terme`ABBAYE'' existing in the
+MERIMEE thesaurus.  Components of the folder_2 are indexed by
+``Term`factory sites'' and ``Term`abbeys'' from the AAT thesaurus. The
+representation of the inter thesaurus relations (i.e. EQ relation) allows
+the association of terms (i.e. the english term ``Term`abbeys'' is equal to
+the french one (``Terme`ABBAYE''). In this way, the Local Folder Catalogue
+can offer automatic indexing facilities on folders (i.e. under the subject
+hierarchy) by using the semantic information that the folder contains. The
+folder creator can also index the folder using non-controlled terms which
+must be associated to a broader controlled term of the thesaurus. </p>
+
+<p>The FTR provided by INRIA (<a
+href="http://www.loria.fr/CRIN/equipe/dialogue/">
+http://www.loria.fr/CRIN/equipe/dialogue/</a> ), offers mechanisms for
+automatic indexing of folders based on textual analysis. It provides
+indexing and searching interfaces to the Authoring Environment and the
+folder server front-end respectively. FTR indices can be keyword extraction
+or relevance weighted. In addition, keywords can be associated to thesaurus
+terms (i.e. controlled vocabulary) or not. The FTR system will use the same
+contents identifications as the Local Folder Catalogue uses for analyzing
+folders. It will not store any contents by itself, but will refer to the
+Local Folder Catalogue contents in its results. The AQUARELLE user
+community
+made clear, that it sees a priority in extracting names and use of controlled or local terms
+over typical FTR access by weighted occurrences of accidental words in a
+text. Actually, the non-weighted indexing by names of persons, places,
+objects and events was ranked very high.</p>
+
+<p>A still open question is, to which degree the rich information structure
+of the folders should be only exploited by Z39.50 queries and browsing. The
+current AQUARELLE architecture focus on queries only to Z39.50 access
+points. Then the retrieved folder identifiers are used for browsing to
+locate specific parts of interest. It may be more useful to provide a query
+interface to retrieve folders by combined conditions on content and
+structure and this at any granularity of SGML tags according to the user
+needs. To which degree such features could be "encoded" in "abstract"
+Z39.50 access points needs further study. Finally to which degree DTDs and
+Z39.50 profiles have to be harmonized for AQUARELLE purposes, and what may
+be the consequences of working with multiple profiles has to be
+investigated in the later phases of the project. </p>
+
+<p><h3>5. Summary and Conclusions</h3></P>
+
+<p>The AQUARELLE folders provide appropriate structures rich enough for the
+demands of a support system for professional work in the cultural domain.
+The elaboration of these structures and questions of how and to which
+degree domain knowledge (as authorities or semantic SGML tags) can or has
+to be embedded will be an interesting task from now on for users and system
+providers. </p>
+
+<p>The classification system and the resulting retrieval capabilities
+deliver the technical means for the precision required by the expert. The
+population of the thesauri to fully exploit this potential is however a
+long term task for the cultural community, which will require considerable
+organization. </p>
+
+<p>The access services as directory service, metadata management,
+referential integrity and access permission control are expected to provide
+the mandatory reliability and transparency for the professional environment
+so far not available on the Web. </p>
+
+<p>AQUARELLE is going to provide kinds of services the user community
+typically has no experience with. For that reason, many details for an
+ideal implementation can only be worked out with hands-on experience on
+prototypes. The project foresees therefore a redesign phase in the middle
+of the project. </p>
+
+<p>In order to become an efficient groupware however, the user community
+must develop and clarify certain practices. Those will be modes of sharing
+information under respect of intellectual rights, liability for contents,
+and economic or other means to balance mutual benefit. They will in turn
+give raise to modifications and enhancements of the system. </p>
+
+<p>We hope, that the activities of AQUARELLE, CIMI and all others in the
+field will give raise to a long and efficient cooperation of information
+science and arts.</p>
+
+
+<p>Copyright Archives & Museum Informatics, 1997 </p><!--FOOT-->
+<p>
+<img src=../mw97line.gif>
+<p>
+<center>
+<table border=1>
+<tr>
+<td align="CENTER" valign="MIDDLE">
+<a href="../../index.html"><img src="../../a%26mi.images/a%26mi.html" width=99
+height=30 border=0
+alt="Archives & Museum Informatics"></a>
+</td>
+
+<td align="CENTER" valign="MIDDLE">
+<a href="../mw97toc.html"><img src="../mw97.gif" width=40 height=30 border=0
+alt="Museums and the Web"></a>
+<td>
+<a href="../mw97regi.html#register">Register</a>
+</td>
+
+<td>
+<a href="../mw97exop.html#EO">Exhibit</a>
+</td>
+
+<td>
+<a href="../mw97spop.html#sponsorship">Sponsor</a>
+</td>
+
+<td>
+<a href="../mw97glnc.html#glance">Program</a>
+</td>
+
+</table>
+<p>
+<img src=../mw97line.gif>
+<p>
+<i>Last modified: February 28, 1997<br>
+This file can be found below http://www.archimuse.com</i><br>
+Send questions and comments to
+<a href="../../mw98/index.html">info@museumsandtheweb.com</a></I>
+
+</center>
+</body>
+
+
+
+
+
+
+
+
+<!-- Mirrored from www.museumsandtheweb.com/mw97/speak/doerr.htm by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 19:34:35 GMT -->
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw18.mwconf.org/paper/rijksmuseum-mobile-first-redesign-rijksstudio-the-new-rijksmuseum-app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:16:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<script src="https://use.typekit.net/yhd3uya.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Rijksmuseum mobile first: Rijksstudio Redesign and the new Rijksmuseum app &#8211; MW18: Museums and the Web 2018</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; Rijksmuseum mobile first: Rijksstudio Redesign and the new Rijksmuseum app Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw18.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='cookie-notice-front-css'  href='../../wp-content/plugins/cookie-notice/css/front.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='spacexchimp_p005-bootstrap-tooltip-css-css'  href='../../wp-content/plugins/social-media-buttons-toolbar/inc/lib/bootstrap-tooltip/bootstrap-tooltipe6e5.css?ver=4.67' media='all' />
+<link rel='stylesheet' id='spacexchimp_p005-frontend-css-css'  href='../../wp-content/plugins/social-media-buttons-toolbar/inc/css/frontende6e5.css?ver=4.67' media='all' />
+<style id='spacexchimp_p005-frontend-css-inline-css'>
+
+                    .sxc-follow-buttons {
+                        text-align: center !important;
+                    }
+                    .sxc-follow-buttons .sxc-follow-button,
+                    .sxc-follow-buttons .sxc-follow-button a,
+                    .sxc-follow-buttons .sxc-follow-button a img {
+                        width: 64px !important;
+                        height: 64px !important;
+                    }
+                    .sxc-follow-buttons .sxc-follow-button {
+                        margin: 5px !important;
+                    }
+                  
+</style>
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login287b.css?ver=1604077068' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-conference/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-conference/style3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<script id='cookie-notice-front-js-extra'>
+var cnArgs = {"ajaxUrl":"https:\/\/mw18.mwconf.org\/wp-admin\/admin-ajax.php","nonce":"ccedfb3d0d","hideEffect":"fade","position":"bottom","onScroll":"0","onScrollOffset":"100","onClick":"0","cookieName":"cookie_notice_accepted","cookieTime":"31536000","cookieTimeRejected":"2592000","cookiePath":"\/","cookieDomain":"","redirection":"0","cache":"0","refuse":"0","revokeCookies":"0","revokeCookiesOpt":"automatic","secure":"1","coronabarActive":"0"};
+</script>
+<script src='../../wp-content/plugins/cookie-notice/js/front.min9e1e.js?ver=1.3.2' id='cookie-notice-front-js'></script>
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script src='../../wp-content/plugins/social-media-buttons-toolbar/inc/lib/bootstrap-tooltip/bootstrap-tooltipe6e5.js?ver=4.67' id='spacexchimp_p005-bootstrap-tooltip-js-js'></script>
+<!--[if lt IE 9]>
+<script src='https://mw18.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexef2e.html?p=808' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed8e46.json?url=https%3A%2F%2Fmw18.mwconf.org%2Fpaper%2Frijksmuseum-mobile-first-redesign-rijksstudio-the-new-rijksmuseum-app%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed7b4e?url=https%3A%2F%2Fmw18.mwconf.org%2Fpaper%2Frijksmuseum-mobile-first-redesign-rijksstudio-the-new-rijksmuseum-app%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-conference/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-808 wp-embed-responsive cookies-not-set">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+			<div class="site-branding">
+				<a href="../../index.html" class="custom-logo-link" rel="home" itemprop="url"><img width="80" height="80" src="../../wp-content/themes/mw-conference/images/mw-logo-red-sm.png" class="custom-logo" alt="" itemprop="logo" /></a>			
+			</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p><a href="../../index.html" rel="home">MW18: Museums and the Web 2018</a><span>Vancouver, Canada &#8211; April 18-21 2018</span></p>
+								<form class="search-form" role="search" method="get" action="https://mw18.mwconf.org/">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-container"><ul id="menu-menu" class="primary-menu"><li id="menu-item-464" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-464"><a href="http://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-6"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="../../faq/index.html">Conference FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-514"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382"><a href="../../local-information-and-accommodation/index.html">Hotel and Accommodation</a></li>
+	<li id="menu-item-1132" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1132"><a href="https://www.tourismvancouver.com/museums-and-the-web/">Local Information</a></li>
+	<li id="menu-item-1991" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1991"><a href="../../museum-crawl/index.html">Museum Crawl</a></li>
+	<li id="menu-item-403" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-403"><a href="../../travel-requirements/index.html">Canadian Travel Requirements</a></li>
+	<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="../../volunteering/index.html">Volunteering</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../scholarships/index.html">Scholarships</a></li>
+</ul>
+</li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-38"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43"><a href="../../call-for-proposals/index.html">Call for Proposals</a>
+	<ul class="sub-menu">
+		<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+		<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	</ul>
+</li>
+	<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-75"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="../../advertising/index.html">Advertising</a></li>
+	<li id="menu-item-1133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1133"><a href="../../exhibiting-information/index.html">Exhibit Hall Information</a></li>
+</ul>
+</li>
+<li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-95"><a href="../../index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-542"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-2887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2887"><a href="../../presentations/index.html">Presentations</a></li>
+	<li id="menu-item-2973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2973"><a href="../../papers/index.html">Papers</a></li>
+	<li id="menu-item-467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-96"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2790"><a href="../../glami-finalists/index.html">GLAMi Finalists</a></li>
+	</ul>
+</li>
+	<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="../../mwx/index.html">MWX 2018</a></li>
+</ul>
+</li>
+</ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+		<section id="page-hero">
+		<div class="background"> </div>
+	</section>
+
+	<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];		    
+	jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw18.mwconf.org/wp-content/themes/mw-conference/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-808" class="post-808 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">Rijksmuseum mobile first: Rijksstudio Redesign and the new Rijksmuseum app</h1>
+
+<p><a target="_blank" href="https://www.museweb.net/member/pgorgels/">Peter Gorgels</a>, Rijksmuseum Amsterdam, The Netherlands</p>
+
+<h2>Abstract</h2>
+Four and a half years ago, the Rijksmuseum launched the successful website Rijksmuseum.nl and the digital concept Rijksstudio, which became the cultural digital heritage benchmark for connecting people and the collection. Today, with over 325,000 works of art, 360,000 accounts, more than 2,000,000 free downloads, and 200,000 personal collections, Rijksstudio continues to grow. 
+Over the past two years, we have witnessed an increasing shift in the market towards mobile. The Rijksmuseum is responding to this trend with a major redesign of Rijksstudio and the new Rijksmuseum app.
+After the redesign, Rijksstudio presents personal collections compiled by users, together with stories from the Rijksmuseum in the same simple and mobile-first visual template. And publishing them literally next to each other is our way of showing that we are OPEN online. 
+The Rijksmuseum wants to seize the opportunities mobile has to offer with a new state-of-the-art app (launch January 2018). It consists of three main sections:
+1. Rijksstudio
+2. Multimedia tours
+3. E-tickets
+With the new app, you can enjoy the Rijksmuseum collection wherever you are: in a train, at home on the couch, or in the museum taking a multimedia tour. The app offers one simple way of enjoying the collection for everyone, whenever, wherever. "Swiping" through the collection and personal Rijksstudio collections, and browsing through the museum itself, is a similar experience, since the museum’s multimedia tours are fully integrated in the app. It is all one intuitive user art experience. 	
+An important part of the new app is the innovative indoor automatic wayfinding that is fully integrated with our multimedia tours. This platform uses an interactive map and tailor-made automatic wayfinding directions for the museum site. The app will always know where you are by means of 300 iBeacons that have been placed invisibly in the museum. With this new infrastructure, the app can guide you to and from any location.</p>
+<p><b>Keywords:</b> Brand innovation, mobile strategy, responsive web and app, user generated content, card design, wayfinding</p>
+<h2>1. Introduction</h2>
+<p>The Rijksmuseum is the museum of the Netherlands, and its collection belongs to all of us. Our mission is to make the entire Rijksmuseum collection accessible online in a quick and easy way, so that eventually, we will all have a piece of the collection in our lives, both at the museum and in the outside world.</p>
+<p>To this end, the Rijksmuseum is working on a two-phase program:</p>
+<ol>
+<li>The first phase included redeveloping the Rijksstudio website (Gorgels, 2013) and the Rijksmuseum app (first version opening new Rijksmuseum) between 2013 and 2016.</li>
+<li>Mobile first: Rijksstudio website and new Rijksmuseum app :Rijksmuseum in your pocket&#8221;: combining Rijksstudio, multimedia tours and tickets in one interface, developed between 2016 and 2018.</li>
+</ol>
+<p>In this paper, we will look back on phase one and tell you about how the plans for phase two (the mobile first strategy with the new Rijksmuseum app) are progressing. The paper will present an overview of the past four years of Rijksstudio development and the current Rijksmuseum app, as well as various aspects of the new mobile strategy and the new Rijksmuseum app, from user trends and strategy to the overall concept, and from design to wayfinding technology.</p>
+<p><img src="../../wp-content/uploads/2018/01/gorgels.fig1_.png" alt="Rijksstudiotrain" /><br />
+Figure 1: the new app: use Rijksstudio everywhere</p>
+<p><img loading="lazy" class="alignnone wp-image-1377" src="../../wp-content/uploads/2018/02/gorgels.fig2_.png" alt="" width="800" height="451" /></p>
+<p>Figure 2: the new app: the multimedia tours in the museum</p>
+<h2>2. Looking back: Rijksstudio</h2>
+<p>Five years ago, Rijksstudio was revolutionary both in its design and in terms of its open data policy. A brief review is presented below.</p>
+<p><a href="https://www.rijksmuseum.nl/en/rijksstudio">Rijksstudio</a> brings the collection of the Rijksmuseum to the public. More than 330,000 works of art are at your fingertips, so that viewers can zoom in on them, touch and like them, or use them to compile their own collections. Collect your personal favorites in your own Rijksstudio, share them with friends, or download them free of charge to create your own masterpiece. The images in Rijksstudio are copyright and royalty free: you can use them as you like, for private or commercial purposes.</p>
+<h3>A reminder of why we did this</h3>
+<p>The Rijksmuseum’s mission is to connect people, art, and history. Its collection (one million works of art, of which only 8,000 are on display) belong to all of us, the citizens of the Netherlands, or even to the whole world. This is why we want to give people the opportunity to enjoy our collection online as well, and to allow them to work with digital works of art free of charge, both for private and commercial purposes.<br />
+<img src="../../wp-content/uploads/2018/01/gorgels.fig3_.png" alt="iloverijksmuseum" /><br />
+Figure 3: I love Rijksmuseum</p>
+<p>This digital strategy has greatly contributed to the rejuvenation of the Rijksmuseum as a whole. The museum and its image used to be a little boring, a little detached, and overly traditional. However, the renovation of the building and the new way of presenting exhibits has literally made the Rijksmuseum more open and accessible. The museum has transformed into a splendid building with a fresh design and beautifully renovated rooms for an optimal display of our stunning works of art.</p>
+<p>The art, therefor the image, is the main focus, both at the museum and online.</p>
+<p>And now that the collection has been made available online, you can see &#8220;old art&#8221; everywhere. Old masters have become fashionable again, and the Rijksmuseum is now a &#8220;love brand.&#8221;</p>
+<p>In short, thanks to this e-strategy, the Rijksmuseum has made itself relevant again in this age of visual media. And now we can show it with pride: I love Rijksmuseum.</p>
+<h3>Inspiration: People like things big</h3>
+<p>The challenge of developing sound concepts mainly lies in making the right choices from an abundance of available options, with regard to both content and the latest technologies, and to get creative. It is primarily a brand driven design strategy (Abbing, 2014).</p>
+<p>We believe that the greatest added value is in the &#8220;sweet spot&#8221; between the mission and the museum’s strategy, all the available tools and user trends, and what people actually do online. We only work with technologies and tools that are mature and have a great track record in the market. We are always on the lookout for the new standard, the conventions used by the largest group of people the most successful businesses.</p>
+<p><img loading="lazy" class="alignnone size-full wp-image-839" src="../../wp-content/uploads/2018/01/gorgels.fig4_.png" alt="" width="737" height="416" /></p>
+<p>Figure 4: looking for the best concept for users in the &#8220;sweet spot&#8221;</p>
+<p>For example, we were inspired by Pinterest as an attractive visual and user-friendly way of searching and collecting images.</p>
+<p>Another source of inspiration is the so-called Pareto principle: 80% of your visitors use only 20% of the available functionality. In this way, you can keep your design focused and simple to benefit the largest possible target group. We would rather offer a big product for as wide an audience as possible than offer many small ones for all kinds of niches: people like things big.</p>
+<h3>Rijksstudio results</h3>
+<p>After five years (as of December 1st, 2017) we can see the following results:</p>
+<ul>
+<li>High-resolution images online <strong>383,646</strong></li>
+<li>Rijksstudio accounts <strong>374,219</strong></li>
+<li>with Facebook account<strong> 95,037</strong></li>
+<li>with email address <strong>279,182</strong></li>
+<li>Total number of home-made collections <strong>302,872</strong>
+<ul>
+<li>Home-made collections <strong>148,114</strong></li>
+<li>Master Matches visual game <strong>94,261</strong></li>
+<li>Collections of museum visits (via tours app) <strong>60,497</strong></li>
+</ul>
+</li>
+<li>Downloads of high-resolution images: <strong>5,255,658</strong></li>
+<li>Unique downloads <strong>322,630</strong></li>
+</ul>
+<p>We can see that Rijksstudio is as popular as ever. The creation of new accounts has been stable ever since its launch (approximately 150 to 200 per day). Sometimes we can see a peak, for example, during activation campaigns such as the Rijksstudio Award; when we cooperate with Etsy; or during special educational events.</p>
+<p>The collections that were made from scratch by users are particularly interesting. We can see a lot of use that is typical of lovers of art history, professionals, and students, but we also see wonderful results from <em>culture snackers</em>, ranging from collections on Halloween to (what else?) cats. Other beautiful collections focus on striking details, for example, hands on paintings or children’s toys. Some create collections of more than 1,000 objects, such as &#8220;Books and Reading&#8221; by Paul Hoftijzer. One user even compiled more than 300 collections.</p>
+<p>The Rijksmuseum collections’ famous works of art are visited often, but we can trace the &#8220;long tail&#8221; of less famous works in the collections of users who often have a reason for browsing Rijksstudio that has nothing to do with art or art history. We can also see from the high number of unique downloads that the public also makes use of the wider collection.</p>
+<p><strong>Promoting creativity: All use of works of art free of charge</strong></p>
+<p>Rijksstudio promotes creativity by providing digital works of art free of charge for both private and commercial use. Tens of thousands of new creations using these images have been made since the launch. The range of applications is wide: private persons use the images as wallpapers on their devices, hotels are decorated with Rijksstudio images, high-fashion dresses are made from materials designed with famous images, and motives are incorporated in street art.</p>
+<p>It is important to keep encouraging this. For example, we organized a big promotion with Etsy, the platform on which designers can sell their own creations. The <a href="https://www.rijksmuseum.nl/en/rijksstudio-award">Rijksstudio Award</a> is our most important marketing tool for creativity. The event is a competition to reinvent the Rijksmuseum collection. The 2017 edition brought in as many as 2,600 entries from 62 countries. This was the result of a worldwide campaign with launches in Berlin (Blogfabrik), London (Design week), and New York (MOMA).</p>
+<p><img loading="lazy" class="alignnone wp-image-840" src="../../wp-content/uploads/2018/01/gorgels.fig5_.png" alt="" width="800" height="510" /></p>
+<p>Figure 5: winner of the 2017 Rijksstudio Award, &#8220;Masterpieces never sleep&#8221;, by Lesha Limonov (Belarus)</p>
+<h3>Marketing value &gt; image value</h3>
+<p>The collection images are also free for commercial use. This is in line with our open data policy, but it also has a marketing advantage. Reuse makes the artworks, the creations based on the works, and the new artists themselves ambassadors for the Rijksmuseum. While the value of the images online is almost zero, the marketing value increases, which also boosts the Rijksmuseum’s brand. This marketing value is therefore higher than the small profit the museum used to make by selling images.<img loading="lazy" class="alignnone size-full wp-image-837" src="../../wp-content/uploads/2018/01/gorgels.fig6_.png" alt="" width="746" height="559" /></p>
+<p>Figure 6: creators and artworks become ambassadors; high marketing value vs. value of images online almost zero</p>
+<h3>Rijkstudio influence</h3>
+<p>As we said before, Rijksstudio was already revolutionary five years ago, both in terms of design and open data policy.</p>
+<p>As far as the former is concerned, we regularly see design patterns from Rijksstudio on other museum websites. For example, the use of large images with the metadata in the background was adopted in many places.</p>
+<p>With regard to open data, we can see that this discussion is still as lively today as it was five years ago. A substantial number of museums all over the world have also made their data available, though free access for commercial use is still rare. We can also see that the discussion is carried on in different ways in each country. Sometimes the government still plays a major part in this kind of policy change, and sometimes the country’s culture dictates that art is sacred and that adaptations or remixing are out of the question.</p>
+<h3>Success factors and impact</h3>
+<p>In conclusion, we can say that the success factors of Rijksstudio include the following:</p>
+<ul>
+<li>Power of the image: in this age of visual social media, focus on the image (instead of metadata) is logical and vital</li>
+<li>Simplicity: this core value makes the museum and the collection widely accessible</li>
+<li>Democratizing art: the museum belongs to everyone, encourage personal enjoyment</li>
+<li>Brand value &gt; image value: nowadays, a strong brand is incredibly valuable, whereas the value of online images is ever decreasing</li>
+<li>Platform &gt; content: great content alone is not enough, an attractive platform on which visitors can play with the collection is even more important</li>
+</ul>
+<p>And the impact of Rijksstudio:</p>
+<ul>
+<li>New audience, the culture snacker: the online collection is not only interesting for art lovers, but basically for everyone</li>
+<li>Deeper engagement: by providing open access to the collection, the audience feels a deeper, more personal connection to the collection</li>
+<li>Change in traditional museum role: both the Rijksmuseum stories and stories of members of the public are all considered valuable now</li>
+<li>Relevant at all times (brand awareness): the museum and the collection are relevant any time anywhere, beyond the museum’s walls</li>
+</ul>
+<h2>3. The situation when the Rijksmuseum started the mobile first project</h2>
+<p>What was the digital landscape in 2016, when the Rijksmuseum began to develop its mobile first strategy?</p>
+<h3>Confusing Rijksstudio and the museum’s collection</h3>
+<p>Simplicity is and always has been an important starting point of Rijksstudio, but it turned out that presenting Rijksstudio and the collection side by side on our website was confusing and overly complicated for our intended target audience. There were several ways of accessing the site (find in the collection, explore the collection, all Rijkstudios, my Rijksstudio, find in Rijksstudio) and several page templates (artist pages, history pages, users’ collections, object pages, overviews). This was difficult to manage, but mainly confusing for website visitors: some thought that Rijksstudio was the collection, and others thought that the collection was Rijksstudio. It was obvious that something had to be done. Moreover, we witnessed the success of easy and clear access to the Rijksstudio personal sets template, which would provide us with direction for the redesign.</p>
+<p><img loading="lazy" class="alignnone size-full wp-image-841" src="../../wp-content/uploads/2018/01/gorgels.fig7_.png" alt="" width="682" height="425" /></p>
+<p>Figure 7: the large number of collection and Rijksstudio features created confusion among visitors</p>
+<h3>The first Rijksmuseum app: multimedia tours</h3>
+<p>At the opening of the renovated Rijksmuseum in 2013, the Rijksmuseum launched the first version of its app including Multimedia tours, to guide visitors during their visit to the museum. The app offered information on more than 300 stops with three layers of content: an audio introduction, video and animations (see more), and in-depth audio by an expert (find out more).</p>
+<p>The app was released on the market based on a &#8220;freemium&#8221; model, which was in line with the open content strategy. This meant the app could be downloaded free of charge from Apple’s App Store or via Google Play. Visitors who preferred not to use their own smartphones could rent a special device featuring the app for €5.</p>
+<p>The tours app consisted of 22 different tours of different lengths. Some of them were in the same order as the exhibitions, others took you on a zigzag tour of the museum. In addition, visitors could also enter the numbers found on the labels accompanying the artworks into the app for more information. Research showed that visitors often used these functionalities in their own way. Just like with Rijksstudio, we saw a lot of &#8220;snacking&#8221;: visitors wanted to be guided to a certain extent, but mainly preferred to make their own choices based on their preferences and interests.</p>
+<p>Besides, the visual experience is paramount at the museum, which leaves less room for signposting. Though the building has a clear floor plan (more about this later), when you walk around in it, you can easily become disoriented. The app had a manual system of wayfinding for tours, with photo-navigation and floor plan directions. This system had its limitations for the visitor who received no further directions after a tour, and because it was complex and difficult to manage. In short, it was not scalable for visitors or management.</p>
+<h3>Mobile is very big and mature</h3>
+<p>We are now in the unique situation that more than 3.5 billion people worldwide own a smartphone. The smartphone is now a pocket-sized computer, a true &#8220;remote control for life&#8221; (Evans, 2016). And because of the strong presence of Wi-Fi and 3g/4g, fast Internet is available everywhere.</p>
+<p><img loading="lazy" class="alignnone wp-image-851" src="../../wp-content/uploads/2018/01/gorgels.fig8_.png" alt="" width="800" height="500" /></p>
+<p>Fig 8: mobile is booming</p>
+<p>Mobile phones and apps have matured, and this offers opportunities for sustainable museum apps. These apps must have added value and offer more than a museum website, in order to tempt users to download, use, and continue to use.</p>
+<h3>Mobile phone user behavior</h3>
+<p>People who are on the go or in &#8220;couch mode&#8221; at home have needs that are different from the needs of ordinary Web users. Websites are visited for finding information or for performing a task. apps such as Facebook and Instagram are for entertainment, to enjoy in your down time (which, by the way, seems to be getting longer and longer). Besides, Apps are generally more user-friendly than websites. As a result, we primarily see a use of apps (80 % compared to 20% for website access) on smartphones.</p>
+<p>This is why we asked ourselves (together with the design and Internet companies Fabrique and Q42) the following question: would people be interested in a Rijksmuseum app that visitors could use in their down time to browse the Rijksmuseum collection?</p>
+<h3>Tindering art?</h3>
+<p>At the time, another image-based app gained popularity: Tinder. Partners are chosen simply based on which image users select. Love at first sight in optima forma. A simple, minimalist design that is fun and offers an addictive card-based interface (Babich, 2016). One could say that <em>love at first sight</em> 2.0 was realized with the advent of Tinder. Just like in a cafe or another meeting place, people &#8220;scan&#8221; each other and see at a glance whether they &#8220;feel something&#8221; for somebody.</p>
+<p>This may not be so very different from the way museum visitors stroll past the artworks and, often at a glance, decide that one is more appealing than another. And only when their interest is piqued do they decide they want to know more, get closer to the art, or read the information on the work of art.</p>
+<p>And so we were playing with the idea to develop a Rijksmuseum Tinder app. Let people enjoy the greatest masterpieces in the world on their down time. But in the end, we felt that rejecting art in a Tinder-like fashion was too negative. All art is equally precious in the eyes of the Rijksmuseum. Besides, Rijksstudio already offered a platform to give the public more immediate access to the collection.</p>
+<p>But the idea that the way in which visitors look at works of art in a museum room—one by one—is quite similar to the card-based design, swiping horizontally through works of art—kept occupying our minds when we continued to brainstorm.</p>
+<h2>4. Mobile first concept development</h2>
+<h3>New Rijksmuseum app</h3>
+<p>The Rijksmuseum decided to get with the times and go mobile with a new app.</p>
+<p>The idea—to enjoy the collection any time and anywhere, via your mobile phone. For example, on the train or on your sofa at home with Rijksstudio, or at the museum with multimedia tours.</p>
+<p>The perfect solution was found by developing the two core tasks of collection and multimedia tours concurrently from the start. This solution was in line with the Rijksmuseum’s e-strategy and boasts a state-of-the-art Rijksmuseum app that always provides the user with the best experience in terms of collection enjoyment, both at home, on the go, and at the museum. To make the customer journey’s core moments complete, we also offer tickets in the app.</p>
+<p>The Rijksmuseum app has the following main features:</p>
+<ol>
+<li>Rijksstudio</li>
+<li>Multimedia tours</li>
+<li>Tickets</li>
+</ol>
+<p>The app was developed as mobile first, but is also completely responsive, both on smartphones and tablets (in portrait and landscape mode on both iPhone and Android).</p>
+<p><img loading="lazy" class="alignnone wp-image-852" src="../../wp-content/uploads/2018/01/gorgels.fig9_.png" alt="" width="800" height="500" /></p>
+<p>Figure 9: opportunities to use the app inside and outside the museum</p>
+<p><img loading="lazy" class="alignnone wp-image-853" src="../../wp-content/uploads/2018/01/gorgels.fig10.png" alt="" width="350" height="622" /></p>
+<p>Figure 10: at the start, the visitor is immediately guided to the main features of the app: Rijksstudio, tours, or tickets</p>
+<h3>Starting points for the mobile first design concept</h3>
+<p>Building on the success factors and points for improvement of Rijksstudio and the multimedia tours app, as well as the new opportunities offered by mobile, we refined and focused our digital strategy:</p>
+<ul>
+<li>Success of Rijksstudio
+<ul>
+<li>Simplicity and power of the image (which is even stronger with mobile first)</li>
+<li>Democratization of the collection</li>
+</ul>
+</li>
+<li>Finding a solution for the Rijksstudio collection confusion</li>
+<li>Creating tours that are suitable for culture snacking behavior</li>
+<li>Wayfinding app and wayfinding in the building should reinforce each other</li>
+<li>Mobile is booming!</li>
+</ul>
+<p>In view of all of this, <em>unity w</em>as the most important and most special starting point of the design process:</p>
+<ul>
+<li>Unity had to be reflected in the use of principles and patterns across Web pages, the app, and throughout the building</li>
+</ul>
+<p><img loading="lazy" class="alignnone wp-image-855" src="../../wp-content/uploads/2018/01/gorgels.fig11.png" alt="" width="800" height="453" /></p>
+<p>Figure 11: important design principle: unity of (Rijksstudio) website, the app, and the building</p>
+<h3>The mobile first design concept</h3>
+<p>When we started on the project, we were given two separate assignments:</p>
+<ul>
+<li>to integrate the collection and Rijksstudio (on the website)</li>
+<li>to develop a new Rijksmuseum Rijksstudio app including multimedia tours</li>
+</ul>
+<p>We decided to combine these two assignments in order to develop a broader concept.</p>
+<p>To combine the starting points of Rijksstudio with the demands of mobile, we developed a concept that was even simpler and even more visual. It consists of the following elements:</p>
+<ol>
+<li>Rijksstudio as a platform: Collection and Rijksstudio integrated on the website and in the app &gt; simplicity (“It is one thing, one platform”)</li>
+<li>The image is the interface: there are only two presentation templates left: the personal set template (Pinterest style) and the full-screen image &gt; image determines the interaction</li>
+<li>The collection can be enjoyed in the same way on the site and in the app, as well as in the multimedia tours &gt; simplicity</li>
+</ol>
+<h3>Rijksstudio mobile first website</h3>
+<p>In 2016 we launched the updated mobile-first Rijksstudio on the website, with a simpler and more visual concept applying the above elements one and two:</p>
+<ul>
+<li>There are only entry points: Explore Rijksstudio and Search</li>
+<li>There are only two templates: an object page and a personal set page.</li>
+<li>There are two identical versions of the personal set page: the sender is the Rijksmuseum or a user.</li>
+<li>The pages are developed in accordance with <em>mobile first</em>, using a responsive four-column grid. This allows the pages to be completely filled with images at every screen resolution.</li>
+</ul>
+<p><img loading="lazy" class="alignnone wp-image-857" src="../../wp-content/uploads/2018/01/gorgels.fig12.png" alt="" width="800" height="331" /></p>
+<p>Figure 12: at the top of the Rijksstudio page we can see a carousel of entry points to Rijksmuseum sets, offering easy access to the collection to both art lovers and the general public. Here, we can see the three-column and the one-column versions of the template</p>
+<p><img loading="lazy" class="alignnone wp-image-858" src="../../wp-content/uploads/2018/01/gorgels.fig13.png" alt="" width="800" height="301" /></p>
+<p>Figure 13: in the timeline below the carousel, we show Rijksmuseum and user collections side by side</p>
+<p><img loading="lazy" class="alignnone wp-image-859" src="../../wp-content/uploads/2018/01/gorgels.fig14.png" alt="" width="800" height="377" /></p>
+<p>Figure 14: there is only one (Pinterest-style) template for telling a story, both for the Rijksmuseum and for users</p>
+<p><a href="https://www.rijksmuseum.nl/en/rijksstudio">Rijksstudio</a> takes you on an inspiring visual history tour of our masterpieces, including less famous works of art. At the top of the Rijksstudio page, we can see a carousel with access to Rijksmuseum collections, offering easy access to the collection for both art lovers and the general public.</p>
+<p>Below the carousel, we present personal collections compiled by users in the timeline, together with stories from the Rijksmuseum in the same visual template. Publishing users’ collections in the same way and literally next to content produced by the Rijksmuseum is our way of showing that we are OPEN online.</p>
+<p>The new <a href="https://www.rijksmuseum.nl/en/search">Search</a> option gives access to the entire collection, allowing you to search through all the user sets. And the new four-column grid displays our works of art in full glory on any type of screen.</p>
+<h3>Rijksmuseum app: navigating vertically and horizontally</h3>
+<p>This mobile-first set up of Rijksstudio on the website was developed with the app in mind. However, partly inspired by Tinder’s horizontal navigation and card design, we wanted to go one step further and make swiping the main focus of the app’s user interface. We have therefore literally skipped the Pinterest-style set template in the app.</p>
+<p>Navigation in the app has become easier and more visual:</p>
+<ol>
+<li>Vertical stream: scroll up or down in a vertical overview of sets, objects or museum tours.</li>
+<li>Horizontal carousel: swipe left or right for previous or next full-screen object image or multimedia tour stop.</li>
+</ol>
+<p><img loading="lazy" class="alignnone size-full wp-image-861" src="../../wp-content/uploads/2018/01/gorgels.fig15.png" alt="" width="800" height="450" /></p>
+<p>Figure 15: from the Rijksstudio timeline, you can directly click on the first work of art and swipe your way through the collection</p>
+<p><img loading="lazy" class="alignnone size-full wp-image-862" src="../../wp-content/uploads/2018/01/gorgels.fig16.png" alt="" width="800" height="450" /></p>
+<p>Figure 16: image: from the tours, you can directly go to the first stop and swipe your way through the tour.</p>
+<p>In the app, Rijksstudio consists of vertical lists featuring sets that the user can scroll through. And when they tap the screen, the first full-screen work of a set or a tour is immediately shown. They can zoom in and out, or continue swiping to enjoy other works in their full glory. The app will remain in the selected view mode until another choice is made or until the end of the collection or tour has been reached. The direct contact with the artwork takes center stage. Information about the works of art and the sets is available, but this is secondary.</p>
+<p>We also apply these design patterns to the multimedia tours: choosing from lists of tours and, after a choice for a tour has been made, swiping your way through a tour both in the app and in person at the museum. This way, this enjoyable experience on a screen has become the digital representation of a museum visitor who strolls through the museum’s many rooms and enjoys the works of art on display.</p>
+<p>Collecting objects has become more intuitive in the app as well. You can easily save an entire work of art or detail that you see filling out your screen at that moment. You move your fingers along the work of art until the most beautiful detail appears in front of your eyes.</p>
+<h3>The building and the presentation of the collection</h3>
+<p>Once we had created these design patterns, we had to develop a solution for wayfinding in the museum. For this, we were inspired again by frequently used apps used for a similar purpose, such as Google maps (wayfinding) and Airbnb (integration of map and houses).</p>
+<p>However, we did not intend to develop a wayfinding system that gives you a new instruction every few meters. Instead, the system gives only the most necessary instructions to help a visitor find their way and allow them to become familiar with the layout of the building intuitively. The wayfinding for the tours should provide an insight into the layout of the building. Visitors should be able to enjoy the museum without having to worry about finding their way around.</p>
+<p>After the renovation, the Rijksmuseum got its original clear floor plan back. In fact, the building is shaped like the number “8,” with the Gallery of Honour and the bicycle passageway running below the middle of the building. It consists of ten collection areas displayed in separate, consecutive rooms. Together, they tell the story of the art and history of the Netherlands in chronological order, from the Middle Ages until today.</p>
+<p><img loading="lazy" class="alignnone size-full wp-image-863" src="../../wp-content/uploads/2018/01/gorgels.fig17.png" alt="" width="782" height="591" /></p>
+<p>Figure 17: the building consists of ten collections displayed in separate, consecutive rooms. The collections can be reached through the building’s four stairwells. It looks like a simple subway map with 10 lines that do not overlap</p>
+<p>If we take a closer look at the museum, we can see four big stairwells that give access to each of the ten collections in their separate rooms. These stairwells lead to intersections where the collection displays begin or end. The fact that the building has been &#8220;split&#8221; by the famous bicycle passageway can complicate getting from one side of the building to the other. In a way though, the layout and collection display is no different than the map of the London Underground for example, with ten lines that do not overlap (Graham-Smith, 2016).</p>
+<p>The challenge is to get the visitors to intuitively make themselves familiar with this easy floor plan using the app.</p>
+<h3>The wayfinding concept</h3>
+<p>The building’s four stairwells and ten areas haven been used as a starting point for the new wayfinding concept. The system guides the visitor to their destination in no more than three steps.</p>
+<p>A summary of the wayfinding concept:</p>
+<ul>
+<li>four stairwells guide you to the starting points of the ten chronological areas of the Rijksmuseum</li>
+<li>there is one-way traffic in all areas, you cannot get lost there</li>
+<li>the works in a room are displayed in the app in the same order as in the room</li>
+<li>once you reach the end of an area, you will receive recommendations for other areas or tours close by</li>
+<li>the app always leads you to another area through the layout of the building. You will reach your next destination in no more than three steps, using the stairwells</li>
+<li>the gallery highlighted in blue shows where you are, the red arrow shows where you have to go. The blue area changes when you walk from gallery to gallery</li>
+<li>the red squares on the map indicate where the works are hanging and correspond with the works in the tour carousel</li>
+<li>with this new infrastructure, the app can guide you to and from any location</li>
+</ul>
+<p><img loading="lazy" class="alignnone wp-image-865" src="../../wp-content/uploads/2018/01/gorgels.fig18.png" alt="" width="945" height="496" /></p>
+<p>Figure 18: the blue room shows you where you are, the red arrow shows where you have to go</p>
+<p><img loading="lazy" class="alignnone wp-image-866" src="../../wp-content/uploads/2018/01/gorgels.fig19.png" alt="" width="900" height="507" /></p>
+<p>Figure 19: using the four stairwells as intersections, the app will always guide you to the next area in no more than three steps</p>
+<p>This automatic wayfinding system offers the flexibility visitors need to decide on another area or another tour at any moment. The system immediately calculates the new route and guides the visitor to their new destination. This will also offer considerable flexibility and scalability in creating new tours in the future.</p>
+<p>Using 300 beacons, the system also always knows where you are and highlights this in the app as a blue space. We have chosen not to show the location of every square meter, as the visitor is perfectly capable of finding the works of art in a particular gallery. The collection presentation also runs from one gallery to another.</p>
+<h3>New wayfinding platform</h3>
+<p>An important and innovative part of the new app is the indoor automatic wayfinding platform, powered by Dutch company Movin. This platform uses an interactive map and tailor-made automatic wayfinding directions for the museum site. The beacons can also be managed with this platform (including battery management, for example), but the platform also shows, by means of heat maps, which parts of the museum are busy or less busy.</p>
+<p>Placing the beacons in the 19th-century building is quite a challenge. For aesthetic reasons, we wanted to keep the beacons out of sight, which forced us to use specific locations in a room. Besides, the beacons radiate through walls and floors, which rendered the &#8220;blue room&#8221; unstable. A software algorithm that takes the expected position of a person into account was developed to this end. This provided the positioning with the necessary accuracy.</p>
+<p><img loading="lazy" class="alignnone wp-image-869" src="../../wp-content/uploads/2018/01/gorgels.fig20.png" alt="" width="800" height="443" /></p>
+<p>Figure 20: a heatmap of the second floor of the museum on one of the test days of the new app</p>
+<h3>Tours concept</h3>
+<p>In summary, we listed a number of user requirements for the tours:</p>
+<ul>
+<li>visitors want to be guided, but also want to make their own choices</li>
+<li>visitors want direction: what can I find here, what is important, and how can I get there</li>
+<li>visitors want more in-depth information</li>
+<li>visitors want the app to show where they are</li>
+</ul>
+<p><img loading="lazy" class="alignnone wp-image-870" src="../../wp-content/uploads/2018/01/gorgels.fig21.png" alt="" width="350" height="622" /></p>
+<p>Figure 21: the two entry points of the tours: explore the museum on your own or take a guided tour. The highlights tour is spotlighted</p>
+<p>The new wayfinding concept was integrated into the new tours concept. Once we had determined all design elements, we were able to develop the new tour concept. It has two entry points:</p>
+<ol>
+<li>Explore the museum on your own: select an area and walk your own route</li>
+<li>Take a guided tour: select a theme</li>
+</ol>
+<p>&#8220;Explore the museum on your own&#8221;: This tour is based on the te chronological areas of a total of 80 rooms that make up the entire museum in which 300 stops were placed. Together, these ten areas form the entire collection presentation, and also provide an insight into the layout of the building. All stops within an area are presented in the app.</p>
+<p>Visitors who want to take their own tour may enjoy the stops in their selected area in the order they choose. They may accelerate or slow down, all according to their needs. This supports the typical &#8220;culture snacker&#8221; behavior. The choice is visualized, both in the app and in the room. Searching by number is no longer necessary and the numbers next to the works of art are no longer necessary either. In the tour design includes a division of the museum into ten chronological areas:</p>
+<ul>
+<li>Gallery of Honour</li>
+<li>1100-1600</li>
+<li>1600-1650</li>
+<li>1650-1700</li>
+<li>1700-1800</li>
+<li>1800-1900</li>
+<li>1900-1950</li>
+<li>1950-2000</li>
+<li>Special Collections</li>
+<li>Asian Pavillion</li>
+</ul>
+<p>&#8220;Take a guided tour&#8221;: A tour is a themed selection of stops that are located within one or several areas of the museum. A visitor taking a tour may additionally opt for an &#8220;outing&#8221; in every room: all stops in that room are presented at the touch of a button. This makes switching between a tour and an area easy, offering the flexibility that visitors require. When the app is launched, four tours will be available: Highlights, Rembrandt, Building, and Colonial Past.</p>
+<p><img loading="lazy" class="alignnone wp-image-871" src="../../wp-content/uploads/2018/01/gorgels.fig22.png" alt="" width="800" height="435" /></p>
+<p>Figure 22: if you take a tour, you can always switch to &#8220;view all works in this gallery’&#8221; mode and when you are finished, go back to the tour</p>
+<h3>Research and future developments</h3>
+<p>The app was developed using the Scrum method. Every two weeks, the development results were presented to everyone involved. After every demo, we went into the museum and tested the new functionalities with the help of visitors. Twice, we performed a more extensive usability test on the entire tours concept including the complete wayfinding. Immediate testing in the museum is particularly important when it comes to wayfinding. The tests showed that switching between full-screen mode and floor plan mode was especially challenging for test subjects. We made some adjustments here, including a clearer and bigger &#8220;floor plan&#8221; button. We can see several potential optimizations for wayfinding, for example the option of turning the map in the right direction and automatically zooming in on the room you are in. Based on client surveys after the launch, we will make choices from the backlog to further improve user-friendliness.</p>
+<p>Now that we have established the Rijksstudio platform Web and app, tours, and wayfinding as infrastructures, interesting new opportunities will open up to make the user experience even greater in the future.</p>
+<h2>Acknowledgements</h2>
+<p>The Rijksmuseum app was made possible by <a href="https://www.rijksmuseum.nl/en/join-us/our-sponsors/kpn">KPN</a>, main sponsor of the Rijksmuseum.</p>
+<h2><strong>References</strong></h2>
+<p>Babich, N. (2016). &#8220;Designing Card-Based User Interfaces.&#8221; Consulted December 2017. Available <a href="https://www.smashingmagazine.com/2016/10/designing-card-based-user-interfaces/%23further-reading-on-smashingmag">https://www.smashingmagazine.com/2016/10/designing-card-based-user-interfaces/#further-reading-on-smashingmag</a></p>
+<p>Evans, B. (2016). &#8220;Mobile is eating the world.&#8221; <span style="float: none; background-color: transparent; color: #333333; cursor: text; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px;">Consulted December 2017.</span> Available <a href="http://ben-evans.com/benedictevans/2016/12/8/mobile-is-eating-the-world">http://ben-evans.com/benedictevans/2016/12/8/mobile-is-eating-the-world</a></p>
+<p>Gorgels, Rijksstudio: Make Your Own Masterpiece!. In Museums and the Web 2013, N. Proctor &amp; R. Cherry (eds). Silver Spring, MD: Museums and the Web. Published January 28, 2013. Consulted January 14, 2018. Available <a href="https://mw2013.museumsandtheweb.com/paper/rijksstudio-make-your-own-masterpiece/">https://mw2013.museumsandtheweb.com/paper/rijksstudio-make-your-own-masterpiece/</a></p>
+<p>Graham-Smith, D. (2016). The History Of The Tube Map. <span style="float: none; background-color: transparent; color: #333333; cursor: text; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px;">Consulted December 2017. </span>Available <a href="https://londonist.com/2016/05/the-history-of-the-tube-map">https://londonist.com/2016/05/the-history-of-the-tube-map</a></p>
+<p>Roscam Abbing, E. (2014). Brand driven innovation. <span style="float: none; background-color: transparent; color: #333333; cursor: text; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px;">Consulted December 2017. </span>Available <a href="https://www.slideshare.net/brandriveninnovation/brand-driven-innovation-39837653">https://www.slideshare.net/brandriveninnovation/brand-driven-innovation-39837653</a></p>
+<p>&nbsp;</p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+Gorgels, Peter. "Rijksmuseum mobile first: Rijksstudio Redesign and the new Rijksmuseum app." <i>MW18: MW 2018</i>. Published January 14, 2018. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw18.mwconf.org/paper/rijksmuseum-mobile-first-redesign-rijksstudio-the-new-rijksmuseum-app/<br /><br />
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><h2 id="Gold" class="widget-title">Gold Sponsor</h2>
+<a title="TixTrack" href="http://www.tixtrack.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/tixtrack-250-75.jpg" alt="TixTrack" /></a>
+<h2 id="silver" class="widget-title">Silver Sponsor</h2>
+<a title="Axiell" href="http://www.axiell.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/axiell-250-75.jpg" alt="Axiell" /></a>
+<a title="Piction" href="https://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<a title="Brightcove" href="https://www.brightcove.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/bc-250-75.jpg" alt="Brightcove" /></a>
+<h2 id="bronze" class="widget-title">Bronze Sponsors</h2>
+<a title="Quartex" href="http://www.quartexcollections.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/quartex-250-75.jpg" alt="Quartex" /></a>
+<a title="alley interactive" href="http://www.alleyinteractive.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ai-250-75.jpg" alt="alley interactive" /></a>
+<a title="ideum" href="http://www.ideum.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ideum-250-75.jpg" alt="ideum" /></a>
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/netx-250-75.jpg" alt="Netx" /></a>
+<a title="Four Kitchens" href="http://fourkitchens.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/4K-250-75.jpg" alt="Four Kitchens" /></a>
+<h2 id="conference-partner" class="widget-title">Conference Partners</h2>
+<a title="VAG" href="http://vanartgallery.bc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/VAG-250-75.jpg" alt="VAG" /></a>
+<a title="MOA" href="http://moa.ubc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/moa-250-75.jpg" alt="MOA" /></a>
+<h2 id="conference-supporter" class="widget-title">Conference Supporters</h2>
+<a title="BCMA" href="http://museumsassn.bc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/BCMA-250-75.jpg" alt="BCMA" /></a>
+<a title="NGX" href="http://ngxinteractive.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ngx-250-75.jpg" alt="NGX" /></a>
+<a title="EDM" href="http://edmstudio.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/edm-250-75.jpg" alt="EDM" /></a>
+<a title="Olson" href="http://olsonvisual.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/olson-250-75.jpg" alt="Olson" /></a></div></section><section id="text-3" class="widget widget_text">			<div class="textwidget">
+<ul class="sxc-follow-buttons">
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://www.facebook.com/museweb/"
+                                        
+                                        title="Facebook"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/facebook.png"
+                                            alt="Facebook"
+                                        />
+                                    </a>
+                              </li>
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://twitter.com/museweb"
+                                        
+                                        title="Twitter"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/twitter.png"
+                                            alt="Twitter"
+                                        />
+                                    </a>
+                              </li>
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://www.linkedin.com/company/10246519/"
+                                        
+                                        title="LinkedIn"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/linkedin.png"
+                                            alt="LinkedIn"
+                                        />
+                                    </a>
+                              </li>
+</ul>
+
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+
+		<!-- Cookie Notice plugin v1.3.2 by Digital Factory https://dfactory.eu/ -->
+		<div id="cookie-notice" role="banner" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Cookie Notice" style="background-color: rgba(0,0,0,1);"><div class="cookie-notice-container" style="color: #fff;"><span id="cn-notice-text" class="cn-text-container">We use cookies to ensure that we give you the best experience on our website. Please read our cookie policy and, if you continue to use the site, acknowledge that you accept the terms and conditions of use. </span><span id="cn-notice-buttons" class="cn-buttons-container"><a href="#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button bootstrap" aria-label="Ok">Ok</a><a href="https://www.museumsandtheweb.com/cookie-policy/" target="_blank" id="cn-more-info" class="cn-more-info cn-button bootstrap" aria-label="Read more">Read more</a></span><a href="javascript:void(0);" id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" aria-label="Ok"></a></div>
+			
+		</div>
+		<!-- / Cookie Notice plugin --></body>
+
+<!-- Mirrored from mw18.mwconf.org/paper/rijksmuseum-mobile-first-redesign-rijksstudio-the-new-rijksmuseum-app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:16:35 GMT -->
+</html>

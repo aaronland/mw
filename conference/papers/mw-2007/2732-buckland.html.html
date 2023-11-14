@@ -1,0 +1,626 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2007-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/buckland/buckland.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:29:40 GMT -->
+<head>
+<!-- #BeginEditable "HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2007: Papers: Buckland,
+M., et al., Access to Heritage Resources Using What, Where, When, and Who</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2007" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Keywords" -->
+<meta name="Keywords" content="articles, papers, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Description" -->
+<meta name="Description" content="Museums and the Web 2007: the international conference for culture and heritage on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2007" />
+<!-- #EndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="../../css/mw2007.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="../../css/mw2007-noNews.css" type="text/css"  media="print, screen" />
+	<link rel="stylesheet" href="../../css/papers.css" type="text/css"  media="print, screen" />
+
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+</head>
+<body  onload="initImgRotation()">
+	<div id="container">
+		<div id="header" onclick="location.href='../index.html';" style="cursor:pointer;">
+		</div>
+		<div id="top-nav">
+			<ul id="top-nav-list">
+				<li><a href="../../register/index.html">Register</a></li>
+				<li><a href="../../dates/index.html">Key Dates</a></li>
+				<li><a href="../../sescal/index.html">Schedule</a></li>
+				<li><a href="../../local/index.html">Local Info</a></li>
+			</ul>
+		</div>
+		<div id="header-photo">
+			<a href="../../images/credits.html">
+			<!-- InstanceBeginEditable name="header-photo" -->
+			<img src="../../images/rotate/header-pic.jpg" alt="MW-photo" name="img1" width="229"  height="132" id="img1" />
+			<!-- InstanceEndEditable -->	
+			</a>
+		</div>
+		<div id="date">
+			April 11-14, 2007<br />
+			San Francisco, California
+		</div>
+		<div  id="title">
+			<h1> 
+				<!-- InstanceBeginEditable name="PageTitle" -->
+				
+				
+				Access to Heritage Resources Using What, Where, When, and Who
+				<!-- InstanceEndEditable -->
+   			</h1>
+		</div>
+		<div id="main-content">
+		  <div id="callout">          </div>
+		  <div id="intro-paragraph">
+				<!-- #BeginEditable "IntroParagraph" -->
+    				<h2 class="Author">Michael K. Buckland, Fredric C. Gey, and Ray R. Larson,
+				    University of California, Berkeley, USA </h2>
+    				<p class="URL"><a href="../http://ecai.org/imls2004" target="_blank">http://ecai.org/imls2004</a></p>
+    				<h3 class="AbstractTitle">Abstract</h3>
+    				<p class="abstractText">Learning,
+				      if it is to be more than memorizing, requires an understanding of context.
+				      A networked environment greatly increases the range and variety of
+				      accessible resources. A series of studies concerned with making better
+				      use of existing descriptive metadata are summarized: Mapping between
+				      different topical vocabularies; the use and improvement of place name
+				      gazetteers; named time period directories for better chronological
+				      search and temporally-dynamic map displays; and structured mark-up
+				      for biographical texts. Embedding live queries within links and the
+				      use of intelligibly structured URLs provide substantial but inexpensive
+				      enhancements to search support. A series of modest improvements in
+				      standards and best practices will, individually and cumulatively, improve
+				      our collective ability to find materials of different kinds related
+				      to individual museum objects or for any other purpose.</p>
+				  <p class="keywords">Keywords: interoperability, gazetteers, metadata, search
+				    support, timelines, vocabulary mapping, mapping</p>
+  				<!-- #EndEditable -->		  </div>
+				<!-- #BeginEditable "BodyText" -->
+				  <h1>Introduction</h1>			
+				  <p>Most well edited resources have some kind of indexing
+				    or categorization, but the &ldquo;vocabularies&rdquo; of categories,
+				    codes, and terms used vary widely and can be quite complex. In practice,
+				    efficient effective searching and selection requires some familiarity
+				    with whatever vocabulary is being used. </p>
+				  <p>The Web increases the number and variety of resources
+				    that are accessible, but which are more or less difficult to search effectively
+				    because their vocabularies are unfamiliar. Since the manner in which
+				    remote resources are provided is beyond one&rsquo;s control, the practical
+				    challenge is to find ways to support effective remote use. </p>
+				  <p>We have been engaged in a series of studies of the
+				    issues to be addressed, specifically, mapping from familiar to unfamiliar
+				    vocabularies (Buckland, Chen, Chen &amp; others, 1999), the inherent
+				    problems of searching across and between different media types (e.g.
+				    text, images, sound, and numeric data series) (Buckland, Gey &amp; Larson,
+				    2002; Buckland, Chen, Gey &amp; others, 2007), improved geographic search
+				    (Buckland, Gey &amp; Larson 2004; Buckland, Chen, Gey &amp; Larson, 2006),
+				    time period directories (Petras, Larson &amp; Buckland, 2006), search
+				    by time, place, topic, and person (Buckland &amp; Lancaster, 2004; 2006),
+				    and, currently, biographical text (<em>Bringing</em>,
+				    2006).</p>
+				  <p>Underlying this work is the importance of context.
+				    The difference between mere memorizing and understanding is that to understand
+				    anything you need to know about the context: the who, what, where, when,
+				    why, and how of whatever it is. So, for the learner, whether a student,
+				    teacher, or curator, the ability to search for related contextualizing
+				    resources is important. </p>
+				  <h1>Museum Objects and the Search for Context</h1>
+				  <p>Ordinarily, search support involves accepting a textual
+				    query and matching it against a collection of text resources, either
+				    textual documents or textual metadata representing other kinds of objects.
+				    In information retrieval theory it is accepted that a document can be
+				    used as a query. Any search system that can accept a textual query will
+				    not know or care whether the query is a newly-formed query or a fragment
+				    (or even the entirety) of a pre-existing text document. A function that
+				    is sometimes explicitly provided is a &ldquo;nearest neighbor&rdquo; search:
+				    What other document(s) most closely resemble this one?</p>
+				  <p>Another important principle in documentation theory
+				    is that any object considered to be signifying something can be considered
+				    a &ldquo;document&rdquo;, and from about 1930, European documentalists
+				    considered museum objects to be documents just as much as books and images
+				    (Buckland, 1997). In her manifesto of 1951, now finally available in
+				    English, Suzanne Briet (1951, 7; 2006, 10) explained that if a stone
+				    in a mineralogical museum or a captive antelope in a zoo is examined
+				    as evidence, it has become as much a &ldquo;document&rdquo; as a book
+				    or a journal article. Birger Hj&oslash;rland (1997, 111) added that a
+				    stone, like any other document, would mean different things to different
+				    people, according to their interests and perspectives, and Geoffrey Bowker
+				    puts it nicely: Stones lead a double life. On the one hand they just
+				    do what rocks do, ordinarily just sitting on or in the ground, but, when
+				    examined, they reveal the history of the earth (Bowker, 2005, 36). In
+				    other words, for informational and educational purposes it is inappropriate
+				    to restrict the notion of a &ldquo;document&rdquo; to only printed or
+				    textual objects. In this view, a museum object is, functionally, as a
+				    much a &ldquo;document&rdquo; as a text, an image, or a digital file.
+				    There may be technical difficulties in matching, say, biological specimens
+				    or material culture with related items in dissimilar forms, such as books,
+				    photographs, numeric data series, and sound recordings, but that is exactly
+				    what is needed to discover and select contextualizing resources.</p>
+				  <p>In a recent project, we took contextualizing as design
+				    goal, with two applications in mind. One challenge was to consider K-12
+				    history and social science teaching and to ask what kind of search support
+				    would enable a teacher to find additional resources explaining the background
+				    on any topic, person, institution, or event mentioned in the assigned
+				    textbook. The other challenge was museum-related: Suppose one selected
+				    a museum at random and then, from its collections, picked an object at
+				    random, what kind of search support would facilitate discovering contextualizing
+				    resources in other institutions&rsquo; collections? What other objects
+				    like it can be identified elsewhere in archives, databases, libraries,
+				    or museums? What else is known to come from the same place and time or
+				    has the same purpose? What literature, archival records, images, sound
+				    recordings, or other documents relate to it specifically or, more generally,
+				    to the kind of object it is? Our assumption was that this kind of inquiry
+				    is an important part of what museum curators do, so the task was to investigate
+				    what courses of action might make the apparatus of metadata, search engines,
+				    and interoperability more supportive of their efforts.</p>
+				  <p>Our project, entitled &ldquo;Support for the Learner:
+				    What, Where, When and Who,&rdquo; built directly on our earlier work
+				    and was supported in part by a grant from the Institute of Museum and
+				    Library Services for the period October 2004 through December 2006. It
+				    became apparent early in the project that the two design challenges were
+				    too ambitious for the time and resources available. Nevertheless, they
+				    remained inspirational while we worked on more elementary steps that,
+				    we thought, would help to build the bases for eventually addressing these
+				    challenges in a practical way. The rest of this paper summarizes what
+				    we learned and what we recommend in terms of new techniques and improved &ldquo;best
+				    practices&rdquo; that could move us all closer to achieving success with
+				    these two design challenges.</p>
+				  <h1>Recommendations for Innovation and Best Practices</h1>
+				  <h2>WHAT &ndash; Mapping between vocabularies.</h2>
+				  <p>It is widely understood and accepted that the inherent
+				    ambiguity and instability of language needs to be &ldquo;controlled&rdquo; in
+				    indexes, so, for example, synonyms should be explicitly related
+				    and hierarchical and other relationships indicated. However, in a Web
+				    environment multiple resources use quite different metadata vocabularies:
+				    mapping between related terms in <em>different</em> vocabularies
+				    becomes very important, but has received relatively little
+				    attention. Manually relating the terms in two or more vocabularies becomes
+				    extremely labor-intensive as well as inherently obsolescent as each vocabulary
+				    evolves. There are, however, techniques using statistical association
+				    and natural language processing which can generate inexpensive mappings
+				    if a corpus of records is available as a training set (Buckland, Chen,
+				    Chen &amp; others,
+				    1999; Buckland, Gey &amp; Larson, 2002; Buckland, Chen, Gey &amp; others,
+				    2006).&nbsp; </p>
+				  <h2>WHERE &ndash; Place, space, and gazetteers</h2>
+				  <p>Place names are notoriously ambiguous, multiple, unstable,
+				    and/or vague, but improved &ldquo;best practices&rdquo; could substantially
+				    improve support for geographical searching. It is useful to distinguish <em>place</em>,
+				    a cultural concept, from <em>space</em>,
+				    a physical construct. Place name gazetteers are best known from their
+				    appearance as large pages of small type at the back of atlases, where
+				    they also serve as indexes to the maps. But gazetteers exist in their
+				    own right as, in effect, bilingual dictionaries linking places and spaces.
+				    The importance of gazetteers is that they allow named places to be located
+				    (or represented) on a map (Hill, 2006).</p>
+				  <p>Museums and others who deal with historical material
+				    have the additional problem that the common practice of using the names
+				    and boundaries of today&rsquo;s political jurisdictions may make little
+				    sense when dealing with past times. Support for geographic search could
+				    be improved if a few additional steps were taken:</p>
+				  <ol>
+				    <li> Authority
+				      lists of place names, as found in libraries, should either
+				      have geographical coordinates added (latitude and longitude),
+				      effectively making them into gazetteers, or, better, be linked to authoritative
+				      gazetteers maintained elsewhere.</li>
+				    <li>Gazetteer
+				      entries should (but rarely do) include an indication of <em>when</em> that
+				      name was in use;</li>
+				    <li>Now
+				      that catalogs are no longer made and presented in card
+				      form, but by computer interface, there is no reason not
+				      to provide map interfaces. The geographical distribution of retrieved
+				      records can be shown as an aid to a more refined selection. Also, drawing
+				      a region of interest on a map interface is a convenient way of expressing
+				      the geographical scope of a search: find all ceramic items
+				      in the collection from <em>this area</em>. </li>
+				    <li>Understanding
+				      and explaining change over time is important for museums.
+				      Maps on paper have limited ability to show chronological
+				      changes. But digital maps can show changes over time dynamically (Zerneke,
+				      Buckland &amp; Carl,
+				      2006). </li>
+				    <li>Gazetteer
+				      entries use geographical description codes (aka Feature
+				      types) to indicate the kind of place named: Castle, lighthouse,
+				      lake, city, etc. These feature type codes can be linked with corresponding
+				      subject headings. Comparison of the National Geo-intelligence
+				      Agency&rsquo;s Geographical Description
+				      Codes (GDC) with Library of Congress Subject Headings (LCSH) reveals
+				      differences in style, emphasis, scope, and scale. Nevertheless, in most
+				      cases there are sensible matches. For example, the NGA code &ldquo;School&rdquo; means
+				      a school building, and corresponds to LCSH &ldquo;School buildings&rdquo; (for
+				      the physical feature) and to LCSH &ldquo;Schools&rdquo; (for schools
+				      as institutions). Mapping between these two vocabularies
+				      allows one to move from the literature on, say, the <em>topic of lighthouses</em> to
+				      locating (through a gazetteer and a map) <em>instances of lighthouses</em> on
+				      the ground. Moving in the other direction, if you find
+				      an actual lighthouse, you could search for literature about that particular
+				      lighthouse, lighthouses in that region, or lighthouses generally.&nbsp; </li>
+			    </ol>
+				  <h2>WHEN &ndash; Use of events to denote time</h2>
+				  <p>Clocks and calendars provide the obvious way to measure
+				    and record time, but in both speech and writing, events, rather than
+				    calendar dates, are widely used to denote points or periods of time.
+				    The events are commonly wars (&ldquo;Civil war,&rdquo; &ldquo;World War
+				    II&rdquo;), reigns, dynasties, and administrations (&ldquo;a Louis XIV
+				    clock,&rdquo; &ldquo;under Clinton&rdquo;), cataclysmic events (&ldquo;after
+				    the Lisbon earthquake&rdquo;) or personal (&ldquo;after graduation&rdquo;).
+				    This use of events to denote time tends to be situational, multiple,
+				    ambiguous, and unstable. A &ldquo;civil war weapon&rdquo; would date
+				    from the seventeenth century in England or the twentieth century in Spain. &ldquo;The
+				    Great War&rdquo; was renamed the &ldquo;First World War&rdquo; and, in
+				    some quarters, the Vietnam War is coyly referred to as the Vietnamese
+				    Conflict. These characteristics resemble those of place names, so we
+				    developed an analogous solution: a named time period directory modeled
+				    on the design of place name gazetteers (Petras, Larson &amp; Buckland,
+				    2006). For each named period, a code for type of period (war, dynasty,
+				    cataclysm, etc.), corresponding calendar dates, and, just as a gazetteer
+				    should specify when a name was in use, a time period should indicate
+				    the geographical context, thus:</p>
+				  <p><em>&nbsp;&nbsp; Place name gazetteer </em></p>
+				  <p>&nbsp;&nbsp; Place
+				      name&mdash;Type-&ndash;Geographical markers (lat. &amp; long)--When
+				      in use</p>
+				  <p><em>&nbsp;&nbsp; Named period directory</em></p>
+				  <p>&nbsp;&nbsp; Name
+				      of period&mdash;Type&mdash;Chronological markers (calendar)&mdash;Where
+				      used</p>
+				  <p>The geographical markers of latitude and longitude
+				    supplied in the gazetteer not only allow individual places to be located
+				    on a map, but they also allow places named to be related to each other
+				    geospatially (near, between, outside, south of, etc.). Correspondingly,
+				    relating each named period to the chronological markers (calendar dates)
+				    allows events to be positioned on a time line or in a chronology, and
+				    thereby temporal relationships can be identified: What else happened
+				    during this period? The inclusion of <em>both</em> place
+				    and time aspects in <em>both</em> gazetteers
+				    and time period directories allows geo-temporal relationships. What else
+				    was near this place around that time? Descriptive metadata systems can
+				    be seen as a form of infrastructure, and these kinds of links facilitate
+				    the construction of metadata infrastructures (Buckland, 2006).</p>
+				  <h2>WHO &ndash; Names and activities</h2>
+				  <p>The desirability of disambiguating different persons
+				    with the same name and of connecting different names for the same person
+				    is well understood and widely implemented. In contrast, although biographical
+				    text is important in many contexts, the standards and best practices
+				    for representing what people do and the events in people&rsquo;s lives
+				    are seriously inadequate. (For a useful survey, see Text Encoding Initiative
+				    Consortium (2006)).</p>
+				  <p>In current work we are examining the feasibility of
+				    representing the individual&rsquo;s activities by expressing life activities
+				    as a set of separate activities or events, in whatever level of detail
+				    is desired, and then encoding each activity as a 4W-tuple of <em>what</em> kind
+				    of activity, <em>where</em> it
+				    took place, <em>when</em> and
+				    for how long it occurred, and <em>who</em> else
+				    was involved. The hope is that this approach could be generally acceptable
+				    across different communities and that the vocabularies already established
+				    within each community could be used to express <em>what</em> (topical
+				    subject headings), <em>where</em> (place
+				    name gazetteers), <em>when</em> (named
+				    time period directories), and <em>who</em> (name
+				    authority files and biographical dictionaries). If it is successful,
+				    the basis for a great deal of interoperability within and between communities
+				    could emerge. </p>
+				  <h1>Search Support</h1>
+				  <p>So far we have been concerned with improvements in
+				    description. Searching can also be facilitated. </p>
+				  <p>Mark-up commonly incorporates embedded links to related
+				    sources which provide further explanation or validation. At best, these
+				    links are obsolescent as newer publications appear. An alternative is
+				    to provide a dynamic link in the form of a search query. As an example, <em>ECAI
+				    Iraq</em> (<a href="../http://ecai.org/iraq/" target="_blank">http://ecai.org/iraq/</a>),
+				    a temporal-spatial portal into existing digital resources about the history,
+				    cultural sites, archaeological excavations, and heritage preservation
+				    initiatives relating to Iraq, contains a series of Web pages for individual
+				    historic sites (Electronic Cultural Atlas Initiative, 2003). Clicking
+				    on the first three links on each site page automatically generates search
+				    queries, using the Z39:50 search and retrieve protocol, for material
+				    concerning the site in the library catalogues of the University of California,
+				    the research libraries of the United Kingdom, and the Library of Congress.
+				    The merit of this approach is that the material retrieved will be as
+				    up-to-date as those libraries&rsquo; cataloguing rather than entries
+				    from a static, obsolescing bibliography. </p>
+				  <p>The hierarchical structures of URLs are usually opaque
+				    and of little meaning, but clearly structured URLs can greatly simplify
+				    searching from remote locations. The Timeline of the Art History section
+				    of the Metropolitan Museum Web site (<a href="../http://www.metmuseum.org/toah/" target="_blank">http://www.metmuseum.org/toah/</a>)
+				    is an excellent example of helpful design. This section uses eleven defined
+				    time periods (from &ldquo;20,000-8,000 BC&rdquo; through &ldquo;1900
+				    AD &ndash; present&rdquo;) and, for places, a hierarchical structure
+				    starting with nine major regions. Each time period and each geographical
+				    area has a simple, easily-discerned code, clearly visible in the /toah
+				    URLs. These codes can be mapped to the categories for time and place
+				    in any local system and inserted algorithmically into a link. If one
+				    were interested in the art of southern India during in the eighth century
+				    CE and knew that it would be categorized at the Met Web site by &ldquo;06&rdquo; for
+				    the time period 500-1,000 AD and &ldquo;sss&rdquo; for South South Asia,
+				    one can insert &ldquo;sss&rdquo; and &ldquo;06&rdquo; into the /toah
+				    URL extensions to form <a href="../http://www.metmuseum.org/toah/ht/06/sss/ht06sss.htm" target="_blank">http://www.metmuseum.org/toah/ht/06/sss/ht06sss.htm</a>,
+				    which, <em>for this topic</em>, is
+				    a good starting point for searching for the Met&rsquo;s rich collections.
+				    Mapping local metadata to the /toah codes and inserting them in a link
+				    allows one to go <em>directly</em> from
+				    inside any local Web page to the appropriate page <em>within</em> the
+				    Met&rsquo;s Web site.</p>
+				  <p>The Wikipedia provides a similarly useful design for
+				    biographical searching. Creating a URL by adding &ldquo;Firstname_surname&rdquo; to
+				    the stem <a href="../http://en.wikipedia.org/wiki/" target="_blank">http://en.wikipedia.org/wiki/</a> to form, for example, <a href="../http://en.wikipedia.org/wiki/John_smith" target="_blank">http://en.wikipedia.org/wiki/John_smith</a>				    will lead directly to biographical article(s) for any person(s) with
+				    that name, if any, in the Wikipedia.</p>
+				  <h1>Conclusion</h1>
+				  <p>Learning, if it is to be more than memorizing, requires
+				    an understanding of context. The Web greatly increases the range of accessible
+				    resources capable of providing context. However, Internet-accessible
+				    resources vary greatly in the metadata vocabularies used to describe
+				    and index their resources and in the search support provided. The use
+				    of standards should, of course, be encouraged, but mandating the use
+				    of the same systems or the same vocabularies is neither possible nor
+				    desirable. However, the wider adoption of improved best practices can
+				    greatly facilitate the incremental development of interoperability.</p>
+				  <p>Searching by topic needs mapping between different
+				    topical vocabularies, and automated methods can often provide inexpensive
+				    but useful mappings. Place name gazetteers are pivotal for geographic
+				    search because they link places with spaces and enable both map visualizations
+				    and analysis of spatial relationships between places. A named time period
+				    directory can play an analogous role for events, dates, and chronological
+				    relationships. Searching for people by name is a well-understood problem,
+				    but relating the events in their lives to contextualizing resources needs
+				    more development. Searching can be supported by embedding live queries
+				    in mark-up and by using meaningful codes in structured URLs.</p>
+				  <p>Picking a museum object at random and finding what
+				    materials of different kinds elsewhere are most closely related to it
+				    and to its context requires substantially better indexing and interoperability
+				    than is currently provided, but a series of improvements in standards
+				    and best practices will, individually and cumulatively, help us to advance
+				    in that direction.</p>
+				  <h1>Acknowledgments</h1>
+				  <p class="AcknowedgementsText">Aitao Chen, Kimberly Carl, Ruth Mostern,
+				    Linda-Cathryn Muehlinghaus, Vivien Petras, Jeanette Zerneke, and others
+				    contributed to the work reported, which was funded in part by Institute
+				    of Museum and Library Services&rsquo; National Leadership Grant for Libraries,
+				    no. LG-02-04-0041-04, to the Electronic Cultural Atlas Initiative at
+				    the University of California, Berkeley. </p>
+				  <h1>References</h1>
+				  <p class="ReferencesText">Additional information on the topics discussed
+				    can be found on and through the &ldquo;Support for the Learner: What,
+				    Where, When and Who&rdquo; project website at <a href="../http://ecai.org/imls2004" target="_blank">http://ecai.org/imls2004</a>. </p>
+				  <p class="ReferencesText">Bowker, G. C. (2005). <em>Memory practices in
+				      the sciences</em>. Cambridge, MA:
+				      MIT Press.</p>
+				  <p class="ReferencesText">Briet, S. (1951). <em>Qu&rsquo;est-ce que la
+				      documentation?</em> Paris: EDIT,
+				      1951. Also available at <a href="../http://martinetl.free.fr/briet.pdf" target="_blank">http://martinetl.free.fr/briet.pdf</a>. Consulted
+				      January 30, 2007.</p>
+				  <p class="ReferencesText">Briet, S. (2006). <em>What is documentation?</em> Lanham,
+				      MD: Scarecrow Press. Transl. of French edition, Paris, 1951. Also available
+				      at <a href="../http://ella.slis.indiana.edu/~roday/what%20is%20documentation.pdf" target="_blank">http://ella.slis.indiana.edu/~roday/what
+				      is documentation.pdf</a>,
+				      consulted January 28, 2007.</p>
+				  <p class="ReferencesText"><em>Bringing lives to light: Biography in context</em>.
+				      (2006). [Project website]. Consulted January 28, 2007. Available at
+				      <a href="../http://ecai.org/imls2006/" target="_blank">http://ecai.org/imls2006/</a></p>
+				  <p class="ReferencesText">Buckland, M. K. (1997). What is a &ldquo;document&rdquo;?&nbsp; <em>Journal
+				      of the American Society for Information Science</em> 48,
+				      no. 9 (Sept 1997): 804-809. Also available at&nbsp; <a href="../http://www.sims.berkeley.edu/~buckland/whatdoc.html" target="_blank">http://www.sims.berkeley.edu/~buckland/whatdoc.html</a>,
+				      consulted January 28, 2007.</p>
+				  <p class="ReferencesText">Buckland, M. K. (2006). Description and search:
+				    Metadata as infrastructure. <em>Brazilian Journal of Information Science</em> vol
+				    0 (2006). Consulted January 28, 2007. Available at <a href="../http://www.ischool.berkeley.edu/~buckland/Brazil06.pdf" target="_blank">http://www.ischool.berkeley.edu/~buckland/Brazil06.pdf</a></p>
+				  <p class="ReferencesText">Buckland, M. K. (2007). Naming in the library:
+				    Marks, meaning and machines. In <em>Nominalization, nomination and naming
+				    in texts</em>, ed. by Christian Todenhagen &amp; Wolfgang
+				    Thiele. T&uuml;bingen, Germany: Stauffenburg Verlag, forthcoming. </p>
+				  <p class="ReferencesText">Buckland, M. K., A. Chen, H.-M. Chen, Y. Kim,
+				    B. Lam, R. R. Larson, B. Norgard &amp; J. Purat. (1999). Mapping entry
+				    vocabulary to unfamiliar metadata vocabularies. <em>D-Lib Magazine</em> 5,
+				    no. 1 (Jan 1999). Consulted January 28, 2007. Available at <a href="../http://www.dlib.org/dlib/january99/buckland/01buckland.html" target="_blank">http://www.dlib.org/dlib/january99/buckland/01buckland.html</a> </p>
+				  <p class="ReferencesText">Buckland, M. K., A. Chen, F. C. Gey &amp; R.
+				    R. Larson. (2006). Search across different media: Numeric
+				    data sets and text files. <em>Information Technology and Libraries</em> 25,
+				    no 4 (Dec 2006): 181-189.</p>
+				  <p class="ReferencesText">Buckland, M. K., A. Chen, F. C. Gey, R. R. Larson,
+				    R. Mostern &amp; V. Petras. (2007). Geographic search: Catalogs, gazetteers,
+				    and maps. <em>College &amp; Research Libraries</em> Forthcoming
+				    Sept 2007. </p>
+				  <p class="ReferencesText">Buckland, M. K., F. C. Gey &amp; R. R. Larson.
+				    (2002). Seamless searching of numeric and textual resources.
+				    Final report on Institute of Museum and Library Services National Library
+				    Leadership Grant No. 178.&nbsp; Berkeley: University of California, School
+				    of Information Management and Systems. Consulted January 28, 2007. Available
+				    at <a href="../http://metadata.sims.berkeley.edu/papers/SeamlessSearchFinalReport.pdf" target="_blank">http://metadata.sims.berkeley.edu/papers/SeamlessSearchFinalReport.pdf</a> </p>
+				  <p class="ReferencesText">Buckland, M. K., F. C. Gey &amp; R. R. Larson.
+				    (2004). <em>Going places in the catalog: Improved geographic access:
+				    Final report.</em> Consulted January
+				    28, 2007. Available at <a href="../http://ecai.org/imls2002/imls2002-final_report.pdf" target="_blank">http://ecai.org/imls2002/imls2002-final_report.pdf</a></p>
+				  <p class="ReferencesText">Buckland, M. K. &amp; L. R. Lancaster. (2004).
+				    Combining time, place, and topic: The Electronic Cultural Atlas Initiative. <em>D-Lib
+				    Magazine</em> 10, no. 5 (May 2004).
+				    Consulted January 28, 2007. Available at&nbsp; <a href="../http://www.dlib.org/dlib/may04/buckland/05buckland.html" target="_blank">http://www.dlib.org/dlib/may04/buckland/05buckland.html</a></p>
+				  <p class="ReferencesText">Buckland, M. K. &amp; L. R. Lancaster. (2006).
+				    Advances in discovery: The Electronic Cultural Atlas Initiative experience. <em>First
+				    Monday</em>. 11, no. 8 (August
+				    2006). Consulted January 28, 2007. Available at <a href="../http://www.firstmonday.org/issues/issue11_8/buckland/index.html" target="_blank">http://www.firstmonday.org/issues/issue11_8/buckland/index.html</a></p>
+				  <p class="ReferencesText">Electronic Cultural Atlas Initiative. (2003). <em>ECAI
+				      Iraq</em>. Consulted January 28,
+				      2007. Available at <a href="../http://ecai.org/iraq/" target="_blank">http://ecai.org/iraq/</a></p>
+				  <p class="ReferencesText">Hill, L. L. (2006). <em>Georeferencing: the geographic
+				      associations of information</em>.
+				      Cambridge, MA: MIT Press.</p>
+				  <p class="ReferencesText">Hj&oslash;rland, B. (1997). <em>Information seeking
+				      and subject representation</em>.
+				      Westport, CT: Greenwood Press.</p>
+				  <p class="ReferencesText">Petras, V., R. R. Larson &amp; M. K. Buckland.
+				    (2006). Time period directories: A metadata infrastructure for placing
+				    events in temporal and geographic context. <em>In
+				    Opening information horizons: Joint Conference on Digital Libraries (JCDL),</em> Chapel
+				    Hill, NC, June 11-15, 2006. Consulted January 28, 2007. Available at
+				    <a href="../http://metadata.sims.berkeley.edu/tpdJCDL06.pdf" target="_blank">http://metadata.sims.berkeley.edu/tpdJCDL06.pdf</a></p>
+				  <p class="ReferencesText">Text Encoding Initiative Consortium. (2006).
+				    Report on XML mark-up of biographical and prosopographical data. Consulted
+				    January 28, 2007. Available at <a href="../http://www.tei-c.org/Activities/PERS/persw02.xml" target="_blank">http://www.tei-c.org/Activities/PERS/persw02.xml</a></p>
+				  <p class="ReferencesText">Zerneke, J. L., M. K. Buckland &amp; K. Carl.
+				    (2006). Temporally dynamic maps: The Electronic Cultural
+				    Atlas Initiative experience. Human IT 8.3: 83&ndash;94. Consulted January
+				    28, 2007. Available at <a href="../http://www.hb.se/bhs/ith/3-8/jzmbkc.pdf" target="_blank">http://www.hb.se/bhs/ith/3-8/jzmbkc.pdf</a></p>
+		  <!-- #EndEditable -->
+				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Buckland,
+				    M., et al., Access to Heritage Resources Using What, Where, When, and
+				    Who<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2007: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics, published March 1, 2007  Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+http://www.archimuse.com/mw2007/papers/<!-- #BeginEditable "URL" -->buckland/buckland.html
+		  <!-- #EndEditable --></p>
+				<p class="references"><em><!-- InstanceBeginEditable name="Editorial Note" -->Editorial Note<!-- InstanceEndEditable --></em> </p>
+	  </div>
+<div id="sidebar">
+			<div id="side-nav">
+				<ul id="side-nav-list">
+					    <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+						<li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+						<li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+						<li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+						<li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+						<li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+						<li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+						<li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+				</ul>
+			</div>
+			<div id="search-site">
+				<form method="post" action="../http://search.archimuse.com/cgi-bin/htsearch">
+					<input type="hidden" name="format" value="builtin-long" />
+					<input type="hidden" name="method" value="and" />
+					<input type="hidden" name="config" value="htdig-mw2007" />
+					<input type="hidden" name="restrict" value="" />
+					<input type="hidden" name="exclude" value="" />
+					<input type="text" size="20" name="words" value="" id="searchmw" />
+					<input type="image" src="../../images/searchmw2007.gif" id="searchbox" name="search" />
+				</form>
+			</div>
+				<div id="sidebar-links">
+				<ul id="sidebar-links-list">
+					<li><a href="../../../index.html" class="produced-by">produced by<br />
+					    <img src="../../images/sidelogo.gif" width="144" height="37" alt="AMI logo" /></a></li>
+					<li><a href="../../../index.html">Join our mailing list</a></li>
+					<li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+					<img src="../../../external.gif?link=http://www.archimuse.com/ami.images/search.gif" alt="search" width="24" height="25" /></a></li>
+				</ul>
+		  </div>
+		</div>
+		<div id="footer">
+		  <div id="last-updated">
+          published: April 11, 2007<br />
+			last updated:<!-- #BeginDate format:Am1a -->October 28, 2010 12:23 PM<!-- #EndDate -->
+		        <div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+		  </div>
+			<div id="footer-content">
+				Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E 2P3 Canada<br />
+				Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+				
+				<script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2007";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2007 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				</script>	
+
+		<br />
+				Copyright &copy; 2006 - Archives &amp; Museum Informatics - All rights reserved.<br />
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/buckland/buckland.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:29:40 GMT -->
+</html>
+					

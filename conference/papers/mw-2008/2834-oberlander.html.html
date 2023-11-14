@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2008-papers.dwt" codeOutsideHTMLIsLocked="true" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2008/papers/oberlander/oberlander.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:57:59 GMT -->
+<head>
+
+<!-- InstanceBeginEditable name="HeadPageTitle" -->
+	<title>Archives &amp; Museum Informatics: Museums and the Web 2008: Paper: Oberlander, J., et al., Building An Adaptive Museum Gallery In Second Life</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="metaTitle" -->
+	<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2008: Proceedings" />
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Keywords" -->
+<meta name="Keywords" content="multi-user virtual environments, Second Life, avatar, personalization, museums, natural language generation, mw, mw2008, museums and the web, matw, 2008, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Description" -->
+<meta name="Description" content="Museums and the Web 2008: the international conference for culture and heritage on-line" />
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2007" />
+<!-- InstanceEndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<!-- InstanceBeginEditable name="charset" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" href="../../css/mw2008.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/papers.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/mw2008-noNews.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="ImageRotateScript" -->
+<script language="JavaScript" type="text/javascript">
+
+</script>
+<!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+<!--htdig_noindex-->
+<!-- InstanceBeginEditable name="PageScript" -->
+<!-- InstanceEndEditable -->
+<!--/htdig_noindex-->
+</head>
+<body  onload="initImgRotation()">
+<div id="container">
+  <div id="header" onclick="location.href='../../index.html';" style="cursor:pointer;"> </div>
+  <!--htdig_noindex-->
+  <div id="top-nav">
+    <ul id="top-nav-list">
+      <li><a href="../../register/index.html">Register</a></li>
+      <li><a href="../../dates/index.html">Key Dates</a></li>
+      <li><a href="../../sescal/index.html">Schedule</a></li>
+      <li><a href="../../local/index.html">Local Info</a></li>
+    </ul>
+    <!--/htdig_noindex-->
+  </div>
+  <div id="header-photo"> 
+	 <!-- InstanceBeginEditable name="header-photo" --> <img src="oberlander-t.jpg"  height="132" width="229" alt="MW-photo" />
+	 <!-- InstanceEndEditable --></div>
+<div id="print-title">
+	<h1>Museums and the Web 2008: the international conference for culture and heritage on-line</h1>
+	<h2>produced by Archives &amp; Museum Informatics</h2>
+	<h3>site at http://www.archimuse.com/mw2008/</h3>	 
+</div> 
+ <div id="date"> <a href="../../sescal/index.html">April 9-12, 2008</a><br />
+    <a href="../../local/index.html">Montr&eacute;al, Qu&eacute;bec, Canada</a> </div>
+  <div id="title">
+    <h1> 
+		<!-- InstanceBeginEditable name="PageTitle" --> 
+Building An Adaptive Museum Gallery In Second Life
+		<!-- InstanceEndEditable --> </h1>
+  </div>
+  <!--htdig_noindex-->
+  <div id="main-content">
+    <div id="news">
+    </div>
+    <!--/htdig_noindex-->
+    <div id="intro-paragraph"> 
+		<!-- InstanceBeginEditable name="IntroParagraph" --> 
+        <h2 class="Author"><a href="../../bios/au_3043.html">Jon Oberlander</a>, University of Edinburgh, United Kingdom; 
+          <a href="../../bios/au_440015992.html">George Karakatsiotis</a>, Athens University of Economics and Business, Greece. <a href="../../bios/au_440015991.html">Amy
+          Isard</a>, University of Edinburgh, United Kingdom; and 
+          <a href="../../bios/au_440015990.html">Ion Androutsopoulos,</a> Athens University of Economics and Business, and Digital
+          Curation Unit, Research Centre &ldquo;Athena&rdquo;, Greece</h2>
+        <h3 class="AbstractTitle">Abstract</h3>
+        <p class="AbstractText">We describe initial work on building, within Second Life,
+    a virtual gallery which can automatically tailor itself to individual visitors,
+    responding to their abilities, interests, preferences or history of
+    interaction. The description of an object in the virtual world can be
+    personalised to suit the beginner or the expert, varying how it is said - the
+    choice of language (such as English or Greek), the words, or the complexity of
+    sentences, as well as what is said - by taking into account what else has been
+    seen or described already. The guide delivering the descriptions can remain
+    disembodied, or be embodied as a robotic avatar.</p>
+  <p class="keywords">Keywords: multi-user virtual environments, Second Life,
+    avatar, personalization, museums, natural language generation</p>
+		<!-- InstanceEndEditable --> 
+	</div>
+    <div id="body-text"> 
+		<!-- InstanceBeginEditable name="BodyText" -->
+<div class="Section1">
+
+  <h1>1. Introduction</h1>
+  <p>Second Life is a
+    massive multi-user on-line environment; &ldquo;a 3D virtual world where users can
+    socialize, connect and create using voice and text chat&rdquo;
+    (<a href="http://www.secondlife.com/">http://www.secondlife.com</a>). It is therefore not surprising that both
+    real-world museums and private individual &lsquo;residents&rsquo; and groups are building
+    on earlier work on 3D virtual galleries, exploring the possibilities offered by
+    Second Life and other virtual environments that provide similar facilities
+    (Calef, Vilbrandt, Vilbrandt, Goodwin and Goodwin, 2002; di Blas, Gobbo and
+    Paolini, 2005; Rothfarb and Doherty, 2007; Urban, Marty and Twidale, 2007;
+    Wieneke, N&uuml;tzel and Arnold, 2007). In Web museums, visitors have become
+    accustomed to clicking on images displayed in their browser to retrieve
+    pre-written textual descriptions of cultural heritage objects (Sumption, 2006).
+    It seems straightforward to adapt this to Second Life and allow a visitor (represented
+    by an avatar) to click on an object to read a &lsquo;notecard&rsquo; attached to it
+    (Rothfarb and Doherty, 2007).</p>
+  <p>Such environments may
+    have significant motivational advantages over more conventional Internet-based
+    media (Urban et al., 2007). But we see a specific additional opportunity. The
+    virtues of Second Life can be combined with those found in our earlier work on
+    personalisation of the museum experience. In particular, user-tailored
+    information can be delivered either through dynamic labels on objects or through
+    embodied conversational agents - avatars representing virtual museum curators.
+    In this paper, we record some of our first attempts to season Second Life with
+    a hint of personalization. But first, we provide some detail on the
+    ingredients. </p>
+  <h1>2. Museums In Second Life</h1>
+  <p>Urban et
+    al. (2007) survey museum developments in Second Life, gathering evidence from
+    more than 150 sites, and draw attention to a number of emerging trends. They
+    emphasise that, although museums tend to be understandably concerned about the
+    accurate representation of their artefacts, &ldquo;The social nature of Second Life is a critical component of
+    understanding what it is and how it can, and should, be used.&rdquo; This confirms the view of di Blas et al. (2005), who previously pointed out
+    that &ldquo;the strong point of shared 3D environments is not realism but
+    rather virtual presence (i.e. 'I am engaged in an activity with someone else'),
+    to which realism or high quality graphics are not relevant issues.&rdquo;</p>
+  <p>Urban et al. cite a
+    number of features which help distinguish the new museums into groups.
+    Regarding scale, they note that (because avatars can fly) artefacts can float
+    in mid air or be attached high up on walls, and be much larger than is possible
+    in physical buildings. Setting is linked to this: some sites (like the Second
+    Louvre, <a href="http://slurl.com/secondlife/Tompson/153/96/100/">http://slurl.com/secondlife/Tompson/153/96/100/</a>) do emulate specific
+    physical buildings and interior decoration, but there is no necessity to
+    display virtual objects &lsquo;under cover&rsquo;. They also note that, unless a museum
+    builds its galleries on its own private island, there may be problems with the
+    neighbours and the tone of the neighbourhood. Considering persistence, they
+    note that the changeable nature of not just exhibitions but also of museum
+    buildings can disorient repeat visitors, but can be managed by distinguishing
+    permanent from temporary galleries. On media richness, they note that while
+    video streaming into Second Life allows for mixed realities, the possibility of
+    using &lsquo;holodecks&rsquo; within the environment is now being explored. Regarding
+    visitor engagement, they note the importance of scheduled special events to
+    draw visitors in at the same time, so that they can enjoy opportunities for
+    social interaction. Commenting on the variety of intended purposes - ranging
+    from artefact display to environment simulation to historical recreations -
+    they note that there can be specific difficulties associated with the use of
+    non-player characters to add realism. Clearly, a balance must be struck; while
+    the Second Louvre &ldquo;does not provide much, if any, descriptive information about
+    the artifacts on display,&rdquo; at the other extreme, the
+    Computer History Museum (<a href="http://slurl.com/secondlife/InfoIslandII/225/51/23">http://slurl.com/secondlife/InfoIslandII/225/51/23</a>/) &ldquo;features a slightly aggressive and somewhat insistent
+    robot docent&rdquo;.</p>
+  <p>Rothfarb and Doherty
+    (2007) observe that in the real world, a large amount of interpretive
+    information accompanying an exhibit might satisfy one visitor but drive another
+    away, while in the virtual environment, there are potential solutions to this
+    problem: &ldquo;you can create rich textures adjacent to or on exhibit objects that
+    contain visual or textual information, or you can attach notecard objects.&rdquo; Wieneke et al. (2007) note the success of the International
+    Spaceflight Museum in Second Life (<a href="http://www.slispaceflightmuseum.org/">http://www.slispaceflightmuseum.org</a>), and
+    observe that its design &ldquo;often cites and mimics real world museum
+    features, like descriptive texts and even simulated audio guides.&rdquo; Notecard objects fit this mould, but we would go further, and
+    urge the use of personalised, dynamically generated notecards, dynamic audio or
+    even non-player avatars. Ellis, Patten and Evans (2005) explore a variety of
+    more or less social museum media, and point to the continuing need to &ldquo;target personalised offerings at specific users.&rdquo; In the more traditional
+    Web case, Aroyo et al. (2007) have recently explored personalization through
+    the use of recommender systems. So long as they can avoid excessive aggression
+    or insistence, avatars could be useful not just because they personalise the
+    experience, but also because - returning to di Blas (2005) and Urban et al.
+    (2007) - Second Life is about social interaction, and avatars can improve the
+    social presence of the absent information providers who created the exhibit. </p>
+  <p>Our adaptive gallery
+    is designed in the first instance to address the problems presented by the need
+    to cater to diverse individual visitors; we will shortly relate its specific
+    features to those uncovered by Urban et al. (2007). The 3D gallery we are
+    piloting in Second Life was initially developed in the project Xenios
+    (<a href="http://www.ics.forth.gr/xenios">http://www.ics.forth.gr/xenios</a>) and is now being enhanced within the Indigo
+    project (<a href="http://www.ics.forth.gr/indigo">http://www.ics.forth.gr/indigo</a>). Although Xenios was mainly concerned
+    with real-world robotic guides, its Second Life gallery was used to demonstrate
+    that some of the project&rsquo;s technology is also applicable to virtual 3D museums.</p>
+  <p>The current Indigo
+    project is directed at human-robot interaction in the real-world. As with
+    Xenios, a robot is designed to act as a guide to places within the Hellenic Cosmos
+    (<a href="http://www.hellenic-cosmos.gr/">http://www.hellenic-cosmos.gr</a>)
+    cultural centre of the Foundation of the Hellenic World (FHW), now providing
+    multi-lingual and multi-modal information about objects associated with the
+    agora of ancient Athens. Compared with its immediate predecessors, the key
+    aspect of Indigo is that it should support less restricted dialogues between
+    people and a physical robot, using speech, gesture and facial expressions. But
+    the human-robot dialogue techniques developed for the physical world would very
+    naturally lend themselves to be being used by a &lsquo;robotic&rsquo; (machine controlled,
+    non-player) avatar in a virtual environment like Second Life. Thus, we now
+    sketch some details of the technology enabling the adaptive gallery under
+    construction on the Virtual University of Edinburgh's Second Life archipelago.</p>
+  <h1>3. The Technology Behind The Gallery</h1>
+  <h2>3.1 Personalization</h2>
+  <p>Our current gallery is
+    based around two natural language generation systems: Methodius (Isard, 2007),
+    developed at the University of Edinburgh; and NaturalOWL (Galanis and
+    Androutsopoulos, 2007; Androutsopoulos and Galanis, 2008), developed at the
+    Athens University of Economics and Business. NaturalOWL provides native support
+    for Semantic Web standards (Antoniou and van Harmelen, 2004), such as OWL
+    (<a href="http://www.w3.org/TR/owl-features/">http://www.w3.org/TR/owl-features/</a>) and RDF (<a href="http://www.w3.org/RDF">http://www.w3.org/RDF</a>/); see also
+    Ghiselli et al. (2005) and Ossenbruggen et al. (2007). In the Xenios project,
+    NaturalOWL was embedded in a real-world mobile robotic guide, to generate
+    spoken Greek and English descriptions of points of interest from an underlying
+    OWL ontology in the premises FHW. Methodius was designed to be both robust and
+    scalable up to millions of objects, and was used to demonstrate a test domain
+    at the Royal Commission for the Ancient and Historical Monuments of Scotland
+    (RCAHMS, <a href="http://www.rcahms.gov.uk/">http://www.rcahms.gov.uk</a>). There are significant differences in the
+    focus and implementation of these two generation systems, but discussions of
+    these lie outside the focus of this paper.  We will therefore focus on their
+    shared common heritage and underlying architecture, to give a background to the
+    use of natural language generation in virtual museums.</p>
+  <p>The gallery&rsquo;s
+    personalization mechanisms are rather different from those underlying
+    recommender systems. The basic idea is to create a new text for all individual
+    users, each time they view an object, by taking account not only of the their
+    preferences, but also the context in which they arrive at a specific object.
+    The core of the personalization is the natural language generation system, a
+    form of artificial intelligence which allows data (captured here from
+    collections information management systems and from interviews with curators)
+    to be presented in more user-friendly language.</p>
+  <h2>3.2 Natural Language Generation</h2>
+  <p>There are four main
+    stages in natural language generation: content selection, text planning,
+    microplanning, and surface realization. In the first stage, the system consults
+    a model of the user (and in our case, a set of educational priorities) and a
+    representation of the interaction history, in order to select a subset of the
+    information stored in its knowledge base. In the next stage, this information
+    is placed in a specific order, taking into account the entities and relationships
+    mentioned in each piece of information. Then, again consulting the interaction
+    history, the system&rsquo;s microplanner specifies the verbs and noun phrases, and
+    how they are to be &lsquo;aggregated&rsquo; together, so that more than one idea can be
+    expressed in a given sentence. Finally, the surface realizer converts these
+    specifications into actual text (or a specification which can be converted to
+    speech by a speech synthesizer).</p>
+  <p>This means that the
+    system can adapt its descriptions of museum objects to take into account what
+    has been described before, thereby avoiding redundancy and enabling comparisons
+    to be drawn with objects the visitor has already seen.  It can also highlight
+    ways in which an object resembles or differs from the majority of similar items
+    in a collection.</p>
+  <h2>3.3 Previous Generation Systems</h2>
+  <p>Two previous systems
+    form the basis of our current natural language generation technologies. ILEX
+    was developed at the University of Edinburgh, in collaboration with the
+    National Museums of Scotland (Hitzeman, Mellish and Oberlander, 1997;
+    Oberlander, Mellish, O&rsquo;Donnell and Knott, 1997; O'Donnell, Mellish, Oberlander
+    and Knott, 2001). There were two main versions: a Web-based virtual gallery;
+    and a phone-based system for physical gallery visitors. It was followed by the
+    M-PIRO system (Isard, Oberlander, Androutsopoulos and Matheson, 2003;
+    Androutsopoulos, Oberlander and Karkaletsis, 2007). This added support for
+    Greek and Italian, along with improved authoring support, and with more
+    sophisticated user modeling. Teams in Edinburgh, Athens, Trento and London (<a
+href="http://www.ltg.ed.ac.uk/mpiro">http://www.ltg.ed.ac.uk/mpiro</a>) worked
+    with FHW to provide written and spoken descriptions of ancient Greek artefacts,
+    displayed both in a Web-gallery and in FHW's 3D virtual reality centre.</p>
+  <h1>4. An Adaptive Gallery In Second Life</h1>
+  <h2>4.1 Vue: The Virtual University Of Edinburgh</h2>
+  <p>The VUE group is &ldquo;a
+    virtual educational and research institute bringing together all those
+    interested in the use of virtual worlds for teaching, research
+    and&nbsp;outreach related to the University of Edinburgh&rdquo;
+    (<a href="http://vue.ed.ac.uk/">http://vue.ed.ac.uk/</a>). It is independent of Second Life, in that its virtual
+    presences are not confined to it. Nonetheless, Second Life currently provides a
+    focal point for researchers from Schools such as Education, Architecture, and
+    Informatics. The VUE archipelago houses meetings, tutorials, entertainment,
+    artworks, temporary constructions, and various kinds of academic research,
+    including our gallery (<a href="http://slurl.com/secondlife/Vue/205/53/30">http://slurl.com/secondlife/Vue/205/53/30</a>),
+    which is currently available only to visitors participating in experiments.</p>
+  <h2>4.2 The Adaptive Gallery</h2>
+  <p>Referring back to the
+    features isolated by Urban et al. (2007), our current adaptive gallery is
+    conventional as to space and setting, being relatively small and located on a
+    University&rsquo;s own island. It is relatively permanent, and does not currently mix
+    realities for a richer media experience - unless we consider the avatar itself
+    to be a &lsquo;medium&rsquo;. As yet, we have not mounted any scheduled events; this is
+    because the continuous presence of a software-controlled interpreter, in the
+    shape of a non-human robot, means that a visitor will always confront another
+    social presence in the space. How social it is, of course, depends both on its
+    appearance and on whether we can provide a smooth experience for users,
+    avoiding excessively insistent behaviour, for instance; and this has yet to be
+    demonstrated. </p>
+  <h2>4.3 A Sample Visit</h2>
+  <p>To give a flavour of a
+    visitor&rsquo;s experience in the prototype gallery, we here provide a sequence of
+    screenshots taken within Second Life. In each case, part of the text which the
+    user sees is visible in the image, and the full text is given below it.</p>
+  <p class="caption"><img src="oberlander-fig1.jpg" alt="Figure 1" width="400" height="299" /></p>
+  <p class="caption">Fig 1: Gallery visitor views a prochous</p>
+  <p class="MsoBodyText">The avatar says:</p>
+  <p class="BlockQuote">This is a prochous. A prochous is a vessel that was used to pour liquids. It has one handle, a large body , and a nib-like neck.  This particular prochous was decorated using the red-figure technique.  In the red-figure technique, the silhouettes have the red colour of clay, while the background and details are rendered in black.  This prochous was created during the classical period. The classical period is characterised by the initial political supremacy of Athens (its &quot;golden age&quot;), which was followed by the expansion of the Greek world under the rule of Alexander the Great of Macedonia. It covers the time between 480 and 323 B.C. This prochous dates from the second quarter of the 5th century B.C. It depicts a Greek hunting a Persian. Currently it is exhibited in the Museum f&uuml;r Kunst in Hamburg.</p>
+  <p class="caption"><img src="oberlander-fig2.jpg" alt="Figure 2" width="400" height="280" /></p>
+  <p class="caption">Fig 2: Gallery visitor views a tetradrachm </p>
+  <p>The avatar says:</p>
+  <p class="BlockQuote">This is a
+    tetradrachm.  Like the prochous that you saw earlier, it was created during the
+    classical period. It originates from Attica and it dates from between 440 and
+    420 B.C. It is made of silver and today it is exhibited in the Numismatic
+    Museum of Athens.</p>
+  <p class="caption"><img src="oberlander-fig3.jpg" alt="Figure 3" width="400" height="280" /></p>
+  <p class="caption">Fig 3: Gallery visitor views a drachma</p>
+  <p>The avatar says:</p>
+  <p class="BlockQuote">This is a drachma,
+    created during the classical period.  Like the tetradrachm that you saw
+    earlier, which is also on my left, this drachma originates from Attica and it
+    is made of silver.  It dates from circa the 5th century B.C.  It has an image
+    of Athena crowned with a branch of olive, her tree, on its obverse.  On its
+    reverse, there is a picture of the goddess&rsquo; owl.  A drachma was enough for a
+    &ldquo;metic&rdquo; (that is, a foreigner who stayed in Athens) to pay the &ldquo;metic tax&rdquo; each
+    month.  Currently this drachma is exhibited in the Agora Museum of Athens.</p>
+  <p class="caption"><img src="oberlander-fig4.jpg" alt="Figure 4" width="400" height="280" /></p>
+  <p class="caption">Fig 4: Gallery visitor views a stater</p>
+  <p>The avatar says:</p>
+  <p class="BlockQuote">This is a stater, a kind of coin.  It was created during
+    the Hellenistic period.  The Hellenistic period is the chaotic period from the
+    death of Alexander the Great and the subsequent dissolution of his empire to
+    the victory of the Romans over the Greeks at the Battle of Actium, comprising a
+    truly international range of artistic trends.  The Hellenistic period covers
+    the time between 323 and 31 B.C.  This stater originates from the Aetolian
+    League and it dates from between 220 and 189 B.C.  While all the previous coins
+    that you saw are made of silver, it is made of gold.</p>
+  <p>As can be seen, the
+    system never repeats information which it has already expressed. The first time
+    that the classical period is mentioned, in the description of the prochous
+    (Figure 1), extended information about the period is provided. When the user
+    then moves on to the tetradrachm (Figure 2), which was also created during the
+    classical period, no information about the period is repeated.</p>
+  <p>The drachma (Figure 3)
+    has several similar attributes to the tetradrachm (Figure 2), and these are
+    highlighted in the third text.  In the fourth text (Figure 4), we learn that
+    the stater is made of a different material from both the previous coins.  The
+    system also has some spatial awareness, and is able to refer to objects in
+    terms of their position, demonstrated in the third text (Figure 3), where the
+    tetradrachm is now to the left of the avatar.</p>
+  <h1>5. Conclusions</h1>
+  <p>We noted
+    earlier that avatars can compensate socially for the absent information
+    providers who created the exhibit. But even if well-designed, such avatars
+    simply deliver personalised information to an individual visitor, so they run a
+    risk already observed in the real world. There,
+    Sumption (2006) points out that developers of wireless handheld guides must &ldquo;look
+    for solutions that avoid the often socially isolating consequences of so many
+    current electronic guides.&rdquo; This strikes us as a
+    challenge relevant to the virtual as well as the physical museum guide, and we
+    hope to address it as part of our programme of work.</p>
+  <p>There are not yet any
+    user evaluations for our virtual gallery, since it is still under development.
+    However, studies of several of the previous systems mentioned above have shown
+    that users both prefer and learn more from systems which use personalization
+    than from those which do not (Cox, O&rsquo;Donnell and Oberlander, 1999; Karasimos
+    and Isard, 2004; Marge, 2007).</p>
+  <p>It is planned that the
+    current gallery will be extended to allow the National Museums of Scotland to
+    pilot new real-world gallery designs, and we intend to carry out evaluations of
+    users interacting with more-or-less human-like avatars. In particular, we aim
+    to exploit an evaluation technique piloted by Dalzel-Job, Nichol and Oberlander
+    (2008): tracking the gazes of a human users as  they explore an environment
+    within Second Life, and interact with the avatars within it. </p>
+  <p>We also plan to extend
+    our technology to support natural language generation from ontologies compliant
+    with the CIDOC CRM standard (<a href="http://cidoc.ics.forth.gr/">http://cidoc.ics.forth.gr/</a>), which is now also
+    available in OWL.</p>
+  <h2>Acknowledgements</h2>
+  <p class="AcknowedgementsText">We thank our referees for encouraging comments.
+    The Xenios project was co-funded by the European Union and the Greek General
+    Secretariat of Research and Technology. INDIGO (Interaction with Personality
+    and Dialogue Enabled Robots)is IST FP6 project 045388 of the European Union.</p>
+  <h2>References</h2>
+  <p class="ReferencesText">Androutsopoulos, I. and D. Galanis. (2008). Generating
+    Natural Language Descriptions from OWL Ontologies: Experience from the
+    NaturalOWL System. Submitted for publication. Available from the authors upon
+    request.</p>
+  <p class="ReferencesText">Androutsopoulos, I., J. Oberlander and V. Karkaletsis
+    (2007). Source Authoring for Multilingual Generation of Personalised Object
+    Descriptions. Natural Language Engineering, 13, 191&#8211;233.</p>
+  <p class="ReferencesText">Antoniou, G. and F. van Harmelen. (2004). A Semantic
+    Web Primer. Cambridge, MA: MIT Press.</p>
+  <p class="ReferencesText">Aroyo, L., et al. (2007). Personalized Museum
+    Experience: The Rijksmuseum Use Case. In J. Trant and D. Bearman (eds). Museums
+    and the Web 2007: Proceedings. Toronto: Archives &amp; Museum Informatics,
+    published March 31, 2007 at 
+    <a href="http://www.archimuse.com/mw2007/papers/aroyo/aroyo.html">http://www.archimuse.com/mw2007/papers/aroyo/aroyo.html</a></p>
+  <p class="ReferencesText">Calef, C., T. Vilbrandt, C. Vilbrandt, J. Goodwin, and
+    J. Goodwin, (2002). &ldquo;Making It Realtime: Exploring the use of optimized
+    realtime environments for historical simulation and education&rdquo;. In D. Bearman
+    and J. Trant (eds.). Museums and the Web 2002: Proceedings. Toronto: Archives
+    &amp; Museum Informatics. Also available, and retrieved January 25, 2008 from 
+    <a href="http://www.archimuse.com/mw2002/papers/calef/calef.html">http://www.archimuse.com/mw2002/papers/calef/calef.html</a>.</p>
+  <p class="ReferencesText">Cox, R., M. O'Donnell and J. Oberlander (1999).
+    &ldquo;Dynamic versus Static Hypermedia in Museum Education: An Evaluation of ILEX,
+    the Intelligent Labelling Explorer&rdquo;. In Proceedings of the 9th International
+    Conference on Artificial Intelligence and Education, pp181&#8211;188. Le Mans,
+    France, 1999.</p>
+  <p class="ReferencesText">Dalzel-Job, S., C. Nicol and J. Oberlander (2008).
+    &ldquo;Comparing Behavioural and Self-Report Measures of Engagement with an Embodied
+    Conversational Agent: A First Report on Eye Tracking in Second Life&rdquo;. In
+    Proceedings of the 2008 Symposium on Eye Tracking Research &amp; Applications
+    (ETRA 2008), Savannah, GA, March 26-28 2008.</p>
+  <p class="ReferencesText">Di Blas, N., E. Gobbo and P. Paolini (2005). &ldquo;3D Worlds
+    and Cultural Heritage: Realism vs. Virtual Presence&rdquo;. In J. Trant and D.
+    Bearman (eds.) Museums and the Web 2005: Proceedings, Toronto: Archives &amp;
+    Museum Informatics, published March 31, 2005 at
+    <a href="http://www.archimuse.com/mw2005/papers/diBlas/diBlas.html">http://www.archimuse.com/mw2005/papers/diBlas/diBlas.html</a></p>
+  <p class="ReferencesText">Ellis, M., D. Patten and D. Evans (2005). &ldquo;Getting The
+    Most Out Of Our Users, Or, The Science Museum Lab: How The Dana Centre Lets Us
+    Play&rdquo;. In J. Trant and D. Bearman (eds.). Museums and the Web 2005:
+    Proceedings, Toronto: Archives &amp; Museum Informatics, published March 31,
+    2005 at <a href="http://www.archimuse.com/mw2005/papers/ellis/ellis.html">    http://www.archimuse.com/mw2005/papers/ellis/ellis.html</a></p>
+  <p class="ReferencesText">Galanis, D. and I.Androutsopoulos (2007). &ldquo;Generating
+    multilingual descriptions from linguistically annotated OWL Ontologies: the
+    NaturalOWL system&rdquo;. In Proceedings of the 11th European Workshop on Natural
+    Language Generation, Schloss Dagstuhl, Germany, pp. 143&#8211;146.</p>
+  <p class="ReferencesText">Ghiselli, C., A. Trombetta, L. Bozzato and E. Binaghi
+    (2005). &ldquo;Semantic Web Meets Virtual Museums: The Domus Naturae Project&rdquo;. In Cultural
+    Heritage Informatics 2005: selected papers from ichim05. Toronto: Archives
+    &amp; Museum Informatics, retrieved January 25, 2008 from 
+    <a href="http://www.archimuse.com/publishing/ichim05/ghiselli.pdf">http://www.archimuse.com/publishing/ichim05/ghiselli.pdf</a></p>
+  <p class="ReferencesText">Hitzeman, J., C. Mellish and J. Oberlander (1997).
+    &ldquo;Dynamic Generation of Museum Web Pages: The Intelligent Labelling Explorer&rdquo;.
+    Archives and Museum Informatics, 11, 107&#8211;115.</p>
+  <p class="ReferencesText">Isard, A., (2007). &ldquo;Choosing the Best Comparison Under
+    the Circumstances&rdquo;. In Proceedings of the International Workshop on
+    Personalization Enhanced Access to Cultural Heritage (PATCH07), June 2007,
+    Corfu, Greece, retrieved January 25, 2008, from
+    <a href="http://www.cogsci.ed.ac.uk/~amyi/papers/patch07.pdf">http://www.cogsci.ed.ac.uk/~amyi/papers/patch07.pdf</a></p>
+  <p class="ReferencesText">Isard, A., J. Oberlander, I. Androutsopoulos and C.
+    Matheson (2003). &ldquo;Speaking the Users' Languages&rdquo;. IEEE Intelligent Systems, 18,
+    40&#8211;45.</p>
+  <p class="ReferencesText">Karasimos, A. and A. Isard (2004). &ldquo;Multi-lingual
+    Evaluation of a Natural Language Generation System&rdquo;. In Proceedings of the
+    Fourth International Conference on Language Resources and Evaluation (LREC
+    2004), May 2004, Lisbon, Portugal.</p>
+  <p class="ReferencesText">Marge, M. (2007). An Evaluation
+    of Comparison Generation in the Methodius Natural Language Generation System.
+    MSc Thesis, University of Edinburgh, September 2007.</p>
+  <p class="ReferencesText">Oberlander, J., C. Mellish, M. O'Donnell and A. Knott
+    (1997). &ldquo;Exploring a Gallery with Intelligent Labels&rdquo;. In D. Bearman and J.
+    Trant (eds), Museum Interactive Multimedia 1997: Cultural Heritage Systems
+    Design and Interfaces&#8232;: Selected Papers from ICHIM97, pp153-161.
+    Pittsburgh: Archives and Museum Informatics. Also available, and retrieved
+    January 25, 2008, from: 
+    <a href="http://www.archimuse.com/publishing/ichim97/oberlander.pdf">http://www.archimuse.com/publishing/ichim97/oberlander.pdf</a></p>
+  <p class="ReferencesText">O'Donnell, M., C. Mellish,  J. Oberlander and A. Knott
+    (2001). &ldquo;ILEX: An Architecture for a Dynamic Hypertext Generation System&rdquo;.
+    Natural Language Engineering, 7, 225&#8211;250.</p>
+  <p class="ReferencesText">Ossenbruggen, J. et al., (2007). &ldquo;Searching and
+    Annotating Virtual Heritage Collections with Semantic-Web Techniques&rdquo;. In J.
+    Trant and D. Bearman (eds). Museums and the Web 2007: Proceedings. Toronto:
+    Archives &amp; Museum Informatics, published March 31, 2007 at
+    <a href="http://www.archimuse.com/mw2007/papers/ossenbruggen/ossenbruggen.html">&#8232;http://www.archimuse.com/mw2007/papers/ossenbruggen/ossenbruggen.html</a></p>
+  <p class="ReferencesText">Rothfarb, R. and P. Doherty  (2007). &ldquo;Creating Museum
+    Content and Community in Second Life&rdquo;. In J. Trant and D. Bearman (eds).
+    Museums and the Web 2007: Proceedings. Toronto: Archives &amp; Museum
+    Informatics, published March 31, 2007 at 
+    <a href="http://www.archimuse.com/mw2007/papers/rothfarb/rothfarb.html">http://www.archimuse.com/mw2007/papers/rothfarb/rothfarb.html</a></p>
+  <p class="ReferencesText">Sumption, K. (2006). &ldquo;In Search of the Ubiquitous
+    Museum: Reflections of Ten Years of Museums and the Web&rdquo;. In J. Trant and D.
+    Bearman (eds.). Museums and the Web 2006: Proceedings, Toronto: Archives &amp;
+    Museum Informatics, published March 1, 2006 at
+    <a href="http://www.archimuse.com/mw2006/papers/sumption/sumption.html">http://www.archimuse.com/mw2006/papers/sumption/sumption.html</a></p>
+  <p class="ReferencesText">Urban, R., P. Marty and M. Twidale (2007). &ldquo;A Second
+    Life for your Museum: 3D Multi-User Virtual Environments and Museums&rdquo;. In J.
+    Trant and D. Bearman (eds). Museums and the Web 2007: Proceedings. Toronto:
+    Archives &amp; Museum Informatics, published March 31, 2007 at
+    <a href="http://www.archimuse.com/mw2007/papers/urban/urban.html">http://www.archimuse.com/mw2007/papers/urban/urban.html</a></p>
+  <p class="ReferencesText">Wieneke, L., J. N&uuml;tzel and D. Arnold (2007). &ldquo;Life 1.5:
+    Creating a task based reward structure in Second Life to encourage and direct
+    user created content&rdquo;. In J. Trant and D. Bearman (eds) International Cultural
+    Heritage Informatics Meeting (ICHIM07): Proceedings. Toronto: Archives &amp;
+    Museum Informatics. 2007. Published September 30, 2007 at
+    <a href="http://www.archimuse.com/ichim07/papers/wieneke/wieneke.html">http://www.archimuse.com/ichim07/papers/wieneke/wieneke.html</a></p>
+</div>
+<hr class="msocomoff" align="left" size="1" width="33%" />
+<!-- InstanceEndEditable --> </div>
+  				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" --> Oberlander, J., et al., Building An Adaptive Museum Gallery In Second Life<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2008: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics. Published March 31, 2008. Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+
+http://www.archimuse.com/mw2008/papers/<!-- #BeginEditable "URL" --> oberlander/oberlander.html
+				 <!-- #EndEditable --></p>
+</div>
+  <!--htdig_noindex-->
+  
+  <div id="sidebar">
+    <div id="side-nav">
+      <ul id="side-nav-list">
+        <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+        <li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+        <li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+        <li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+        <li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+        <li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+        <li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+        <li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+        <li id="pc"> <a href="../../thanks/index.html" class="menu">Committees</a></li>
+      </ul>
+    </div>
+    <div id="search-site">
+<form method="get" id="searchform" action="http://wp.museumsandtheweb.com/">
+<input type="text" class="field" name="s" id="s" placeholder="Search">
+<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+</form>
+    </div>
+    <div id="sidebar-links">
+      <ul id="sidebar-links-list">
+        <li><a href="../../../index.html" class="produced-by">produced by<br />
+          <img src="../../images/sidelogo.png" width="144" height="37" alt="AMI logo" /></a></li>
+        <li><a href="../../../index.html">Join our mailing list</a></li>
+        <li><a href="http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+          <img src="../../images/search.gif" alt="search" width="24" height="25" border="0" /></a></li>
+      </ul>
+    </div>
+    <div id="sidebar-acknowledge">
+      <p><img src="../../images/PCH-logo.png" alt="PCH" width="160" height="22" /><br />
+        Presented  in conjunction with the<br />
+        Department of Canadian Heritage through the <a href="http://www.chin.gc.ca/" target="_blank">Canadian
+      Heritage Information Network (CHIN)</a> and <a href="http://www.pch.gc.ca/progs/pcce-ccop/index_e.cfm" target="_blank">Canadian Culture Online (CCO)</a>.</p>
+      <div id="sponsor">
+ <p>Sponsored by<br />
+   <a href="../../exhibit/ex_335001860.html">Interwoven</a> and <a href="../../exhibit/ex_335001863.html">Interflow</a></p>
+</div>
+    </div>
+   <!--/htdig_noindex-->
+  </div>
+  <div id="footer">
+   <div id="last-updated">published April 9, 2008<br />
+	 last updated:
+	   <!-- #BeginDate format:Am1a -->October 27, 2010 10:14 PM<!-- #EndDate --><br />
+      <div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+    </div>
+    <!--htdig_noindex-->
+    <div id="footer-content">
+      <p>Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E
+        2P3 Canada<br />
+        Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+        <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2008";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2008 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				  </script>
+        <br />
+        Copyright &copy; 2008 &ndash; Archives &amp; Museum Informatics &ndash; All
+        rights reserved.<br />
+      </p>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2008/papers/oberlander/oberlander.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:57:59 GMT -->
+</html>

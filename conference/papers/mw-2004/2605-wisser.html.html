@@ -1,0 +1,618 @@
+<html><!-- InstanceBegin template="/Templates/mw2004-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2004/papers/wisser/wisser.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:46:39 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>Museums and the Web 2004 : Papers : Wisser, Museum Metadata in a Collaborative Environment ...</title>
+<!-- #EndEditable --> 
+<meta name="keywords" content="Museums and the Web 2004, Archives &amp; Museum Informatics, museums online, on-line, cultural heritage online, museum digitization, internet, conference, symposium, workshop, meeting, international, papers, presentations, multimedia, interactive, education, exhibits, evaluation, virtual reality, digitization, information architecture, information design, interface design, digital library, digital libraries ">
+<!-- #BeginEditable "page keywords" -->
+<meta name="keywords" content="Metadata, Museums, Collaboration, Digitization, Collection management systems, Open Archives Initiative OAI ">
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<!-- #BeginEditable "script" --><!-- #EndEditable --> 
+<link rel="stylesheet" href="../../../mw2003/Library/mw2003.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="../../../mw2002/images/mw2002.bg.gif" TEXT="#000000" LINK="#660099" VLINK="#000066" onLoad="MM_preloadImages('../../images/nav/register_on.gif','../../images/nav/workshops_on.gif','../../images/nav/sessions_on.gif','../../images/nav/speakers_on.gif','../../images/nav/interactions_on.gif','../../images/nav/demos_on.gif','../../images/nav/exhibits_on.gif','../../images/nav/events_on.gif','../../images/nav/best_on.gif','../../images/nav/dates_on.gif','../../images/nav/local_on.gif','../../images/nav/sponsors_on.gif')">
+<table WIDTH="600" BORDER="0" CELLSPACING="2" CELLPADDING="5">
+  <tr> 
+    <td WIDTH="145" ALIGN="LEFT" VALIGN="TOP"> 
+      <p><a href="../../index.html"><img src="../../images/mw.gif" width="112" height="155" border="0" alt="/mw/"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('register','','../../images/nav/register_on.gif',1)"><img name="register" border="0" src="../../images/nav/register_off.gif" width="112" height="18"></a><br>
+        <a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('workshops','','../../images/nav/workshops_on.gif',1)"><img name="workshops" border="0" src="../../images/nav/workshops_off.gif" width="112" height="18"></a><br>
+        <a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sessions','','../../images/nav/sessions_on.gif',1)"><img name="sessions" border="0" src="../../images/nav/sessions_off.gif" width="112" height="18"></a><br>
+        <a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('speakers','','../../images/nav/speakers_on.gif',1)"><img name="speakers" border="0" src="../../images/nav/speakers_off.gif" width="112" height="18"></a><br>
+        <a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('interactions','','../../images/nav/interactions_on.gif',1)"><img name="interactions" border="0" src="../../images/nav/interactions_off.gif" width="112" height="18"></a><br>
+        <a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('demonstrations','','../../images/nav/demos_on.gif',1)"><img name="demonstrations" border="0" src="../../images/nav/demos_off.gif" width="112" height="18"></a><br>
+        <a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('exhibits','','../../images/nav/exhibits_on.gif',1)"><img name="exhibits" border="0" src="../../images/nav/exhibits_off.gif" width="112" height="18"></a><br>
+        <a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('events','','../../images/nav/events_on.gif',1)"><img name="events" border="0" src="../../images/nav/events_off.gif" width="112" height="18"></a><br>
+        <a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('best','','../../images/nav/best_on.gif',1)"><img name="best" border="0" src="../../images/nav/best_off.gif" width="112" height="18"></a><br>
+        <a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dates','','../../images/nav/dates_on.gif',1)"><img name="dates" border="0" src="../../images/nav/dates_off.gif" width="112" height="18"></a><br>
+        <a href="../../local/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('local','','../../images/nav/local_on.gif',1)"><img name="local" border="0" src="../../images/nav/local_off.gif" width="112" height="18"></a><br>
+        <a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sponsors','','../../images/nav/sponsors_on.gif',1)"><img name="sponsors" border="0" src="../../images/nav/sponsors_off.gif" width="112" height="18"></a> 
+        <br>
+        <br>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../images/nav/nav_ami.gif" width="135" height="35" border="0" alt="A&amp;MI home"></a> 
+        <br>
+      </p>
+      <table width="81%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td align="left" valign="top"> 
+            <p align="right"><span class="verysmall">158 Lee Avenue<br>
+              Toronto Ontario<br>
+              M4E 2P3 Canada</span></p>
+            <p class="verysmall" align="right">ph: +1 416-691-2516<br>
+              fx: +1 416-352-6025</p>
+            <p align="right"><span class="verysmall">info @ archimuse.com<br>
+              <a href="http://www.archimuse.com/">www.archimuse.com</a></span></p>
+            <div align="right"> 
+              <table width="74">
+                <tr> 
+                  <td> <a href="http://search.museumsandtheweb.com/search" target="_top"> 
+                    <img src="../../images/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+                  </td>
+                  <td valign="MIDDLE"> <a href="http://search.museumsandtheweb.com/search"> 
+                    <span class="verysmall">Search<br>
+                    A&MI</span></a> </td>
+                </tr>
+              </table>
+            </div>
+            <p align="right"><font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Join 
+              our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing 
+              List</a>. <br>
+              <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</span></font></p>
+            <p align="right">&nbsp;</p>
+            <p align="right">&nbsp; </p>
+            <p align="right"><span class="verysmall">published: March 2004<br>
+analytic scripts updated:&nbsp; 
+              <!-- #BeginDate format:Am1 -->October 28, 2010<!-- #EndDate -->
+              </span></p>
+            <p align="right"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a> </p>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp; </p>
+    </td>
+    <td WIDTH="455" ALIGN="LEFT" VALIGN="TOP" class="normal"><a href="../../speakers/index.html"><img src="../../images/papers.gif" width="390" height="55" border="0" alt="Museums and the Web 2003 Papers"></a> 
+      <br>
+      <!-- #BeginEditable "Body of Page" -->
+       
+        <p class="PaperTitle">Museum Metadata in a Collaborative Environment: North 
+          Carolina ECHO and the North Carolina Museums Council Metadata Working 
+          Group</p>
+        <p class="Author">Katherine M. Wisser, Duke University, United States</p> <p class="AbstractTitle">Abstract</p>
+         <p class="AbstractText">The digital environment increases pressures on the 
+          museum community to construct unified metadata solutions that are compatible 
+          with metadata solutions from other cultural institutions.  This paper 
+          discusses the challenges of museum metadata implementation and outlines 
+          a strategy devised for the state-wide initiative in North Carolina to 
+          create an on-line portal for cultural institution material.  It outlines 
+          the prominence of museums in North Carolina's cultural institutions 
+          from survey results, and, through the experiences of a metadata working 
+          group, it addresses the issues of museum metadata.  Those issues include 
+          the variety of existing collection management systems, metadata diversity, 
+          semantics struggles and the problem of the digital divide.  The paper 
+          proposes a search and retrieval solution and concludes with a discussion 
+          of the advantages and disadvantages of museum metadata in this kind 
+          of effort.</p>
+        <p class="keywords">Keywords:  Metadata, Museums, Collaboration, Digitization, 
+          Collection management systems, Open Archives Initiative OAI </p>
+        <h1>Introduction</h1><p>The digital environment has increased expectations 
+          for collaboration between diverse cultural institutions.  State and 
+          national initiatives are attempting to bring together cultural heritage 
+          information in on-line portals that include resources from libraries, 
+          archives, historic societies, museums and other cultural heritage institutions.  
+          To achieve this, institutions serving a variety of missions and users 
+          are coming together to provide standardized information about their 
+          diverse resources.  Much of this standardization is made possible by 
+          the creation and manipulation of metadata.</p><p>Collaboration in metadata has been a long-term tradition 
+          for libraries, as demonstrated by the cooperative cataloging efforts 
+          of OCLC and RLIN.  Archives, on the other hand, experienced a long-time 
+          resistance to metadata standardization that has been due to the unique 
+          nature of the materials.  While archivists conceded that they create 
+          finding aids for their collections, they clung to the concept of institutional 
+          individuality because those collections had exceptional qualities.  
+          In the past few decades, archives have begun to follow the cooperative 
+          initiative through such standards as <i>Archives, Personal Papers and 
+          Manuscripts </i>and the corresponding MARC AMC format, Encoded Archival 
+          Description (EAD), and most recently, the work of United States Task 
+          Force on Archival Description (USTARD).  Metadata standards in this 
+          environment succeeded because of their recognition of a unified structure 
+          while providing flexibility in the creation of valid representation.</p><p>The museum environment faces these same challenges 
+          to an even higher degree.  Individual museums use some kind of collection 
+          management system.  These systems can be proprietary or home-grown, 
+          but they serve the needs of their institutions in both administrative 
+          and interpretive functions.  Recognizing the overlying structure of 
+          that information to create a common metadata standard that will assist 
+          in the sharing of information, though, is only part of the challenge 
+          facing museums in today's collaboration environment.  Not only 
+          do museums have to agree within the museum community, but they must 
+          also fit in with established metadata systems in order to be included 
+          in on-line cultural heritage portals.  In such collaborations museums 
+          face a number of challenges to integrating their metadata systems with 
+          other systems.  Museums, unlike libraries and archives, have differing 
+          missions for their patron-base and correspondingly have different approaches 
+          to how they deal with their materials.</p><p>The proliferation of digitization initiatives has 
+          expanded the demands on collaboration for inclusiveness.  Cooperative 
+          projects such as the On-line Archive of California (OAC) (<a href="http://oac.cdlib.org/" target="_blank">http://oac.cdlib.org/</a>) 
+          and the Colorado Digitization Program (CDP) (<a href="http://cdpheritage.org/" target="_blank">http://cdpheritage.org/</a>) 
+          have created all-inclusive on-line cultural heritage material access.  
+          The Colorado Digitization Program has a </p>
+        <p class="BlockQuote">vision of creating a virtual collection of these unique 
+          resources and special collections, expanding access to information on 
+          Colorado's history, culture, and scientific heritage through digitization 
+          (<i>Bishoff, 2000</i>).</p><p> NC ECHO's outlook is similar to that of CDP 
+          in that both projects are attempting to integrate resources through 
+          a digital portal.  The CDP is focused more towards the creation of digital 
+          objects.  NC ECHO, on the other hand, recognizes that not all institutions 
+          are ready or able to create digital objects, but it wants those institutions 
+          to be able to include their information as well. NC ECHO hopes to include 
+          information regarding non-digitized materials also.  </p><p>A unified museum metadata strategy is the first step 
+          to inclusion.  Metadata challenges include the unique qualities of basic 
+          descriptive parameters for museum and artifact-based collections, the 
+          diversity of software solutions available to museums that discourage 
+          standardized formats for expressing metadata about materials, and the 
+          emphasis on differing layers of metadata regarding their materials that 
+          do not always constitute public information.  These are the kinds of 
+          challenges that we have been struggling with in North Carolina, in our 
+          state-wide initiative, NC ECHO.  </p><p>This paper will address the efforts of the North 
+          Carolina Museums Council (NCMC) metadata working group to confront metadata 
+          issues to achieve inclusion within the NC ECHO state-wide portal.  It 
+          begins with an understanding of the cultural institution landscape in 
+          North Carolina.  It will then discuss the community approach to devise 
+          a metadata strategy, including issues of existing collection management 
+          systems, metadata diversity and a semantics struggle, the digital divide, 
+          and finally it will outline a strategy to follow.  Some information 
+          dissemination techniques will be discussed in order to reach the larger 
+          North Carolina museum community.  The benefits of a common metadata 
+          strategy are discussed in terms of a search and retrieval solution, 
+          and the paper concludes with a discussion of the <i>metadata first</i> 
+          approach adopted by NC ECHO, and some of the possible advantages and 
+          disadvantages of this kind of cultural institution collaboration.</p>
+        <h1>The North Carolina Cultural Institution Landscape</h1>
+        <p>The overall NC ECHO project vision is to create a 
+          portal that provides a single entry point for the citizens of North 
+          Carolina to the cultural materials resources of North Carolina's 
+          institutions in order to enhance education, research, and learning.  
+          The NC ECHO project includes five distinct but inter-related components:  
+        </p>
+      <ol class="listwithnumbers">
+        <li>
+          a comprehensive 
+            state-wide needs assessment and survey of all cultural institutions 
+            in North Carolina; </li>
+        <li>
+          site visits 
+            to each cultural institution and detailed reports; </li>
+        <li>
+          a web portal 
+            and searchable directory of all cultural institutions; </li>
+        <li>
+          continuing 
+            education programs offering a variety of workshops for institution 
+            staff;  </li>
+        <li>
+          grant programs 
+            to facilitate individual and collaborative digitization programs.  
+        </li>
+      </ol>
+      <p>Through these initiatives, the NC ECHO project encourages 
+          cooperation and collaboration among the different types of cultural 
+          institutions extant in North Carolina and facilitates as well as encouraging 
+          partnerships among institutions of varying levels of technical and professional 
+          experience.  The first step that NC ECHO undertook was to conduct a 
+          survey of the cultural heritage institutions, including the identification 
+          of institutions and an assessment of current digital capabilities and 
+          on-line presence.  </p><p>The survey of cultural institutions (projected completion 
+          in 2005) serves as a foundation for the state-wide initiatives that 
+          constitute NC ECHO.  Data here represent the survey results as of September 
+          2003, when over 600 institutions had been contacted.  The results of 
+          the survey demonstrate that North Carolina is rich in cultural heritage 
+          and the state treasures that heritage.  Material spans from 165 million 
+          BCE to the present day.  While most institutions responded that material 
+          from the modern era (19<sup>th</sup> and 20<sup>th</sup> centuries) 
+          form the largest parts of their collections, holdings represent the 
+          whole range of human history.  Institutions account for approximately 
+          428,546 total linear feet of material, with 8,456,161 art and artifacts, 
+          145,517 microfilm reels, 38,855 oversized items, 24,711 motion picture 
+          films, 15,787 videotapes, 99,247 audio tapes, and 4,275 computer media 
+          items.  This demonstrates not only a wide variety of material but also 
+          a wide number of challenges facing the NC ECHO project in providing 
+          access to such diverse resources.  </p><p>In addition, there is an active interest among our 
+          scholars, researchers and public in the cultural heritage information 
+          of North Carolina.  Survey respondents reported a total of 130,728 research 
+          requests communicated via postal mail, electronic mail, telephone, and 
+          fax, and 7,395,705 visitors, including scholarly researchers (4%), exhibit 
+          viewers (86%), and school children (10%).  Appealing to this wide variety 
+          of patrons presents many challenges.  North Carolinians are the primary 
+          users of cultural institutions in the state, but 59 (17%) of the 324 
+          institutions that responded to the question indicated that over half 
+          of their users were from outside of the state.  These kinds of demographics 
+          place more demand on the virtual access to attract more out-of-state 
+          users to the wonders that exist within cultural heritage institutions 
+          in North Carolina.  </p><p>Patrons are visiting North Carolina cultural heritage 
+          institutions for a variety of reasons.  Surveyed institutions reported 
+          that the categories of genealogy, local history, scholarly research 
+          and publications, undergraduate class work, K &#8211; 12 work, property 
+          or legal research, publicity campaigns and public relations, administrative 
+          or institutional support, education, and aesthetic appreciation were 
+          all viable reasons why patrons visit North Carolina institutions.  A 
+          preliminary analysis of the data presented from this question indicates 
+          that genealogy, education or interpretation, and aesthetic appreciation 
+          achieved the highest average percentage of purpose for use (over 40%).  
+          Local history was in the next tier (28%), and while all other purposes 
+          were below 16%, no purpose was ranked lower than 9% (property or legal 
+          research).</p><p>With this varied landscape of users and material, 
+          the variety of institutions surveyed through NC ECHO completes the landscape 
+          to address metadata solutions.  Chart 1 gives an aggregated view of 
+          the institution types in North Carolina in NC ECHO.</p>
+        <p class="caption"><img src="wisser.chart1.jpg" alt="Chart: Institution Types: Museums 52%, Archives 39%, Societies, 6%, private 2%, other 1%" width="319" height="300"></p>
+        <p class="caption">Chart 1:  Aggregate institution types</p><p>The importance of museums in North Carolina is clearly 
+          demonstrated in this chart.  Institutions that indicated museum characteristics 
+          comprise just over 50% of all institutions surveyed.  The museum category 
+          groups all institutions that include museum in their title or have artifact 
+          collections of any type in their description.  It also includes historic 
+          sites, both public and private.  Archives, the second largest category, 
+          includes those collections that are primarily paper or non-artifact 
+          based (including but not limited to film, audio, digital, or photographic 
+          materials) and includes libraries and special collections within libraries.  
+          Societies and private institutions comprise a small percentage of the 
+          whole of the North Carolina community, but can still present some interesting 
+          problems for the metadata environment.  'Other' includes 
+          archaeological labs which were included in museum metadata discussions 
+          due to their artifactual nature.  The prominence of institutions constituting 
+          museum characteristics clearly demonstrates the need for specific attention 
+          to be paid to their metadata needs.  In addition, those comprising the 
+          other 48% may have artifactual material that can be addressed through 
+          a museum metadata strategy.</p><p>This aggregated view demonstrates the place museums 
+          have in the cultural institution landscape in North Carolina, but within 
+          the museum community there is a great deal of variety.  </p>
+        <p class="caption"><img src="wisser.chart2.jpg" alt="Chart: Types of Museums , Mostly history, then other, then Historic House" width="371" height="268"></p>
+        <p class=caption align=center><b>Chart 2:  Specific museum types </b></p><p>Chart 2 demonstrates the different  kinds of museums 
+          uncovered in the survey.  Because these categories are not mutually 
+          exclusive, the survey directed respondents to circle all that apply 
+          rather than to choose only one type.  Both charts demonstrate the concrete 
+          challenges for a unified metadata environment.  Not only is there a 
+          diverse spread of cultural institutions but also diversity within the 
+          museum community.  To accommodate the NC ECHO mission for inclusion 
+          of all cultural institutions, a metadata solution needs to address both 
+          the inclusion of museum information in the larger cultural institution 
+          vista but also to arrive at a consensus for museums dealing with very 
+          diverse materials.</p>
+        <h1>Devising a Metadata Strategy</h1>
+        <p>Access to the materials in North Carolina heritage 
+          institutions is the primary goal of the project.  Metadata constructs 
+          will help to reach that goal, along with technological leveraging of 
+          that metadata.  The NCMC metadata working group was formed to address 
+          metadata issues for the museum community to assure that any metadata 
+          solution can be easily integrated into other metadata solutions being 
+          used by other institution types.  This working group is composed of 
+          representatives from the array of museum types, including North Carolina 
+          Historic Sites, the North Carolina Science Museum, the Department of 
+          Archaeology research services, the North Carolina Art Museum and the 
+          North Carolina History Museum.</p><p>Our initial discussions focused on metadata and its 
+          role in cultural institutions as well as a state-wide collaborative.  
+          Metadata, as the group understood it, is defined as </p>
+        <p class="BlockQuote">structured information that describes, explains, locates 
+          or otherwise makes it easier to retrieve, use or manage an information 
+          resource <i>(Hodge, 2001</i>).</p><p>  During those initial discussions, it became clear 
+          that each museum type was already well invested in a metadata scheme, 
+          as each had a structure in place used to manage their collections.  
+          Those schemes included descriptive and administrative metadata components 
+          and, for the most part, satisfied the individual institution's 
+          needs.  Almost every type of museum software is implemented in North 
+          Carolina, with Microsoft Access, Past Perfect, Re:discovery and FileMaker 
+          Pro being the most prevalent.  These primarily perform in-house database 
+          management, while some systems also offer on-line database access to 
+          their materials.</p><p>One of the missions of NC ECHO is to provide on-line 
+          access to all cultural heritage materials, whether they are digitized 
+          currently, to be digitized at some point down the road, or would never 
+          be suitable for digitization.  Some of these collection management systems 
+          have on-line components; the 'home grown' solutions, while 
+          more tailored to the individual's needs, would require development 
+          resources to create on-line interfaces.  Other systems focus on establishing 
+          solid collection management and interpretive tools and had not considered 
+          an on-line presence a priority.  This is not surprising; as Rinehart 
+          notes, </p>
+        <p class="BlockQuote">given the importance of visual information to museums, 
+          it is easy to understand why they did not rush to embrace the pre-image 
+          Internet (<i>Rinehart, 2001</i>).</p><p>Some museums have yet to cross the digital divide.  
+        </p><p>Another challenge in discussing metadata solutions 
+          in this early stage was to make clear that museums would not be re-constructing 
+          their existing collection management data in a new system or abandoning 
+          their existing system.  Many have invested scarce resources, training 
+          and staff time for implementation.  In order to get museums to want 
+          to participate beyond their own walls, strategies for the metadata working 
+          group included an understanding of existing systems and a re-purposing 
+          of that information for the collaborative environment.  Obviously these 
+          museums needed to do additional work to participate in the collaborative 
+          environment, but minimizing that work would provide a lower barrier 
+          to participation.  </p><p>Another aspect of the existing collection management 
+          systems was the emphasis seen by museums on the administrative functions.  
+          Not all data kept in these systems were considered appropriate for the 
+          on-line environment.  In particular, appraisal information and security 
+          of artifacts surfaced as inappropriate for the public arena.  It was 
+          important to get a sense of the kind of information museums collected 
+          and to discriminate between that appropriate for the Web and that used 
+          in museum operation.  This meant that not all metadata held in the management 
+          systems would constitute information suitable for the portal.  It was 
+          important for metadata working group participants to understand that 
+          on-line information could constitute a subset of the metadata required 
+          for museums to organize their collections, but that museums had already 
+          created metadata that could be repurposed for the on-line environment 
+          rather than creating additional metadata.  </p><p>The next challenge for this working group was the 
+          integration of metadata about diverse museum holdings.  For instance, 
+          holdings by the science museums in the state do not necessarily integrate 
+          well with materials more historical in nature.  Scientific and archaeological 
+          materials often handle samples of species or shards of pottery that 
+          are collected by the hundreds rather than individual unique items.  
+          The question that occurred to us all, though, was why not include this 
+          kind of material in the larger realm of cultural heritage information 
+          in North Carolina?  For the metadata strategy, what kind of challenge 
+          would that type of material present when this metadata was typically 
+          geared toward item-level information.  </p><p>To solve these issues, the working group discussed 
+          the categories each museum type had in common.  The problem of semantics 
+          arose immediately.  For example, the discussion of <b>title</b> created 
+          many problems.  Science museums do not have <b>titles</b> but, rather, 
+          identify their material according to <b>genus</b> and <b>species.</b>  
+          Historic sites and history museums identify their items by <b>genre</b> 
+          more readily, but some items could also have titles.  Art museum materials 
+          almost always have titles; that is how they are identified.  It was 
+          clear that many of the working group members felt that the term <i>title</i> 
+          did not apply to their material.  The connotation of terms had to be 
+          overcome if we were going to come to a consensus on a metadata scheme 
+          that could be used in a consortium.  The ultimate goal of these discussions 
+          was to map individual institutional metadata systems to a generalized 
+          XML scheme that could be exploited in a search and retrieval environment.  
+          If we could not come to an agreement on the common categories of information, 
+          a metadata strategy would be too fragmented to be of use in the collaborative 
+          environment.  In order to come to that understanding, we talked in detail 
+          about the individual institution metadata applications and how each 
+          institution used that information.</p><p>The emphasis on digitizing also surfaced as a central 
+          obstacle to these metadata discussions.  While each museum described 
+          in detail the administrative and descriptive structures that they had 
+          refined in their profession, they had the impression that 'metadata' 
+          was only necessary for those items that were going to be digitized.  
+          In-house  collection management systems were sufficient for the institution 
+          management, but the digital imperative created a need to look at metadata.  
+          As stated, NC ECHO seeks to provide access to all the materials in a 
+          museum's collection.  However, not all museums had an on-line 
+          presence while some institutions had well-developed on-line resources.  
+          Any metadata solution that met the NC ECHO goal for inclusion would 
+          need to accommodate this digital divide.  For the search and retrieval 
+          solutions NC ECHO was interested in, museums would either have to provide 
+          a place to point to on-line or provide enough information to be presented 
+          for patrons to make relevance judgments between one item and another.  
+          This would mean that those institutions that had on-line resources could 
+          be more easily integrated, whereas those that did not would necessarily 
+          require more information within the display as a search result.  The 
+          latter requires more information to be harvested than just the index-relevant 
+          metadata in order for patrons to make that judgment.  </p><p>A final aspect of the metadata strategy is the dissemination 
+          of information once this common metadata structure has been created.  
+          Tactics for this will include presentations, workshops, user groups 
+          for collection management systems, and communication through the Web 
+          and e-mail lists.  Most importantly, any broadcasting must include a 
+          marketing component to convince smaller or marginalized museums to participate 
+          in the collaborative, in order to achieve the NC ECHO mission of <i>all 
+          </i>cultural institutions.</p>
+        <h1>Search and Retrieval Options</h1>
+        <p>In creating any kind of working group solution, it 
+          is always important to provide a larger view of how that work will be 
+          leveraged. What will be the result of the information will be?  The 
+          search and retrieval solution currently being explored is the Open Archives 
+          Initiative: </p>
+        <p class="BlockQuote">The Open Archives Initiative develops and promotes 
+          interoperability standards that aim to facilitate the efficient dissemination 
+          of content.  The Open Archives Initiative has its roots in an effort 
+          to enhance access to e-print archives as a means of increasing the availability 
+          of scholarly communication <i>(Lagoze and Van de Sompel, 2001). </i></p><p>The technical framework has been described by its 
+          creators as <b>low-barrier</b> in terms of its approach to interoperability.  
+          This is to be understood in terms of other interoperability standards 
+          such as Z39.50 which have a higher barrier for implementation.</p><p>The Open Archives Initiative Metadata Harvesting 
+          Protocol (OAI-MHP) provides a solution that will allow NC ECHO to harvest 
+          metadata created by individual institutions and create a common index 
+          with search results that point to the institution for full record.  
+          This solution, while technologically sophisticated to implement, has 
+          been used by many large consortiums dealing with a variety of metadata 
+          formats.  In considering the implementation of OAI-MHP, NC ECHO would 
+          need to minimize metadata formats and control the metadata to be harvested 
+          so that that harvesting can be done more effectively. </p><p>The metadata strategy for the museum community discussed 
+          here is to create a common metadata language for museum information 
+          using EAD, that is created through conversion scripts from existing 
+          collection management systems.  Using EAD, an XML document type definition, 
+          NC ECHO would like to exploit the sophisticated metadata constructed 
+          by cultural institutions.  However, OAI-MHP requires unqualified Dublin 
+          Core.  In addition, due to issues of browser compatibility, on-line 
+          resources are typically presented in HTML.  Therefore, an automated 
+          conversion from XML EAD to HTML both provides the on-line display and 
+          creates the required unqualified Dublin Core for provision to other 
+          OAI harvesters.  This will allow NC ECHO to both harvest and provide 
+          metadata, so that North Carolina material can be included in national 
+          consortiums as well as within its own portal (see Diagram 1). </p><p>The NCMC metadata working group is currently working 
+          on best practice guidelines for the dissemination of museum collections 
+          information that can interact with other cultural institution metadata 
+          generated for the NC ECHO portal.  Using the proposed metadata strategy, 
+          museums can maintain their current metadata systems, and NC ECHO would 
+          provide assistance in transforming database information into easier 
+          data sharing and interoperable solutions.</p>
+        <p class="caption"><img src="wisser.chart3.jpg" alt="Diagram: INforamtion flow from local systems to search portal" width="400" height="458"></p>
+        <p class="caption">Diagram 1:  Museums metadata solution overall view</p><p>In order to achieve this unified metadata structure, 
+          there are a series of steps that need to take place.</p>
+        <h3>Establish which collection management systems are currently 
+          in use in North Carolina museums. </h3>
+        <p class="BlockQuote">Initial 'test' museums have been 
+          very forthcoming with this information and a Museums Council survey 
+          may be the best way to provide information regarding the larger museum 
+          community.  This survey will have several positive outcomes.  It will 
+          provide the metadata working group with a clear understanding of the 
+          scope and diversity of technological solutions extant in North Carolina 
+          museums.  It can also provide a good arena for User Group formation 
+          for those museums using the same kinds of solutions.  Finally, it will 
+          aid in on-line communication structures for those user groups and for 
+          those museums interested in investing in a new system or converting 
+          from one system to another.  The results of this first step will not 
+          hinder movement on the other aspects that need to be accomplished for 
+          the museum community in addressing their metadata needs.</p>
+        <h3>Establish if an institution has an on-line presence, 
+          is developing one, or would need assistance in providing on-line information 
+          about their collections.  </h3>
+        <blockquote>
+          <p>If a museum has its own on-line presence, metadata 
+            extraction would be limited to information used for indexing a brief 
+            display with URLs to institution displays.  For those museums that do 
+            not have on-line interfaces for their collections, additional, non-indexed 
+            information would need to be harvested for search results.  </p>
+        </blockquote>
+        <h3>Create the transformation codes to extract metadata 
+          from the current solution to the XML environment depending upon the 
+          answer to (2).  </h3>
+        <p class="BlockQuote">It is assumed that generalized transformation 
+          programs can be constructed for the majority of collection management 
+          systems being used.  These scripts can then be customized for individual 
+          institutional adoption.  For those museums using uncommon collection 
+          management systems, individual programming will be needed.  Because 
+          many institutions used proprietary systems such as PastPerfect and Re:discovery, 
+          this programming would best be done in partnership with the developers 
+          of these systems.  It is hoped that the companies can then market the 
+          transformation capabilities to other customers and would therefore see 
+          the advantage of working in partnership with the NC ECHO project.</p><p>The most important aspect of this kind of solution 
+          rests with finding the commonalities in metadata already gathered.  This 
+          will expedite the mapping of museum information to XML EAD and HTML.  
+          It will decrease the requirement for new, specialized crosswalking solutions 
+          for each instantiation of museum metadata and allow for a generalized 
+          framework that can be implemented at specific levels.  By clearly understanding 
+          each individual museum type metadata requirements while placing those 
+          individual types within the larger context of the museum metadata and 
+          cultural institution metadata initiatives, we should be able to maximize 
+          the available indexing information and provide adequate instruction 
+          on use for the search portal.  This approach constitutes a 'metadata 
+          first' approach.  The metadata first approach focuses on existing 
+          metadata systems rather than trying to retro-fit the existing metadata 
+          into a technological solution.  While there is still a great deal of 
+          work to be done to see if this kind of metadata solution is tenable 
+          in the North Carolina museum environment, the support garnered by the 
+          metadata first, grass-roots approach provides a solid foundation for 
+          an inclusive solution for all cultural heritage institutions in North 
+          Carolina.</p>
+        <h1>Conclusion</h1>
+        <p>Collaborating in consortiums creates many demands 
+          on cultural institutions to conform to more generalized solutions.  
+          There are advantages and disadvantages to the integration of museums 
+          in cultural heritage portals.  This information can enrich the museum's 
+          exposure.  The exposure, though, can create the possibility of raising 
+          expectations of individual artifacts.  An emphasis on materials within 
+          the museum collections could create a separation from museums' 
+          exhibit orientations to catalogues of artifacts.  Increased exposure, 
+          though, can lead to increased community support and increased potential 
+          for collaboration through the creation of virtual collections.  In addition, 
+          this kind of work could serve to increase the awareness of the museum 
+          communities of standards that are well-formed and active in other related 
+          fields, while at the same time providing an arena for the museum community 
+          to extend its own standards to other cultural institutions who do not 
+          have museum expertise in describing their artifact materials.</p><p>The time of cultural institution integration in the 
+          on-line environment is upon us, and the emphasis on digitization only 
+          makes the issue more pressing.  Technological solutions constructed 
+          outside of a metadata context do not often correspond with the goals 
+          and users of institutions.  By taking into account the metadata challenges 
+          and diversity in the museum environment, NC ECHO may be moving more 
+          slowly, but surely, toward a strategy that is sustainable and effective 
+          in the future.</p>
+        <h1>References</h1>
+        <p class=ReferencesText>Bishoff, Liz.  Interoperability and Standards 
+          in a Museum Library Collaborative: The Colorado Digitization Project. 
+          <i>First Monday</i>, 2000, consulted on September 24, 2003, <a
+href="http://www.firstmonday.dk/issues/issue5_6/bishoff/" target="_blank">http://www.firstmonday.dk/issues/issue5_6/bishoff/</a>.</p>
+        <p class=ReferencesText>Hodge, Gail. (2001)  <i>Metadata made simpler</i>.  
+          Bethesda, Md.: NISO Press.</p>
+        <p class=ReferencesText><i>NC Exploring Cultural Heritage On-line, </i><a
+href="http://www.ncecho.org/" target="_blank">http://www.ncecho.org/</a>.</p>
+        <p class=ReferencesText>Lagoze, Carl and Herbert Van de Sompel. (2001)  
+          'The Open Archives Initiative: Building a Low-Barrier Interoperability 
+          Framework', <i>JCDL '01</i>.</p>
+        <p class=ReferencesText>Rinehart, Richard. (2001).  Cross-Community Applications: 
+          The EAD in Museums.  In Daniel V. Pitti and Wendy Duff, ed. <i>Encoded 
+          Archival Description on the Internet</i>. New York:  The Haworth Press, 
+          Inc., 169-186</p>
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+
+<p class="smallPurple">&nbsp;</p>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2004/papers/wisser/wisser.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:46:41 GMT -->
+</html>

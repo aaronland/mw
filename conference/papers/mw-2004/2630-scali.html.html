@@ -1,0 +1,594 @@
+<html><!-- InstanceBegin template="/Templates/mw2004-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2004/papers/scali/scali.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:45:41 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>Museums and the Web 2004 : Papers : Scali &amp; Howard, XML Coding of Dramatic Structure</title>
+<!-- #EndEditable --> 
+<meta name="keywords" content="Museums and the Web 2004, Archives &amp; Museum Informatics, museums online, on-line, cultural heritage online, museum digitization, internet, conference, symposium, workshop, meeting, international, papers, presentations, multimedia, interactive, education, exhibits, evaluation, virtual reality, digitization, information architecture, information design, interface design, digital library, digital libraries ">
+<!-- #BeginEditable "page keywords" -->
+<meta name="keywords" content="plot, narrative structure, visualization, XML">
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<!-- #BeginEditable "script" --><!-- #EndEditable --> 
+<link rel="stylesheet" href="../../../mw2003/Library/mw2003.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body BGCOLOR="#FFFFFF" BACKGROUND="../../../mw2002/images/mw2002.bg.gif" TEXT="#000000" LINK="#660099" VLINK="#000066" onLoad="MM_preloadImages('../../images/nav/register_on.gif','../../images/nav/workshops_on.gif','../../images/nav/sessions_on.gif','../../images/nav/speakers_on.gif','../../images/nav/interactions_on.gif','../../images/nav/demos_on.gif','../../images/nav/exhibits_on.gif','../../images/nav/events_on.gif','../../images/nav/best_on.gif','../../images/nav/dates_on.gif','../../images/nav/local_on.gif','../../images/nav/sponsors_on.gif')">
+<table WIDTH="600" BORDER="0" CELLSPACING="2" CELLPADDING="5">
+  <tr> 
+    <td WIDTH="145" ALIGN="LEFT" VALIGN="TOP"> 
+      <p><a href="../../index.html"><img src="../../images/mw.gif" width="112" height="155" border="0" alt="/mw/"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('register','','../../images/nav/register_on.gif',1)"><img name="register" border="0" src="../../images/nav/register_off.gif" width="112" height="18"></a><br>
+        <a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('workshops','','../../images/nav/workshops_on.gif',1)"><img name="workshops" border="0" src="../../images/nav/workshops_off.gif" width="112" height="18"></a><br>
+        <a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sessions','','../../images/nav/sessions_on.gif',1)"><img name="sessions" border="0" src="../../images/nav/sessions_off.gif" width="112" height="18"></a><br>
+        <a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('speakers','','../../images/nav/speakers_on.gif',1)"><img name="speakers" border="0" src="../../images/nav/speakers_off.gif" width="112" height="18"></a><br>
+        <a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('interactions','','../../images/nav/interactions_on.gif',1)"><img name="interactions" border="0" src="../../images/nav/interactions_off.gif" width="112" height="18"></a><br>
+        <a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('demonstrations','','../../images/nav/demos_on.gif',1)"><img name="demonstrations" border="0" src="../../images/nav/demos_off.gif" width="112" height="18"></a><br>
+        <a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('exhibits','','../../images/nav/exhibits_on.gif',1)"><img name="exhibits" border="0" src="../../images/nav/exhibits_off.gif" width="112" height="18"></a><br>
+        <a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('events','','../../images/nav/events_on.gif',1)"><img name="events" border="0" src="../../images/nav/events_off.gif" width="112" height="18"></a><br>
+        <a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('best','','../../images/nav/best_on.gif',1)"><img name="best" border="0" src="../../images/nav/best_off.gif" width="112" height="18"></a><br>
+        <a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dates','','../../images/nav/dates_on.gif',1)"><img name="dates" border="0" src="../../images/nav/dates_off.gif" width="112" height="18"></a><br>
+        <a href="../../local/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('local','','../../images/nav/local_on.gif',1)"><img name="local" border="0" src="../../images/nav/local_off.gif" width="112" height="18"></a><br>
+        <a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sponsors','','../../images/nav/sponsors_on.gif',1)"><img name="sponsors" border="0" src="../../images/nav/sponsors_off.gif" width="112" height="18"></a> 
+        <br>
+        <br>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../images/nav/nav_ami.gif" width="135" height="35" border="0" alt="A&amp;MI home"></a> 
+        <br>
+      </p>
+      <table width="81%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td align="left" valign="top"> 
+            <p align="right"><span class="verysmall">158 Lee Avenue<br>
+              Toronto Ontario<br>
+              M4E 2P3 Canada</span></p>
+            <p class="verysmall" align="right">ph: +1 416-691-2516<br>
+              fx: +1 416-352-6025</p>
+            <p align="right"><span class="verysmall">info @ archimuse.com<br>
+              <a href="http://www.archimuse.com/">www.archimuse.com</a></span></p>
+            <div align="right"> 
+              <table width="74">
+                <tr> 
+                  <td> <a href="http://search.museumsandtheweb.com/search" target="_top"> 
+                    <img src="../../images/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+                  </td>
+                  <td valign="MIDDLE"> <a href="http://search.museumsandtheweb.com/search"> 
+                    <span class="verysmall">Search<br>
+                    A&MI</span></a> </td>
+                </tr>
+              </table>
+            </div>
+            <p align="right"><font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Join 
+              our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing 
+              List</a>. <br>
+              <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</span></font></p>
+            <p align="right">&nbsp;</p>
+            <p align="right">&nbsp; </p>
+            <p align="right"><span class="verysmall">published: March 2004<br>
+analytic scripts updated:&nbsp; 
+              <!-- #BeginDate format:Am1 -->October 28, 2010<!-- #EndDate -->
+              </span></p>
+            <p align="right"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a> </p>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp; </p>
+    </td>
+    <td WIDTH="455" ALIGN="LEFT" VALIGN="TOP" class="normal"><a href="../../speakers/index.html"><img src="../../images/papers.gif" width="390" height="55" border="0" alt="Museums and the Web 2003 Papers"></a> 
+      <br>
+      <!-- #BeginEditable "Body of Page" -->
+      <p class="PaperTitle">XML Coding Of Dramatic Structure For Visualization</p>
+      <p class="Author">Gabriele Scali, Space S.p.A., Italy and Graham Howard, 
+        System Simulation Ltd, UK</p> <p class="AbstractTitle">Abstract</p>
+       <p class="AbstractText">Every work of storytelling, play, film, novel, opera, 
+          musical, is characterized by the development of a plot in which characters 
+          embody certain roles, establish certain relationships, evolve their 
+          feelings, generate and get affected by events. It is a world populated 
+          by several possible levels of interpretation often difficult to follow. 
+          The delivery of narration-intensive media becomes everyday more common 
+          on the Internet where the Web provides a more interruptible and fragmented 
+          way of interacting with them, making their comprehension even more difficult 
+        than usual. We present an XML Schema defining a language (XNDL 
+          XML Narrative Description Language) dedicated to describe the time-based 
+          evolution of roles, relationships, events and consequences within a 
+        narration.</p>
+       <p class="AbstractText">An XNDL file can be fed into a'plot visualization 
+          and discovery tool' able to render a graphical representation 
+          of it through vector graphics, where stylized shapes, colors, size, 
+        arrows etc. all concur to simplify and explain what's going on. Why did that character act like this? Wasn't 
+          she supposed to be friend with this other, why are they fighting now? 
+          And how's she feeling, uh I see, she's marked as'betrayed'&#8230; 
+        Did I miss something? And what's the relationship between those 
+          others: are they friends, lovers, is one of them taking advantage of 
+        the other?</p>
+       <p class="AbstractText">Such a tool can be used stand-alone or even be synchronized 
+          with the timed delivery of the media it refers to. There are several 
+          scenarios we foresee for both the Schema and the tool, from the obvious 
+          educational ones, to the cross-exploration possibilities a codified 
+          version of the plots would provide (how Verdi's <i>La Traviata</i>, 
+          Dumas' <i>La dame aux camellias</i> and the Greek myth of Orpheus 
+          relate to the movie <i>Moulin Rouge</i>?), to being provided as a stream 
+        of information on iTV channels.</p>
+      <p class="keywords">Keywords: plot, narrative structure, visualization, 
+        XML</p>
+      <h1>Introduction</h1>
+      <p>As the use of narration intensive media through new communications 
+          channels become more widespread, content representation tools are being 
+          envisaged to help enrich user experience and interaction with it. We 
+          present our work in defining a language for the description of narration 
+          content in terms of narrative structure, plot elements, character stereotypes, 
+          character interactions, events and character behavior, all referred 
+          to as stereotypes. Editing and visualization tools based on such a language 
+          could potentially help in the study of narrative analysis and comparative 
+          analysis, in rich media delivery experience for entertainment, and of 
+        course in education and learning dramatic structure stereotypes</p>
+      <p class="BlockQuote">Thus from the first edition of this little book, I 
+          might offer (speaking not ironically but seriously) to dramatic authors 
+          and theatrical managers, 10,000 scenarios, totally different from those 
+          used repeatedly upon our stage in the last 50 years. The scenarios will 
+          be, needless to say, of a realistic and effective character. I will 
+          contract to deliver a thousand in eight days. For the production of 
+        a single gross, but 24 hours are required. Prices quoted on single dozens...</p>
+      <p class=BlockQuoteAuthor> George Polti, 36 Dramatic Situations</p>
+      <p>The British philosopher Alfred North Whitehead defined art as 'a 
+          model imposed on experience'. This very lucid definition helps 
+          explain why art in all forms refers to a limited number of themes and 
+          thought schemes, precisely because they are at the basis of our human 
+          experience. It's surprising how these schemes remained the same 
+          throughout human history and how they remain consistent in any form 
+          of narrative, be it songs, fables, novels, drama, legends, movies or 
+        jokes.</p>
+      <p>Karl Gustav Jung called these recurring themes <i>Archetypes</i>, universal 
+          models that we inherit from our collective unconscious. At the beginning 
+          of the Twentieth Century, the structuralist approach to analyzing narrative 
+        structure spawned the separate discipline of <i>narratology</i>.</p>
+      <p>Since then, many researchers and authors, over time, have attempted 
+          to capture the inner mechanisms of plots, the progression of dramatic 
+          situations and the variety of characters in terms of stereotypes, among 
+        these:</p>
+        <ul class="listwithbullets">
+          <li> Ronald 
+            Tobias' 20 master plots</li>
+          <li> Georges 
+            Polti's 5 basic conflicts, then originating the 36 Dramatic 
+            Situations</li>
+          <li> The 
+            nine-act structure</li>
+          <li> The 
+            69 situations attributed by Ronald Tobias to Rudyard Kipling</li>
+          <li> Three 
+            basic patterns by William Foster-Harris</li>
+          <li> Vladimir 
+            Propp's 31 standard functions of the folktale (narratemes)</li>
+          <li> Joseph 
+            Campbell's 19 steps of the hero's journey</li>
+          <li> Syd 
+            Field's three acts paradigm</li>
+          <li> Dramatica.com's 
+            8 Archetypal Characters and 16 motivation elements</li>
+        </ul>
+      <p>Whether any of these can really encompass all works of fiction or not, 
+          is a matter of much debate. In most cases, though, the proposers only 
+          intended to provide a sample of the most common situations, not exhaustive 
+        thesauri.</p>
+      <p>When adapting them to describe real world narrations, these situations 
+          can be modified, extended, mixed, added together or integrated to create 
+          completely new ones. What can be concluded by looking at these studies 
+          is that stories can indeed be decomposed and analyzed, either by pooling 
+          them into a set of predefined schemes (similar to what happens when 
+          a necromancer can read any possible stories from a fixed set of tarot 
+          cards) or by recognizing and using new themes when the existing ones 
+        fall short of our aims.</p>
+      <p>It is possible to perform a perfectly similar operation with the subject 
+          of human feelings and behaviours, instead of situations. With a certain 
+          grade of approximation, a character's temperament and emotional 
+        state can be depicted in terms of a number of stereotypes.</p>
+      <h1>Story and plot</h1>
+      <p>The distinction between <i>story</i> and <i>plot</i> can probably be 
+          found back in <a
+href="http://www.anglistik.uni-freiburg.de/intranet/englishbasics/Plot01.htm" target="_blank">Aristotle</a>, 
+          who differentiated between facts in the real world and elements taken 
+          from them and organized in narration called <i>mythos</i>. These very 
+          terms, as intended in literary studies today, were introduced and defined 
+          by the novelist and critic E.M. Forster in his famous work <i>Aspects 
+        of the Novel</i> in 1927.</p>
+      <p>From then on, <em>story</em> is the sequence of events that form the 
+          basis to the narration, and <em>plot</em> is the way these events get 
+          revealed to the reader/spectator and how they relate to each other through 
+        relationships of cause-effect.</p>
+      <p>In many cases plot does not match story in terms of time sequence, 
+          especially in the more modern narrative genres, such as novels or movies, 
+          which often break the Aristotelian principles of unity of time, location 
+        and action (e.g. with flashbacks). </p>
+      <p>In the description language we propose, we chose to keep as a basis 
+          the time of the media and therefore describe events and their consequences 
+          in the order they are narrated, thus preserving the possibility of associating 
+          the metadata directly to the media through MPEG-7. This even preserves 
+          the possibility of describing stories instead of plots, as they can 
+          be treated as special sub-cases of plots, in which events get narrated 
+        in the strict order in which they happen.</p>
+      <h2><b>A Language To Describe Plot</b></h2>
+      <p>Based on the above assumptions we set out to create a formal language 
+          that could be used to tag media (thus including text) and describe the 
+          contents in structural narrative terms, the XML Narrative Description 
+        Language (XNDL), which is currently implemented as an XML Schema.</p>
+      <p>Using XML Schema gave us a chance to focus our efforts on trying different 
+          arrangements without the added constraints of them complying with an 
+          existent format, a precious advantage at this early stage. XNDL closely 
+          reflects concepts to be found in the MPEG-7 Structure and Semantics 
+          Description Schemes and will soon be transposed into MPEG-7's 
+          Description Definition Language (DDL). As DDL is based on a compatible 
+          superset of the XML Schema language, such transposition should be rather 
+        straightforward.</p>
+      <p>The XNDL language can be used to describe the plot underlying a certain 
+          narration: indicating how it affects characters and which stereotypes 
+        are used inside it.</p>
+      <h2>Patterns</h2>
+      <p>Associating plots to stereotyped dramatic structures is very similar 
+          to the well known and useful <i>Patterns</i> approach to sharing software 
+          design, originated by the work of architect Christopher Alexander in 
+          the late 1970s. Software Patterns are defined in terms of a description, 
+          prerequisites, list of participants, consequences and examples. We thought 
+          that this would be a good basis for the description of stereotyped dramatic 
+          elements, temperament or behaviour, and adopted this word to refer to 
+        them.</p>
+      <p>Let us summarize the main concepts we have incorporated in our Schema 
+        and their meanings:</p>
+      <h3>Dramatic structure</h3>
+      <p>The root element contains all the necessary elements to describe and 
+        break into a hierarchical structure a narrative work.</p>
+      <p class="caption"><img src="scali1.jpg" alt="dramatic structure" width="487" height="258"></p>
+      <p class="caption">Fig 1. The DramaticStructure element</p>
+      <h3>Stereotypes</h3>
+      <p>A collection of Patterns that can be referenced in the Patterns section 
+          of a segment. The stereotypes collection may be provided by an authority 
+          or modified/extended by each single user. This section is intended to 
+          be used as a library. It could be provided by some authoritative source 
+          or be shared among a collection of XNDL files maintained by an individual 
+        organization.</p>
+      <h3>Pattern</h3>
+      <p>A single, well identified, stereotype situation, character type or 
+          narrative schema that describes its workings and a number of roles within 
+          it. A pattern can be attached to any segment at any level, and multiple 
+        patterns can be attached to a single segment.</p>
+      <h3>Structure</h3>
+      <p>A time based hierarchical subdivision of the media</p>
+      <h3>Segment</h3>
+      <p>Each of the time spans in which a structure is recursively divided, 
+        basically following the same element defined by MPEG-7</p>
+      <p class="caption"><img src="scali2.jpg" alt="structure of a segment" width="409" height="482"></p>
+      <p class="caption">Fig 2. The Segment element</p>
+      <h3>Agent</h3>
+      <p>A character or object playing a role in a segment of the narration. 
+          Agent can also be used to record when a characters enters/exit the stage. 
+      </p>
+      <h3>Fact</h3>
+      <p>The change of internal properties of a character (e.g. mood) or the 
+          performance of an action or the occurrence of an event not generated 
+        by a willing cause</p>
+      <p class="caption"><img src="scali3.jpg" width="412" height="325"></p>
+      <p class="caption">Fig 3. The Fact element</p>
+      <h3>Directive</h3>
+      <p>Includes a number of optional secondary indications about location, 
+          lights, costumes etc. which, if used, can be useful to represent and 
+        visualize the narration more accurately</p>
+      <p>The Schema has been conceived so to maintain as much generality and 
+          extensibility as possible. The <i>segment</i> concept for example, which 
+          reflects the same concept in MPEG7, being hierarchical, can easily be 
+          used to represent chapters, scenes, libretto lines, sequences, any structural 
+          decomposition should be regarded as functional to a specific representation. 
+          Therefore the concepts associated to it, such as <i>pattern, </i>can 
+          be referred to any level of narration, from the whole narrative to the 
+        single sequence, and can coexist at different levels.</p>
+      <p>Inside any of these levels, the <i>role </i>attribute can be specified 
+          by a segment within that level or by a character or event. In this way, 
+          for example, the <i>nine act structure</i> pattern can refer to the 
+          whole narration while its acts or scenes would reference <i>roles </i>within 
+        it.</p>
+      <p>Similarly and without contradicting the above, a single scene can be 
+          attributed the <i>pursuit</i> pattern and the <i>fugitive</i> and <i>punishment</i> 
+        roles attributed to different characters, or groups of them.</p>
+      <p>The pattern concept itself has been defined but no attempt to restrict 
+          the nature or number of possible patterns has been attempted. It has 
+          been left to the users to define which and how many patterns to use. 
+          They can choose to rely on free imagination to describe the situations 
+          or, possibly, choose to adopt a library of predefined patterns provided 
+        by some authority and/or based on some particular theory.</p>
+      <h2><b>Visualizers</b></h2>
+      <p>XNDL does not define in itself a means of visualizing information, 
+          which is therefore left to special visualization programs to understand 
+          the language and deliver it to the viewers. Visualizers can be thought 
+          of as very simple or sophisticated and based on many different graphical 
+          devices. There are virtually no restrictions to what metaphor a visualizer 
+          can use to represent the underlying information contained in an XNDL 
+        file.</p>
+      <p>A visualizer can choose to ignore certain information and many will 
+          want to provide discovery and cross searching tools, in order to identify 
+          similarities between different XNDL files, or order and classify them 
+        based on the dramatic patterns they use.</p>
+      <p>We implemented two simple visualizers, a text based one, which basically 
+          transforms the information contained in an XNDL file into textual descriptions, 
+          as they occur during the narration; and a vector graphics (SVG) based 
+          prototype, which uses color, shape and arrows to give metaphorical descriptions 
+        of characters, roles, mood, actions and events.</p>
+      <p class="caption"><img src="scali4.jpg" width="607" height="404"></p>
+      <p class="caption">Fig 4. An SVG visualizer for XNDL</p>
+      <p>One possibility we would like to explore is to produce a visualizer 
+          capable of rendering XNDL through UML collaboration diagrams, modeling 
+          characters as objects with the addition of a few dedicated stereotypes. 
+          Collaboration diagrams are, in fact, well suited for showing the relationships 
+          (thanks to the links) between objects and for dynamic animation aimed 
+        at continuously representing the evolving status of a system.</p>
+      <h1>Possible Uses</h1>
+      <h2>An authoring tool</h2>
+      <p>With the XML schema in place, how the information is built up becomes 
+          critical. Authoring unaided would be an unwelcome task for most people 
+          whose work centers on the narrative. To ameliorate this situation an 
+          authoring tool will need to be created to enable people to build the 
+          structured information in a natural way. Such an authoring tool would 
+          have both a text input aspect and a graphical vector display of the 
+        plot visualization as it is built up.</p>
+      <h2>Expert interpretations</h2>
+      <p>How a narrative develops is part of the interaction between the author, 
+          the text/drama/opera/film and the listener/reader/viewer. However, experts 
+          in particular fields have ways they characterize such things, so they 
+          are the natural users of our extensible schema. By capturing their views 
+          in the schema, they can be made available to others, who can access 
+          the resultant XML. Given an appropriate authoring tool, such experts 
+          will be able to draw out the parallels and differences between different 
+          narratives, providing the grounds for comparative study. With an agreed 
+          standard, dramatic structures can be shared around the world, giving 
+          the possibility of comparing the way Mongolian shamans tell stories 
+        and the way Homer told his.</p>
+      <h2>Learners' interpretations</h2>
+      <p>As a student of drama we may come across many different approaches 
+          by experts to any particular plot; comparing them can often be difficult. 
+          Being able to see the plots as visualizations can immensely ease this 
+          process, enabling the development of a critical understanding. But further 
+          to this is the possibility that the learners themselves can create their 
+          own interpretation, visualize them and help themselves develop new and 
+        clearer understandings of dramatic structures.</p>
+      <h2>Building a community of learners</h2>
+      <p>As experts and learners develop their own interpretations of narrative 
+          structure, some interesting new possibilities arise. Given a standard 
+          XML Schema, this material can be shared. This means that, for example, 
+          students working in a school in England can develop a shared environment 
+          for the study of drama with students at a school in New Zealand. This 
+          network capacity opens up possibilities for diasporas everywhere. The 
+          traditional narratives of Nigeria can be studied by the Nigerian diaspora 
+          in the U.S. and their dramatic structures understood. This helps to 
+          build communities of understanding centered upon narrative architectures. 
+          The nuances of understanding, so often lost on distant observers/readers, 
+          can be elaborated by culturally embedded learners. By subtle semantic 
+          tagging, new emotional understanding can be revealed, providing a stronger 
+        basis for the creation of mutual understanding and significance.</p>
+      <p>With a shared schema in place, as time moves on, it will become possible 
+          to literally see the way in which understanding of certain dramas has 
+          changed over the years. We would find it very enlightening now to be 
+          able to really comprehend how the members of the audience of the first 
+          night of Shakespeare's Romeo and Juliet understood the drama and 
+          compare it with the way the first night audience of West Side Story 
+        would have characterized its narrative development.</p>
+      <h1>Analysis Of Other Narrative Forms</h1>
+      <h2>Speeches</h2>
+      <p>The use of the schema is not limited to what we think of as dramatic 
+          narratives, although this includes a vast range of cultural objects 
+          from epic poetry, plays, and operas to novels, musicals and films. We 
+          can also see how this schema can be applied to other narrative or dramatic 
+          objects. We can understand a speech as a dramatic object; the ancient 
+          art of rhetoric is based upon this premise. For instance, if we look 
+          at the way Plato unpacks the moral qualities of a speech in the Phaedrus 
+          we can see how significant this is. If we apply this approach to the 
+          speeches of modern politicians, we can picture the journey they are 
+        taking us on as listeners.</p>
+      <h2>Conversations</h2>
+      <p>Conversations can be mapped in similar ways, whether they are face 
+          to face, on the telephone or on-line. To be able to visualize conversations 
+          as dramatic structures is revealing. It enables us to understand the 
+          ebb and flow of ideas. This could be especially important where the 
+          conversation in question has special significance, in a court of law, 
+        for instance.</p>
+      <h2>Journeys</h2>
+      <p>Journeys can also be seen as a special sort of narrative. We only have 
+          to think of the narratives based upon the journey as a motif, from the 
+          Odyssey through to Chaucer and Dante, to contemporary road movies. Journeys 
+          have their own narrative structure, felt by the protagonist and observable 
+          through the filters of time and distance. Journeys can be mapped as 
+          dramatic structures, and the visualization of these can be linked to 
+        the geographic map of the journey.</p>
+      <h2>A quick overview of a narrative</h2>
+      <p>As well as the more intense uses outlined above, there are other situations 
+          where we want a quick, easy-to-understand overview. We might be rushing 
+          to get to the opera, not knowing what the basic plot is, wanting to 
+          just quickly scan the key elements on a mobile phone, or we might be 
+          needing a clear overview of a book we had hoped to have read. Or we 
+          might have missed the first part of a drama on television and want to 
+          catch up with what has happened and learn how the character relationships 
+          have developed. In these circumstances a visualization of the plot and 
+          the characters trajectories would enable us to grasp the essentials 
+          quickly and easily. This is especially true for those of us who think 
+        configurationally rather than in sequences.</p>
+      <h2>Authoring of dramatic structures</h2>
+      <p>Whilst the XML schema was initially developed to help the understanding 
+          of existing narratives, it could also be used in the creation of new 
+          ones. We know that authors work in many ways, from those who plan out 
+          their work in minute detail before starting to write to those who start 
+          with characters and a situation and follow them to a conclusion. Especially 
+          for those who craft the plot beforehand, a visual representation can 
+          be useful. Being able to compare and contrast it with other narrative 
+          developments by other authors could engender new departures. Certainly 
+          if the narrative needs to be shared with others at an early stage, then 
+          a visualizer with the ability to adjust the elements would form a strong 
+          shared working environment. Effectively, a plot outliner could be built 
+        based upon this schema.</p>
+      <h2>Storyboarding / Screenplay writing</h2>
+      <p>The activity of storyboarding could be greatly facilitated by the use 
+          of a tool based upon the Schema. This could allow both the basic outline 
+          of plot and character development and the adjustment of these to suit 
+          the desired purpose. Such a tool could enable the creator to change 
+          both the values within the schema and the trajectory of the narrative 
+          in the visualization. Imagine if Juliet had wakened earlier and left 
+          the vault with Romeo, only to be confronted by the two rival families 
+          continuing their turf war. Such a plot change could be made in the visualization 
+        and the consequences explored.</p>
+      <h2>Authoring interactive narratives</h2>
+      <p>Whilst any narrative could benefit from such visualizations, the interactive 
+          narrative with its enormous potential complexities could benefit most 
+          of all. Being able to see the nodal points with their multiple pathways 
+          and how they relate to character and context could give greater chance 
+        of more resonant structures being developed.</p>
+      <h2>Building new toolsets</h2>
+      <p>We have just suggested a few of the simple toolsets which might be 
+          developed on the basis of this schema. There are many more. Others 
+          could develop new tools which could enhance our communication and understanding 
+          in the context of the narrative, in ways that we have not yet thought 
+        about.</p>
+      <h1>Conclusion</h1>
+      <p>With the present work we have described our efforts to create a specific 
+          language to represent plots and dramatic patterns within works of narration. 
+          The possibilities springing from our first findings are very encouraging, 
+          and we intend to extend our research and develop further prototypes 
+          in the near future. The many application areas which we envisaged before 
+          now promise new challenges and possibilities to try our work with real 
+          world projects. We look forward to them to improve and refine XNDL. 
+          As soon as it is stable enough we will transpose it to be compliant 
+        with the MPEG-7 standard.</p>
+      <h1>Acknowledgements</h1>
+      <p class=AcknowedgementsText>The research described in this paper has 
+          been initiated within the partially EU funded research project OpenDrama. 
+          Thanks to Mariagrazia Mazzanti and Agnese Benassi of SPACE SPA for their 
+          help with the XML Schema definition and to Oscar Celma of Universitat 
+        Pompeu Fabra for his suggestions on the matter of MPEG-7.</p>
+      <h1>References</h1>
+      <p class=ReferencesText>Campbell, Joseph (2004). The Hero with a thousands 
+        faces. Princeton University Press,&nbsp;2nd edition</p>
+      <p class=ReferencesText>Chatman, Seymour (1978).&nbsp;&nbsp; Story and 
+          Discourse: Narrative Structure in Fiction and Film, Cornell University 
+        Press.</p>
+      <p class=ReferencesText>Forster, Edward M. (1927).&nbsp; Aspects of the 
+        Novel. London: Edward Arnold, 1941.</p>
+      <p class=ReferencesText>Foster-Harris, William (1959). The Basic Patterns 
+        of Plot. Norman: University of Oklahoma Press.</p>
+      <p class=ReferencesText>Heath, Eric (1941).&nbsp; Story Plotting Simplified. 
+        Boston: The Writer, 1946.</p>
+      <p class=ReferencesText>Hunter, J.&nbsp;&amp; Nack F. (2000). An Overview 
+          of the MPEG-7 Description Definition Language (DDL) Proposals Signal 
+          Processing: Image Communication Journal, Special Issue on MPEG-7, Vol. 
+        16, pp 271-293.</p>
+      <p class=ReferencesText>Johnson, Bill (2000). A Story is a Promise: Good 
+          Things to Know Before You Write that Screenplay, Novel, or Play. Portland, 
+        Oregon: Blue Heron Publishing.</p>
+      <p class=ReferencesText>Nack,F.&nbsp; &amp; A. Lindsay(1999).&nbsp; Everything 
+          you wanted to know about MPEG-7: Part I &amp; Part II. IEEE, MultiMedia, 
+          July - September 1999, pp. 65 - 77, October&nbsp;December 1999, pp.64-73, 
+        IEEE Computer Society.</p>
+      <p class=ReferencesText>Nack, Frank and Lynda Hardman (2002). Towards 
+          a Syntax for Multimedia Semantic. <i>CWI Technical Report INS-R0204, 
+        April 2002.</i></p>
+      <p class=ReferencesText>Palmer, Frederick (1920).&nbsp; The Photoplay 
+        Plot Encyclopedia. New York: Gordon Press Publishers.</p>
+      <p class=ReferencesText>Polti, Georges (1922). The Art of Inventing Characters. 
+        New York: Century Bookbindery, 1981.</p>
+      <p class=ReferencesText>Polti, Georges (1926).&nbsp; Les Trente-six Situations 
+        dramatiques. Paris: Mercure de France.</p>
+      <p class=ReferencesText>Stanley, Audrey (1995-96). Shakespeare Examined 
+        through Performance. University of California at Santa Cruz.</p>
+      <p class=ReferencesText>Tobias, Ronald (1993). 20 Master Plots (And How 
+        to Build Them).&nbsp; Cincinnati: Writers Digest Books, 2003</p>
+      <p class=ReferencesText>Vogler, Christopher (1998). The Writer's Journey: 
+        Mythic Structure for Writers. Michael Wiese Productions, 2nd edition</p>
+      <p class=ReferencesText>ISO MPEG-7, &quot;Text of ISO/IEC CD 15938-1 Information 
+          Technology - Multimedia Content Description Interface&quot;. ISO/IEC 
+        JTC 1/SC 29/WG 11, March 2001, Singapore.</p>
+      <p class=ReferencesText>ISO MPEG-7, &quot;MPEG-7 Overview (version 9)&quot;. 
+        ISO/IEC JTC1/SC29/WG11 N5525, March 2003, Pattaya.</p>
+      <p class=ReferencesText>W3C XML Schema, Part 0: Primer <a
+href="http://www.w3.org/TR/xmlschema-0/" target="_blank">http://www.w3.org/TR/xmlschema-0/</a></p>
+      <p class=ReferencesText>W3C XML Schema, Part 1: Structures <a
+href="http://www.w3.org/TR/xmlschema-1/" target="_blank">http://www.w3.org/TR/xmlschema-1/</a></p>
+      <p class=ReferencesText>W3C XML Schema Part 2 : Datatypes <a
+href="http://www.w3.org/TR/xmlschema-2/" target="_blank">http://www.w3.org/TR/xmlschema-2/</a></p>
+      <p class=ReferencesText><a href="http://www.dramatica.com/" target="_blank">http://www.dramatica.com</a></p>
+      <p class=ReferencesText><a href="http://www.opendrama.com/" target="_blank">http://www.opendrama.com</a></p>
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+
+<p class="smallPurple">&nbsp;</p>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2004/papers/scali/scali.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:45:41 GMT -->
+</html>

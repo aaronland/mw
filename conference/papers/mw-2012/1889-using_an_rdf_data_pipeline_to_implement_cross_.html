@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2012/papers/using_an_rdf_data_pipeline_to_implement_cross_ by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:11:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Using an RDF Data Pipeline to  Implement Cross-Collection Search  | museumsandtheweb.com</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<link rel="alternate" type="application/rss+xml" title="Comments for &quot;Using an RDF Data Pipeline to  Implement Cross-Collection Search &quot;" href="../../crss/node/16867html.html" />
+<link rel="shortcut icon" href="../../files/favicon0cc1.ico?a" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../../files/ctools/css/fc1c48c5ca33c8171b281d62bf027dd0e4da.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="../../files/css/css_f7e2be0e9735a90610f82c98117dc429.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../../files/css/css_be733149ff93a70329b24a75cac048ce.css" />
+  <style type="text/css">#container{width:100%;}.two-sidebars .content-inner{margin-left:240px; margin-right:300px;}.sidebar-first .content-inner{margin-left:240px; margin-right:0;}.sidebar-last .content-inner{margin-right:300px; margin-left:0;}#sidebar-first{width:240px;margin-left:-100%;}#sidebar-last{width:300px;margin-left:-300px;}</style>  <script type="text/javascript" src="../../files/js/js_c85e31df0ca6eeac4ecb6a1f43c7ac18.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","block_edit":{"hover_links":1},"chartbeat":{"uid":3385,"domain":"museumsandtheweb.com"},"fivestar":{"titleUser":"Your rating: ","titleAverage":"Average: ","feedbackSavingVote":"Saving your vote...","feedbackVoteSaved":"Your vote has been saved.","feedbackDeletingVote":"Deleting your vote...","feedbackVoteDeleted":"Your vote has been deleted."},"googleanalytics":{"trackOutgoing":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});
+//--><!]]>
+</script>
+</head>
+<body class="not-front not-logged-in article-type-paper one-sidebar sidebar-first section-mw2012 page-node-16867">
+  <div id="container">
+
+    <div id="skip-nav" class="show-on-focus">
+      <!-- To adjust the display of the skip link see the Advanced theme settings (General settings), and never use display:none! -->
+      <a href="#main-content">Skip to main content</a>
+    </div>
+
+        
+    
+          <div id="leaderboard">  <div id="block-panels_mini-leader" class="block block-panels_mini odd block-region-leaderboard block-count-1">
+  <div class="block-inner">
+
+    
+    <div class="content"><div class="panel-display panel-3col clear-block" id="mini-panel-leader">
+  <div class="panel-panel panel-col-first">
+    <div class="inside"></div>
+  </div>
+
+  <div class="panel-panel panel-col">
+    <div class="inside"><div class="panel-pane pane-custom pane-1 " >
+  
+      <h2 class="pane-title"><a href="../../index.html">Museums and the Web </a></h2>
+  
+  
+  <div class="pane-content">
+    <font color="white">An annual conference exploring the social, cultural, design, technological, economic, and organizational issues of culture, science and heritage on-line.</font>  </div>
+
+  
+  </div> <!-- /panels-pane -->
+</div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside"><div class="panel-pane pane-custom pane-2 " >
+  
+      <h2 class="pane-title"><a href="http://mw2013.museumsandtheweb.com/">Museums and the web 2013</a></h2>
+  
+  
+  <div class="pane-content">
+    <ul>
+<li><a href="../../mw2012.html">2012</a></li>
+<li><a href="../../mw2011.html">2011</a></li>
+<li><a href="../../mw2010/index.html">2010</a></li>
+<li><a href="../../mw2009/index.html">2009</a></li>
+<li><a href="../../mw2008/index.html">2008</a></li>
+
+<li><a href="../../mw/museums_and_the_web.html">...</a></li>
+</ul>
+  </div>
+
+  
+  </div> <!-- /panels-pane -->
+</div>
+  </div>
+</div>
+</div>
+
+    
+  </div>
+</div> <!-- /block -->
+</div> <!-- /leaderboard -->
+    
+    <div id="header" class="clearfix">
+
+              <div id="branding">
+
+                                    <div class="logo-site-name"><strong>
+                <span id="logo"><a href="../../mw2012.html" title="Museums and the Web 2012: the international conference for culture and heritage on-line"><img src="../../sites/all/themes/at_mw2012/logo.png" alt="museumsandtheweb.com logo" title="Home page"/></a></span>                <span id="site-name"><a href="../../mw2012.html" title="Museums and the Web 2012: the international conference for culture and heritage on-line"><img src="../../sites/all/themes/at_mw2012/css/theme/images/mw2012-title.png" alt="Museums and the Web 2012: the international conference for culture and heritage on-line" /></a></span>              </strong></div> <!-- /logo/site name -->
+                        <div id="site-slogan"><div class="when-where">April 11-14, 2012, San Diego, CA, USA</div><div class="by">produced by Archives &amp; Museum Informatics</div><div class="link">http://conference.archimuse.com/mw2012</div></div>                    
+        </div> <!-- /branding -->
+            
+        <div id="social">
+                    <div class="custom-user-menu"><ul class="item-list clear-block">
+<li class="first"><a href="../../user/register.html">New Account</a></li>
+<li class="last"><a href="../../user.html">Login</a></li>
+</ul></div>          <div class="social-media clear-block"><ul>
+<li><a class="linkedin" href="http://www.linkedin.com/shareArticle?url=http://museumsandtheweb.com/mw2012/papers/using_an_rdf_data_pipeline_to_implement_cross_&amp;source=Archimuse&amp;mini=true" rel="nofollow" target="_blank" title="Share on LinkedIn">LinkedIn</a></li>
+<li><a class="facebook" href="http://www.facebook.com/share.php?u=http://museumsandtheweb.com/mw2012/papers/using_an_rdf_data_pipeline_to_implement_cross_" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a></li>
+<li><a class="twitter" href="http://twitter.com/?status=http://museumsandtheweb.com/mw2012/papers/using_an_rdf_data_pipeline_to_implement_cross_" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a></li>
+<li><a class="flickr" href="http://www.flickr.com/groups/mw2011-15th/" rel="nofollow" target="_blank" title="Join the Flickr group">Flickr</a></li>
+</ul></div>
+        </div> <!-- /social -->
+        
+              <div id="register"><a href="../register.html" target="_blank">Register</a></div> <!-- /register -->
+            
+      
+    </div> <!-- /header -->
+
+        
+      <div id="primary" class="nav">
+      </div> <!-- /primary link menu -->
+
+
+    
+
+
+    
+    <div id="columns"><div class="columns-inner clearfix">
+
+      <div id="content-column"><div class="content-inner">
+        
+                
+        
+        <div id="main-content">
+          
+                      <div id="breadcrumb">
+              <h2 class="element-invisible">You are here:</h2>
+              <a href="../../mw2012.html">MW2012</a> &#187; <a href="../mini-workshops.html">Mini-Workshops</a> &#187; <a href="../programs/using_an_rdf_data_pipeline_to_implement_cros.html">Using an RDF Data Pipeline to Implement Cross Collection Search</a> &#187;             </div> <!-- /breadcrumb -->
+              
+                      <div id="main-content-header" class="clear-block">
+              <h1 id="page-title">Using an RDF Data Pipeline to  Implement Cross-Collection Search </h1>                          </div>
+          
+          
+          <div id="content"><div id="article-16867" class="article article-promoted paper-article clear-block">
+
+    
+    <div class="article-detail clear-block">
+  <div class="node-edit-link" id="node-edit-link-16867"><ul class="links"><li class="0 first last active"><a href="using_an_rdf_data_pipeline_to_implement_cross_.html" class="active">[View]</a></li>
+</ul>
+</div><h3 class="Author">David Henry and Eric Brown, Missouri History Museum, USA</h3>
+<p class="URL"><a href="http://www.mohistory.org/">http://www.mohistory.org</a></p>
+<h3 class="URL"><strong>Abstract</strong></h3>
+<p class="AbstractText">This paper presents an approach to transforming data from many diverse sources in support of a semantic cross-collection search application.&nbsp; It describes the vision and goals for a semantic cross-collection search and examines the challenges of supporting search of that kind using very diverse data sources.&nbsp; The paper makes the case for supporting semantic cross-collection search using semantic web technologies and standards including Resource Descriptive Framework (RDF), SPARQL Protocol and RDF Query Language (SPARQL ), and an XML mapping language.&nbsp; The Missouri History Museum has developed a prototype method for transforming diverse data sources into a data repository and search index that can support a semantic cross-collection search.&nbsp; The method presented in this paper is a data pipeline that transforms diverse data into localized RDF; then transforms the localized RDF into more generalized RDF graphs using common vocabularies; and ultimately transforms generalized RDF graphs into a Solr search index to support a semantic cross-collection search.&nbsp; Limitations and challenges of this approach are detailed in the paper.</p>
+<p class="AbstractText">Keywords: RDF, data integration, search, semantic web, Solr, SPARQL</p>
+<h2>Introduction</h2>
+<p>The Missouri History Museum (MHM) launched a beta version cross-collection search in mid-2010.&nbsp;That implementation uses Solr (<a href="http://lucene.apache.org/solr/" title="http://lucene.apache.org/solr/">http://lucene.apache.org/solr/</a>) as a search engine with data from multiple domains (objects, archives, and photo collections) indexed to Solr documents with various PHP scripts.&nbsp;Although some attempts were made to map data values to specific locations, dates, and subjects, most of the data is indexed as text fields.&nbsp;After user feedback and considering what would be possible with semantic web tools, we identified a number of limitations to this approach: 1) text-based facets are often ambiguous or vague; 2) users do not have the ability to further explore the context of search results; 3) data from different domains must be “watered down” to conform to the search index; 4) data is not available as linked open data; and 5) we are missing an opportunity to contribute to the web of data through crowd sourcing.</p>
+<p>To overcome these limitations, the prototype of our next version is built firmly on sematic web technologies: RDF, SPARQL, and triple/quad stores.&nbsp;The prototype strives to meet the following requirements: 1) aggregate and index data from different domains and from multiple institutions; 2) expose a repository of linked open data; 3) index by specific data types (personal and corporate entities, geocoded locations, date ranges, and common vocabularies); &nbsp;4) maintain the rich context of data from multiple domains and institutions; and 5) allow users to make contextual links between items, people, locations, dates, and subjects—thereby contributing to the web of data.&nbsp;At the heart of this approach is a semantic data pipeline that “ingests” mixed data, converts it to RDF, transforms data to common data formats, aligns collection-specific fields to common fields, indexes to Solr, and provides both a faceted search interface and a SPARQL endpoint for linked open data.</p>
+<p>The prototype approach presented here is not a single application; rather it is a proposed pipeline that uses many different tools that conform to semantic web standards such as RDF, RDFS, OWL, and SPARQL. Since they rely on web standards, tools may be swapped out for others that serve the same purpose without rebuilding the pipeline. For example, there are many tools for converting between various data formats—called “RDFizers” (<a href="http://simile.mit.edu/wiki/RDFizers" title="http://simile.mit.edu/wiki/RDFizers">http://simile.mit.edu/wiki/RDFizers</a>)—but our prototype uses D2RQ (<a href="http://www4.wiwiss.fu-berlin.de/bizer/d2rq/" title="http://www4.wiwiss.fu-berlin.de/bizer/d2rq/">http://www4.wiwiss.fu-berlin.de/bizer/d2rq/</a>) for converting relational databases to RDF; and modmarc2RDF (<a href="http://simile.mit.edu/repository/RDFizers/marcmods2rdf/" title="http://simile.mit.edu/repository/RDFizers/marcmods2rdf/">http://simile.mit.edu/repository/RDFizers/marcmods2rdf/</a>) for converting MARC records to RDF. There are many tools for converting between various RDF formats—our prototype uses the ARC2 library.&nbsp; Many tools exist for storing and querying RDF—we use Sesame. Finally, there are several tools available for transforming/mapping RDF data—we use a custom-built processor for interpreting an XML mapping language proposed by Kondylakis et al. (2006).</p>
+<h2>The challenge of cross-collection search</h2>
+<p class="BlockQuote">Users can search Internet resources through a single search engine query, yet often the resources of a single cultural institution or university campus are segregated into silos, each with its own dedicated search system. The prominence of multidisciplinary research, the increase in the use of primary materials, and the desire to make new connections across disparate materials all would be advanced by the offering of single search to open up all the collections to the researcher. <em>(</em>Prescott and Erway, 2011<em>)</em></p>
+<p>This quote from a recent OCLC report about single search (or cross-collection search) sums up a common vision for cross-collection search. Users should be able to search across diverse collections from a single search interface and make new connections across disparate materials. Today, there are several notable examples of cross-collection search available to web users—providing both keyword and faceted searching across diverse collections. While these cross-collection searches have made great strides in providing keyword searches, they are limited in terms of providing domain-specific contexts to those diverse collections. Without the domain-specific contexts, it is less likely that users will be able to quickly find the resources they are seeking and even less likely that they will be able make meaningful connections across disparate materials.</p>
+<p>Data from multiple collections—even in the same institution—come from different data management systems with differing data structures, field names, and data types. Even where standards are used in a data management system, those standards tend to differ by domain. To overcome these data differences, developers of existing cross-collection search applications have been forced to map domain-specific data structures to a generalized data structure—for example “artist,” “photographer,” and “author” may all be generalized as “creator.” Oftentimes a person, place, event, or some other facet may be related to an item (search result) solely by keywords. By mapping to a more generalized data structure, we tend to lose the specific relationship between these facets and a given item. This makes searching more time consuming because the user must sift through irrelevant results, and the only connections a user can make are by keywords (as comments) or tags.</p>
+<p>At MHM, our current cross-collection search (<a href="http://collections.mohistory.org/search/" title="http://collections.mohistory.org/search/">http://collections.mohistory.org/search/</a>) suffers from the limitations described above. We are indexing to a Solr schema using various custom-built indexing scripts. The relationships between collected items and facets are limited to keywords or incomplete relationships to people, places, events, and topics. For example, we have many items that relate to the 1904 World’s Fair. Unfortunately, the 1904 World’s Fair is also known as “The St. Louis World’s Fair” and the “Louisiana Purchase Exposition”—all of these names refer to the same event. Since our index is based on keywords, searching for “1904 World’s Fair” may not result in items indexed by “St. Louis World’s Fair” or the “Louisiana Purchase Exposition.” There are similar problems with variations in a person or organization name—for example, the former senator from Missouri known as both “Richard Gephardt” and “Dick Gephardt.” Even item types can suffer from the same ambiguity. For example, there are 16,480 items categorized as “photo” and 12,542 items categorized as “photograph.”&nbsp;</p>
+<p>Since these indexing problems can result in a cumbersome searching experience for the user, we need to limit or completely alleviate these ambiguities in our next version of cross-collection search. Beyond search and discovery, we want to provide an interface where our users can make meaningful connections between items in our collections and facets such as people, businesses, organizations, places, events, and topics. We often see comments in our current cross-collection search which represent attempts to make such connections. For example, users identify people shown in portraits including more information such as date and place of birth and/or date and place of death.&nbsp; Similarly, users will identify a photograph of a house linking the house to an address and/or residents of the house at given dates. Unfortunately, with our current search indexing, we can only index those comments as keywords; it is not possible to link to specific people, places, and/or events.&nbsp;</p>
+<p>Given the limitations of our current search and our vision of building meaningful connections, our goals in the next version of cross-collection search include:</p>
+<ul>
+<li>Clearly defining specific relationships between collected items and entities such as person, organization, place, event, and topic – for example, the user should be able to make a distinction between “painter,” “photographer,” and “author”;</li>
+<li>Uniquely identifying entities used in facets – for example “1904 World’s Fair,” “St. Louis World’s Fair,” and “Louisiana Purchase Exposition” should all have the same unique identifier; similarly, if referring to the senator from Missouri, “Richard Gephardt” and “Dick Gephardt” should have the same identifier;</li>
+<li>Providing an interface and data infrastructure to allow our users to make specific relationships between items and entities.</li>
+</ul>
+<p>Of course, simply meeting these data goals is not sufficient. There are a number of implementation goals that must also be met to provide a useful search tool in the current environment. These implementation goals include:</p>
+<ul>
+<li>Searching must be very fast—in other words, as close to immediate as possible;</li>
+<li>Data sources must be considered very diverse to accommodate not only collections within an institution but also collections from a wide range of external institutions;</li>
+<li>Data records should be considered “almost live”—it should be possible to update records on a daily or even hourly basis, and that update should be as automated as possible.</li>
+</ul>
+<h2>Leveraging semantic web technologies</h2>
+<p>The semantic web is a term coined by Tim Berners-Lee, who is credited with developing the initial building blocks of the web (http and html). Berners-Lee envisions the future web being capable of providing meaningful connections between resources that intelligent agents (software) could use to answer more complex questions, such as, “Find all doctors in a 20 mile radius that specialize in sports injuries,” or “Find all businesses in the St. Louis area established before 1920” (Berners-Lee et al., 2001). This kind of interaction with web-based data is starting to appear in smart-phone “apps.” The difference between these smart-phone apps and what Berners-Lee envisions is that apps deliver services as a layer of data managed separately from the rest of the web, and Berners-Lee proposes that such meaningful connections should become inherent in the web—or part of the web standards. A major difference is that questions that can be answered by any given app fall within predefined logical patterns, whereas a semantic web would allow a user to define his/her own questions.</p>
+<p>Some critics of the semantic web concept have argued that we may never achieve the kind of intelligent web that Berners-Lee proposed (Anderson and Rainie, 2010). Yet there is one semantic web tool which has grown in use and implementation—the Resource Description Framework (RDF). RDF is “a foundation for processing metadata; it provides interoperability between applications that exchange machine-understandable information on the Web.” (W3C, 1999) At its core, RDF relies on “statements” about web resources, such as, “The Missouri History Museum was founded on August 11, 1866.” These statements are created with a well-defined syntax with subject, predicate, and object, such as:</p>
+<p class="code">&lt;http://www.mohistory.org&gt; &lt;http://www.example.org/terms/creation-date&gt; “08/11/1866”</p>
+<p>OR</p>
+<p class="code">&lt;mhm:people/Archibald/Robert/0001&gt; &lt;mhmvocab:presidentOf&gt;&lt;http://www.mohistory.org&gt;.</p>
+<p>Each part of an RDF statement (subject, predicate, and object) must be a uniform resource identifier (URI) or a literal (such as “08/11/1866”).&nbsp; For our purposes, each part would be a resolvable URL—such as <a href="http://www.mohistory.org/people/Archibald/Robert/0001">http://www.mohistory.org/people/Archibald/Robert/0001</a>.</p>
+<p>The great advantage of RDF over other data structures—such as databases or XML—is flexibility. “RDF provides a general, flexible method to decompose any knowledge into small pieces, called triples, with some rules about the semantics (meaning) of those pieces”Tauberer, 2008. This flexibility allows us to take data from a localized source, such as a database, and decompose it into RDF triples with precise localized meaning by stipulating the namespace for that localized source. By defining vocabularies using the OWL (Web Ontology Language), we can map local vocabularies to a common vocabulary using emerging standards and tools for RDF. This approach is similar to the “hybrid ontology” data integration approach described by Cruz and Xiao (2005).</p>
+<p>For some, the ultimate vision for the semantic web includes identifying the subjects, predicates, and objects of triples by globally unique identifiers that would have the same meaning in any query. It is clear that the semantic web is far from reaching that goal—in fact, it may never reach that goal.&nbsp; But there is still value in RDF without ever reaching the ideal point where one global URI represents one object, concept, or entity. The flexibility of RDF allows us to accommodate the fact that we will have multiple URIs for objects, concepts, and entities. We can leverage existing semantic web tools—RDFizers, RDF parsers, triple stores, and SPARQL—to help expose diverse data sources in a meaningful cross-collection search. What’s important for our purpose is that the same URI is relevant within our cross-collection search, even if that URI is not a globally unique identifier. When other URIs are discovered, they can be linked to our URI by using predicates such as “OWL:sameAs” or “SKOS:closeMatch.” And by establishing and maintaining a set of resolvable URLs to web resources that represent resources, entities, subjects, and relationships—at least within that single search index—we position ourselves to enable intelligent linking of these resources.</p>
+<h2>A data pipeline for cross-collection search</h2>
+<p>The data pipeline developed at MHM is composed of the following steps: 1) accept source data in mixed but accessible formats; 2) convert source data into local RDF using one or more RDFizers; 3) map local RDF to common RDF using a common mapping language; and 4) index common RDF to a Solr index using dynamic fields (see Figure 1). Each step of the pipeline will be described in turn.</p>
+<p style="text-align: center;"><img src="../../files/henry-fig1.jpg" border="0" width="810" height="388" /></p>
+<p style="text-align: center;"><strong><em>Figure 1.&nbsp; An overview of the Missouri History Museum’s RDF pipeline</em></strong></p>
+<p>Step 1. Accept source data in mixed but accessible formats.</p>
+<p>Ideally, we would want the capability to easily index data from any source.&nbsp; In reality, this is not possible. To RDFize a data source, we would need data that meets some basic criteria. The data must be sufficiently structured to be converted into triples (subjects, predicates, and objects). Unless, we are starting with existing RDF data or some XML, the objects extracted from source data will be in “literal” form (usually text, integers, or dates)—they will not be defined as URIs. However, these literals must be associated subjects and predicates that may be defined as URIs. To define subjects as URIs, we would need unique records in the source data, such as rows in a table, MARC records, or nodes in an XML document. To define predicates as URIs, we would need fields in the source data, such as columns in a table, MARC properties, or tags in an XML document. A collection of text documents would not usually meet these criteria.&nbsp; In addition, some data sources may be in a proprietary data storage format; these would also be restricted from this indexing process. For MHM’s prototype RDF pipeline, data sources include various relational databases, MARC records, and XML files.</p>
+<p>Step 2. Convert source data into local RDF using one or more RDFizers.&nbsp;&nbsp;</p>
+<p>An RDFizer extracts records from source data and converts them into RDF triples.&nbsp; The resulting triples can be considered “local” RDF—meaning that the objects tend to be literal, and any URIs are specific to the data source. These local triples should represent the local data as closely as possible. At this point, there should be no attempt to map to a common set of predicates, link to existing subjects, or convert primitive values (most source values will tend to be either text or number).</p>
+<p>The challenge at this step is configuring the data source and RDFizer so that data updates are seamless and automated. RDFizer tools vary in terms of system requirements and interfaces. Some require certain programming libraries and/or supporting applications. Some may be run from a command-line, while others may require opening a graphical user interface (GUI). The RDFizers we used to convert data sources for MHM’s cross collection search (D2RQ, marcmods2rdf) required java servlets and supporting java libraries. The tools we used could be run from the command line and, therefore, can be run as scheduled jobs (cron on unix-based systems). An added benefit of the D2RQ tool is that it can expose an existing relational database as a SPARQL endpoint so that the RDFizing is live.</p>
+<p>In some cases, data will need to be reformatted to enable error-free RDFizing. For example, database tables or column names that include spaces and punctuation will have to be renamed without spaces or punctuation; primary keys will need to be added to tables that do not have them; characters encoded as something other than UTF8 (for example, some text copied from Microsoft Word) must be converted to UTF8 encoding; views should be removed from the database; and keys defined as unique with non-unique values should be removed. XML data should be well formed and have consistent encoding—in some cases, an RDFizer may require that the XML is valid to a given schema. To the extent that these problems exist in the source data, the likelihood of managing automated updates is reduced.</p>
+<p>Step 3. Map local RDF to common RDF using a common mapping language.</p>
+<p>To achieve the goal of discovering common connections between diverse collections, we need to develop vocabularies with predicates that: 1) may be common across all records; 2) are identified by a “dereferenceable” URI; and 3) contain data that are clearly defined and dereferenceable. Since local RDF triples may use subjects and predicates that are specific only to the data source, we need to map those local RDF triples to “common” RDF triples that use common subjects, predicates, and where possible, objects.</p>
+<p>This step is probably the most challenging of the steps in pipeline. Mapping from one set of triples to another is non-trivial—involving judgments about the meaning of source triples and the conversion of literal data into often complex RDF graphs. Several tools exist to help perform this kind of mapping including TopBraid Suite from TopQuadrant; PoolParty from poolparty.punkt.at; Neon Toolkit from <a href="http://www.neon-project.org;/" title="www.neon-project.org;">www.neon-project.org;</a> Protégé from protege.stanford.edu; and DERI Pipes from pipes.deri.org. For a variety of reasons, we decided to build our own processor for this step rather than incorporate one of the tools listed above. No matter what tool is used, the process of mapping data requires knowledge of the domains involved and expertise in managing meta-data.</p>
+<p>At MHM, we have imposed a number of strict requirements for the kind of RDF graphs that should result from this mapping. First, where possible, we need to convert literal objects (such as names, places, subjects, and events) into RDF graphs. For example, a place such as “705 Olive Street, St. Louis, Missouri” could be converted to the graph represented in figure 2. We may also wish to convert a simple triple into a complex set of graphs to convert to an activity-based schema such as the CIDOC-CRM (<a href="http://www.cidoc-crm.org/"><em>http://www.cidoc-crm.org/</em></a>) or LIDO (<a href="http://www.lido-schema.org/" title="http://www.lido-schema.org">http://www.lido-schema.org</a>). Second, where possible, we want to use (and reuse) URIs that are dereferenceable. This is important for meeting some of the emerging best practices for linked open data (<a href="http://linkeddatabook.com/editions/1.0/#htoc11">http://linkeddatabook.com/editions/1.0/#htoc11</a>) and makes it possible for us to build on resources over time by adding triples where there are relevant connections (for example, relating vital dates and events to a person where that person is defined by a dereferenceable URI). At MHM, we are assigning permanent URIs to entities such as people, businesses, organizations, places, events, item types, and topics. Finally, our common RDF should allow for a mix of vocabularies, including both commonly used vocabularies and vocabularies specific to a particular sub-domain. For example, we should leverage existing vocabularies such as Dublin Core (dc) and Friend of a Friend (foaf) along with our own custom vocabularies. Alignments such as these would make our data more useful in the larger linked open data community. But collection-specific vocabularies may also be added to avoid losing the context of an item. For example, just as the distinction between publisher, author, and editor is important context in a collection of published works, the distinction between furniture designer, cabinetmaker, and retailer may be important for a collection of furniture. These collection specifics can be mapped to the resulting ‘common’ RDF.</p>
+<p style="text-align: center;"><img src="../../files/henry-fig2.jpg" border="0" width="835" height="365" /></p>
+<p><strong><em>Figure 2. An example graph for “705 Olive Street, St. Louis, Missouri”</em></strong></p>
+<p class="Default">None of the existing tools could be implemented “out of the box” to map from local RDF to the kind of common RDF we need. Therefore, for our initial prototype we chose to develop our own mapping tool. The process of developing our own mapping tool for the prototype pipeline has helped us develop more precise requirements that can be used when we begin to evaluate some of the existing tools. Our mapping tool makes use of a mapping language presented in recent research related to semantic data integration (Kondylakis et al., 2006; <a href="http://www.dlib.org/dlib/july09/papatheodorou/07papatheodorou.html">Lourdi</a> and <a href="http://www.dlib.org/dlib/july09/authors/07authors.html#PAPATHEODOROU">Papatheodorou</a>, 2008). This mapping language is flexible enough to meet our needs for transforming literals into graphs, and it can represent the kind of simple to complex conversions that we require.</p>
+<p>The common RDF statements or triples (subject, predicate, and object) that are the result of the mapping described above should be saved to a reliable store with context using a reliable quad store. The triple statement plus the context is often referred to as a quad (or named graph). The context associated with a statement will allow us to make judgments about the quality of the assertion.&nbsp; For example, an assertion made by a museum curator would have greater validity than an assertion made by an anonymous user. There are several quad stores available including AllegroGraph, Virtuoso, Jena, Mulgara, and Sesame. At MHM we use the Sesame quad store. Ideally all communication or data integration with the quad store would be standard (for example, using SPARQL). However, the context portion of the statement is relatively new, so it is not yet part of the SPARQL standard. Therefore, to abstract the writing of data to the quad store, we have developed a prototype data service to make any calls to the quad store.</p>
+<p>Step 4. Index common RDF to a Solr index using dynamic fields.</p>
+<p>This part of the process relies heavily on the Apache Solr search engine (<a href="http://lucene.apache.org/solr/">http://lucene.apache.org/solr/</a>). Solr is a very fast search index that supports advanced searching features such as facets, spell suggest, and ranking, as well as established text searching. When properly configured, search results are normally returned in fractions of a second—even when the index contains hundreds of thousands of records. For cross-collection search, Solr’s speed is a great advantage over federated searching or most database-backed searches. Solr indexes are configured by building a schema where field types, fields, and facets are defined. Solr’s indexing schema is very flexible, allowing for the creation of any custom search fields and facets. This flexibility has made it a good choice for indexing diverse data sources.</p>
+<p>At MHM, we are already using Solr in our current cross-collection search; however, the current indexing process is less than ideal because it relies primarily on text-based data (or literals), thereby making no connection between logical subjects, places, types, or entities. By indexing to Solr from the common RDF that results from the mapping described above, we can overcome much of the ambiguity resulting from a text-based index. The process of indexing Solr from our common RDF relies on using facets that are linked to entities (assigned to URIs) and using dynamic fields in the Solr schema.</p>
+<p>The prototype search index for cross-collection searching at the MHM has five broad level facets:</p>
+<ul>
+<li>Who: linked to person-org entities (for example, <a href="http://collections.mohistory.org/id/person-org/912837" title="http://collections.mohistory.org/id/person-org/912837">http://collections.mohistory.org/id/person-org/912837</a>)</li>
+<li>What: linked to our types vocabulary (for example, <a href="http://collections.mohistory.org/vocab/types/dress" title="http://collections.mohistory.org/vocab/types/dress">http://collections.mohistory.org/vocab/types/dress</a>)</li>
+<li>When: linked to events entities and dates (for example, <a href="http://collections.mohistory.org/id/event/675849" title="http://collections.mohistory.org/id/event/675849">http://collections.mohistory.org/id/event/675849</a>)</li>
+<li>Where: linked to place entities (for example, <a href="http://collections.mohistory.org/id/place/013498" title="http://collections.mohistory.org/id/place/013498">http://collections.mohistory.org/id/place/013498</a>)</li>
+<li>Why: linked to our topic vocabulary (for example, <a href="http://collections.mohistory.org/id/topic/726354"><em>http://collections.mohistory.org/id/topic/726354</em></a>)</li>
+</ul>
+<p>A cross-collection search based solely on these broad facets may be of interest to some casual users who may be asking questions such as, “Are there any resources related to my house?”, “What resources are related to my grandfather?”, or “Are there any resources related to the Camp Jackson Affair?” However, such broad facets would be unlikely to satisfy a more serious researcher who may be asking a question such as, “Who were the photographers responsible for photos depicting the Camp Jackson Affair?” Of course, Solr search allows one to combine facets, so even with these limited broad facets it would be possible to combine facets to narrow search results: for example, limit the <em>when</em> facet to the “Camp Jackson Affair” and limit the <em>what</em> facet to photograph. But that kind of narrowing would likely be cumbersome for a serious researcher. A serious researcher would expect more context through relationships such as “photographedBy” and “depicting.” As described above, this kind of context can be captured by the common RDF created in step 3 of the pipeline. This level of context can be indexed to Solr by making use of dynamic fields.</p>
+<p>Dynamic fields in Solr allow one to define a class of fields or a kind of wildcard field such as <em>*_who</em>. When dynamic fields are defined in the Solr schema, it is not necessary to define all of the fields that can be indexed. For example, if the dynamic field <em>*_who</em> is defined in the schema, it is possible to index fields such as “photographedBy_who” and “manufacturedBy_who.” By adding a copyField statement instructing Solr to copy the contents of the dynamic field to a broad facet, such as the <em>who</em> facet, it is possible to search by a more specific context within that broad facet.</p>
+<p>MHM makes use of dynamic fields to capture specific context by the following steps:</p>
+<p>1) In the Solr schema, we created broad facets using fields: <em>who</em>, <em>what</em>, <em>when</em>, <em>where</em>, <em>why</em>. When indexing, only URIs are indexed to the broad facet fields. These fields are of type “string” so they are not tokenized and are searchable by the full URI.</p>
+<p>2) We created the following dynamic fields: <em>*_who</em>,<em>*_what</em>,<em>*_when</em>,<em>*_where</em>, and <em>*_why</em>. These fields are also intended to only accept URIs, so they are also of type string. Context-specific predicates are indexed to these dynamic fields and copied to the related broad facet depending on type. For example, mhm:/vocab/photographedBy would be indexed to “photographedBy_who” in Solr and copied to the <em>who</em> field in Solr.</p>
+<p>3) Additional dynamic fields were created to handle literal values so they can be searched directly without opening the RDF resource to get the label: <em>*_who_label</em>,<em>*_what_label</em>,<em>*_when_daterange</em>,<em>*_where_geohash</em>,<em>*_why_label</em>. The label fields are of type “text” to allow for tokenizing and keyword searching. The <em>daterange</em> field is of type “date,” and the <em>geohash</em> field is of type “string.” When indexing the fields, we must perform a secondary query on URIs to get indexable values such as rdfs:label or skos:altlabel.</p>
+<h2>Practical considerations</h2>
+<p>The data pipeline described above makes it possible to convert heterogeneous data from various source collections into common RDF that provides linked open data and finally provides a search index that allows searching at both a broad level and at a level specific to the context of a source collection. It might be possible to set up such a pipeline for a one-time snapshot of existing data. But to provide ongoing “live” access to data in the foreseeable future with opportunities to continuously build on the search index, there are some practical issues to consider.</p>
+<p>First, maintaining and building upon the pipeline would require sufficient in-house technical expertise—both technological expertise and expertise with metadata. The technological tools that MHM uses for its pipeline require knowledge of server side scripting, command-line tools, java servlet engines, and data encoding. The data-mapping process requires staff with expertise in developing ontologies and managing metadata, and an understanding of various data formats.&nbsp; At MHM, building the prototype data pipeline required close collaboration between Technology Department staff and staff from various museum and library departments. As we move into full implementation, we have plans to dedicate staff to the data-mapping process—at least one metadata expert and one systems/data specialist.</p>
+<p>Second, updates to the common RDF repository must be done with care. An RDF triple store (such as Sesame) does not have the kind of data validation typically found in a relational database management system, including validating data types and uniqueness.&nbsp; The triple store will accept triples with any type of object values in the “subject, predicate, object” triple. There is no way to limit types to a certain class of URIs, a certain type of literal, or even whether the value is a literal or URI.&nbsp; Similarly, there is no way in existing triple stores to define a subject–predicate combination as being unique within a given subject. Since there is no built-in validation in the triple store, it is up to those responsible for the mapping process and scripting to validate values written to the triple store. Updates to RDF should make use of a context URI. For example, when data is mapped to a common RDF repository from a specific local RDF repository, it should include a context URI that is specific to that local repository. To update triples from a local repository without deleting all of the triples, first the existing triples have to be removed by reference to the context; then the new triples can be rewritten from the same context.</p>
+<p>Finally, to allow for flexibility and changes in technology, the different processes that make up the pipeline should be only loosely coupled to the other processes. A process that relies on reading triples from an RDF store can be loosely coupled when access is through a conformant SPARQL endpoint (<a href="http://www.w3.org/TR/rdf-sparql-protocol/"><em>http://www.w3.org/TR/rdf-sparql-protocol/</em></a><em>).</em> More and more datasets are being published as SPARQL endpoints on the web, and there is no indication that the growth in SPARQL endpoints is leveling off (<a href="http://richard.cyganiak.de/#me">Cyganiak</a>, 2011). That continued growth means that we can expect more data to be available through SPARQL endpoints in the next few years, and an increasing number of tools should become available for managing SPARQL endpoints. In the pipeline presented above, there are two points where data is read from SPARQL endpoints: 1) when mapping from a local RDF store to common RDF; and 2) when indexing from common RDF to Solr.&nbsp; The underlying application that delivers the SPARQL endpoint (in this case Sesame) is not necessary for the long-term maintenance of the pipeline—it could be replaced with another application that also delivers a conformant SPARQL endpoint.&nbsp;</p>
+<h2>Future work</h2>
+<p>The prototype RDF pipeline presented here meets some of the goals outlined earlier in this paper, but not all. With the current prototype, there are challenges incorporating new diverse data sources; and the prototype does not yet provide an interface that allows users to make meaningful connections between resources and entities in the index.</p>
+<p>In the pipeline presented here, mapping local RDF data to common RDF is a difficult manual process that requires a lot of knowledge of the source data, the target data, and parsing functions. The data map is manually written to an XML mapping file. To streamline the process of mapping data, we need an application that allows more automated references to source data, target data, and parsing functions; for example, by using auto-suggest or visual representations. While we expect that the mapping process will always require a certain amount of expertise in managing metadata and an understanding of the specific vocabularies being used, there should be opportunities to make the process more efficient. It may be possible to configure one or more of the mapping tools listed under step 4 above to provide this functionality. Further evaluation is needed to determine which, if any, of these applications would allow for an efficient mapping process that also meets our strict requirements for mapping.</p>
+<p>The biggest challenge in providing an interface that allows users to make meaningful connections between resources is to incorporate that capability in the search interface without overwhelming the user with too much information and too much complexity. To overcome this challenge, we need to rely on the progressive disclosure strategy—showing only what is necessary for a given level of involvement. The user who is only interested in searching and seeing search results should not be presented with a lot of information and choices about creating linkages between resources.&nbsp; Instead, we may use an icon similar to the ShareThis (<a href="http://sharethis.com/" title="http://sharethis.com/">http://sharethis.com/</a>) icon to allow users to make such connections. The interfaces related specifically to making linkages should be easy enough to follow so that the user does not need any understanding of the underlying vocabularies and RDF. Using auto-suggest and other search tools should help simplify these interfaces.</p>
+<h2>Conclusions</h2>
+<p>There are significant challenges to implementing a system that provides search across diverse collections in a way that is useful for the general public and serious researchers. This paper has presented an approach to delivering a semantic cross-collection search by leveraging emerging semantic web technologies—specifically those related to the Resource Descriptive Framework (RDF).&nbsp; By leveraging these emerging technologies, it is possible to create a flexible infrastructure that can adapt to new technologies as needed.</p>
+<p>To build upon the approach presented here, future work should focus on developing user-friendly interfaces that can make the best use of the semantic cross-collection search index, and simplifying the tools used in the pipeline to accommodate institutions of all sizes and types.</p>
+<p>&nbsp;</p>
+<h2>References</h2>
+<p class="ReferencesText">Anderson, J., &amp; L. Rainie. (2010). The Fate of the Semantic Web. Consulted January 25, 2012. Available at <a href="http://pewinternet.org/~/media/Files/Reports/2010/PIP-Future-of-the-Internet-Semantic-web.pdf">http://pewinternet.org/~/media//Files/Reports/2010/PIP-Future-of-the-Internet-Semantic-web.pdf</a></p>
+<p class="ReferencesText">Berners-Lee, T., et al. (2001). “The Semantic Web.” <em>Scientific American</em> (May)<em>. </em>Consulted January 25, 2012.&nbsp; Available at <a href="http://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf"><em>http://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf</em></a></p>
+<p class="ReferencesText"><a href="http://richard.cyganiak.de/#me">Cyganiak</a>, R. (2011) The Linking Open Data cloud diagram.&nbsp; Last updated September 19, 2011. Consulted January 29, 2012.&nbsp; Available at: <a href="http://richard.cyganiak.de/2007/10/lod/" title="http://richard.cyganiak.de/2007/10/lod/">http://richard.cyganiak.de/2007/10/lod/</a></p>
+<p class="ReferencesText">Cruz, I., &amp; H. Xiao. (2005). The Role of Ontologies in Data Integration. Consulted January 24, 2012. Available at: <a href="http://www.cs.uic.edu/~advis/publications/dataint/eis05j.pdf" title="http://www.cs.uic.edu/~advis/publications/dataint/eis05j.pdf">http://www.cs.uic.edu/~advis/publications/dataint/eis05j.pdf</a></p>
+<p class="ReferencesText">Kondylakis, H., et al. (2006). Mapping Language for Information Integration. Consulted January 24, 2012.&nbsp; Available at: <a href="http://www.cidoc-crm.org/docs/Mapping_TR385_December06.pdf" title="http://www.cidoc-crm.org/docs/Mapping_TR385_December06.pdf">http://www.cidoc-crm.org/docs/Mapping_TR385_December06.pdf</a> <a href="http://www.dlib.org/dlib/july09/papatheodorou/07papatheodorou.html">Lourdi</a>, I., &amp; C. <a href="http://www.dlib.org/dlib/july09/authors/07authors.html#PAPATHEODOROU">Papatheodorou</a>. (2008). Semantic Integration of Collection-level Information: A Crosswalk Between CIDOC/CRM &amp; Dublin Core Collections Application Profile. Consulted January 24, 2012.&nbsp; Available at <a href="http://www.ionio.gr/~papatheodor/papers/cidoc2008.pdf"><em>http://www.ionio.gr/~papatheodor/papers/cidoc2008.pdf</em></a><em>&nbsp;</em></p>
+<p class="ReferencesText">Prescott, L., &amp; R. Erway. (2011). Single Search: The Quest for the Holy Grail. Dublin, Ohio: OCLC Research. Consulted January 24, 2012. Available at: <a href="http://www.oclc.org/research/publications/library/2011/2011-17.pdf"><em>http://www.oclc.org/research/publications/library/2011/2011-17.pdf</em></a></p>
+<p class="ReferencesText">Tauberer, Joshua. (2008). What is RDF and what is it good for? Last revised January 2008. Consulted January 24, 2012. <a href="http://www.rdfabout.com/intro/" title="http://www.rdfabout.com/intro/">http://www.rdfabout.com/intro/</a>?</p>
+<p class="ReferencesText">W3C (World Wide Web Consortium). (1999). “Resource Description Framework (RDF) Model and Syntax Specification.” O. Lassila and R. Swick (eds.). Available at: <a href="http://www.w3.org/TR/PR-rdf-syntax/" title="http://www.w3.org/TR/PR-rdf-syntax/">http://www.w3.org/TR/PR-rdf-syntax/</a></p>
+<div class="field nodereference field-paper-program-ref">
+                                <h3 class="label inline">Program Item Reference:&nbsp;</h3>
+          <div class="item inline odd"><a href="../programs/using_an_rdf_data_pipeline_to_implement_cros.html">Using an RDF Data Pipeline to Implement Cross Collection Search</a></div>
+              </div>
+ <!-- /content-field -->
+  </div>
+  
+  <div class="article-meta">
+      <p class="submitted">Posted <em class="time">March 25, 2012 - 10:43pm</em> by <em class="author"><a href="../../user/dhenry.html" class="username" title="View David&#039;s profile.">David Henry</a></em></p>
+  
+    
+    </div>
+  
+  
+</div> <!-- /article --></div>
+
+        </div> <!-- /main-content -->
+
+        
+      </div></div> <!-- /content-column -->
+
+              <div id="sidebar-first" class="sidebar">  <div id="block-menu-menu-mw2012" class="block block-menu odd block-region-sidebar-first block-count-2">
+  <div class="block-inner">
+
+          <h2 class="block-title">MW2012 Main Menu</h2>
+    
+    <div class="content"><ul class="menu">
+ <li class="leaf first about-mw2012"><a href="../about.html" title="Museums and the Web 2012 (MW2012)">About MW2012</a></li>
+<li class="leaf attendees"><a href="../attendees.html" title="Attendees">Attendees</a></li>
+<li class="leaf workshops"><a href="../workshops.html" title="Museums and the Web 2012 (MW2012): Workshops">Workshops</a></li>
+<li class="leaf sessions"><a href="../sessions.html" title="Museums and the Web 2012 (MW2012): Sessions">Sessions</a></li>
+<li class="leaf speakers-amp-authors"><a href="../speakers.html" title="Museums and the Web 20121 (MW2012): Speakers &amp; Authors">Speakers &amp; Authors</a></li>
+<li class="leaf demonstrations"><a href="../demonstrations.html" title="Demonstrations">Demonstrations</a></li>
+<li class="leaf exhibits"><a href="../sponsor_exhibits.html" title="Museums and the Web 2012 (MW2012): Exhibits">Exhibits</a></li>
+<li class="leaf sponsors"><a href="../sponsors.html" title="Museums and the Web 2012 (MW2012): Sponsors">Sponsors</a></li>
+<li class="collapsed best-of-the-web"><a href="../best/nominees.html" title="Best of the Web Nominations 2012">Best of the Web</a></li>
+<li class="leaf program-committee"><a href="../program-committee.html" title="">Program Committee</a></li>
+<li class="leaf epub-proceedings"><a href="../epub.html" title="MW2012 Proceedings Digital Download">ePub Proceedings</a></li>
+<li class="leaf mw-online"><a href="../mw2012_online_the_permanent_backchannel.html" title="Museums and the Web 2012 (MW2012): MW Online – The Permanent Backchannel">MW Online</a></li>
+<li class="leaf registration"><a href="../registration.html" title="Museums and the Web 2012 (MW2012): Register">Registration</a></li>
+<li class="leaf exhibitor-logistics"><a href="../mw2012_exhibitor_logistics.html" title="Museums and the Web 2012 (MW2012): Exhibitor Logistics">Exhibitor Logistics</a></li>
+<li class="leaf scholarships"><a href="../scholarships.html" title="Museums and the Web 2012 (MW2012): Scholarships and Volunteers">Scholarships</a></li>
+<li class="collapsed local-information"><a href="../local-information.html" title="Museums and the Web 2012 (MW2012): Local Information">Local Information</a></li>
+<li class="leaf events"><a href="../events.html" title="Museums and the Web 2012 (MW2012): Events">Events</a></li>
+<li class="leaf key-dates"><a href="../dates.html" title="Museums and the Web 2012 (MW2012): Key Dates">Key Dates</a></li>
+<li class="leaf paper-guidelines"><a href="../paper-guidelines.html" title="Paper Guidelines">Paper Guidelines</a></li>
+<li class="leaf presentation-guidelines"><a href="../presentation-guidelines.html" title="Presentation Guidelines">Presentation Guidelines</a></li>
+<li class="leaf suggestions-"><a href="../../forum/suggestions_for_the_mw2012_program.html" title="Suggestions for the MW2012 Program?">Suggestions?</a></li>
+<li class="leaf last call-for-participation"><a href="../call.html" title="">Call for Participation</a></li>
+ </ul>
+</div>
+
+    
+  </div>
+</div> <!-- /block -->
+</div> <!-- /sidebar-first -->
+      
+      
+    </div></div> <!-- /columns -->
+
+    
+          <div id="footer">
+
+                  <div id="footer-region">  <div id="block-panels_mini-footer" class="block block-panels_mini odd block-region-footer block-count-3">
+  <div class="block-inner">
+
+    
+    <div class="content"><div class="panel-flexible panels-flexible-4 clear-block" id="mini-panel-footer">
+<div class="panel-flexible-inside panels-flexible-4-inside">
+<div class="panels-flexible-region panels-flexible-region-4-left panels-flexible-region-first left">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-4-left-inside panels-flexible-region-inside-first">
+  </div>
+</div>
+<div class="panels-flexible-region panels-flexible-region-4-center center">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-4-center-inside">
+<div class="panel-pane pane-custom pane-3 " >
+  
+      <h2 class="pane-title">Founded by Archives &amp; Museum Informatics</h2>
+  
+  
+  <div class="pane-content">
+    <p><a href="http://www.archimuse.com/" title="www.archimuse.com">www.archimuse.com</a></p>
+  </div>
+
+  
+  </div> <!-- /panels-pane -->
+  </div>
+</div>
+<div class="panels-flexible-region panels-flexible-region-4-right panels-flexible-region-last right">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-4-right-inside panels-flexible-region-inside-last">
+<div class="panel-pane pane-custom pane-4 " >
+  
+      <h2 class="pane-title">Managed by Museums and the Web LLC</h2>
+  
+  
+  <div class="pane-content">
+    <p>703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info @ museumsandtheweb.com<br />
+<a href="../../terms.html">Terms and Conditions</a> </p>
+  </div>
+
+  
+  </div> <!-- /panels-pane -->
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+    
+  </div>
+</div> <!-- /block -->
+</div> <!-- /footer-region -->
+        
+        
+      </div> <!-- /footer -->
+    
+  </div> <!-- /container -->
+
+  <script type="text/javascript">
+  var _sf_async_config=Drupal.settings.chartbeat;
+  (function(){
+    function loadChartbeat() {
+      window._sf_endpt=(new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src',
+         (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+         "static.chartbeat.com/js/chartbeat.js");
+      document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+       loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+</script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-26332456-1"]);_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_setAllowHash', false]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+
+</body>
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2012/papers/using_an_rdf_data_pipeline_to_implement_cross_ by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 16:11:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+</html>

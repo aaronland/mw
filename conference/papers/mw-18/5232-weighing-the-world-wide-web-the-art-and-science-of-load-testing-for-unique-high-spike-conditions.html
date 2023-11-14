@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw18.mwconf.org/paper/weighing-the-world-wide-web-the-art-and-science-of-load-testing-for-unique-high-spike-conditions/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:26:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<script src="https://use.typekit.net/yhd3uya.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Weighing the World Wide Web: The art and science of load testing for unique high-spike conditions &#8211; MW18: Museums and the Web 2018</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW18: Museums and the Web 2018 &raquo; Weighing the World Wide Web: The art and science of load testing for unique high-spike conditions Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw18.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='cookie-notice-front-css'  href='../../wp-content/plugins/cookie-notice/css/front.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='spacexchimp_p005-bootstrap-tooltip-css-css'  href='../../wp-content/plugins/social-media-buttons-toolbar/inc/lib/bootstrap-tooltip/bootstrap-tooltipe6e5.css?ver=4.67' media='all' />
+<link rel='stylesheet' id='spacexchimp_p005-frontend-css-css'  href='../../wp-content/plugins/social-media-buttons-toolbar/inc/css/frontende6e5.css?ver=4.67' media='all' />
+<style id='spacexchimp_p005-frontend-css-inline-css'>
+
+                    .sxc-follow-buttons {
+                        text-align: center !important;
+                    }
+                    .sxc-follow-buttons .sxc-follow-button,
+                    .sxc-follow-buttons .sxc-follow-button a,
+                    .sxc-follow-buttons .sxc-follow-button a img {
+                        width: 64px !important;
+                        height: 64px !important;
+                    }
+                    .sxc-follow-buttons .sxc-follow-button {
+                        margin: 5px !important;
+                    }
+                  
+</style>
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login287b.css?ver=1604077068' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-conference/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-conference/style3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw18.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<script id='cookie-notice-front-js-extra'>
+var cnArgs = {"ajaxUrl":"https:\/\/mw18.mwconf.org\/wp-admin\/admin-ajax.php","nonce":"ccedfb3d0d","hideEffect":"fade","position":"bottom","onScroll":"0","onScrollOffset":"100","onClick":"0","cookieName":"cookie_notice_accepted","cookieTime":"31536000","cookieTimeRejected":"2592000","cookiePath":"\/","cookieDomain":"","redirection":"0","cache":"0","refuse":"0","revokeCookies":"0","revokeCookiesOpt":"automatic","secure":"1","coronabarActive":"0"};
+</script>
+<script src='../../wp-content/plugins/cookie-notice/js/front.min9e1e.js?ver=1.3.2' id='cookie-notice-front-js'></script>
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script src='../../wp-content/plugins/social-media-buttons-toolbar/inc/lib/bootstrap-tooltip/bootstrap-tooltipe6e5.js?ver=4.67' id='spacexchimp_p005-bootstrap-tooltip-js-js'></script>
+<!--[if lt IE 9]>
+<script src='https://mw18.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index74e6.html?p=954' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed5990.json?url=https%3A%2F%2Fmw18.mwconf.org%2Fpaper%2Fweighing-the-world-wide-web-the-art-and-science-of-load-testing-for-unique-high-spike-conditions%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embedfdfc?url=https%3A%2F%2Fmw18.mwconf.org%2Fpaper%2Fweighing-the-world-wide-web-the-art-and-science-of-load-testing-for-unique-high-spike-conditions%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-conference/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-954 wp-embed-responsive cookies-not-set">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+			<div class="site-branding">
+				<a href="../../index.html" class="custom-logo-link" rel="home" itemprop="url"><img width="80" height="80" src="../../wp-content/themes/mw-conference/images/mw-logo-red-sm.png" class="custom-logo" alt="" itemprop="logo" /></a>			
+			</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p><a href="../../index.html" rel="home">MW18: Museums and the Web 2018</a><span>Vancouver, Canada &#8211; April 18-21 2018</span></p>
+								<form class="search-form" role="search" method="get" action="https://mw18.mwconf.org/">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-container"><ul id="menu-menu" class="primary-menu"><li id="menu-item-464" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-464"><a href="http://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-6"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="../../faq/index.html">Conference FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-514"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382"><a href="../../local-information-and-accommodation/index.html">Hotel and Accommodation</a></li>
+	<li id="menu-item-1132" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1132"><a href="https://www.tourismvancouver.com/museums-and-the-web/">Local Information</a></li>
+	<li id="menu-item-1991" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1991"><a href="../../museum-crawl/index.html">Museum Crawl</a></li>
+	<li id="menu-item-403" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-403"><a href="../../travel-requirements/index.html">Canadian Travel Requirements</a></li>
+	<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="../../volunteering/index.html">Volunteering</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../scholarships/index.html">Scholarships</a></li>
+</ul>
+</li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-38"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43"><a href="../../call-for-proposals/index.html">Call for Proposals</a>
+	<ul class="sub-menu">
+		<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+		<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	</ul>
+</li>
+	<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-75"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="../../advertising/index.html">Advertising</a></li>
+	<li id="menu-item-1133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1133"><a href="../../exhibiting-information/index.html">Exhibit Hall Information</a></li>
+</ul>
+</li>
+<li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-95"><a href="../../index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-542"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-2887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2887"><a href="../../presentations/index.html">Presentations</a></li>
+	<li id="menu-item-2973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2973"><a href="../../papers/index.html">Papers</a></li>
+	<li id="menu-item-467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-96"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2790"><a href="../../glami-finalists/index.html">GLAMi Finalists</a></li>
+	</ul>
+</li>
+	<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="../../mwx/index.html">MWX 2018</a></li>
+</ul>
+</li>
+</ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+		<section id="page-hero">
+		<div class="background"> </div>
+	</section>
+
+	<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];		    
+	jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw18.mwconf.org/wp-content/themes/mw-conference/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-954" class="post-954 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">Weighing the World Wide Web: The art and science of load testing for unique high-spike conditions</h1>
+
+<p><a target="_blank" href="https://www.museweb.net/member/rnagaraja/">Radha Nagaraja</a>, National September 11 Memorial and Museum, USA</p>
+
+<h2>Abstract</h2>
+The website of an organization is its global public face in the modern digital age, and smooth functioning of the website is key to meeting an organization's mission. The appropriate Web server infrastructure and configuration are, by common sense wisdom, a function of the expected traffic patterns and the content served on the website. However, a challenging wrinkle in Web server provisioning is posed by high spikes in traffic due to specific unique events. A particularly dramatic instance of this challenge is faced annually  by the 9/11 Memorial and Museum on September 11th, when website traffic increases by 35x To ensure smooth functioning of the website, the annual run-up to the expected high-spike day utilizes a myriad of tools, including best-estimate characterization of expected load; provisioning of a surrogate server infrastructure set up to best mimic the website configuration (and any special content/functionalities planned for the specific day when the high spike is expected) for the future high-spike time; incorporation or appropriate modeling of the caching and load balancing mechanisms expected to be utilized; user simulation and browser automation technologies to realistically mimic spike traffic patterns; and monitoring of quantitative metrics of website performance during load tests over adequate time intervals to uncover subtle issues that might manifest only under sustained load. Applying the set of strategies above has proven to be a time-tested and robust policy for the 9/11 Memorial and Museum to meet the huge spike in Web traffic on September 11th of each year. In this presentation, the strategies above will be covered in detail including overview of the techniques used to estimate future high-spike traffic, rig up surrogate servers, create realistic mock traffic, and best ensure that a website remains performant under high-spike conditions.</p>
+<p><b>Keywords:</b> website, load test, traffic spikes, caching, performance tests, selenium</p>
+<h2>Introduction</h2>
+<p>As organizations increasingly shift emphasis to their online presence, their globally accessible digital public face is as crucial (or perhaps even more) to meeting the organization&#8217;s mission as their physical “real-world” space/infrastructure.  The online world is globally connected and while wait times (e.g., in queues) are, by necessity, considered acceptable in physical facilities, webpage load times can range from a minor nuisance to a major hampering factor that renders a website unusable. A well-behaved website should load fast and scale well and, at the same time, be cost-effective.</p>
+<p>Balancing these seemingly contradictory requirements crucially relies upon an accurate sizing of the Web server infrastructure and configuration that is required given a website&#8217;s expected traffic patterns. This in turn relies upon accurate estimation and (more crucially) prediction of the traffic to the website, and thereafter testing of the website performance under the predicted traffic (Kattepur &amp; Nambiar, 2015; Draheim et al., 2006;  Bhatti &amp; Kumari, 2015; Shojaee et al., 2015). A primary motivation for considering predicted traffic is that the website traffic is rarely constant in time and could, for example, be expected to vary depending on times of day, over the year, and due to specific unique events. A particularly dramatic instance of changes in traffic to a website is faced annually by the 9/11 Memorial and Museum on September 11th of each year. On this day, a combination of multiple factors including special events, new content, and higher public awareness result in a traffic spike close to 35x the usual year-round traffic. To prepare for such traffic spikes, it is vital to test the Web server infrastructure and configuration to ensure that they can handle the predicted high-traffic conditions.</p>
+<p>Since these traffic spikes are over an order of magnitude higher traffic than typical conditions, such testing necessitates a simulation-based approach wherein the predicted traffic spike is simulated through “virtual” users. However, it is crucial that such simulation-based testing should, to the greatest extent possible, accurately model the characteristics of real users and should be performed on essentially an exact replica of the actual Web server infrastructure. This is achieved through a combination of several tools, which can together be described under the umbrella term of “load testing framework.” In this paper, we provide an overview of the load testing framework that has proven effective over the last several years in smoothly handling the annual traffic spikes experienced by the 9/11 Memorial and Museum. This includes the methodologies that we utilize to estimate expected load; modeling specific user interaction sequences with the website; scripting these interactions to create virtual users; spinning up large numbers of virtual users in parallel to simulate varying traffic patterns; and quantitatively measuring performance using an exact replica (that is created specifically for use in load testing) of the production Web server infrastructure.</p>
+<p>This paper is organized as follows. We first provide a short summary of one particular technology stack that we consider in this paper for specificity (although the presented load testing techniques are applicable/extensible to a wide range of technology stacks). We next discuss the traffic spike that we annually experience, which is one of the primary motivations for the extensive load testing that we perform in preparation for this traffic spike. We then describe the techniques utilized to create a replica Web server infrastructure and “simulated,” but as close to real as possible, traffic patterns to perform the load testing under essentially real-world conditions. The actual running of the load tests and analysis of quantitative metrics of website performance are discussed next. Finally, we provide concluding remarks, acknowledgements, and references. While the discussion in this paper is presented in the context of our annual spike, the methodologies described here are broadly applicable and can also be utilized in the context of making a website more performant/responsive and resilient to unpredictable spikes (e.g., by applying the load testing methodologies with, for example, two times the normal load).</p>
+<h2>Technology stack</h2>
+<p>The website of the 9/11 Memorial and Museum is hosted on a LAMP (Linux, Apache, MySQL, PHP) stack on the cloud and is powered by multiple Web heads and dedicated database servers behind a set of dedicated load balancers. Our overall technology stack is illustrated in Figure 1.  The load balancers are used to automatically distribute load among the Web servers. The database servers are configured as primary and fallback nodes. The website utilizes the Drupal content management system (https://www.drupal.org; https://www.acquia.com) and serves a mix of static and dynamic content to both anonymous and authenticated users. Additionally, new content such as videos/webinars and other rich content are periodically added, especially around 9/11 each year.</p>
+<p>Multiple levels of caching are utilized to boost the website&#8217;s performance. These include a varnish cache, memcache, and a third-party caching system for protection against Distributed Denial of Service (DDOS). All traffic to the website flows through a DDOS protection server (e.g., https://www.dosarrest.com), which also functions as a caching layer. The cached pages on the DDOS protection server are served directly from here without hitting our actual Web servers. A significant part of the Web content is cached, especially all static content such as images, which account for a large percentage of the overall Web traffic. However, Web pages related to authenticated users such as the login, sign-up, and checkout pages can not be cached. The DDOS protection system monitors for possible DDOS attacks and in the event of a DDOS attack, takes defensive measures such as termination of connections, blacklisting of IPs, etc.</p>
+<p>Several monitoring tools, both on the server side and the client side, are used for monitoring of the website and to continuously measure multiple quantitative analytics (https://analytics.google.com; https://clicky.com; https://chartbeat.com; https://newrelic.com) of the website performance. On the server side, the Web traffic reaching the Web servers (i.e., traffic that is not directly served by the DDOS protection system) is monitored, including capturing of statistics on page loads, server uptime, module-level statistics (for modules in the Drupal content management system), database queries, transactions, etc. Also, the load on the servers is continuously monitored including CPU, memory, and network usage (using scripts that query server load using command-line tools such as free, top, netstat, etc.) and database performance (based on measurement of latencies, monitoring of error logs, etc.). Additionally, the DDOS protection layer also provides analytics of the traffic to the website. On the client side, JavaScript based tools (essentially scripts embedded into Web pages to collect client-side information and transmit it to the online endpoints of the analytics servers) are used to capture visitor statistics. A vast array of visitor statistics are captured, including number of concurrent visitors to the site, total number of visitors (new and returning) over a time interval, average time spent on the website per visit, bounce rate, top links, locale, etc. The analytics tools enable aggregating the captured information according to various combinations of criteria such as aggregation by webpage (to identify number of visits per URL), by time (e.g., by day over a month/year, by time of day, etc.), by geographical location of the website visitor, etc.</p>
+<p>In this paper, we discuss the load testing and website analytics techniques in the context of the technology stack described above. While the techniques discussed here are widely applicable to other technology stacks as well, it is important when applying these techniques and provisioning server infrastructure to note that the required server infrastructure even under relatively constant load is dependent on the software stack utilized and the type of content being served. Technology stacks based on different software systems (including the Web server, the content management system, caching techniques, etc.) can require somewhat different levels of resources for smooth functioning of the website. Also, websites that serve primarily static content to anonymous users can attain acceptable performance with substantially smaller levels of resources by benefiting from caching much more significantly than highly dynamic websites that primarily serve authenticated users. Here, we focus on the technology stack described above based on LAMP and the Drupal content management system. This is a popular and widely used combination that is also used for our public website at the 9/11 Memorial and Museum. The underlying techniques described here and the related observations discussed in this paper are applicable to other technology stacks as well, with the important caveat that quantitative estimations of required infrastructure are stack-dependent and site-dependent, and each website would benefit from its own specific load testing based on the methodologies discussed in this paper.</p>
+<p><img loading="lazy" class="alignnone size-full wp-image-1037" src="../../wp-content/uploads/2018/01/nagaraja.fig1_.png" alt="" width="1384" height="863" /></p>
+<p>Figure 1: overall technology stack</p>
+<h2>The annual traffic spike</h2>
+<p>Every year on September 11th, a somewhat-anticipated, but always impressive, traffic spike is experienced by the website of 9/11 Memorial and Museum, when website traffic increases by close to 35x. The variation of the number of visitors per day over the entire year is shown in Figure 2. The spike on 9/11 is owing to multiple factors including increased public interest/awareness on that day, special content that is posted/linked on that day such as special videos and webinars, and special events such as the annual reading of the names of victims of the 9/11/2001 and 2/26/1993 attacks on the World Trade Center in New York City. This annual reading of names is usually covered live on television, which tends to increase public interest and awareness and contributes to the traffic spike to the website.</p>
+<p>While this traffic spike happens every year and therefore can be thought to be known in advance, ensuring that the spike does not cause website hiccups requires extensive preparation as described in the following sections in this paper. One particular complication in the testing of the website in preparation for this traffic spike is that there are typically special content/functionalities, which are planned to be published online on that specific day. Hence, advance testing of the website should take into account that content/functionalities will be somewhat different when the actual high-spike conditions are being experienced. Additionally, website traffic patterns on that day are somewhat different from other days during the year in the sense that some URLs that typically have relatively high traffic may have lower traffic on that day and vice versa (with special content specific to that day being one such case). The traffic distribution over the top 25 most visited URLs over the entire year and on 9/11 is shown in Figure 3, which illustrates the variation of traffic patterns on 9/11 compared to the rest of the year.</p>
+<p><img loading="lazy" class="wp-image-1038 aligncenter" src="../../wp-content/uploads/2018/01/nagaraja.fig2_.png" alt="" width="739" height="543" /></p>
+<p>Figure 2: variation of traffic per day over the entire year. The large spike is on September 11th and recurs every year. The picture above is shown normalized with 1 indicating the peak value.</p>
+<p><strong> <img loading="lazy" class="wp-image-1039 aligncenter" src="../../wp-content/uploads/2018/01/nagaraja.fig3_.png" alt="" width="769" height="452" /></strong></p>
+<p>Figure 3: percentage of traffic to each of the most frequently visited URLs over the entire year and on 9/11. The blue bars and the green bars in the picture show the percentage distributions over the entire year and on 9/11, respectively. It is seen that the traffic distributions are quite different between the entire year and on 9/11 and that several URLs that have relatively high traffic over the year do not have high traffic on 9/11. For instance, webpages that provide information on travel directions to get to the Memorial and Museum have lower traffic on 9/11 since the Memorial and Museum open to the general public later in the day on 9/11 compared to the rest of the year. On the other hand, webpages with special content for that day have high traffic on 9/11.</p>
+<h2>Resource provisioning and load testing</h2>
+<p>For load testing of the website, especially during the run-up to the traffic spike on 9/11, an exact clone of the production infrastructure is set up. A best-estimate characterization of expected load is developed based on a multitude of input data such as historical patterns (including the observed spikes in the previous years), unique drivers such as mailing list promotions specific to a particular year, and load patterns in the preceding weeks compared to the same weeks in the previous year. Thereafter, the methodologies described below are applied to perform load testing under simulated traffic that models the traffic spike. Depending on the load testing results, the amount of upsizing required of the infrastructure is determined, and additional load testing is performed. This iterative process is continued until acceptable performance is seen in the load tests. The techniques utilized for load testing and quantitative measurement of website performance during the load testing are described below.</p>
+<p>When setting up the website on the clone server infrastructure, we attempt to best mimic the website configuration for the future high-spike time including special content/functionalities planned for that day. To ensure that load testing analysis on the clone server infrastructure is relevant to the production infrastructure, the configuration of the entire technology stack is replicated to make the clone and production stacks as close to identical as possible. For example, it is verified that all the caching mechanisms expected to be utilized (including in the content management system, hosting system, denial-of-service protection system, etc.) and load balancing mechanisms are incorporated. The overall workflow for setting up the load test environment is illustrated in Figure 4.</p>
+<p><img loading="lazy" class="alignnone size-full wp-image-1040" src="../../wp-content/uploads/2018/01/nagaraja.fig4_.png" alt="" width="1239" height="748" /></p>
+<p>Figure 4: setting up of the load test environment</p>
+<p>Based on the analysis of the typical traffic patterns to the website, historical traffic patterns during the spike, and specific URLs and visitor use cases that are of most importance (including special content for the high-spike day), a set of load test scenarios is formulated. The basic workflow for defining a simple load test scenario is illustrated in Figure 5 and comprises of the following conceptual steps:</p>
+<ul>
+<li>Define the essential metadata for the load test: This includes, for example, the website base URL, any required authorization details, cookie handling policy (e.g., definitions of user-defined cookies, whether to clear cookies after each run, etc.), and cache handling policy (e.g., cache expiration policy, whether to clear cache after each run, etc.).</li>
+<li>Define basic load-test parameters: This includes number of concurrent users, ramp-up period, total amount of time for the load test, etc. Here, ramp-up period refers to an initial time interval during which the number of concurrent users is gradually increased from an initial number to the defined (steady-state) number of users. This set of load-test parameters can be overridden during actual load testing with definition of a general temporal profile of the load characteristics.</li>
+<li>Define sequences of URLs (or, more generally, website interactions) to be tested: This comprises essentially a scripted use case for a simulated visitor to the website. The URLs would typically be defined based on the Web pages with historically highest traffic as discussed above. More generally, this would correspond to user sessions with anonymous and authenticated segments defined to simulate specific patterns of page loads and other website interactions that are expected to have high traffic or that are particularly crucial for the organization&#8217;s mission. One particularly convenient way to define sequences of website interactions is using browser recording tools. When manually executing the intended visitor use cases, Web browser plugins such as the ones from Selenium (http://www.seleniumhq.org; http://www.seleniumhq.org/projects/ide) and BlazeMeter (https://www.blazemeter.com; BlazeMeter, 2018) can be used to  record the sequences of website interactions, which are then used as the scripted use cases for simulated groups of concurrent users during load testing.</li>
+</ul>
+<p><img loading="lazy" class="wp-image-1041 aligncenter" src="../../wp-content/uploads/2018/01/nagaraja.fig5_.png" alt="" width="516" height="289" /></p>
+<p>Figure 5: workflow for defining a load test scenario</p>
+<p>One of the sample use cases that has been utilized in load testing is shown in Figure 6. This use case is a combination of anonymous and authenticated traffic and runs through a complete visitor interaction scenario. While the use case diagram in Figure 6 shows the flow of interaction with the website from the viewpoint of the real/simulated visitor, the same use case, when seen from the perspective of the load testing framework can be visualized as shown in Figure 7. As can be seen in Figure 7, several randomized and auto-generated components are used to model a realistic population of actual users. Such randomized and auto-generated components are introduced especially in the authenticated sections of the use cases, and include user-specific details (e.g., names, emails, passwords, addresses) as well as random delays (e.g., delay between loading a Web form and submitting it) to simulate random variations that would be expected with real users. In addition, other webpage fields/options being populated by the simulated users are also randomized such as membership level being purchased, individual versus group memberships, etc. These randomization mechanisms ensure that the simulated pool of users provides characteristics representative of actual users so as to load-test the website under essentially the actual operating conditions. Also, it is important to note that it is the mix of different types of traffic (anonymous and authenticated, traffic to different URLs, etc.) that makes the simulated load sufficiently representative of actual user traffic. A large number of simulated users that all just load a static page would, at best, just test the DDOS protection system and would not hit the Web servers at all. Hence, modeling the use cases with sufficient variety in types of traffic and with complete interaction sequences that mimic real users is crucial to ensure that any observations drawn from the load testing results are valid for the actual Web server infrastructure and real traffic.</p>
+<p><img loading="lazy" class="alignnone size-full wp-image-1042" src="../../wp-content/uploads/2018/01/nagaraja.fig6_.png" alt="" width="704" height="1221" /></p>
+<p>Figure 6: sample use case for load testing. This use case runs through a sequence of interactions of a visitor with the website and includes both anonymous and authenticated sections. The authenticated section models the purchase of a membership.</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" class="alignnone size-full wp-image-1043" src="../../wp-content/uploads/2018/01/nagaraja.fig7_.png" alt="" width="881" height="1222" /></p>
+<p>Figure 7: modeling of a sample use case in the load testing framework. This diagram shows the same use case as in Figure 6. However, while Figure 6 shows the use case from the viewpoint of the real/simulated user, this diagram shows the use case from the viewpoint of the load testing framework.</p>
+<p>Based on the use cases modeled as described above, a suite of user simulation and browser automation technologies (https://www.blazemeter.com; https://www.seleniumhq.org; https://jmeter.apache.org) are utilized to realistically mimic different levels of traffic. The number of concurrent users is usually defined over a period of time starting from an initial value, ramping up to a peak level, and them ramping down. In this context, it is important to note that the notion of “concurrent” users is different from just “online” users. While multiple users who have opened the front page of a website can all be considered to be “online” users at that point in time, they are not necessarily generating any traffic to the website if they are not interacting with the page (e.g., page refreshes by an embedded script) or navigating to other pages. “Concurrent” users, on the other hand, are, in this context, defined as users that are actively interacting with the website (e.g., by executing a sequence of interactions as in the use case in Figure 6). A sample time profile of number of concurrent users is shown in Figure 8. The expected traffic spike levels (or with somewhat higher levels to provide an assurance margin) are utilized to define the parameters in this time profile. Under these simulated traffic conditions, analytics of website performance are collected using the techniques discussed before (the server-side and client-side analytics). It is to be noted that the simulated traffic conditions are completely real as far as the Web server infrastructure is concerned, since they model actual complete visitor flows. The only difference from real users is that the traffic is generated by large numbers of concurrent automated browser sessions.  One particularly relevant analytic is the variation of latency (response time) as a function of the number of concurrent users. For example, the latencies measured while running the load test with the number of concurrent users varying as shown in Figure 8 is illustrated in Figure 9.</p>
+<p><img loading="lazy" class="wp-image-1044 aligncenter" src="../../wp-content/uploads/2018/01/nagaraja.fig8_.png" alt="" width="688" height="322" /></p>
+<p>Figure 8: A sample time profile of number of concurrent users during load testing showing ramp up, sustained load, and ramp down stages.</p>
+<p><img loading="lazy" class="wp-image-1045 aligncenter" src="../../wp-content/uploads/2018/01/nagaraja.fig9_.png" alt="" width="680" height="339" /></p>
+<p>Figure 9: variation of latency during load test with the number of concurrent users varying as shown in Figure 8. The initial reduction in latency while number of concurrent users is being increased is due to a transient while the caches are “warming up.” After that transient, it is seen that the latency remains approximately constant while ramping up the number of concurrent users and during sustained load indicating that the configured Web server infrastructure is successful in handling the defined traffic levels.</p>
+<p>The load testing is performed over significant time intervals to uncover subtle issues that might manifest only under sustained load. Based on the quantitative analytics (such as the response time and server load) measured during load testing, a determination is made as to whether the performance seen is acceptable. If indicated by this analysis, relevant parts of the server infrastructure are upsized and the entire process is repeated to determine the incremental benefit of upsizing these parts of the infrastructure. This iterative process is repeated until a “good” trade-off of website performance and cost/complexity is attained. The criteria to define a trade-off as “good” depends, of course, on the specific website and required operational guarantees. Finally, the last step in this load testing process is to modify the production infrastructure to the infrastructure configuration that was identified during load testing as the “good” trade-off.</p>
+<p>As a final remark, it is to be noted that while the techniques above have proven to be a robust approach to seamlessly meetig high-spike conditions, a precaution that we continue to follow is to keep the “human components” online during the high-spike period.  We ensure that all relevant personnel including third-party support contractors are “standing by” during the high-spike time. Even with all the preparation described in this paper, small issues could (and sometimes do) crop up in real time. For example, a single errant module (e.g., in the content management system) with perhaps slightly askew caching policy could unsustainably increase server load, necessitating a real-time hot fix that could be quick, but only if the relevant personnel is available.</p>
+<p>Applying the set of strategies described in this paper has proven to be a time-tested and robust policy for the 9/11 Memorial and Museum to meet the huge spike in web traffic on September 11th of each year. These same techniques have proven to be effective for other purposes as well apart from preparation for the traffic spikes expected on 9/11 and during other significant events. For example, we utilize these same techniques during significant code and module upgrades on the website, with version upgrades of the content management system being particularly important to test extensively before launch. For these purposes, we follow the same strategies of setting up clone server infrastructures, modeling use cases, and simulating realistic traffic as described in this paper, so as to identify and fix any bugs/issues before the code/module upgrades are pushed to the production website.</p>
+<h2>Conclusion/summary</h2>
+<p>In this paper, we discussed the importance of load testing to assure website performance, and we presented techniques for load testing, with particular focus on the handling of traffic spikes. It was noted that while smooth functioning of an organization&#8217;s website is key to meeting the organization&#8217;s mission, a challenging wrinkle in Web server provisioning is posed by high spikes in traffic due to specific unique events. A particularly dramatic instance of this challenge is faced annually by the 9/11 Memorial and Museum on September 11th, when website traffic increases by close to <span style="color: #ff6600;">35 times the average amount</span>. This paper provided an overview of the strategies utilized in the annual run-up to this day, including tools to model expected traffic patterns, set up surrogate server infrastructure to closely mimic website configuration for the future high-spike time, create realistic mock traffic to mimic the spikes, and monitor website performance under sustained load.</p>
+<h2>Acknowledgements</h2>
+<p>This work would not have been possible without the support of the IT Software and Digital team at the 9/11 Memorial and Museum and the support of the vendors who have assisted us during the execution and analysis of the load tests. I especially want to thank Ms. Nancy Morrissey (Senior Vice President of Digital Products and Technology) who has always believed in me and has been very supportive of my ideas and has encouraged me to pursue them. I would also like to thank Rui Yang (developer from my team) for his assistance with formulation of the use cases and analysis of the data sets from the load testing of the website. I would also like to thank the reviewers for their very constructive and insightful comments, which helped with fine-tuning the final version of this paper. Finally, I would like to thank my husband Prashanth Krishnamurthy for always encouraging me to pursue my goals and always being a great motivator and mentor to me. I will end with thanking my toddler son Daksh for being so understanding when Mommy has been busy typing.</p>
+<h2>References</h2>
+<p>Bhatti, S. &amp; R. Kumari. (2015). “Comparative study of load testing tools.”<em> International Journal of Innovative Research in Computer and Communication Engineering</em>, vol. 3, issue 3. Last updated March 2015. Consulted February 24, 2018. Available <a href="https://www.ijircce.com/upload/2015/march/181_52_Comparative.pdf">https://www.ijircce.com/upload/2015/march/181_52_Comparative.pdf</a></p>
+<p>BlazeMeter. (2018). “World famous museum &amp; research site achieves high performance for 4,000,000 users.” BlazeMeter case study of California Academy of Sciences. Consulted February 24, 2018. Avilable https://www.blazemeter.com/case-study/cal-academy</p>
+<p>Draheim, D., J. Grundy, J. Hosking, C. Lutteroth, &amp; G. Weber. (2006). “Realistic load testing of Web applications.” In Proceedings of the 10th European Conference on Software Maintenance and Reengineering. Consulted February 24, 2018. Available https://www.cs.auckland.ac.nz/~christof/publications/DraheimEtAl2006-LoadTesting.pdf</p>
+<p>Kattepur, A. &amp; M. Nambiar. (2015). “Performance modeling of multi-tiered web applications with varying service demands.” In Proceedings of the 2015 IEEE International Parallel and Distributed Processing Symposium Workshop (IPDPSW). Consulted February 24, 2018. Available https://hal.archives-ouvertes.fr/hal-01118352/document</p>
+<p>Shojaee, A., N. Agheli, &amp; B. Hosseini. (2015). “Cloud-based load testing method for web services with VMs management.” Proceedings of the 2nd International Conference on Knowledge-Based Engineering and Innovation (KBEI).  Consulted February 24, 2018. Available <a href="http://ieeexplore.ieee.org/document/7436040/">http://ieeexplore.ieee.org/document/7436040</a></p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+Nagaraja, Radha. "Weighing the World Wide Web: The art and science of load testing for unique high-spike conditions." <i>MW18: MW 2018</i>. Published January 16, 2018. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw18.mwconf.org/paper/weighing-the-world-wide-web-the-art-and-science-of-load-testing-for-unique-high-spike-conditions/<br /><br />
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><h2 id="Gold" class="widget-title">Gold Sponsor</h2>
+<a title="TixTrack" href="http://www.tixtrack.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/tixtrack-250-75.jpg" alt="TixTrack" /></a>
+<h2 id="silver" class="widget-title">Silver Sponsor</h2>
+<a title="Axiell" href="http://www.axiell.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/axiell-250-75.jpg" alt="Axiell" /></a>
+<a title="Piction" href="https://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<a title="Brightcove" href="https://www.brightcove.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/bc-250-75.jpg" alt="Brightcove" /></a>
+<h2 id="bronze" class="widget-title">Bronze Sponsors</h2>
+<a title="Quartex" href="http://www.quartexcollections.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/quartex-250-75.jpg" alt="Quartex" /></a>
+<a title="alley interactive" href="http://www.alleyinteractive.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ai-250-75.jpg" alt="alley interactive" /></a>
+<a title="ideum" href="http://www.ideum.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ideum-250-75.jpg" alt="ideum" /></a>
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/netx-250-75.jpg" alt="Netx" /></a>
+<a title="Four Kitchens" href="http://fourkitchens.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/4K-250-75.jpg" alt="Four Kitchens" /></a>
+<h2 id="conference-partner" class="widget-title">Conference Partners</h2>
+<a title="VAG" href="http://vanartgallery.bc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/VAG-250-75.jpg" alt="VAG" /></a>
+<a title="MOA" href="http://moa.ubc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/moa-250-75.jpg" alt="MOA" /></a>
+<h2 id="conference-supporter" class="widget-title">Conference Supporters</h2>
+<a title="BCMA" href="http://museumsassn.bc.ca/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/BCMA-250-75.jpg" alt="BCMA" /></a>
+<a title="NGX" href="http://ngxinteractive.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/ngx-250-75.jpg" alt="NGX" /></a>
+<a title="EDM" href="http://edmstudio.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="../../wp-content/themes/mw-conference/edm-250-75.jpg" alt="EDM" /></a>
+<a title="Olson" href="http://olsonvisual.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/olson-250-75.jpg" alt="Olson" /></a></div></section><section id="text-3" class="widget widget_text">			<div class="textwidget">
+<ul class="sxc-follow-buttons">
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://www.facebook.com/museweb/"
+                                        
+                                        title="Facebook"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/facebook.png"
+                                            alt="Facebook"
+                                        />
+                                    </a>
+                              </li>
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://twitter.com/museweb"
+                                        
+                                        title="Twitter"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/twitter.png"
+                                            alt="Twitter"
+                                        />
+                                    </a>
+                              </li>
+<li class="sxc-follow-button">
+                                    <a
+                                        href="https://www.linkedin.com/company/10246519/"
+                                        
+                                        title="LinkedIn"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="../../wp-content/plugins/social-media-buttons-toolbar/inc/img/social-media-icons/linkedin.png"
+                                            alt="LinkedIn"
+                                        />
+                                    </a>
+                              </li>
+</ul>
+
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+
+		<!-- Cookie Notice plugin v1.3.2 by Digital Factory https://dfactory.eu/ -->
+		<div id="cookie-notice" role="banner" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Cookie Notice" style="background-color: rgba(0,0,0,1);"><div class="cookie-notice-container" style="color: #fff;"><span id="cn-notice-text" class="cn-text-container">We use cookies to ensure that we give you the best experience on our website. Please read our cookie policy and, if you continue to use the site, acknowledge that you accept the terms and conditions of use. </span><span id="cn-notice-buttons" class="cn-buttons-container"><a href="#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button bootstrap" aria-label="Ok">Ok</a><a href="https://www.museumsandtheweb.com/cookie-policy/" target="_blank" id="cn-more-info" class="cn-more-info cn-button bootstrap" aria-label="Read more">Read more</a></span><a href="javascript:void(0);" id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" aria-label="Ok"></a></div>
+			
+		</div>
+		<!-- / Cookie Notice plugin --></body>
+
+<!-- Mirrored from mw18.mwconf.org/paper/weighing-the-world-wide-web-the-art-and-science-of-load-testing-for-unique-high-spike-conditions/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 21:26:37 GMT -->
+</html>

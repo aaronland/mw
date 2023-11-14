@@ -1,0 +1,795 @@
+<html><!-- #BeginTemplate "/Templates/mw2001paper.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/degenhart/degenhart.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:49:15 GMT -->
+<head>
+<!-- templates applied after meeting -->
+<!-- #BeginEditable "doctitle" --> 
+
+<title>Building on the mda SPECTRUM-XML DTD for Collections Management Data Interchange</title>
+
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+//-->
+</script>
+<style type="TEXT/CSS">
+<!--
+.heading {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold}
+.normal {  font-family: Arial, Helvetica, sans-serif; font-size: 12px}
+.small {  font-family: Arial, Helvetica, sans-serif; font-size: 10px}
+.verysmall {  font-family: Arial, Helvetica, sans-serif; font-size: 9px}
+.red {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #660000}
+-->
+</style>
+<link rel="stylesheet" href="../paperStyles.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" background="../../mw.images/mw2001_bg.gif" text="#000000" link="#003399" vlink="#660000" onLoad="MM_preloadImages('../../nav/mw2001_nav_registeron.gif','#943398414283');MM_preloadImages('../../nav/mw2001_nav_workshopson.gif','#943398455733');MM_preloadImages('../../nav/mw2001_nav_sessionson.gif','#943398500450');MM_preloadImages('../../nav/mw2001_nav_speakerson.gif','#943398534416');MM_preloadImages('../../nav/mw2001_nav_demoson.gif','#943398577050');MM_preloadImages('../../nav/mw2001_nav_exhibiton.gif','#943398612066');MM_preloadImages('../../nav/mw2001_nav_eventson.gif','#943398640266');MM_preloadImages('../../nav/mw2001_nav_beston.gif','#943398663166');MM_preloadImages('../../nav/mw2001_nav_keydateson.gif','#943398701050');MM_preloadImages('../../nav/mw2001_nav_seattleon.gif','#943398731383');MM_preloadImages('../../nav/mw2001_nav_sponsoron.gif','#943398934733')">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tr> 
+    <td width="145" align="LEFT" valign="TOP" height="646"> 
+      <p><a href="../../index.html"><img src="../../mw.images/mw.gif" width="112" height="155" border="0" alt="MW2001"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.register','document.register','../../nav/mw2001_nav_registeron.gif','#943398414283')"><img name="register" border="0" src="../../nav/mw2001_nav_registeroff.gif" width="125" height="15" alt="Register"></a> 
+        <br>
+        <a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.workshops','document.workshops','../../nav/mw2001_nav_workshopson.gif','#943398455733')"><img name="workshops" border="0" src="../../nav/mw2001_nav_workshopsoff.gif" width="125" height="15" alt="Workshops"></a> 
+        <br>
+        <a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sessions','document.sessions','../../nav/mw2001_nav_sessionson.gif','#943398500450')"><img name="sessions" border="0" src="../../nav/mw2001_nav_sessionsoff.gif" width="125" height="15" alt="Sessions"></a> 
+        <br>
+        <a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.speakers','document.speakers','../../nav/mw2001_nav_speakerson.gif','#943398534416')"><img name="speakers" border="0" src="../../nav/mw2001_nav_speakersoff.gif" width="125" height="15" alt="Speakers"></a> 
+        <br>
+        <a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.interact','document.interact','../../nav/mw2001_nav_interacton.gif','#943398534416')"><img name="interact" border="0" src="../../nav/mw2001_nav_interactoff.gif" width="125" height="15" alt="Interact"></a> 
+        <br>
+        <a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.demos','document.demos','../../nav/mw2001_nav_demoson.gif','#943398577050')"><img name="demos" border="0" src="../../nav/mw2001_nav_demosoff.gif" width="125" height="15" alt="Demonstrations"></a> 
+        <br>
+        <a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.exhibits','document.exhibits','../../nav/mw2001_nav_exhibiton.gif','#943398612066')"><img name="exhibits" border="0" src="../../nav/mw2001_nav_exhibitoff.gif" width="125" height="15" alt="Exhibits"></a> 
+        <br>
+        <a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.events','document.events','../../nav/mw2001_nav_eventson.gif','#943398640266')"><img name="events" border="0" src="../../nav/mw2001_nav_eventsoff.gif" width="125" height="15" alt="Events"></a> 
+        <br>
+        <a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.best','document.best','../../nav/mw2001_nav_beston.gif','#943398663166')"><img name="best" border="0" src="../../nav/mw2001_nav_bestoff.gif" width="125" height="15" alt="Best of the Web"></a> 
+        <br>
+        <a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.dates','document.dates','../../nav/mw2001_nav_keydateson.gif','#943398701050')"><img name="dates" border="0" src="../../nav/mw2001_nav_keydatesoff.gif" width="125" height="15" alt="Key Dates"></a> 
+        <br>
+        <a href="../../seattle/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.seattle','document.seattle','../../nav/mw2001_nav_seattleon.gif','#943398731383')"><img name="seattle" border="0" src="../../nav/mw2001_nav_seattleoff.gif" width="125" height="15" alt="seattle"></a> 
+        <br>
+        <a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.sponsor','document.sponsor','../../nav/mw2001_nav_sponsoron.gif','#943398934733')"><img name="sponsor" border="0" src="../../nav/mw2001_nav_sponsoroff.gif" width="125" height="15" alt="Sponsor"></a> 
+        <br>
+        <br>
+        <br>
+        <a href="http://www.archimuse.com/" target="_top"><img src="../../nav/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"></a> 
+        <br>
+        <font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="verysmall">Archives 
+        &amp; Museum Informatics<br>
+        158 Lee Avenue<br>
+        Toronto, Ontario<br>
+        M4E 2P3 Canada<br>
+        info@ archimuse.com<br>
+        <a href="http://www.archimuse.com/">www.archimuse.com</a></span></font></p>
+      <table width="74">
+        <tr> 
+          <td> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search" target="_top"> 
+            <img src="../../nav/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+            </span></td>
+          <td valign="MIDDLE"> <span class="verysmall"><a href="http://search.museumsandtheweb.com/search"> 
+            <font face="Arial, Helvetica, sans-serif">Search <br>
+            A&MI</font></a> </span></td>
+        </tr>
+      </table>
+      <p class="verysmall"><font face="Arial, Helvetica, sans-serif" class="verysmall">Join 
+        our <a href="http://search.museumsandtheweb.com/mailinglist/"> Mailing List</a>. 
+        <br>
+        <a href="http://search.museumsandtheweb.com/terms-of-use-privacy/"> Privacy</a>.</font> </p>
+      <p>
+        <font size="-2" class='verysmall'>Published: March 15, 2001.<br>
+        </font>
+<!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"Last Updated:&nbsp;"+document.lastModified);
+
+// -->
+
+
+
+      </p>
+      </td>
+    <td width="429" align="LEFT" valign="TOP" height="646"><img src="../../speakers/papers.gif" alt="Papers"><br>
+      <!-- #BeginEditable "Body" --> 
+
+      <h1 class="PaperTitle">Building on the mda SPECTRUM-XML DTD for Collections 
+
+        Management Data Interchange</h1>
+
+      <h2 class="Author">Bert Degenhart Drenth, ADLIB Information Systems, The 
+
+        Netherlands</h2>
+
+      <h1 class="abstractTitle">Abstract</h1>
+
+      <span class="AbstractText">The Museum Documentation Association, working 
+
+      in collaboration with CIMI and other organizations, has developed an XML-DTD 
+
+      based on SPECTRUM, an established museum process and documentation standard. 
+
+      Of particular interest to the museum community is the potential this DTD 
+
+      offers for the exchange of collections-based information. Imagine being 
+
+      able to migrate data from your institution's collections management system 
+
+      to another with the click of a button. This application is the basis for 
+
+      CIMI's test bed this year. CIMI member, Bert Degenhart Drenth, Managing 
+
+      Director of ADLIB Information Systems will discuss the impact of the SPECTRUM 
+
+      XML DTD on data migration.<b></b></span>
+
+      <p class=AbstractText>Keywords: SPECTRUM, XML, DTD, Data Interchange, Interoperability, 
+
+        mda, CIMI, test bed, CIDOC Conceptual Reference Model</p>
+
+      <h1>Introduction</h1>
+
+      <p class=normal><b>SPECTRUM </b>is a publication by the UK mda. It catches 
+
+        the complete spectrum of activities that are performed to document and 
+
+        manage a museum collection. SPECTRUM architecture consists of two components: 
+
+        procedures and units of information. The SPECTRUM standard defines 20 
+
+        procedures. Each of these procedures describes the steps than need to 
+
+        be carried out to perform a specific task in a museum. Examples of such 
+
+        tasks are: the entry of objects in the museum, loans of objects (in and 
+
+        out) and risk assessment. A separate chapter is devoted to each of these 
+
+        procedures. At the end of each chapter there is a list of data elements, 
+
+        in SPECTRUM jargon named 'units of information'. The 20 procedures 
+
+        form the first half of the SPECTRUM publication; the second half is an 
+
+        overview of all the units of information, their definition and usage and 
+
+        how they are linked with other units of information. The SPECTRUM standard 
+
+        is widely used in the UK and is adopted in quite a few other countries 
+
+        (specially Europe, e.g. Belgium, Germany and the Netherlands). SPECTRUM 
+
+        is available from the mda in printed form or in electronic form. The electronic 
+
+        version is called SPECTRUM interactive. More information about SPECTRUM 
+
+        can be found on <a
+
+href="http://www.mda.org.uk/spectrum.htm" target="new">http://www.mda.org.uk/spectrum.htm</a>. 
+
+      </p>
+
+      <p class=normal>Although SPECTRUM is an essential instrument for museums 
+
+        to organise their collection management, it does not contain any information 
+
+        on how to implement the procedures and units of information in an automated 
+
+        system. This task is left to the system vendor. As a result of this, different 
+
+        interpretations of SPECTRUM exist and have resulted in different system 
+
+        solutions. The SPECTRUM-XML work was intended to fill this gap and to 
+
+        define a universal interchange format for systems that are based on SPECTRUM 
+
+        or for non-SPECTRUM systems that export data to SPECTRUM-based systems. 
+
+        In the long run a standard exchange format could save huge amounts of 
+
+        time and money when museums migrate from one collection management system 
+
+        to another. </p>
+
+      <p class=normal><b>XML</b> is short for 'Extensible Mark-up Language'. 
+
+        It is a descendant from SGML and as such a brother (or sister) from the 
+
+        well-known HTML. Where HTML is used to define the <i>layout</i> of a page 
+
+        on the World Wide Web, XML is used to define the <i>content</i> of a document. 
+
+        In HTML you can specify that an area of text should be displayed in bold 
+
+        characters and perhaps printed in red, in XML you can specify that an 
+
+        area of text is a title or a subject... XML and HTML can work hand 
+
+        in hand: when a document is marked up in XML then a transformation process 
+
+        can turn the document into HTML so that it becomes a readable page on 
+
+        the web. This transformation is performed through a so-called 'XSL 
+
+        style-sheet'. The important thing to remember here is that XML is 
+
+        not a replacement of HTML. </p>
+
+      <p class=normal>Expressing museum data in XML is a very 'natural' 
+
+        process: XML allows data elements (fields) to be infinitely repeated and 
+
+        data elements can be nested. This means that data elements can contain 
+
+        other data elements that can contain other data elements etc. etc, much 
+
+        like a set of Russian Matryoshka dolls.</p>
+
+      <p class=normal>The CIMI Dublin Core test bed was probably one of the first 
+
+        applications of XML for museum data interchange. Although the use of XML 
+
+        in this project revealed some initial problems, the use of XML made it 
+
+        possible to join 200.000 metadata records from a wide variety of sources. 
+
+        This certainly proved the power of XML as a data transport syntax.</p>
+
+      <p class=normal>The use of XML has gained an enormous momentum. Some three 
+
+        years ago it was very hard to find books on XML in bookstores. These days 
+
+        you will probably find a whole bookcase devoted to the subject, including 
+
+        titles like 'XML for dummies' (ISBN: 0-7645-0360-X). </p>
+
+      <p class=normal>Major software vendors, including Microsoft and Oracle have 
+
+        implemented support for XML in their products such as Microsoft Explorer 
+
+        5.x and Access 2000 and Oracle 8<i>i</i>. The Collection Management Software 
+
+        producers have also picked up this trend and have implemented or are implementing 
+
+        support for XML in their systems. All in all it is fair to say that it 
+
+        looks like "XML is here to stay".</p>
+
+      <p class=normal><b>DTD</b> is short for Document Type Definition. XML alone 
+
+        cannot guarantee that two applications can exchange data in a sensible 
+
+        way. This is like two people talking the same language: the mere fact 
+
+        that they both speak English does not necessary mean that they can have 
+
+        a meaningful conversation. Just imagine a computer programmer having a 
+
+        conversation with an art historian... Besides a common grammar (or 
+
+        syntax) both parties have to have a minimum understanding about the meaning 
+
+        of what is said. This is where a DTD comes in: a DTD defines which data 
+
+        elements (units of information) are allowed in an XML document and how 
+
+        they are structured. Different applications of XML therefore have different 
+
+        DTD's. DTD's can be very simple (e.g. the CIMI Dublin Core Test 
+
+        bed DTD) or be rather complex such as the SPECTRUM-XML DTD.</p>
+
+      <p class=normal>DTD's have a rather awkward syntax that can be hard 
+
+        to read. This is one of the reasons why the World Wide Web consortium 
+
+        has been working on an alternative for DTD's under the name XML schema. 
+
+        The XML schema work has currently reached Candidate Recommendation status. 
+
+        This is the stage before becoming an official W3C standard. This stage 
+
+        was supposed to end on December 15<sup>th</sup> 2000 (<a href="http://www.w3org/xml/activity.html" target="new">http://www.w3org/xml/activity.html</a>). 
+
+        Because the XML schema proposal was not stable at the start of the SPECTRUM 
+
+        XML work, it was felt that in this project the group should start with 
+
+        the older DTD structure. In the future this could always be converted 
+
+        to an XML schema.</p>
+
+      <h1>Creation of the SPECTRUM XML DTD</h1>
+
+      <p class=normal>The first ideas to create a DTD for SPECTRUM date back from 
+
+        mid-1999 when a group of system vendors, together with the mda started 
+
+        to discuss the subject at CIMI meetings. This was probably inspired by 
+
+        the use of XML in the CIMI Dublin Core test bed. The project was started 
+
+        with the set-up of a private E-mail discussion list on the 29<sup>th</sup> 
+
+        of September, 1999. During the first months of the project all communications 
+
+        were done through this list. </p>
+
+      <p class=normal>The first face-to-face meeting was organised on the 31<sup>st</sup> 
+
+        of March 2000 in the offices of ADLIB Information Systems in Swindon (UK). 
+
+        Participants were the different system vendors (ADLIB, SSL and Gallery 
+
+        Systems), mda (Gordon McKenna and Edmund Lee), Richard Light (independent 
+
+        XML consultant) and Nicholas Crofts from Geneva. As one of the architects 
+
+        of the CIDOC Conceptual Reference Model (CRM) the presence of Nick Crofts 
+
+        proved to be very useful: after a presentation by Nick it was agreed that 
+
+        the ideas in the CIDOC CRM could serve as guidelines in the design of 
+
+        the SPECTRUM-XML DTD. </p>
+
+      <p class=normal>One of the most important outcomes of this was that the 
+
+        DTD was not necessarily object-centric. In other words: the DTD should 
+
+        support other views on the data e.g. starting from a person, an exhibition 
+
+        or a loan. Another outcome was that the group wanted to take a look at 
+
+        being able to re-use similar data structures that appear in different 
+
+        places in SPECTRUM. An example of this is person data, where a person 
+
+        has a relation with an object, e.g. being the donor or the creator of 
+
+        an object. In this case the person can be seen as an 'actor' 
+
+        on the object and the 'actor' and the object are connected through 
+
+        an 'event' e.g. the creation or the donation of the object. 
+
+        Borrowing this idea from the CIDOC CRM proved to be an important decision 
+
+        that influenced the rest of the DTD design process. </p>
+
+      <p class=normal>Subsequent meetings were held on the 23<sup>rd</sup> of 
+
+        May, 2000 with the bulk of the work undertaken at a special "Lock-in" 
+
+        meeting on the 6<sup>th</sup> and 7<sup>th</sup> of July 2000 at the offices 
+
+        of SSL in London. The final meeting was held at the 18<sup>th</sup> of 
+
+        December 2000, again in London. The number of meetings was low in relation 
+
+        to the amount of work that had to be done. This was only possible through 
+
+        the use of the E-mail list and even more important: the effort of Gordon 
+
+        McKenna from mda. Lots of useful comments also came from people outside 
+
+        the "core" group, notably from Martin D&ouml;rr and Nicholas Crofts (CRM), 
+
+        John Perkins and Angela Spinazze (CIMI). The 'wrap up' meeting 
+
+        on the 18<sup>th</sup> of December 2000 produced three deliverables: the 
+
+        DTD itself, a user guide for the DTD and a mapping from the SPECTRUM units 
+
+        of information to the DTD.</p>
+
+      <h1>The structure of the SPECTRUM-XML DTD</h1>
+
+      <p class=normal>XML documents always contain a 'master' element 
+
+        that contains all the other elements. This special element is called the 
+
+        'root element'. The root element in the SPECTRUM-XML DTD is 
+
+        named 'interchange' to indicate that the XML document is intended 
+
+        for data interchange purposes. The root element contains two sub-elements 
+
+        (or children) with the names 'metadata' and 'spectrum'. 
+
+        The metadata element can contain information <i>about</i> the XML document, 
+
+        such as who created it, for what purpose or when. The metadata element 
+
+        can contain a complete Dublin Core description. The 'spectrum' 
+
+        element contains the actual 'records' or 'descriptions'.</p>
+
+      <p class=normal>&lt;?xml version="1.0"?&gt;</p>
+
+      <pre>&lt;!DOCTYPE interchange<i> </i>SYSTEM<i> </i>spectrum-xml.dtd&gt;</pre>
+
+      <p class="normal">&lt;interchange&gt;</p>
+
+      <p class=normal><span> </span>&lt;metadata&gt;</p>
+
+      <p class=normal> ... Metadata description here .</p>
+
+      <p class=normal> &lt;/metadata&gt;</p>
+
+      <p class=normal> &lt;spectrum&gt;</p>
+
+      <p class=normal> ... Real data here ...</p>
+
+      <p class=normal> &lt;/spectrum&gt;</p>
+
+      <p class=normal>&lt;/interchange&gt;</p>
+
+      <p class=normal>Code snippet that illustrates the top level structure of 
+
+        an SPECTRUM-XML compliant XML document.</p>
+
+      <p class=normal>The SP<span class="Normal">ECTRUM-XML DTD contains four 
+
+        different types of elements:</span></p>
+
+      <ol>
+
+        <li> <span class="Normal"><b>'Wrapper'</b> elements. These are 
+
+          the three highest-level elements, 'interchange', 'metadata' 
+
+          and 'spectrum'. The wrapper elements serve as 'envelopes' 
+
+          around the real data. This is necessary to enable multiple top-level 
+
+          elements and metadata in the XML document.</span></span></li>
+
+        <li> <span class="Normal"><b>'Top level'</b> elements. The top-level 
+
+          elements contain the museum's entities. There are eight top-level 
+
+          elements: 'activity', 'concept', 'object', 
+
+          'organisation', 'people', 'person', 'place' 
+
+          and 'reference'. Top-level element can contain other top-level 
+
+          elements: for instance places can be contained in object to represent 
+
+          'associated places'.</span></span></li>
+
+        <li> <span class="Normal"><b>'Structural'</b> elements. There 
+
+          are 6 structural elements: 'actor', 'address', 'administration', 
+
+          'description', 'entity-link', and 'identification'. 
+
+          These elements act as glue to keep information together. A good example 
+
+          of this is the 'actor' element when it connects a 'person' 
+
+          to an 'activity'.</span></span></li>
+
+        <li> <span class="Normal"><b>'Data'</b> elements. These contain 
+
+          the lowest level data elements. There are 7 data-elements defined: 'aspect-numeric', 
+
+          'aspect-term', 'aspect-text', 'date', 
+
+          'name', 'note' and 'title'. </span></span></li>
+
+      </ol>
+
+      <p class="Normal">The contents of the elements can be qualified using 'attributes' 
+
+        and 'values'. The possible attributes are also defined in the 
+
+        DTD. Examples of attributes are 'lang' (language') or 'role'.</p>
+
+      <p class="Normal">It is outside the scope of this paper to list all the 
+
+        definitions and their possible attributes, but a simple example can probably 
+
+        clarify some of the above described principles:</p>
+
+      <p class="normal">&lt;?xml version="1.0"?&gt;</p>
+
+      <pre>&lt;!DOCTYPE interchange<i> </i>SYSTEM<i> </i>spectrum-xml.dtd&gt;</pre>
+
+      <p class="normal">&lt;interchange&gt;</p>
+
+      <p class=normal><span> </span>&lt;metadata&gt;</p>
+
+      <p class=normal> ... Metadata description here .</p>
+
+      <p class=normal> &lt;/metadata&gt;</p>
+
+      <p class=normal> &lt;spectrum&gt;</p>
+
+      <p class=normal> &lt;object&gt;</p>
+
+      <p class=normal>   &lt;identification&gt;</p>
+
+      <p class=normal>     &lt;ref-id type="object-number"&gt;</p>
+
+      <p class=normal>       M4</p>
+
+      <p class=normal>     &lt;/ref-id&gt;</p>
+
+      <p class=normal>   &lt;/identification&gt;</p>
+
+      <p class=normal>   &lt;description&gt;</p>
+
+      <p class=normal>     &lt;aspect-text lang="eng"&gt;</p>
+
+      <p class=normal>       Model of the "Spaans karveel", also known as 
+
+        the</p>
+
+      <p class=normal>       Mataro model</p>
+
+      <p class=normal>     &lt;/aspect-text&gt;</p>
+
+      <p class=normal>   &lt;/description&gt;</p>
+
+      <p class=normal>   &lt;activity type="acquisition"&gt;</p>
+
+      <p class=normal>     &lt;actor role="source"&gt;</p>
+
+      <p class=normal>       &lt;person&gt;</p>
+
+      <p class=normal>         &lt;identification&gt;</p>
+
+      <p class=normal>           &lt;name&gt;</p>
+
+      <p class=normal><span>             </span>Beuningen, D.G. van</p>
+
+      <p class=normal><span>           </span>&lt;/name&gt;</p>
+
+      <p class=normal><span>         </span>&lt;/identification&gt;</p>
+
+      <p class=normal><span>       </span>&lt;/person&gt;</p>
+
+      <p class=normal>     &lt;/actor&gt;</p>
+
+      <p class=normal>   &lt;/activity&gt;</p>
+
+      <p class=normal> &lt;/object&gt;</p>
+
+      <p class=normal> &lt;/spectrum&gt;</p>
+
+      <p class=normal>&lt;/interchange&gt;</p>
+
+      <h1>Deployment of the SPECTRUM-XML DTD</h1>
+
+      <p class=normal>So far the SPECTRUM-XML DTD has been developed in isolation. 
+
+        The next step will be to test the DTD in practical applications. All members 
+
+        of the SPECTRUM-XML working group are also CIMI members. CIMI has already 
+
+        expressed an interest in organising a test bed around the SPECTRUM-XML 
+
+        DTD. An obvious advantage of this co-operation between the SPECTRUM-XML 
+
+        group and CIMI is that the visibility of the project is lifted from a 
+
+        UK based project to a world wide visibility. Furthermore, CIMI has considerable 
+
+        experience in organising test beds. There are two possible applications 
+
+        for the DTD: data exchange between collection management systems of different 
+
+        vendors and the definition of a record syntax in distributed searching 
+
+        applications.</p>
+
+      <p class=normal>The first application is the most straightforward: export 
+
+        data from collection management system from vendor A and import them into 
+
+        the system of vendor B. At first glance it seems really simple to prove 
+
+        that this application really works: if the data that have been imported 
+
+        in system B will be exported using the SPECTRUM-XML DTD then one could 
+
+        think that a simple file comparison could prove that the round-trip lost 
+
+        no data and kept the data structure intact. This is not quite true: the 
+
+        SPECTRUM DTD offers too much freedom in the expression of data to make 
+
+        this test possible without further restricting the test conditions. An 
+
+        example of this problem is that system A could export the data with the 
+
+        'object' element as top element where system B could export 
+
+        the data with the 'person' element as top element (object and 
+
+        its maker(s) vs. maker and his/her object(s)). The formal validation of 
+
+        the export/import application therefore requires additional test conditions. 
+
+        This is where CIMI can offer its test bed experience.</p>
+
+      <p class=normal>The second application is probably more exciting than the 
+
+        first. Unfortunately a DTD alone is not sufficient for this purpose. In 
+
+        addition to the definition of the record syntax one also needs a definition 
+
+        of the query syntax. The simplest way to implement this is probably to 
+
+        express queries as CGI (Common Gateway Interface) strings. If several 
+
+        systems'vendors or their clients identify the need for this then 
+
+        a similar project as the SPECTRUM-XML could be organised. </p>
+
+      <h1>CIMI's involvement</h1>
+
+      <p class=normal>The usefulness of SPECTRUM-XML can hopefully be tested in 
+
+        2001. This would mean that during the course of 2001 various implementors 
+
+        of Collection Management Systems will implement export/import functionality 
+
+        in their systems. This functionality will then become available for their 
+
+        cleints. This will result in a situation, which is referred to as 'standards 
+
+        by stealth'. The individual museum does not need to worry about the 
+
+        intricacies of the DTD. Their systems will contain the functionality by 
+
+        default and the user will be able to inform the mda/CIMI work at a very 
+
+        low cost. The potential of this approach goes well beyond any of the earlier 
+
+        test beds of CIMI. The simple reason for this is that mainstream technology 
+
+        is used for which hardly any usage barriers exist. This distinguishes 
+
+        CIMI's XML projects from let's say the CIMI Z39.50 test bed. 
+
+        Although the CIMI Z39.50 test bed proved without doubt that the technology 
+
+        worked, the actual implementation of Z39.50 was blocked by the steep learning 
+
+        curve of Z39.50 and the lack of support in off-the-shelf products. This 
+
+        is entirely different in the implementation of XML based solutions: a 
+
+        full range of products and components can almost be found at the nearest 
+
+        street corner. </p>
+
+      <h1>A future vision</h1>
+
+      <p class=normal>Will XML and SPECTRUM-XML be the answer to all known problems 
+
+        in the area of collection management? The answer is probably "no", although 
+
+        for the first time there is a standard available that "naturally" fits 
+
+        museum's data. What remains important is that data (and therefore 
+
+        information) will be "conserved" in a system neutral form that guarantees 
+
+        future usage of them. What most museums probably don't see is that 
+
+        information about their collections is just as important as their collections 
+
+        itself. So far I have not seen a job description for an information curator 
+
+        yet. Using this analogy one could see the SPECTRUM-XML developments as 
+
+        an information insurance policy: at least one can guarantee that data 
+
+        can leave a specific system and be re-used in other (newer) systems. Organisations 
+
+        like mda and CIMI are key in this development. Through test beds and projects 
+
+        like SPECTRUM-XML these organisations can support and promote the implementation 
+
+        of these insurance policies as best practice. Hopefully, the capability 
+
+        to export/import data in a form like SPECTRUM-XML will, in the future, 
+
+        be one of the top requirements in tender documents for future collection 
+
+        management systems. </p>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+
+
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2001/papers/degenhart/degenhart.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:49:15 GMT -->
+</html>

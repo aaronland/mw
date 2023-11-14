@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2011/papers/mixing_it_up_developing_and_implementing_a_tag by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:09:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Mixing It Up: Developing and Implementing a Tagging System for a Content-Rich Website Which Uses Aggregated Content from Multiple Sources   | museumsandtheweb.com</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<link rel="alternate" type="application/rss+xml" title="Comments for &quot;Mixing It Up: Developing and Implementing a Tagging System for a Content-Rich Website Which Uses Aggregated Content from Multiple Sources  &quot;" href="../../crss/node/14798html.html" />
+<link rel="shortcut icon" href="../../sites/all/themes/at_mw2011/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="../../files/ctools/css/fc1c48c5ca33c8171b281d62bf027dd0e4da.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="../../files/css/css_deaf8869d31a9684bd1d437eda500970.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../../files/css/css_7c2bf56cf58ae4752729cbcbd408ba47.css" />
+  <style type="text/css">#container{width:960px;}.two-sidebars .content-inner{margin-left:240px; margin-right:240px;}.sidebar-first .content-inner{margin-left:240px; margin-right:0;}.sidebar-last .content-inner{margin-right:240px; margin-left:0;}#sidebar-first{width:240px;margin-left:-100%;}#sidebar-last{width:240px;margin-left:-240px;}</style>  <script type="text/javascript" src="../../files/js/js_cb84585e7a78c9c38296ab40c95667f0.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","block_edit":{"hover_links":1},"chartbeat":{"uid":3385,"domain":"museumsandtheweb.com"},"fivestar":{"titleUser":"Your rating: ","titleAverage":"Average: ","feedbackSavingVote":"Saving your vote...","feedbackVoteSaved":"Your vote has been saved.","feedbackDeletingVote":"Deleting your vote...","feedbackVoteDeleted":"Your vote has been deleted."},"googleanalytics":{"trackOutgoing":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});
+//--><!]]>
+</script>
+</head>
+<body class="not-front not-logged-in article-type-paper one-sidebar sidebar-first section-mw2011 page-node-14798">
+  <div id="container">
+
+    <div id="skip-nav" class="show-on-focus">
+      <!-- To adjust the display of the skip link see the Advanced theme settings (General settings), and never use display:none! -->
+      <a href="#main-content">Skip to main content</a>
+    </div>
+
+        
+    
+          <div id="leaderboard">  <div id="block-panels_mini-leader" class="block block-panels_mini odd block-region-leaderboard block-count-1">
+  <div class="block-inner">
+
+    
+    <div class="content"><div class="panel-display panel-3col clear-block" id="mini-panel-leader">
+  <div class="panel-panel panel-col-first">
+    <div class="inside"></div>
+  </div>
+
+  <div class="panel-panel panel-col">
+    <div class="inside"><div class="panel-pane pane-custom pane-1 " >
+  
+      <h2 class="pane-title"><a href="../../index.html">Museums and the Web </a></h2>
+  
+  
+  <div class="pane-content">
+    <font color="white">An annual conference exploring the social, cultural, design, technological, economic, and organizational issues of culture, science and heritage on-line.</font>  </div>
+
+  
+  </div> <!-- /panels-pane -->
+</div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside"><div class="panel-pane pane-custom pane-2 " >
+  
+      <h2 class="pane-title"><a href="http://mw2013.museumsandtheweb.com/">Museums and the web 2013</a></h2>
+  
+  
+  <div class="pane-content">
+    <ul>
+<li><a href="../../mw2012.html">2012</a></li>
+<li><a href="../../mw2011.html">2011</a></li>
+<li><a href="../../mw2010/index.html">2010</a></li>
+<li><a href="../../mw2009/index.html">2009</a></li>
+<li><a href="../../mw2008/index.html">2008</a></li>
+
+<li><a href="../../mw/museums_and_the_web.html">...</a></li>
+</ul>
+  </div>
+
+  
+  </div> <!-- /panels-pane -->
+</div>
+  </div>
+</div>
+</div>
+
+    
+  </div>
+</div> <!-- /block -->
+</div> <!-- /leaderboard -->
+    
+    <div id="header" class="clearfix">
+
+              <div id="branding">
+
+                                    <div class="logo-site-name"><strong>
+                <span id="logo"><a href="../../mw2011.html" title="Museums and the Web 2011: the international conference for culture and heritage on-line"><img src="../../sites/all/themes/at_mw2011/logo.png" alt="museumsandtheweb.com logo" title="Home page"/></a></span>                <span id="site-name"><a href="../../mw2011.html" title="Museums and the Web 2011: the international conference for culture and heritage on-line"><img src="../../sites/all/themes/at_mw2011/css/theme/images/mw2011-title.png" alt="Museums and the Web 2011: the international conference for culture and heritage on-line" /></a></span>              </strong></div> <!-- /logo/site name -->
+                        <div id="site-slogan"><div class="when-where">April 5-9, 2011, Philadelphia, PA, USA</div><div class="by">produced by Archives &amp; Museum Informatics</div><div class="link">http://conference.archimuse.com/mw2011</div></div>                    
+        </div> <!-- /branding -->
+            
+        <div id="social">
+                    <div class="custom-user-menu"><ul class="item-list clear-block">
+<li class="first"><a href="../../user/register.html">New Account</a></li>
+<li class="last"><a href="../../user.html">Login</a></li>
+</ul></div>          <div class="social-media clear-block"><ul>
+<li><a class="linkedin" href="http://www.linkedin.com/shareArticle?url=http://museumsandtheweb.com/mw2011/papers/mixing_it_up_developing_and_implementing_a_tag&amp;source=Archimuse&amp;mini=true" rel="nofollow" target="_blank" title="Share on LinkedIn">LinkedIn</a></li>
+<li><a class="facebook" href="http://www.facebook.com/share.php?u=http://museumsandtheweb.com/mw2011/papers/mixing_it_up_developing_and_implementing_a_tag" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a></li>
+<li><a class="twitter" href="http://twitter.com/?status=http://museumsandtheweb.com/mw2011/papers/mixing_it_up_developing_and_implementing_a_tag" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a></li>
+<li><a class="flickr" href="http://www.flickr.com/groups/mw2011-15th/" rel="nofollow" target="_blank" title="Join the Flickr group">Flickr</a></li>
+</ul></div>
+        </div> <!-- /social -->
+        
+              <div id="register"><a href="http://www2.archimuse.com/mw2011/mw2011.registrationForm.html" target="_blank">Register</a></div> <!-- /register -->
+            
+      
+    </div> <!-- /header -->
+
+        
+      <div id="primary" class="nav">
+      </div> <!-- /primary link menu -->
+
+
+    
+
+
+    
+    <div id="columns"><div class="columns-inner clearfix">
+
+      <div id="content-column"><div class="content-inner">
+        
+                
+        
+        <div id="main-content">
+          
+                      <div id="breadcrumb">
+              <h2 class="element-invisible">You are here:</h2>
+              <a href="../../mw2011.html">MW2011</a> &#187; <a href="../sessions.html">Sessions</a> &#187; <a href="../programs/mixing_it_up_experiences_of_managing_and_dis.html">Mixing it up: Experiences of managing and displaying aggregated content from multiple sources, combining editorial selection, subject classification using tagging and automated retrieval.</a> &#187;             </div> <!-- /breadcrumb -->
+              
+                      <div id="main-content-header" class="clear-block">
+              <h1 id="page-title">Mixing It Up: Developing and Implementing a Tagging System for a Content-Rich Website Which Uses Aggregated Content from Multiple Sources  </h1>                          </div>
+          
+          
+          <div id="content"><div id="article-14798" class="article article-promoted paper-article clear-block">
+
+    
+    <div class="article-detail clear-block">
+  <div class="node-edit-link" id="node-edit-link-14798"><ul class="links"><li class="0 first last active"><a href="mixing_it_up_developing_and_implementing_a_tag.html" class="active">[View]</a></li>
+</ul>
+</div><div id="intro-paragraph"><!-- InstanceBeginEditable name="Intro-Paragraph" -->
+<h2 class="Author">Andrew Lewis, Victoria and Albert Museum, United Kingdom</h2>
+<p class="URL"><a href="http://beta.vam.ac.uk/">http://beta.vam.ac.uk</a></p>
+<h3 class="AbstractTitle">Abstract</h3>
+<p class="AbstractText">In 2009, the Victoria and Albert Museum website had a very large amount of in-depth content including museum content and user-generated features. This presented a challenge in connecting users with site content that they may not have been aware of. In January 2011, the Museum made live a beta version of its redesigned website which aimed to address this issue. The new site moved away from a hierarchical navigation model to a dynamic concept-driven one. This aimed to collect and present content relevant to the user's subject of interest. A central method in achieving this was the development of a tagging system to classify Web content so that it would aggregate as required. This paper looks at the reality of developing and implementing a bespoke tagging system that could be effective for users yet simple enough to use for staff who are not specialist classifiers. The human issues for staff in developing the system are discussed, with some early results and feedback from the early beta-testing period. It is hoped the paper will offer insight into what happens in practice when using tagging for real on a live website.</p>
+<p class="keywords">Keywords: tagging, content, staff, classification, management</p>
+</div>
+<p></p>
+<div id="body-text">
+<h2>Background</h2>
+<p>London's Victoria and Albert Museum (V&amp;A) is the most important museum of the decorative arts in the world, holding in excess of 1 million objects. Each year over 2.6 million people visit the physical museums, and the V&amp;A websites receive over 24 million user sessions.</p>
+<p>Over the period 2009-11, the V&amp;A undertook a major redesign of its website to reflect its status in the world. The aim was to create the number one museum website in the world about art and design, with a richness and diversity that reflects not only the Museum itself but also the variety of its audiences.</p>
+<p>The website at the time was large. It had several thousand detailed content pages, as well as a range of interactive features, including many that allowed visitors to create or upload user-generated content on the site. There were also significant amounts of Museum-led activity on third party sites such as Flickr, YouTube and Vimeo.</p>
+<p>A major objective was to make the huge range of valuable content and features provided by these multiple sources more transparent to visitors. It was known that almost all visitors arriving on the site were coming indirectly, either from search engines or referring sites. Over the period January to December 2010, the number of visitors coming directly to the site was less than 10% over the year (Google Analytics).</p>
+<p><span class="inline inline-center"><a href="../../image/lewis_a_mixing_it_up_developing_and_implementing_a_tag.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/lewis-fig1-print.preview.jpg" border="0" alt="Fig 1: Sources of traffic to the V and A Web site 1 Jan 2010 - 31 December 2010  " title="Fig 1: Sources of traffic to the V and A web site 1 Jan 2010 - 31 December 2010" width="520" height="145"></a><span class="caption"><strong>Fig 1: Sources of traffic to http://www.vam.ac.uk 1 Jan 2010 - 31 December 2010</strong></span></span></p>
+<p>The approach to the new site was to assume that most visitors arrived deep in the site and would benefit from being offered further relevant content and features from any and every page. The new site was developed from the start to actively cross-connect content.</p>
+<p>A new infrastructure was developed and implemented to support this concept based upon a number of underlying technologies, including open source content management systems MySource Matrix and Drupal, with some content also housed in sites run by third-party Web providers such as Delicious for Web links and Vimeo for video.</p>
+<p>One of several tools used to match content and present it to site visitors was a bespoke tagging system. This paper looks at the process of creating a tagging system from scratch and the process of manually classifying the main body of content. This paper does not discuss the underlying technical infrastructure required to make use of the tagging system that was used.</p>
+<h2>1.   The development of the tagging system</h2>
+<p>In order to highlight for visitors content that might be related to that which they were looking at, it was necessary to have a means by which the subject of the content could be identified. One way this was achieved was by using search engine indexing to match content. This is very efficient because it does not required human intervention. However, although powerful and efficient, it is based upon content analysis of the occurrence and frequency of terms. As such, it cannot give a real indication of the core subject of content, only the likelihood of how closely one piece matches another based on a calculation. This paper does not discuss the use of content indexing.</p>
+<p>The best way to get a sense of the subject of content is to read it, view it or listen to it and to make a critical judgement. Although this sounds obvious, it is not as simple as it might sound. Subject classification is complex and can be highly subjective, both in terms of opinion and the different use of language. It has been debated and developed at great length, and there are a number of long-established systems in existence. These include comprehensive general systems such as the hierarchical Dewey Decimal (OCLC) and the faceted Universal Decimal classification (UDC Consortium) systems, as well as specialist controlled vocabularies, ontologies, folksonomies and more recently metadata schema.</p>
+<p>The first task was to establish a suitable system of subject terms that was sufficiently defined to allow consistent results, yet not so complex as to render it unwieldy to use or difficult to understand without first becoming a specialist in it.</p>
+<p>A restriction was that the job of classification would not be limited to one person. The staff who were going to have the ongoing job of classifying the content would be Web Content Managers who had a good awareness of the subjects covered in content on the site, but were not trained subject specialists nor cataloguers and were not expected to become so.</p>
+<p>As the V&amp;A is an art and design museum, the use of suitable specialist vocabularies was considered. The schemes used by the Museum's documentation and cataloguing staff were reviewed: they included the Art and Architecture Thesaurus (The Getty Research Institute, 2000) and some bespoke authority lists.</p>
+<p>It quickly became apparent that they were not going to be suitable. There were a significant number of them, each of which was large and unwieldy and would require of staff a considerable amount of time and ongoing use to become and remain sufficiently familiar to use them effectively. They were also too rigidly controlled, and in some cases were felt not to be updated frequently enough.</p>
+<p>For these reasons, specialist thesauruses and controlled vocabularies were discounted. It was decided that the most practical solution would be to adopt a tagging system that would be simple enough to allow staff to classify quickly, yet consistent enough to be able to produce reliable results.</p>
+<p>As the site was intended to serve content to visitors based on subjects of interest, it was decided to consider what it was that people tended to be looking for when finding information about art and design. Eventually a set of six attributes which would be used to classify the content were chosen. These were:</p>
+<ul>
+<li>"person" to reflect that visitors would be looking for information about specific artists, designers, historical and fictional figures</li>
+<li>"place" to reflect visitors' interest in art and design associated with particular locations</li>
+<li>"technique" to support visitors trying to understand artistic and design processes</li>
+<li>"period/style" to reflect an interest in artistic movements or significant named historical periods</li>
+<li>"date" to reflect that visitors may be interested in work produced at a particular point in history</li>
+<li>"free text" - this was included to allow flexibility and be able to employ terms not covered by the more specific categories</li>
+</ul>
+<p>The reason for considering the attributes separately when tagging was so that the process supported and encouraged a measured approach by staff when they were applying terms. It helped staff by defining the underlying visitor need for tagging. For example, it was felt easier to apply consistent terminology about people's names contained in a specific name field.</p>
+<p>There was also a technical reason. The pages on the new site would be drawing content from a number of different systems, including the Museum's online object catalogue, "Search the Collections". By separating out tagging into distinct fields, content could be returned more accurately by matching against specific fields. For example, a tag for somebody's name could be matched against the name authority field in Search the Collections, focusing the returns more than if it had simply been matched against more general ones such as the notes field or the record title.</p>
+<p>Once the six categories were agreed, guidance on the use of terms within each was developed. Due to project restrictions, it was not possible to spend a long time perfecting the tagging system prior to applying it. Instead, it was developed as a group learning activity. All the content staff who worked on the project started tagging simultaneously and met briefly every day to feedback and refine the guidance.</p>
+<p>This was effective in quickly developing a common understanding. Developing the system by applying it meant the guidance was pragmatic rather than dogmatic. The disadvantage was that content that was tagged early on occasionally had to be revisited if a rule changed. This was not a significant problem, and after about a week, the process moved from creating the guidance to refining it. Overall, the benefits of having achieved a shared view outweighed any disadvantages.</p>
+<p>The rules that were developed were kept as simple as possible. The most important of these was that the tags chosen should be limited as far as possible to reflect only the main overarching subjects of the page, not simply list all the people, subjects or periods mentioned on it. This requires individual judgement, and this was found to be a task that required some practice and discipline, to avoid introducing too many tags which were of lesser significance.</p>
+<p>Predictably, some tags were commonly added to pages. These might include the name of any artists being discussed (name field), the location they were inspired by if it was mentioned as significant (place field), the year or decade they were working in, and so on. Other terms were added in the free text if they received significant discussion. These might include less obvious terms such as "red" or "depression" or "erotic".</p>
+<p>Staff tended to add more tags about subjects that are well known or that they are personally familiar with, or think are significant or important. To counter this, the tagging was discussed daily throughout the process, and staff could review and adjust tags on pages that others had tagged. Before the exercise, there was concern that staff might become possessive about their own tagging, but this was not found to be the case.</p>
+<p>More detailed rules were also developed. For example, people's names were entered as tags in the name field in normal order without titles, e.g. "Paul Pindar", not "Sir Paul Pindar" or "Pindar, Sir Paul". The tag values entered in the date field were not numeric, but limited to a restricted list of neutral terms. For all dates up to AD 800, only whole centuries were used; from 800 to 1900, centuries or half centuries were used - for example, 19th century, early 19th century or late 19th century where early was up to the first half and late in the second half. From the 20th century onwards, decades, half centuries or centuries were used. No individual years were used as the object was not to identify a precise date, but to indicate a date range.</p>
+<p>The tags used in the separate period/style field did not include dates, but did include terms such as Victorian that were related to specific periods, as well as more obvious style movements such as Art Nouveau.</p>
+<h2>2.   The design of the site</h2>
+<p>The Online Museum team worked with designer company The Other Media to realise the concept of exposing related content. The final design dispensed with traditional hierarchical menus, but instead used a vertically divided page with the left-hand two thirds of the page containing the actual content, and the right-hand third displaying routes to the suggested related content, based upon the tagging. The majority of Web pages on the new site were general article pages.</p>
+<p><span class="inline inline-center"><a href="../../image/lewis_a_mixing_it_up_developing_and_implementing_a_t_0.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/lewis-fig2-print.preview.jpg" border="0" alt="Fig 2: An article page  " title="Fig 2: An article page  " width="414" height="520"></a><span class="caption"><strong>Fig 2: An article page</strong></span></span></p>
+<p class="caption">As well as standard <strong>article</strong> pages, the new site had special pages called <strong>landing</strong> pages which act as subject hubs. The article pages can be considered the basic units of content, and the landing pages exist to group closely related content together to present it to the visitor. This is done manually by direct selection and automatically based upon the tagging.</p>
+<p><span class="inline inline-center"><a href="../../image/lewis_a_mixing_it_up_developing_and_implementing_a_t_1.html"><img class="image image-preview " src="http://museumsandtheweb.com/files/images/lewis-fig3-print.preview.jpg" border="0" alt="Fig 3: A landing page" title="Fig 3: A landing page" width="398" height="520"></a><span class="caption"><strong>Fig 3: A landing page</strong></span></span></p>
+<p>Although not discussed in this paper, all pages also featured a header with a collapsible "megamenu" and a footer with links to important content or services as backup to provide a more familiar route for visitors.</p>
+<p>One of the biggest changes introduced by the new design was the move away from a fixed navigation. Due to the size of the old site, the hierarchical navigation could be as deep as seven or more layers, and the location of content was used to indicate its subject. As a result, visitors were forced to consider the title of a page and its place in the navigation to decide what it was about. For example, a page called "Reading list" under a section called "Photography" was obviously a photography reading list. In the new site, the navigation was not hierarchical, but was instead almost entirely flat, with each page existing independently, but able to be linked from other pages depending on the subject of its contents.</p>
+<p>Reviewing content migrated into the new design was a big task. Content had to be adjusted to give back context lost outside of its previous hierarchy. Often, several separate pages on the old site needed combining into one on the new site. The page title almost always had to be changed. In the example given, the page would need to be called "Photography reading list".</p>
+<h2>3.   The process of applying the tagging</h2>
+<p>In 2009, an initial content audit had shown that there were more than 4000 pages on the main site which needed to be classified. The tagging had to be done manually and was one of the major content tasks in the project. It was further complicated by the fact that the content management system was not fully implemented at the time.</p>
+<p>The tagging was recorded in site audit spreadsheets. Later in the project, special metadata fields were set up in the content management system, one field for each of the six categories of person, place, technique, period/style, date and free text. The tag terms were batch imported into these fields and could then be edited.</p>
+<p>It was not possible to view the effect of the tagging as it was being applied. This was not ideal, but unavoidable, and made staff understandably anxious that what they were doing could not be tested and might not work as intended.</p>
+<p>The effect of the uncertainty of not seeing the results when doing the classifying caused some concern which led at times to tension within the team. Where differences of opinion existed, anxiety caused by uncertainty tended to amplify conflict. While uncertainty can never be fully avoided in development projects, the experience in this project suggested that planning for the emotional effects of uncertainty should be considered carefully.</p>
+<p>As discussed, the new site had two main types of page: articles and landing pages. As one might expect, articles almost invariably had several subjects. Tagging of articles involved considering the six categories and deciding upon and adding tag terms that reflected the significant subjects within it.</p>
+<p>Landing pages, on the other hand, typically have only one or two subjects. For this reason, the tagging on landing pages was deliberately kept much narrower. For example, photography would be tagged just with photography. Similarly, 19th century fashion might be tagged with 19th century and fashion. A subject like ballet would be tagged for ballet, but not for dance, which is a wider subject and would have its own landing page, upon which ballet might feature.</p>
+<p>Each landing page existed to collect content on a specific subject. For subjects where there was a large amount available, there might be other more specific landing pages (e.g. 19th century fashion as well as fashion). In fact, the initial choice of landing pages that were set up was decided from reviewing the results of the tagging process and seeing which subjects recurred.</p>
+<p>Although this appears to create new hierarchy, the real reason to create new landing pages was not to create subfolders in a hierarchical tree, but to recognize the extent of content on any one subject. Landing pages could be created for very specific subjects in some areas and not others, depending on how much was available.</p>
+<p>The whole process took around 8 weeks for the equivalent of 6 full time staff. This is only an indicative figure as all staff had some other duties during this period. It is worth noting, though, that to do this effectively does require reading the content. Anyone considering such an exercise should allocate sufficient staff resource to do this based on the amount of content to be tagged.</p>
+<p>For reasons described previously, the tagging had been done early on in the project, and in many cases this meant tagging content that was previously separate and was now combined. This meant that tagging also had to be reviewed as content was processed.</p>
+<h2>4.   The results of tagging</h2>
+<p>At the time of writing this article in January 2011, the new site was being launched for beta testing. The work in processing and combining content from the old website was still underway, and no detailed study of the tagging had been undertaken. It was clear early on that the system was returning content more or less as one might expect, but that understanding the exact returns would need some analysis which was yet to be conducted as it was scheduled to occur during the beta testing, after this paper was written.</p>
+<p>Even without detailed analysis, it could be seen that content displayed as a result of the tagging was in some cases exactly what one might expect, and in other cases was surprisingly unexpected. Looking at examples, it was possible to make anecdotal judgements, but a deliberate decision was taken not to attempt to make individual changes until the whole content was in place and the overall site was stable; then patterns or trends identified could be taken as reliable</p>
+<p>Another observation, also anecdotal, was that when Museum staff who were not involved in the project were seeing the beta site for the first time, they tended to have quite fixed views about what the related content should be, and this tended to be that it should be content that had been close to it in the old site.</p>
+<h2>5.   Conclusions</h2>
+<p>Tagging is a simple and flexible means of applying subject classification pages on large websites, especially sites that have content on a broad range of subjects. It is a labour-intensive activity. In this study, the site in question was very large, with several thousand pages. Tagging a small site is unlikely to be justified.</p>
+<p>Tagging can be difficult for staff to apply. A single member of staff may apply tagging differently to different areas of content depending on familiarity with the subject of each. Two or more people may also tag the same content differently, depending on their different viewpoints. Any tagging system should aim to have easy rules that aim to achieve consistency, but care should be taken when developing a system not to make it unnecessarily complex for staff to use. Engaging staff in frequent review in the early stages of the process is likely to be effective in achieving both a common understanding and an approach that suits a range of learning styles and can be used by more people.</p>
+<p>Initial review of the tagging on the V&amp;A's new website indicates it is an effective tool to relate content and is expected to improve once further analysis of the results takes place.</p>
+<h2>Acknowledgements</h2>
+<p class="ReferencesText">The author would like to acknowledge the extensive efforts of staff in the Web team who worked on developing the tagging system described in this paper</p>
+<h2>6.   References</h2>
+<p class="ReferencesText">The Getty Research Institute. Art &amp; Architecture Thesaurus Online. 2000. Consulted January 30 2011<a href="http://www.getty.edu/research/tools/vocabularies/aat/index.html">http://www.getty.edu/research/tools/vocabularies/aat/index.html</a></p>
+<p class="ReferencesText">Google Analytics. Consulted January 30 2011. http://www.google.com/analytics/</p>
+<p class="ReferencesText">OCLC. Dewey Decimal Classification. Consulted January 30 2011 <a href="http://www.oclc.org/dewey/">http://www.oclc.org/dewey/</a></p>
+<p class="ReferencesText">UDC Consortium. Universal Decimal Classification. Consulted January 30 2011 http://www.udcc.org/</p>
+</div>
+<div id="citation">
+<h4>Cite as:</h4>
+<p class="references">Lewis, A.,  Mixing It Up: Developing and Implementing a Tagging System for a Content-Rich Website Which Uses Aggregated Content from Multiple Sources  . In J. Trant and D. Bearman (eds). <em>Museums and the Web 2011: Proceedings</em>. Toronto: Archives &amp; Museum Informatics. Published March 31, 2011. Consulted
+<script type="text/javascript">// <![CDATA[
+      // current date - based on http://rainbow.arch.scriptmania.com/scripts
+      // Array of day names
+      var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+      var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+      var dt = new Date();
+      var y  = dt.getYear();
+
+      // Y2K compliant
+      if (y < 1000) y +=1900;
+
+      document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+                       //
+// ]]></script>
+http://conference.archimuse.com/mw2011/papers/mixing_it_up_tagging</p>
+</div>
+<div id="copyright"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img class="c1" src="../../files/images/cc-88x31.png" border="0" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License" width="88" height="31"></a>
+<p>Copyright © 2011 - Archives &amp; Museum Informatics.</p>
+</div><div class="field nodereference field-paper-program-ref">
+                                <h3 class="label inline">Program Item Reference:&nbsp;</h3>
+          <div class="item inline odd"><a href="../programs/mixing_it_up_experiences_of_managing_and_dis.html">Mixing it up: Experiences of managing and displaying aggregated content from multiple sources, combining editorial selection, subject classification using tagging and automated retrieval.</a></div>
+              </div>
+ <!-- /content-field -->
+  </div>
+  
+  <div class="article-meta">
+      <p class="submitted">Posted <em class="time">March 30, 2011 - 8:47pm</em> by <em class="author"><a href="../../user/alewis_0.html" class="username" title="View Andrew&#039;s profile.">Andrew Lewis</a></em></p>
+  
+    
+  <ul class="taxonomy"><li><a href="../../conferences/mw/mw2011.html" rel="tag" title="Museums and the Web 2011">MW2011</a></li><li><a href="../../paper_keywords/classification.html" rel="tag" title="">Classification</a></li><li><a href="../../paper_tags/content.html" rel="tag" title="">content</a></li><li><a href="../../paper_tags/management.html" rel="tag" title="">management</a></li><li><a href="../../paper_keywords/staff.html" rel="tag" title="">staff</a></li><li><a href="../../paper_keywords/tagging.html" rel="tag" title="">tagging</a></li></ul>  </div>
+  
+  
+</div> <!-- /article --></div>
+
+        </div> <!-- /main-content -->
+
+        
+      </div></div> <!-- /content-column -->
+
+              <div id="sidebar-first" class="sidebar">  <div id="block-menu-menu-mw2011-menu" class="block block-menu odd block-region-sidebar-first block-count-2">
+  <div class="block-inner">
+
+          <h2 class="block-title">MW2011 Main Menu</h2>
+    
+    <div class="content"><ul class="menu">
+ <li class="leaf first about-mw2011"><a href="../about.html" title="Museums and the Web - the international conference for culture and heritage online">About MW2011</a></li>
+<li class="leaf workshops"><a href="../workshops.html" title="Explore topics in-depth in full or half-day pre-conference workshops">Workshops</a></li>
+<li class="leaf sessions"><a href="../sessions.html" title="Presentations including Mini-Workshops and Professional Forums">Sessions</a></li>
+<li class="collapsed speakers"><a href="../speakers.html" title="People from around the world present their latest work">Speakers</a></li>
+<li class="leaf demonstrations"><a href="../demonstrations.html" title="See new museum Web sites up-close">Demonstrations</a></li>
+<li class="leaf exhibits"><a href="../exhibits.html" title="Software and services for museums, libraries and archives online">Exhibits</a></li>
+<li class="collapsed best-of-the-web"><a href="../best.html" title="Recognizing the best work on the cultural Web">Best of the Web</a></li>
+<li class="leaf program-committee"><a href="../program_committee.html" title="Proposals for MW are peer-reviewed by this group">Program Committee</a></li>
+<li class="leaf collaborators"><a href="../thanks.html" title="Thanks everyone! We couldn&#039;t do it without you.">Collaborators</a></li>
+<li class="leaf mw-online"><a href="../mw2011_online_the_permanent_backchannel.html" title="Find MW2011 online and in social media">MW Online</a></li>
+<li class="collapsed registration"><a href="../register.html" title="Join us in Philadelphia">Registration</a></li>
+<li class="leaf scholarships"><a href="../scholarships.html" title="Need some help getting to MW2011?">Scholarships</a></li>
+<li class="leaf local-information"><a href="../local.html" title="Details about Philadelphia + the Conference Hotel">Local Information</a></li>
+<li class="leaf events"><a href="../events.html" title="Social events throughout MW2011">Events</a></li>
+<li class="leaf key-dates"><a href="../dates.html" title="Watch these dates leading up to MW2011">Key Dates</a></li>
+<li class="leaf suggestions-"><a href="../../forum/suggestions_for_the_mw2011_program.html" title="Got ideas for MW2011? Leave us a note in the online community">Suggestions?</a></li>
+<li class="leaf last questions-"><a href="../../forum/heads_museums_and_web_2011_mw2011.html" title="See the Frequently Asked Questions in the online community">Questions?</a></li>
+ </ul>
+</div>
+
+    
+  </div>
+</div> <!-- /block -->
+</div> <!-- /sidebar-first -->
+      
+      
+    </div></div> <!-- /columns -->
+
+    
+          <div id="footer">
+
+                  <div id="footer-region">  <div id="block-panels_mini-footer" class="block block-panels_mini odd block-region-footer block-count-3">
+  <div class="block-inner">
+
+    
+    <div class="content"><div class="panel-flexible panels-flexible-4 clear-block" id="mini-panel-footer">
+<div class="panel-flexible-inside panels-flexible-4-inside">
+<div class="panels-flexible-region panels-flexible-region-4-left panels-flexible-region-first left">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-4-left-inside panels-flexible-region-inside-first">
+  </div>
+</div>
+<div class="panels-flexible-region panels-flexible-region-4-center center">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-4-center-inside">
+<div class="panel-pane pane-custom pane-3 " >
+  
+      <h2 class="pane-title">Founded by Archives &amp; Museum Informatics</h2>
+  
+  
+  <div class="pane-content">
+    <p><a href="http://www.archimuse.com/" title="www.archimuse.com">www.archimuse.com</a></p>
+  </div>
+
+  
+  </div> <!-- /panels-pane -->
+  </div>
+</div>
+<div class="panels-flexible-region panels-flexible-region-4-right panels-flexible-region-last right">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-4-right-inside panels-flexible-region-inside-last">
+<div class="panel-pane pane-custom pane-4 " >
+  
+      <h2 class="pane-title">Managed by Museums and the Web LLC</h2>
+  
+  
+  <div class="pane-content">
+    <p>703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info @ museumsandtheweb.com<br />
+<a href="../../terms.html">Terms and Conditions</a> </p>
+  </div>
+
+  
+  </div> <!-- /panels-pane -->
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+    
+  </div>
+</div> <!-- /block -->
+</div> <!-- /footer-region -->
+        
+        
+      </div> <!-- /footer -->
+    
+  </div> <!-- /container -->
+
+  <script type="text/javascript">
+  var _sf_async_config=Drupal.settings.chartbeat;
+  (function(){
+    function loadChartbeat() {
+      window._sf_endpt=(new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src',
+         (("https:" == document.location.protocol) ? "http://s3.amazonaws.com/" : "http://") +
+         "static.chartbeat.com/js/chartbeat.js");
+      document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+       loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+</script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-26332456-1"]);_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_setAllowHash', false]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "http://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+
+</body>
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2011/papers/mixing_it_up_developing_and_implementing_a_tag by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:09:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+</html>

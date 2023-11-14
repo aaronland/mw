@@ -1,0 +1,1356 @@
+<html><!-- #BeginTemplate "/Templates/mw2002-papers.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2002/papers/cole/cole.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:47:24 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" -->
+
+	<title>MW2002: Papers: Now That We've Found the 'Hidden Web' What Can We Do With It? The Illinois Open Archives Initiative Metadata Harvesting Experience</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=en">
+
+	<meta name="DC.Format" content="text/html">
+
+	<meta name="DC.language" content="ISO 8859-1">
+
+	<meta name="DC.Title" content="Now That We've Found the 'Hidden Web' What Can We Do With It? The Illinois Open Archives Initiative Metadata Harvesting Experience">
+
+	<meta name="htDig.keywords" content="Open Archives Initiative (OAI), metadata harvesting, Dublin
+
+Core, cultural heritage, interoperability, heterogeneous
+
+collections">
+
+	<meta name="keywords" content="Open Archives Initiative (OAI), metadata harvesting, Dublin
+
+Core, cultural heritage, interoperability, heterogeneous
+
+collections">
+
+	<meta name="DC.Subject" content="Open Archives Initiative (OAI), metadata harvesting, Dublin
+
+Core, cultural heritage, interoperability, heterogeneous
+
+collections">
+
+	<meta name="description" content="The Open Archives Initiative(OAI) Protocol for Metadata Harvesting (PMH) is designed to facilitate discovery of the ?hidden web? of scholarly information such as that contained in databases, finding aids, and XML documents.  OAI-PMH supports standardized exchange of metadata describing items in disparate collections such as those held by museums and libraries.  This paper describes recent work done by the University of Illinois Library, recipient of one of seven OAI-related grants from the Andrew W. Mellon Foundation.  An overview is given of the process used to export metadata records describing holdings of the Spurlock Museum at the University of Illinois.  These metadata records were initially created to help track artifacts as they were procured, stored, and displayed and now are used also to support end-user searching via the Spurlock Museum Website.  Spurlock metadata records were mapped to Dublin Core (DC) and then harvested into the Illinois project?s metadata repository.  The details of the processes used to transform the Spurlock records into OAI compliant metadata and the lessons learned during this process are illustrative of the work necessary to make museum collections available using OAI-PMH.  Assuming institutions like Spurlock make metadata available, what then can be done with these information resources?  We discuss the OAI-based search and discovery services being developed by the University of Illinois.  Issues such as need for normalization of metadata, importance of presenting search results in context, and difficulties caused by institution-to-institution variations in metadata authoring practices are discussed.  ">
+
+	<meta name="DC.Description" content="The Open Archives Initiative(OAI) Protocol for Metadata Harvesting (PMH) is designed to facilitate discovery of the ?hidden web? of scholarly information such as that contained in databases, finding aids, and XML documents.  OAI-PMH supports standardized exchange of metadata describing items in disparate collections such as those held by museums and libraries.  This paper describes recent work done by the University of Illinois Library, recipient of one of seven OAI-related grants from the Andrew W. Mellon Foundation.  An overview is given of the process used to export metadata records describing holdings of the Spurlock Museum at the University of Illinois.  These metadata records were initially created to help track artifacts as they were procured, stored, and displayed and now are used also to support end-user searching via the Spurlock Museum Website.  Spurlock metadata records were mapped to Dublin Core (DC) and then harvested into the Illinois project?s metadata repository.  The details of the processes used to transform the Spurlock records into OAI compliant metadata and the lessons learned during this process are illustrative of the work necessary to make museum collections available using OAI-PMH.  Assuming institutions like Spurlock make metadata available, what then can be done with these information resources?  We discuss the OAI-based search and discovery services being developed by the University of Illinois.  Issues such as need for normalization of metadata, importance of presenting search results in context, and difficulties caused by institution-to-institution variations in metadata authoring practices are discussed.  ">
+
+	<meta name="DC.Publisher" content="Archives & Museum Informatics">
+
+	<meta name="DC.Creator" content="Cole, Timothy">
+
+	<meta name="DC.Creator" content="Kaczmarek, Joanne">
+
+	<meta name="DC.Creator" content="Marty, Paul">
+
+	<meta name="DC.Creator" content="Prom, Chris">
+
+	<meta name="DC.Creator" content="Sandore, Beth">
+
+	<meta name="DC.Creator" content="Shreeves, Sarah"><!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset="><!-- #BeginEditable "script" --><!-- #EndEditable -->
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link rel="stylesheet" href="../../Library/mw2002-paper.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" background="../../images/mw2002.bg.gif" text="#000000" link="#003399" vlink="#660000" onLoad="MM_preloadImages('../../images/register_on.gif','../../images/workshops_on.gif','../../images/sessions_on.gif','../../images/speakers_on.gif','../../images/interact_on.gif','../../images/demos_on.gif','../../images/exhibit_on.gif','../../images/events_on.gif','../../images/best_on.gif','../../images/dates_on.gif','../../images/boston_on.gif','../../images/sponsors_on.gif')">
+<table width="600" border="0" cellspacing="2" cellpadding="5">
+  <tr> 
+    <td width="145" align="LEFT" valign="TOP"> 
+      <p><a href="../../index.html"><img src="../../images/mw.gif" width="112" height="155" border="0" alt="/mw/"></a></p>
+      <p> <a href="../../register/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('register','','../../images/register_on.gif',1)"><img name="register" border="0" src="../../images/register_off.gif" width="114" height="18" alt="Register"></a><a href="../../workshops/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('workshops','','../../images/workshops_on.gif',1)"><img name="workshops" border="0" src="../../images/workshops_off.gif" width="114" height="18" alt="Workshops"></a><a href="../../sessions/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sessions','','../../images/sessions_on.gif',1)"><img name="sessions" border="0" src="../../images/sessions_off.gif" width="114" height="18" alt="Sessions"></a><a href="../../speakers/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('speakers','','../../images/speakers_on.gif',1)"><img name="speakers" border="0" src="../../images/speakers_off.gif" width="114" height="18" alt="Speakers"></a><a href="../../interact/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('interactions','','../../images/interact_on.gif',1)"><img name="interactions" border="0" src="../../images/interact_off.gif" width="114" height="18" alt="Interactions"></a><a href="../../demos/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('demonstrations','','../../images/demos_on.gif',1)"><img name="demonstrations" border="0" src="../../images/demos_off.gif" width="114" height="18" alt="Demonstrations"></a><a href="../../exhibit/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('exhibits','','../../images/exhibit_on.gif',1)"><img name="exhibits" border="0" src="../../images/exhibit_off.gif" width="114" height="18" alt="Exhibits"></a><a href="../../events/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('events','','../../images/events_on.gif',1)"><img name="events" border="0" src="../../images/events_off.gif" width="114" height="18" alt="Events"></a><a href="../../best/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('best','','../../images/best_on.gif',1)"><img name="best" border="0" src="../../images/best_off.gif" width="114" height="18" alt="Best of the Web"></a><a href="../../dates/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dates','','../../images/dates_on.gif',1)"><img name="dates" border="0" src="../../images/dates_off.gif" width="114" height="18" alt="Key Dates"></a><a href="../../boston/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('boston','','../../images/boston_on.gif',1)"><img name="boston" border="0" src="../../images/boston_off.gif" width="114" height="18" alt="Boston"></a><a href="../../sponsor/index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sponsors','','../../images/sponsors_on.gif',1)"><img name="sponsors" border="0" src="../../images/sponsors_off.gif" width="114" height="18" alt="Sponsors"></a><br>
+        <br>
+        <a href="../http://www.archimuse.com/" target="_top"><img src="../../images/nav_ami.gif" width="135" height="25" border="0" alt="A&amp;MI home"></a> 
+        <br>
+        <span class="small">Archives &amp; Museum Informatics<br>
+        158 Lee Avenue<br>
+        Toronto, Ontario<br>
+        M4E 2P3 Canada</span></p>
+      <p class="small">info @ archimuse.com<br>
+        <a href="../http://www.archimuse.com/" style="text-decoration: underline">www.archimuse.com</a></p>
+      <table width="74">
+        <tr> 
+          <td> <a href="../http://search.museumsandtheweb.com/search" target="_top"> <img src="../../images/search.gif" width="24" height="25" alt="Search" border="0" name="Search"></a> 
+          </td>
+          <td valign="MIDDLE"> <a href="../http://search.museumsandtheweb.com/search" style="text-decoration: underline"> 
+            <span class="verysmall">Search<br></span></a> </td>
+        </tr>
+      </table>
+      <p><font face="Arial, Helvetica, sans-serif" class="verysmall"><span class="small">Join 
+        our <a href="../http://search.museumsandtheweb.com/mailinglist/" style="text-decoration: underline"> 
+        Mailing List</a>. <br>
+        <a href="../http://search.museumsandtheweb.com/terms-of-use-privacy/" style="text-decoration: underline"> 
+        Privacy</a>.</span></font> </p>
+       <p><font SIZE='-2' class='verysmall'>published: April, 2002 </font>
+        <!--
+
+document.write("<FONT SIZE='-2' class='verysmall'>"+"analytics scripts updated:&nbsp;"+document.lastModified);
+
+// -->
+      </p>
+   <p><font face="Arial, Helvetica, sans-serif" class="small">© Archives & Museum Informatics, 2002.</font><br>
+  <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Att
+   ribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>      </p>
+    </td>
+    <td width="455" align="LEFT" valign="TOP" class="normal">
+      <p><a href="../../speakers/index.html"><img src="../../images/papers.gif" width="390" height="55" border="0" alt="MW2002: Papers"></a></p>
+     <!-- #BeginEditable "Body of Page" --> 
+
+      <div class=Section1> 
+
+        <p class=Author><span class="PaperTitle">Now That We&#146;ve Found the 
+
+          &#145;Hidden Web,&#146;  What Can We Do With It?</span><br>
+
+        </p>
+
+        <p class=Author>The Illinois Open Archives Initiative Metadata Harvesting 
+
+          Experience, Timothy W. Cole, Joanne Kaczmarek, Paul F. Marty, Christopher 
+
+          J. Prom, Beth Sandore, and Sarah Shreeves, University of Illinois at 
+
+          Urbana-Champaign, USA</p>
+
+        <p class=AbstractTitle>Abstract</p>
+
+        <p class=AbstractText>The Open Archives Initiative (OAI) Protocol for 
+
+          Metadata Harvesting (PMH) is designed to facilitate discovery of the 
+
+          &#147;hidden web&#148; of scholarly information such as that contained 
+
+          in databases, finding aids, and XML documents.  OAI-PMH supports standardized 
+
+          exchange of metadata describing items in disparate collections such 
+
+          as those held by museums and libraries.  This paper describes recent 
+
+          work done by the University of Illinois Library, recipient of one of 
+
+          seven OAI-related grants from the Andrew W. Mellon Foundation.  An overview 
+
+          is given of the process used to export metadata records describing holdings 
+
+          of the Spurlock Museum at the University of Illinois.  These metadata 
+
+          records were initially created to help track artifacts as they were 
+
+          procured, stored, and displayed and now are used also to support end-user 
+
+          searching via the Spurlock Museum Website.  Spurlock metadata records 
+
+          were mapped to Dublin Core (DC) and then harvested into the Illinois 
+
+          project&#146;s metadata repository.  The details of the processes used 
+
+          to transform the Spurlock records into OAI compliant metadata and the 
+
+          lessons learned during this process are illustrative of the work necessary 
+
+          to make museum collections available using OAI-PMH.  Assuming institutions 
+
+          like Spurlock make metadata available, what then can be done with these 
+
+          information resources?  We discuss the OAI-based search and discovery 
+
+          services being developed by the University of Illinois.  Issues such 
+
+          as need for normalization of metadata, importance of presenting search 
+
+          results in context, and difficulties caused by institution-to-institution 
+
+          variations in metadata authoring practices are discussed.  </p>
+
+        <p class=AbstractText>Keywords:  Open Archives Initiative (OAI), metadata 
+
+          harvesting, Dublin Core, cultural heritage, interoperability, heterogeneous 
+
+          collections</p>
+
+        <h1>Introduction</h1>
+
+        <p class=MsoBodyText>Although the Open Archives Initiative (OAI) originally 
+
+          focused on the exchange of metadata describing e-prints in the scientific 
+
+          community (Van de Sompel &amp; Lagoze, 2000), the OAI-Protocol for Metadata 
+
+          Harvesting (OAI-PMH) holds much promise for similar exchanges of metadata 
+
+          describing the collections of museums and other cultural heritage institutions 
+
+          (Perkins, 2001).  Materials in these types of collections often are 
+
+          not well indexed (or not indexed at all) by commercial Web search engines.  
+
+          Metadata describing such holdings is hidden in databases, finding aids, 
+
+          and XML documents, or otherwise is not readily available to Web search 
+
+          systems, which typically understand little more than simple HTML.  As 
+
+          a result, these materials remain hard to find and out of reach for many 
+
+          researchers.  With an interest in making these materials more visible 
+
+          to scholars and other researchers, the University of Illinois at Urbana-Champaign, 
+
+          through an Andrew W. Mellon Foundation grant, is exploring the feasibility 
+
+          of using OAI-PMH to build services to reveal and make more accessible 
+
+          collections of cultural heritage material.</p>
+
+        <p class=MsoBodyText>While a focus of the Illinois research is on building 
+
+          and testing software tools designed to harvest metadata provided by 
+
+          OAI-compliant metadata providers, we also are exploring what can be 
+
+          done with OAI-harvested metadata.  What is the fidelity and usefulness 
+
+          of the indexes and search services that can be built atop a repository 
+
+          of metadata harvested using the OAI-PMH?  The utility of such a metadata 
+
+          repository will depend on many factors, including the development of 
+
+          more uniform metadata authoring practices across various communities 
+
+          of metadata providers.  Metadata is currently used primarily for a variety 
+
+          of local purposes, and the schemas to which collections conform have 
+
+          been adapted and tailored to meet local needs.  Less attention has been 
+
+          paid to using metadata to support universal interoperability.  With 
+
+          the advent of OAI and similar protocols, mapping local schemas to more 
+
+          universally standard schemas for the support of interoperability is 
+
+          gaining ground.</p>
+
+        <p class=MsoBodyText>Even assuming broader and more consistent application 
+
+          of metadata schemas designed to support interoperability, there remains 
+
+          considerable work to be done in learning how best to utilize aggregations 
+
+          of metadata describing heterogeneous information resources.  There is 
+
+          a need to normalize metadata so as to enable more consistent retrieval 
+
+          of results from cross-collection searches.  Challenges also exist for 
+
+          presenting search results in ways that provide appropriate contextual 
+
+          information for the records retrieved.  We will discuss more detailed 
+
+          examples of these and other issues throughout the paper.  We will outline 
+
+          our efforts to overcome these issues in building a useful cross-collection 
+
+          repository of cultural heritage materials.  We will also discuss our 
+
+          work in progress, our plans for future development, and our reasons 
+
+          for believing that the OAI protocol has great potential for increasing 
+
+          access to and exposure of hidden resources via the Web.&nbsp; </p>
+
+        <h1>Illinois Project Harvest Experience To Date</h1>
+
+        <p class=MsoBodyText>As of February, 2002, the Illinois OAI-PMH project 
+
+          has harvested metadata from twenty-five different institutions or consortiums.  
+
+          The resources described range from museum artifacts such as pottery 
+
+          and clothing, to archival manuscript and personal paper collections, 
+
+          to digitized photographs and monographs.  The sets of harvested metadata 
+
+          range in size from the largest at 900,000 records to the smallest at 
+
+          23 records.  Some sites include metadata not relevant to cultural heritage 
+
+          mixed with more appropriate metadata.  Our OAI Harvester software excluded 
+
+          such non-relevant metadata from our indices.  In total, we have inspected 
+
+          over two million individual records, resulting in an index of approximately 
+
+          770,800 records relevant to the subject domain of interest.  The institutions 
+
+          providing metadata are diverse, including academic libraries, museums, 
+
+          historical societies, public libraries, the Library of Congress, and 
+
+          special consortia such as the Colorado Digitization Project and the 
+
+          Alliance and Lincoln Trail Library systems in Illinois.  Eleven contributing 
+
+          institutions are registered OAI metadata providers &lt;<a
+
+href="../http://www.openarchives.org/Register/BrowseSites.pl" target="_blank">http://www.openarchives.org/Register/BrowseSites.pl</a> 
+
+          <a
+
+name="_Hlt334958"></a> &gt;.  Fourteen institutions have provided the Illinois 
+
+          OAI-PMH project team with snapshots of relevant metadata, in a few cases 
+
+          providing an entire database, which has then been made available from 
+
+          Illinois servers in a manner compliant with OAI-PMH. </p>
+
+        <p class=MsoBodyText>While all of the metadata harvested from the registered 
+
+          OAI metadata provider sites was in the required Simple Dublin Core format 
+
+          (DC), metadata from the fourteen unregistered sites were given to the 
+
+          project in a variety of formats.  These included finding aids formatted 
+
+          in encoded archival description (EAD), MARC format metadata describing 
+
+          bibliographic information, and local metadata schemas stored in HTML 
+
+          files, XML files, or proprietary database structures.  We subsequently 
+
+          mapped these records into DC, prior to making them available in accord 
+
+          with the OAI-PMH.</p>
+
+        <h1>Cross-Collection Repository Issues</h1>
+
+        <p class=MsoBodyText>To enhance cross-collection searching, local metadata 
+
+          schemas need to be mapped to standard schemas.  Even with greater adoption 
+
+          of standard metadata schemas like DC, there remain wide variations in 
+
+          the use of authoring conventions and the depth of descriptive information 
+
+          included when creating metadata to describe cultural heritage collections.</p>
+
+        <h2>OAI-PMH Basics</h2>
+
+        <p class=MsoBodyText>The Open Archives Initiative Protocol for Metadata 
+
+          Harvesting (OAI-PMH) is a new and still evolving protocol designed to 
+
+          allow institutions to share metadata easily.  It is hoped that the standard 
+
+          can help increase the discoverability of resources by scholarly researchers.  
+
+          The Protocol underwent one minor revision during its first full year 
+
+          of experimental implementation.  Version 2.0 is scheduled for release 
+
+          in May 2002.  The fundamental pieces of the protocol are its adherence 
+
+          to well-formed XML, its use of the HTTP standards for data transmission, 
+
+          and its requirement that metadata records shared via the OAI-PMH be 
+
+          made available in the DC metadata schema (optionally records may be 
+
+          made available in additional metadata schemas as well) (Lagoze and Van 
+
+          de Sompel, 2001).</p>
+
+        <p class=MsoNormal>One of the common challenges in setting up an OAI-PMH 
+
+          metadata provider service is ensuring that the metadata to be exported 
+
+          is mapped properly into DC.  There are fifteen DC elements (version 
+
+          1.1): Title, Creator, Subject, Description, Publisher, Contributor, 
+
+          Date, Type, Format, Identifier, Source, Language, Relation, Coverage, 
+
+          and Rights.  Definitions and recommended usage of these elements can 
+
+          be found at the Dublin Core Metadata Initiative Website &lt;<a
+
+href="../http://www.dublincore.org/" target="_blank"></a><a href="../http://www.dublincore.org/" target="_blank">http://www.dublincore.org</a>&gt;.  
+
+          Any or all of these elements may be used, and all are repeatable.  Because 
+
+          much of the existing metadata about museum and special collections was 
+
+          developed with limited resources, using local schemas and with local 
+
+          needs in mind, the process of mapping to DC can be time and resource 
+
+          consuming and potentially frustrating.  There is, however, a growing 
+
+          community of DC users and freely available tools to assist with this 
+
+          process.<i></i></p>
+
+        <h2>Metadata Authoring Practices</h2>
+
+        <p class=MsoNormal>Harvesting done so far shows that metadata authoring 
+
+          practices differ both in the selection of DC elements used and the depth 
+
+          of information provided even within specific communities.  As previously 
+
+          noted, DC elements are both optional and repeatable.  These allow a 
+
+          significant degree of variation in the interpretation of which elements 
+
+          to use and how to use them when metadata are created in DC and when  
+
+          mapped to DC.  We examined records from the Library of Congress American 
+
+          Memory Project, the American Museum of Natural History, the CIMI Demonstration 
+
+          Repository, and the Spurlock Museum to compare the use of DC elements 
+
+          (See Table 1).  Within each set of sample records, we calculated the 
+
+          percent of records that contain each of the DC elements and the average 
+
+          number of times an element is used in records that contain it.  The 
+
+          usage variations are due in part to the intrinsic differences in the 
+
+          collections described by the metadata.  However, some variations are 
+
+          clearly due to different decisions made by each institution when determining 
+
+          how to map their metadata into DC.  These variations pose a challenge 
+
+          when attempting to build cross-collection search services and determining 
+
+          what depth of detail should be shown in record display.  The variations 
+
+          can also influence how a search engine&#146;s ranking algorithm orders 
+
+          the result set. </p>
+
+        <p class=MsoCaption align="left"
+
+  ><a name="table1"></a><a href="coletable1.html"><img src="cole.tab1.jpg" width="400" height="298" border="0" alt="Dublin Core elements used and number of times repeated"></a><br>
+
+          Table 1 - Dublin Core elements used and number of times repeated<br>
+
+          (<a href="coletable1.html">detailed image</a>)<br>
+
+        </p>
+
+        <h2><span>Spurlock Museum Metadata Mapping</span></h2>
+
+        <p><span class="MsoBodyText"> Museums began to use personal computers 
+
+          for tracking information about their collections using a variety of 
+
+          proprietary databases. The use of proprietary software not specifically 
+
+          designed with the museum community in mind can lead to inconsistencies 
+
+          in the way collections are catalogued and tracked. The descriptive elements 
+
+          within a locally created metadata format and the degree of completeness 
+
+          when classifying and cataloging the items can vary widely from one organization 
+
+          to another. This may have the effect of diluting the potential for discoverability 
+
+          as searching aggregated repositories requires some degree of predictable 
+
+          structure and normalization of metadata terms or concepts. At the same 
+
+          time, one should not overlook the value of descriptive, locally created 
+
+          metadata applied to artifacts by professionals familiar with the collection 
+
+          and the museum. This is particularly valuable for collections used primarily 
+
+          by a local community of users. At the University of Illinois Spurlock 
+
+          Museum, FileMakerPro software is used to track the procurement, storage, 
+
+          stage of processing, and display of artifacts. It is also used to maintain 
+
+          descriptive information about the materials. The FileMakerPro database 
+
+          interacts with a Web server to provide public access to a portion of 
+
+          the collection &lt;<a href="../http://www.spurlock.uiuc.edu/" target="_blank">http://www.spurlock.uiuc.edu/</a>&gt;. 
+
+          This database provides direct online access to 45,000 of over 210,000 
+
+          records describing cultural heritage and natural science artifacts. 
+
+          The Illinois OAI-PMH team was provided with metadata for all 210,000 
+
+          records.</span></p>
+
+        <p><span class="MsoBodyText"><br>
+
+          As a first step to making these metadata records available via OAI, 
+
+          Spurlock's metadata were extracted from the FileMakerPro database using 
+
+          a simple extraction script. It was necessary to map the locally created 
+
+          and customized metadata format to a schema more closely related to DC. 
+
+          To preserve richness of the local metadata schema, the Spurlock metadata 
+
+          had to be mapped first to Qualified Dublin Core (DCQ) and then to simple 
+
+          DC (Dublin Core Qualifiers, 2000).</span><br>
+
+        </p>
+
+        <p class=MsoBodyText>As a first step to making these metadata records 
+
+          available via OAI, Spurlock&#146;s metadata were extracted from the 
+
+          FileMakerPro database using a simple extraction script.  It was necessary 
+
+          to map the locally created and customized metadata format to a schema 
+
+          more closely related to DC.  To preserve richness of the local metadata 
+
+          schema, the Spurlock metadata had to be mapped first to Qualified Dublin 
+
+          Core (DCQ) and then to simple DC (Dublin Core Qualifiers, 2000).</p>
+
+        <p class=MsoBodyText>The decisions made about mapping the metadata were 
+
+          more time consuming than the time spent writing the scripts and manipulating 
+
+          the data.  Here is an example of some of the decisions that were made 
+
+          for the cultural materials provided by Spurlock:</p>
+
+      </div>
+
+      <ul>
+
+        <li class="normal"><span class="normal">Subject 
+
+          <div class=Section1>One instance of the DC Subject element was included 
+
+            in each record.  The decision was made to concatenate three fields 
+
+            from the original metadata records that could be considered equivalent 
+
+            to DC Subject.  Colons were used to distinguish each of the three 
+
+            original strings that were concatenated to create the single DC Subject 
+
+            element.  If there were not three values to concatenate, then the 
+
+            DC Subject filed would have two colons next to each other or a lone 
+
+            colon at the beginning or end of the element.</div>
+
+        </span></li>
+
+        <li class="normal"><span class="normal">Date 
+
+          <div class=Section1>The Date element was qualified as DCQ date.created.</div>
+
+        </span></li>
+
+        <li class="normal"><span class="normal"> Coverage<br>
+
+          The Coverage element was qualified by appending Spurlock metadata field 
+
+          names to the DC element as DCQ coverage.spatial, coverage.temporal, 
+
+          or coverage.cultural.</span></li>
+
+        <li class="normal"><span class="normal">Description </span></li>
+
+        <li class="normal"><span class="normal"> 
+
+          <div class=Section1>Key words (Materials, Manufactural Process, Munsell 
+
+            Color ID) were added to the Description field values in the original 
+
+            metadata to clarify what was meant by the content of the Description 
+
+            element.</div>
+
+        </span></li>
+
+      </ul>
+
+      <div class=Section1> 
+
+        <p class=MsoBodyText>Table 2 below gives the complete list of mappings 
+
+          from local Spurlock-specific metadata schema to DC metadata schema used 
+
+          to export the metadata via the OAI- PMH.  In addition to the mapping 
+
+          given below, 3 fixed DC Type values (&#147;cultural,&#148; &#147;physical 
+
+          object,&#148; and &#147;original&#148;) were included in each Spurlock 
+
+          metadata record exported via OAI.  Figure 1 shows how a typical Spurlock 
+
+          metadata record looks when retrieved by an end-user using the Spurlock 
+
+          Museum website.  Figure 2 shows this same metadata record exported via 
+
+          OAI.</p>
+
+        <p class=MsoBodyText align="center"><img src="cole.tab2.jpg" width="400" height="388"><br>
+
+          <span class="MsoCaption">Table 2 - Spurlock cultural material metadate 
+
+          fields mapped to Dublin Core</span> </p>
+
+        <p class=MsoCaption><a name="fig1"></a><a href="colefig1.html"><img src="cole.fig1.jpg" width="400" height="558" border="0" alt="Record shown in Spurlock database"></a><br>
+
+          Figure 1 - Record shown in Spurlock database<br>
+
+          (<a href="colefig1.html">detailed image</a>)</p>
+
+        <p class=MsoCaption><a name="fig2"></a><a href="colefig2.html"><img src="cole.Fig2.jpg" width="400" height="300" alt="Record shown as exported by OAI-PMH" border="0"></a><br>
+
+          Figure 2 - Record shown as exported by OAI-PMH<br>
+
+          (<a href="colefig2.html">detailed image</a>)</p>
+
+        <h2>Item-Level vs. Collection-Level Metadata</h2>
+
+        <p class=MsoBodyText>One of the more challenging aspects of implementing 
+
+          the OAI protocol is mapping from metadata schemas designed to describe 
+
+          collections of materials (e.g., an EAD Finding Aid record) to the DC 
+
+          metadata schema.  Finding aids may describe as many as several thousand 
+
+          items or folders in an archive while DC has typically been used to describe 
+
+          individual items (e.g., books, photographs, letters, personal journals, 
+
+          audio files).  Each EAD record includes metadata describing the entire 
+
+          collection and a &quot;description of subordinate components&quot; which 
+
+          lists the separate series, sub-series, folders and items found in the 
+
+          collection.  Some EAD files reach hundreds of kilobytes, or even several 
+
+          megabytes, in size.  The challenge is to allow the richness of such 
+
+          a large file to be exposed and made searchable alongside other records 
+
+          that describe a single item or a much smaller collection.</p>
+
+        <p class=MsoNormal>Another challenge is due to the very flexible nature 
+
+          of the EAD standard designed to encourage participation by a large number 
+
+          of institutions.  It is not surprising that the EAD records analyzed 
+
+          for the Illinois OAI-PMH project reveal many differences in tag structures 
+
+          and encoding patterns between institutions.  Despite these differences, 
+
+          the records seem to have enough consistency to make a general cross 
+
+          mapping between EAD and OAI-DC possible.  Although the EAD Application 
+
+          Guidelines include two recommended mappings to DC, one for the finding 
+
+          aid itself (i.e. the electronic resource) and another for the resources 
+
+          described in the finding aid (i.e. the actual manuscripts or archives), 
+
+          neither mapping will generate records adequate for use in an OAI repository.  
+
+          While researchers are interested in discovering the existence of actual 
+
+          archives or manuscripts, metadata about the finding aid itself is also 
+
+          necessary in order to point effectively to the source records.  For 
+
+          this reason, a flexible approach in mapping an EAD finding aid into 
+
+          an OAI record is needed. </p>
+
+        <p class=MsoBodyText>We are currently testing a schema that produces many 
+
+          DC metadata records from a single EAD file.  We first produce a record 
+
+          describing the entire collection of materials in the finding aid.  This 
+
+          top-level record becomes a base record for the finding aid and must 
+
+          be as complete, accurate, and concise as possible.  The base record 
+
+          includes a link to the source EAD file as well as references to related 
+
+          parts of the collection.  These related parts are described in other 
+
+          individual records we produce for each component level found within 
+
+          the EAD file's description of subordinate components.  Although it is 
+
+          not possible to link these records to each other adequately using simple 
+
+          DC, a sophisticated use of qualified DC fields can produce linked records.  
+
+          We hope this method will provide functional and easily searchable records.</p>
+
+        <h1>Enhancing Discoverability of Resources</h1>
+
+        <p class=MsoBodyText>Metadata authoring practices as discussed above play 
+
+          important roles in determining the value of a cross-collection repository 
+
+          focusing on cultural heritage materials.  Providing context for the 
+
+          metadata, normalization techniques, and developing the search engine 
+
+          and interface also need to be examined and explored for ways to enhance 
+
+          the discoverability of the collected metadata.</p>
+
+        <h2>Providing Context for Content</h2>
+
+        <p class=MsoBodyText>One real concern related to the development of cross-collection 
+
+          repository search tools is the context of the original artifact or digital 
+
+          resource.  The value of information about the materials that may be 
+
+          found in museum collections and archives is often related to the context 
+
+          and the provenance of the object(s).  For example, a photographic slide 
+
+          depicting part of a remaining wall of a basilica dating to the 4<sup>th</sup> 
+
+          Century would have less value if it were viewed out of the context of 
+
+          the architectural structure it represents.  It is not good enough simply 
+
+          to make the slide available for viewing; it needs to be put into a proper 
+
+          context.  Ideally, the holding institution of the artifact or digital 
+
+          resource will determine the appropriate context.  We attempt to maintain 
+
+          context in our cultural heritage repository by providing external links 
+
+          back to the holding institutions.  When our repository encounters URLs 
+
+          embedded within any of the metadata fields, they are mapped to the DC 
+
+          Identifier element.  The links sometimes lead to the holding institution 
+
+          or organization&#146;s Web site, to  the digital display of the resource&#146;s 
+
+          record from the holding institution or organization&#146;s database, 
+
+          or to an actual display of the resource itself.  Given the non-persistent 
+
+          nature of many URLs, it is possible that providing access to them may 
+
+          lead to a large number of dead links over time.  With regularly scheduled 
+
+          re-harvesting of the metadata, changes to the URLs should be reflected 
+
+          in the records and therefore allow us to avoid excessive dead links. 
+
+        </p>
+
+        <p class=MsoBodyText>For an example of a repository that has made thoughtful 
+
+          consideration of these efforts, consider the metadata collection contributed 
+
+          to the Illinois OAI-PMH project by TDC, the Teaching with Digital Content 
+
+          project &lt;<a href="../http://images.library.uiuc.edu/projects/tdc/" target="_blank">http://images.library.uiuc.edu/projects/tdc/</a>&gt;.  
+
+          This project provides a searchable database of images that can be used 
+
+          by K-12 teachers to develop teaching modules that meet specific curriculum 
+
+          requirements.  Partners providing metadata for the project include museums, 
+
+          the Illinois State Library, the Chicago Public Library and others.  
+
+          All the metadata has been entered into a database in a format that meets 
+
+          the specific needs of the TDC project and does not conform to DC.  However, 
+
+          the display of the records is very clean and consistent and maps well 
+
+          into DC for the purposes of the Illinois OAI-PMH project.  With a link 
+
+          directly to the Teaching with Digital Content resource provided from 
+
+          a URL that has been mapped into the DC Identifier field, the context 
+
+          is easily maintained by providing more background information about 
+
+          the record when the user clicks on this link.</p>
+
+        <p class=MsoBodyText>We plan to explore methods for providing context 
+
+          internally within the repository as well, linking back to the owning 
+
+          institutions.  Providing easy access to related records may reveal overlooked 
+
+          information and insights.  The collocation of works by the same author 
+
+          and under the same subject headings is a given in databases using a 
+
+          standardized metadata format and data entry.  In an aggregated database, 
+
+          this collocation task is not trivial, but is potentially even more illuminating.  
+
+          The context could be thought of in different ways, such as:</p>
+
+      </div>
+
+      <ul>
+
+        <li class="normal"><span class="normal"> a specific archaeological dig;</span></li>
+
+        <li class="normal"><span class="normal"> a specific time period or era (e.g. Civil War);</span></li>
+
+        <li class="normal"><span class="normal">a single donor;</span></li>
+
+        <li class="normal"><span class="normal">a particular geographic area (e.g. South America); or</span></li>
+
+        <li class="normal"><span class="normal"> a specific genre of art or literature (e.g. Art Nouveau).</span></li>
+
+      </ul>
+
+      <div class=Section1> 
+
+        <h2>Metadata Normalization</h2>
+
+        <p class=MsoNormal>In order to provide context internally and to enhance 
+
+          discoverability of metadata records in a cross-collection repository, 
+
+          some normalization of the metadata is desirable.  We believe that normalization 
+
+          can be done on several of the DC elements, including Type, Format, Coverage, 
+
+          and Date.  We hope to provide some degree of normalization on the Subject 
+
+          element but have not yet developed our strategy for this more complex 
+
+          normalization.</p>
+
+        <p class=MsoNormal>Effective normalization requires us to:</p>
+
+      </div>
+
+      <ul>
+
+        <li class="normal"><span class="normal"> Understand how the element was interpreted by metadata providers 
+
+          and which elements in other metadata formats were mapped to the DC element; 
+
+        </span></li>
+
+        <li class="normal"><span class="normal"> Identify which &#150; if any &#150; vocabularies were used by data 
+
+          providers; </span></li>
+
+        <li class="normal"><span class="normal"> 
+
+          <div class=Section1> Determine whether there is any controlled vocabulary 
+
+            that the project team could successfully apply to all of the data 
+
+            providers, or, if not, create such a vocabulary specific to our repository;</div>
+
+        </span></li>
+
+        <li class="normal"><span class="normal">Apply our vocabulary to the metadata to augment the &#145;native&#146; 
+
+          vocabulary; </span></li>
+
+        <li class="normal"><span class="normal"> 
+
+          <div class=Section1> Build mechanisms into the search interface that 
+
+            would take advantage of the normalization; and</div>
+
+        </span></li>
+
+        <li class="normal"><span class="normal"> 
+
+          <div class=Section1> Gauge the success of the normalization for resource 
+
+            discovery. </div>
+
+        </span></li>
+
+        <li class="normal"><span class="normal"> 
+
+          <div class=Section1>These goals translate into a five-step process as 
+
+            follows.</div>
+
+        </span></li>
+
+      </ul>
+
+      <div class=Section1> 
+
+        <h2 class=MsoList3> 1. Extract and analyze the element values (content) 
+
+        </h2>
+
+        <p class=MsoNormal>We organized the element values by metadata provider.  
+
+          Each unique value was listed, along with the number of times it appeared 
+
+          within each individual metadata set.  For example, we discovered that 
+
+          only eleven of the twenty-five metadata providers used the Type element 
+
+          and that approximately 1440 different Type values appear in the entire 
+
+          metadata set.  Some providers only use one value, and others use over 
+
+          800. (See Table 3)  The number of values seems to be dependent on whether 
+
+          the institutions are using a specific or general vocabulary.  A large 
+
+          number of records in the CIMI metadata use very specific types such 
+
+          as &#147;Physical Object: TOYS.&#148;</p>
+
+        <p class=MsoNormal align="center"><img src="cole.tab3.jpg" width="400" height="327"><br>
+
+          <span class="MsoCaption">Table 3 - Number of Values and Vocabulary Used 
+
+          for Type Element</span></p>
+
+        <h2> 2. Determine how each element is interpreted and what controlled 
+
+          vocabulary, if any, is used.</h2>
+
+        <p class=MsoBodyText>We discovered that metadata providers used elements 
+
+          in a variety of ways.  For example, the DC Date element was used for 
+
+          the date the digital item was created, the date the physical item was 
+
+          created or published, and the date an item was added to a collection.  
+
+          Because OAI-PMH requires use of simple DC, the qualifiers that may have 
+
+          explained these values further were not present.  Similarly the variety 
+
+          and specificity or generality of controlled vocabularies also influenced 
+
+          the next steps in the normalization process.</p>
+
+        <h2> 3. Determine focus and vocabulary for normalization</h2>
+
+        <p class=MsoBodyText>Each DC element was examined to determine our focus 
+
+          for normalization for that particular element.  While the Date element 
+
+          suggests a need to choose between options like &#145;date created&#146; 
+
+          or &#145;date contributed&#146; and the particular format the value 
+
+          is displayed in, the Type element required us to focus on the range 
+
+          and specificity of vocabulary used.  For the Type element we determined 
+
+          resource discovery may be enhanced by adding slightly more general terms 
+
+          into the record alongside the &#145;native&#146; vocabulary (e.g.: &#145;physical 
+
+          object&#146; added to &#145;toy&#146;).  Following the guidelines from 
+
+          the DC Type Working Group, we developed our own vocabulary, pulling 
+
+          terms from existing vocabularies where applicable, that provided the 
+
+          level of specificity that would benefit our users the most (Apps, 2001).</p>
+
+        <h2> 4.&nbsp;Normalizing the data</h2>
+
+        <p class=MsoList>Once the vocabulary is developed, the values in the metadata 
+
+          are mapped to the vocabulary terms.  The actual normalization of the 
+
+          data is an automated process.  Following the mapping, values from the 
+
+          vocabulary are added to each record as additional.  After new records 
+
+          are harvested, the system compares the values of specific elements with 
+
+          the mapping already done and adds appropriate terms from our vocabulary 
+
+          where applicable.  If a term that has not already been mapped appears, 
+
+          it is flagged and looked at by human eyes.</p>
+
+        <h2>5. Providing services based on the normalization process</h2>
+
+        <p class=MsoBodyText>The last step is to provide services so that users 
+
+          can take advantage of the normalization process.  The ability to limit 
+
+          searches or sort results by type of resource or to search for specific 
+
+          date ranges or geographic areas is each made possible by the normalization 
+
+          process.</p>
+
+        <h2>End-User Search Interface Design Strategies</h2>
+
+        <p class=MsoBodyText>We began our interface design following guidelines 
+
+          for scenario-based design (Carroll, 2000).  We identified likely users 
+
+          of the system as two distinctly separate groups - scholarly researchers 
+
+          and K-12 teachers and students.  We have prioritized the scholarly researcher 
+
+          as our primary user group for the preliminary interface design phase 
+
+          of the project.  As time allows, we also intend to focus on K-12 teachers 
+
+          and students.  In both cases, the need for a simple design seems important.  
+
+          This is in line with generally accepted &#147;best practices&#148; in 
+
+          interface design and is a logical choice given the potential for complex 
+
+          and/or inconsistent record displays due to the heterogeneity of the 
+
+          materials and institutions represented in the repository.  We identified 
+
+          several types of common tasks our users might want to do with a repository 
+
+          of cultural heritage materials and sketched out scenarios that supported 
+
+          these tasks.  Based on these scenarios and working from the interface 
+
+          built into our search engine (developed by the University of Michigan&#146;s 
+
+          Digital Library Extension Service), we designed the first iteration 
+
+          of the end-user search interface following general usability heuristics 
+
+          as outlined by Nielsen (2000).  Figure 3 shows a simple, preliminary 
+
+          search interface developed as much for diagnostic purposes as for the 
+
+          end-user. </p>
+
+        <p class=MsoCaption><img src="cole.Fig3.jpg" width="400" height="210"><br>
+
+          Figure 3 - Simple search screen  &lt;<a></a><a
+
+href="../http://oai.grainger.uiuc.edu/oai/search" target="_blank">http://oai.grainger.uiuc.edu/oai/search</a>&gt;</p>
+
+        <h1>Work in Progress / Future Plans</h1>
+
+        <p class=MsoBodyText>As of February 2002, we have begun usability testing.  
+
+          The feedback provided has already highlighted obvious flaws both in 
+
+          the actual interface as well as back-end indexing methods.  We will 
+
+          continue usability testing with new iterations of the interface.  Subjects 
+
+          will include students enrolled at the University of Illinois Graduate 
+
+          School of Library and Information Science.  We will also participate 
+
+          in a survey of potential users to be distributed jointly by University 
+
+          of Illinois and the University of Michigan.  This survey is intended 
+
+          for various scholarly researchers on both campuses and will provide 
+
+          feedback to be used in the future design and enhancement of the system.  
+
+          Current plans for enhancing search functionality include adding options 
+
+          to combine and refine searches and access to stored &#147;expert searches.&#148;  
+
+          These expert searches are intended to provide examples of search strategies 
+
+          used by experts from specific user communities.  We will also include 
+
+          in our development user search features that focus on the K-12 teacher 
+
+          and student user profiles as prioritized by our original scenario-based 
+
+          design decisions.  This user group has particular needs that center 
+
+          on curriculum development and the use of on-line resources for achieving 
+
+          clearly defined, institutionally driven educational outcomes.  Under 
+
+          consideration is an enhancement option that would gather user input 
+
+          in the form of annotations or other types of notes one might be inclined 
+
+          to make about particular sets of retrieved records and add these to 
+
+          the index in a way that provides links and displays relationships between 
+
+          records that are related according to the researchers using the system.</p>
+
+        <h1>Conclusion</h1>
+
+        <p class=MsoBodyText>The Illinois OAI Metadata Harvesting Project represents 
+
+          an attempt to enable the integrated searching of diverse types of cultural 
+
+          heritage information.  In so doing, scholars may discover new links 
+
+          across materials that are physically dispersed and that may potentially 
+
+          address common themes across disciplines that have not been previously 
+
+          formally recognized.  Providing cross-collection repositories that preserve 
+
+          the context of the items represented by disparate metadata and offer 
+
+          easily navigable search interfaces of this metadata requires several 
+
+          essential components: </p>
+
+      </div>
+
+      <ul>
+
+        <li class="normal"><span class="normal">
+
+          <div class=Section1> Metadata authoring practices must be compliant 
+
+            with community accepted standard schema(s); </div>
+
+        </span></li>
+
+        <li class="normal"><span class="normal">
+
+          <div class=Section1> Techniques for displaying item-level vs. collection-level 
+
+            records need to be developed; </div>
+
+        </span></li>
+
+        <li class="normal"><span class="normal"> Normalization processes should be applied to the metadata prior to 
+
+          indexing; and </span></li>
+
+        <li class="normal"><span class="normal">&#145;Best practices&#146; for interface design should be adhered 
+
+          to for end-user search tools.</span></li>
+
+      </ul>
+
+      <div class=Section1> The value of a usable search system that represents 
+
+        texts, manuscripts, images, digital objects, and artifacts simultaneously 
+
+        is difficult to quantify at this stage of our investigation.  However, 
+
+        we believe that the exploration of techniques for providing simultaneous 
+
+        access to such a range of materials is essential if we are to assist today&#146;s 
+
+        scholars in achieving their full potential as researchers. 
+
+        <h1>Acknowledgement</h1>
+
+        <p class=AcknowedgementsText>The authors would like to acknowledge the 
+
+          generous support of the Mellon Foundation and the willingness of numerous 
+
+          institutions to provide metadata allowing us to explore the potential 
+
+          of OAI-PMH for cultural heritage materials.</p>
+
+      <h1>References</h1>
+
+        <p class=ReferencesText>Apps, Ann, editor (2001).  Guidance for Domains 
+
+          and Organizations Developing Vocabularies for Use with Dublin Core: 
+
+          Outline.  Working Draft.  28 Nov 2001.  Accessed February 4, 2002, from 
+
+          <a
+
+href="../http://epub.mimas.ac.uk/DC/typeguide.html" target="_blank">http://epub.mimas.ac.uk/DC/typeguide.html</a>. 
+
+        </p>
+
+        <p class=ReferencesText>Carroll, J.M. (2000).  Five reasons for scenario-based 
+
+          design<i>.  Interacting with Computers</i> 13: 43-60.</p>
+
+        <p class=ReferencesText>Dublin Core Metadata Initiative.  <a href="../http://www.dublincore.org/" target="_blank">http://www.dublincore.org/</a>.</p>
+
+        <p class=ReferencesText>Dublin Core Element Set, Version 1.1: Reference 
+
+          Description.  1999-07-02. <a
+
+href="../http://www.dublincore.org/documents/dces/" target="_blank">http://www.dublincore.org/documents/dces/</a>.</p>
+
+        <p class=ReferencesText>Dublin Core Qualifiers.  2000-07-11.  <a
+
+href="../http://www.dublincore.org/documents/dcmes-qualifiers/" target="_blank">http://www.dublincore.org/documents/dcmes-qualifiers/</a>.</p>
+
+        <p class=ReferencesText>Encoded Archival Document Application Guidelines 
+
+          for Version 1.0.  1999. <a
+
+href="../http://lcweb.loc.gov/ead/ag/aghome.html" target="_blank">http://lcweb.loc.gov/ead/ag/aghome.html</a>. 
+
+        </p>
+
+        <p class=ReferencesText>Lagoze, C. &amp; Van de Sompel, H. (2001).  The 
+
+          open archives initiative: building a low-barrier interoperability framework. 
+
+          <i>Proceedings of the first ACM/IEEE-CS joint conference on Digital 
+
+          libraries 2001</i>.  Retrieved February 8, 2002 from ACM Digital Library.  
+
+          <a
+
+href="../http://doi.acm.org/10.1145/379437.379449" target="_blank">http://doi.acm.org/10.1145/379437.379449</a>.</p>
+
+        <p class=ReferencesText>Nielsen, J. (2000). Designing web usability: the 
+
+          practice of simplicity.  Indianapolis, IN: New Riders Publishing.</p>
+
+        <p class=ReferencesText>Open Archives Initiative Protocol for Metadata 
+
+          Harvesting.  Version 1.1.  2001-07-02.  <a href="../http://www.openarchives.org/OAI/openarchivesprotocol.htm" target="_blank">http://www.openarchives.org/OAI/openarchivesprotocol.htm</a>.</p>
+
+        <p class=ReferencesText>Open Archives Initiative Registered Data Providers. 
+
+          <a
+
+href="../http://www.openarchives.org/Register/BrowseSites.pl" target="_blank">http://www.openarchives.org/Register/BrowseSites.pl</a></p>
+
+        <p class=ReferencesText>Spurlock Museum at the University of Illinois.  
+
+          <a href="../http://www.spurlock.uiuc.edu/" target="_blank">http://www.spurlock.uiuc.edu/</a>.</p>
+
+        <p class=ReferencesText>University of Illinois at Urbana-Champaign OAI 
+
+          Metadata Harvesting Project.  <a
+
+href="../http://oai.grainger.uiuc.edu/" target="_blank">http://oai.grainger.uiuc.edu/</a> <a
+
+name="_Hlt1547032"></a> .</p>
+
+        <p class=ReferencesText>Van de Sompel, H &amp; Lagoze, C. (2000).  The 
+
+          Santa Fe Convention of the Open Archives Initiative.  <i>D-Lib Magazine</i> 
+
+          6(2).  <a
+
+href="../http://www.dlib.org/dlib/february00/vandesompel-oai/02vandesompel-oai.html" target="_blank">http://www.dlib.org/dlib/february00/vandesompel-oai/02vandesompel-oai.html</a></p>
+
+        <h1>&nbsp;</h1>
+
+        </div>
+
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+<!--htdig_noindex-->
+
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<!--/htdig_noindex-->
+
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2002/papers/cole/cole.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:47:25 GMT -->
+</html>

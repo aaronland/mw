@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/collecting-community-digital-initiatives-for-new-zealand-museums/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:56:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Collecting community: digital initiatives for New Zealand museums | MWA2015: Museums and the Web Asia 2015</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/mw-theme/style.css" />
+<link rel="pingback" href="../../xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://mwa2015.museumsandtheweb.com/wp-content/themes/twentyeleven/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MWA2015: Museums and the Web Asia 2015 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/wp-emoji.js?ver=5.6","twemoji":"https:\/\/mwa2015.museumsandtheweb.com\/wp-includes\/js\/twemoji.js?ver=5.6"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme40df.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='../../wp-content/themes/twentyeleven/blockscb8b.css?ver=20190102' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexcaae.html?p=514' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed1551.json?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fcollecting-community-digital-initiatives-for-new-zealand-museums%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed44d3?url=https%3A%2F%2Fmwa2015.museumsandtheweb.com%2Fpaper%2Fcollecting-community-digital-initiatives-for-new-zealand-museums%2F&amp;format=xml" />
+</head>
+
+<body class="paper-template-default single single-paper postid-514 wp-embed-responsive single-author two-column right-sidebar">
+<div id="page" class="hfeed">
+
+<style type="text/css">
+branding.img { height: auto; display: block; width: 100%; }
+#image  { position:relative;z-index:10;  }
+#text   { position:absolute; z-index:100; }
+#site-description { font-weight: normal; color: #fff; margin: 0 20px 20px 0;}
+#site-title a { color: #fff; }
+#site-title { margin-right: 20px; }
+</style>
+
+<header id="branding" role="banner">
+<hgroup>
+	<div id="text">
+<h1 id="site-title"><span><a href="../../index.html" rel="home">MWA2015: Museums and the Web Asia 2015</a></span></h1>
+<h2 id="site-description">The conference of Museums and the Web in Asia | October 5-8 | Melbourne, Australia</h2>
+	</div>
+</hgroup>
+
+			
+<div id="image"><a href="../../index.html"><img src="../../wp-content/uploads/2014/10/Melbourne-MWA2015.jpg" width="1000" height="250" alt="Museums and the Web Asia 2015" /></a></div>
+			
+			
+										
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+												<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-10"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="http://www.museumsandtheweb.com/">MW Community</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="../../local-info/index.html">Local Info</a></li>
+	<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-112"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="../../terms-and-conditions/index.html">Terms and Conditions</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../guidelines-for-proposals/index.html">Guidelines for Proposals</a></li>
+	<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-16"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="../../exhibitor-rates/index.html">Exhibitor Rates</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="../../exhibition-terms/index.html">Exhibition Terms</a></li>
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="../../advertising-guildlines/index.html">Advertising Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-348"><a href="../../attending/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="../../workshop-program/index.html">Workshops</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="../../hobart-deep-dive/index.html">Hobart Deep Dive</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="../../committees/index.html">Committees</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="../../attendees/index.html">Attendees</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+<div id="primary">
+<div id="content" role="main">
+<article id="post-514" class="post-514 paper type-paper status-publish hentry">
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+</style>
+
+
+<h1 class="entry-title">Collecting community: digital initiatives for New Zealand museums</h1>
+<p><a target="_blank" href="https://www.museumsandtheweb.com/member/tamarapatten/">Tamara Patten</a>, Museum of New Zealand Te Papa Tongarewa, New Zealand</p>
+<h2>Abstract</h2>
+National Services Te Paerangi (NSTP) is New Zealand’s museum sector support team, based at the Museum of New Zealand Te Papa Tongarewa. NSTP works in partnership with museums, galleries and iwi (indigenous tribes), offering a range of practical and strategic programmes aimed at strengthening and building capacity in the museum sector.
+
+Our first digital initiative, NZMuseums, gave museums all over New Zealand the ability to have a free web presence, access to a collection management system, and the ability to display even the smallest collection online. Many of the museums NSTP works with are small, volunteer-run organisations with limited budgets, so with the launch of NZMuseums, NSTP was able to meet a number of needs identified by the sector.
+
+In an effort to promote collaboration and open data across the sector, NSTP took a further step to help grow online communities. In 2012, the online exhibition Kiwi Chicks: New Zealand Girl History/Ngā Kōhine Kiwi: He Hītori Taitamāhine o Aotearoa was developed in partnership with Girl Museum. Kiwi Chicks is a collections-driven exhibition project that explores girlhood in New Zealand during the 18th-20th centuries.
+
+Recently NSTP developed a further collaborative online exhibition project to commemorate the Great War centenary – All That Remains: WWI objects in New Zealand museum collections/He Waihotanga Iho mai i te Pakanga Tuatahi. This project broadens the scope of the original NZMuseums site by creating opportunities for participation by non-traditional museum spaces, for example, by drawing on the collections and knowledge of iwi caring for taonga (treasured things), Returned Services Associations, schools, and more.
+
+This presentation covers NSTP’s digital engagement, our successes and challenges, and how we have evolved from providing a place for those without the funds for a website to have a virtual presence, to enabling the creation of online exhibition and community projects.</p>
+<p><b>Keywords:</b> community, collaboration, digitisation, museums</p>
+<h1>Introduction</h1>
+<p>National Services Te Paerangi (NSTP) is New Zealand’s museum sector support team, based at the Museum of New Zealand Te Papa Tongarewa (Te Papa). NSTP works throughout New Zealand with associated agencies and in partnership with museums, galleries and iwi (indigenous tribes), offering a range of practical and strategic programmes aimed at ensuring the sector’s sustained vitality and success.</p>
+<p>NSTP has developed several digital initiatives for the use and benefit of the New Zealand museum sector. This paper discusses three online communities developed by NSTP and its partners, and seeks to show the ways these communities have evolved and expanded to meet the needs of museum sector users.</p>
+<h2>Background: the role and function of National Services Te Paerangi</h2>
+<p>Te Papa is New Zealand’s national museum. It is a government agency which reports to New Zealand’s Ministry for Culture and Heritage, and falls under the Museum of New Zealand Te Papa Tongarewa Act (1992). The Te Papa Act includes a clause which states that Te Papa must ‘co-operate with and assist other New Zealand museums in establishing a national service, and in providing appropriate support to other institutions and organisations holding objects or collections of national importance.’</p>
+<p>NSTP is the main avenue through which Te Papa delivers this national service. NSTP’s programmes for the museum sector include training workshops and professional development opportunities, a grants programme, access to expert advice, onsite support from regional Museum and Iwi Development Officers, and other partnerships. NSTP has a core staff of 7, with 4 based at Te Papa in Wellington, and 3 based in regional locations.</p>
+<h2>New Zealand’s museum sector</h2>
+<p>New Zealand has approximately 450 museums in a country of 4.5 million – a very high number per head of population. A recent survey has revealed that of these museums, 10% employ 6 or more paid staff (medium to large museums), 27% employ 1-5 paid staff, and another 63% employ no paid staff and are run by volunteers (Museums Aotearoa, 2013).</p>
+<p><a href="../../wp-content/uploads/2015/07/Museum-sector-chart-1.jpg"><img loading="lazy" class="alignnone size-large wp-image-503" src="../../wp-content/uploads/2015/07/Museum-sector-chart-1-1024x666.jpg" alt="Museum sector chart 1" width="584" height="380" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Museum-sector-chart-1-1024x666.jpg 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Museum-sector-chart-1-300x195.jpg 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Museum-sector-chart-1-461x300.jpg 461w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Museum-sector-chart-1.jpg 1065w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+<p>Figure 1: Make-up of the New Zealand museum sector.</p>
+<p>Small museums, with 1-5 paid staff, may have trained staff and some funding from local government bodies. They are often located in small towns or rural areas. Volunteer-run museums, the large majority of the sector, are often run by people who are dedicated to their local community and run their museums out of a sense of aroha (love and affection). These museums may have very limited monetary and personnel resources, and staff with minimal, if any, formal museum training.</p>
+<h1>Digital initiatives for New Zealand museums</h1>
+<p>During the 2000s, it became clear that the sector needed support in moving into the digital environment. Large and medium museums generally had a good web presence, but small and volunteer-run museums were at risk of being left behind as the world increasingly moved online. NSTP proposed to redevelop an existing, basic online museum database into a website that would provide better access to museum collections and allow small museums to have an online presence that may otherwise have been out of reach.</p>
+<h2>NZMuseums</h2>
+<p>The NZMuseums website, launched in 2008, was developed to meet a number of needs in the sector (<a href="http://www.nzmuseums.co.nz/">http://www.nzmuseums.co.nz</a><u>)</u>. It provided small museums and art galleries with that vital online presence – something particularly useful for museums with little or no IT infrastructure. It also provided an incentive for museums to start documenting and digitising previously uncatalogued collections.</p>
+<p><a href="../../wp-content/uploads/2015/07/NZMuseums-home.jpg"><img loading="lazy" class="alignnone wp-image-509" src="../../wp-content/uploads/2015/07/NZMuseums-home.jpg" alt="NZMuseums home" width="584" height="536" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/NZMuseums-home.jpg 1012w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/NZMuseums-home-300x275.jpg 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/NZMuseums-home-327x300.jpg 327w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+<p>Figure 2: NZMuseums homepage.</p>
+<p>NZMuseums was developed as a partnership between NSTP and Vernon Systems Ltd. NZMuseums is built on eHive, Vernon’s online collection management system (CMS), and exists as a community within eHive. Only objects marked as belonging to the NZMuseums community appear on the NZMuseums website, meaning museums have control over which of their collection items uploaded to eHive are shared publicly on NZMuseums. Museums using NZMuseums also have autonomy over the information they share about their museum on their profile. Integration with Digital New Zealand ensures greater discoverability for NZMuseums users.</p>
+<p>Costs for using NZMuseums are kept to a minimum, which is necessary given the restricted financial resources of small museums. There is no charge to have a profile on NZMuseums, and participating museums can add up to 200 collection images to eHive free of charge. There is a tiered pricing structure for more data or images (<a href="https://ehive.com/pricing">https://ehive.com/pricing</a>).</p>
+<p>As of August 2015, 407 museums have profiles on NZMuseums, and 122 of these showcase their collections on the site. Some museums choose to share only a few collection items, to allow potential visitors a snapshot of their collection. The Thames Historical Museum, for example, shares just 6 collection items on its profile. Other users have adopted eHive as their official CMS and showcase all, or nearly all, their collections. For example, Owaka Museum, in the south of New Zealand, shares more than 8000 collection items on NZMuseums, while the Portage Ceramics Trust Te Toi Uku showcases nearly 5000 objects.</p>
+<p><a href="../../wp-content/uploads/2015/07/Portage-profile.jpg"><img loading="lazy" class="alignnone wp-image-510" src="../../wp-content/uploads/2015/07/Portage-profile.jpg" alt="Portage profile" width="584" height="530" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Portage-profile.jpg 1008w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Portage-profile-300x272.jpg 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Portage-profile-331x300.jpg 331w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+<p>Figure 3: Portage Ceramics Trust Te Toi Uku profile on NZMuseums.</p>
+<h2>Kiwi Chicks: New Zealand Girl History</h2>
+<p>In 2012, eHive launched version 2.0 of their WordPress plugins and application programming interface (API) for public use, enabling users to develop a branded front end for an eHive account. At this time, NSTP was considering ways to build on the continuing growth and success of NZMuseums, to let museums do more with their online collections and to build collaboration across the sector. The launch of eHive’s WordPress plugins allowed for the development of online communities with a more directed, curated approach.</p>
+<p><em>Kiwi Chicks: New Zealand Girl History | Ngā Kōhine Kiwi: He Hitori Taitamāhine o Aotearoa </em>(<a href="https://www.girlmuseum.org/view/projects/kiwi-chicks-new-zealand-girl-history/">https://www.girlmuseum.org/view/projects/kiwi-chicks-new-zealand-girl-history/</a>) developed out of a partnership between NSTP and Girl Museum, a virtual museum dedicated to researching and exhibiting girlhood and girl culture (<a href="http://www.girlmuseum.org/">http://www.girlmuseum.org/</a>).<em> Kiwi Chicks</em> (a play on a colloquial term for a New Zealand girl and New Zealand’s most recognisable native bird) was launched in 2013. It was developed as a model for how museums could use eHive to make collaborative online exhibitions.</p>
+<p><a href="../../wp-content/uploads/2015/07/Kiwi-Chicks-home.jpg"><img loading="lazy" class="alignnone size-large wp-image-507" src="../../wp-content/uploads/2015/07/Kiwi-Chicks-home-1024x837.jpg" alt="Kiwi Chicks home" width="584" height="477" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Kiwi-Chicks-home-1024x837.jpg 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Kiwi-Chicks-home-300x245.jpg 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Kiwi-Chicks-home-367x300.jpg 367w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/Kiwi-Chicks-home.jpg 1068w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+<p>Figure 4: <em>Kiwi Chicks</em> homepage.</p>
+<p><em>Kiwi Chicks </em>is a collaborative, collections-driven, online exhibition project that explores girlhood in New Zealand in the 18<sup>th</sup> to 20<sup>th</sup> centuries. The project aims to identify objects within New Zealand museums, libraries, archives, schools, historical societies, art galleries, and families that are related to ‘girlhood’ in New Zealand. The aim of the project was to create an exhibition that informs and inspires girls with the stories, achievements and struggles of the girls of yesterday, as well as reaching a general audience. <em>Kiwi Chicks</em> provides an interesting and informative exhibition database for public and educational research. It seeks to empower New Zealand girls with knowledge of their own histories, and to encourage museums to look at their collections in a new way. Importantly, <em>Kiwi Chicks</em> provides a new incentive for museums to digitise collections to share with a wider audience.</p>
+<p><em>Kiwi Chicks </em>was built in WordPress using eHive plugins. The front end of the site is simple and straightforward, aimed to be easily navigated and understood by both visitors and participants. Participants join the community through eHive and share collection material. The site allows visitors to explore and share objects in the exhibition, find out which museum holds specific objects, and learn more through a blog series.</p>
+<p>NSTP and Girl Museum wished to ensure that there was a low barrier to entry for participating organisations. Many are familiar with the eHive community concept as prior users of NZMuseums, and are therefore already experienced with digitising and uploading appropriate collection items. For some, participating in <em>Kiwi Chicks</em> was simply a matter of sharing items already on eHive with a new eHive community, thus easily extending their online presence. For users new to NZMuseums or <em>Kiwi Chicks</em>, support is available: this is discussed further in the section on support for digital initiatives. As with NZMuseums, there is no cost to users to share up to 200 images.</p>
+<p>While NZMuseums was focused primarily on traditional collecting institutions like museums and art galleries, <em>Kiwi Chicks</em> was designed to have a broader reach. As at August 2015, several historic homes and buildings managed by Heritage New Zealand have digitised and shared collections as part of a discrete project to participate in <em>Kiwi Chicks</em>. (Heritage New Zealand Pouhere Taonga is the national historic heritage agency which works to protect heritage sites in New Zealand.)</p>
+<p>NSTP and Girl Museum also tested the possibility of opening the <em>Kiwi Chicks</em> community up to families to share collections. It was quickly discovered that this was not easily done within the eHive account framework. This issue was worked around by arranging for families to ‘loan’ their images to Girl Museum for the duration of the project. Although this idea had limitations, there was clearly potential for collaborative exhibitions to be opened up to non-traditional collecting organisations.</p>
+<h2>All That Remains: World War One Objects from New Zealand Museum Collections</h2>
+<p>For several years prior to 2014, the museum sector had been developing plans for commemoration of the centenary of World War One (2014–18). For NSTP, the development of <em>Kiwi Chicks</em> was, in part, an exploration of whether an eHive community site might be an appropriate platform for museums to participate in centenary commemorations.</p>
+<p>Te Papa developed Conflict and Identity, a multi-faceted programme of exhibitions, events, and public programmes, to acknowledge and commemorate the WWI centenary, the showpiece of which is the exhibition <em>Gallipoli: The Scale of Our War</em><em>. </em>As part of the Conflict and Identity programme, NSTP was tasked with delivering a way for the wider museum sector to participate in the centenary. Again, NSTP’s focus for this was mainly on those smaller museums that did not have the budget or personnel resources for exhibitions and public programmes around the centenary, and who therefore may have struggled to participate.</p>
+<p>With the advent of the WWI centenary, many museums were looking at WWI objects in their collections for exhibitions, research and digitisation projects. NSTP wished to provide an easy way for this growing knowledge about WWI collections to be shared across New Zealand and further afield. The outcome was the development of <em>All That Remains: WWI objects from New Zealand museum collections | He Waihotanga Iho mai i te Pakanga Tuatahi</em><em> (</em><a href="http://www.allthatremains.net.nz/">http://www.allthatremains.net.nz</a><u>)</u><em>.</em> <em>All That Remains</em> was launched in June 2014.</p>
+<p><a href="../../wp-content/uploads/2015/07/atr-home.jpg"><img loading="lazy" class="alignnone size-large wp-image-508" src="../../wp-content/uploads/2015/07/atr-home-1024x759.jpg" alt="atr home" width="584" height="433" srcset="https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/atr-home-1024x759.jpg 1024w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/atr-home-300x222.jpg 300w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/atr-home-405x300.jpg 405w, https://mwa2015.museumsandtheweb.com/wp-content/uploads/2015/07/atr-home.jpg 1177w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+<p>Figure 5:<em> All That Remains </em>homepage.</p>
+<p><em>All That Remains </em>is a shared, community exhibition website in the style of <em>Kiwi Chicks</em>. It forms a key part of Te Papa’s Conflict and Identity programme and is intended to coincide with and complement WW100 (New Zealand’s official WWI centenary programme) commemorations from 2014–18. <em>All That Remains</em> explores WWI-related objects held in New Zealand museums, from both overseas and the home front. It allows museums to participate in centenary commemorations easily and at minimal or no cost.</p>
+<p>Like <em>Kiwi Chicks</em>,<em> All That Remains </em>is a simple, easily navigated WordPress site that employs eHive plugins. As with NZMuseums and <em>Kiwi Chicks</em>, user organisations can engage with the site in the way and at the level they choose. Users who prefer not to share collections can still participate by sharing research, WWI stories, and exhibition or event information through the <em>All That Remains</em> blog. Participating organisations are profiled on the site, and NSTP promotes the website, collections, and participating museums at every opportunity.</p>
+<p>The goals of the <em>All That Remains</em> project were to:</p>
+<ul>
+<li>provide a central digital repository for WWI objects across New Zealand collections</li>
+<li>provide a central place for locating information about WWI collection items across NZ collections</li>
+<li>create a community online of museums, archives, historians, academics, teachers, students (secondary &amp; tertiary), community groups, and historical societies working together</li>
+<li>provide a public research and educational database</li>
+<li>enable New Zealand’s museums to participate in WWI commemorations through an easily accessible online exhibition</li>
+<li>provide motivation to digitise objects and share them with others</li>
+<li>provide a platform for partnerships between Returned Services Associations (RSAs) and museums to support care of WWI collections in communities.</li>
+</ul>
+<p>Again, this project provided an incentive for museums to digitise collections, as well as a place to showcase the results.</p>
+<p>The <em>All That Remains</em> project seeks to create opportunities for participation by non-traditional museum spaces, for example, by drawing on the collections and knowledge of iwi caring for taonga (treasured items), RSAs, and schools. NSTP is currently in the early stages of the <em>All That Remains</em> Hero Projects programme. This programme seeks to partner RSAs with local museums, to support RSAs to digitise their WWI collections and upload them to the digital archive on <em>All That Remains</em>. NSTP will provide support, advice, and potentially a modest grant to participants in the programme to put towards collection storage and digitisation.</p>
+<p>The purpose of the Hero Projects programme is to establish ongoing relationships between museums and their local RSAs, thereby building supportive relationships between key community organisations who also share similar collections. The programme will also make further collections accessible to a new online audience, and continue to build up New Zealand’s distributed WWI collection. Mosgiel Memorial RSA will be the first RSA to participate in <em>All That Remains</em>, and is currently working on a digitisation project with guidance from a museum professional. It is anticipated that they will have items ready to share on the site later in 2015.</p>
+<h2>How are these digital initiatives supported?</h2>
+<p>NSTP has a responsibility to support the museums and galleries that participate in its digital initiatives. Since the launch of NZMuseums in 2008, NSTP has delivered several programmes and services that directly or indirectly support users of NZMuseums, <em>Kiwi Chicks</em> and <em>All That Remains</em>:</p>
+<ul>
+<li>digitisation/digital photography workshops</li>
+<li>collection documentation workshops</li>
+<li>interpretation workshops (with a particular focus on developing good narrative for collections shared online)</li>
+<li>training in the use of eHive and other CMSs</li>
+<li>support for eHive licencing fees via a grants programme</li>
+<li>online and hardcopy resources on photographing and digitising collections</li>
+<li>a freephone helpline service enabling access to support</li>
+<li>Museum Development Officer service – (onsite, face-to-face support and advice from NSTP staff)</li>
+<li>promotion of websites and website users by NSTP.</li>
+</ul>
+<p>Website users can also access support from eHive via a forum and the eHive wiki.</p>
+<h1>Successes and challenges</h1>
+<p>The greatest challenge with continuing development of NSTP’s digital initiatives is financial resourcing. NSTP has a limited budget for its various services and programmes, meaning that funding for ongoing website development and promotion is restricted. Budget limitations have meant that NZMuseums has not received significant upgrades and modifications since 2009. The website is not responsive in its current form and, with the increase of users on mobile devices, this needs to be addressed with some urgency. A technology upgrade and usability enhancements are also planned.</p>
+<p>In spite of this, NZMuseums continues to grow. New users are added regularly. NZMuseums attracts high levels of traffic despite its need for upgrading. It has also become a useful resource for tourists who are able to discover museums in their areas of travel.</p>
+<p>With <em>Kiwi Chicks</em> as a successful model, <em>All That Remains</em> entered its planning stage with a modest but workable budget. Following financial re-phasing across Te Papa, the project ultimately proceeded with a greatly reduced budget – just enough for purchase of a domain name and website hosting. As a result, the original plans for the website were scaled back, and development was divided into two stages. Stage one was to develop a basic concept website using existing eHive WordPress plugins. Once established, the project would move into stage two, where further development options and possible funding streams would be investigated for enhancements to this project. The current site is still at stage one, and NSTP is now working towards stage two. Feedback from users has been positive, and despite limited promotion the site has attracted some media attention as a good example of a sector-wide collaborative project.</p>
+<p>A big challenge that faces <em>Kiwi Chicks </em>and<em> All That Remains</em> is ‘buy in’ from more institutions. Smaller, often more nimble museums saw a unique and interesting opportunity to share objects from their collection that would likely never be exhibited. Larger institutions did not as easily embrace this alternative project, and existing business plans made it difficult for them to make time or resources available for it, despite enthusiasm from collections and curatorial staff.</p>
+<h2>Future development</h2>
+<p>As at August 2015, further development and site upgrades for NZMuseums are top priority. NSTP is currently working to secure funding for this work. NSTP is also investigating the feasibility of introducing an ecommerce function to NZMuseums.</p>
+<p>NSTP will continue to build participation in all three websites among museums, galleries, and other collecting organisations, and to provide support for organisations to digitise their collections. Once the <em>All That Remains</em> Hero Projects programme is embedded, NSTP will focus on supporting digitisation of WWI collections held by iwi, hapū (subtribes) and whānau (extended families) and on marae (communal meeting places).</p>
+<p>NSTP is also working towards creating better links between <em>All That Remains</em> and other WWI sites. Later in 2015 NSTP will join in a community engagement initiative based around Auckland War Memorial Museum’s new Online Cenotaph (a database recording all New Zealand’s servicemen and women) which will allow for national promotion of <em>All That Remains</em>. There is also scope to connect objects on <em>All That Remains</em> with the related service personnel that feature on Online Cenotaph.</p>
+<h1>Conclusion</h1>
+<p>NSTP’s digital initiatives for the museum sector seek to increase the discoverability of, and knowledge about, New Zealand’s distributed national collection, and the organisations that care for it. Digital initiatives such as NZMuseums, <em>Kiwi Chicks</em> and <em>All That Remains</em> represent an evolution from providing small and volunteer-run museums with an online presence, to enabling the creation of online exhibitions and community projects. These initiatives form part of ongoing work to foster continued development in, and access to, the digital arena for New Zealand museums.</p>
+<h1>References</h1>
+<p><em>All That Remains: WWI objects in New Zealand museum collections | He Waihotanga Iho mai i te Pakanga Tuatahi</em>. Consulted August 4, 2015. <a href="http://www.allthatremains.net.nz/">http://www.allthatremains.net.nz</a></p>
+<p>Auckland War Memorial Museum, Online Cenotaph He Toa Taumata Rau. Consulted August 13, 2015. <a href="http://www.aucklandmuseum.com/war-memorial/online-cenotaph">http://www.aucklandmuseum.com/war-memorial/online-cenotaph</a></p>
+<p>eHive. Consulted August 9, 2015. <a href="https://ehive.com/">https://ehive.com/</a></p>
+<p>eHive wiki. Consulted August 11, 2015. <a href="http://en.wiki.ehive.com/wiki/Main_Page">http://en.wiki.ehive.com/wiki/Main_Page</a></p>
+<p>Girl Museum. Consulted August 9, 2015. <a href="http://www.girlmuseum.org/">http://www.girlmuseum.org/</a></p>
+<p><em>Kiwi Chicks: New Zealand Girl History |Ngā Kōhine Kiwi: He Hitori Taitamāhine o Aotearoa.</em> Consulted August 4, 2015. <a href="https://www.girlmuseum.org/view/projects/kiwi-chicks-new-zealand-girl-history/">http://https://www.girlmuseum.org/view/projects/kiwi-chicks-new-zealand-girl-history/</a></p>
+<p>Museum of New Zealand Te Papa Tongarewa Act (1992). Amended December 1, 2014. Consulted August 4, 2015. <a href="http://www.legislation.govt.nz/act/public/1992/0019/latest/DLM260204.html">http://www.legislation.govt.nz/act/public/1992/0019/latest/DLM260204.html</a></p>
+<p>Museums Aotearoa (2013). <em>Sector Survey Report 2012.</em> Consulted August 11, 2015. <a href="http://www.museumsaotearoa.org.nz/sites/default/files/ma_sector_survey_report_2012_final_221013web.pdf">http://www.museumsaotearoa.org.nz/sites/default/files/ma_sector_survey_report_2012_final_221013web.pdf</a></p>
+<p>NZMuseums<em>.</em> Consulted August 4, 2015. <a href="http://www.nzmuseums.co.nz/">http://www.nzmuseums.co.nz</a></p>
+<p>Rowe, P. and W. Barnicoat, NZMuseums: Showcasing the Collections of All New Zealand Museums. In J. Trant and D. Bearman (eds). <em>Museums and the Web 2009: Proceedings</em>. Toronto: Archives &amp; Museum Informatics. Published March 31, 2009. Consulted August 4, 2015. <a href="http://www.archimuse.com/mw2009/papers/rowe/rowe.html">http://www.archimuse.com/mw2009/papers/rowe/rowe.html</a></p>
+<p>Taylor, J. (2015). <em>Report on the New Zealand Museums Standards Scheme.</em> Museum of New Zealand Te Papa Tongarewa.</p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+. "Collecting community: digital initiatives for New Zealand museums." <i>MWA2015: Museums and the Web Asia 2015</i>. Published August 14, 2015. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mwa2015.museumsandtheweb.com/paper/collecting-community-digital-initiatives-for-new-zealand-museums/<br /><br /><hr>
+	<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="https://mwa2015.museumsandtheweb.com/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><hr>
+<h3 class="widget-title">Global sponsor</h3>
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a>
+
+<h3 class="widget-title">Platinum sponsor</h3>
+<a title="MailChimp" href="http://nonprofits.mailchimp.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a>
+
+<h3 class="widget-title">Gold sponsor</h3>
+<a title="AARNet" href="http://www.aarnet.edu.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/AARNet-250-75.jpg" alt="AARNet" /></a>
+
+<h3 class="widget-title">Silver sponsors</h3>
+<a title="CV" href="http://www.creative.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CV-250-75.jpg" alt="CV" /></a>
+<a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a>
+<h3 class="widget-title">Bronze sponsors</h3>
+<a title="Ruckus" href="http://www.ruckuswireless.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/ruckus-250-75.jpg" alt="Ruckus" /></a>
+
+<a title="CoM" href="http://www.melbourne.vic.gov.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/CoM-250-75.jpg" alt="CoM" /></a>
+
+<a title="Lumicom" href="http://lumicom.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/lumicom-250-75.jpg" alt="CoM" /></a>
+
+<a title="Tomizone" href="http://tomizone.com/" target="_blank" rel="noopener"><img style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/tomizone-250-75.jpg" alt="Tomizone" /></a>
+
+<h3 class="widget-title">Partner</h3>
+<a title="MV" href="http://museumvictoria.com.au/" target="_blank" rel="noopener"><img style="border: 0px;" src="../../wp-content/themes/mw-theme/mv-250-100.jpg" alt="MV" /></a>
+
+<div style="text-align:right;"><a href="../../sponsorship-opportunities/index.html">become a sponsor</a></div>
+<hr></div>
+		</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="twitter-timeline" href="https://twitter.com/search?q=%40museweb+OR+%23museweb+OR+%23mwa2015" data-widget-id="519731970960400384">Tweets about "@museweb OR #museweb OR #mwa2015"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+<div id="supplementary" class="two">
+		<div id="first" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text">			<div class="textwidget">Founded by Archives & Museum Informatics<br />
+<a href="http://www.archimuse.com/">www.archimuse.com</a></div>
+		</aside>	</div><!-- #first .widget-area -->
+	
+	
+		<div id="third" class="widget-area" role="complementary">
+		<aside id="text-5" class="widget widget_text">			<div class="textwidget"><p style="text-align: right; ">
+Managed by Museums and the Web LLC<br />
+703 Dale Drive<br />
+Silver Spring MD 20910 USA<br />
+info@museumsandtheweb.com</p></div>
+		</aside>	</div><!-- #third .widget-area -->
+	</div><!-- #supplementary -->
+
+			
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script type='text/javascript' src='../../wp-includes/js/comment-reply40df.js?ver=5.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed40df.js?ver=5.6' id='wp-embed-js'></script>
+
+</body>
+
+<!-- Mirrored from mwa2015.museumsandtheweb.com/paper/collecting-community-digital-initiatives-for-new-zealand-museums/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 20:56:37 GMT -->
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/mw2007-papers.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/tecchia/tecchia.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:29:00 GMT -->
+<head>
+<!-- #BeginEditable "HeadPageTitle" -->
+<title>Archives &amp; Museum Informatics: Museums and the Web 2007: Papers: Tecchia, F., et al., Multimodal Interaction For The Web</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "metaTitle" -->
+<meta name="title" content="Archives  &amp; Museum Informatics: Museums and the Web 2007: Tecchia, F., et al., Multimodal Interaction For The Web" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Keywords" -->
+<meta name="Keywords" content="virtual environments, haptic interaction, 3D models, Web 3D, force-feedback, articles, papers, archives &amp; museum informatics, archives, museums, informatics, digital museums, digital archives, digital art, museums online, archives online, libraries online. world wide web, www, conferences, professional papers, peer-reviewed, digital libraries, online exhibits, online exhibitions, on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "Description" -->
+<meta name="Description" content="Museums and the Web 2007: the international conference for culture and heritage on-line" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "copyright" -->
+<meta name="copyright" content="Archives &amp; Museum Informatics, 2007" />
+<!-- #EndEditable -->
+<meta name="document-class" content="Published" />
+<meta name="document-rating" content="General" />
+<meta http-equiv="Content-Language" content="EN" />
+<meta name="document-rights" content="Copyrighted Work" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="../../css/mw2007.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="../../css/mw2007-noNews.css" type="text/css"  media="print, screen" />
+	<link rel="stylesheet" href="../../css/papers.css" type="text/css"  media="print, screen" />
+
+<!-- InstanceBeginEditable name="ImageRotateScript" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="PageScript" --><!-- InstanceEndEditable -->
+</head>
+<body  onload="initImgRotation()">
+	<div id="container">
+		<div id="header" onclick="location.href='../index.html';" style="cursor:pointer;">
+		</div>
+		<div id="top-nav">
+			<ul id="top-nav-list">
+				<li><a href="../../register/index.html">Register</a></li>
+				<li><a href="../../dates/index.html">Key Dates</a></li>
+				<li><a href="../../sescal/index.html">Schedule</a></li>
+				<li><a href="../../local/index.html">Local Info</a></li>
+			</ul>
+		</div>
+		<div id="header-photo">
+			<a href="../../images/credits.html">
+			<!-- InstanceBeginEditable name="header-photo" --> <img src="tecchia_1-t.jpg" alt="MW-photo" name="img1" width="229"  height="132" id="img1" /> <!-- InstanceEndEditable -->	
+			</a>
+		</div>
+		<div id="date">
+			April 11-14, 2007<br />
+			San Francisco, California
+		</div>
+		<div  id="title">
+			<h1> 
+				<!-- InstanceBeginEditable name="PageTitle" --> Multimodal Interaction For The Web<!-- InstanceEndEditable -->
+   			</h1>
+		</div>
+		<div id="main-content">
+		  <div id="callout">          </div>
+		  <div id="intro-paragraph">
+				<!-- #BeginEditable "IntroParagraph" -->     
+    <h2 class="Author">Franco Tecchia,
+        Emanuele Ruffaldi, Antonio Frisoli, Massimo Bergamasco, Scuola Superiore
+        S.Anna; Marcello Carrozzino, Institute for Advanced Studies, Italy</h2>
+    <p><a href="../http://www.pureform.org/" target="_blank" class="URL">http://www.pureform.org/</a></p>
+    <h3 class="AbstractTitle">Abstract</h3>
+    <p class="AbstractText">The
+        deployment of virtual expositions of accurately rendered, high quality
+        3D models over the Web is a common practice today in many cases of cultural
+        heritage and arts initiatives. In the specific case of virtual museums,
+        where the nature of the content opens possibilities that go beyond those
+        of a single, localised physical exhibition, the availability of Web-ready
+        content related to the project's collection of digital models becomes
+        almost mandatory. Although desirable, presenting interactive content
+        over the Web is not a simple task, and a large part of the current generation
+        of 3D-Web technology, being tailor-made mainly for graphics-only applications,
+        often imposes severe limitations on the possibilities for user interaction. </p>
+    <p class="AbstractText">As
+        a result of these technological limitations, the user expects of the
+      virtual exhibition, and very little has been explored so far about the
+      potential benefits that the sense of touch could introduce in the interaction
+      paradigm. We report here the results obtained from mixing high performance
+      3D graphics with haptic interaction in the context of several museum installations,
+        as well as presenting a new generation of Web technology that makes it
+        possible to deploy this type of content on the Web.</p>
+    <p class="keywords">Keywords:
+        virtual environments, haptic interaction, 3D models, Web 3D, force-feedback</p>
+		<!-- #EndEditable -->		  </div>
+				<!-- #BeginEditable "BodyText" -->
+
+    <h1>Introduction </h1>
+    <p>Virtual Environment (VE) technology was originally developed within the
+      field of Computer Graphics research, but today it has become a fully independent
+      research topic. VEs are computer-generated, simulated environments, with
+      which the human operator can interact through different sensory modalities.</p>
+    <p>Real-life applications for VEs emerge at an increasing pace, although
+      still in very specialised contexts. There are some fields that have shown
+      superior receptivity to VE concepts and techniques, such as the Industrial
+      and Medical sectors, as well as the Entertainment and Gaming industries,
+      but VE technologies are rapidly gaining traction in the fields of Art and
+      Cultural Heritage as well, not only for reasons relating to the conservation
+      and security of artifacts or for communication and educational purposes,
+      but also for the creation of new forms of art and new paradigms of artwork
+      creation by means of interaction.</p>
+    <p>Interacting with VEs requires setting up an interface layer between the
+      human user and the Virtual Environment.</p>
+    <p>This interface layer can be subdivided into distinct channels, and VEs
+      commonly provide feedback on the visual, acoustical, haptic and inertial
+      channels, although other senses, like the olfactory channel, are currently
+      under investigation (Chen 2006).</p>
+    <h1>The
+        Museum of the Pure Form</h1>
+    <p>One of the most recent and interesting VE applications developed for the
+      arts is the Museum of Pure Form (Bergamasco 1999), a system aiming to explore
+      new paradigms of interaction with sculptural pieces of art. </p>
+    <p>Funded by the European Commission under the 5th Framework Programme &quot;Digital
+      Heritage and Cultural Content&quot; key action area (IST 2000-29580), the
+      Museum of Pure Form (MPF) aims&nbsp; at exploring new paradigms of interaction
+      with sculptural pieces of art. In traditional museums visitors may only
+      observe the exposed statues because, for security reasons, they are not
+      allowed to touch them. On the other hand, haptic perception (Frisoli2005)
+      represents the most immediate way of interacting with sculptures, allowing
+      the observer to perceive the concept of space the artist has impressed
+      on the sculpture while shaping it. In the perception of sculptural pieces
+      of art, merely observing them by sight is a limit which prevents the observer
+      from fully appreciating the artistic value and the intrinsic beauty of
+      those art pieces. Moreover, any fruition of these artistic works is denied
+      to blind and visually impaired users. Through Virtual Reality, the Museum
+      of Pure Form offered art a way to go beyond such limits by giving the haptic
+      perception of artistic forms the same essential role it had for the artist
+      creating them.</p>
+    <p class="caption"><a name="Fig1" id="Fig1"></a><a href="tecchia-fig1.html"><img src="tecchia_1_thumb.jpg" alt="Fig 1: Examples of haptic interfaces used in the Pure Form project" width="400" height="149" border="0" /></a></p>
+    <p class="caption">Fig 1:
+        Examples of haptic interfaces used in the Pure Form project</p>
+    <p>The use of innovative technologies (Figure.1) allows users to perceive
+      suitable tactile stimuli (Frisoli 04) to be able to simulate the hand while
+      in contact with the digital copy of a real statue. In addition, the realism
+      of the virtual simulation is increased when integrated with the stereoscopic
+      visualization of digital models, giving users the real feeling of touching
+      the surface being visualized in the space beneath their own hands.</p>
+    <p>Several museums were involved in the project. The Galician Centre for
+      Contemporary Arts (CGAC) of Santiago de Compostela (Spain), the Museo dell'Opera
+      del Duomo (OPAE) in Pisa (Italy), and the National Museum (NM) of Fine
+      Arts of Stockholm (Sweden) actively participated in the project by hosting
+      and organizing public temporary exhibitions. Other associate museums have
+      contributed to enrich the digital collection of works of art, including
+      the Conservation Centre at National Museums Liverpool (UK) and the Petrie
+      Museum of Egyptian Archaeology, London (UK).</p>
+    <p>A selected set of sculptures belonging to the collections of partner museums
+      has been digitally acquired to create a database of artwork copies that
+      constitute the core of a new Web-based computer network among partner museums
+      and other European cultural institutions. The Virtual Repository of sculptures
+      includes works coming from Centro Galego de Arte Contemporanea (Santiago
+      de Compostela - Spain), Opera Primaziale of Pisa (Italy), the National
+      Museum of Fine Arts of Stockolm (Sweden) and the Petrie Museum of Egyptian
+      Archeology of London (UK). Several sculptures, belonging to different historical
+      periods, were digitized through laser scanning (Figure. 2), a procedure
+      that acquires visual data related to a huge set of points on the sculpture.</p>
+    <p class="caption"><a name="Fig2" id="Fig2"></a><a href="tecchia-fig2.html"><img src="tecchia_2_thumb.jpg" alt="Fig 2: Sculptures acquisition using 3D laser scanning" width="400" height="146" border="0" /></a></p>
+    <p class="caption">Fig 2:
+        Sculptures acquisition using 3D laser scanning</p>
+    <p>The &quot;clouds&quot; of points, deriving from the acquisition phase,
+      undergoes an elaboration process (Desbrun, 2002) (Debevec, 1998) in order
+      to obtain a graphical 3D reproduction of the real work of art, which is
+      then post-processed to produce the final polygonal mesh (Figure 1 - right).
+      The geometric complexity of the meshes is then reduced in order to make
+      the 3D model suitable for real-time haptic and graphical rendering algorithms.</p>
+    <h1>Technology
+        Demonstration</h1>
+    <p>The concepts of the Pure Form project were exposed in two ways. A temporary
+      physical installation was presented to the public at the sites of the participating
+      museums. There, users were able to interact with virtual sculptures by
+      means of large haptic interfaces and stereoscopic visualization. </p>
+    <p>Secondly, a project Web site using advanced 3D technology was created
+      (hosted at <a href="../http://%20www.pureform.org/" target="_blank">http://
+      www.pureform.org</a><em>). </em>There,
+      all of the digitized sculptures from the various museums are accessible
+      in a single, unified virtual exposition. A distinct feature of the Pure
+      Form Web site is that haptic interaction, initially possible only at the
+      physical Museums installations, has recently been added to the Web exposition
+      as well.</p>
+    <h2>Installations at the Museums</h2>
+    <p>In the case of the physical expositions, two specifically devised haptic
+      interfaces were validated during the project (Loscos 2004) and installed
+      in temporary exhibitions at the partner museums, where the visitors were
+      allowed to explore, both from a visual and haptic perspective, the digital
+      shapes while immersed in the Virtual Environment. In these museum exhibitions
+      the Virtual Environment simulation is displayed through a passive stereoscopic
+      visualization screen with back projection and circular polarization (Figure
+      3). The projection screen is fixed through a frame and the haptic interface
+      is placed in front of the screen. The complete installation is designed
+      to be used by a single user because of the haptic interaction but, due
+      to the dimensions of the screen, it is also possible for an external audience
+      wearing polarized glasses to watch the virtual tour of the museum.</p>
+    <p class="caption"><a name="Fig3" id="Fig3"></a><a href="tecchia-fig3.html"><img src="tecchia_3_thumb.jpg" alt="Fig 3: An example of Pure Form physical installation" width="400" height="150" border="0" /></a></p>
+    <p class="caption">Fig 3:
+        An example of Pure Form physical installation</p>
+    <p>The Museum of Pure Form has had a number of deployments in cultural heritage
+      institutions across Europe, and more than 1600 users have explored the
+      potential of haptic interfaces for engagement with artworks. </p>
+    <h2>The
+        Project Web Site</h2>
+    <p>The Web site of the Museum of Pure Form, together with a classical description
+      of the project, offers also an interactive modality of 3D exploration under
+      the section &quot;The Virtual Gallery&quot; (Figure 4 - left), via an ActiveX
+      Control for browsers exploiting the XVR technology (see next paragraph).
+      In this section users can access a reduced complexity version of the same
+      application hosted in museum installations, where the 3D models have a
+      slightly lower level of detail, in order to keep the data size within reasonable
+      limits to reduce bandwidth requirements. The former version of the Web
+      site narrowed the interaction to the possibility of choosing from a list
+      of icons the sculpture to be explored and allowed limited free camera movements
+      by means of mouse and keyboard. Another limitation, compared with the museum
+      installations, is the lack of stereoscopic features.</p>
+    <p class="caption"><a name="Fig4" id="Fig4"></a><a href="tecchia-fig4.html"><img src="tecchia_4_thumb.jpg" alt="Fig 4: The Pure Form Web site supports haptic interaction" width="400" height="158" border="0" /></a><a name="Fig5" id="Fig5"></a></p>
+    <p class="caption">Fig 4:
+        The Pure Form Web site supports haptic interaction</p>
+    <p>Recently the Virtual Gallery section of the Web site has been updated,
+      including the addition of advanced interaction functionality by means of
+      haptic feedback (Figure 4 - right). It has, therefore, gone from being
+      a simple demonstrator of the visual achievements of the project to becoming
+      itself an integral part of the project technology. In fact, it can be considered
+      a distributed instalation that enables users in scattered locations around
+      the world to experience the added value of such a museum, which, without
+      doubt, is the haptic exploration of digital sculptures.</p>
+    <h1>Innovative
+        3D Technology</h1>
+    <p>Both the physical installation and the Web site of the Pure Form project
+      are based on a software technology for Virtual Environments called XVR
+      (Carrozzino 2005).</p>
+    <p>Composed of a set of high performance modules, XVR is a software technology
+      for the rapid prototyping of Web-based VR applications. It integrates in
+      a single framework a flexible and powerful 3D scene-graph, support for
+      3D Audio and sound effects, user input handling, real-time physics, and
+      network communication support.</p>
+    <p class="caption"><a name="Fig5" id="Fig5"></a><a href="tecchia-fig5.html"><img src="tecchia_5_thumb.jpg" alt="Fig 5: Web3D development using the XVR technology" width="400" height="153" border="0" /></a></p>
+    <p class="caption">Fig 5:
+        Web3D development using the XVR technology</p>
+    <p>Originally created for the development of Web-enabled virtual reality
+      applications, XVR has evolved in recent years into an all-around technology
+      (Figure 5) for interactive applications. Beside Web 3D content management,
+      XVR now supports a wide range of VR devices (such as trackers, 3D mice,
+      motion capture devices, stereo projection systems and HMDs) and uses a
+      state-of-the-art graphics engine for real-time visualization of complex
+      three-dimensional models; it is perfectly adequate even for advanced off-line
+      VR installations. XVR applications are developed using a dedicated scripting
+      language whose constructs and commands are targeted to VR, and gives the
+      possibility to developers to deal with 3D animation, positional sounds
+      effect, audio and video streaming and 6DOF user interaction. Currently
+      XVR is distributed as free software. More information on this technology
+      can be found at <a href="../http://wiki.vrmedia.it/" target="_blank">http://wiki.vrmedia.it</a>.</p>
+    <h2>Run-Time
+        Execution Of XVR Contents</h2>
+    <p>In its current form XVR is an ActiveX component running on the various
+      Windows platforms, and can be embedded in several container applications,
+      including the Web browser Internet Explorer .</p>
+    <p>XVR (Figure 6) is actually divided into two main modules: the ActiveX
+      Control module (weighting about 30Kbytes), which hosts the very basic components
+      of the technology like the versioning check and the plug-in interfaces,
+      and the XVR Virtual Machine (VM) module (currently around 550Kbytes), which
+      contains the core of the technology, such as the 3D Graphics engine, the
+      Multimedia engine and all the software modules managing the other built-in
+      XVR features. </p>
+    <p class="caption"><a name="Fig6" id="Fig6"></a><a href="tecchia-fig6.html"><img src="tecchia_6_thumb.jpg" alt="Fig 6: XVR functional scheme" width="400" height="213" border="0" /></a></p>
+    <p class="caption">Fig 6:
+        XVR functional scheme</p>
+    <p>Depending on the application environment it is also possible to load additional
+      modules that offer advanced functionalities, such as the support of VR
+      devices like trackers and gloves, as we decided to keep them separated
+      so that Web applications&nbsp; (which usually do not need any of these
+      advanced features) are not afflicted by additional downloading times. The
+      XVR-VM, like many other VMs, contains a set of bytecode instructions, a
+      set of registers, a stack and an area for storing methods. The XVR Scripting
+      Language (S3D) allows specifying the behaviour of the application, providing
+      the basic language functionalities and the VR-related methods, available
+      as functions or classes. The script is then compiled in a bytecode which
+      is processed and executed by the XVR-VM.</p>
+    <p>The download mechanism initiated by accessing a Web page hosting an XVR
+      application is somewhat typical: after version checking and an optional
+      VM updating, the bytecode of&nbsp; the application is downloaded and, subsequently,
+      so is the first batch of data files related to the application, such as
+      3d models, textures, sounds etc. Immediately after this initial download,
+      all the necessary initializations are performed and the application starts
+      executing the various loops.</p>
+    <h2>Enabling
+        Haptics on the Web</h2>
+    <p>Haptic interfaces have existed for more than a decade, but only recently
+      a substantial decrease in price has allowed a strong diffusion of these
+      devices, and today advances in hardware and software technologies have
+      opened new and exciting opportunities for the creation of haptic enabled
+      multi-modal systems.</p>
+    <p>By default, XVR does not offer support for the control of haptic devices,
+      and this is introduced by means of an optional plug-in named HapticWeb(Ruffaldi2006).</p>
+    <p>In the context of XVR, HapticWeb provides the ability to program and control
+      a variety of force-feedback devices, ranging from commercial devices such
+      as the Sensable Phantom (Massie 94) to research-level devices such as the
+      GRAB interface (Avizzano 2003). </p>
+    <p>In fact, the support of multiple haptic devices is one of the fundamental
+      requirements for the spreading of a haptic application framework. HapticWeb
+      provides support for a variety of haptic devices, and identifies them using
+      a unique &lsquo;device URL&rsquo;. A device URL specifies the type of device,
+      its identification if there are many of them, and optional parameters expressed
+      using the query part of the URL. Eventually, if there is no haptic device
+      attached, a virtual interaction device can be simulated using a common
+      mouse.</p>
+    <p>The force-feedback effects that HapticWeb provides to the developer can
+      be subdivided into generic &lsquo;force fields&rsquo; and &lsquo;constraints&rsquo; control.
+      The first group includes simple effects like spring-effects, virtual plane,
+      friction or a constant force associated to a certain bounding volume.</p>
+    <p>Constraints can be described using a set of points, lines and triangles
+      that specify attraction geometry for the haptic point of contact. </p>
+    <p>The use of HapticWeb is obviously not confined to the aims of the Pure
+      Form project. Figure 7 shows Haptic Pool, a 3D Web application that lets
+      the user enjoy playing Billiards using a haptic interface. In this case,
+      the haptic device is used to impart force and direction to the ball in
+      addition to changing the player&rsquo;s point of view, using direct rendering
+      of the forces. </p>
+    <p class="caption"><a name="Fig7" id="Fig7"></a><a href="tecchia-fig7.html"><img src="tecchia_7_thumb.jpg" alt="Fig 7:&nbsp; Using HapticWeb to add force-feedback to a Web-based simulation of the pool game" width="400" height="169" border="0" /></a></p>
+    <p class="caption">Fig 7:&nbsp; Using
+        HapticWeb to add force-feedback to a Web-based simulation of the pool
+        game</p>
+    <h1>Conclusions</h1>
+    <p>This paper summarises our experience in using Virtual Reality, and notably
+      haptic interaction, in the context of the fruition of art and cultural
+      heritage. As a tangible example, we presented the Museum of Pure Form,
+      a virtual museum where users are allowed to interact with digital copies
+      of real sculptures both with the sense of sight and the sense of touch.
+      The MPF is currently hosted in permanent museum installations and also
+      in a Web installation, accessible with a common browser by means of the
+      XVR and HapticWeb technologies which allow access to haptic-enabled 3D
+      interactive content with a wide range of commercial and custom devices.
+      We believe that there is great potential for the use of haptics on the
+      Web, as it allows new interaction paradigms potentially useful for the
+      general audience and in particular for users with special needs.</p>
+    <h2>Acknowledgments</h2>
+    <p class="AcknowedgementsText">The Museum of Pure Form has been realized
+      in the context of an RTD project funded by the European Commission, under
+      the 5th Framework Programme (IST 2000-29580), involving a consortium composed
+      of PERCRO Scuola Superiore Sant'Anna (Italy), University College of London
+      (UK), Uppsala University (Sweden), 3DScanners (UK), Pont-Tech (Italy),
+      CGAC (Spain) and Opera Primaziale Pisana (Italy).</p>
+    <h1>References</h1>
+    <p class="ReferencesText">Avizzano,
+        C., T. Gutierrez, S. Casado, B. Gallagher, M. Magennis, J. Wood, K. Gladstone,
+        H. Graupp, J.A. Munoz, E.F.C. Arias, F. Slevin(2003). &ldquo;GRAB: Computer
+        graphics access for blind people through a haptic and audio virtual environment&rdquo;.
+        Proceedings of Eurohaptics, 2003.</p>
+    <p class="ReferencesText">Bergamasco,
+        M. (1999).&nbsp; &ldquo;Le Musee del Formes Pures&rdquo;. 8th IEEE International
+        Workshop on Robot and Human Interaction RO-MAN,1999.</p>
+    <p class="ReferencesText">Carrozzino,
+        M., F. Tecchia, S. Bacinelli, M. Bergamasco (2005). &ldquo;Lowering the
+        Development Time of Multimodal Interactive Application: The Real-life
+        Experience of the XVR project&rdquo;. Proceedings of ACM SIGCHI International
+        Conference on Advances in Computer Entertainment Technology ACE 2005.</p>
+    <p class="ReferencesText">Chen,
+        Y. (2006). &ldquo;Olfactory Display: Development and Application in Virtual
+        Reality Therapy&rdquo;. 16th International Conference on&nbsp; Artificial
+        Reality and Telexistence - Workshops (ICAT'06), pp. 580-584.</p>
+    <p class="ReferencesText">Debevec,
+        P. (1998). &ldquo;Rendering Synthetic Objects into Real Scenes: Bridging
+        Traditional and Image-based Graphics with Global Illumination and Image-based
+        Graphics with Global Illumination and High Dynamic Range Photography&rdquo;.
+        Proc. SIGGRAPH 98, pp. 189-198.</p>
+    <p class="ReferencesText">Desbrun,
+        M., M. Meyer, P. Alliez (2002). &ldquo;Intrinsic Parameterizations of
+        Surface Meshes&rdquo;. Eurographics 2002 Conference Proceedings.</p>
+    <p class="ReferencesText">Frisoli,
+        A., F. Barbagli, S.L. Wu, E. Ruffaldi, M. Bergamasco and J.K. Salisbury
+        (2004). &ldquo;Evaluation of multipoint contact interfaces in haptic
+        perception of shapes&rdquo;. Symposium of Multipoint Interaction IEEE
+        ICRA 2004.</p>
+    <p class="ReferencesText">Frisoli,
+        A., G. Jansson, M. Bergamasco, C. Loscos (2005). &ldquo;Evaluation of
+        the Pure-Form Haptic Displays Used for Exploration&nbsp; of&nbsp; Works
+        of Art at Museums&rdquo;. WorldHaptics Conference, Pisa, Italy.</p>
+    <p class="ReferencesText">Loscos,
+        C., F. Tecchia, A. Frisoli, M. Carrozzino, H. Ritter Widenfeld, D. Swapp,
+        and M. Bergamasco (2004). &ldquo;The Museum of Pure Form: touching real
+        statues in an immersive virtual museum&rdquo;. Proceedings of VAST 2004,
+        The Eurographics Association. The 5th International Symposium on Virtual
+        Reality, Archeology and Culture.</p>
+    <p class="ReferencesText">Massie,
+        T.H., and J.K. Salisbury (1994). &ldquo;The PHANToM Haptic Interface:
+        A Device for Probing Virtual Objects&rdquo;. Annual Symposium on Haptic
+        Interfaces for Virtual Reality , 1994.</p>
+    <p class="ReferencesText">Ruffaldi,
+        E., A. Frisoli, C. Gottlieb, F. Tecchia and M. Bergamasco (2006). &ldquo;A
+        Haptic toolkit for the development of immersive and Web enabled games&rdquo;.
+        ACM Symposium on Virtual Reality Software and Technology (VRST), 2006.</p>
+    <!-- #EndEditable -->
+				<h4>Cite as:</h4>
+				<p class="references"><!-- #BeginEditable "OnlineCitation" -->Tecchia, F., et al., Multimodal Interaction For The Web<!-- #EndEditable -->, 
+				in J. Trant and D. Bearman (eds.). <em>Museums and the Web 2007: Proceedings</em>,
+				 Toronto: Archives &amp; Museum Informatics, published March 1, 2007  Consulted  
+
+                 <script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+// current date - based on http://rainbow.arch.scriptmania.com/scripts
+// Array of day names
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var monthNames = new Array("January","February","March","April","May","June","July",
+                           "August","September","October","November","December");
+
+var dt = new Date();
+var y  = dt.getYear();
+
+// Y2K compliant
+if (y < 1000) y +=1900;
+
+document.write(monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y + ". ");
+	                // ]]> -->
+				  </script>
+http://www.archimuse.com/mw2007/papers/<!-- #BeginEditable "URL" -->tecchia/tecchia.html <!-- #EndEditable --></p>
+				<p class="references"><em><!-- InstanceBeginEditable name="Editorial Note" -->Editorial Note<!-- InstanceEndEditable --></em> </p>
+	  </div>
+<div id="sidebar">
+			<div id="side-nav">
+				<ul id="side-nav-list">
+					    <li id="workshops"> <a href="../../workshops/index.html" class="menu">Workshops</a> </li>
+						<li id="sessions"> <a href="../../sessions/index.html" class="menu" >Sessions</a> </li>
+						<li id="speakers"> <a href="../../speakers/index.html" class="menu" >Speakers</a> </li>
+						<li id="interactions"> <a href="../../interact/index.html" class="menu">Interactions</a> </li>
+						<li id="demonstrations"> <a href="../../demos/index.html" class="menu">Demonstrations</a> </li>
+						<li id="events"> <a href="../../events/index.html" class="menu">Events</a> </li>
+						<li id="exhibits"> <a href="../../exhibit/index.html" class="menu">Exhibits</a> </li>
+						<li id="best"> <a href="../../best/index.html" class="menu">Best of the Web </a></li>
+				</ul>
+			</div>
+			<div id="search-site">
+				<form method="post" action="../http://search.archimuse.com/cgi-bin/htsearch">
+					<input type="hidden" name="format" value="builtin-long" />
+					<input type="hidden" name="method" value="and" />
+					<input type="hidden" name="config" value="htdig-mw2007" />
+					<input type="hidden" name="restrict" value="" />
+					<input type="hidden" name="exclude" value="" />
+					<input type="text" size="20" name="words" value="" id="searchmw" />
+					<input type="image" src="../../images/searchmw2007.gif" id="searchbox" name="search" />
+				</form>
+			</div>
+				<div id="sidebar-links">
+				<ul id="sidebar-links-list">
+					<li><a href="../../../index.html" class="produced-by">produced by<br />
+					    <img src="../../images/sidelogo.gif" width="144" height="37" alt="AMI logo" /></a></li>
+					<li><a href="../../../index.html">Join our mailing list</a></li>
+					<li><a href="../http://search.museumsandtheweb.com/search">Search A&amp;MI<br />
+					<img src="../../../external.gif?link=http://www.archimuse.com/ami.images/search.gif" alt="search" width="24" height="25" /></a></li>
+				</ul>
+		  </div>
+		</div>
+		<div id="footer">
+		  <div id="last-updated">
+          published: April 11, 2007<br />
+			last updated:<!-- #BeginDate format:Am1a -->October 28, 2010 12:23 PM<!-- #EndDate -->
+		        <div id="cc">
+        <!--htdig_noindex-->
+        <a rel="license" href="../http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="../http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons Attribution-Noncommercial-No Derivative Works 3.0  License" width="88" height="31" style="border-width:0" /></a>
+        <!--/htdig_noindex-->
+      </div>
+		  </div>
+			<div id="footer-content">
+				Archives &amp; Museum Informatics, 158 Lee Avenue, Toronto, Ontario, M4E 2P3 Canada<br />
+				Telephone: +1 416 691 2516 | Fax: +1 416 352 6025 | E-mail:
+				
+				<script language="JavaScript" type="text/javascript">
+               <!-- <![CDATA[
+	           user = "mw2007";
+	           site = "archimuse.com";
+	           position = "Page Footer";
+	           document.write('<a href=\"mailto:' + user + '@' + site + '\?subject=Response from MW2007 Web Site: ' + position + '\">');
+	           document.write( user  + ' @ ' + site + '<\/a>');
+	                // ]]> -->
+				</script>	
+
+		<br />
+				Copyright &copy; 2006 - Archives &amp; Museum Informatics - All rights reserved.<br />
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+<!-- analytics scripts -->
+<!-- tynt script -->
+<script type="text/javascript">tyntVariables = {"ap":"Read more: "};</script> 
+<script type="text/javascript" src="../http://tcr.tynt.com/javascripts/Tracer.js?user=aTNeQ-tzOr36a6adbiUzgI&amp;s=130&amp;cc=6&amp;st=1"></script>
+<noscript></noscript>
+
+<!-- google analytics script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26332456-1']);
+  _gaq.push(['_setDomainName', '.archimuse.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--chartbeat script -->
+<script type="text/javascript">
+var _sf_async_config={uid:3385,domain:"archimuse.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+
+</script>
+<!--/htdig_noindex-->
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from www.museumsandtheweb.com/mw2007/papers/tecchia/tecchia.html by HTTrack Website Copier/3.x [XR&CO'2008], Mon, 22 Jul 2013 17:29:01 GMT -->
+</html>
+					

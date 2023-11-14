@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<!-- Mirrored from mw17.mwconf.org/paper/art-tracks-using-linked-open-data-for-object-provenance-in-museums/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 22:11:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Art Tracks: using Linked Open Data for object provenance in museums &#8211; MW17: Museums and the Web 2017</title>
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="MW17: Museums and the Web 2017 &raquo; Art Tracks: using Linked Open Data for object provenance in museums Comments Feed" href="feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mw17.mwconf.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../../wp-includes/css/dist/block-library/theme.min40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='sidebar-login-css'  href='../../wp-content/plugins/sidebar-login/build/sidebar-login3822.css?ver=1604077128' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='../../wp-content/themes/twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../../wp-content/themes/mw-twentysixteen/style40df.css?ver=5.6' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/themes/twentysixteen/genericons/genericons3ce7.css?ver=20201208' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../wp-content/themes/mw-twentysixteen/style3ce7.css?ver=20201208' media='all' />
+<style id='twentysixteen-style-inline-css'>
+
+		/* Custom Link Color */
+		.menu-toggle:hover,
+		.menu-toggle:focus,
+		a,
+		.main-navigation a:hover,
+		.main-navigation a:focus,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.social-navigation a:hover:before,
+		.social-navigation a:focus:before,
+		.post-navigation a:hover .post-title,
+		.post-navigation a:focus .post-title,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.site-branding .site-title a:hover,
+		.site-branding .site-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-footer a:hover,
+		.entry-footer a:focus,
+		.comment-metadata a:hover,
+		.comment-metadata a:focus,
+		.pingback .comment-edit-link:hover,
+		.pingback .comment-edit-link:focus,
+		.comment-reply-link,
+		.comment-reply-link:hover,
+		.comment-reply-link:focus,
+		.required,
+		.site-info a:hover,
+		.site-info a:focus {
+			color: #e55747;
+		}
+
+		mark,
+		ins,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.widget_calendar tbody a,
+		.page-links a:hover,
+		.page-links a:focus {
+			background-color: #e55747;
+		}
+
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
+		textarea:focus,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.menu-toggle:hover,
+		.menu-toggle:focus {
+			border-color: #e55747;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation li:hover > a,
+			.main-navigation li.focus > a {
+				color: #e55747;
+			}
+		}
+	
+</style>
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://mw17.mwconf.org/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src='https://mw17.mwconf.org/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<script src='../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../indexaae7.html?p=1128' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed7ddc.json?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fart-tracks-using-linked-open-data-for-object-provenance-in-museums%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed3aa9?url=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fart-tracks-using-linked-open-data-for-object-provenance-in-museums%2F&amp;format=xml" />
+	<script src="https://use.typekit.net/cfh1uqy.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script type="text/javascript" src="../../wp-content/themes/mw-twentysixteen/flexibility.js"></script>
+</head>
+
+<body class="paper-template-default single single-paper postid-1128 wp-custom-logo wp-embed-responsive">
+<div id="page" class="site"> <!-- TAG CLOSES IN FOOTER.PHP (.site) -->
+	<div class="site-inner"> <!-- TAG CLOSES IN FOOTER.PHP (.site-inner) -->
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-main">
+					<div class="site-branding">
+						<a href="../../index.html" class="custom-logo-link" rel="home"><img width="240" height="240" src="../../wp-content/uploads/2017/02/cropped-mw-final.png" class="custom-logo" alt="MW17: Museums and the Web 2017" /></a>					</div>
+
+											<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+						<div id="site-header-menu" class="site-header-menu">
+							<div class="top-nav-desc">
+								<p> MW17: Museums and the Web 2017 <span>Cleveland Ohio - April 19-22</span></p>
+								<form class="search-form" role="search" method="get" action="#">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input class="search-field" placeholder="Search …" value="" name="s" type="search">
+									</label>
+									<button class="search-submit" type="submit">
+										<span class="screen-reader-text">Search</span>
+									</button>
+								</form>
+							</div>
+															<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+									<div class="menu-menu-1-container"><ul id="menu-menu-1" class="primary-menu"><li id="menu-item-3074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3074"><a href="https://museumsandtheweb.com/">MW Home</a></li>
+<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-88"><a href="../../index.html">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="../../key-dates/index.html">Key Dates</a></li>
+	<li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580"><a href="../../local-information-and-accommodation/index.html">Local Information and Accommodation</a></li>
+	<li id="menu-item-1917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1917"><a href="../../faqs/index.html">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-172"><a href="../../attending/index.html">Attending</a>
+<ul class="sub-menu">
+	<li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="../../registration/index.html">Registration</a></li>
+	<li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-475"><a href="../../scholarships-volunteering/index.html">Scholarships &#038; Volunteering</a></li>
+</ul>
+</li>
+<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-108"><a href="../../call-for-proposals/index.html">Presenting</a>
+<ul class="sub-menu">
+	<li id="menu-item-490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="../../call-for-proposals/index.html">Call for Proposals</a></li>
+	<li id="menu-item-494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="../../presentation-guidelines/index.html">Presentation Guidelines</a></li>
+	<li id="menu-item-489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="../../paper-guidelines/index.html">Paper Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-135"><a href="../../exhibiting/index.html">Exhibiting</a>
+<ul class="sub-menu">
+	<li id="menu-item-479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="../../exhibitor-registration/index.html">Exhibitor Registration</a></li>
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="../../sponsorship-opportunities/index.html">Sponsorship Opportunities</a></li>
+	<li id="menu-item-1689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1689"><a href="../../advertising/index.html">Advertising</a></li>
+</ul>
+</li>
+<li id="menu-item-573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-573"><a href="../../program/index.html">Conference</a>
+<ul class="sub-menu">
+	<li id="menu-item-2972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2972"><a href="../../program/index.html">Program</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="../../exhibits/index.html">Exhibits</a></li>
+	<li id="menu-item-3023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3023"><a href="../../select-session-slides/index.html">Presentations</a></li>
+	<li id="menu-item-1760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1760"><a href="../../glami-awards/index.html">GLAMi Awards</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2968"><a href="../../glami-winners/index.html">GLAMi Winners</a></li>
+		<li id="menu-item-2963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2963"><a href="../../glami-nominees/index.html">GLAMi Nominees</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2894"><a href="../../mwx/index.html">MWX 2017</a></li>
+	<li id="menu-item-1252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1252"><a href="../../attendees/index.html">Attendees</a></li>
+	<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="../../committees/index.html">Committees</a></li>
+</ul>
+</li>
+<li>
+    <form role='search' method='get' class='search-form' action='http://mw17.mwconf.org/'>
+	<label>
+	<span class='screen-reader-text'>Search for:</span>
+	<input type='search' class='search-field' placeholder='Search &hellip;' value='' name='s' />
+	</label>
+	<button type='submit' class='search-submit'>
+	<span class='screen-reader-text'>Search</span></button>
+	</form>    
+	</li></ul></div>								</nav><!-- .main-navigation -->
+							
+													</div><!-- .site-header-menu -->
+									</div><!-- .site-header-main -->
+
+			</header><!-- .site-header -->
+
+
+	
+<section id="page-hero">
+	<div class="background"> </div>
+</section>
+<script>
+    var images = ['page-hero1.jpg', 'page-hero2.html', 'page-hero3.html', 'page-hero4.html', 'page-hero5.html','page-hero6.html', 'page-hero7.html', 'page-hero8.jpg' ];
+    jQuery('#page-hero .background').css("background", "rgba(0, 0, 0, 0) url('https://mw17.mwconf.org/wp-content/themes/mw-twentysixteen/images/" +images[Math.floor(Math.random() * images.length)]+ "') no-repeat scroll center top / cover") 
+	</script>
+
+	<div id="content" class="site-content"> <!-- TAG CLOSES IN FOOTER.PHP (.site-header) -->
+
+<div id="primary" class="content-area">
+<main id="main" class="mw-main75" role="main">
+
+
+<article id="post-1128" class="post-1128 paper type-paper status-publish hentry">
+
+<style type="text/css">
+h2 { font-weight: bold; font-size: 18px; }
+h3, h4, h5, h6 { font-weight: bold; font-size: 16px; }
+
+td, th { padding: 5px; }
+th { background-color: #ccc; font-weight: bold; }
+tr:nth-child(odd) { background-color: #eee }
+</style>
+
+
+<h1 class="entry-title">Art Tracks: using Linked Open Data for object provenance in museums</h1>
+
+<p><a target="_blank" href="http://www.museumsandtheweb.com/member/newburyd/">David Newbury</a>, Carnegie Museum of Art, USA</p>
+<h2>Abstract</h2>
+Over the past three years, the Carnegie Museum of Art has been working on Art Tracks, an ambitious project to create a standard for representing the provenance of works of art that works for both computers and humans. We will present a way to represent provenance as structured data, modeled using both the AAM recommended provenance standard and the CIDOC-CRM. This standard will allow provenance to easily work as a human-readable text, a JSON API, and a Linked Data graph.  
+
+Once a work’s provenance has been converted into structured data, we have the new ability to use this digitized information to develop insight into not only the works themselves, but the history of collecting. As this history is not institution-specific, we can use this standardized data to connect works across institutions, to tell stories that span history and geography, to enrich the discussion of the nature of collecting, and to provide a powerful example of the utility of Linked Open Data in the museum sector. 
+
+We have worked to aid in the adoption of this standard by building a suite of freely released, well documented, open-source software tools that support and build on this new standard. These tools are built with a design philosophy of creating software that is usable across multiple museums, regardless of their existing technology choices.  
+
+In this presentation, we will demonstrate how you can start implementing this standard in your museum, and what new capabilities this allows for art history, visitor engagement, and storytelling with the objects in your collection.</p>
+<p><b>Keywords:</b> provenance, linked data, collections</p>
+<h2>Introduction</h2>
+<p>The Art Tracks project, under development since 2014 at the Carnegie Museum of Art (CMOA), is a set of standards and software tools designed to parse textual provenance records and convert them into structured information. Art Tracks was designed around the observation that the text of a provenance record has innate structure, and thus sufficiently clever software could convert that text into structured data. Structured data would enable data visualization, comparative research, bulk analysis, and other important but non-textual uses of provenance.  So, over the course of the project we wrote a custom parser based on a set of regular expressions capable of extracting meaning and data from provenance texts and converting them into JSON, a form of structured data. We also developed a user interface, known as Elysa, that enabled curatorial and registrarial staff members to edit and modify the provenance records. A full discussion of these techniques and systems was presented two years ago at Museums and the Web (Berg-Fulton, Newbury, &amp; Snyder, 2014).</p>
+<p>As an initial prototype, the project was successful. We were able to demonstrate automatic extraction and visualization of provenance data, which we demonstrated in a public gallery installation at CMOA. Following this, we spent several months demoing the project at conferences, universities, and other institutions. Throughout this dissemination process, many institutions, particularly mid-size museums, expressed interest in using it to help author and maintain their provenance records.</p>
+<p>Unfortunately, while the software was sufficient for our prototyping needs and was fully open-source, it was not designed for easy industry-wide adoption. The complexity of implementing the project was such that only a single other institution was able to get the software up and running, even as a prototype, and no other institution adopted it. As we continued to internally expand the project beyond our initial test data, we also discovered that there were many events recorded within the provenance records that did not match the structure that we had defined. For instance, the distinctions between loans, gallery shows, and auctions were insufficiently defined. We also discovered that it was almost impossible to determine if a single person or location was mentioned across two different records, because the names referred to in the provenance texts were irregular. Finally, while we had always designed our provenance data around the CIDOC Conceptual Reference Model (ICOM/CIDOC, 2017), we had not exhaustively documented the model we were using, nor had we automated the production of RDF from the structured data.</p>
+<p>Phase II of Art Tracks, funded by a National Endowment for the Humanities grant, is designed to take the existing prototype and expand it to enable reuse beyond our institution. It is also designed to take the lessons we learned and resolve some of the inconsistencies and poor decisions we made throughout our prototyping process. We have approached this process in four ways: through the development of a community of partners to advise and collaborate with us; through the development of concrete models and standards for the expression of provenance; through the development and documentation of open-source software tools; and through the practical application of these tools to facilitate a concrete research project. This paper will focus on the second of these processes. It will discuss what we have learned as we, in collaboration with partners at the Yale Center for British Art, the Freer|Sackler Galleries, and the Getty Research Institute, have developed a structure for representing textual provenance information as Linked Data.</p>
+<p>Note that we distinguish here and throughout the paper between Linked Data, Linked Open Data, and Open Data. We define Linked Data as information that is represented in graph form as RDF, often referencing external authorities and vocabularies, but not necessarily available to be referenced externally itself. Open Data is information that has been publicly provided to external parties for their use in a structured form. Linked Open Data is the intersection of these two categories: publicly available RDF data.</p>
+<h2>Provenance as a formal grammar</h2>
+<p>As we developed Art Tracks, it become obvious that our existing parsing strategy was inadequate for the needs of the project. The regular expression-based system we initially developed was extremely powerful, but as we uncovered more complexities and added more exceptions and special cases, it was clear that we would not be able to support this technique indefinitely. The complexities enabled by the sophistication of regular expressions meant it was no longer simple to discover how a specific provenance text would be parsed, and when it didn&#8217;t work it was no longer clear where the failure was taking place.  We attempted to mitigate this problem with an extensive automated test suite, but even that was insufficient.</p>
+<p>To address this problem, we have replaced the regular expressions with an explicit Parsing Expression Grammar, or PEG, for provenance. A PEG is an explicit, unambiguous form of context-free grammar that defines a specific method of parsing a string of text, and are commonly used when implementing programming languages (Ford, 2004). Using a single PEG instead of a collection of regular expressions also has the additional benefit of allowing us to leverage open-source software that can process these grammars.  This means that re-implementing the software in additional programming languages may be significantly easier, since rather than requiring a re-write of the entire code base, the grammar, which is the core of the project, can be trivially ported from one language to another.</p>
+<p>It also opens up the possibility for other, equally valid grammars to be constructed. One of the major criticisms of the Art Tracks project has been that many institutions have very specific styles for their provenance, and previously, using our tools required that you format provenance texts into a specific style defined by CMOA. By treating this grammar as a formal mapping between the linguistic rules defined by the institution and the data structure defined by Art Tracks, any other grammar that expresses the same concepts should be able to be processed. This would also enable the possibility of automatic translation between provenance styles, which might be a benefit to the field.</p>
+<p>The grammar is one-way; to convert from the structured data back into text requires a generator, the inverse of a parser. Thankfully, a host of tools exist for generating strings from data structures and templates, so we do not need to explicitly reuse the same grammar to regenerate our provenance texts. While this theoretically presents the possibility of inconsistencies between the generation and the parsing, since we have the original text we can verify that the output of the template-based system produces an identical text. When tested against a large collection of possible texts (say, all the provenances contained within a museum collection) we can be reasonably confident that such a system is sufficiently accurate.</p>
+<h2>Provenance as Linked Data</h2>
+<p>One we have used a grammar to generate structured data, the next step is to map that structured data to the CIDOC-CRM. The actual mapping process, which is the work of converting data from one form to another, is not intrinsically difficult and can be easily automated; however, before the data can be mapped it must be modeled.</p>
+<p>Modeling is the process of describing how a datum expressed within one form of structured data is correctly represented within a different form while following the set of rules defined within a specific ontology. Since there are often multiple correct ways to implement the rules of any ontology, particularly one as complex as the CIDOC-CRM, we document a profile, or a specific understanding of the ontology that describes a crosswalk between a known set of input values and a known set of output structures. This profile ensures that the transformations performed during the mapping process can be understood by others and helps maintain consistency across multiple implementations.</p>
+<p>Linked Data is a relatively new concept in museums, so many of the tools that would enable institutions to integrate it into their existing systems are still missing. Because of this, it can be difficult for museums to model provenance information to the full specificity possible. To guide institutions with various levels of structured data and software implementations, we have defined four profiles for provenance in the CIDOC-CRM. Each profile defines a specific level of complexity for the digital encoding of provenance in Linked Data based on the amount of processing and the complexity of the input data. These levels have been designed to function as supersets, so a record expressed at a given level can also be treated as a record at each simpler level. Because of this, each level of profile provides a more complete graph representation of knowledge, enables additional search capabilities, and provides a more nuanced understanding of the provided provenance text.</p>
+<p>This technique was heavily influenced by TEI&#8217;s profiles (Hawkins, 2011), which have a similar level system, as well as by a comment from Kate Blanch, Database Administrator at The Walters Art Museum. She referred to this sort of structure as &#8220;a roadmap for the future of an institution&#8217;s data.&#8221; By knowing how your data could be represented, you can prioritize projects that will get you closer to a known model, even if you&#8217;re not prepared to implement it fully at the current time. We will describe at a high level how each functions here; full specifications, RDF models, and additional details of these levels are available at <a href="http://www.museumprovenance.org/">http://www.museumprovenance.org</a>.</p>
+<h3>Level One</h3>
+<p>When we model a provenance text we are modeling two separate but related structures. One is the written text that makes up the traditional provenance record, which we refer to as the <em>provenance text</em>. The other is the actual events and parties that the provenance text describes, which we refer to as <em>provenance events</em>.  We maintain and model both of these structures in Linked Data because they both contain nuances that are difficult to capture in the other&#8217;s form.</p>
+<p>Level One describes a provenance text in which the events described within the document are not modeled in any fashion, nor are the people, places, or any other entity.  This level is intended as a model for provenance within an institution where the provenance is represented as a single text field and where no additional work is done to understand or interpret the provenance. The RDF model at this level merely models the existence of a provenance text, the existence of an event, and relates both to the work described.</p>
+<p>At this level, a full text search is possible, but it is not possible to facet the information in any way.</p>
+<h3>Level Two</h3>
+<p>Level Two models both the provenance text, the core event, and the people, places, and URLs present within the text. This level is designed to accommodate software that is capable of processing the provenance text but doesn&#8217;t have special knowledge of provenance, such as Named Entity Recognition or string matching against authority files.</p>
+<p>At this level, it becomes possible to connect artwork to the people and places that are mentioned in the provenance. It also enables search for provenances using alternate names (when linked to authority file), and to use URLs to link to digitized primary sources. Individual transactions and dates are not modeled at this level.</p>
+<h3>Level Three</h3>
+<p>Level Three models the individual transactions as specific provenance events, but considers there only to be a single event representing the transaction between periods of ownership. These transactions follow each other in time, but are not causally related. To implement this level, we assume the existence software capable of parsing individual acquisitions or transfer events within provenance. All software developed as part of Art Tracks is designed to work at this level.</p>
+<p>At Level Three, it becomes possible to analyze and search for specific provenance transactions, and relate those transaction to people and locations. It also becomes possible to search for transactions that occurred within specific space-time volumes, such as &#8220;Continental Europe between 1932 and 1946.&#8221;</p>
+<h3>Level Four</h3>
+<p>At Level Four, we explicitly model the sub-events that make up each individual transaction. These events <em>are</em> causally related: each one is motivated by and dependent on the event that directly precedes it. For example, rather than modeling a loan as a single event, you would model the transfer of custody to the trucking company, followed by a transfer to the art handlers at the new location, followed by a transfer to the exhibiting institution. This level of provenance is not currently recorded in traditional provenance texts, but it is the next logical step for integrating provenance into a larger model of the history of movement, ownership, and custody of art.</p>
+<p>We do not fully define Level Four, and none of the Art Tracks tools are capable of modeling or mapping these events. It may seem unusual to include a level that we cannot implement or fully define, however, we understand the potential of its use. Although none of the institutions that we currently work with have data at this level of granularity, we want to make sure that the model we develop does not preclude the future existence of this data; therefor we have designed the model to accommodate it.</p>
+<h2>Location, ownership, and custody</h2>
+<p>Throughout this process it became obvious that the traditional recording of provenance was not a perfect fit with the CIDOC-CRM. The CIDOC-CRM has enormous flexibility when it comes to mapping cultural heritage information to Linked Data ontologies, but there are conflicts between the traditional understanding of the role of provenance within museums and the event-based model described within the conceptual reference model. In particular, within museums, provenance often conflates ownership, custody, and location of a work, but these three time/space vectors are independent within the CIDOC-CRM.</p>
+<p>We have assumed that provenance does not include the location of the work. This is counterintuitive—provenance seems very much to be about the movement of works in space and time. But upon a closer reading, and through many discussions with provenance experts and researchers, we determined that what provenance texts describe are locations associated with <i>people</i> or locations associated with <i>events</i>. An object may be present at the event, but the event is what connects people, places, objects, and dates, not the object itself. Instead, provenance texts only refer to ownership and custody. In our prototype, we understood that we had conflated these two which we knew might be problematic, but we did not have enough experience to understand where those problems might be. In our 2014 paper, we said:</p>
+<blockquote><p>We have not yet modeled an ontological hierarchy of [acquisition] terms, but it appears that such a hierarchy exists and could be modeled with sufficient domain knowledge. Additionally, this hierarchy could be used in constructing the CIDOC-CRM modeling; some of these methods indicate ownership and custody changes, some merely of custody.</p></blockquote>
+<p>As we further explored this in Phase II, we discovered that many of the exceptions that had caused trouble in our modeling were due to an insufficient understanding of this hierarchy. Additionally, it became clear that the differences between exhibition history, acquisition, destruction, and transfer were more a matter of museum record-keeping than one of ontological significance. The semantic difference between an auction where the work was not sold and an exhibition at a gallery was one of intent, not one of category. Both involved transfers of custody, but not ownership, and both were followed by a transfer back to the previous owner. As another example, when a work is created it is simultaneously owned and in the custody of someone, usually the artist responsible for creating the work. To exclude that from provenance is to lose valuable information needed to fully understand where the work has been over time.</p>
+<p>As we began to think through the differences between ownership and custody, it became clear that defining a hierarchy of acquisition methods would be essential in both understanding how works changed hands, and also in determining when a transaction involved both ownership and custody, and when it involved only one or the other. Additionally, the creation of such a hierarchy would allow for significantly more faceted searches—auctions, private sales, forced sales, and exchanges are related—by placing all of these these various terms under the category &#8220;exchange of value,&#8221; we could search across them without losing the nuance each contains.</p>
+<p>To facilitate our work, we have constructed a small thesaurus of 50 different terms used to distinguish between methods of acquisition. These terms are broken into six categories of structured hierarchy: Transfers, Originations, Disappearances, Divisions of Custody, Rejoinings of Custody, and Party Transformations. These represent the terms that we have identified through an analysis of CMOA&#8217;s provenance, as well as those of YCBA and Freer|Sackler, but may not be a complete list; we continue to add additional terms as they are discovered. For a full list and description of these terms, see <a href="http://www.museumprovenance.org/reference/acquisition_methods">http://www.museumprovenance.org/reference/acquisition_methods</a>, where the list is available as HTML, PDF, and SKOS.</p>
+<h2>Entities and authority</h2>
+<p>An additional problem Art Tracks faced was determining a mechanism for identifying the specific entities mentioned in provenance. People, organizations, places, and named events (such as as sales or exhibitions) are essential data for a provenance record, but they are traditionally referred to only by name or appellation. Additionally, much of the data that makes up a transaction record exists to unambiguously identify specific people. These include birth and death dates, signifiers of human relationships such as marriage or kinship, titles and honorifics, and geographical locations. These are not essential to recording the history of the transfer of art; they are present to provide identification and context for the parties that owned the artwork and to disambiguate between people who share names and might otherwise be confused.</p>
+<p>Within a given context, disambiguation only requires that enough information be provided to avoid overlap with other known individuals. However, there are often multiple sets of information that could uniquely disambiguate a specific individual, and it can be difficult to determine if two unique appellations refer to the same person or not. For example, both &#8220;Dr. Jones, UCLA&#8221; and &#8220;Indiana Jones&#8221; are sufficiently unique appellations to disambiguate between Mr. Jones and any other antiquities collector currently known; however, we cannot easily determine if they both represent the same person or are instead different people.</p>
+<p>Because this disambiguating information is both imperfectly known but relevant across many provenance records, it can be difficult to ensure that any newly acquired knowledge is appropriately updated in all relevant records. For example, when a given collector passes away, their death date should be updated in every provenance record where it occurs, but given the large number of possible appellations for that person, it can be difficult to identify which records those might be.</p>
+<p>This is not merely an identity problem. If we were building a traditional structured data system, this problem would appear trivial—we could treat the people and places as lookups to other tables. However, the choice of which appellation to provide in a provenance record is not <i>only</i> a disambiguation or identity problem. Additional implicit data occurs in the choice of which name is used in provenance texts, and simply identifying the individual does not capture the nuance that is available in that text. The specific spelling and structure of the name used for a person is often drawn from the the wording of the primary source used to confirm that record, and the name used is also often the correct name at the moment of the transaction, but may not be the preferred name of the individual.  Specific titles may be included when they are relevant or important to the provenance record, but may be excluded when irrelevant. To reduce this human-readable information to a single primary key is to lose this nuance and expressiveness. However, to ignore the fact that these nuanced strings are references to real entities that can appear across many provenance records would lose much of the benefit of structured data. People and places both represent real entities; connecting these entities with external authority records helps avoid multiple conflicting sources of truth.</p>
+<p>Finally, there are technical issues with the use of names. As we move towards using a PEG to parse provenance, it becomes difficult to determine which datum specific words or phrases within appellations refer to. For example, &#8220;His Excellency, James Jones, France,&#8221; vs. &#8220;James Jones, Paris, France.&#8221; Both consist of three phrases separated by commas. Neither would be unusual within a provenance record, but a computer has no way to determine if the middle clause is part of the name or part of the location. Making that determination relies on human understanding of the semantic meaning of the text. Existing software tools such as machine learning or natural language parsing attempt to resolve these problems, but the statistical models are not 100% accurate, and when they fail they do so in ways that are extremely difficult to correct.</p>
+<p>Art Tracks initially attempted to resolve these problems by creating strict standards for how various names were expressed. Inevitably, exceptions would occur that would result in unexpected parsings, and to resolve these conflicts required constant patching and new code to work around each new exception. The reasons for these failures were difficult for non-technical staff to understand: they appeared to be correctly entering new information, yet the system would reject it. This was frustrating and became a significant barrier to adoption.</p>
+<p>A better solution to the problems of identity management and entity disambiguation is the use of authority files through Linked Data. We have always intended to use authority files within Art Tracks, but Phase I relied on string matching to cross-reference parties to museum authority files. This proved problematic due to the large number of alternate names that needed to be entered into the authority files to allow for the various nuances and titles present in provenance texts. String matching also presents problems when reconciling between multiple authority files and does not provide a solution to people who have identical names but different identities.</p>
+<p>We explored string matching as a solution because it required the smallest number of changes to the appearance of provenance texts. However, the additional work needed to manage external authority files and the inevitable ambiguities that the process created turned out to be more of a barrier than anticipated. In this version, we have developed a new technique that we believe provides a better solution to this problem through the addition of a new section to our written provenance, which we refer to as an &#8220;Authority&#8221; section.</p>
+<p>Traditional provenance consists of two semantically different sections. One is the paragraph of semi-structured text that contains a list of transfers ordered from first owner until the present day. The other is a collection of footnotes which provide unstructured content and commentary. In order for provenance to remain legible for traditional scholars, we have attempted not to fundamentally change the written representation of either of these sections. However, we decided that it might be possible to add additional sections to the text.  To avoid confusion and prevent this change from being overly disruptive, we gave ourselves several constraints. First, these additional sections should be human-readable without specialized software and should be able to be created and maintained by hand in a standard text editor. We also felt that they should provide additional context not only to the computer, but to a human reader, which ruled out explicitly including machine-readable data. We took inspiration from archival and bibliographic practice, and added a list of names and URLs as a new section below the two traditional sections of the provenance text. For example:</p>
+<p style="padding-left: 30px;">John Johns, the artist, 1960; purchased by Jane Doe [1920-1990], Boise, ID, 1965; bequest to Jill Doe, Esq., 1990[1].</p>
+<p style="padding-left: 30px;">Notes: [1]:</p>
+<p style="padding-left: 30px;">Jill was both Jane Doe&#8217;s great-niece and a partner in her legal practice.</p>
+<p style="padding-left: 30px;">Authorities: John Johns:   see http://viaf.org/viaf/8189962 Jane Doe:       see http://vocab.getty.edu/ulan/500217526 Boise, ID:      see http://vocab.getty.edu/tgn/1234556 Jill Doe, Esq.: no record found.</p>
+<p>The new Authority section references Linked Open Data URIs for named individuals, locations, and events, which resolves many of the problems described above. Best practices for Linked Data also asserts that these URIs should be dereferenceable using HTML, which means that a human researcher can gain immediate context for the people and places represented by the IDs by copying and pasting them into a browser. This also resolves the problem of allowing the user to maintain nuance in their choice of appellation for individuals while also providing an unambiguous ID for that individual. &#8220;Jane Doe&#8221; can be explicitly linked to the same URI as  &#8220;Jane Pendleton,&#8221; a maiden name, maintaining context while disambiguating identity. Additionally, titles and honorifics can be included as part of the appellation, avoiding the difficulty of determining which entity ambiguous clauses refer to. Lastly, having this section significantly eases parsing of the provenance statements, because entities referenced in the semi-structured text can be replaced with tokens as a pre-processing step, avoiding the inevitable conflicts between appellations and parsable tokens within the grammar.</p>
+<p>There are several constraints that this system creates. The first is minor: any appellation within the text can only be used to refer to a single entity. This is not a problem, since this should be true even in a traditional provenance. Secondly, this means that both sections of provenance that contain appellations must be kept in sync. This is an additional burden on the researcher, but because they are both within the same field, it seems less difficult than the previous requirement that the authority record and the provenance text be kept in sync. It also allows for the use of authority records that the provenance record does not have the ability to modify, such as ULAN or VIAF. Also, an interface such as Elysa should be able to maintain these connections automatically, identify records that are missing authority listings, and suggest LOD IDs, all of which should relieve the burden on the researcher. The final constraint is that because the system uses these as part of the parsing process, it is essential to list entities that do not currently have LOD URIs for them using &#8220;no record found&#8221; instead of a URI.</p>
+<h2>Conclusion</h2>
+<p>These techniques, along with other, less essential techniques for managing familial relationships or the representation of agents are fully described within the Art Tracks documentation. Together, they provide a consistent, documented technique for generating Linked Data from traditional provenance texts. It is a model that can be used to transition museums from traditional CMS representations of provenance into Linked Data, and as such does not fully capture the potential Linked Data could provide. However, throughout this project, we have been guided by three questions: (1) what is quantifiable? (2) what is unique to provenance? and (3) what is useful for art historians? We have described here a model that captures three years of direct work and decades of accumulated expertise in answering those three questions. We recognize that much of the work described might feel like ceremony for ceremony&#8217;s sake; much of the potential of Linked Data remains theoretical, and an enormous amount of effort is being expended to structure information and work around practices that have been in place and sufficient for hundreds of years. However, Art Tracks, and specifically this model for provenance in Linked Data, represents an initial important step forward for museums. Museums are moving away from being fortresses that protect and catalog treasures, and moving towards being willing and essential participants in a community of knowledge. As our community moves toward viewing collections as essential primary sources for an event-based model of art history, our hope is that our work models how to successfully transition existing knowledge and expertise into Linked Data. It is our goal to enable future research, improve understanding of our own collections, and further the mission of the museum in the 21st century.</p>
+<h2>Acknowledgements</h2>
+<p>Initial funding for Art Tracks was supported by the Institute of Museum and Library Services. Phase II is supported by a grant from the National Endowment for the Humanities, a grant from the Samuel H. Kress Foundation, and a grant from the Paul Mellon Centre for Studies in British Art. This project would not be possible without the collaboration of the entire Carnegie Museum of Art. In particular, we would like to thank Tracey Berg-Fulton, Costas Karakatsanis, Neil Kulas, Louise Lippincott, Akemi May, Emily Mirales, Katie Reilly, and Travis Snyder.  In addition, it would not have been possible without the help of colleagues across the field, in particular, the expertise of Emmanuelle Delmas-Glass at the Yale Center for British Art, Jeffrey Smith at the Freer and Sackler Galleries, and Rob Sanderson and Ruth Cuadra at the Getty Research Institute.</p>
+<h2>References</h2>
+<p>Berg-Fulton, T., D. Newbury, &amp; T. Snyder. (2015). &#8220;Art tracks: visualizing the stories and lifespan of an artwork.&#8221; <em>Museums and the Web 2015</em>: Proceedings. Chicago: The Palmer House, 2015. Consulted January 31, 2017. Available  <a href="http://mw2015.museumsandtheweb.com/paper/art-tracks-visualizing-the-stories-and-lifespan-of-an-artwork/">http://mw2015.museumsandtheweb.com/paper/art-tracks-visualizing-the-stories-and-lifespan-of-an-artwork/</a></p>
+<p>Ford, B. (2004). &#8220;Parsing Expression Grammars: A Recognition-Based Syntactic Foundation.&#8221; Proceedings of the 31st ACM SIGPLAN-SIGACT symposium on Principles of Programming Languages. Venice, Italy. Consulted January 30, 2017. Available <a href="https://pdos.csail.mit.edu/~baford/packrat/popl04/peg-popl04.pdf">https://pdos.csail.mit.edu/~baford/packrat/popl04/peg-popl04.pdf </a></p>
+<p>ICOM/CIDOC Documentation Standards Group. (2017). &#8220;Definition of the CIDOC Conceptual Reference Model.&#8221; Published January 25, 2017. Consulted January 30, 2017. Available <a href="http://www.cidoc-crm.org/Version/version-6.2.2"> http://www.cidoc-crm.org/Version/version-6.2.2</a></p>
+<p>Hawkins, K., M. Dalmau, &amp; S. Bauman. (2011). &#8220;Best Practices for TEI in Libraries.&#8221; Consulted October 15, 2016. <a href="http://www.tei-c.org/SIG/Libraries/teiinlibraries/main-driver.html">http://www.tei-c.org/SIG/Libraries/teiinlibraries/main-driver.html</a></p>
+<hr>
+
+<script type="text/javascript">
+var d=new Date();
+var month=new Array();
+month[0]="January";
+month[1]="February";
+month[2]="March";
+month[3]="April";
+month[4]="May";
+month[5]="June";
+month[6]="July";
+month[7]="August";
+month[8]="September";
+month[9]="October";
+month[10]="November";
+month[11]="December";
+
+var day_number=d.getDate();
+var month_name=month[d.getMonth()];
+var year=d.getFullYear();
+var full_date = month_name+" "+day_number+", "+year;
+</script>
+
+Cite as:<br /> 
+
+Newbury, David. "Art Tracks: using Linked Open Data for object provenance in museums." <i>MW17: MW 2017</i>. Published February 1, 2017. Consulted <script type="text/javascript">document.write(full_date);</script>.<br />
+https://mw17.mwconf.org/paper/art-tracks-using-linked-open-data-for-object-provenance-in-museums/<br /><br /><hr>
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h2><p class="must-log-in">You must be <a href="../../wp-login40c1.html?redirect_to=https%3A%2F%2Fmw17.mwconf.org%2Fpaper%2Fart-tracks-using-linked-open-data-for-object-provenance-in-museums%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- .comments-area -->
+</article>
+</main>
+<div id="mw-sidebar" class="mw-sidebar25">
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="text-7" class="widget widget_text">			<div class="textwidget"><h2 class="widget-title">Community Conveners</h2>
+<p><a title="Wezit" href="https://wezit.io/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/wezit-250-75.jpg" alt="Wezit" /></a><br />
+<a title="Axiell" href="http://www.axiell-alm.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" style="border: 0px;" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/axiell-250-75.jpg" alt="Axiell" /></a></p>
+<h2 id="gold-sponsor" class="widget-title">Platinum Sponsor</h2>
+<p><a title="Microsoft" href="http://aka.ms/museweb" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/Microsoft-250-75.jpg" alt="Microsoft" /></a><br />
+<!-- <a title="Izi Travel" href="http://www.izi.travel" target="_blank" rel="noopener"><img src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/izi-250-75.jpg" alt="Izi Travel" class="sponsor-img sponsor-top" /></a> --></p>
+<h2 id="gold-sponsor" class="widget-title">Gold Sponsor</h2>
+<p><a title="Piction" href="http://www.piction.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/piction-250-75.jpg" alt="Piction" /></a></p>
+<h2 id="bronze-sponsor" class="widget-title">Bronze Sponsors</h2>
+<p><a title="MailChimp" href="https://mailchimp.com/resources/guides/mailchimp-for-nonprofits/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://mw2015.museumsandtheweb.com/wp-content/themes/mw-theme/mailchimp-250-75.jpg" alt="mailchimp" /></a><br />
+<a title="Netx" href="http://netx.net/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/netx-250-75.gif" alt="Netx" /></a><br />
+<a title="PatronTech" href="http://patrontechnology.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/patron-250-75.jpg" alt="PatronTech" /></a></p>
+<h2 id="conference-sponsor" class="widget-title">Conference Sponsors</h2>
+<p><a title="CMA" href="http://clevelandart.org/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/cma-250-75.jpg" alt="CMA" /></a><br />
+<a title="Rock &amp; Roll" href="http://www.rockhall.com/" target="_blank" rel="noopener"><img class="sponsor-img sponsor-top" src="https://www.museumsandtheweb.com/wp-content/themes/mw-theme/rrhf-250-75.jpg" alt="Rock &amp; Roll" /></a></p>
+</div>
+		</section>	</aside><!-- .sidebar .widget-area -->
+</div>
+</div>
+
+		</div><!-- TAG OPENS IN HEADER.PHP (.site-content) -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<div class="site-title">Founded by Archives &amp; Museum Informatics<br><a href="http://www.archimuse.com/" target="_blank">www.archimuse.com</a></div>
+				<div class="site-title right">Managed by <a href="http://www.mwconf.org/">Museums and the Web LLC</a><br> 703 Dale Drive Silver Spring MD 20910 USA<br><a href="mailto:info@mwconf.org">info@mwconf.org</a></div>
+				
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+
+	</div><!-- TAG OPENS IN HEADER.PHP (.site-inner) -->
+</div><!-- TAG OPENS IN HEADER.PHP (.site) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26332456-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-26332456-1', {
+  		'linker': {
+    	'domains': ['museweb.net', 'mwconf.org', 'museumsandtheweb.com']
+  }
+});
+</script>
+
+<script src='../../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script src='../../wp-includes/js/comment-reply.min40df.js?ver=5.6' id='comment-reply-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+</body>
+
+<!-- Mirrored from mw17.mwconf.org/paper/art-tracks-using-linked-open-data-for-object-provenance-in-museums/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Apr 2022 22:11:09 GMT -->
+</html>
