@@ -1,0 +1,31 @@
+<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+	
+
+
+<style>
+td { padding: 5px;vertical-align: top; }
+.year { background-color:#ccc; padding:5px; margin-bottom: 10px; }
+</style>
+
+<h2 class="page-title">Bibliography</h2>
+<div class="entry-content">
+<table>
+<tbody><tr><td style="text-align: right;">Title:</td><td><b>Using an RDF Data Pipeline to  Implement Cross-Collection Search</b></td></tr>
+<tr><td style="text-align: right;">Authors:</td><td><a href="?mwa=David:|:Henry">David Henry</a></td></tr>
+<tr><td style="text-align: right;">Type:</td><td>Paper</td></tr>
+<tr><td style="text-align: right;">Publication:</td><td>MW2012: Museums and the Web 2012</td></tr>
+<tr><td style="text-align: right;">Year:</td><td>2012</td></tr>
+<tr><td style="text-align: right;">Abstract:</td><td><p>The Missouri History Museum launched a first version cross-collection search in mid-2010.  That implementation uses SOLR as a search engine with data from multiple domains (objects, archives, and photo collections) indexed to SOLR documents with various PHP scripts.  Although some attempts were made to map data values to specific locations, dates, and subjects, most of the data is indexed as text fields.  After user feedback and considering what would be possible with semantic web tools we identified a number of limitations to this approach: 1) text based facets are often ambiguous or vague; 2) users do not have the ability to further explore the context of search results; 3) data from different domains must be &#39;watered down&#39; to conform to the search index; 4) data is not available as linked open data; and 5) we are missing an opportunity to contribute to the web of data through crowd sourcing.</p>
+<p>To overcome these limitations the prototype of our next version is built firmly on sematic web technologies: RDF, SPARQL, and triple/quad stores.  The prototype strives to meet the following requirements: 1) aggregate and index data from different domains and from multiple institutions; 2) expose a repository of linked open data; 3) index by specific data types (personal and corporate entities, geocoded locations, date ranges, and common vocabularies);  4) maintain the rich context of data from multiple domains and institutions; and 5) allow users to make contextual links between items, people, locations, dates, and subjects - thereby contributing to the web of data.  At the heart of this approach is a semantic data pipeline that &#39;ingests&#39; mixed data, converts it to RDF, transforms data to common data formats, aligns collection-specific fields to common fields, indexes to SOLR, and provides both a faceted search interface and a SPARQL endpoint for linked open data.</p>
+<p>The prototype approach is not a single application; rather it is a proposed pipeline that uses many different tools that conform to semantic web standards such as RDF, RDFS, OWL, and SPARQL. Since they rely on web standards, tools may be swapped out for others that serve the same purpose without &#39;re-building&#39; the pipeline.  For example, there are many tools for converting between various data formats  - called &#39;RDFizers&#39;, but our prototype uses D2RQ for converting relational databases to RDF; and modmarc2RDF for converting MARC records to RDF.  There are many tools for converting between various RDF formats - our prototype uses the ARC2 library.  Many tools exist for storing and querying RDF - we use Sesame.   Finally, there are several tools available for transforming/mapping RDF data - we use DERI Pipes.</p>
+<p>I will present the motivations and logic behind the proposed pipeline; discuss the pros and cons of various pipeline tools; and discuss the challenges and pitfalls we faced when building the prototype. </p>
+</td></tr>
+<tr><td style="text-align: right;">Link:</td><td><a href="https://www.museumsandtheweb.com/mw2012/papers/using_an_rdf_data_pipeline_to_implement_cross_">https://www.museumsandtheweb.com/mw2012/papers/using_an_rdf_data_pipeline_to_implement_cross_</a></td></tr>
+</tbody></table>
+
+
+</div>
+		</main><!-- #main -->
+	</div>
